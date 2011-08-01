@@ -1,0 +1,8 @@
+/* Styles for IE (all versions) */
+#header, button, #content-sub #search {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b69b1', endColorstr='#2a4187',GradientType=0 );
+}
+
+#content-sub #search button {
+  filter: none;
+}
