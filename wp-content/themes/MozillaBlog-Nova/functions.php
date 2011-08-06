@@ -89,7 +89,7 @@ function fc_comment_type_count($type = 'all', $post_id = 0) {
 }
 
 
-function fc_update_comment_type_cache(&$queried_posts) {
+function fc_update_comment_type_cache($queried_posts) {
 	global $cjd_comment_count_cache, $wpdb;
 
 	if ( !$queried_posts )
