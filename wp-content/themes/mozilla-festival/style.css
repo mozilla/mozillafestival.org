@@ -7,6 +7,10 @@
 
 @import url("../twentyeleven/style.css");
 
+body {
+    background: #F3F0DD url('https://festival.mozillalabs.com/wp-content/uploads/2011/08/stripes.png') repeat top center;
+}
+
 #masthead {
     margin-top: 2.2em;
     padding-right: 2em;
