@@ -1,0 +1,22 @@
+/*
+ * Theme Name: Mozilla Festival 2011
+ * Theme URI: https://festival.mozillalabs.com/
+ * Description: Just a few little tweaks to the default theme but ensuring that if security fixes are made to twnetyeleven and wordpress they are not clobbered on updating
+ * Template: twentyeleven
+ */
+
+@import url("../twentyeleven/style.css");
+
+#masthead {
+    margin-top: 2.2em;
+    padding-right: 2em;
+}
+.mozilla {
+    background: url("http://mozcom-cdn.mozilla.net/img/covehead/template/title.png") no-repeat scroll 100% 0 transparent;
+    display: block;
+    float: right;
+    height: 49px;
+    overflow: hidden;
+    text-indent: -9999em;
+    width: 119px;
+}
