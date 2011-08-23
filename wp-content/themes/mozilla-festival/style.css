@@ -12,7 +12,7 @@ body {
 }
 
 #masthead {
-    margin-top: 2.2em;
+    margin-top: -2.2em;
     padding-right: 2em;
 }
 .mozilla {
