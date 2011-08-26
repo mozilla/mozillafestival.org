@@ -8,7 +8,7 @@
 @import url("../twentyeleven/style.css");
 
 body {
-    background: #F3F0DD url('https://festival.mozillalabs.com/wp-content/uploads/2011/08/stripes.png') repeat top center;
+    background: #F3F0DD url('images/stripes.png') repeat top center;
 }
 
 #masthead {
@@ -16,7 +16,7 @@ body {
     padding-right: 2em;
 }
 .mozilla {
-    background: url("http://mozcom-cdn.mozilla.net/img/covehead/template/title.png") no-repeat scroll 100% 0 transparent;
+    background: url("images/title.png") no-repeat scroll 100% 0 transparent;
     display: block;
     float: right;
     height: 49px;
