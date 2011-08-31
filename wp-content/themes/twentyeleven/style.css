@@ -324,7 +324,11 @@ body {
 }
 #page {
 	background: #fff;
-}
+	background-image:url('/images/MFW-horizontal-logo.png');
+	background-repeat:no-repeat;
+	background-position:top;
+	margin: 0px auto;
+	}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -528,9 +532,9 @@ a:hover {
 	margin: 0 270px 3.65625em 0;
 }
 #branding img {
+	overflow: hidden;
 	height: auto;
 	margin-bottom: -7px;
-	width: 100%;
 }
 
 
@@ -538,10 +542,10 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #222; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#252525, #0a0a0a);
-	background: -o-linear-gradient(#252525, #0a0a0a);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: #FE9C01; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#FE9C01, #f1592a);
+	background: -o-linear-gradient(#FE9C01, #f1592a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FE9C01), to(#f1592a)); /* older webkit syntax */
 	background: -webkit-linear-gradient(#252525, #0a0a0a);
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
@@ -549,6 +553,7 @@ a:hover {
 	clear: both;
 	display: block;
 	float: left;
+	margin-top: 250px !important;
 	margin: 0 auto 6px;
 	width: 100%;
 }
@@ -718,7 +723,7 @@ a:hover {
 	padding-right: 76px;
 }
 .entry-title {
-	clear: both;
+	font-family: 'Coustard', serif;	clear: both;
 	color: #222;
 	font-size: 26px;
 	font-weight: bold;
@@ -2472,7 +2477,7 @@ p.comment-form-comment {
 		padding: 0;
 	}
 	#page {
-		margin-top: 0;
+		margin-top: 0; 
 	}
 	#branding {
 		border-top: none;
