@@ -11,7 +11,7 @@ body {
     background: #F3F0DD url('images/stripes.png') repeat top center;
 }
 #page {
-    background: trasparent url('images/MFW-horizontal-logo.png') no-repeat top left;
+    background: transparent url('images/MFW-horizontal-logo.png') no-repeat top left;
     margin: 0px auto;
 }
 #masthead {
