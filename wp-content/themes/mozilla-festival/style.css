@@ -10,7 +10,10 @@
 body {
     background: #F3F0DD url('images/stripes.png') repeat top center;
 }
-
+#page {
+    background: trasparent url('images/MFW-horizontal-logo.png') no-repeat top left;
+    margin: 0px auto;
+}
 #masthead {
     margin-top: -2.2em;
     padding-right: 2em;
@@ -24,4 +27,26 @@ body {
     text-indent: -9999em;
     width: 119px;
     margin-top: 30px;
+}
+#branding img {
+    overflow: hidden;
+    width: auto;
+}
+#branding hgroup {
+    position: absolute;
+    left: -9999em;
+}
+#access {
+    background: #FE9C01; /* Show a solid color for older browsers */
+    background: -moz-linear-gradient(#FE9C01, #f1592a);
+    background: -o-linear-gradient(#FE9C01, #f1592a);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FE9C01), to(#f1592a)); /* older webkit syntax */
+    background: -webkit-linear-gradient(#FE9C01, #f1592a);
+    margin-top: 250px !important;
+}
+#access ul {
+    margin-left: 175px;
+}
+.entry-title {
+    font-family: 'Coustard', serif;
 }
