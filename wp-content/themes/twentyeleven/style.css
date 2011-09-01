@@ -546,7 +546,7 @@ a:hover {
 	background: -moz-linear-gradient(#FE9C01, #f1592a);
 	background: -o-linear-gradient(#FE9C01, #f1592a);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FE9C01), to(#f1592a)); /* older webkit syntax */
-	background: -webkit-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-linear-gradient(#FE9C01, #f1592a);
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
