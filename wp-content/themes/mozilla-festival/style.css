@@ -1,52 +1,225 @@
 /*
- * Theme Name: Mozilla Festival 2011
- * Theme URI: https://festival.mozillalabs.com/
- * Description: Just a few little tweaks to the default theme but ensuring that if security fixes are made to twnetyeleven and wordpress they are not clobbered on updating
- * Template: twentyeleven
+Theme Name: Mozilla Festival 2011
+Theme URI: https://festival.mozilla.org/
+Description: Templated (now rather loosely) based off exisiting WP twentyeleven theme. 
+Author: Ross Bruniges
+Template: twentyeleven
  */
 
 @import url("../twentyeleven/style.css");
 
 body {
     background: #F3F0DD url('images/stripes.png') repeat top center;
+    padding: 0;
+    border-top: 2px solid #686868;
+}
+abbr {
+    border-bottom: none;
+}
+.cf:before,
+.cf:after {
+    display: table;
+    content: "";
+}
+.cf:after {
+    clear: both;
 }
 #page {
-    background: #FFF url('images/MFW-horizontal-logo.png') no-repeat top center;
-    margin: 0px auto;
+    background-color: transparent;
 }
-#masthead {
-    margin-top: -2.2em;
-    padding-right: 2em;
+.wrap {
+    margin: 0 auto !important;
+    max-width: 1000px !important;
+    position: relative;
 }
 .mozilla {
     background: url("images/title.png") no-repeat scroll 100% 0 transparent;
     display: block;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 10px;
     height: 49px;
     overflow: hidden;
     text-indent: -9999em;
     width: 119px;
-    margin-top: 30px;
 }
-#branding img {
-    overflow: hidden;
-    width: auto;
+a.register {
+    display: block;
+    float: left;
+    color: #FFF;
+    border: 1px solid #D43218;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #D43218; /* Show a solid color for older browsers */
+    background: -moz-linear-gradient(#D16B54, #D43218);
+    background: -o-linear-gradient(#D16B54, #D43218);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D16B54), to(#D43218)); /* older webkit syntax */
+    background: -webkit-linear-gradient(#D16B54,#D43218);
+
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
-#branding hgroup {
+#branding {
+    border-top: none;
+}
+.hide {
     position: absolute;
     left: -9999em;
 }
+#branding hgroup {
+    margin: 0;
+}
+#branding p {
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    right: 0;
+}
+.vevent {
+    text-transform: uppercase;
+    float: left;
+}
+.vevent .summary {
+    margin-bottom: 0;
+    max-width: 300px;
+}
+.vevent .hcard {
+    font-weight: bold;
+    color: #E84E1B;
+    margin-bottom: 0;
+}
+#site-title,
+#site-description {
+    margin-right: 0;
+}
+#site-description {
+    margin-bottom: 0;
+    color: #E84E1B;
+}
 #access {
-    background: #FE9C01; /* Show a solid color for older browsers */
-    background: -moz-linear-gradient(#FE9C01, #f1592a);
-    background: -o-linear-gradient(#FE9C01, #f1592a);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FE9C01), to(#f1592a)); /* older webkit syntax */
-    background: -webkit-linear-gradient(#FE9C01, #f1592a);
-    margin-top: 250px !important;
+    background: #3A3A39; /* Show a solid color for older browsers */
+    background: -moz-linear-gradient(#3A3A39, #151515);
+    background: -o-linear-gradient(#3A3A39, #151515);
+    background: -webkit-linear-gradient(#3A3A39, #151515);
+}
+#access div {
+    margin: 0
 }
 #access ul {
-    margin-left: 175px;
+    margin-left: 0;
+}
+#access li {
+    border-left: 1px solid rgba(255,255,255,0.15);
+}
+#access li:first-child {
+    border-left: 0;
+}
+#access a {
+    color: #B1B1B1;
+    padding: 21px;
+    line-height: 1;
+    font-weight: normal;
+}
+#access li:hover > a,
+#access li:focus > a,
+#access .current_page_item > a,
+#access .current_page_ancestor > a {
+    color: #FFF;
+    background: #151515;
+}
+#access ul ul {
+    top: 4.2em;
+    background: rgba(29,29,27, 0.95);
+    width: auto;
+}
+#access ul ul li {
+    padding: 5px;
+}
+#access ul ul a {
+    color: #B1B1B1;
+    background: transparent;
+    border-bottom: none;
+}
+#access ul ul *:hover > a {
+    background: #030303;
+    color: #FFF;
+    -moz-border-radius: 5px;
+}
+#main {
+    overflow: hidden;
+    background: #FFF;
+    padding: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+#primary a,
+#secondary a {
+    color: #E84E1B;
+}
+#content {
+    margin-left: 4%;
+    width: 62%;
 }
 .entry-title {
     font-family: 'Coustard', serif;
+}
+#secondary {
+    background: #f5f5f5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 4em 4% 2em 0;
+    padding: 25px 0;
+}
+#secondary .widget {
+    margin: 2em 20px 0;
+    border-top: 5px solid #ECECEC;
+}
+#secondary .widget:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+#secondary .widget-title {
+    text-transform: none;
+    font-size: 14px;
+    margin: 2em 0 1em;
+    line-height: 1;
+}
+#secondary .widget:first-child .widget-title {
+    margin-top: 0;
+}
+#colophon {
+    background: #1E0000;
+    margin-top: 1em;
+}
+#colophon .wrap {
+    padding: 3.65625em 0;
+}
+#colophon .summary {
+    color: #C6C6C6;
+    font-weight: bold;
+    font-size: 20px;
+}
+#colophon .nav {
+    float: right;
+    overflow: hidden;
+}
+#colophon .menu {
+    float: left;
+}
+#colophon li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#colophon .menu a {
+    color: #FFF;
+    display: block;
+    padding: 0 10px;
 }

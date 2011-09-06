@@ -322,13 +322,6 @@ body, input, textarea {
 body {
 	background: #e2e2e2;
 }
-#page {
-	background: #fff;
-	background-image:url('/images/MFW-horizontal-logo.png');
-	background-repeat:no-repeat;
-	background-position:top;
-	margin: 0px auto;
-	}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -553,7 +546,6 @@ a:hover {
 	clear: both;
 	display: block;
 	float: left;
-	margin-top: 250px !important;
 	margin: 0 auto 6px;
 	width: 100%;
 }
@@ -561,8 +553,6 @@ a:hover {
 	font-size: 13px;
 	list-style: none;
 	margin: 0 0 0 -0.8125em;
-	margin-left: 175px;
-
 }
 #access li {
 	float: left;

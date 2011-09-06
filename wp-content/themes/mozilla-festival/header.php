@@ -69,35 +69,27 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
-	<header id="branding" role="banner">
+<header id="branding" role="banner">
+    <div class="wrap cf">
 			<div id="masthead">
                 <a class="mozilla" href="http://www.mozilla.org">mozilla</a>
             </div>
-            <hgroup>
-			</hgroup>
+            <hgroup class="vevent">
+        
+            <h1 class="summary" id="site-title">
+            <a class="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><em class="hide"><?php bloginfo( 'name' ); ?></em>
+            <?php bloginfo( 'description' ); ?>
+            </a>
+            </h1>
+            <h2 class="hcard" id="site-description">Nov 4-6, 2011 <span class="hide">at <class="location">Ravensborne College, London, UK</span></span></h2>
+            </hgroup>
+          <p><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
+    </div>
+</header><!-- #branding -->
 
-			<?php
-				// Check to see if the header image has been removed
-				$header_image = get_header_image();
-				if ( ! empty( $header_image ) ) :
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<?php
-					// The header image
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
-							$image[1] >= HEADER_IMAGE_WIDTH ) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-					else : ?>
-				<?php endif; // end check for featured image or standard header ?>
-			</a>
-			<?php endif; // end check for removed header image ?>
-
-			<nav id="access" role="navigation">
+<div id="page" class="hfeed wrap">
+	<div id="main">
+        <nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
 				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
@@ -105,7 +97,4 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
-	</header><!-- #branding -->
 
-
-	<div id="main">
