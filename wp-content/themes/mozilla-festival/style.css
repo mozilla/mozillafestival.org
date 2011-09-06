@@ -161,9 +161,12 @@ a.register {
 #secondary a {
     color: #E84E1B;
 }
+#primary {
+    margin-right: -35%;
+}
 #content {
-    margin-left: 4%;
-    width: 62%;
+    margin: 0 35% 0 4%;
+    width: 57%;
 }
 .entry-title {
     font-family: 'Coustard', serif;
@@ -175,10 +178,11 @@ a.register {
     border-radius: 5px;
     margin: 4em 4% 2em 0;
     padding: 25px 0;
+    width: 31%;
 }
 #secondary .widget {
     margin: 2em 20px 0;
-    border-top: 5px solid #ECECEC;
+    border-top: 5px solid #D9D9D9;
 }
 #secondary .widget:first-child {
     border-top: none;
@@ -191,6 +195,18 @@ a.register {
     line-height: 1;
 }
 #secondary .widget:first-child .widget-title {
+    margin-top: 0;
+}
+#secondary ul {
+    list-style-type: none;
+}
+#secondary li {
+    border-top: 1px dotted #D9D9D9;
+    padding-top: 0.8em;
+    margin-top: 0.8em;
+}
+#secondary li:first-child {
+    border-top: none;
     margin-top: 0;
 }
 #colophon {
