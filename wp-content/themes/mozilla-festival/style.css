@@ -269,6 +269,40 @@ a.register {
     top: 0px;
     margin: 0;
 }
+#content .schedule {
+    border: 5px solid #D9D9D9;
+    border-width: 0 0 5px;
+    margin-bottom: 0;
+}
+.schedule:first-child caption {
+    border-top: 5px solid #D9D9D9;
+}
+.schedule caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3C3C3B;
+    padding: 20px 0;
+}
+.schedule th,
+.schedule td {
+    padding-left: 20px;
+}
+.schedule tbody th {
+    background: #F5F5F5;
+    color: #6F6F6E;
+    font-size: 12px;
+    border-top: 1px dotted #D9D9D9;
+}
+.schedule td {
+    border-top: 1px dotted #D9D9D9;
+    color: #E84E1B;
+    font-weight: bold;
+    font-size: 14px;
+}
+.schedule th + td {
+    color: #6F6F6E;
+    font-weight: normal;
+}
 #secondary {
     background: #f5f5f5;
     -webkit-border-radius: 5px;
