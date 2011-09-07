@@ -11,6 +11,7 @@ Template: twentyeleven
 body {
     background: #F3F0DD url('images/stripes.png') repeat top center;
     padding: 0;
+    font-family: Arial;
     border-top: 2px solid #686868;
 }
 abbr {
@@ -26,6 +27,8 @@ abbr {
 }
 #page {
     background-color: transparent;
+    margin-top: -50px !important;
+    z-index: 3;
 }
 .wrap {
     margin: 0 auto !important;
@@ -64,27 +67,33 @@ a.register {
 }
 #branding {
     border-top: none;
+    background: transparent url(images/header-swoosh.png) no-repeat 6px top;
+    padding-bottom: 60px;
 }
 .hide {
     position: absolute;
     left: -9999em;
 }
 #branding hgroup {
-    margin: 0;
+    margin: 36px 0 0 -46px;
 }
 #branding p {
     position: absolute;
     margin-bottom: 0;
     bottom: 0;
     right: 0;
+    background: transparent url(images/join-us.png) no-repeat left top;
+    padding: 45px 0 0 70px;
 }
 .vevent {
     text-transform: uppercase;
     float: left;
+    background: transparent url(images/mozilla-tag.png) no-repeat 0 0;
+    padding: 46px 0 0 48px;
 }
 .vevent .summary {
     margin-bottom: 0;
-    max-width: 300px;
+    max-width: 380px; 
 }
 .vevent .hcard {
     font-weight: bold;
@@ -94,10 +103,25 @@ a.register {
 #site-title,
 #site-description {
     margin-right: 0;
+    padding-top: 0;
 }
 #site-description {
     margin-bottom: 0;
     color: #E84E1B;
+    font-size: 16px;
+}
+#site-title a {
+    line-height: 1.3;
+    font-size: 34px;
+}
+#site-description .hide {
+    background: transparent url(images/map.png) no-repeat left top;
+    display: block;
+    width: 231px;
+    height: 172px;
+    left: 350px;
+    top: 0;
+    text-indent: -9999em;
 }
 #access {
     background: #3A3A39; /* Show a solid color for older browsers */
@@ -233,20 +257,28 @@ a.register {
     margin-top: 0;
 }
 #colophon {
-    background: #1E0000;
+    background: #1E0000 url(images/footer-swoosh.png) no-repeat 6px 6px;
     margin-top: 1em;
+    min-height: 320px;
 }
 #colophon .wrap {
     padding: 3.65625em 0;
 }
+#colophon .vevent {
+    background-image: url(images/mozilla-footer-tag.png);
+    padding-left: 40px;
+    margin-left: -40px;
+}
 #colophon .summary {
     color: #C6C6C6;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 26px;
+    max-width: 250px;
 }
 #colophon .nav {
     float: right;
     overflow: hidden;
+    margin-top: 46px;
 }
 #colophon .menu {
     float: left;
@@ -260,5 +292,5 @@ a.register {
 #colophon .menu a {
     color: #FFF;
     display: block;
-    padding: 0 10px;
+    padding: 5px 10px;
 }
