@@ -187,6 +187,9 @@ a.register {
 #primary .hentry {
     padding-top: 0;
 }
+.entry-content {
+    padding-top: 0;
+}
 .singular .entry-header .entry-meta,
 .singular .entry-meta .edit-link a{
     position: static;
@@ -218,8 +221,53 @@ a.register {
 }
 #content .entry-title {
     text-transform: uppercase;
-    border-bottom: 5px solid #D9D9D9;
-    margin-bottom: 4px;
+    color: #3C3C3B;
+    font-size: 28px;
+}
+#content p {
+    font-size: 12px;
+    color: #868686;
+}
+#content p a {
+    font-weight: bold;
+}
+#content img {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.peeps {
+    list-style-type: none;
+    margin-left: 0;
+}
+.peeps li {
+    border-top: 5px solid #D9D9D9;
+    padding-top: 20px;
+}
+.peeps h2 {
+    border-bottom: 1px dotted #D9D9D9;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #3C3C3B;
+}
+.peeps h2 span {
+    font-size: 12px;
+    color: #868686;
+    font-weight: normal;
+}
+.peeps .bio {
+    position:relative;
+    padding-left: 160px;
+    min-height: 160px;
+}
+.peeps img {
+    width: 130px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    margin: 0;
 }
 #secondary {
     background: #f5f5f5;
