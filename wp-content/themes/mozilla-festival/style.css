@@ -259,6 +259,13 @@ a.register {
     border-top: none;
     margin-top: 0;
 }
+.widget-title {
+    color: #6F6F6E;
+    font-weight: bold;
+}
+.textwidget p {
+    color: #868686;
+}
 #colophon {
     background: #1E0000 url(images/footer-swoosh.png) no-repeat 6px 6px;
     min-height: 320px;
