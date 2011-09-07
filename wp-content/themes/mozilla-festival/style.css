@@ -268,13 +268,13 @@ a.register {
 }
 .peeps h2 {
     border-bottom: 1px dotted #D9D9D9;
-    padding-bottom: 20px;
+    padding: 20px 0;
     font-size: 16px;
     color: #3C3C3B;
 }
 .home .peeps h2 {
     border-bottom: none;
-    padding-bottom: 0;
+    padding: 0;
 }
 .peeps h2 span {
     font-size: 12px;
