@@ -376,6 +376,47 @@ a.register {
 .textwidget p {
     color: #868686;
 }
+.home #content p.intro {
+    font-size: 30px;
+    color: #575756;
+    line-height: 1.2;
+}
+.home .grid {
+    overflow: hidden;
+}
+.home .grid h2 {
+    color: #3C3C3B;
+    font-weight: bold;
+    font-size: 16px;
+}
+.home .col h2 + p {
+    font-family: Georgia;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #3C3C3B;
+}
+.home .col {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    width: 33%;
+    padding-left: 20px;
+    vertical-align: top;
+    padding-top: 130px;
+    background: transparent url(images/logo-build.jpg) no-repeat top center;
+}
+.home .make {
+    background-image: url(images/logo-make.jpg);
+}
+.home .share {
+    background-image: url(images/logo-share.jpg);
+}
+.home .col:first-child {
+    padding-left: 0;
+}
+.home .col a span {
+    position: absolute;
+    left: -9999em;
+}
 #colophon {
     background: #1E0000 url(images/footer-swoosh.png) no-repeat 6px 6px;
     min-height: 320px;
