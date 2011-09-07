@@ -11,6 +11,7 @@
 ?>
 
 	</div><!-- #main -->
+    </div><!-- .wrap -->
 </div><!-- #page -->
 	<footer id="colophon" role="contentinfo">
        <div class="cf wrap">

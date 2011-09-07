@@ -26,13 +26,16 @@ abbr {
     clear: both;
 }
 #page {
-    background-color: transparent;
-    margin-top: -50px !important;
+    background: transparent url(images/page-background.png) repeat-x left bottom;
+    margin: -50px 0 0;
     z-index: 3;
+    position: relative;
+    max-width: none;
+    padding-bottom: 150px;
 }
 .wrap {
-    margin: 0 auto !important;
-    max-width: 1000px !important;
+    margin: 0 auto;
+    max-width: 1000px;
     position: relative;
 }
 .mozilla {
@@ -258,7 +261,6 @@ a.register {
 }
 #colophon {
     background: #1E0000 url(images/footer-swoosh.png) no-repeat 6px 6px;
-    margin-top: 1em;
     min-height: 320px;
 }
 #colophon .wrap {

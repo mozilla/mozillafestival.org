@@ -86,8 +86,8 @@
           <p><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
     </div>
 </header><!-- #branding -->
-
-<div id="page" class="hfeed wrap">
+<div id="page">
+<div class="hfeed wrap">
 	<div id="main">
         <nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
