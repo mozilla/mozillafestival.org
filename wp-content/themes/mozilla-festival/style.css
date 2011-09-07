@@ -224,9 +224,15 @@ a.register {
     color: #3C3C3B;
     font-size: 28px;
 }
-#content p {
-    font-size: 12px;
+#content {
+    font-size: 14px;
     color: #868686;
+}
+#content p.intro {
+    font-family: Georgia;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #3B3B3B;
 }
 #content p a {
     font-weight: bold;
@@ -256,10 +262,11 @@ a.register {
     color: #868686;
     font-weight: normal;
 }
-.peeps .bio {
+#content .peeps .bio {
     position:relative;
     padding-left: 160px;
     min-height: 160px;
+    font-size: 12px;
 }
 .peeps img {
     width: 130px;
