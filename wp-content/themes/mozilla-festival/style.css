@@ -292,16 +292,22 @@ a.register {
     color: #6F6F6E;
     font-size: 12px;
     border-top: 1px dotted #D9D9D9;
+    width: 20%;
 }
 .schedule td {
     border-top: 1px dotted #D9D9D9;
     color: #E84E1B;
     font-weight: bold;
     font-size: 14px;
+    width: 20%;
 }
 .schedule th + td {
     color: #6F6F6E;
     font-weight: normal;
+    width: 60%;
+}
+.schedule td strong {
+    display: block;
 }
 #secondary {
     background: #f5f5f5;
