@@ -309,6 +309,9 @@ a.register {
 .schedule td strong {
     display: block;
 }
+.schedule tbody a {
+    font-weight: bold;
+}
 #secondary {
     background: #f5f5f5;
     -webkit-border-radius: 5px;
