@@ -20,11 +20,14 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
+                <?php 
+                    query_posts('posts_per_page=4&category_name=people&orderby=rand');
+                    if (have_posts()): 
+                ?>
                 <section>
                     <h2 class="entry-title">Who's coming?</h2>
                     <ul class="peeps">
-                    <?php 
-                        query_posts('posts_per_page=4&category_name=people&orderby=rand');
+                    <?php  
                         while (have_posts()): the_post()
                     ?>
                     <li>
@@ -41,6 +44,7 @@ get_header(); ?>
                         <a class="register" href="<?php echo $category_url; ?>">See who else is coming</a>
                     </footer>
                 </section>
+                <?php endif; ?>
                 <section>
                     <h2 class="entry-title">Recent Blog Posts</h2>
                     <ol class="grid">
