@@ -286,6 +286,7 @@ a.register {
     padding: 20px 0;
     font-size: 16px;
     color: #3C3C3B;
+    margin-bottom: 0.8125em;
 }
 .home .peeps h2 {
     border-bottom: none;
