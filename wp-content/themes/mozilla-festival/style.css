@@ -8,6 +8,11 @@ Template: twentyeleven
 
 @import url("../twentyeleven/style.css");
 
+@font-face {
+    font-family:MetaWebPro-Black;
+    src:url(MetaWebPro-Black.woff) format('woff');
+}
+
 body {
     background: #F3F0DD url('images/stripes.png') repeat top center;
     padding: 0;
@@ -178,6 +183,8 @@ a.register {
     background: #030303;
     color: #FFF;
     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 #main {
     overflow: hidden;
@@ -228,6 +235,8 @@ a.register {
     margin-bottom: 0;
     color: #3C3C3B;
     font-size: 28px;
+    font-family: "MetaWebPro-Black";
+    font-weight: normal;
 }
 #content {
     font-size: 14px;
@@ -308,6 +317,8 @@ a.register {
     padding-left: 160px;
     min-height: 160px;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     padding-right: 20px;
     width: 49%;
     display: inline-block;
@@ -446,7 +457,7 @@ a.register {
 .home .col {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border-sizing: border-box;
+    box-sizing: border-box;
     width: 33%;
     float: left;
     padding-left: 2.17%;
@@ -474,7 +485,6 @@ a.register {
     background-image: url(images/logo-share.jpg);
 }
 .home .col:nth-child(3n+1){
-    padding-left: 0;
     border-left: none;
 }
 .home .col a span {
