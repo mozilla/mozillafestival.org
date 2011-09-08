@@ -20,8 +20,27 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php comments_template( '', true ); ?>
+                <section>
+                    <h2 class="entry-title">Who's coming?</h2>
+                    <ul class="peeps">
+                    <?php 
+                        query_posts('posts_per_page=4&category_name=people&orderby=rand');
+                        while (have_posts()): the_post()
+                    ?>
+                    <li>
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </li>
+                    <?php endwhile ?>
+                    </ul>
+                    <footer>
+                        <?php
+                            $category_ID = get_cat_ID('people');
+                            $category_url = get_category_link($category_ID);
+                        ?>
+                        <a class="register" href="<?php echo $category_url; ?>">See who else is coming</a>
+                    </footer>
+                </section>
                 <section>
                     <h2 class="entry-title">Recent Blog Posts</h2>
                     <ol class="grid">
@@ -30,12 +49,11 @@ get_header(); ?>
                         while (have_posts()) : the_post() 
                     ?>
                     <li class="col">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(); ?>
-                            <?php the_title(); ?>
-                        </a>
-                        <?php twentyeleven_posted_on(); ?>
-                        <?php the_content(); ?>
+                        <?php the_post_thumbnail(); ?>
+                        <h3><?php the_title(); ?></h3>
+                        <?php global $more; $more = 0; ?>
+                        <p class="meta"><?php twentyeleven_posted_on(); ?></p>
+                        <?php the_content('Read more'); ?>
                     </li>
                     <?php endwhile; ?>
                     </ol>

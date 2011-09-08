@@ -258,15 +258,30 @@ a.register {
 }
 .home #content section {
     border-top: 5px solid #D9D9D9;
+    margin-bottom: 1.625em;
+}
+.home section footer {
+    text-align: right;
+    padding: 22px 60px;
+    background: #F5F5F5;
+}
+.home #primary footer a.register {
+    color: #FFF;
+    float: none;
+    display: inline-block;
 }
 .peeps {
     list-style-type: none;
     margin-left: 0;
 }
+.home .peeps {
+    margin-bottom: 0;
+}
 .peeps li {
     border-top: 5px solid #D9D9D9;
 }
 .peeps h2 {
+    font-weight: bold;
     border-bottom: 1px dotted #D9D9D9;
     padding: 20px 0;
     font-size: 16px;
@@ -407,6 +422,7 @@ a.register {
 }
 .home .grid {
     overflow: hidden;
+    margin-left: 0;
 }
 .home .grid h2 {
     color: #3C3C3B;
@@ -423,8 +439,10 @@ a.register {
     display: inline-block;
     -moz-box-sizing: border-box;
     width: 33%;
-    padding-left: 20px;
+    padding-left: 2.17%;
     vertical-align: top;
+}
+.home div.col {
     padding-top: 130px;
     background: transparent url(images/logo-build.jpg) no-repeat top center;
 }
@@ -434,12 +452,30 @@ a.register {
 .home .share {
     background-image: url(images/logo-share.jpg);
 }
-.home .col:first-child {
+.home .col:nth-child(3n+1){
     padding-left: 0;
 }
 .home .col a span {
     position: absolute;
     left: -9999em;
+}
+.home .col h3 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #3C3C3B;
+}
+.home ol p {
+    font-size: 12px;
+    color: #868686;
+}
+.home ol img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #DDDDDD;
+    padding: 6px;
+    display: block;
+    margin-bottom: 10px;
 }
 #colophon {
     background: #1E0000 url(images/footer-swoosh.png) no-repeat 6px 6px;
