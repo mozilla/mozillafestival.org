@@ -327,6 +327,9 @@ a.register {
     top: 0px;
     margin: 0;
 }
+.home .col .more-link {
+    text-transform: lowercase;
+}
 #content .schedule {
     border: 5px solid #D9D9D9;
     border-width: 0 0 5px;
