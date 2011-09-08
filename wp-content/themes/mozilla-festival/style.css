@@ -444,15 +444,28 @@ a.register {
     color: #3C3C3B;
 }
 .home .col {
-    display: inline-block;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-sizing: border-box;
     width: 33%;
+    float: left;
     padding-left: 2.17%;
     vertical-align: top;
 }
 .home div.col {
     padding-top: 130px;
     background: transparent url(images/logo-build.jpg) no-repeat top center;
+}
+.home li.col {
+    border: 1px solid #D9D9D9;
+    border-width: 1px 0 0 1px;
+    list-style-type: none;
+    min-height: 330px;
+    padding-top: 20px;
+    padding-right: 2.17%;
+}
+.home li.col:nth-child(-n+3) {
+    border-top: none;
 }
 .home .make {
     background-image: url(images/logo-make.jpg);
@@ -462,6 +475,7 @@ a.register {
 }
 .home .col:nth-child(3n+1){
     padding-left: 0;
+    border-left: none;
 }
 .home .col a span {
     position: absolute;
