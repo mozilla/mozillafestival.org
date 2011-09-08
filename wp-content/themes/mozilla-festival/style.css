@@ -478,10 +478,10 @@ a.register {
 .home li.col:nth-child(-n+3) {
     border-top: none;
 }
-.home .make {
+.home div.make {
     background-image: url(images/logo-make.jpg);
 }
-.home .share {
+.home div.share {
     background-image: url(images/logo-share.jpg);
 }
 .home .col:nth-child(3n+1){
