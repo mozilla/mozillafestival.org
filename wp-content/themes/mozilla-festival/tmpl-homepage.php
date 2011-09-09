@@ -61,6 +61,15 @@ get_header(); ?>
                     </li>
                     <?php endwhile; ?>
                     </ol>
+                    <?php 
+                        $c = get_category_by_slug('mozfest'); 
+                        if ($c -> count > 6) :
+                            $blog_url = get_category_link($c -> cat_ID);
+                    ?>
+                        <footer>
+                        <a href="<?php echo $blog_url; ?>" class="register">See all blog posts</a>
+                        </footer>
+                    <?php endif; ?>
                 </section>
 			</div><!-- #content -->
 		</div><!-- #primary -->

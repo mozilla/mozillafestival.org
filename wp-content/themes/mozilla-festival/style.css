@@ -14,7 +14,7 @@ Template: twentyeleven
 }
 
 body {
-    background: #F3F0DD url('images/stripes.png') repeat top center;
+    background: #FFFBED url('images/stripes.png') repeat-x top center;
     padding: 0;
     font-family: Arial;
     border-top: 2px solid #686868;
@@ -299,7 +299,8 @@ a.register {
     padding: 20px 0;
     font-size: 16px;
     color: #3C3C3B;
-    margin-bottom: 0.8125em;
+    margin-bottom: 20px;
+    line-height: 1;
 }
 .home .peeps h2 {
     border-bottom: none;
@@ -362,7 +363,7 @@ a.register {
 }
 .schedule th,
 .schedule td {
-    padding-left: 20px;
+    padding: 14px 10px 14px 20px;
 }
 .schedule tbody th {
     background: #F5F5F5;
@@ -401,6 +402,7 @@ a.register {
 #secondary .widget {
     margin: 2em 20px 0;
     border-top: 5px solid #D9D9D9;
+    color: #868686;
 }
 #secondary .widget:first-child {
     border-top: none;
@@ -411,6 +413,7 @@ a.register {
     font-size: 14px;
     margin: 2em 0 1em;
     line-height: 1;
+    letter-spacing: 0;
 }
 #secondary .widget:first-child .widget-title {
     margin-top: 0;
@@ -484,8 +487,11 @@ a.register {
 .home div.share {
     background-image: url(images/logo-share.jpg);
 }
-.home .col:nth-child(3n+1){
+.home .col:nth-child(3n+1) {
     border-left: none;
+}
+.home .col p {
+    margin-bottom: 0.5em;
 }
 .home .col a span {
     position: absolute;
@@ -501,7 +507,10 @@ a.register {
     color: #868686;
 }
 .home ol img {
-    width: 80%;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     height: auto;
     margin: 0 auto;
     border: 1px solid #DDDDDD;
