@@ -168,6 +168,7 @@ a.register {
 }
 #access ul ul {
     top: 4.2em;
+    background: #3A3A39; /* be kind to the older browsers */
     background: rgba(29,29,27, 0.95);
     width: auto;
 }
