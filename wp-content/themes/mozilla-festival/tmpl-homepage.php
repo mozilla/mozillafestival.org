@@ -70,6 +70,26 @@ get_header(); ?>
                         <a href="<?php echo $blog_url; ?>" class="register">See all blog posts</a>
                         </footer>
                     <?php endif; ?>
+                    <!-- I know this sucks. But wordpress sucks more so it's the only way I can get the code to execute on this page only -->
+                    <script>
+                        var fixer = function() {
+                            var max = 351, 
+                                els = document.querySelectorAll('li.col'),
+                                l = els.length,
+                                i;
+                            for (i = l; i--;) {
+                                var h = els[i].offsetHeight;
+                                if (h > max) {
+                                    max = h;
+                                }
+                            }
+                            if (max !== 351) {
+                                for (i = l; i--;) {
+                                    els[i].style.minHeight = max + "px";
+                                }
+                            }
+                        }();
+                    </script>
                 </section>
 			</div><!-- #content -->
 		</div><!-- #primary -->
