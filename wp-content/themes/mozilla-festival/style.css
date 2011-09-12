@@ -125,6 +125,10 @@ a.register {
 #site-title a {
     line-height: 1.3;
     font-size: 34px;
+    display: block;
+    padding: 48px 0 0 48px;
+    height: 120px;
+    margin: -48px 0 0 -48px;
 }
 #site-description .hide {
     background: transparent url(images/map.png) no-repeat left top;
