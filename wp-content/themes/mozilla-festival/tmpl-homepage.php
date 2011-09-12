@@ -41,7 +41,7 @@ get_header(); ?>
                             $category_ID = get_cat_ID('people');
                             $category_url = get_category_link($category_ID);
                         ?>
-                        <a class="register" href="<?php echo $category_url; ?>">See who else is coming</a>
+                        <a class="register" href="/whos-coming/">See who else is coming</a>
                     </footer>
                 </section>
                 <?php endif; ?>
