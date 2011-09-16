@@ -53,8 +53,10 @@ get_header(); ?>
                         while (have_posts()) : the_post() 
                     ?>
                     <li class="col">
+                        <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail(); ?>
                         <h3><?php the_title(); ?></h3>
+                        </a>
                         <?php global $more; $more = 0; ?>
                         <p class="meta"><?php twentyeleven_posted_on(); ?></p>
                         <?php the_content('Read more'); ?>
