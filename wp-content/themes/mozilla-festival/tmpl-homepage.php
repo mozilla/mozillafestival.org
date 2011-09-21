@@ -72,7 +72,7 @@ get_header(); ?>
                         <a href="<?php echo $blog_url; ?>" class="register">See all blog posts</a>
                         </footer>
                     <?php endif; ?>
-                    <!-- I know this sucks. But wordpress sucks more so it's the only way I can get the code to execute on this page only -->
+                    <!-- Yes this sucks. But wordpress sucks more so it's the only way I can get the code to execute on this page only -->
                     <script>
                         var fixer = function() {
                             var max = 351, 
