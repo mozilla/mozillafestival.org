@@ -560,3 +560,40 @@ a.register {
     display: block;
     padding: 5px 10px;
 }
+
+/* Slightly responsive layout */
+@media screen and (max-width: 640px) {
+    .vevent {
+        background-image: url(images/header-mozilla-mobile.png);
+        max-width: 70%;
+        height: auto;
+    }
+    .vevent .summary {
+        text-indent: 0;
+    }
+    .vevent .hcard {
+        text-indent: 0;
+    }
+    #site-title a {
+        height: auto;
+    }
+    #site-description .hide {
+        text-indent: 0;
+        background: none;
+        height: auto;
+        width: auto;
+        position: static;
+        background: none;
+    }
+    #colophon .vevent {
+        background-image: url(images/footer-mozilla-mobile.png);
+    }
+    #colophon .nav {
+        margin-top: 0;
+        float: left;
+        clear: left;
+    }
+    #colophon .menu {
+        margin-left: -40px;
+    }
+}
