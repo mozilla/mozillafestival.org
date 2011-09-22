@@ -560,6 +560,25 @@ a.register {
     display: block;
     padding: 5px 10px;
 }
+ul.partners { 
+    overflow: hidden; 
+    zoom: 1; 
+    width=100%; 
+    margin-left: 0; 
+} 
+.partners li { 
+    width: 29%; 
+    display: inline-block; 
+    margin-right: 20px; 
+    vertical-align: top; 
+} 
+.partners img { 
+    width: 100%; 
+    height: auto; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /* Slightly responsive layout */
 @media screen and (max-width: 640px) {
@@ -584,6 +603,9 @@ a.register {
         width: auto;
         position: static;
         background: none;
+    }
+    .partners li {
+        width: 45%;
     }
     #colophon .vevent {
         background-image: url(images/footer-mozilla-mobile.png);
