@@ -614,4 +614,18 @@ a.register {
         float: none;
         width: 100%;
     }
+    #primary,
+    #primary.with_side {
+        margin-right: 0;
+    }
+    #content,
+    .with_side #content {
+        margin-right: 4%;
+        width: auto;
+    }
+    #secondary {
+        float: left;
+        margin: 0 4% 4%;
+        width: auto;
+    }
 }
