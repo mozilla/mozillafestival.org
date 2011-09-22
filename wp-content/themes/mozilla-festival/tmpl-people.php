@@ -22,7 +22,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
                 <ul class="peeps">
                 <?php
-                    query_posts('category_name=people');
+                    query_posts('category_name=people&posts_per_page=-1');
                     while (have_posts()) : the_post()
                 ?>
                 <li>
