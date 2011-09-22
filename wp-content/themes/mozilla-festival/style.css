@@ -597,3 +597,21 @@ a.register {
         margin-left: -40px;
     }
 }
+@media screen and (max-width: 500px) {
+    .home #content p.intro {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .home .col {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+    }
+    .home li.col {
+        border-width: 0;
+    }
+    .home .peeps li {
+        float: none;
+        width: 100%;
+    }
+}
