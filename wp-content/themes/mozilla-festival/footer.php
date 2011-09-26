@@ -29,6 +29,7 @@
     </div>
 </footer><!-- #colophon -->
                     <!-- Only execute on the homepage - with added shiv for Webkit -->
+                    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/video.js"></script>
                     <script>
                         if (document.querySelectorAll('body.home').length) { 
                         window.setTimeout(function() {
@@ -49,8 +50,8 @@
                             }
                         }, 1000);
                         }
+                        VideoJS.setupAllWhenReady();
                     </script>
-
 <?php wp_footer(); ?>
 
 </body>
