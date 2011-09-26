@@ -28,10 +28,10 @@
         </div>
     </div>
 </footer><!-- #colophon -->
-                    <!-- Only execute on the homepage -->
+                    <!-- Only execute on the homepage - with added shiv for Webkit -->
                     <script>
-                        if (document.querySelectorAll('body.home').length) {
-                        var fixer = function() {
+                        if (document.querySelectorAll('body.home').length) { 
+                        window.setTimeout(function() {
                             var max = 351, 
                                 els = document.querySelectorAll('li.col'),
                                 l = els.length,
@@ -47,7 +47,7 @@
                                     els[i].style.minHeight = max + "px";
                                 }
                             }
-                        }();
+                        }, 500);
                         }
                     </script>
 
