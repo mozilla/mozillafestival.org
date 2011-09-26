@@ -74,7 +74,7 @@ get_header(); ?>
                     <?php endif; ?>
                 </section>
                 <section>
-                    <h2 class="entry-title">With support from</h2>
+                    <h2 class="entry-title">In partnership with</h2>
                     <ul class="partners">
                     <?php
                         query_posts('posts_per_page=-1&category_name=Partners&orderby=rand');
