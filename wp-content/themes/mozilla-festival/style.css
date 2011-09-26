@@ -571,13 +571,18 @@ ul.partners {
     display: inline-block; 
     margin-right: 20px; 
     vertical-align: top; 
-} 
+}
+.home .partners li {
+    width: 17%;
+}
 .partners img { 
     width: 100%; 
     height: auto; 
+    border: 1px solid #DDD;
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 6px;
 }
 
 /* Slightly responsive layout */
@@ -628,6 +633,8 @@ ul.partners {
         float: none;
         width: 100%;
         padding-left: 0;
+        /* this is bad I know but it trumps the hacked JS */
+        min-height: 0 !important;
     }
     .home li.col {
         border-width: 0;
@@ -635,6 +642,9 @@ ul.partners {
     .home .peeps li {
         float: none;
         width: 100%;
+    }
+    .home .partners li {
+        width: 44%;
     }
     #primary,
     #primary.with_side {

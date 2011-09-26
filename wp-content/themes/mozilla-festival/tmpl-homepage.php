@@ -73,6 +73,19 @@ get_header(); ?>
                         </footer>
                     <?php endif; ?>
                 </section>
+                <section>
+                    <h2 class="entry-title">With support from</h2>
+                    <ul class="partners">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+                </section>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
