@@ -20,32 +20,7 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-                <?php 
-                    query_posts('posts_per_page=4&category_name=people&orderby=rand');
-                    if (have_posts()): 
-                ?>
-                <section>
-                    <h2 class="entry-title">Who's coming?</h2>
-                    <ul class="peeps">
-                    <?php  
-                        while (have_posts()): the_post()
-                    ?>
-                    <li>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                    </li>
-                    <?php endwhile; ?>
-                    </ul>
-                    <footer>
-                        <?php
-                            $category_ID = get_cat_ID('people');
-                            $category_url = get_category_link($category_ID);
-                        ?>
-                        <a class="register" href="/whos-coming/">See who else is coming</a>
-                    </footer>
-                </section>
-                <?php endif; ?>
-                <section>
+                 <section>
                     <h2 class="entry-title">Recent Blog Posts</h2>
                     <ol class="grid">
                     <?php
@@ -73,6 +48,32 @@ get_header(); ?>
                         </footer>
                     <?php endif; ?>
                 </section>
+
+                <?php 
+                    query_posts('posts_per_page=4&category_name=people&orderby=rand');
+                    if (have_posts()): 
+                ?>
+                <section>
+                    <h2 class="entry-title">Who's coming?</h2>
+                    <ul class="peeps">
+                    <?php  
+                        while (have_posts()): the_post()
+                    ?>
+                    <li>
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+                    <footer>
+                        <?php
+                            $category_ID = get_cat_ID('people');
+                            $category_url = get_category_link($category_ID);
+                        ?>
+                        <a class="register" href="/whos-coming/">See who else is coming</a>
+                    </footer>
+                </section>
+                <?php endif; ?>
                 <section>
                     <h2 class="entry-title">In partnership with</h2>
                     <ul class="partners">
