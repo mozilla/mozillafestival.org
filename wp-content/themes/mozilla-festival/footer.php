@@ -47,7 +47,7 @@
                                     els[i].style.minHeight = max + "px";
                                 }
                             }
-                        }, 500);
+                        }, 1000);
                         }
                     </script>
 
