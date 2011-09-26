@@ -28,6 +28,28 @@
         </div>
     </div>
 </footer><!-- #colophon -->
+                    <!-- Only execute on the homepage -->
+                    <script>
+                        if (document.querySelectorAll('body.home').length) {
+                        var fixer = function() {
+                            var max = 351, 
+                                els = document.querySelectorAll('li.col'),
+                                l = els.length,
+                                i;
+                            for (i = l; i--;) {
+                                var h = els[i].offsetHeight;
+                                if (h > max) {
+                                    max = h;
+                                }
+                            }
+                            if (max !== 351) {
+                                for (i = l; i--;) {
+                                    els[i].style.minHeight = max + "px";
+                                }
+                            }
+                        }();
+                        }
+                    </script>
 
 <?php wp_footer(); ?>
 
