@@ -38,7 +38,8 @@ if ( 'content' != $current_layout ) :
                 <?php
                     $recent_posts = wp_get_recent_posts(array(
                         'numberposts' => 5,
-                        'category_name' => 'uncategorized,mozfest,festival-blog'
+                        'category_name' => 'uncategorized,mozfest,festival-blog',
+                        'post_status' => 'publish'
                     ));
                     foreach( $recent_posts as $recent) {
                         echo '<li><a href="' . get_permalink($recent["ID"])  . '">' . $recent['post_title']  . '</a></li>';

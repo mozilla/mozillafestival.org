@@ -21,7 +21,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
                  <section>
-                    <h2 class="entry-title">Recent Blog Posts</h2>
+                    <h2 class="entry-title">What's new?</h2>
                     <ol class="grid">
                     <?php
                         query_posts('posts_per_page=6&category_name=uncategorized,mozfest,festival-blog');
