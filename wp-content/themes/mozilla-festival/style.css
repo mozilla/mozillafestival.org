@@ -494,6 +494,7 @@ a.register {
 }
 .home .col:nth-child(3n+1) {
     border-left: none;
+    clear: left;
 }
 .home .col p {
     margin-bottom: 0.5em;
