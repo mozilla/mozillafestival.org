@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-		<div id="primary" class="with_side">
+		<div id="primary" class="one_col">
 			<div id="content" role="main">
 
 				<?php the_post(); ?>
@@ -37,5 +37,4 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
