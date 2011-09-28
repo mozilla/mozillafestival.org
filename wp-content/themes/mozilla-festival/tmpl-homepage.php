@@ -74,11 +74,12 @@ get_header(); ?>
                     </footer>
                 </section>
                 <?php endif; ?>
-                <section>
+                <section class="partnerships">
                     <h2 class="entry-title">In partnership with</h2>
-                    <ul class="partners">
+                     <h3 class="partner-head">Challenge partners</h3>
+                    <ul class="partners challenge">
                     <?php
-                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand');
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=challenge-partners');
                         while (have_posts()) : the_post()
                     ?>
                     <li>
@@ -86,7 +87,29 @@ get_header(); ?>
                     </li>
                     <?php endwhile; ?>
                     </ul>
-                </section>
+                     <h3 class="partner-head">Human API partners</h3>
+                    <ul class="partners human">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=human-api');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+                     <h3 class="partner-head">Content partners</h3>
+                    <ul class="partners content">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=content-partners');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+               </section>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

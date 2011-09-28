@@ -561,6 +561,11 @@ a.register {
     display: block;
     padding: 5px 10px;
 }
+h2.partner-head,
+h3.partner-head {
+    font-weight: bold;
+    color: #3C3C3B;
+}
 ul.partners { 
     overflow: hidden; 
     zoom: 1; 
@@ -574,7 +579,13 @@ ul.partners {
     vertical-align: top; 
 }
 .home .partners li {
-    width: 17%;
+    width: 16%;
+}
+.home .challenge li {
+    width: 20%;
+}
+.home .human li {
+    width: 18%;
 }
 .partners img { 
     width: 100%; 

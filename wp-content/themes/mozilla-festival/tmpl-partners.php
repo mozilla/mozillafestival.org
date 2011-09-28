@@ -20,18 +20,39 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-                <ul class="partners">
-                <?php
-                    query_posts('category_name=Partners&posts_per_page=-1');
-                    while (have_posts()) : the_post()
-                ?>
-                <li>
-                    <a href="<?php echo get_the_content(); ?>">
-                    <?php the_post_thumbnail(); ?>
-                    </a>
-                </li>
-                <?php endwhile; ?>
-                </ul>
+                    <h2 class="partner-head">Challenge partners</h2>
+                    <ul class="partners challenge">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=challenge-partners');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+                     <h2 class="partner-head">Human API partners</h2>
+                    <ul class="partners human">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=human-api');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
+                     <h2 class="partner-head">Content partners</h2>
+                    <ul class="partners content">
+                    <?php
+                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=content-partners');
+                        while (have_posts()) : the_post()
+                    ?>
+                    <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    </ul>
 				<?php comments_template( '', true ); ?>
 
 			</div><!-- #content -->
