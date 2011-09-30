@@ -22,7 +22,7 @@ get_header(); ?>
                 <ul class="peeps">
                 <?php
                     $page_slug = $post->post_name;
-                    query_posts('category_name=programming&orderby=title&&posts_per_page=-1&tag=' . $page_slug);
+                    query_posts('category_name=programming&orderby=title&order=ASC&posts_per_page=-1&tag=' . $page_slug);
                     while (have_posts()) : the_post()
                 ?>
                 <li>
