@@ -30,10 +30,10 @@ get_header(); ?>
                     <div class="bio">
                     <?php the_content(); ?>
                     <?php
-                        $tags = get_tags({
+                        $tags = get_tags(array(
                             'exclude' => 'design-challenges',
                             'order' => 'DESC'
-                        });
+                        ));
                         $list = '<ul class="tags">';
                         foreach($tags as $tag) {
                             $tag_link = get_tag_link($tag->term_id);
