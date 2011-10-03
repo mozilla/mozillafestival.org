@@ -29,6 +29,19 @@ get_header(); ?>
                     <h2><a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php the_title(); ?></a></h2>
                     <div class="bio">
                     <?php the_content(); ?>
+                    <?php
+                        $tags = get_tags({
+                            'exclude' => 'design-challenges',
+                            'order' => 'DESC'
+                        });
+                        $list = '<ul class="tags">';
+                        foreach($tags as $tag) {
+                            $tag_link = get_tag_link($tag->term_id);
+                            $list .= "<li><a href='{$tag_link}'>{$tag->name}</a></li>";
+                        }
+                        $list .= '</ul>';
+                        echo $list;
+                    ?>
                     </div>
                 </li>
                 <?php endwhile; ?>
