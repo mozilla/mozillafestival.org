@@ -29,7 +29,21 @@ get_header(); ?>
                     <h2><a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php the_title(); ?></a></h2>
                     <div class="bio">
                     <?php the_content(); ?>
-                    <?php the_tags('<p class="tags">Who should come: ', ', ', '</p>'); ?>
+                    <?php 
+                        $list = get_the_tags();
+                        $list_items = array();
+                        $list_html = '<p class="tags">Who should come: ';
+                        foreach($list as $tag) {
+                            if ($tag->name != 'design-challenges') {
+                                $list_items[] = $tag;
+                            }
+                        }
+                        foreach($list_items as $tag_item) {
+                            $list_html .= "<a href='{$tag_item->slug}'>{$tag_item->name}</a>, ";
+                        }
+                        $list_html .= '</p>';
+                        echo $list_html;
+                    ?>
                     </div>
                 </li>
                 <?php endwhile; ?>
