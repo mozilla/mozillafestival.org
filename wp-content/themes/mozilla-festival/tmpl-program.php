@@ -29,7 +29,7 @@ get_header(); ?>
                     <h2><a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php the_title(); ?></a></h2>
                     <div class="bio">
                     <?php the_content(); ?>
-                    <?php get_the_tag_list('<ul><li>', '</li><li>', '</li></ul>'); ?>
+                    <?php the_tags(); ?>
                     </div>
                 </li>
                 <?php endwhile; ?>
