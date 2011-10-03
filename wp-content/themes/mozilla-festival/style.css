@@ -344,9 +344,6 @@ a.register {
 .peeps .tags {
     margin-bottom: 10px;
 }
-.peeps .tags a[href*='design-challenges'] {
-    display: none;
-}
 .peeps img {
     width: 130px;
     height: auto;
