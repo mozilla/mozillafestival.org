@@ -333,13 +333,16 @@ a.register {
 #content .peeps .bio {
     position:relative;
     padding-left: 160px;
-    min-height: 160px;
+    min-height: 180px;
     font-size: 12px;
 }
 .home #content .peeps .bio {
     position: static;
     padding-left: 0;
     min-height: 0;
+}
+.peeps .tags {
+    margin-bottom: 10px;
 }
 .peeps img {
     width: 130px;

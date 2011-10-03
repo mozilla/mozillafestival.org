@@ -29,7 +29,7 @@ get_header(); ?>
                     <h2><a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php the_title(); ?></a></h2>
                     <div class="bio">
                     <?php the_content(); ?>
-                    <?php the_tags('<p class="tags">For thos interested in:', ',', '</p>'); ?>
+                    <?php the_tags('<p class="tags">Who should come: ', ', ', '</p>'); ?>
                     </div>
                 </li>
                 <?php endwhile; ?>
