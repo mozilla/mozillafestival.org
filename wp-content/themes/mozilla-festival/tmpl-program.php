@@ -39,7 +39,7 @@ get_header(); ?>
                             }
                         }
                         foreach($list_items as $tag_item) {
-                            $list_html .= "<a href='{$tag_item->slug}'>{$tag_item->name}</a>, ";
+                            $list_html .= "<a href='/tag/{$tag_item->slug}'>{$tag_item->name}</a>, ";
                         }
                         $list_html .= '</p>';
                         echo $list_html;
