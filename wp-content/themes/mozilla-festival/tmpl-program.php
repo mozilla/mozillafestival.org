@@ -35,12 +35,10 @@ get_header(); ?>
                         $list_html = '<p class="tags">Who should come: ';
                         foreach($list as $tag) {
                             if ($tag->name != 'design-challenges') {
-                                $list_items[] = $tag;
+                                $list_items[] = "<a href='/tag/{$tag->slug}/'>{$tag->name}</a>";
                             }
                         }
-                        foreach($list_items as $tag_item) {
-                            $list_html .= "<a href='/tag/{$tag_item->slug}'>{$tag_item->name}</a>, ";
-                        }
+                        $list_html .= implode(', ', $list_items);
                         $list_html .= '</p>';
                         echo $list_html;
                     ?>
