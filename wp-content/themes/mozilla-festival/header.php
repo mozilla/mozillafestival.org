@@ -79,13 +79,12 @@
             <hgroup class="vevent">
         
             <h1 class="summary" id="site-title">
-            <a class="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><em class="hide"><?php bloginfo( 'name' ); ?></em>
-            <?php bloginfo( 'description' ); ?>
+            <a class="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><em class="hide">Mozilla Festival</em>Media, Freedom &amp; the Web
             </a>
             </h1>
             <h2 class="hcard" id="site-description">Nov 4-6, 2011 <span class="hide">at <span class="location">Ravensborne College, London, UK</span></span></h2>
           </hgroup>
-           <p>A three-day event and maker sprint for web developers, journalists and media educators</p>
+           <p><?php bloginfo('description'); ?></p>
           <p class="cta"><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
     </div>
 </header><!-- #branding -->
