@@ -88,7 +88,7 @@ a.register {
 #branding p {
     clear: left;
     font-family: "MetaWebPro-Black";
-    font-size: 26px;
+    font-size: 20px;
     margin: 0;
     text-transform: uppercase;
     padding: 0 130px 0 0;
@@ -300,6 +300,23 @@ a.register {
     text-align: right;
     padding: 22px 60px;
     background: #F5F5F5;
+    overflow: hidden;
+    zoom: 1;
+}
+.home #primary footer ul.social {
+    float: left;
+    margin: 0;
+}
+.home ul.social li {
+    float: left;
+    margin-right: 20px;
+    list-style-type: none;
+}
+.home #primary .social img {
+    box-shadow: none;
+    display: block;
+    width: 42px;
+    height: 42px;
 }
 .home #primary footer a.register {
     color: #FFF;

@@ -44,6 +44,10 @@ get_header(); ?>
                             $blog_url = get_category_link($c -> cat_ID);
                     ?>
                         <footer>
+                        <ul class="social">
+                        <li><a href="http://twitter.com/mozillafestival"><img alt="@mozillafestival on twitter" src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" /></a></li>
+                        <li><a href="https://mozillafestival.org/category/mozfest/feed/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss.png" alt="Follow our RSS feed for updates" /></a></li>
+                        </ul>
                         <a href="<?php echo $blog_url; ?>" class="register">See all blog posts</a>
                         </footer>
                     <?php endif; ?>
