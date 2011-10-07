@@ -84,8 +84,9 @@
             </a>
             </h1>
             <h2 class="hcard" id="site-description">Nov 4-6, 2011 <span class="hide">at <span class="location">Ravensborne College, London, UK</span></span></h2>
-            </hgroup>
-          <p><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
+          </hgroup>
+           <p>A 3 day hack event and conference</p>
+          <p class="cta"><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
     </div>
 </header><!-- #branding -->
 <div id="page">

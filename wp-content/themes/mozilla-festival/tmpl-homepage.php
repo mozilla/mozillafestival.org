@@ -24,7 +24,7 @@ get_header(); ?>
                     <h2 class="entry-title">What's new?</h2>
                     <ol class="grid">
                     <?php
-                        query_posts('posts_per_page=6&category_name=uncategorized,mozfest,festival-blog');
+                        query_posts('posts_per_page=3&category_name=uncategorized,mozfest,festival-blog');
                         while (have_posts()) : the_post() 
                     ?>
                     <li class="col">
@@ -40,7 +40,7 @@ get_header(); ?>
                     </ol>
                     <?php 
                         $c = get_category_by_slug('mozfest'); 
-                        if ($c -> count > 6) :
+                        if ($c -> count > 3) :
                             $blog_url = get_category_link($c -> cat_ID);
                     ?>
                         <footer>
@@ -50,7 +50,7 @@ get_header(); ?>
                 </section>
 
                 <?php 
-                    query_posts('posts_per_page=4&category_name=people&orderby=rand');
+                    query_posts('posts_per_page=6&category_name=people&orderby=rand&tag=vip');
                     if (have_posts()): 
                 ?>
                 <section>

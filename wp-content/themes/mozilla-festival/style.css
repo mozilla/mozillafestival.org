@@ -86,6 +86,17 @@ a.register {
     margin: 36px 0 0 -46px;
 }
 #branding p {
+    clear: left;
+    font-family: "MetaWebPro-Black";
+    font-size: 26px;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0 130px 0 0;
+}
+#branding .cta {
+    font-family: Arial;
+    text-transform: none;
+    font-size: 100%;
     position: absolute;
     margin-bottom: 0;
     bottom: 0;
@@ -98,7 +109,7 @@ a.register {
     float: left;
     background: transparent url(images/mozilla-tag.png) no-repeat 0 0;
     padding: 46px 0 0 48px;
-    height: 150px;
+    height: 120px;
     width: 372px;
 }
 .vevent .summary {
@@ -274,9 +285,16 @@ a.register {
     padding-bottom: 1.625em;
     background: transparent url(images/camera_icon.png) no-repeat top left;
 }
+.home article {
+    display: none;
+}
 .home #content section {
-    border-top: 5px solid #D9D9D9;
-    margin-bottom: 1.625em;
+    border-bottom: 5px solid #D9D9D9;
+    padding-bottom: 1.625em;
+}
+.home #content section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 .home section footer {
     text-align: right;
