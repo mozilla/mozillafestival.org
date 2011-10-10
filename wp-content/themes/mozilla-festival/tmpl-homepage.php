@@ -45,7 +45,7 @@ get_header(); ?>
                     ?>
                         <footer>
                         <ul class="social">
-                        <li><a href="http://twitter.com/mozillafestival"><img alt="@mozillafestival on twitter" src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" /></a></li>
+                        <li><a href="http://twitter.com/mozilla"><img alt="@mozillafestival on twitter" src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" /></a></li>
                         <li><a href="https://mozillafestival.org/category/mozfest/feed/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss.png" alt="Follow our RSS feed for updates" /></a></li>
                         </ul>
                         <a href="<?php echo $blog_url; ?>" class="register">See all blog posts</a>
