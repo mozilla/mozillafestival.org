@@ -85,7 +85,6 @@
             <h2 class="hcard" id="site-description">Nov 4-6, 2011 <span class="hide">at <span class="location">Ravensborne College, London, UK</span></span></h2>
           </hgroup>
            <p><?php bloginfo('description'); ?></p>
-          <p class="cta"><a class="register" href="https://donate.mozilla.org/page/contribute/festival-register/">Register</a></p>
     </div>
 </header><!-- #branding -->
 <div id="page">

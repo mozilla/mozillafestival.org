@@ -91,7 +91,6 @@ a.register {
     font-size: 18px;
     margin: 0;
     text-transform: uppercase;
-    padding: 0 130px 0 0;
 }
 #branding .cta {
     font-family: Arial;
@@ -180,6 +179,40 @@ a.register {
 #access .current_page_ancestor > a {
     color: #FFF;
     background: #151515;
+}
+#access li:last-child {
+    float: right;
+    border-left: none;
+}
+#access a[title=register] {
+    display: block;
+    color: #FFF;
+    border: 1px solid #D43218;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #D43218; /* Show a solid color for older browsers */
+    background: -moz-linear-gradient(#D16B54, #D43218);
+    background: -o-linear-gradient(#D16B54, #D43218);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D16B54), to(#D43218)); /* older webkit syntax */
+    background: -webkit-linear-gradient(#D16B54,#D43218);
+    padding: 10px;
+    margin: 11px;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+#access li:hover a[title=register],
+#access li:focus a[title=register] {
+    background: #D43218; /* Show a solid color for older browsers */
+    background: -moz-linear-gradient(#D16B54, #D43218);
+    background: -o-linear-gradient(#D16B54, #D43218);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D16B54), to(#D43218)); /* older webkit syntax */
+    background: -webkit-linear-gradient(#D16B54,#D43218);
+}
+#access a[title=register]:hover,
+#access a[title=register]:focus {
+    text-decoration: underline;
 }
 #access ul ul {
     top: 4.2em;
