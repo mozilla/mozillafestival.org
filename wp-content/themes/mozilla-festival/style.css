@@ -279,6 +279,10 @@ a.register {
 #content .entry-meta {
     width: 100%;
 }
+.archive #content .entry-meta {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
 #content .entry-title {
     text-transform: uppercase;
     margin-bottom: 0;
@@ -305,6 +309,12 @@ a.register {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.archive #content img {
+    float: left;
+    margin: 0 20px 10px 0;
+    width: 50%;
+    height: auto;
 }
 .photo_frame img {
     width: 100%;
@@ -742,5 +752,8 @@ ul.partners {
         float: left;
         margin: 0 4% 4%;
         width: auto;
+    }
+    .archive #content img {
+        width: 100%;
     }
 }
