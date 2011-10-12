@@ -33,7 +33,6 @@ get_header(); ?>
                         <h3><?php the_title(); ?></h3>
                         </a>
                         <?php global $more; $more = 0; ?>
-                        <p class="meta"><?php twentyeleven_posted_on(); ?></p>
                         <?php the_content('Read more'); ?>
                     </li>
                     <?php endwhile; ?>
