@@ -86,11 +86,17 @@ a.register {
     margin: 36px 0 0 -46px;
 }
 #branding p {
-    clear: left;
-    font-family: "MetaWebPro-Black";
-    font-size: 18px;
+    font-size: 14px;
+    color: #6F6F6E;
     margin: 0;
-    text-transform: uppercase;
+    font-family: Arial;
+    position: absolute;
+    padding-bottom: 2em;
+    right: 20px;
+    bottom: 0;
+    width: 200px;
+    font-weight: bold;
+    background: transparent url(images/header-arrow.png) no-repeat bottom right;
 }
 #branding .cta {
     font-family: Arial;
@@ -143,9 +149,9 @@ a.register {
 #site-description .hide {
     background: transparent url(images/map.png) no-repeat left top;
     display: block;
-    width: 231px;
+    width: 260px;
     height: 172px;
-    left: 380px;
+    left: 520px;
     top: 0;
     text-indent: -9999em;
 }
