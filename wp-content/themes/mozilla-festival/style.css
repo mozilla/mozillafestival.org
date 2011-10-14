@@ -685,6 +685,15 @@ ul.partners {
 }
 
 /* Slightly responsive layout */
+@media screen and (max-width: 940px) {
+    #branding p {
+        position: static;
+        clear: left;
+        width: auto;
+        background: none;
+        padding-bottom: 0;
+    }
+}
 @media screen and (max-width: 640px) {
     .vevent {
         background-image: url(images/header-mozilla-mobile.png);

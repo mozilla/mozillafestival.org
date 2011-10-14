@@ -18,7 +18,7 @@
         <div class="vevent">
             <p class="summary">
             <em class="hide"><?php bloginfo( 'name' ); ?></em>
-            <?php bloginfo( 'description' ); ?>
+            Media, Freedom &amp; the web
             </p>
             <p class="hcard"><abbr class="dtstart" title="2011-11-4">Nov 4-6, 2011</abbr> <span class="hide"><span class="location">at Ravensborne College, London, UK</span></span></p>
         </div>
