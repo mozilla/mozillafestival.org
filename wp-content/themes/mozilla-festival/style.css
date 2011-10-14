@@ -310,7 +310,7 @@ a.register {
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
-.archive #content img {
+.archive #content article img {
     float: left;
     margin: 0 20px 10px 0;
     width: 50%;
