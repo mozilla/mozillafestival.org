@@ -23,13 +23,39 @@ get_header(); ?>
                     <h2 class="partner-head">Challenge partners</h2>
                     <ul class="partners challenge">
                     <?php
-                        query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=challenge-partners');
+                        $sticky = get_option('sticky_posts');
+                        $args = array(
+                            'category_name' => 'Partners',
+                            'orderby' => 'rand',
+                            'ignore_sticky_posts' => 1,
+                            'tag' => 'challenge-partners',
+                            'post__in' => $sticky,
+                            'posts_per_page' => -1
+                        );
+                        query_posts($args);
+                        while (have_posts()) : the_post()
+                    ?>
+                     <li>
+                    <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
+                    </li>
+                    <?php endwhile; ?>
+                    <?php
+                        $args = array(
+                            'category_name' => 'Partners',
+                            'orderby' => 'rand',
+                            'tag' => 'challenge-partners',
+                            'posts_per_page' => -1,
+                            'post__not_in' => $sticky
+                        );
+                        #query_posts('posts_per_page=-1&category_name=Partners&orderby=rand&tag=challenge-partners');
+                        query_posts($args);
                         while (have_posts()) : the_post()
                     ?>
                     <li>
                     <a href="<?php echo get_the_content(); ?>"><?php the_post_thumbnail(); ?></a>
                     </li>
                     <?php endwhile; ?>
+
                     </ul>
                      <h2 class="partner-head">Human API partners</h2>
                     <ul class="partners human">
