@@ -15,12 +15,9 @@
 get_header(); ?>
 
 		<div id="primary" class="one_col">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/fest_info.png" alt="open web developers, journalists, media educators - we're getting together for 3 days to build real projects that will change media, the web and the world" />
 			<div id="content" role="main">
-
-				<?php the_post(); ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
-                 <section>
+                <section>
                     <h2 class="entry-title">What's new?</h2>
                     <ol class="grid">
                     <?php

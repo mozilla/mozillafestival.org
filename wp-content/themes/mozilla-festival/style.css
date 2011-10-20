@@ -161,6 +161,7 @@ a.register {
     background: -moz-linear-gradient(#3A3A39, #151515);
     background: -o-linear-gradient(#3A3A39, #151515);
     background: -webkit-linear-gradient(#3A3A39, #151515);
+    margin-bottom: 0;
 }
 #access div {
     margin: 0
