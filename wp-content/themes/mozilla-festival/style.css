@@ -636,15 +636,16 @@ a.register {
     max-width: 250px;
 }
 #colophon .nav ul {
-    margin: 0 0 0.5em;
+    margin: 0 0 0.4em;
 }
 #colophon .nav {
     float: right;
     overflow: hidden;
     margin-top: 46px;
+    border-bottom: 2px solid #fff;
 }
 #colophon .moz {
-    border-top: 2px solid #fff;
+    border-bottom: none;
     margin-top: 0;
 }
 #colophon .moz .menu {
