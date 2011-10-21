@@ -635,10 +635,28 @@ a.register {
     font-size: 26px;
     max-width: 250px;
 }
+#colophon .nav ul {
+    margin-bottom: 0.5em;
+}
 #colophon .nav {
     float: right;
     overflow: hidden;
     margin-top: 46px;
+}
+#colophon .moz {
+    border-top: 2px solid #fff;
+    margin-top: 0;
+}
+#colophon .moz .menu {
+    margin: 0;
+}
+#colophon .moz .menu .fb_frame {
+    overflow: hidden;
+    width: 60px;
+}
+#colophon .moz .menu .twitter_frame {
+    overflow: hidden;
+    width: 120px;
 }
 #colophon .menu {
     float: left;
@@ -649,7 +667,8 @@ a.register {
     padding: 0;
     list-style-type: none;
 }
-#colophon .menu a {
+#colophon .menu a,
+#colophon .menu .a_faux {
     color: #FFF;
     display: block;
     padding: 5px 10px;
@@ -737,7 +756,8 @@ ul.partners {
         clear: left;
     }
     #colophon .menu {
-        margin-left: -40px;
+        margin-left: -40px !important;
+        padding-left: 40px;
     }
     #info_graphic {
         display: none;
