@@ -36,9 +36,9 @@
                     </div>
                 </li>
                 <li class="twitter_frame">
-                    <div class="a_faux">
-                    <a href="https://twitter.com/mozilla" class="twitter-follow-button" data-show-count="false">Follow @mozilla</a>
-                    <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+                    <div class="a_faux"> 
+                        <a href="https://twitter.com/mozilla" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#FFFFFF" data-show-count="false">Follow @mozilla</a>
+                        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
                     </div>
                 </li>
             </ul>
