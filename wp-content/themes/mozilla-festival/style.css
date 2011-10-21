@@ -192,9 +192,9 @@ a.register {
     float: right;
     border-left: none;
 }
-#access a[title=register] {
+.menu-primary-container a[title=register] {
     display: block;
-    color: #FFF;
+    color: #FFF !important;
     border: 1px solid #D43218;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -204,11 +204,15 @@ a.register {
     background: -o-linear-gradient(#D16B54, #D43218);
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D16B54), to(#D43218)); /* older webkit syntax */
     background: -webkit-linear-gradient(#D16B54,#D43218);
-    padding: 10px;
+    padding: 10px !important;
     margin: 11px;
-    font-weight: bold;
+    font-weight: bold !important;
     font-size: 13px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+#colophon a[title=register] {
+    padding: 5px 10px !important;
+    margin: 0 !important;
 }
 #access li:hover a[title=register],
 #access li:focus a[title=register] {
@@ -685,7 +689,9 @@ ul.partners {
     box-sizing: border-box;
     padding: 6px;
 }
-
+#info_graphic {
+    width: 100%;
+}
 /* Slightly responsive layout */
 @media screen and (max-width: 940px) {
     #branding p {
@@ -732,6 +738,9 @@ ul.partners {
     }
     #colophon .menu {
         margin-left: -40px;
+    }
+    #info_graphic {
+        display: none;
     }
 }
 @media screen and (max-width: 500px) {
