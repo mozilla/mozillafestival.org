@@ -824,4 +824,7 @@ ul.partners {
         font-weight: bold;
         text-transform: none;
     }
+    video.video-js {
+        width: 100%;
+    }
 }
