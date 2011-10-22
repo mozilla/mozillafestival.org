@@ -809,6 +809,15 @@ ul.partners {
     }
 }
 @media screen and (max-width: 400px) {
+    #branding .vevent {
+        max-width: 100%;
+    }
+    #branding #site-title a {
+        font-size: 20px;
+    }
+    .home section footer {
+        padding: 22px;
+    }
     .category #content .entry-title {
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 16px;
