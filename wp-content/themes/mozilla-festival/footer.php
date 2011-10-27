@@ -27,9 +27,6 @@
         </div>
         <div class="nav moz">
             <ul class="menu">
-                <li><a href="http://join.mozilla.org">Join Mozilla</a></li>
-                <li><a href="http://www.mozilla.org/about/mission.html">Mozilla's mission</a></li>
-                <li><a href="https://donate.mozilla.org/Sign-Up">Get updates from Mozilla</a></li>
                 <li class="fb_frame">
                     <div class="a_faux">
                     <div class="fb-like" data-href="mozilladrumbeat" data-send="false" data-layout="button_count" data-show-faces="false" data-colorscheme="dark"></div>
@@ -41,6 +38,9 @@
                         <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
                     </div>
                 </li>
+                <li><a href="http://join.mozilla.org">Join Mozilla</a></li>
+                <li><a href="http://www.mozilla.org/about/mission.html">Mozilla's mission</a></li>
+                <li><a href="https://donate.mozilla.org/Sign-Up">Get updates from Mozilla</a></li>
             </ul>
         </div>
     </div>
