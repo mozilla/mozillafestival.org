@@ -28,8 +28,16 @@ get_header(); ?>
                     while (have_posts()) : the_post()
                 ?>
                 <li>
-                    <h2><a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php the_title(); ?></a></h2>
-                    <div class="bio">
+                    <?php $url = get_post_meta($post->ID, 'URL', true); ?>
+                    <?php 
+                        if ($url) {
+                            echo "<h2><a href='" . $url . "'>" . get_the_title() . "</a></h2>";
+                        } else {
+                            echo "<h2>" . get_the_title() . "</h2>";
+
+                        }
+                    ?>
+                   <div class="bio">
                     <?php the_content(); ?>
                     <?php 
                         $list = get_the_tags();
@@ -42,7 +50,7 @@ get_header(); ?>
                         }
                         $list_html .= implode(', ', $list_items);
                         $list_html .= '</p>';
-                        if (count($list_items) > 4) {
+                        if (count($list_items) > 1) {
                             echo $list_html;
                         }
                     ?>
