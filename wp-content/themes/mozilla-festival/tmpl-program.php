@@ -36,13 +36,15 @@ get_header(); ?>
                         $list_items = array();
                         $list_html = '<p class="tags">Who should come: ';
                         foreach($list as $tag) {
-                            if ($tag->name != 'design-challenges') {
+                            if ($tag->name != $page_slug) {
                                 $list_items[] = "<a href='/tag/{$tag->slug}/'>{$tag->name}</a>";
                             }
                         }
                         $list_html .= implode(', ', $list_items);
                         $list_html .= '</p>';
-                        echo $list_html;
+                        if (count($list_items) > 4) {
+                            echo $list_html;
+                        }
                     ?>
                     </div>
                 </li>

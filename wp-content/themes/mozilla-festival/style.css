@@ -442,6 +442,10 @@ a.register {
     min-height: 180px;
     font-size: 12px;
 }
+#content .learning-labs .bio {
+    padding-left: 0;
+    min-height: 10px;
+}
 .home #content .peeps .bio {
     position: static;
     padding-left: 0;
