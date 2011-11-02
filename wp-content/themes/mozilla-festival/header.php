@@ -92,7 +92,10 @@
             </h1>
             <h2 class="hcard" id="site-description">Nov 4-6, 2011 <span class="hide">at <span class="location">Ravensborne College, London, UK</span></span></h2>
           </hgroup>
-           <p><?php bloginfo('description'); ?></p>
+           <dl>
+           <dt>Festival hashtag</dt>
+           <dd>#mozfest</dd>
+           </dl>
     </div>
 </header><!-- #branding -->
 <div id="page">

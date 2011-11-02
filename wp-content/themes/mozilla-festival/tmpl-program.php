@@ -19,9 +19,11 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-                <ul class="peeps">
                 <?php
                     $page_slug = $post->post_name;
+                ?>
+                <ul class="peeps <?php echo $page_slug; ?>">
+                <?php 
                     query_posts('category_name=programming&orderby=title&order=ASC&posts_per_page=-1&tag=' . $page_slug);
                     while (have_posts()) : the_post()
                 ?>

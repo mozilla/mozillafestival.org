@@ -20,6 +20,9 @@ body {
     font-family: Arial;
     border-top: 2px solid #686868;
 }
+iframe {
+    width: 100%;
+}
 abbr {
     border-bottom: none;
 }
@@ -86,18 +89,31 @@ a.register {
 #branding hgroup {
     margin: 36px 0 0 -46px;
 }
-#branding p {
-    font-size: 14px;
+#branding dl {
     color: #6F6F6E;
     margin: 0;
     font-family: Arial;
     position: absolute;
-    padding-bottom: 2em;
     right: 20px;
     bottom: 0;
     width: 200px;
     font-weight: bold;
-    background: transparent url(images/header-arrow.png) no-repeat bottom right;
+}
+#branding dd,
+#branding dt {
+    margin-bottom: 0;
+    text-align: right;
+}
+#branding dt {
+    text-transform: uppercase;
+    color: #E84E1B;
+    font-size: 12px;
+}
+#branding dd {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1;
 }
 #branding .cta {
     font-family: Arial;
@@ -148,7 +164,7 @@ a.register {
     margin: -48px 0 0 -48px;
 }
 #site-description .hide {
-    background: transparent url(images/map.png) no-repeat left top;
+    background: transparent url(images/during_map.png) no-repeat left top;
     display: block;
     width: 260px;
     height: 172px;
@@ -444,6 +460,26 @@ a.register {
 }
 .home .col .more-link {
     text-transform: lowercase;
+}
+.buzz h3 {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #000;
+}
+.buzz li h3 {
+    margin-top: 0;
+}
+.buzz ul {
+    overflow: hidden;
+    margin-left: 0;
+}
+.buzz li {
+    float: left;
+    list-style-type: none;
+    margin-right: 20px;
+}
+.buzz li:last-child {
+    margin-right: 0;
 }
 #content .schedule {
     border: 5px solid #D9D9D9;
