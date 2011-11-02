@@ -74,32 +74,17 @@ get_header(); ?>
                         </footer>
                     <?php endif; ?>
                 </section>
-
-                <?php 
-                    query_posts('posts_per_page=6&category_name=people&orderby=rand&tag=vip');
-                    if (have_posts()): 
-                ?>
                 <section>
-                    <h2 class="entry-title">Who's coming?</h2>
-                    <ul class="peeps">
-                    <?php  
-                        while (have_posts()): the_post()
-                    ?>
-                    <li>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                    </li>
-                    <?php endwhile; ?>
-                    </ul>
+                    <h2 class="entry-title">Who's here?</h2>
+                    <p>If you're wondering who else is here then take a look at our <a href="http://lanyrd.com/2011/mozilla-festival/">Mozilla Festival Lanyrd page</a> and <a href="http://lanyrd.com/2011/mozilla-festival/attendees/">attendee directory</a> and of course if you've not added yourself please do so in order for people to know that you're here!</p>
                     <footer>
                         <?php
                             $category_ID = get_cat_ID('people');
                             $category_url = get_category_link($category_ID);
                         ?>
-                        <a class="register" href="/whos-coming/">See who else is coming</a>
+                        <a class="register" href="/whos-coming/">See our key-note speakers and learning lab faciliators</a>
                     </footer>
                 </section>
-                <?php endif; ?>
                 <section class="partnerships">
                     <h2 class="entry-title">In partnership with</h2>
                      <h3 class="partner-head">Challenge partners</h3>
