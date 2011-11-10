@@ -48,12 +48,12 @@ get_header(); ?>
                     <?php endif; ?>
                 </section>
                 <section class="buzz">
-                    <h2 class="entry-title">What happened</h2>
+                    <h2 class="entry-title">What we made</h2>
                     <div>
                     <iframe src="http://embed.scribblelive.com/Embed/v5.aspx?Id=32231&amp;ThemeId=3498" frameborder="0" height="300"></iframe>
                 </div>
                 <h3>Ravensbourne Festival blogs</h3>
-                <p>The students at Ravensbourne are provide festival coverage on the following topics:</p>
+                <p>The students at Ravensbourne provided festival coverage on the following topics:</p>
                 <ul>
                  <li>
                 <h3>Audio and Video</h3>
