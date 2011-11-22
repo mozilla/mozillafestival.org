@@ -25,5 +25,5 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
+<script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
 <?php get_footer(); ?>
