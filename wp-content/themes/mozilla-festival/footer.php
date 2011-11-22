@@ -15,7 +15,7 @@
 </div><!-- #page -->
 <footer id="colophon" role="contentinfo">
     <div class="cf wrap">
-        <div class="vevent">
+        <div class="festival-brand">
             <p class="summary">
             <em class="hide"><?php bloginfo( 'name' ); ?></em>
             Media, Freedom &amp; the web

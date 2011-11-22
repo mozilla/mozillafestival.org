@@ -126,7 +126,7 @@ a.register {
     background: transparent url(images/join-us.png) no-repeat left top;
     padding: 45px 0 0 70px;
 }
-.vevent {
+.festival-brand {
     text-transform: uppercase;
     float: left;
     background: transparent url(images/mozilla-tag.png) no-repeat 0 0;
@@ -134,12 +134,12 @@ a.register {
     height: 120px;
     width: 372px;
 }
-.vevent .summary {
+.festival-brand .summary {
     margin-bottom: 0;
     max-width: 380px; 
     text-indent: -9999em;
 }
-.vevent .hcard {
+.festival-brand .hcard {
     font-weight: bold;
     color: #E84E1B;
     margin-bottom: 0;
@@ -662,7 +662,7 @@ a.register {
 #colophon .wrap {
     padding: 3.65625em 0;
 }
-#colophon .vevent {
+#colophon .festival-brand {
     background-image: url(images/mozilla-footer-tag.png);
     padding-left: 40px;
     margin-left: -40px;
@@ -759,15 +759,15 @@ ul.partners {
     }
 }
 @media screen and (max-width: 640px) {
-    .vevent {
+    .festival-brand {
         background-image: url(images/header-mozilla-mobile.png);
         max-width: 70%;
         height: auto;
     }
-    .vevent .summary {
+    .festival-brand .summary {
         text-indent: 0;
     }
-    .vevent .hcard {
+    .festival-brand .hcard {
         text-indent: 0;
     }
     #site-title a {
@@ -784,7 +784,7 @@ ul.partners {
     .partners li {
         width: 45%;
     }
-    #colophon .vevent {
+    #colophon .festival-brand {
         background-image: url(images/footer-mozilla-mobile.png);
     }
     #colophon .nav {
@@ -845,7 +845,7 @@ ul.partners {
     }
 }
 @media screen and (max-width: 400px) {
-    #branding .vevent {
+    #branding .festival-brand {
         max-width: 100%;
     }
     #branding #site-title a {

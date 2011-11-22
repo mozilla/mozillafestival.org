@@ -84,7 +84,7 @@
 			<div id="masthead">
                 <a class="mozilla" href="http://www.mozilla.org">mozilla</a>
             </div>
-            <hgroup class="vevent">
+            <hgroup class="festival-brand">
         
             <h1 class="summary" id="site-title">
             <a class="url" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><em class="hide">Mozilla Festival</em>Media, Freedom &amp; the Web
