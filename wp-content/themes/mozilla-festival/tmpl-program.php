@@ -42,7 +42,7 @@ get_header(); ?>
                     <?php 
                         $list = get_the_tags();
                         $list_items = array();
-                        $list_html = '<p class="tags">Who should come: ';
+                        $list_html = '<p class="tags"> ';
                         foreach($list as $tag) {
                             if ($tag->name != $page_slug) {
                                 $list_items[] = "<a href='/tag/{$tag->slug}/'>{$tag->name}</a>";
