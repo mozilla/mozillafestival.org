@@ -84,6 +84,10 @@
 			<div id="masthead">
                 <a class="mozilla" href="http://www.mozilla.org">mozilla</a>
             </div>
+            <div class="alert">
+                <p><strong>Mozilla Festival returns to London. November 9 - 11, 2012</strong></p>
+                <p>Sign up to receive updates for the 2012 Mozilla Festival. <a href="https://donate.mozilla.org/page/signup/2012festival-updates">Save the date</a></p>
+            </div>
             <hgroup class="festival-brand">
         
             <h1 class="summary" id="site-title">

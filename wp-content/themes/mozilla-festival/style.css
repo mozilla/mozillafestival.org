@@ -57,6 +57,7 @@ abbr {
     overflow: hidden;
     text-indent: -9999em;
     width: 119px;
+    z-index: 100;
 }
 a.register {
     display: block;
@@ -171,6 +172,7 @@ a.register {
     left: 520px;
     top: 0;
     text-indent: -9999em;
+    z-index: 10;
 }
 #access {
     background: #3A3A39; /* Show a solid color for older browsers */
@@ -748,6 +750,26 @@ ul.partners {
 #info_graphic {
     width: 100%;
 }
+.alert {
+    margin-top: 1em;
+    padding: 1em 12px;
+    background: rgba(217, 237, 247, 0.8);
+    color: #C09853;
+    border: 1px solid #BCE8F1;
+    border-radius: 8px;
+    position: relative;
+    z-index: 20;
+}
+.alert p {
+    margin-bottom: 0;
+}
+.alert strong {
+    color: #868686;
+}
+.alert a {
+    color: #C09853;
+    font-weight: bold;
+}
 /* Slightly responsive layout */
 @media screen and (max-width: 940px) {
     #branding p {
@@ -756,6 +778,11 @@ ul.partners {
         width: auto;
         background: none;
         padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 640px) {
+    #branding .alert p {
+        width: 60%;
     }
 }
 @media screen and (max-width: 640px) {
