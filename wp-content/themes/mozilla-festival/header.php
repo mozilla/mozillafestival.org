@@ -85,8 +85,7 @@
                 <a class="mozilla" href="http://www.mozilla.org">mozilla</a>
             </div>
             <div class="alert">
-                <p><strong>Registration for the Mozilla Festival 2012 is now OPEN!</strong></p>
-                <p><a href="https://donate.mozilla.org/page/contribute/mozfest2012-registration">Register for Mozilla Festival 2012 now</a> | November 9 - 11 in London</p>
+                <p><a href="https://donate.mozilla.org/page/contribute/mozfest2012-registration"><strong>Registration for Mozilla Festival 2012 is now OPEN!</strong></a> | November 9 - 11 in London</p>
             </div>
             <hgroup class="festival-brand">
         
