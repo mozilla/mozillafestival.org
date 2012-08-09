@@ -85,8 +85,8 @@
                 <a class="mozilla" href="http://www.mozilla.org">mozilla</a>
             </div>
             <div class="alert">
-                <p><strong>Mozilla Festival returns to London. November 9 - 11, 2012</strong></p>
-                <p>Sign up to receive updates for the 2012 Mozilla Festival. <a href="https://donate.mozilla.org/page/signup/2012festival-updates">Save the date</a></p>
+                <p><strong>Registration for the Mozilla Festival 2012 is now OPEN!</strong></p>
+                <p><a href="https://donate.mozilla.org/page/contribute/mozfest2012-registration">Register for Mozilla Festival 2012 now</a> | November 9 - 11 in London</p>
             </div>
             <hgroup class="festival-brand">
         
