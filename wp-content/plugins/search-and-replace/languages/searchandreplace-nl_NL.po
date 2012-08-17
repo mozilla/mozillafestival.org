@@ -1,0 +1,431 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Search and Replace v.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-11 17:38+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Martien van de Griendt <info@vandegriendtwebsites.nl>\n"
+"Language-Team: Martien van de Griendt <info@vandegriendtwebsites.nl>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+
+# @ default
+#: search-and-replace.php:86
+msgid "Settings"
+msgstr "Instellingen"
+
+# @ searchandreplace
+#. translators: plugin header field 'Name'
+#: search-and-replace.php:0
+#: search-and-replace.php:102
+#: search-and-replace.php:789
+msgid "Search &amp; Replace"
+msgstr "Search &amp; Replace"
+
+# @ searchandreplace
+#: search-and-replace.php:152
+msgid "Nothing (Checkbox) selected to modify!"
+msgstr "U heeft niets geselecteerd om te vervangen!"
+
+# @ searchandreplace
+#: search-and-replace.php:175
+msgid "Looking @ post content"
+msgstr "Zoeken in Content"
+
+# @ searchandreplace
+#: search-and-replace.php:189
+msgid "Looking @ ID"
+msgstr "Zoeken in ID"
+
+# @ searchandreplace
+#: search-and-replace.php:227
+msgid "Looking @ GUID"
+msgstr "Zoeken in GUID"
+
+# @ searchandreplace
+#: search-and-replace.php:241
+msgid "Looking @ Titeln"
+msgstr "Zoeken in Titel"
+
+# @ searchandreplace
+#: search-and-replace.php:261
+msgid "Looking @ post excerpts"
+msgstr "Zoeken in Samenvatting"
+
+# @ searchandreplace
+#: search-and-replace.php:275
+msgid "Looking @ Meta Daten"
+msgstr "Zoeken in Meta Data"
+
+# @ searchandreplace
+#: search-and-replace.php:289
+msgid "Looking @ modifying comments text"
+msgstr "Zoeken in Reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:303
+msgid "Looking @ modifying comments author"
+msgstr "Zoeken in Auteurs van Reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:317
+msgid "Looking @ modifying comments author e-mail"
+msgstr "Zoeken in Emailadres van Auteur van Reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:331
+msgid "Looking @ modifying comments author URLs"
+msgstr "Zoeken in Webadres (URL) van Auteur van Reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:345
+msgid "Looking @ Comment-Count"
+msgstr "Zoeken in Reactie-teller"
+
+# @ searchandreplace
+#: search-and-replace.php:359
+msgid "Looking @ category description"
+msgstr "Zoeken in Categorie-omschrijving"
+
+# @ searchandreplace
+#: search-and-replace.php:373
+msgid "Looking @ Tags"
+msgstr "Zoeken in Tags en Categorie&euml;n"
+
+# @ searchandreplace
+#: search-and-replace.php:393
+msgid "Looking @ User-ID"
+msgstr "Zoeken in Gebruikers-ID"
+
+# @ searchandreplace
+#: search-and-replace.php:425
+msgid "Looking @ User Login"
+msgstr "Zoeken in Gebruikers-login"
+
+# @ searchandreplace
+#: search-and-replace.php:483
+msgid "The inquiry could not be implemented:"
+msgstr "De zoekopdracht kon niet worden uitgevoerd:"
+
+# @ searchandreplace
+#: search-and-replace.php:496
+msgid "entries found."
+msgstr "zoekresultaten gevonden."
+
+# @ searchandreplace
+#: search-and-replace.php:737
+msgid "You must specify some text to replace!"
+msgstr "U heeft geen zoektekst ingevoerd!"
+
+# @ searchandreplace
+#: search-and-replace.php:740
+msgid "Attempting to perform search and replace ..."
+msgstr "Bezig met zoeken en vervangen ..."
+
+# @ searchandreplace
+#: search-and-replace.php:741
+msgid "Search"
+msgstr "Zoeken"
+
+# @ searchandreplace
+#: search-and-replace.php:743
+msgid "and replace with"
+msgstr "en vervangen door"
+
+# @ searchandreplace
+#: search-and-replace.php:773
+msgid "Completed successfully!"
+msgstr "Met succes voltooid!"
+
+# @ searchandreplace
+#: search-and-replace.php:795
+msgid "You do not have sufficient permissions to edit plugins for this blog."
+msgstr "U heeft onvoldoende rechten om plugins te bewerken."
+
+# @ searchandreplace
+#: search-and-replace.php:801
+msgid "Information Search &amp; Replace"
+msgstr "Informatie over Search &amp; Replace"
+
+# @ searchandreplace
+#: search-and-replace.php:804
+msgid "Text search is case sensitive and has no pattern matching capabilites. This replace function matchs raw text so it can be used to replace HTML tags too."
+msgstr "De zoektekst is hoofdlettergevoelig. Reguliere expressies zijn niet mogelijk. Er wordt gezocht naar platte tekst; daarom is het ook mogelijk HTML tags te vervangen."
+
+# @ searchandreplace
+#: search-and-replace.php:841
+msgid "Search in"
+msgstr "Zoeken in"
+
+# @ searchandreplace
+#: search-and-replace.php:848
+msgid "Content"
+msgstr "Content"
+
+# @ searchandreplace
+#: search-and-replace.php:812
+#: search-and-replace.php:822
+#: search-and-replace.php:850
+#: search-and-replace.php:855
+#: search-and-replace.php:860
+#: search-and-replace.php:865
+#: search-and-replace.php:870
+#: search-and-replace.php:875
+#: search-and-replace.php:880
+#: search-and-replace.php:885
+#: search-and-replace.php:890
+#: search-and-replace.php:895
+#: search-and-replace.php:900
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:915
+#: search-and-replace.php:921
+#: search-and-replace.php:928
+msgid "field:"
+msgstr "veld:"
+
+# @ searchandreplace
+#: search-and-replace.php:850
+#: search-and-replace.php:855
+#: search-and-replace.php:860
+#: search-and-replace.php:865
+#: search-and-replace.php:870
+#: search-and-replace.php:875
+#: search-and-replace.php:880
+#: search-and-replace.php:885
+#: search-and-replace.php:890
+#: search-and-replace.php:895
+#: search-and-replace.php:900
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:921
+#: search-and-replace.php:928
+msgid "table:"
+msgstr "tabel:"
+
+# @ searchandreplace
+#: search-and-replace.php:853
+msgid "GUID"
+msgstr "GUID"
+
+# @ searchandreplace
+#: search-and-replace.php:858
+msgid "Titles"
+msgstr "Titels"
+
+# @ searchandreplace
+#: search-and-replace.php:863
+msgid "Excerpts"
+msgstr "Samenvattingen"
+
+# @ searchandreplace
+#: search-and-replace.php:868
+msgid "Meta Data"
+msgstr "Meta Data"
+
+# @ searchandreplace
+#: search-and-replace.php:873
+msgid "Comments content"
+msgstr "Tekst reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:878
+msgid "Comments author"
+msgstr "Auteurs reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:883
+msgid "Comments author e-mail"
+msgstr "Email auteurs reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:888
+msgid "Comments author URL"
+msgstr "URL auteurs reacties"
+
+# @ searchandreplace
+#: search-and-replace.php:893
+msgid "Comments-Counter"
+msgstr "Bericht-teller"
+
+# @ searchandreplace
+#: search-and-replace.php:898
+msgid "Category description"
+msgstr "Categorie-omschrijving"
+
+# @ searchandreplace
+#: search-and-replace.php:903
+msgid "Tags &amp; Categories"
+msgstr "Tags &amp; Categorie&euml;n"
+
+# @ searchandreplace
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:915
+#: search-and-replace.php:921
+msgid "and"
+msgstr "en"
+
+# @ searchandreplace
+#: search-and-replace.php:908
+msgid "User-ID"
+msgstr "Gebruikeres ID"
+
+# @ searchandreplace
+#: search-and-replace.php:913
+msgid "User-login"
+msgstr "Gebruikers Login"
+
+# @ searchandreplace
+#: search-and-replace.php:919
+msgid "ID"
+msgstr "ID"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "Checkboxes to assign"
+msgstr "Maak een keuze"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "all"
+msgstr "alle"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "Checkboxes to unmask"
+msgstr "Checkbox deselecteren"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "none"
+msgstr "geen"
+
+# @ searchandreplace
+#: search-and-replace.php:831
+#: search-and-replace.php:949
+msgid "Go"
+msgstr "Start"
+
+# @ searchandreplace
+#: search-and-replace.php:960
+msgid "Information on the plugin"
+msgstr "Informatie over de plugin"
+
+# @ searchandreplace
+#: search-and-replace.php:962
+msgid "&quot;Search and Replace&quot; originalplugin (en) created by <a href=\"http://thedeadone.net/\">Mark Cunningham</a> and provided (comments) by durch <a href=\"http://www.gonahkar.com\">Gonahkar</a>.<br />&quot;Search &amp; Replace&quot;, current version provided by <a href=\"http://bueltge.de\">Frank Bueltge</a>."
+msgstr "De originele &quot;Search and Replace&quot;(en) werd gemaakt door <a href='http://thedeadone.net/'>Mark Cunningham</a> en verbeterd (opmerkingen en kommentaar) door <a href='http://www.gonahkar.com'>Gonahkar</a>.<br />De huidige versie &quot;Suchen &amp; Ersetzen&quot; wordt gemaakt en onderhouden door <a href='http://bueltge.de'>Frank Bueltge</a>."
+
+# @ searchandreplace
+#: search-and-replace.php:963
+msgid "Further information: Visit the <a href=\"http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/\">plugin homepage</a> for further information or to grab the latest version of this plugin."
+msgstr "Nadere informatie: kijk op de <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>plugin homepage</a> of installeer de meest recente versie."
+
+# @ searchandreplace
+#: search-and-replace.php:963
+msgid "You want to thank me? Visit my <a href=\"http://bueltge.de/wunschliste\">wishlist</a>."
+msgstr "Wilt u mij bedanken? Bezoek mijn <a href='http://bueltge.de/wunschliste'>verlanglijst</a>."
+
+# @ searchandreplace
+#. translators: plugin header field 'PluginURI'
+#: search-and-replace.php:0
+msgid "http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/"
+msgstr ""
+
+# @ searchandreplace
+#. translators: plugin header field 'Description'
+#: search-and-replace.php:0
+msgid "A simple search for find strings in your database and replace the string."
+msgstr "Eenvoudig zoeken en vervangen van tekst in uw database."
+
+# @ searchandreplace
+#. translators: plugin header field 'Author'
+#: search-and-replace.php:0
+msgid "Frank B&uuml;ltge"
+msgstr ""
+
+# @ searchandreplace
+#. translators: plugin header field 'AuthorURI'
+#: search-and-replace.php:0
+msgid "http://bueltge.de/"
+msgstr ""
+
+# @ searchandreplace
+#: search-and-replace.php:157
+msgid "Looking @ all"
+msgstr "Zoeken in alles"
+
+# @ searchandreplace
+#: search-and-replace.php:625
+msgid "is not found in this Database"
+msgstr "niet gevonden in de database"
+
+# @ searchandreplace
+#: search-and-replace.php:803
+msgid "This plugin uses an standard SQL query so it modifies your database directly!<br /><strong>Attention: </strong>You <strong>cannot</strong> undo any changes made by this plugin. <strong>It is therefore advisable to backup your database before running this plugin.</strong> No legal claims to the author of this plugin! <strong>Activate</strong> the plugin <strong>only</strong>, if you want to use it!"
+msgstr "Deze plugin gebruikt standaard SQL; aanpassingen in de database vinden direkt plaats!<br /><strong>Let op: </strong>veranderingen door deze plugin zijn <strong>onomkeerbaar</strong>.<strong>Maak daarom vooraf een backup van uw database.</strong>De auteur van deze plugin aanvaardt geen enkele wettelijke aansprakelijkheid! Activeer de plugin alleen als u hem nodig hebt. "
+
+# @ searchandreplace
+#: search-and-replace.php:810
+msgid "All - only search!"
+msgstr "Alles - alleen zoeken!"
+
+# @ searchandreplace
+#: search-and-replace.php:816
+#: search-and-replace.php:940
+msgid "Search for"
+msgstr "Zoeken naar"
+
+# @ searchandreplace
+#: search-and-replace.php:826
+#: search-and-replace.php:944
+msgid "Replaced with"
+msgstr "Vervangen door"
+
+# @ searchandreplace
+#: search-and-replace.php:477
+msgid "... in table"
+msgstr "... in de tabel"
+
+# @ searchandreplace
+#: search-and-replace.php:805
+msgid "<strong>Step One:</strong> Use the follow search for a better information with return the sql-query and tables with the results. The search use alle fields in all tables! After this you have more informations and you can use the replace function."
+msgstr "<strong>Stap &eacute;&eacute;n:</strong> Gebruik de volgende zoekopdracht om meer informatie te krijgen over de gebruikte SQL-query en de resulterende tabellen. Alle velden in alle tabellen worden doorzocht! U bent dan beter ge&iuml;nformeerd voordat u de vervang-functie gebruikt."
+
+# @ searchandreplace
+#. translators: plugin header field 'Version'
+#: search-and-replace.php:0
+msgid "2.6.2"
+msgstr ""
+
+# @ searchandreplace
+#: search-and-replace.php:166
+msgid "Looking & Replace @ all"
+msgstr "Zoeken en vervangen in alles"
+
+# @ searchandreplace
+#: search-and-replace.php:445
+msgid "Looking @ signups"
+msgstr "Zoeken in aanmeldingen"
+
+# @ searchandreplace
+#: search-and-replace.php:812
+#: search-and-replace.php:822
+msgid "tables:"
+msgstr "tabellen:"
+
+# @ searchandreplace
+#: search-and-replace.php:820
+msgid "All - search/replace!"
+msgstr "Alles - zoeken / vervangen!"
+
+# @ searchandreplace
+#: search-and-replace.php:926
+msgid "Signups"
+msgstr "Aanmeldingen"
+

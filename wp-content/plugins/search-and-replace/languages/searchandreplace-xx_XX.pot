@@ -1,0 +1,437 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Search &amp; Replace v2.6.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-11 17:38+0100\n"
+"PO-Revision-Date: 2012-06-06 14:30:28+0200\n"
+"Last-Translator: Frank Bueltge <frank@bueltge.de>\n"
+"Language-Team: Team Blogos <WordPress@Blogos.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: d:/wordpress/plugins/search-and-replace\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: d:/wordpress/plugins/search-and-replace\n"
+"X-Textdomain-Support: yes"
+
+#: search-and-replace.php:86
+#@ default
+msgid "Settings"
+msgstr "Einstellungen"
+
+#. translators: plugin header field 'Name'
+#: search-and-replace.php:0
+#: search-and-replace.php:102
+#: search-and-replace.php:792
+#@ searchandreplace
+msgid "Search &amp; Replace"
+msgstr "Suchen &amp; Ersetzen"
+
+#: search-and-replace.php:151
+#@ searchandreplace
+msgid "Nothing (Checkbox) selected to modify!"
+msgstr "<strong>Keine Aktion (Checkbox) gew&auml;hlt um zu ersetzen!</strong>"
+
+#: search-and-replace.php:174
+#@ searchandreplace
+msgid "Looking @ post content"
+msgstr "Suche nach Beitr&auml;gen"
+
+#: search-and-replace.php:188
+#@ searchandreplace
+msgid "Looking @ ID"
+msgstr "Suche nach ID"
+
+#: search-and-replace.php:226
+#@ searchandreplace
+msgid "Looking @ GUID"
+msgstr "Suche nach <acronym title=\"Global Unique Identifier\">GUID</acronym>"
+
+#: search-and-replace.php:240
+#@ searchandreplace
+msgid "Looking @ Titeln"
+msgstr "Suche nach Titeln"
+
+#: search-and-replace.php:260
+#@ searchandreplace
+msgid "Looking @ post excerpts"
+msgstr "Suche nach Auszügen"
+
+#: search-and-replace.php:274
+#@ searchandreplace
+msgid "Looking @ Meta Daten"
+msgstr "Suche nach Metadaten"
+
+#: search-and-replace.php:288
+#@ searchandreplace
+msgid "Looking @ modifying comments text"
+msgstr "Suche nach modifizierten Kommentartexten"
+
+#: search-and-replace.php:302
+#@ searchandreplace
+msgid "Looking @ modifying comments author"
+msgstr "Suche nach modifizierten Kommentarautoren"
+
+#: search-and-replace.php:316
+#@ searchandreplace
+msgid "Looking @ modifying comments author e-mail"
+msgstr "Suche nach modifizierten Kommentarautoren E-Mail-Adressen"
+
+#: search-and-replace.php:330
+#@ searchandreplace
+msgid "Looking @ modifying comments author URLs"
+msgstr "Suche nach modifizierten Kommentarautoren URLs"
+
+#: search-and-replace.php:344
+#@ searchandreplace
+msgid "Looking @ Comment-Count"
+msgstr "Suche nach Kommentarzähler"
+
+#: search-and-replace.php:358
+#@ searchandreplace
+msgid "Looking @ category description"
+msgstr "Suche nach Kategoriebeschreibung"
+
+#: search-and-replace.php:372
+#@ searchandreplace
+msgid "Looking @ Tags"
+msgstr "Suche nach Tags"
+
+#: search-and-replace.php:392
+#@ searchandreplace
+msgid "Looking @ User-ID"
+msgstr "Suche nach User-ID"
+
+#: search-and-replace.php:424
+#@ searchandreplace
+msgid "Looking @ User Login"
+msgstr "Suche nach User-Login"
+
+#: search-and-replace.php:482
+#@ searchandreplace
+msgid "The inquiry could not be implemented:"
+msgstr "Die Anfrage konnte nicht ausgef&uuml;hrt werden:"
+
+#: search-and-replace.php:495
+#@ searchandreplace
+msgid "entries found."
+msgstr "Eintr&auml;ge gefunden."
+
+#: search-and-replace.php:736
+#@ searchandreplace
+msgid "You must specify some text to replace!"
+msgstr "Du musst Text spezifizieren, um Text zu ersetzen!"
+
+#: search-and-replace.php:739
+#@ searchandreplace
+msgid "Attempting to perform search and replace ..."
+msgstr "Versuche die Suche duchzuf&uuml;hren und zu ersetzen ..."
+
+#: search-and-replace.php:740
+#@ searchandreplace
+msgid "Search"
+msgstr "Suche"
+
+#: search-and-replace.php:742
+#@ searchandreplace
+msgid "and replace with"
+msgstr "und ersetze mit"
+
+#: search-and-replace.php:776
+#@ searchandreplace
+msgid "Completed successfully!"
+msgstr "Erfolgreich durchgef&uuml;hrt!"
+
+#: search-and-replace.php:803
+#@ searchandreplace
+msgid "You do not have sufficient permissions to edit plugins for this blog."
+msgstr "Du hast keine ausreichenden Rechte um das Plugin für dieses Blog zu editieren."
+
+#: search-and-replace.php:809
+#@ searchandreplace
+msgid "Information Search &amp; Replace"
+msgstr "Hinweise Suchen &amp; Ersetzen"
+
+#: search-and-replace.php:812
+#@ searchandreplace
+msgid "Text search is case sensitive and has no pattern matching capabilites. This replace function matchs raw text so it can be used to replace HTML tags too."
+msgstr "Die Textsuche ist sensitiv und besitzt keine passende Abstimmungsbef&auml;higung. Die Funktion arbeitet stringbasierend und kann somit auch HTML-Tags ersetzen."
+
+#: search-and-replace.php:849
+#@ searchandreplace
+msgid "Search in"
+msgstr "Suche in"
+
+#: search-and-replace.php:856
+#@ searchandreplace
+msgid "Content"
+msgstr "Beitr&auml;gen"
+
+#: search-and-replace.php:820
+#: search-and-replace.php:830
+#: search-and-replace.php:858
+#: search-and-replace.php:863
+#: search-and-replace.php:868
+#: search-and-replace.php:873
+#: search-and-replace.php:878
+#: search-and-replace.php:883
+#: search-and-replace.php:888
+#: search-and-replace.php:893
+#: search-and-replace.php:898
+#: search-and-replace.php:903
+#: search-and-replace.php:908
+#: search-and-replace.php:913
+#: search-and-replace.php:918
+#: search-and-replace.php:923
+#: search-and-replace.php:929
+#: search-and-replace.php:936
+#@ searchandreplace
+msgid "field:"
+msgstr "Feld:"
+
+#: search-and-replace.php:858
+#: search-and-replace.php:863
+#: search-and-replace.php:868
+#: search-and-replace.php:873
+#: search-and-replace.php:878
+#: search-and-replace.php:883
+#: search-and-replace.php:888
+#: search-and-replace.php:893
+#: search-and-replace.php:898
+#: search-and-replace.php:903
+#: search-and-replace.php:908
+#: search-and-replace.php:913
+#: search-and-replace.php:918
+#: search-and-replace.php:929
+#: search-and-replace.php:936
+#@ searchandreplace
+msgid "table:"
+msgstr "Tabelle:"
+
+#: search-and-replace.php:861
+#@ searchandreplace
+msgid "GUID"
+msgstr "<acronym title=\"Global Unique Identifier\">GUID</acronym>"
+
+#: search-and-replace.php:866
+#@ searchandreplace
+msgid "Titles"
+msgstr "Title"
+
+#: search-and-replace.php:871
+#@ searchandreplace
+msgid "Excerpts"
+msgstr "Auszüge"
+
+#: search-and-replace.php:876
+#@ searchandreplace
+msgid "Meta Data"
+msgstr "Metadaten"
+
+#: search-and-replace.php:881
+#@ searchandreplace
+msgid "Comments content"
+msgstr "Kommentarbeitr&auml;gen"
+
+#: search-and-replace.php:886
+#@ searchandreplace
+msgid "Comments author"
+msgstr "Kommentarautorens"
+
+#: search-and-replace.php:891
+#@ searchandreplace
+msgid "Comments author e-mail"
+msgstr "Kommentarautoren-E-Mail"
+
+#: search-and-replace.php:896
+#@ searchandreplace
+msgid "Comments author URL"
+msgstr "Kommentarautoren-URL"
+
+#: search-and-replace.php:901
+#@ searchandreplace
+msgid "Comments-Counter"
+msgstr "Kommentar-Zähler"
+
+#: search-and-replace.php:906
+#@ searchandreplace
+msgid "Category description"
+msgstr "Kategoriebeschreibung"
+
+#: search-and-replace.php:911
+#@ searchandreplace
+msgid "Tags &amp; Categories"
+msgstr "Tags &amp; Kategorien"
+
+#: search-and-replace.php:913
+#: search-and-replace.php:918
+#: search-and-replace.php:923
+#: search-and-replace.php:929
+#@ searchandreplace
+msgid "and"
+msgstr "und"
+
+#: search-and-replace.php:916
+#@ searchandreplace
+msgid "User-ID"
+msgstr "User-ID"
+
+#: search-and-replace.php:921
+#@ searchandreplace
+msgid "User-login"
+msgstr "User-Login"
+
+#: search-and-replace.php:927
+#@ searchandreplace
+msgid "ID"
+msgstr "ID"
+
+#: search-and-replace.php:941
+#@ searchandreplace
+msgid "Checkboxes to assign"
+msgstr "Checkboxen markieren"
+
+#: search-and-replace.php:941
+#@ searchandreplace
+msgid "all"
+msgstr "alle"
+
+#: search-and-replace.php:941
+#@ searchandreplace
+msgid "Checkboxes to unmask"
+msgstr "Checkboxen demarkieren"
+
+#: search-and-replace.php:941
+#@ searchandreplace
+msgid "none"
+msgstr "keine"
+
+#: search-and-replace.php:839
+#: search-and-replace.php:957
+#@ searchandreplace
+msgid "Go"
+msgstr "Start"
+
+#: search-and-replace.php:968
+#@ searchandreplace
+msgid "Information on the plugin"
+msgstr "Hinweise zum Plugin"
+
+#: search-and-replace.php:977
+#@ searchandreplace
+msgid "&quot;Search and Replace&quot; originalplugin (en) created by <a href=\"http://thedeadone.net/\">Mark Cunningham</a> and provided (comments) by durch <a href=\"http://www.gonahkar.com\">Gonahkar</a>.<br />&quot;Search &amp; Replace&quot;, current version provided by <a href=\"http://bueltge.de\">Frank Bueltge</a>."
+msgstr "&quot;Search and Replace&quot; Originalplugin (en) ist von <a href='http://thedeadone.net/'>Mark Cunningham</a> und wurde erweitert (Kommentarbeitr&auml;ge, Kommentarautor) durch <a href='http://www.gonahkar.com'>Gonahkar</a>.<br />&quot;Suchen &amp; Ersetzen&quot; wurde erweitert und gepflegt in der aktuellen Version durch <a href='http://bueltge.de'>Frank Bueltge</a>."
+
+#: search-and-replace.php:978
+#@ searchandreplace
+msgid "Further information: Visit the <a href=\"http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/\">plugin homepage</a> for further information or to grab the latest version of this plugin."
+msgstr "Weitere Informationen: Besuche die <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>plugin homepage</a> f&uuml;r weitere Informationen oder nutze die letzte Version des Plugins."
+
+#. translators: plugin header field 'PluginURI'
+#: search-and-replace.php:0
+#@ searchandreplace
+msgid "http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: search-and-replace.php:0
+#@ searchandreplace
+msgid "A simple search for find strings in your database and replace the string."
+msgstr "Eine einfache Suche für das Finden von Zeichenketten in der Datenbank und der Möglichkeit des Ersetzens."
+
+#. translators: plugin header field 'Author'
+#: search-and-replace.php:0
+#@ searchandreplace
+msgid "Frank B&uuml;ltge"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: search-and-replace.php:0
+#@ searchandreplace
+msgid "http://bueltge.de/"
+msgstr ""
+
+#: search-and-replace.php:156
+#@ searchandreplace
+msgid "Looking @ all"
+msgstr "Suche in allen Feldern in allen Tabellen"
+
+#: search-and-replace.php:624
+#@ searchandreplace
+msgid "is not found in this Database"
+msgstr "wurde nicht in der Datenbank gefunden"
+
+#: search-and-replace.php:811
+#@ searchandreplace
+msgid "This plugin uses an standard SQL query so it modifies your database directly!<br /><strong>Attention: </strong>You <strong>cannot</strong> undo any changes made by this plugin. <strong>It is therefore advisable to backup your database before running this plugin.</strong> No legal claims to the author of this plugin! <strong>Activate</strong> the plugin <strong>only</strong>, if you want to use it!"
+msgstr "Dieses Plugin arbeitet mit einer Standard SQL Abfrage und verändert deine Datenbank direkt!<br /><strong>Achtung: </strong>Du <strong>kannst nichts</strong> rückgängig machen mit diesem Plugin. <strong>Fertige eine Sicherung deiner Datenbank im Vorfeld an.</strong> Keine Rechtsansprüche an den Autor des Plugins! <strong>Aktiviere</strong> das Plugin <strong>nur</strong>, wenn es benötigt wird!"
+
+#: search-and-replace.php:818
+#@ searchandreplace
+msgid "All - only search!"
+msgstr "Alle - nur Suchen!"
+
+#: search-and-replace.php:824
+#: search-and-replace.php:948
+#@ searchandreplace
+msgid "Search for"
+msgstr "Suche nach"
+
+#: search-and-replace.php:834
+#: search-and-replace.php:952
+#@ searchandreplace
+msgid "Replaced with"
+msgstr "Ersetze mit"
+
+#: search-and-replace.php:476
+#@ searchandreplace
+msgid "... in table"
+msgstr "... in Tabelle"
+
+#: search-and-replace.php:813
+#@ searchandreplace
+msgid "<strong>Step One:</strong> Use the follow search for a better information with return the sql-query and tables with the results. The search use alle fields in all tables! After this you have more informations and you can use the replace function."
+msgstr "<strong>Schritt Eins:</strong> Nutze die folgende Suche für eine bessere Information mit Rückgabe des SQL-Query und der Tabellen mit den Resultaten. Die Suche nutzt alle Felder in allen Tabellen! Nach dieser Suche hast du mehr Informationen und kann die Funktion zum Ersetzen nutzen."
+
+#: search-and-replace.php:165
+#@ searchandreplace
+msgid "Looking & Replace @ all"
+msgstr "Suchen und Ersetzen in allen Feldern in allen Tabellen"
+
+#: search-and-replace.php:444
+#@ searchandreplace
+msgid "Looking @ signups"
+msgstr "Suche nach Anmeldungen"
+
+#: search-and-replace.php:820
+#: search-and-replace.php:830
+#@ searchandreplace
+msgid "tables:"
+msgstr "Tabellen:"
+
+#: search-and-replace.php:934
+#@ searchandreplace
+msgid "Signups"
+msgstr "Anmeldungen"
+
+#. translators: plugin header field 'Version'
+#: search-and-replace.php:0
+#@ searchandreplace
+msgid "2.6.4"
+msgstr ""
+
+#: search-and-replace.php:828
+#@ searchandreplace
+msgid "All - search/replace!"
+msgstr "Alle - Suchen/Ersetzen!"
+
+#: search-and-replace.php:978
+#@ searchandreplace
+msgid "You want to thank me? Visit my <a href=\"http://bueltge.de/wunschliste\">wishlist</a> or use the donate button."
+msgstr "Du willst Danke sagen? Besuche meine <a href=\\\"http://bueltge.de/wunschliste\\\">Wunschliste</a> oder nutze den Spenden Button."
+
