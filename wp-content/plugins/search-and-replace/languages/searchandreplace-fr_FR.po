@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Search and Replace\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2007-11-05 09:45+0100\n"
+"Last-Translator: Frédéric Bourgeon <frenetikfred@gmail.com>\n"
+"Language-Team: Frank Bueltge <frank@bueltge.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: D:\\xampp\\htdocs\\wpbeta\\wp-content\\plugins\\searchandreplace\\\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: searchandreplace.php:23
+#: searchandreplace.php:24
+#: searchandreplace.php:113
+msgid "Suchen &amp; Ersetzen"
+msgstr "Chercher et Remplacer"
+
+#: searchandreplace.php:48
+msgid "Keine Aktion (Checkbox) gew&auml;hlt um zu ersetzen!"
+msgstr "Aucune s&eacute;lection (case &agrave; cocher) &agrave; modifier"
+
+#: searchandreplace.php:52
+msgid "Suche nach Beitr&auml;gen"
+msgstr "Chercher &agrave; modifier le contenu d'un billet"
+
+#: searchandreplace.php:60
+msgid "Suche nach Titeln"
+msgstr "Chercher dans les titres de billet"
+
+#: searchandreplace.php:68
+msgid "Suche nach Ausz&uuml;gen"
+msgstr "Chercher dans les extraits de billet"
+
+#: searchandreplace.php:76
+msgid "Suche nach Kommentarbetr&auml;gen"
+msgstr "Chercher &agrave; modifier le contenu des commentaires"
+
+#: searchandreplace.php:84
+msgid "Suche nach Kommentarautor"
+msgstr "Chercher &agrave; modifier l'auteur des commentaires"
+
+#: searchandreplace.php:92
+msgid "Suche nach Kommentarautoren-E-Mails"
+msgstr "Chercher &agrave; modifier l'e-mail de l'auteur des commentaires"
+
+#: searchandreplace.php:100
+msgid "Suche nach Kommentarautor-URLs"
+msgstr "Chercher &agrave; modifier l'URL de l'auteur des commentaires"
+
+#: searchandreplace.php:117
+msgid "&raquo; Du musst Text spezifizieren, um Text zu ersetzen!"
+msgstr "&raquo; Vous devez sp&eacute;cifier le texte &agrave; remplacer"
+
+#: searchandreplace.php:119
+msgid "&raquo; Versuche die Suche duchzuf&uuml;hren und zu ersetzen ..."
+msgstr "&raquo; Tente d'ex&eacute;cuter la recherche et le remplacement..."
+
+#: searchandreplace.php:120
+msgid "Suche nach"
+msgstr "Recherche"
+
+#: searchandreplace.php:134
+msgid "Es gab eine St&ouml;rung!"
+msgstr "Il ya eu une erreur !"
+
+#: searchandreplace.php:137
+msgid "Erfolgreich durchgef&uuml;hrt!"
+msgstr "Accompli avec succ&egrave;s !"
+
+#: searchandreplace.php:142
+msgid "Dieses Plugin arbeitet mit einer Standard SQL Abfrage und ver&auml;ndert deine Datenbank direkt!<br \t/><strong>Achtung: </strong>Du <strong>kannst nichts</strong> r&uuml;ckg&auml;ngig machen mit diesem Plugin. Wenn du dir nicht sicher bist, fertige eine Sicherung deiner Datenbank im Vorfeld an."
+msgstr "Ce module utilise une requ&ecirc;te SQL standard afin qu'il modifie votre base de donn&eacute;es directement! <br /> <strong> Attention: </strong> Vous ne pouvez pas  annuler les modifications apport&eacute;es par ce module. Il est donc conseill&eacute; de sauvegarder la base de donn&eacute;es avant de lancer ce module."
+
+#: searchandreplace.php:143
+msgid "Die Textsuche ist sensitiv und besitzt keine passende Abstimmungsbef&auml;higung.<br />Du kannst folgende Eintr&auml;ge bearbeiten: Beitrag (content), Titel (titles), Auszug (excerpt), Kommentarbeitr&auml;ge (comment_content), Kommentarautor (comment_author) und Kommentar-URL (comment_author_url).<br />Die Funktion arbeitet stringbasierend und kann somit auch HTML-Tags ersetzen."
+msgstr "Le texte de recherche est sensible &agrave; la casse et n'a pas de capacit&eacute; de motifs. <br /> Vous pouvez choisir de modifier le titre, le contenu ou les extraits de billets, le contenu des commentaires et leurs auteurs ainsi que leur URL.<br /> Cette fonction \"remplacer\" fait correspondre le texte brut de sorte qu'il peut &ecirc;tre aussi utilis&eacute; pour remplacer les balises HTML."
+
+#: searchandreplace.php:147
+msgid "Suche in"
+msgstr "Chercher dans"
+
+#: searchandreplace.php:150
+msgid "Beitr&auml;gen"
+msgstr "Contenu"
+
+#: searchandreplace.php:153
+msgid "Titeln"
+msgstr "Titres"
+
+#: searchandreplace.php:156
+msgid "Ausz&uuml;gen"
+msgstr "Extraits"
+
+#: searchandreplace.php:159
+msgid "Kommentarbeitr&auml;gen"
+msgstr "Contenu des commentaires"
+
+#: searchandreplace.php:162
+msgid "Kommentarautoren"
+msgstr "Auteur de commentaires"
+
+#: searchandreplace.php:165
+msgid "Kommentarautoren-E-Mail"
+msgstr "E-mail de l'auteur de commentaires"
+
+#: searchandreplace.php:168
+msgid "Kommentarautoren-URLs"
+msgstr "URLs de l'auteur de commentaires"
+
+#: searchandreplace.php:176
+msgid "Ersetze"
+msgstr "Remplacer"
+
+#: searchandreplace.php:180
+msgid "mit"
+msgstr "avec"
+
+#: searchandreplace.php:184
+msgid "Ausf&uuml;hren"
+msgstr "Go"
+
+#: searchandreplace.php:189
+msgid "&quot;Search and Replace&quot; Originalplugin (en) ist von <a href='http://thedeadone.net/'>Mark Cunningham</a> und wurde erweitert (Kommentarbeitr&auml;ge, Kommentarautor) durch <a href='http://www.gonahkar.com'>Gonahkar</a>.<br />&quot;Suchen &amp; Ersetzen&quot; wurde erweitert und gepflegt in der aktuellen Version durch <a href='http://bueltge.de'>Frank Bueltge</a>."
+msgstr "&quot;Search and Replace&quot; originalplugin (en) created by <a href='http://thedeadone.net/'>Mark Cunningham</a> and provided (comments) by durch <a href='http://www.gonahkar.com'>Gonahkar</a>.<br />&quot;Search &amp; Replace&quot;, current version provided by <a href='http://bueltge.de'>Frank Bueltge</a>."
+
+#: searchandreplace.php:190
+msgid "Weitere Informationen: Besuche die <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>plugin homepage</a> f&uuml;r weitere Informationen oder nutze die letzte Version des Plugins."
+msgstr "Further information: Visit the <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>plugin homepage</a> for further information or to grab the latest version of this plugin."
+
+#: searchandreplace.php:190
+msgid "Du willst Danke sagen? Besuche meine <a href='http://bueltge.de/wunschliste'>Wunschliste</a>."
+msgstr "You want to thank me? Visit my <a href='http://bueltge.de/wunschliste'>wishlist</a>."
+
