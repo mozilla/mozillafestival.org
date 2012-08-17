@@ -1,0 +1,186 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: searchandreplace-ru_RU\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Levati Team <levati@mail.ru>\n"
+"Language-Team: LeVaTi Team <levati@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: UKRAINE\n"
+
+#: searchandreplace.php:24
+#: searchandreplace.php:25
+msgid "Suchen &amp; Ersetzen"
+msgstr "Поиск &amp; Замена"
+
+#: searchandreplace.php:66
+msgid "<p><strong>Keine Aktion (Checkbox) gew&auml;hlt um zu ersetzen!</strong></p>"
+msgstr "<p><strong>Для изменения ничего не отмечено (чекбоксом)!</strong></p>"
+
+#: searchandreplace.php:73
+msgid "Suche nach Beitr&auml;gen"
+msgstr "Найти в содержимом измененных записей"
+
+#: searchandreplace.php:82
+msgid "Suche nach Titeln"
+msgstr "Найти в заголовках записей"
+
+#: searchandreplace.php:91
+msgid "Suche nach Ausz&uuml;gen"
+msgstr "Найти в выдержках записей"
+
+#: searchandreplace.php:100
+msgid "Suche nach Kommentarbetr&auml;gen"
+msgstr "Найти в тексте измененных комментариев"
+
+#: searchandreplace.php:109
+msgid "Suche nach Kommentarautor"
+msgstr "Найти в именах авторов измененных комментариев"
+
+#: searchandreplace.php:118
+msgid "Suche nach Kommentarautoren-E-Mails"
+msgstr "Найти в e-mail-ах авторов измененных комментариев "
+
+#: searchandreplace.php:127
+msgid "Suche nach Kommentarautor-URLs"
+msgstr "Найти в URL-ах авторов измененных комментариев"
+
+#: searchandreplace.php:136
+msgid "Suche nach Kategorie-Beschreibungen"
+msgstr "Найти в описаниях рубрик"
+
+#: searchandreplace.php:145
+msgid "Suche nach Tags"
+msgstr "Поиск в метках"
+
+#: searchandreplace.php:183
+msgid "&raquo; Du musst Text spezifizieren, um Text zu ersetzen!"
+msgstr "&raquo; Введите текст для замены!"
+
+#: searchandreplace.php:186
+msgid "&raquo; Versuche die Suche duchzuf&uuml;hren und zu ersetzen ..."
+msgstr "&raquo; Пытаемся найти и заменить ..."
+
+#: searchandreplace.php:187
+msgid "Suche nach"
+msgstr "Поиск"
+
+#: searchandreplace.php:187
+msgid "und ersetze mit"
+msgstr "и заменить на"
+
+#: searchandreplace.php:205
+msgid "Es gab eine St&ouml;rung!"
+msgstr "Произошла ошибка!"
+
+#: searchandreplace.php:208
+msgid "Erfolgreich durchgef&uuml;hrt!"
+msgstr "Успешно завершено!"
+
+#: searchandreplace.php:214
+msgid "Search &amp; Replace"
+msgstr "Поиск &amp; Замена"
+
+#: searchandreplace.php:215
+msgid "Hinweise Suchen &amp; Ersetzen"
+msgstr "нформация Поиска &amp; Замены"
+
+#: searchandreplace.php:216
+msgid "Dieses Plugin arbeitet mit einer Standard SQL Abfrage und ver&auml;ndert deine Datenbank direkt!<br /><strong>Achtung: </strong>Du <strong>kannst nichts</strong> r&uuml;ckg&auml;ngig machen mit diesem Plugin. Wenn du dir nicht sicher bist, fertige eine Sicherung deiner Datenbank im Vorfeld an."
+msgstr "Плагин использует стандартные SQL запросы напрямую изменяющие Вашу базу данных!<br /><strong>Внимание: </strong>Вы <strong>не сможете</strong> отменить никакие изменения сделанные данным плагином. Перед запуском плагина настоятельно рекомендуем Вам сделать резервную копию базы данных."
+
+#: searchandreplace.php:217
+msgid "<strong>Aktiviere</strong> das Plugin <strong>nur</strong>, wenn es ben&ouml;tigt wird!"
+msgstr "<strong>Активируйте</strong> плагин <strong>только</strong>, если Вы хотите его использовать!"
+
+#: searchandreplace.php:218
+msgid "Die Textsuche ist sensitiv und besitzt keine passende Abstimmungsbef&auml;higung.<br />Du kannst folgende Eintr&auml;ge bearbeiten: Beitrag (content), Titel (titles), Auszug (excerpt), Kommentarbeitr&auml;ge (comment_content), Kommentarautor (comment_author), Kommentar-URL (comment_author_url), Kategorie-Beschreibung (description) und Tags/ Kategorie-Namen (name und slug).<br />Die Funktion arbeitet stringbasierend und kann somit auch HTML-Tags ersetzen."
+msgstr "Text search is case sensitive and has no pattern matching capabilites.<br />You can chose to modify post excerpts, comment authors and post and comment content, titles tags/categories and categrory-description.<br /> This replace function matchs raw text so it can be used to replace HTML tags too."
+
+#: searchandreplace.php:224
+msgid "Suche in"
+msgstr "найти в"
+
+#: searchandreplace.php:230
+msgid "Beitr&auml;gen"
+msgstr "тексте записей"
+
+#: searchandreplace.php:234
+msgid "Titeln"
+msgstr "заголовках"
+
+#: searchandreplace.php:238
+msgid "Ausz&uuml;gen"
+msgstr "выдержках"
+
+#: searchandreplace.php:242
+msgid "Kommentarbeitr&auml;gen"
+msgstr "тексте комментариев"
+
+#: searchandreplace.php:246
+msgid "Kommentarautoren"
+msgstr "именах комментаторов"
+
+#: searchandreplace.php:250
+msgid "Kommentarautoren-E-Mail"
+msgstr "E-mail комментаторов"
+
+#: searchandreplace.php:254
+msgid "Kommentarautoren-URLs"
+msgstr "URL-ах комментаторов"
+
+#: searchandreplace.php:259
+msgid "Kategorie-Beschreibung"
+msgstr "Описании рубрик"
+
+#: searchandreplace.php:263
+msgid "Tags &amp; Kategorien"
+msgstr "Метки &amp; Рубрики"
+
+#: searchandreplace.php:267
+msgid "Checkboxen markieren"
+msgstr "Отметить"
+
+#: searchandreplace.php:267
+msgid "alle"
+msgstr "все"
+
+#: searchandreplace.php:267
+msgid "Checkboxen demarkieren"
+msgstr "Снять отметки"
+
+#: searchandreplace.php:267
+msgid "keine"
+msgstr "ничего"
+
+#: searchandreplace.php:274
+msgid "Ersetze"
+msgstr "Заменить"
+
+#: searchandreplace.php:278
+msgid "mit"
+msgstr "на"
+
+#: searchandreplace.php:283
+msgid "Ausf&uuml;hren"
+msgstr "Вперед!"
+
+#: searchandreplace.php:292
+msgid "Hinweise zum Plugin"
+msgstr "О плагине"
+
+#: searchandreplace.php:293
+msgid "&quot;Search and Replace&quot; Originalplugin (en) ist von <a href='http://thedeadone.net/'>Mark Cunningham</a> und wurde erweitert (Kommentarbeitr&auml;ge, Kommentarautor) durch <a href='http://www.gonahkar.com'>Gonahkar</a>.<br />&quot;Suchen &amp; Ersetzen&quot; wurde erweitert und gepflegt in der aktuellen Version durch <a href='http://bueltge.de'>Frank Bueltge</a>."
+msgstr "&quot;Поиск и Замена&quot; плагин созданный <a href='http://thedeadone.net/'>Mark Cunningham-ом</a> совместно с <a href='http://www.gonahkar.com'>Gonahkar-ом</a>.<br />Последняя версия плагина &quot;Поиск &amp; Замена&quot;представлена <a href='http://bueltge.de'>Frank Bueltge-ом</a>."
+
+#: searchandreplace.php:294
+msgid "Weitere Informationen: Besuche die <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>plugin homepage</a> f&uuml;r weitere Informationen oder nutze die letzte Version des Plugins."
+msgstr "Для дополнительной информации и обновлений посетите <a href='http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114'>официальный сайт плагина</a>."
+
+#: searchandreplace.php:294
+msgid "Du willst Danke sagen? Besuche meine <a href='http://bueltge.de/wunschliste'>Wunschliste</a>."
+msgstr "Хотите отблагодарить авторов? Посетите их<a href='http://bueltge.de/wunschliste'>страницу желаний</a>."
+

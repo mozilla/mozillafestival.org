@@ -1,0 +1,435 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Search and Replace\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-11 17:38+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Brian Flores <baflores@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: d:/wordpress/plugins/search-and-replace\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Language: Serbo-Croatian\n"
+"X-Poedit-SearchPath-0: d:/wordpress/plugins/search-and-replace\n"
+
+# @ default
+#: search-and-replace.php:86
+msgid "Settings"
+msgstr "Подешавања"
+
+# @ searchandreplace
+#. translators: plugin header field 'Name'
+#: search-and-replace.php:0
+#: search-and-replace.php:102
+#: search-and-replace.php:789
+msgid "Search &amp; Replace"
+msgstr "Претражи и замени"
+
+# @ searchandreplace
+#: search-and-replace.php:152
+msgid "Nothing (Checkbox) selected to modify!"
+msgstr "Ниједно (поље) није изабрано за промену!"
+
+# @ searchandreplace
+#: search-and-replace.php:175
+msgid "Looking @ post content"
+msgstr "Гледате садржај поруке"
+
+# @ searchandreplace
+#: search-and-replace.php:189
+msgid "Looking @ ID"
+msgstr "Гледате ID "
+
+# @ searchandreplace
+#: search-and-replace.php:227
+msgid "Looking @ GUID"
+msgstr "Гледате GUID "
+
+# @ searchandreplace
+#: search-and-replace.php:241
+msgid "Looking @ Titeln"
+msgstr "Гледате Titeln"
+
+# @ searchandreplace
+#: search-and-replace.php:261
+msgid "Looking @ post excerpts"
+msgstr "Гледате изводе порука"
+
+# @ searchandreplace
+#: search-and-replace.php:275
+msgid "Looking @ Meta Daten"
+msgstr "Гледате Meta Daten"
+
+# @ searchandreplace
+#: search-and-replace.php:289
+msgid "Looking @ modifying comments text"
+msgstr "Гледате модификовани текст коментара"
+
+# @ searchandreplace
+#: search-and-replace.php:303
+msgid "Looking @ modifying comments author"
+msgstr "Гледате модификоване коментаре аутора"
+
+# @ searchandreplace
+#: search-and-replace.php:317
+msgid "Looking @ modifying comments author e-mail"
+msgstr "Гледате модификоване коментаре ауторског имејла"
+
+# @ searchandreplace
+#: search-and-replace.php:331
+msgid "Looking @ modifying comments author URLs"
+msgstr "Гледате модификоване коментаре ауторског URL-a "
+
+# @ searchandreplace
+#: search-and-replace.php:345
+msgid "Looking @ Comment-Count"
+msgstr "Гледате број коментара"
+
+# @ searchandreplace
+#: search-and-replace.php:359
+msgid "Looking @ category description"
+msgstr "Гледате опис категорија"
+
+# @ searchandreplace
+#: search-and-replace.php:373
+msgid "Looking @ Tags"
+msgstr "Гледате тагове"
+
+# @ searchandreplace
+#: search-and-replace.php:393
+msgid "Looking @ User-ID"
+msgstr "Гледате кориснички ID"
+
+# @ searchandreplace
+#: search-and-replace.php:425
+msgid "Looking @ User Login"
+msgstr "Гледате корисничку лозинку"
+
+# @ searchandreplace
+#: search-and-replace.php:483
+msgid "The inquiry could not be implemented:"
+msgstr "Захтев не може бити испуњен"
+
+# @ searchandreplace
+#: search-and-replace.php:496
+msgid "entries found."
+msgstr "Унос је пронађен"
+
+# @ searchandreplace
+#: search-and-replace.php:737
+msgid "You must specify some text to replace!"
+msgstr "Мораш спецификовати текст за замену!"
+
+# @ searchandreplace
+#: search-and-replace.php:740
+msgid "Attempting to perform search and replace ..."
+msgstr "Покушај претраге и замене..."
+
+# @ searchandreplace
+#: search-and-replace.php:741
+msgid "Search"
+msgstr "Претражи   "
+
+# @ searchandreplace
+#: search-and-replace.php:743
+msgid "and replace with"
+msgstr "и замени са"
+
+# @ searchandreplace
+#: search-and-replace.php:773
+msgid "Completed successfully!"
+msgstr "Потпуно успешно!"
+
+# @ searchandreplace
+#: search-and-replace.php:795
+msgid "You do not have sufficient permissions to edit plugins for this blog."
+msgstr "Немате довољне дозволе да измените плагинс за овај блог,"
+
+# @ searchandreplace
+#: search-and-replace.php:801
+msgid "Information Search &amp; Replace"
+msgstr "Претрага и замена информације"
+
+# @ searchandreplace
+#: search-and-replace.php:804
+msgid "Text search is case sensitive and has no pattern matching capabilites. This replace function matchs raw text so it can be used to replace HTML tags too."
+msgstr "Претрага текста је сензитивна и нема образац. Ова функција замене једнака је необрађеном тексту тако да може заменити HTML  тагове такође."
+
+# @ searchandreplace
+#: search-and-replace.php:841
+msgid "Search in"
+msgstr "Претражи у"
+
+# @ searchandreplace
+#: search-and-replace.php:848
+msgid "Content"
+msgstr "Садржај"
+
+# @ searchandreplace
+#: search-and-replace.php:812
+#: search-and-replace.php:822
+#: search-and-replace.php:850
+#: search-and-replace.php:855
+#: search-and-replace.php:860
+#: search-and-replace.php:865
+#: search-and-replace.php:870
+#: search-and-replace.php:875
+#: search-and-replace.php:880
+#: search-and-replace.php:885
+#: search-and-replace.php:890
+#: search-and-replace.php:895
+#: search-and-replace.php:900
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:915
+#: search-and-replace.php:921
+#: search-and-replace.php:928
+msgid "field:"
+msgstr "област"
+
+# @ searchandreplace
+#: search-and-replace.php:850
+#: search-and-replace.php:855
+#: search-and-replace.php:860
+#: search-and-replace.php:865
+#: search-and-replace.php:870
+#: search-and-replace.php:875
+#: search-and-replace.php:880
+#: search-and-replace.php:885
+#: search-and-replace.php:890
+#: search-and-replace.php:895
+#: search-and-replace.php:900
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:921
+#: search-and-replace.php:928
+msgid "table:"
+msgstr "табела:"
+
+# @ searchandreplace
+#: search-and-replace.php:853
+msgid "GUID"
+msgstr "GUID"
+
+# @ searchandreplace
+#: search-and-replace.php:858
+msgid "Titles"
+msgstr "Наслови"
+
+# @ searchandreplace
+#: search-and-replace.php:863
+msgid "Excerpts"
+msgstr "Изводи"
+
+# @ searchandreplace
+#: search-and-replace.php:868
+msgid "Meta Data"
+msgstr "Квази подаци"
+
+# @ searchandreplace
+#: search-and-replace.php:873
+msgid "Comments content"
+msgstr "Садржај коментара"
+
+# @ searchandreplace
+#: search-and-replace.php:878
+msgid "Comments author"
+msgstr "Коментари аутора"
+
+# @ searchandreplace
+#: search-and-replace.php:883
+msgid "Comments author e-mail"
+msgstr "Коментари ауторског имејла"
+
+# @ searchandreplace
+#: search-and-replace.php:888
+msgid "Comments author URL"
+msgstr "Коментари ауторског URL"
+
+# @ searchandreplace
+#: search-and-replace.php:893
+msgid "Comments-Counter"
+msgstr "Коментари- бројач"
+
+# @ searchandreplace
+#: search-and-replace.php:898
+msgid "Category description"
+msgstr "Опис категорије"
+
+# @ searchandreplace
+#: search-and-replace.php:903
+msgid "Tags &amp; Categories"
+msgstr "Тагови и категорије"
+
+# @ searchandreplace
+#: search-and-replace.php:905
+#: search-and-replace.php:910
+#: search-and-replace.php:915
+#: search-and-replace.php:921
+msgid "and"
+msgstr "и   "
+
+# @ searchandreplace
+#: search-and-replace.php:908
+msgid "User-ID"
+msgstr "Кориснички ID"
+
+# @ searchandreplace
+#: search-and-replace.php:913
+msgid "User-login"
+msgstr "Корисник - пријава"
+
+# @ searchandreplace
+#: search-and-replace.php:919
+msgid "ID"
+msgstr "ID"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "Checkboxes to assign"
+msgstr "Поља за доделу"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "all"
+msgstr "све"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "Checkboxes to unmask"
+msgstr "Поља за откривање"
+
+# @ searchandreplace
+#: search-and-replace.php:933
+msgid "none"
+msgstr "ништа"
+
+# @ searchandreplace
+#: search-and-replace.php:831
+#: search-and-replace.php:949
+msgid "Go"
+msgstr "Крени"
+
+# @ searchandreplace
+#: search-and-replace.php:960
+msgid "Information on the plugin"
+msgstr "Информације о плагину"
+
+# @ searchandreplace
+#: search-and-replace.php:962
+msgid "&quot;Search and Replace&quot; originalplugin (en) created by <a href=\"http://thedeadone.net/\">Mark Cunningham</a> and provided (comments) by durch <a href=\"http://www.gonahkar.com\">Gonahkar</a>.<br />&quot;Search &amp; Replace&quot;, current version provided by <a href=\"http://bueltge.de\">Frank Bueltge</a>."
+msgstr "“Претражи и замени” oригинални плагин (en) који је креирао <a href=\"http://thedeadone.net/\">Mark Cunningham</a> и обезбедио <a href=\"http://www.gonahkar.com\">Gonahkar</a>.<br />”Претражи и замени” садашњу верзију коју је обезбедио <a href=\"http://bueltge.de\">Frank Bueltge</a>"
+
+# @ searchandreplace
+#: search-and-replace.php:963
+msgid "Further information: Visit the <a href=\"http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/\">plugin homepage</a> for further information or to grab the latest version of this plugin."
+msgstr "Више информација: Посети <a href=\"http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/\"> насловну старну плагина</a> за више информација или да набавиш последњу верзију овог плагина. Желиш да ми се захвалиш? Посети моју <a href='http://bueltge.de/wunschliste'>листу жеља</a>"
+
+# @ searchandreplace
+#: search-and-replace.php:963
+msgid "You want to thank me? Visit my <a href=\"http://bueltge.de/wunschliste\">wishlist</a>."
+msgstr "Желиш да ми се захвалиш? Посети моју <a href='http://bueltge.de/wunschliste'>листу жеља</a>"
+
+# @ searchandreplace
+#. translators: plugin header field 'PluginURI'
+#: search-and-replace.php:0
+msgid "http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/"
+msgstr ""
+
+# @ searchandreplace
+#. translators: plugin header field 'Description'
+#: search-and-replace.php:0
+msgid "A simple search for find strings in your database and replace the string."
+msgstr "Једноставна претрага за налажење низова у својој бази података и замену низа."
+
+# @ searchandreplace
+#. translators: plugin header field 'Author'
+#: search-and-replace.php:0
+msgid "Frank B&uuml;ltge"
+msgstr ""
+
+# @ searchandreplace
+#. translators: plugin header field 'AuthorURI'
+#: search-and-replace.php:0
+msgid "http://bueltge.de/"
+msgstr ""
+
+# @ searchandreplace
+#: search-and-replace.php:157
+msgid "Looking @ all"
+msgstr "Гледате све"
+
+# @ searchandreplace
+#: search-and-replace.php:625
+msgid "is not found in this Database"
+msgstr "Није пронађено у овој бази података"
+
+# @ searchandreplace
+#: search-and-replace.php:803
+msgid "This plugin uses an standard SQL query so it modifies your database directly!<br /><strong>Attention: </strong>You <strong>cannot</strong> undo any changes made by this plugin. <strong>It is therefore advisable to backup your database before running this plugin.</strong> No legal claims to the author of this plugin! <strong>Activate</strong> the plugin <strong>only</strong>, if you want to use it!"
+msgstr "Овај плагин корсти стардандни SQL филтер тако да модификује вашу базу података директно!<br/><strong> Пажња: Не можете поништити никакве промене направљене овим плагином. Пожељно је подржати базу података пре коришћења овог плагина. Нема правних захтева аутору! Активирајте плагин само ако желите да га користите!"
+
+# @ searchandreplace
+#: search-and-replace.php:810
+msgid "All - only search!"
+msgstr "Претражи искључиво све!"
+
+# @ searchandreplace
+#: search-and-replace.php:816
+#: search-and-replace.php:940
+msgid "Search for"
+msgstr "Тражи"
+
+# @ searchandreplace
+#: search-and-replace.php:826
+#: search-and-replace.php:944
+msgid "Replaced with"
+msgstr "Замени са"
+
+# @ searchandreplace
+#: search-and-replace.php:477
+msgid "... in table"
+msgstr "..у табелиi"
+
+# @ searchandreplace
+#: search-and-replace.php:805
+msgid "<strong>Step One:</strong> Use the follow search for a better information with return the sql-query and tables with the results. The search use alle fields in all tables! After this you have more informations and you can use the replace function."
+msgstr "Први корак: Користи циљану претрагу за бољу повратну информацију sql-филтера и табела. Претражују се сва поља у свим табелама! После овога имаш више информација и можеш да измениш функције."
+
+# @ searchandreplace
+#. translators: plugin header field 'Version'
+#: search-and-replace.php:0
+msgid "2.6.2"
+msgstr ""
+
+# @ searchandreplace
+#: search-and-replace.php:166
+msgid "Looking & Replace @ all"
+msgstr "Гледај и замени све"
+
+# @ searchandreplace
+#: search-and-replace.php:445
+msgid "Looking @ signups"
+msgstr "Гледате пријаве"
+
+# @ searchandreplace
+#: search-and-replace.php:812
+#: search-and-replace.php:822
+msgid "tables:"
+msgstr "табеле:"
+
+# @ searchandreplace
+#: search-and-replace.php:820
+msgid "All - search/replace - special care!"
+msgstr "Претражи све/замени са посебном пажњом!"
+
+# @ searchandreplace
+#: search-and-replace.php:926
+msgid "Signups"
+msgstr "Пријаве"
+
