@@ -1,12 +1,13 @@
 === Custom Field Template ===
 Contributors: Hiroaki Miyashita
 Donate link: http://wpgogo.com/development/custom-field-template.html
-Tags: custom, fields, field, template, meta, custom field, custom fields, custom field template
+Tags: custom field, custom fields, custom, fields, field, template, meta, custom field template, custom post type
 Requires at least: 2.1
-Tested up to: 3.4
-Stable tag: 2.0.4
+Tested up to: 3.5
+Stable tag: 2.0.9
+License: GPLv2 or later
 
-This plugin extends the functionality of custom fields.
+The Custom Field Template plugin extends the functionality of custom fields.
 
 == Description ==
 
@@ -85,6 +86,8 @@ Localization
 
 If you have translated into your language, please let me know.
 
+* [Japanese Custom Field Template Manual](http://ja.wpcft.com/)
+
 == Installation ==
 
 1. Copy the `custom-field-template` directory into your `wp-content/plugins` directory
@@ -107,6 +110,24 @@ See the default template and modify it.
 4. Auto Hook of `the_content()` in the option page of this plugin may help you do this. You can use [cft] shortcodes here. You can switch the cft formats in each category.
 
 == Changelog ==
+
+= 2.0.9 =
+* Bugfix: output with the cft format.
+* Bugfix: multibyte character key name.
+
+= 2.0.8 =
+* Code cleaning.
+
+= 2.0.7 =
+* Bugfix: media insert.
+
+= 2.0.6 =
+* Bugfix: inappropriate output with the cftsearch shortcode.
+
+= 2.0.5 =
+* Template Format for the edit screen. `[key]` will be converted to the input field. `[[key]]` is for the default key output. The `fieldset` type has not been supported yet.
+* `wrap` attribute for the textarea type.
+* Code cleaning.
 
 = 2.0.4 =
 * Bugfix: JavaScript error with jQuery validation.

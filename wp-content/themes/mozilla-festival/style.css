@@ -753,7 +753,7 @@ ul.partners {
 .alert {
     margin-top: 1em;
     padding: 1em 12px;
-    background: rgba(217, 237, 247, 0.8);
+    background: rgba(217, 237, 247, 1);
     color: #C09853;
     border: 1px solid #BCE8F1;
     border-radius: 8px;
@@ -780,12 +780,10 @@ ul.partners {
         padding-bottom: 0;
     }
 }
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
     #branding .alert p {
         width: 60%;
     }
-}
-@media screen and (max-width: 640px) {
     .festival-brand {
         background-image: url(images/header-mozilla-mobile.png);
         max-width: 70%;
