@@ -35,12 +35,12 @@ ins {
 	background: #00063f;
 }
 input[type=text],
-.post-password-required input[type=password],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
 textarea {
 	border: 1px solid #222;
-}
-input[type=text]:focus,
-textarea:focus {
 }
 input#s {
 	background-color: #ddd;
@@ -457,6 +457,11 @@ section.recent-posts .other-recent-posts .comments-link a:hover {
 }
 .comment-meta {
 	color: #999;
+}
+.commentlist .avatar {
+	-webkit-box-shadow: 0 1px 2px #222;
+	-moz-box-shadow: 0 1px 2px #222;
+	box-shadow: 0 1px 2px #222;
 }
 a.comment-reply-link {
 	background: #242424;

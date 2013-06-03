@@ -4,10 +4,11 @@ Theme URI: http://wordpress.org/extend/themes/twentyeleven
 Author: the WordPress team
 Author URI: http://wordpress.org/
 Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
-Version: 1.2
-License: GNU General Public License
-License URI: license.txt
-Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
 */
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
@@ -322,6 +323,9 @@ body, input, textarea {
 body {
 	background: #e2e2e2;
 }
+#page {
+	background: #fff;
+}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -398,7 +402,7 @@ pre {
 	overflow: auto;
 	padding: 0.75em 1.625em;
 }
-code, kbd {
+code, kbd, samp, var {
 	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 abbr, acronym, dfn {
@@ -427,10 +431,16 @@ sup {
 sub {
 	top: .5ex;
 }
+small {
+	font-size: smaller;
+}
 
 /* Forms */
 input[type=text],
 input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
 textarea {
 	background: #fafafa;
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
@@ -440,6 +450,10 @@ textarea {
 	color: #888;
 }
 input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=number]:focus,
 textarea:focus {
 	color: #373737;
 }
@@ -447,7 +461,11 @@ textarea {
 	padding-left: 3px;
 	width: 98%;
 }
-input[type=text] {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number] {
 	padding: 3px;
 }
 input#s {
@@ -501,7 +519,7 @@ a:hover {
 	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
-	z-index: 2;
+	z-index: 9999;
 }
 #site-title {
 	margin-right: 270px;
@@ -525,9 +543,9 @@ a:hover {
 	margin: 0 270px 3.65625em 0;
 }
 #branding img {
-	overflow: hidden;
 	height: auto;
-	margin-bottom: -7px;
+	display: block;
+	width: 100%;
 }
 
 
@@ -535,11 +553,11 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #FE9C01; /* Show a solid color for older browsers */
-	background: -moz-linear-gradient(#FE9C01, #f1592a);
-	background: -o-linear-gradient(#FE9C01, #f1592a);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FE9C01), to(#f1592a)); /* older webkit syntax */
-	background: -webkit-linear-gradient(#FE9C01, #f1592a);
+	background: #222; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#252525, #0a0a0a);
+	background: -o-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#252525, #0a0a0a);
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
@@ -553,6 +571,7 @@ a:hover {
 	font-size: 13px;
 	list-style: none;
 	margin: 0 0 0 -0.8125em;
+	padding-left: 0;
 }
 #access li {
 	float: left;
@@ -610,6 +629,8 @@ a:hover {
 #access ul li:hover > ul {
 	display: block;
 }
+#access .current-menu-item > a,
+#access .current-menu-ancestor > a,
 #access .current_page_item > a,
 #access .current_page_ancestor > a {
 	font-weight: bold;
@@ -714,6 +735,7 @@ a:hover {
 	padding-right: 76px;
 }
 .entry-title {
+	clear: both;
 	color: #222;
 	font-size: 26px;
 	font-weight: bold;
@@ -848,12 +870,15 @@ dl.gallery-item {
 	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
-img[class*="wp-image-"] {
+img[class*="wp-image-"],
+img[class*="attachment-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-img.size-full {
+img.size-full,
+img.size-large {
 	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 .entry-content img.wp-smiley {
 	border: none;
@@ -949,6 +974,16 @@ a:active img[class*="wp-image-"],
 .wp-caption a:hover img {/* ... including captioned images! */
 	background: #fff;
 	border-color: #ddd;
+}
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+.entry-content .twitter-tweet-rendered {
+	max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
 
 /* Password Protected Posts */
@@ -1054,6 +1089,9 @@ article.format-link .entry-content,
 article.format-status .entry-content {
 	padding: 20px 0 0;
 }
+article.format-status .entry-content {
+	min-height: 65px;
+}
 .recent-posts .entry-header .entry-format {
 	display: none;
 }
@@ -1098,7 +1136,6 @@ blockquote.pull {
 .pull.alignleft {
 	margin: 0 1.625em 0 0;
 	text-align: right;
-	width: 33%;
 }
 .singular .pull.alignleft {
 	margin: 0 1.625em 0 -22.25%;
@@ -1106,6 +1143,9 @@ blockquote.pull {
 .pull.alignright {
 	margin: 0 0 0 1.625em;
 	text-align: left;
+}
+blockquote.pull.alignleft,
+blockquote.pull.alignright {
 	width: 33%;
 }
 .singular .pull.alignright {
@@ -1167,6 +1207,7 @@ blockquote.pull {
 	float: left;
 	display: block;
 	margin: .375em 1.625em 0 0;
+	max-width: 100%;
 }
 
 
@@ -1217,15 +1258,24 @@ blockquote.pull {
 .indexed.format-image .entry-content {
 	padding-top: 0.5em;
 }
-.indexed.format-image p,
-.indexed.format-image p img {
-	margin-bottom: 0;
+.indexed.format-image .entry-content p {
+	margin: 1em 0;
+}
+.indexed.format-image .entry-content p:first-child,
+.indexed.format-image .entry-content p:first-child a,
+.indexed.format-image .entry-content p:first-child img {
+	display: block;
+	margin: 0;
+}
+.indexed.format-image .entry-content .wp-caption .wp-caption-text {
+	margin: 0;
+	padding-bottom: 1em;
 }
 .indexed.format-image footer.entry-meta {
 	background: #ddd;
-	margin-top: -7px;
-	padding: 20px 30px;
 	overflow: hidden;
+	padding: 4%;
+	max-width: 96%;
 }
 .indexed.format-image div.entry-meta {
 	display: inline-block;
@@ -1256,7 +1306,7 @@ blockquote.pull {
 	background: #111;
 	margin-bottom: 0;
 	max-width: 96%;
-	padding: 11px;
+	padding: 2% 2% 0;
 }
 .indexed.format-image .wp-caption .wp-caption-text {
 	color: #ddd;
@@ -1698,16 +1748,17 @@ section.recent-posts .other-recent-posts li:after {
 	position: relative;
 	top: -0.3em;
 	text-align: right;
-	width: 100%;
 	z-index: 1;
 }
 #nav-single .nav-previous,
 #nav-single .nav-next {
-	float: none;
 	width: auto;
 }
 #nav-single .nav-next {
 	padding-left: .5em;
+}
+#nav-single .nav-previous {
+	padding-right: .5em;
 }
 
 
@@ -1718,6 +1769,10 @@ section.recent-posts .other-recent-posts li:after {
 	font-size: 12px;
 }
 .widget {
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 	clear: both;
 	margin: 0 0 2.2em;
 }
@@ -1819,6 +1874,8 @@ section.ephemera .entry-title a span {
 
 /* Widget Image */
 .widget_image img {
+	border: 0;
+	padding: 0;
 	height: auto;
 	max-width: 100%;
 }
@@ -1925,6 +1982,10 @@ section.ephemera .entry-title a span {
 }
 .commentlist .children li.comment .comment-content {
 	margin: 1.625em 0 0;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 .comment-meta a {
 	font-weight: bold;
@@ -2081,7 +2142,6 @@ a.comment-reply-link > span {
 	font-weight: bold;
 	left: 75%;
 	position: absolute;
-	top: 45px;
 	z-index: 1;
 }
 #respond .comment-notes,
@@ -2218,15 +2278,250 @@ p.comment-form-comment {
 	color: #555;
 	font-weight: bold;
 }
-#site-generator .sep {
-	background: url(images/wordpress.png) center left no-repeat;
-	color: transparent;
-	display: inline-block;
-	height: 16px;
-	line-height: 16px;
-	margin: 0 7px;
-	width: 16px;
+
+
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 800px) {
+	/* Simplify the basic layout */
+	#main #content {
+		margin: 0 7.6%;
+		width: auto;
+	}
+	#nav-below {
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 1.625em;
+	}
+	#main #secondary {
+		float: none;
+		margin: 0 7.6%;
+		width: auto;
+	}
+	/* Simplify the showcase template */
+	.page-template-showcase-php .featured-posts {
+		min-height: 280px;
+	}
+	.featured-posts section.featured-post {
+		height: auto;
+	}
+	.page-template-showcase-php section.recent-posts {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+	.page-template-showcase-php #main .widget-area {
+		float: none;
+		margin: 0;
+		width: auto;
+	}
+	.page-template-showcase-php .other-recent-posts {
+		border-bottom: 1px solid #ddd;
+	}
+	/* Simplify the showcase template when small feature */
+	section.featured-post .attachment-small-feature,
+	.one-column section.featured-post .attachment-small-feature {
+		border: none;
+		display: block;
+		float: left;
+		height: auto;
+		margin: 0.625em auto 1.025em;
+		max-width: 30%;
+		position: static;
+	}
+	article.feature-image.small {
+		float: right;
+		margin: 0 0 1.625em;
+		width: 64%;
+	}
+	.one-column article.feature-image.small .entry-summary {
+		height: auto;
+	}
+	article.feature-image.small .entry-summary p a {
+		left: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: auto;
+	}
+	/* Remove the margin on singular articles */
+	.singular .entry-header,
+	.singular .entry-content,
+	.singular footer.entry-meta,
+	.singular #comments-title {
+		width: 100%;
+	}
+	/* Simplify the pullquotes and pull styles */
+	.singular blockquote.pull {
+		margin: 0 0 1.625em;
+	}
+	.singular .pull.alignleft {
+		margin: 0 1.625em 0 0;
+	}
+	.singular .pull.alignright {
+		margin: 0 0 0 1.625em;
+	}
+	.singular .entry-meta .edit-link a {
+		left: 0;
+		position: absolute;
+		top: 40px;
+	}
+	.singular #author-info {
+		margin: 2.2em -8.8% 0;
+		padding: 20px 8.8%;
+	}
+	/* Make sure we have room for our comment avatars */
+	.commentlist {
+		width: 100%;
+	}
+	.commentlist > li.comment,
+	.commentlist .pingback {
+		margin-left: 102px;
+		width: auto;
+	}
+	/* And a full-width comment form */
+	#respond {
+		width: auto;
+	}
+	/* No need to float footer widgets at this size */
+	#colophon #supplementary .widget-area {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+	/* No need to float 404 widgets at this size */
+	.error404 #main .widget {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+
 }
+@media (max-width: 650px) {
+	/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
+	body, input, textarea {
+		font-size: 13px;
+	}
+	#site-title a {
+		font-size: 24px;
+	}
+	#site-description {
+		font-size: 12px;
+	}
+	#access ul {
+		font-size: 12px;
+	}
+	article.intro .entry-content {
+		font-size: 12px;
+	}
+	.entry-title {
+		font-size: 21px;
+	}
+	.featured-post .entry-title {
+		font-size: 14px;
+	}
+	.singular .entry-title {
+		font-size: 28px;
+	}
+	.entry-meta {
+		font-size: 12px;
+	}
+	blockquote {
+		margin: 0;
+	}
+	blockquote.pull {
+		font-size: 17px;
+	}
+	/* Reposition the site title and description slightly */
+	#site-title {
+		padding: 5.30625em 0 0;
+	}
+	#site-title,
+	#site-description {
+		margin-right: 0;
+	}
+	/* Make sure the logo and search form don't collide */
+	#branding #searchform {
+		top: 1.625em !important;
+	}
+	/* Floated content doesn't work well at this size */
+	.alignleft,
+	.alignright {
+		display: block;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	/* Make sure the post-post navigation doesn't collide with anything */
+	#nav-single {
+		display: block;
+		position: static;
+	}
+	.singular .hentry {
+		padding: 1.625em 0 0;
+	}
+	.singular.page .hentry {
+		padding: 1.625em 0 0;
+	}
+	/* Talking avatars take up too much room at this size */
+	.commentlist > li.comment,
+	.commentlist > li.pingback {
+		margin-left: 0 !important;
+	}
+	.commentlist .avatar {
+		background: transparent;
+		display: block;
+		padding: 0;
+		position: static;
+	}
+	.commentlist .children .avatar {
+		background: none;
+		left: 2.2em;
+		padding: 0;
+		position: absolute;
+		top: 2.2em;
+	}
+	/* Use the available space in the smaller comment form */
+	#respond input[type="text"] {
+		width: 95%;
+	}
+	#respond .comment-form-author .required,
+	#respond .comment-form-email .required {
+		left: 95%;
+	}
+	#content .gallery-columns-3 .gallery-item {
+		width: 31%;
+		padding-right: 2%;
+	}
+	#content .gallery-columns-3 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+
+}
+@media (max-width: 450px) {
+	#content .gallery-columns-2 .gallery-item {
+		width: 45%;
+		padding-right: 4%;
+	}
+	#content .gallery-columns-2 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	body {
+		padding: 0;
+	}
+	#page {
+		margin-top: 0;
+	}
+	#branding {
+		border-top: none;
+	}
+
+}
+
 
 /* =Print
 ----------------------------------------------- */
@@ -2414,4 +2709,11 @@ p.comment-form-comment {
 }
 #ie7 section.recent-posts {
 	margin-right: 7.6%;
+}
+
+/* =IE8
+----------------------------------------------- */
+
+#ie8 section.feature-image.large img {
+	width: 100%;
 }
