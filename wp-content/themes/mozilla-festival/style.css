@@ -81,7 +81,7 @@ a.register {
 #branding {
     border-top: none;
     background: transparent url(images/header-swoosh.png) no-repeat 6px top;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
 }
 .hide {
     position: absolute;
