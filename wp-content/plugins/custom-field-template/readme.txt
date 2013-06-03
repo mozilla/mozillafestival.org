@@ -3,8 +3,8 @@ Contributors: Hiroaki Miyashita
 Donate link: http://wpgogo.com/development/custom-field-template.html
 Tags: custom field, custom fields, custom, fields, field, template, meta, custom field template, custom post type
 Requires at least: 2.1
-Tested up to: 3.5
-Stable tag: 2.0.9
+Tested up to: 3.6
+Stable tag: 2.1.5
 License: GPLv2 or later
 
 The Custom Field Template plugin extends the functionality of custom fields.
@@ -69,6 +69,7 @@ Localization
 * Czech (cs_CZ) - [Jakub](http://www.webees.cz/)
 * German (de_DE) - F J Kaiser
 * Spanish (es_ES) - [Dario Ferrer](http://www.darioferrer.com/)
+* Farsi (fa_IR) - [Mehdi Zare](http://sabood.ir/)
 * French (fr_FR) - Nicolas Lemoine
 * Hungarian (hu_HU) - [Balazs Kovacs](http://www.netpok.hu)
 * Indonesian (id_ID) - [Masino Sinaga](http://www.openscriptsolution.com/)
@@ -110,6 +111,29 @@ See the default template and modify it.
 4. Auto Hook of `the_content()` in the option page of this plugin may help you do this. You can use [cft] shortcodes here. You can switch the cft formats in each category.
 
 == Changelog ==
+
+= 2.1.5 =
+* Bugfix: values in a multiple fieldset.
+
+= 2.1.4 =
+* Bugfix: radio type in a fieldset.
+
+= 2.1.3 =
+* Code cleaning.
+
+= 2.1.2 =
+* Post preview support.
+* Sort output by the input order.
+
+= 2.1.1 =
+* Farsi.
+* Bugfix: key output with single quotes.
+* Bugfix: media picker inside the fieldset type.
+* Bugfix: empty save of PHP CODE.
+* Bugfix: field label in the cftsearch shortcode.
+
+= 2.1 =
+* Bugfix: category refinement.
 
 = 2.0.9 =
 * Bugfix: output with the cft format.

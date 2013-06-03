@@ -4,7 +4,7 @@ Plugin Name: Custom Field Template
 Plugin URI: http://wpgogo.com/development/custom-field-template.html
 Description: This plugin adds the default custom fields on the Write Post/Page.
 Author: Hiroaki Miyashita
-Version: 2.0.9
+Version: 2.1.5
 Author URI: http://wpgogo.com/
 */
 
@@ -67,6 +67,8 @@ class custom_field_template {
 			add_shortcode( 'cft', array(&$this, 'output_custom_field_values') );
 			add_shortcode( 'cftsearch', array(&$this, 'search_custom_field_values') );
 		endif;
+		
+		add_filter( 'get_post_metadata', array(&$this, 'get_preview_postmeta'), 10, 4 );
 	}
 		
 	function custom_field_template_init() {
@@ -247,9 +249,10 @@ class custom_field_template {
 		return $wpdb->get_results( $wpdb->prepare("SELECT meta_key, meta_value, meta_id, post_id FROM $wpdb->postmeta WHERE post_id = %d ORDER BY meta_key,meta_id", $postid), ARRAY_A );
 	}
 	
-	function get_post_meta($post_id, $key, $single = false) {
-		if ( !$post_id || !$key )
-			return '';
+	function get_post_meta($post_id, $key = '', $single = false) {
+		if ( !$post_id ) return '';
+			
+		if ( $preview_id = $this->get_preview_id( $post_id ) ) $post_id = $preview_id;
 
 		$post_id = (int) $post_id;
 
@@ -283,14 +286,22 @@ class custom_field_template {
 				$meta_cache = wp_cache_get($post_id, 'cft_post_meta');
 			endif;
 		}
-
-		if ( isset($meta_cache[$key]) ) {
-			if ( $single ) {
+	
+		if ( $key ) :
+			if ( $single && isset($meta_cache[$key][0]) ) :
 				return maybe_unserialize( $meta_cache[$key][0] );
-			} else {
-				return array_map('maybe_unserialize', $meta_cache[$key]);
-			}
-		}
+			else :
+				if ( isset($meta_cache[$key]) ) :
+					if ( is_array($meta_cache[$key]) ) :
+						return array_map('maybe_unserialize', $meta_cache[$key]);
+					else :
+						return $meta_cache[$key];
+					endif;
+				endif;
+			endif;
+		else :		
+			return array_map('maybe_unserialize', $meta_cache);
+		endif;
 
 		return '';
 	}
@@ -616,7 +627,7 @@ class custom_field_template {
 	}
 	
 	function add_manage_posts_custom_column($column_name, $post_id) {
-		$data = get_post_custom($post_id);
+		$data = $this->get_post_meta($post_id);
 		
 		if( is_array($data) && $column_name == 'custom-fields' ) :
 			$flag = 0;
@@ -1041,7 +1052,7 @@ type = file';
 		elseif ( !empty($_POST['custom_field_template_php_submit']) ) :
 			unset($options['php']);
 			for($i=0;$i<count($_POST["custom_field_template_php"]);$i++) {
-				if( isset($_POST["custom_field_template_php"][$i]) )
+				if( !empty($_POST["custom_field_template_php"][$i]) )
 					$options['php'][] = $_POST["custom_field_template_php"][$i];
 			}			
 			update_option('custom_field_template_data', $options);
@@ -1793,6 +1804,8 @@ jQuery(this).addClass("closed");
 		extract($data);
 		$options = $this->get_custom_field_template_data();
 
+		$name = stripslashes($name);
+
 		$title = $name;
 		$name = $this->sanitize_name( $name );
 		$name_id = preg_replace( '/%/', '', $name );
@@ -1880,6 +1893,8 @@ jQuery(this).addClass("closed");
 		extract($data);
 		$options = $this->get_custom_field_template_data();
 
+		$name = stripslashes($name);
+
 		$title = $name;
 		$name = $this->sanitize_name( $name );
 		$name_id = preg_replace( '/%/', '', $name );
@@ -1939,6 +1954,8 @@ jQuery(this).addClass("closed");
 		$hide = $addfield = $out = $out_key = $out_value = '';
 		extract($data);
 		$options = $this->get_custom_field_template_data();
+
+		$name = stripslashes($name);
 
 		$title = $name;
 		$name = $this->sanitize_name( $name );
@@ -2004,7 +2021,8 @@ jQuery(this).addClass("closed");
 
 		if ( is_array($values) ) :
 			foreach( $values as $val ) {
-				$id = $name_id . '_' . $this->sanitize_name( $val ) . '_' . $sid . '_' . $cftnum;
+				$value_id = preg_replace( '/%/', '', $this->sanitize_name( $val ) );
+				$id = $name_id . '_' . $value_id . '_' . $sid . '_' . $cftnum;
 			
 				$checked = ( stripcslashes(trim( $val )) == trim( $selected ) ) ? 'checked="checked"' : '';
 			
@@ -2029,6 +2047,8 @@ jQuery(this).addClass("closed");
 		$hide = $addfield = $out = $out_key = $out_value = '';
 		extract($data);
 		$options = $this->get_custom_field_template_data();
+
+		$name = stripslashes($name);
 
 		$title = $name;
 		$name = $this->sanitize_name( $name );
@@ -2115,6 +2135,8 @@ jQuery(this).addClass("closed");
 		$options = $this->get_custom_field_template_data();
 
 		global $wp_version;
+
+		$name = stripslashes($name);
 
 		$title = $name;
 		$name = $this->sanitize_name( $name );
@@ -2295,9 +2317,11 @@ jQuery(this).addClass("closed");
 	
 	function make_file( $name, $sid, $data ) {
 		$cftnum = $size = $hideKey = $label = $class = $style = $before = $after = $multipleButton = $relation = $mediaLibrary = $mediaPicker = '';
-		$hide = $addfield = $out = $out_key = $out_value = $picker = '';
+		$hide = $addfield = $out = $out_key = $out_value = $picker = $inside_fieldset = '';
 		extract($data);
 		$options = $this->get_custom_field_template_data();
+
+		$name = stripslashes($name);
 
 		$title = $name;
 		$name = $this->sanitize_name( $name );
@@ -2335,7 +2359,9 @@ jQuery(this).addClass("closed");
 
 		if ( $mediaPicker == true ) :
 			$picker = __(' OR ', 'custom-field-template');
-			$picker .= '<a href="'.$image_upload_iframe_src.'&post_id='.$_REQUEST[ 'post' ].'&TB_iframe=1&tab='.$tab.'" class="thickbox" onclick="jQuery('."'#cft_current_template'".').val(jQuery(this).parent().parent().parent().parent().attr(\'id\').replace(\'cft_\',\'\'));jQuery('."'#cft_clicked_id'".').val(jQuery(this).parent().find(\'input\').attr(\'id\'));">'.__('Select by Media Picker', 'custom-field-template').'</a>';
+			$picker .= '<a href="'.$image_upload_iframe_src.'&post_id='.$_REQUEST[ 'post' ].'&TB_iframe=1&tab='.$tab.'" class="thickbox" onclick="jQuery('."'#cft_current_template'".').val(jQuery(this).parent().parent().parent().';
+			if ( $inside_fieldset ) $picker .= 'parent().';
+			$picker .= 'parent().attr(\'id\').replace(\'cft_\',\'\'));jQuery('."'#cft_clicked_id'".').val(jQuery(this).parent().find(\'input\').attr(\'id\'));">'.__('Select by Media Picker', 'custom-field-template').'</a>';
 		endif;
 		
 		$out_key = '<span' . $hide . '><label for="' . $name_id . $sid . '_' . $cftnum . '">' . $title . '</label></span>'.$addfield;
@@ -2502,11 +2528,13 @@ jQuery(this).addClass("closed");
 			$format = stripslashes($options['shortcode_format'][$options['custom_fields'][$id]['format']]);
 
 		$last_title = '';
+		$fieldset_open = 0;
 		foreach( $fields as $field_key => $field_val ) :
 			foreach( $field_val as $title => $data ) {
 				$class = $style = $addfield = $tmpout = $out_all = $out_key = $out_value = $duplicator = '';
 				if ( isset($data['parentSN']) && is_numeric($data['parentSN']) ) $parentSN = $data['parentSN'];
 				else $parentSN = $field_key;
+				if ( $fieldset_open ) $data['inside_fieldset'] = 1;
 					if ( isset($data['level']) && is_numeric($data['level']) ) :
 						if ( $data['level'] > $level ) continue;
 					endif;
@@ -2516,6 +2544,7 @@ jQuery(this).addClass("closed");
 						$tmpout .= '</div><div' . $class . $style . '>';
 					}
 					else if( $data['type'] == 'fieldset_open' ) {
+						$fieldset_open = 1;
 						if ( !empty($data['class']) ) $class = ' class="' . $data['class'] . '"';
 						if ( !empty($data['style']) ) $style = ' style="' . $data['style'] . '"';
 						$tmpout .= '<fieldset' . $class . $style . '>'."\n";
@@ -2550,6 +2579,7 @@ jQuery(this).addClass("closed");
 						endif;
 					}
 					else if( $data['type'] == 'fieldset_close' ) {
+						$fieldset_open = 0;
 						$tmpout .= '</fieldset>';
 					}
 					else if( $data['type'] == 'textfield' || $data['type'] == 'text' ) {
@@ -2686,7 +2716,7 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 					$categories = explode(',', $val['category']);
 					$categories = array_filter($categories);
 					array_walk( $categories, create_function('&$v', '$v = trim($v);') );
-					$query = $wpdb->prepare("SELECT * FROM `".$wpdb->prefix."term_taxonomy` WHERE term_id IN (%s)", $val['category']);
+					$query = "SELECT * FROM `".$wpdb->prefix."term_taxonomy` WHERE term_id IN (".addslashes($val['category']).")";
 					$result = $wpdb->get_results($query, ARRAY_A);
 					$category_taxonomy = array();
 					if ( !empty($result) && is_array($result) ) :
@@ -2954,16 +2984,34 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 								
 		if( isset($_REQUEST['custom-field-template-verify-key']) && !wp_verify_nonce($_REQUEST['custom-field-template-verify-key'], 'custom-field-template') )
 			return $id;
-		
+		if ( !empty($_POST['wp-preview']) && $id != $post->ID ) :
+			$revision_ids = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_parent = %d AND post_type = 'revision'", $id ) );
+			$wpdb->query( "DELETE FROM $wpdb->postmeta WHERE post_id IN (" . implode( ',', $revision_ids ) . ")" );
+				
+			wp_cache_flush();
+			$original_data = $this->get_post_meta($id);
+
+			if ( !empty($original_data) && is_array($original_data) ) :
+				foreach ( $original_data as $key => $val ) :
+					if ( is_array($val) ) :
+						foreach ( $val as $val2 ) :
+							add_metadata( 'post', $post->ID, $key, $val2 );
+						endforeach;
+					else :					
+						add_metadata( 'post', $post->ID, $key, $val );
+					endif;
+				endforeach;
+			endif;
+				
+			$id = $post->ID;
+		endif;
+
 		if ( !isset($_REQUEST['custom-field-template-id']) ) :
 			if ( isset($options['posts'][$id]) ) unset($options['posts'][$id]);
 			update_option('custom_field_template_data', $options);
 			return $id;
 		endif;
-		
-		if ($post->post_type == 'revision') 
-			return;
-		
+
 		if ( !empty($_REQUEST['custom-field-template-id']) && is_array($_REQUEST['custom-field-template-id']) ) :
 			foreach ( $_REQUEST['custom-field-template-id'] as $cft_id ) :
 		$fields = $this->get_custom_fields($cft_id);
@@ -2983,7 +3031,7 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		
 		$save_value = array();
 
-		if ( is_array($_FILES) ) :
+		if ( !empty($_FILES) && is_array($_FILES) ) :
 			foreach($_FILES as $key => $val ) :
 				foreach( $val as $key2 => $val2 ) :
 					if ( is_array($val2) ) :
@@ -3114,23 +3162,23 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		echo 'get_post_custom';
 		print_r(get_post_custom($id));
 		exit();*/
-		
+
 		foreach( $save_value as $title => $values ) :
 			unset($delete);
 			if ( count($values) == 1 ) :
-				if ( !add_post_meta( $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]), true ) ) :
+				if ( !add_metadata( 'post', $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]), true ) ) :
 					if ( count($this->get_post_meta($id, $title, false))>1 ) :
-						delete_post_meta($id, $title);
-						add_post_meta( $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]) );
+						delete_metadata( 'post', $id, $title );
+						add_metadata( 'post', $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]) );
 					else :
-						update_post_meta( $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]) );
+						update_metadata( 'post', $id, $title, apply_filters('cft_'.rawurlencode($title), $values[0]) );
 					endif;
 				endif;
 			elseif ( count($values) > 1 ) :
 				$tmp = $this->get_post_meta( $id, $title, false );
-				if ( $tmp ) delete_post_meta($id, $title);
+				if ( $tmp ) delete_metadata( 'post', $id, $title );
 				foreach($values as $val)
-					add_post_meta( $id, $title, apply_filters('cft_'.rawurlencode($title), $val) );
+					add_metadata( 'post', $id, $title, apply_filters('cft_'.rawurlencode($title), $val) );
 			endif;
 		endforeach;
 
@@ -3158,9 +3206,11 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		
 		endforeach;
 		endif;
-		
+
 		update_option('custom_field_template_data', $options);
 		wp_cache_flush();
+		
+		do_action('cft_save_post', $id, $post);
 	}
 	
 	function parse_ini_str($Str,$ProcessSections = TRUE) {
@@ -3298,7 +3348,7 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 									$gap += ($org_counter - $counter);
 								endif;
 							else :
-								if ( !isset($cftisexist[$title]) ) $Data[$Data_key][$title]['parentSN'] = $tmp_parentSN+$gap;
+								if ( !isset($cftisexist[$title]) && !isset($fieldset) ) $Data[$Data_key][$title]['parentSN'] = $tmp_parentSN+$gap;
 								else $Data[$Data_key][$title]['parentSN'] = $tmp_parentSN;
 								$returndata[] = $Data[$Data_key];
 								if ( isset($fieldset) && is_array($fieldset) ) :
@@ -3396,7 +3446,7 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		endif;
 		
 		if ( is_numeric($format) && $output = $options['shortcode_format'][$format] ) :
-			$data = get_post_custom($post_id);
+			$data = $this->get_post_meta($post_id);
 			$output = stripcslashes($output);
 			
 			if( $data == null)
@@ -3409,36 +3459,36 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 					foreach ( $fields as $field_key => $field_val ) :					
 						foreach ( $field_val as $key => $val ) :
 							$replace_val = '';
-							if ( count($data[$key]) > 1 ) :
-								if ( $val['sort'] == 'asc' ) :
+							if ( isset($data[$key]) && count($data[$key]) > 1 ) :
+								if ( isset($val['sort']) && $val['sort'] == 'asc' ) :
 									sort($data[$key]);
-								elseif ( $val['sort'] == 'desc' ) :
+								elseif ( isset($val['sort']) && $val['sort'] == 'desc' ) :
 									rsort($data[$key]);
 								endif;
 								if ( $before_list ) : $replace_val = $before_list . "\n"; endif;
 								foreach ( $data[$key] as $val2 ) :
 									$value = $val2;
-									if ( is_numeric($val['outputCode']) ) :
+									if ( isset($val['outputCode']) && is_numeric($val['outputCode']) ) :
 										eval(stripcslashes($options['php'][$val['outputCode']]));
 									endif;
-									if ( $val['shortCode'] == true ) $value = do_shortcode($value);
+									if ( isset($val['shortCode']) && $val['shortCode'] == true ) $value = do_shortcode($value);
 									$replace_val .= $before_value . $value . $after_value . "\n";
 								endforeach;
 								if ( $after_list ) : $replace_val .= $after_list . "\n"; endif;
-							elseif ( count($data[$key]) == 1 ) :
+							elseif ( isset($data[$key]) && count($data[$key]) == 1 ) :
 								$value = $data[$key][0];
-								if ( is_numeric($val['outputCode']) ) :
+								if ( isset($val['outputCode']) && is_numeric($val['outputCode']) ) :
 									eval(stripcslashes($options['php'][$val['outputCode']]));
 								endif;
-								if ( $val['shortCode'] == true ) $value = do_shortcode($value);
+								if ( isset($val['shortCode']) && $val['shortCode'] == true ) $value = do_shortcode($value);
 								$replace_val = $value;
-								if ( $val['singleList'] == true ) :
+								if ( isset($val['singleList']) && $val['singleList'] == true ) :
 									if ( $before_list ) : $replace_val = $before_list . "\n"; endif;
 									$replace_val .= $before_value . $value . $after_value . "\n";
 									if ( $after_list ) : $replace_val .= $after_list . "\n"; endif;
 								endif;
 							else :
-								if ( $val['outputNone'] ) $replace_val = $val['outputNone'];
+								if ( isset($val['outputNone']) ) $replace_val = $val['outputNone'];
 								else $replace_val = '';
 							endif;
 							if ( isset($options['shortcode_format_use_php'][$format]) )
@@ -3461,26 +3511,26 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 			$output = '<dl class="cft cft'.$template.'">' . "\n";
 			foreach ( $fields as $field_key => $field_val ) :					
 				foreach ( $field_val as $key => $val ) :
-					if ( $keylist[$key] == true ) break;
+					if ( isset($keylist[$key]) && $keylist[$key] == true ) break;
 					$values = $this->get_post_meta( $post_id, $key );
 					if ( $values ):
-						if ( $val['sort'] == 'asc' ) :
+						if ( isset($val['sort']) && $val['sort'] == 'asc' ) :
 							sort($values);
-						elseif ( $val['sort'] == 'desc' ) :
+						elseif ( isset($val['sort']) && $val['sort'] == 'desc' ) :
 							rsort($values);
 						endif;
-						if ( $val['output'] == true ) :
+						if ( isset($val['output']) && $val['output'] == true ) :
 							foreach ( $values as $num => $value ) :
 								$value = str_replace('\\', '\\\\', $value); 
-								if ( is_numeric($val['outputCode']) ) :
+								if ( isset($val['outputCode']) && is_numeric($val['outputCode']) ) :
 									eval(stripcslashes($options['php'][$val['outputCode']]));
 								endif;
 								if ( empty($value) && $val['outputNone'] ) $value = $val['outputNone'];
-								if ( $val['shortCode'] == true ) $value = do_shortcode($value);			
+								if ( isset($val['shortCode']) && $val['shortCode'] == true ) $value = do_shortcode($value);			
 								if ( !empty($val['label']) && !empty($options['custom_field_template_replace_keys_by_labels']) )
 									$key_val = stripcslashes($val['label']);
 								else $key_val = $key;
-								if ( $val['hideKey'] != true && $num == 0 )
+								if ( isset($val['hideKey']) && $val['hideKey'] != true && $num == 0 )
 									$output .= '<dt>' . $key_val . '</dt>' . "\n";
 								$output .= '<dd>' . $value . '</dd>' . "\n";
 							endforeach;
@@ -3686,10 +3736,11 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 				foreach( $field_val as $key => $val) :
 					if ( $val['search'] == true ) :
 						if ( !empty($val['label']) && !empty($options['custom_field_template_replace_keys_by_labels']) )
-							$key = stripcslashes($val['label']);
+							$label = stripcslashes($val['label']);
+						else $label = $key;
 						$output .= '<dl>' ."\n";
 						if ( $val['hideKey'] != true) :
-							$output .= '<dt><label>' . $key . '</label></dt>' ."\n";
+							$output .= '<dt><label>' . $label . '</label></dt>' ."\n";
 						endif;
 
 						$class = "";
@@ -3948,6 +3999,24 @@ jQuery("#edButtonPreview").trigger("click"); }' . "\n";*/
 		if ( $offset < 0 ) $offset = 0;
 
 		return ( $limit ? "LIMIT $offset, $limit" : '' );
+	}
+	
+	function get_preview_id( $post_id ) {
+		global $post;
+		$preview_id = 0;
+		if ( isset($post) && $post->ID == $post_id && is_preview() && $preview = wp_get_post_autosave( $post->ID ) ) :
+			$preview_id = $preview->ID;
+		endif;
+		return $preview_id;
+	}
+	
+	function get_preview_postmeta( $return, $post_id, $meta_key, $single ) {
+	    if ( $preview_id = $this->get_preview_id( $post_id ) ) :
+	   	    if ( $post_id != $preview_id ) :
+        	    $return = get_post_meta( $preview_id, $meta_key, $single );
+        	endif;
+    	endif;
+    	return $return;
 	}
 	
 	function EvalBuffer($string) {
