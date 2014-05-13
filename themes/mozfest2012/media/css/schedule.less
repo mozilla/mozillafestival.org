@@ -1,0 +1,151 @@
+@import "_variables";
+@import "_mixins";
+
+#overview-ator {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+    > li {
+		.raised(#F5F5F5);
+		margin: 0 0 1.5em;
+		padding: 2em 1.5em;
+
+		> h3 {
+			background: #FFF;
+			padding: 1.25em 0.9375em;
+			margin: -1.25em -0.9375em 0;
+			border-bottom: solid 1px #DDDEDE;
+			border-radius: 5px 5px 0 0;
+			overflow: hidden;
+		}
+	}
+
+	dl {
+		margin: 0 -1.5em;
+		padding: 0 1.5em 0 11.5em;
+		overflow: hidden;
+	}
+
+	dt {
+		font-weight: bold;
+		font-size: 1.08em;
+		display: block;
+		width: 7.5em;
+		float: left;
+		clear: left;
+		margin: 3.7em 0 0 -9.26em;
+
+		&:first-child {
+			margin-top: 1.85em;
+		}
+	}
+
+	dd {
+		margin: 2em -1.5em 0 -11.5em;
+		padding-top: 2em;
+		padding-left: 11.5em;
+		padding-right: 1.5em;
+		border-top: solid 1px #E5E5E6;
+
+		&:first-of-type {
+			padding-top: 0;
+			border-top: none;
+		}
+	}
+}
+
+#overview-ator.enabled {
+	.raised(transparent);
+	position: relative;
+	padding-top: 8em;
+
+	> li {
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+
+		> h3 {
+			font-size: 1.25em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 6.4em;
+			margin: 0;
+			padding: 1.25em 0;
+			text-align: center;
+			background: @pale_blue;
+			border-radius: 0;
+			border: none;
+			border-top: solid 1px rgba(255,255,255,0.5);
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-transform: translateY(3px);
+			box-sizing: border-box;
+			color: @light_blue;
+			cursor: pointer;
+
+			&:focus {
+				z-index: 1;
+			}
+
+			span {
+				display: block;
+				padding: 10px 0 0;
+				font-size: 2em;
+			}
+		}
+
+		&.before > h3 {
+			box-shadow: inset -1px -2px 2px 0 rgba(0,0,0,0.1);
+		}
+
+		&.after > h3 {
+			box-shadow: inset 1px -2px 2px 0 rgba(0,0,0,0.1);
+		}
+
+		&:first-child > h3 {
+			border-radius: 5px 0 0 0;
+		}
+
+		&:last-child > h3 {
+			border-radius: 0 5px 0 0;
+		}
+	}
+
+	dl {
+		display: none;
+	}
+
+	> li.active {
+		margin: 0 0 1.5em;
+		padding: 0 1.5em 2em;
+		background: #FFF;
+		border-radius: 0 0 5px 5px;
+
+		> h3 {
+			background: #FFF;
+			color: @slate;
+			box-shadow: none;
+			-webkit-transform: translateY(0);
+		}
+
+		dl {
+			display: block;
+		}
+	}
+}
+
+.session-list {
+	border-top: solid 1px #D5DBDB;
+	padding-top: 1.6em;
+	margin-top: 1.6em;
+
+	.session {
+		padding-bottom: 1.6em;
+		border-bottom: solid 1px #D5DBDB;
+	}
+}

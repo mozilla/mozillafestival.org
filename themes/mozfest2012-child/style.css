@@ -1,0 +1,118 @@
+/*
+Theme Name: Mozilla Festival 2012 Child
+Author: Mozilla Foundation
+Author URI: http://mozilla.org/
+Template: mozfest2012
+Description: Theme for the Mozilla Festival 2014
+Version: 0.1
+Text Domain: mozfest2012-child
+*/
+
+@import url("../mozfest2012/style.css");
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+#carousel{
+  background-size: 100% auto;
+}
+
+#carousel img{
+  width: 100%;
+}
+
+#content.splash-2014 .constrained{
+  max-width: 940px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 2em 1.5em;
+  color: #000;
+  position: relative;
+  top: -120px;
+}
+
+#content.splash-2014 h2{
+  font-size: 35px;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#content.splash-2014 .subsection{
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+#content.splash-2014 .section-header{
+  margin-bottom: 20px;
+}
+
+#what-is-mozfest{
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+#what-is-mozfest h3{
+  margin-top: 10px;
+}
+
+
+#see-what-we-made-2013{
+  text-align: center;
+  clear: both;
+  padding-top: 30px;
+}
+
+#header nav{
+  float: left;
+  margin: 25px 0 0 50px;
+}
+
+#sign-up-for-updates{
+  float: left;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+#sign-up-for-updates button{
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 840px){
+
+  #carousel{
+    background: url('http://2014.mozillafestival.org/wp-content/uploads/2014/02/copy-mozfest_bannerimg1.jpg');
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width: 645px){
+  #sign-up-for-updates{
+    margin-top: 20px;
+    float: left;
+  }
+
+  #sign-up-for-updates p{
+    text-align: left;
+  }
+}
+
+
+/* === Note: probably should overwrite core.less === */
+
+#contact-menu,
+#previously-menu{
+  float: right;
+}

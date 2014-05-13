@@ -1,0 +1,70 @@
+.raised (@bg: #FFF) {
+	border-radius: 5px;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+	background: @bg;
+}
+
+.columns (@count, @gutter: 20px) {
+	-webkit-column-count: @count;
+	-webkit-column-gap: @gutter;
+
+	-moz-column-count: @count;
+	-moz-column-gap: @gutter;
+
+	-o-column-count: @count;
+	-o-column-gap: @gutter;
+
+	column-count: @count;
+	column-gap: @gutter;
+
+	h1, h2, h3, h4, h5 {
+		&:nth-child(n+2) {
+			-webkit-column-break-before: always;
+			-moz-column-break-before: always;
+			-o-column-break-before: always;
+			column-break-before: always;
+		}
+	}
+}
+
+.box-shadow (@shadow: ~"0 0 5px rgba(0,0,0,0.5)") {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	-ms-box-shadow: @shadow;
+	-o-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+.transition (@transition: ~"all 1s linear 0s") {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.gradient (@gradient: ~"#FFF, #000") {
+	background-image: -webkit-linear-gradient(@gradient);
+	background-image: -moz-linear-gradient(@gradient);
+	background-image: -ms-linear-gradient(@gradient);
+	background-image: -o-linear-gradient(@gradient);
+	background-image: linear-gradient(@gradient);
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.box-sizing (@sizing: border-box) {
+	-webkit-box-sizing: @sizing;
+	-moz-box-sizing: @sizing;
+	-ms-box-sizing: @sizing;
+	-o-box-sizing: @sizing;
+	box-sizing: @sizing;
+}

@@ -1,0 +1,102 @@
+@media screen and (min-width: 840px) {
+	#sidebar {
+	  margin-top: -7.5em;
+	}
+
+}
+
+ul.bullets {
+	list-style: none;
+	margin: 0 0 0 -20px;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+ul.bullets li {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 25%;
+	padding: 0 0 0 20px;
+	float: left;
+}
+
+ul.bullets li::before {
+	content: "";
+	display: block;
+	height: 90px;
+	max-width: 90px;
+	margin: 0 auto 20px;
+	background: #279dd4 50% 50% no-repeat;
+	border-radius: 50%;
+}
+
+ul.bullets li.who::before {
+	background-image: url(assets/home-who.png);
+}
+
+ul.bullets li.where::before {
+	background-image: url(assets/home-where.png);
+}
+
+ul.bullets li.what::before {
+	background-image: url(assets/home-what.png);
+}
+
+ul.bullets li.with::before {
+	background-image: url(assets/home-with.png);
+}
+
+@media screen and (max-width: 520px), screen and (min-width: 700px) and (max-width: 839px) {
+	ul.bullets li {
+	  width: 50%;
+	  margin-bottom: 20px;
+	}
+
+	ul.bullets li:nth-child(odd) {
+	  clear: both;
+	}
+
+}
+
+@media screen and (max-width: 300px) {
+	ul.bullets li {
+	  width: 100%;
+	  margin-bottom: 20px;
+	  clear: both;
+	}
+
+}
+
+.videos a span {
+	position: relative;
+	display: block;
+}
+
+.videos a span::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1) 50% 50% no-repeat;
+	background-image: url(assets/video.png);
+}
+
+.videos a:hover span::after,
+.videos a:focus span::after {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+#livestream {
+	margin-top: -7.5em;
+}
+
+@media screen and (max-width: 699px) {
+	#livestream {
+	  margin-top: 0;
+	}
+
+}
+
