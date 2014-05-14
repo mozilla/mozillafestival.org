@@ -4,7 +4,12 @@ get_header();
 
 ?>
 
-<div id="carousel"><a href="https://sendto.mozilla.org/page/signup/mozfest2014-save-the-date"><img src="//2014.mozillafestival.org/wp-content/uploads/2014/02/mozfest_titleoverlay.png" /></a></div>
+<div id="carousel">
+  <div class="constrained">
+    <h2>Application for Proposals are Open Now</h2>
+    <a class="button">Submit a Proposal</a>
+  </div>
+</div>
 
 <div id="content" class="splash-2014">
   <div class="constrained">
