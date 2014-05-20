@@ -424,7 +424,7 @@ pre.template {
     display: block;
     text-align: center;
     top: 0;
-    right: 35px;
+    right: 15px;
     width: 1em;
     height: 1em;
     margin-top: 20px;
@@ -434,11 +434,7 @@ pre.template {
   #mobile-nav-icon::after {
     content: "\00A0";
   }
-  #top-nav {
-    margin-right: -20px;
-    margin-top: -10px;
-  }
-  nav#top-nav .constrained {
+  #top-nav .constrained {
     padding: 0;
   }
   #top-nav input {
@@ -453,10 +449,7 @@ pre.template {
     margin: 0 20px 20px 0;
   }
   #top-nav input:checked ~ label {
-    -webkit-box-shadow: inset 1px 1px 5px #999;
-    -moz-box-shadow: inset 1px 1px 5px #999;
-    box-shadow: inset 1px 1px 5px #999;
-    background-position: 51% 60%;
+    background-color: #E12526;
   }
   #top-nav .menu {
     width: 480px;
@@ -466,9 +459,6 @@ pre.template {
     display: list-item;
     width: 100%;
     font-size: 18px;
-  }
-  #top-nav input:checked + .menu li a {
-    padding-left: 35px;
   }
   #top-nav li {
     display: none;
