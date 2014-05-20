@@ -4,9 +4,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name'); echo (is_home() ? '' : wp_title('&raquo;',false)); ?></title>
+    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media/css/core.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
@@ -24,6 +24,7 @@
           <button onclick="location.href='https://sendto.mozilla.org/page/signup/mozfest2014-save-the-date'">Sign up for updates</button>
         </div>
       </div>
+      <label id="mobile-nav-icon" for="show-navigation" title="Toggle Menu"></label>
     </div>
     <nav id="top-nav">
       <div class="constrained">
@@ -43,6 +44,6 @@
             }
           ?>
         </ul>
-        <label for="show-navigation" title="Toggle Menu"></label>
+        <!-- <label id="mobile-nav-icon" for="show-navigation" title="Toggle Menu"></label> -->
       </div>
     </nav>

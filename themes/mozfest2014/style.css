@@ -81,10 +81,6 @@ blue-band: #093d60;
   width: 320px;
 }
 
-#header .constrained {
-  padding-top: 0;
-}
-
 #header #tabzilla-container {
   padding: 0;
 }
@@ -97,6 +93,8 @@ blue-band: #093d60;
   float: left;
   padding-left: 0;
   font-size: 25px;
+  line-height: 1.2;
+  margin-top: 20px;
 }
 
 /* ===[ Top Nav ]============================================================ */
@@ -108,10 +106,6 @@ nav#top-nav {
   background: #E12526;
   border-bottom: 8px solid #ef8847;
   position: relative;
-}
-
-nav#top-nav .constrained {
-  padding: 0;
 }
 
 nav#top-nav .menu {
@@ -238,18 +232,25 @@ nav#top-nav::before {
   #footer-bar .sign-up-for-updates {
     float: left;
     margin-top: 20px;
+    width: 100%;
   }
 
 }
 
-@media screen and (max-width: 645px){
-  #header .sign-up-for-updates{
+@media screen and (max-width: 768px){
+  #tabzilla {
+    display: none;
+  }
+  #header {
+    padding: 20px 15px;
+  }
+  #header h1,
+  #header .site-desciption {
+    width: 100%;
+  }
+  #header .sign-up-for-updates {
     margin-top: 20px;
     float: left;
-  }
-
-  #header .sign-up-for-updates p{
-    text-align: left;
   }
 }
 

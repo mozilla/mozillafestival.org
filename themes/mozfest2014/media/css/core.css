@@ -299,7 +299,9 @@ pre.template {
 }
 #header .constrained {
   position: relative;
-  padding: 35px 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 35px;
 }
 #header header {
   float: left;
@@ -375,27 +377,27 @@ pre.template {
   background: #EEE;
   text-indent: 0;
 }
-#header nav {
+#top-nav {
   float: right;
   margin: 25px 140px 0 0;
 }
-#header nav input {
+#top-nav input {
   display: none;
 }
-#header nav input:focus ~ label {
+#top-nav input:focus ~ label {
   outline: 1px dotted;
   outline: -webkit-focus-ring-color auto 5px;
 }
-#header nav .menu {
+#top-nav .menu {
   width: 320px;
 }
-#header nav .menu a {
+#top-nav .menu a {
   color: inherit;
 }
-#header nav li:nth-last-child(2) {
+#top-nav li:nth-last-child(2) {
   border-bottom: none;
 }
-#header nav .register {
+#top-nav .register {
   float: right;
   margin: 0 -140px 0 0;
   padding: 0;
@@ -404,37 +406,16 @@ pre.template {
   font-size: 1.11em;
   line-height: 1em;
 }
-@media all and (max-width: 839px) {
-  #jump-to-content {
-    margin-bottom: -61px;
-    right: 320px;
+@media all and (max-width: 768px){
+  #content article img {
+    max-width: 100%;
   }
-  #header nav {
-    margin-right: -20px;
-    margin-top: -10px;
+  #header .constrained {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
   }
-  #header nav .register {
-    float: none;
-    width: auto;
-    display: block;
-    margin: 0 20px 20px 0;
-  }
-}
-@media all and (max-width: 699px) {
-  #jump-to-content {
-    margin-bottom: -50px;
-    right: 0;
-  }
-  #header nav {
-    clear: both;
-    float: none;
-  }
-  #header nav input {
-    display: inline;
-    position: absolute;
-    left: -999em;
-  }
-  #header nav label {
+  #mobile-nav-icon {
     color: #FFF;
     cursor: pointer;
     font-size: 1.11em;
@@ -442,39 +423,57 @@ pre.template {
     position: absolute;
     display: block;
     text-align: center;
-    top: 100px;
-    right: 20px;
-    width: 60px;
-    padding: 10px 40px;
-    background: #cccccc url(assets/menu-toggle.png) 50% 50% no-repeat;
-    border-radius: 3px;
+    top: 0;
+    right: 35px;
+    width: 1em;
+    height: 1em;
+    margin-top: 20px;
+    padding: 0.77em;
+    background: #A0D6DB url(assets/menu-toggle.png) 50% 50% no-repeat;
   }
-  #header nav label::after {
+  #mobile-nav-icon::after {
     content: "\00A0";
   }
-  #header nav input:checked ~ label {
+  #top-nav {
+    margin-right: -20px;
+    margin-top: -10px;
+  }
+  nav#top-nav .constrained {
+    padding: 0;
+  }
+  #top-nav input {
+    display: inline;
+    position: absolute;
+    left: -999em;
+  }
+  #top-nav .register {
+    float: none;
+    width: auto;
+    display: block;
+    margin: 0 20px 20px 0;
+  }
+  #top-nav input:checked ~ label {
     -webkit-box-shadow: inset 1px 1px 5px #999;
     -moz-box-shadow: inset 1px 1px 5px #999;
     box-shadow: inset 1px 1px 5px #999;
     background-position: 51% 60%;
   }
-  #header nav .menu {
+  #top-nav .menu {
     width: 480px;
     margin: 0 auto;
   }
-  #header nav input:checked + .menu {
-    padding-top: 30px;
-  }
-  #header nav input:checked + .menu li {
+  #top-nav input:checked + .menu li {
     display: list-item;
+    width: 100%;
+    font-size: 18px;
   }
-  #header nav li {
+  #top-nav input:checked + .menu li a {
+    padding-left: 35px;
+  }
+  #top-nav li {
     display: none;
   }
-  #header nav li:nth-last-child(3) {
-    border-bottom: none;
-  }
-  #header nav .register {
+  #top-nav .register {
     position: absolute;
     display: block;
     top: 60px;
@@ -483,21 +482,76 @@ pre.template {
     width: 140px;
   }
 }
+
+@media all and (max-width: 699px) {
+  #jump-to-content {
+    margin-bottom: -50px;
+    right: 0;
+  }
+  /*#mobile-nav-icon {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 1.11em;
+    line-height: 1em;
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 0px;
+    right: 20px;
+    width: 60px;
+    padding: 10px 40px;
+    background: #cccccc url(assets/menu-toggle.png) 50% 50% no-repeat;
+    border-radius: 3px;
+  }
+  #mobile-nav-icon::after {
+    content: "\00A0";
+  }*/
+/*  #top-nav input:checked ~ label {
+    -webkit-box-shadow: inset 1px 1px 5px #999;
+    -moz-box-shadow: inset 1px 1px 5px #999;
+    box-shadow: inset 1px 1px 5px #999;
+    background-position: 51% 60%;
+  }
+  #top-nav .menu {
+    width: 480px;
+    margin: 0 auto;
+  }
+  #top-nav input:checked + .menu {
+    padding-top: 30px;
+  }
+  #top-nav input:checked + .menu li {
+    display: list-item;
+  }
+  #top-nav li {
+    display: none;
+  }
+  #top-nav li:nth-last-child(3) {
+    border-bottom: none;
+  }
+  #top-nav .register {
+    position: absolute;
+    display: block;
+    top: 60px;
+    right: 20px;
+    margin: 0;
+    width: 140px;
+  }*/
+}
 @media all and (max-width: 520px) {
-  #header .constrained {
+/*  #header .constrained {
     padding: 36px 0 20px;
   }
   #header header {
     float: none;
     margin: 0 auto 30px;
-  }
-  #header nav {
+  }*/
+/*  #top-nav {
     margin: 0 auto;
     max-width: 320px;
     padding-left: 20px;
     position: relative;
-  }
-  #header nav label {
+  }*/
+  /*#mobile-nav-icon {
     top: 0;
     right: 20px;
     width: 1em;
@@ -506,29 +560,29 @@ pre.template {
     padding: 0.77em;
     background-position: 50% 50%;
   }
-  #header nav label::after {
+  #mobile-nav-icon::after {
     content: "\00A0";
-  }
-  #header nav input:checked ~ label {
+  }*/
+/*  #top-nav input:checked ~ label {
     background-position: 60% 60%;
   }
-  #header nav .menu {
+  #top-nav .menu {
     width: 320px;
   }
-  #header nav input:checked + .menu {
+  #top-nav input:checked + .menu {
     padding-top: 0;
   }
-  #header nav input:checked + .menu .register {
+  #top-nav input:checked + .menu .register {
     margin-bottom: 20px;
   }
-  #header nav li:nth-last-child(3) {
+  #top-nav li:nth-last-child(3) {
     border-bottom: solid 1px #E5E5E6;
   }
-  #header nav .register {
+  #top-nav .register {
     position: static;
     width: auto;
     margin: 0 69px 0 0;
-  }
+  }*/
 }
 @media all and (max-width: 359px) {
   #header header {
@@ -545,14 +599,14 @@ pre.template {
   #header header p {
     padding: 0;
   }
-  #header nav .menu,
-  #header nav li {
+/*  #top-nav .menu,
+  #top-nav li {
     width: auto;
     float: none;
   }
-  #header nav li:nth-last-child(2) {
+  #top-nav li:nth-last-child(2) {
     border-bottom: solid 1px #E5E5E6;
-  }
+  }*/
 }
 /* ===[ Content ]============================================================ */
 @media screen and (min-width: 840px) {
@@ -733,10 +787,11 @@ pre.template {
   #previously-menu,
   #footer .logo-menu {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
-@media all and (max-width: 659px) {
+/*@media all and (max-width: 659px) {
   #footer .constrained {
     max-width: 320px;
     margin: 0 auto;
@@ -747,7 +802,7 @@ pre.template {
   #footer-menu .menu li:nth-last-child(2) {
     border-bottom: solid 1px #E5E5E6;
   }
-}
+}*/
 @media all and (max-width: 359px) {
   #footer-menu,
   #contact-menu,
