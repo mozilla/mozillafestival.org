@@ -1,0 +1,255 @@
+/*
+Theme Name: Mozilla Festival 2014
+Author: Mozilla Foundation
+Author URI: http://mozilla.org/
+Description: Theme for the Mozilla Festival 2014
+Version: 0.1
+Text Domain: mozfest2014
+*/
+
+@import url("../mozfest2014/style.css");
+
+/*
+light blue:; #CBE8EC
+red: #E12526;
+orange-band: #ef8847;
+yellow-band: #f8cb0e;
+blue-band: #093d60;
+*/
+
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+#content.splash-2014 .constrained{
+  max-width: 940px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 2em 1.5em;
+  color: #000;
+  position: relative;
+  top: -120px;
+}
+
+#content.splash-2014 h2{
+  font-size: 35px;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#content.splash-2014 .subsection{
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+#content.splash-2014 .section-header{
+  margin-bottom: 20px;
+}
+
+#what-is-mozfest{
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+#what-is-mozfest h3{
+  margin-top: 10px;
+}
+
+
+#see-what-we-made-2013{
+  text-align: center;
+  clear: both;
+  padding-top: 30px;
+}
+
+#header h1 {
+  display: inline-block;
+  float: left;
+}
+
+#header h1 a {
+  width: 320px;
+}
+
+#header .constrained {
+  padding-top: 0;
+}
+
+#header #tabzilla-container {
+  padding: 0;
+}
+
+#header header {
+  width: auto;
+}
+
+#header p.site-desciption {
+  float: left;
+  padding-left: 0;
+  font-size: 25px;
+}
+
+/* ===[ Top Nav ]============================================================ */
+
+nav#top-nav {
+  float: none;
+  margin: 0 auto;
+  padding: 0;
+  background: #E12526;
+  border-bottom: 8px solid #ef8847;
+  position: relative;
+}
+
+nav#top-nav .constrained {
+  padding: 0;
+}
+
+nav#top-nav .menu {
+  width: 100%;
+}
+
+nav#top-nav .menu li {
+  font-size: 16px;
+}
+
+nav#top-nav .menu a {
+  color: #fff;
+  padding: 8px 15px;
+}
+
+nav#top-nav input {
+  display: none;
+}
+
+nav#top-nav input:focus ~ label {
+  outline: 1px dotted;
+  outline: -webkit-focus-ring-color auto 8px;
+}
+
+nav#top-nav::before,
+nav#top-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 8px;
+}
+
+nav#top-nav::after {
+  left: 33.333%;
+  width: 33.333%;
+  background: #f8cb0e;
+  border: solid #FFF;
+  border-width: 0 4px;
+  margin-left: -4px;
+  z-index: 1;
+}
+
+nav#top-nav::before {
+  left: 50%;
+  width: 50%;
+  background: #093d60;
+}
+
+/* ===[ Carousel ]============================================================ */
+
+#carousel {
+  background-size: 100% auto;
+  border-bottom: 0px solid transparent;
+  padding-bottom: 110px;
+  text-align: center;
+}
+
+#carousel h2 {
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 60px;
+  color: #FFF;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#carousel a.button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #E12526;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#carousel a.button:hover {
+  box-shadow: none;
+}
+
+#header .sign-up-for-updates{
+  float: right;
+  display: inline-block;
+  margin-top: 35px;
+}
+
+
+/* ===[ Footer ]============================================================ */
+
+#footer .menu a {
+  color: #093d60;
+}
+
+#footer .menu a:hover {
+  background: transparent;
+  color: #E12526;
+}
+
+#footer .menu-item {
+  width: 100%;
+}
+
+#footer-bar {
+  padding: 20px 0;
+  background: #093d60;
+}
+
+#footer img,
+#footer-bar img {
+  height: 50px;
+}
+
+#footer-bar .sign-up-for-updates {
+  float: right;
+}
+
+@media screen and (max-width: 839px){
+
+  #carousel {
+    background: url('http://2014.mozillafestival.org/wp-content/uploads/2014/05/header_bluephoto_small.png');
+  }
+
+  #carousel h2 {
+    font-size: 40px;
+  }
+
+  #footer-bar .sign-up-for-updates {
+    float: left;
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width: 645px){
+  #header .sign-up-for-updates{
+    margin-top: 20px;
+    float: left;
+  }
+
+  #header .sign-up-for-updates p{
+    text-align: left;
+  }
+}
+

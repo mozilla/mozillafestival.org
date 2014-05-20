@@ -1,0 +1,14 @@
+#overview-ator{list-style:none;margin:0;padding:0;}#overview-ator>li{border-radius:5px;-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);background:#f5f5f5;margin:0 0 1.5em;padding:2em 1.5em;}#overview-ator>li>h3{background:#FFF;padding:1.25em 0.9375em;margin:-1.25em -0.9375em 0;border-bottom:solid 1px #DDDEDE;border-radius:5px 5px 0 0;overflow:hidden;}
+#overview-ator dl{margin:0 -1.5em;padding:0 1.5em 0 11.5em;overflow:hidden;}
+#overview-ator dt{font-weight:bold;font-size:1.08em;display:block;width:7.5em;float:left;clear:left;margin:3.7em 0 0 -9.26em;}#overview-ator dt:first-child{margin-top:1.85em;}
+#overview-ator dd{margin:2em -1.5em 0 -11.5em;padding-top:2em;padding-left:11.5em;padding-right:1.5em;border-top:solid 1px #E5E5E6;}#overview-ator dd:first-of-type{padding-top:0;border-top:none;}
+#overview-ator.enabled{border-radius:5px;-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);background:transparent;position:relative;padding-top:8em;}#overview-ator.enabled>li{background:none;border-radius:0;box-shadow:none;padding:0;margin:0;}#overview-ator.enabled>li>h3{font-size:1.25em;position:absolute;top:0;left:0;width:100%;height:6.4em;margin:0;padding:1.25em 0;text-align:center;background:#e9f5fb;border-radius:0;border:none;border-top:solid 1px rgba(255, 255, 255, 0.5);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-transform:translatey(3px);box-sizing:border-box;color:#279dd4;cursor:pointer;}#overview-ator.enabled>li>h3:focus{z-index:1;}
+#overview-ator.enabled>li>h3 span{display:block;padding:10px 0 0;font-size:2em;}
+#overview-ator.enabled>li.before>h3{box-shadow:inset -1px -2px 2px 0 rgba(0, 0, 0, 0.1);}
+#overview-ator.enabled>li.after>h3{box-shadow:inset 1px -2px 2px 0 rgba(0, 0, 0, 0.1);}
+#overview-ator.enabled>li:first-child>h3{border-radius:5px 0 0 0;}
+#overview-ator.enabled>li:last-child>h3{border-radius:0 5px 0 0;}
+#overview-ator.enabled dl{display:none;}
+#overview-ator.enabled>li.active{margin:0 0 1.5em;padding:0 1.5em 2em;background:#FFF;border-radius:0 0 5px 5px;}#overview-ator.enabled>li.active>h3{background:#FFF;color:#4d4d4d;box-shadow:none;-webkit-transform:translatey(0);}
+#overview-ator.enabled>li.active dl{display:block;}
+.session-list{border-top:solid 1px #D5DBDB;padding-top:1.6em;margin-top:1.6em;}.session-list .session{padding-bottom:1.6em;border-bottom:solid 1px #D5DBDB;}

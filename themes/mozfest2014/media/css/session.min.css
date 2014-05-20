@@ -1,0 +1,13 @@
+body.tax-theme .intro,body.tax-organizer .intro,body.tax-format .intro{font-size:1.38em;}
+body.single #content-inner article{padding-left:160px;position:relative;min-height:480px;}body.single #content-inner article aside{border-radius:5px;-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);background:#ffffff;margin:50px 0 0 -160px;padding:1em;overflow:hidden;}body.single #content-inner article aside h3{margin:0;padding:0;float:left;font-size:1em;}
+body.single #content-inner .description{font-size:1.38em;}
+body.single #content-inner .vcard img{border-radius:5px;-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25);background:#ffffff;position:absolute;top:0;left:0;border:solid 10px #FFF;height:auto}
+body.single #content-inner a:hover img,body.single #content-inner a:focus img{box-shadow:0 2px 6px rgba(0, 0, 0, 0.5);}
+body.single #content-inner .vcard.organizer-2 img{top:160px;}
+body.single #content-inner .vcard.organizer-3 img{top:320px;}
+body.single #content-inner article section{margin-top:4em;padding-top:2em;border-top:solid 1px #D5DBDB;}body.single #content-inner article section p.simple{display:inline-block;}
+body.single #content-inner article section ul{list-style:square;margin:0;padding:0 0 0 1.5em;}body.single #content-inner article section ul li{margin-top:0.5em;}
+body.single #content-inner article section ul.simple{padding:0;list-style:none;display:inline-block;}body.single #content-inner article section ul.simple li{margin:0 0 0 0.5em;padding:0;display:inline;white-space:normal;}body.single #content-inner article section ul.simple li:nth-child(n)::after{content:",";position:relative;left:-0.15em;}
+body.single #content-inner article section ul.simple li:last-child::after{content:"";}
+body.single #content-inner article header section{margin-top:0;padding-top:0;padding-bottom:25px;border-top:none;border-bottom:solid 1px #D5DBDB;}
+body.single #content-inner article header p{margin-top:0;}

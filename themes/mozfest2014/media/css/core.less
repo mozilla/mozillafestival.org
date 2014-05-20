@@ -1,0 +1,341 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+html,
+body {
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: @slate;
+}
+
+.constrained {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+/* ===[ Standard Bits and Pieces ]=========================================== */
+
+h2, h3, h4, h5 {
+	font-weight: bold;
+	color: @blue;
+	margin: 0;
+	clear: both;
+}
+
+h2 {
+	font-size: 1.85em;
+	margin-bottom: 1em;
+}
+
+h3 {
+	font-size: 1.6em;
+	margin-top: 1em;
+}
+
+h4 {
+	font-size: 1.38em;
+}
+
+h5 {
+	font-size: 1.08em;
+}
+
+ul {
+	list-style: square;
+}
+
+p {
+	margin: 1em 0 0;
+}
+
+p,
+li {
+	line-height: 1.77em;
+
+	&.center {
+		text-align: center;
+	}
+
+	&.right,
+	&.buttons {
+		text-align: right;
+	}
+
+	&.intro {
+		font-size: 1.38em;
+	}
+
+	&.intro-large {
+		font-size: 1.85em;
+		margin: 0 0 1em;
+	}
+}
+
+a {
+	color: @light_blue;
+	text-decoration: none;
+}
+
+.page-nav {
+	overflow: hidden;
+	margin-top: 3em;
+}
+
+.page-nav .previous {
+	float: left;
+}
+
+.page-nav .next {
+	float: right;
+}
+
+body.archive article {
+	margin-top: 50px;
+}
+
+/* revert the big top margin for tag archives */
+body.tag article {
+	margin-top: 0;
+}
+
+article header {
+	margin-bottom: 25px;
+}
+
+aside.more {
+	margin: 50px -10px 0;
+	padding: 0 10px;
+	overflow: hidden;
+
+	section {
+		margin: 20px 20px 0 0;
+		width: 140px;
+		float: left;
+
+		h3 {
+			font-size: 1.08em;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0 0 10px;
+			list-style: none;
+		}
+
+		li.selected a {
+			background: @blue;
+			color: #EEE;
+			padding: 3px 6px;
+			margin-left: -6px;
+		}
+	}
+}
+
+.wp-caption {
+	background: #F9F9F9;
+	border: solid 1px #EEE;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 1px 1px 1px #FFF;
+
+	img {
+		margin: 0 auto;
+	}
+
+	.wp-caption-text {
+		font-size: 0.8em;
+		text-align: center;
+	}
+}
+
+img.alignleft,
+.wp-caption.alignleft {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+img.aligncenter,
+.wp-caption.aligncenter {
+	margin: 0 auto;
+	display: block;
+}
+
+img.alignright,
+.wp-caption.alignright {
+	float: right;
+	margin: 0 0 0 1em;
+}
+
+.wp-caption.alignnone {
+	width: auto !important;
+}
+
+body.blog .blog-title,
+body.tag .blog-title {
+    margin-bottom: 1em;
+    padding-top: 1em;
+    border-top: @nav-border;
+}
+
+body.blog #content-inner article:first-child .blog-title,
+body.tag #content-inner h2 + article .blog-title {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body.blog,
+body.single-post,
+body.tag {
+	#content-inner {
+		object,
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 1em;
+			display: block;
+		}
+
+		img {
+			&.alignnone,
+			&.alignleft,
+			&.aligncenter,
+			&.alignright {
+				width: auto;
+				display: inline-block;
+			}
+
+			&.alignleft {
+				margin-right: 10px;
+			}
+
+			&.aligncenter {
+				display: block;
+			}
+
+			&.alignright {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+body.blog #content-inner img.alignleft,
+body.single-post #content-inner img.alignleft,
+body.tag #content-inner img.alignleft {
+	margin-right: 10px;
+}
+
+body.blog #content-inner img.alignright,
+body.single-post #content-inner img.alignright,
+body.tag #content-inner img.alignright {
+	margin-left: 10px;
+}
+
+section section {
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+pre.template {
+	white-space: pre-wrap;
+}
+
+/* ===[ Menus ]============================================================== */
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		width: 140px;
+		margin: 0 20px 0 0;
+		padding: 4px 0;
+		float: left;
+		border-bottom: @nav-border;
+
+		// This could be done with :last-child, but we also need to support
+		// :nth-last-child(>1), and it looks weird when some of it works but
+		// not the rest.
+		&:nth-last-child(1) {
+			border-bottom: none;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 6px 0;
+
+		&:hover {
+			margin-left: -13px;
+			padding-left: 10px;
+			border-left: solid 3px @light_blue;
+			background: #F9F9F9;
+		}
+	}
+
+	.current-menu-item a,
+	.current-page-ancestor a {
+		margin-left: -13px;
+		padding-left: 13px;
+		background: @blue;
+		color: #FFF !important;
+
+		&:hover {
+			padding-left: 10px;
+		}
+	}
+}
+
+/* ===[ Stripes ]============================================================ */
+
+#header,
+#footer {
+	position: relative;
+	border-top: solid 16px @blue;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: -16px;
+		height: 16px;
+	}
+
+	&::before {
+		left: 50%;
+		width: 50%;
+		background: @light_blue;
+	}
+
+	&::after {
+		left: 33.333%;
+		width: 33.333%;
+		background: @red;
+		border: solid #FFF;
+		border-width: 0 4px;
+		margin-left: -4px;
+		z-index: 1;
+	}
+}
+
+/* ===[ Header ]============================================================= */
+
+@import "_header";
+
+/* ===[ Content ]============================================================ */
+
+@import "_content";
+
+/* ===[ Footer ]============================================================= */
+
+@import "_footer";
+
+@import "_components";
