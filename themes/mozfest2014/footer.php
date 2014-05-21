@@ -7,11 +7,11 @@
         ?>
         <div class="logo-menu">
           <a><img id="webmaker-wordmark" src="http://2014.mozillafestival.org/wp-content/uploads/2014/05/webmaker_whitewordmark.png" /></a>
-          <div>Mozilla Webmaker: Tools, curriculum and communities dedicated to teach the web.</div>
+          <div>Tools, curriculum and communities dedicated to teach the web.</div>
         </div>
         <div class="logo-menu">
           <a><img id="makerparty-wordmark" src="http://2014.mozillafestival.org/wp-content/uploads/2014/05/makerparty_whitewordmark.png" /></a>
-          <div>Maker Party: Mozilla's global campaign to teach the web.</div>
+          <div>Mozilla's global campaign to teach the web.</div>
         </div>
       </div>
     </div>

@@ -90,12 +90,13 @@ blue-band: #093d60;
   width: auto;
 }
 
-#header p.site-desciption {
+#header .site-desciption {
   float: left;
   padding-left: 0;
   font-size: 25px;
   line-height: 1.2;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 /* ===[ Top Nav ]============================================================ */
@@ -209,6 +210,12 @@ blue-band: #093d60;
 #footer .menu a:hover {
   background: transparent;
   color: #E12526;
+  padding-left: 0;
+}
+
+#footer .menu .current-menu-item a,
+#footer .menu .current-page-ancestor a {
+  color: #E12526;
 }
 
 #footer .menu-item {
@@ -258,6 +265,9 @@ blue-band: #093d60;
   #header h1,
   #header .site-desciption {
     width: 100%;
+  }
+  #header .site-desciption {
+    margin-left: 0;
   }
   #header .sign-up-for-updates {
     margin-top: 20px;

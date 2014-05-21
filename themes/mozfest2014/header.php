@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name'); echo (is_home() ? '' : wp_title('&raquo;',false)); ?></title>
     <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media//font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media/css/core.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head(); ?>

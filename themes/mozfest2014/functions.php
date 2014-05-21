@@ -312,7 +312,7 @@ add_filter('the_content', 'mf2012_autop');
 
 remove_filter('the_content', 'wpautop');
 
-function mf2012_nav_classes ($items) {
+/*function mf2012_nav_classes ($items) {
 	$request = site_url($_SERVER["REQUEST_URI"]);
 	if (is_archive() || is_single() || is_page()) {
 		foreach ($items as $item) {
@@ -324,7 +324,7 @@ function mf2012_nav_classes ($items) {
 	return $items;
 }
 
-add_filter('wp_nav_menu_objects', 'mf2012_nav_classes');
+add_filter('wp_nav_menu_objects', 'mf2012_nav_classes');*/
 
 /**
  * Custom post types

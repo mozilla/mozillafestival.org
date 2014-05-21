@@ -259,8 +259,8 @@ pre.template {
 }
 .menu .current-menu-item a,
 .menu .current-page-ancestor a {
-  background: #00283a;
-  color: #FFF !important;
+  background: rgba(255,255,255,0.5);
+  color: #FFF ;
 }
 .menu .current-menu-item a:hover,
 .menu .current-page-ancestor a:hover {
@@ -301,7 +301,6 @@ pre.template {
   position: relative;
   padding-left: 35px;
   padding-right: 35px;
-  padding-bottom: 35px;
 }
 #header header {
   float: left;
@@ -313,37 +312,40 @@ pre.template {
 }
 #header h1 a {
   display: block;
-  height: 100px;
-  background: url(assets/header.png) 0 50% no-repeat;
+  height: 110px;
+  background: url(http://2014.mozillafestival.org/wp-content/uploads/2014/05/mozfest-header.png) 0 50% no-repeat;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   position: relative;
+  background-size: 320px 107px;
 }
 #header h1 a span,
 #header h1 a::after {
   content: "";
   display: block;
   position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 110px;
-  height: 110px;
-  background: #ffffff url(assets/header.png) 5px 5px no-repeat;
+  background: #CBE8EC url(http://2014.mozillafestival.org/wp-content/uploads/2014/05/mozfest-header.png) no-repeat;
+  background-size: 320px 107px;
   border-radius: 50%;
 }
 #header h1 a span {
+  top: 1px;
+  left: 3px;
+  width: 110px;
+  height: 110px;
+  background-position: -1px 1px;
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
   -webkit-transition: -webkit-transform 3s ease;
   -moz-transition: -moz-transform 3s ease;
 }
 #header h1 a::after {
-  width: 74px;
-  height: 74px;
-  top: 13px;
-  left: 12px;
-  background-position: -12px -13px;
+  width: 80px;
+  height: 80px;
+  top: 16px;
+  left: 19px;
+  background-position: -17px -14px;
 }
 #header h1 a:hover span,
 #header h1 a:focus span {
@@ -459,6 +461,9 @@ pre.template {
     display: list-item;
     width: 100%;
     font-size: 18px;
+  }
+  .menu a:hover {
+    background: rgba(146,207,213,1); /*#92CFD5*/
   }
   #top-nav li {
     display: none;
