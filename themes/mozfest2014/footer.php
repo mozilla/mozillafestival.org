@@ -23,6 +23,10 @@
         <div class="sign-up-for-updates">
           <button onclick="location.href='https://sendto.mozilla.org/page/signup/mozfest2014-save-the-date'">Sign up for updates</button>
         </div>
+        <div id="social-media">
+          <a href="http://www.flickr.com/photos/mozilladrumbeat/favorites/"><i class="fa fa-flickr"></i></a>
+          <a href="https://twitter.com/search/?q=%23mozfest"><i class="fa fa-twitter-square"></i></a>
+        </div>
       </div>
     </div>
     <?php @wp_footer(); ?>

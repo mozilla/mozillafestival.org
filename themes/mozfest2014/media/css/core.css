@@ -520,11 +520,11 @@ pre.template {
   background-image: url(assets/bg-stone.png);
   padding: 45px 0;
 }
-#content .constrained {
+/*#content .constrained {
   overflow: visible;
   padding-right: 340px;
   max-width: 620px;
-}
+}*/
 #content:after {
   content: ".";
   display: block;
@@ -964,7 +964,7 @@ ul.item-list,
 ol.item-list {
   list-style: none;
   margin: 0;
-  padding: 20px 0 0 20px;
+  padding: 20px 0 0 0;
 }
 ul.bio-list > li,
 ol.bio-list > li,
@@ -975,7 +975,7 @@ ol.item-list > li {
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   background: #ffffff;
-  width: 50%;
+  width: calc( 33.3% - 16px );
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -983,14 +983,23 @@ ol.item-list > li {
   border: solid 10px #FFF;
   float: left;
 }
-ul.bio-list > li:nth-child(odd),
-ol.bio-list > li:nth-child(odd),
-ul.item-list > li:nth-child(odd),
-ol.item-list > li:nth-child(odd) {
-  margin-left: -20px;
-  margin-right: 20px;
+ul.bio-list > li:nth-child(3n+1),
+ol.bio-list > li:nth-child(3n+1),
+ul.item-list > li:nth-child(3n+1),
+ol.item-list > li:nth-child(3n+1) {
   clear: left;
 }
+ul.bio-list > li:nth-child(3n+1),
+ol.bio-list > li:nth-child(3n+1),
+ul.item-list > li:nth-child(3n+1),
+ol.item-list > li:nth-child(3n+1),
+ul.bio-list > li:nth-child(3n+2),
+ol.bio-list > li:nth-child(3n+2),
+ul.item-list > li:nth-child(3n+2),
+ol.item-list > li:nth-child(3n+2) {
+  margin-right: 24px;
+}
+
 ul.bio-list h3,
 ol.bio-list h3,
 ul.item-list h3,

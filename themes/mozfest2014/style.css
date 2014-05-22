@@ -47,10 +47,13 @@ blue-band: #093d60;
   border-bottom: 1px solid #ccc;
 }
 
-#content.splash-2014 .subsection{
+#content.splash-2014 .subsection {
   padding-bottom: 40px;
-  border-bottom: 1px solid #ccc;
   overflow: hidden;
+}
+
+#content.splash-2014 .subsection:not(:last-child) {
+  border-bottom: 1px solid #ccc;
 }
 
 #content.splash-2014 .section-header{
@@ -234,6 +237,21 @@ blue-band: #093d60;
 
 #footer-bar .sign-up-for-updates {
   float: right;
+}
+
+#social-media {
+  float: right;
+  line-height: 46px;
+}
+
+#social-media a {
+  font-size: 32px;
+  margin-right: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+#social-media a:hover {
+  color: rgba(255,255,255,1);
 }
 
 @media screen and (max-width: 839px){
