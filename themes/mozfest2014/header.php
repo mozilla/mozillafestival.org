@@ -22,7 +22,7 @@
         </header>
         <a id="jump-to-content" href="#content">Jump to content</a>
         <div class="sign-up-for-updates">
-          <button onclick="location.href='https://sendto.mozilla.org/page/signup/mozfest2014-save-the-date'">Sign up for updates</button>
+          <button onclick="location.href='https://sendto.mozilla.org/page/contribute/mozilla-festival-2014-registration'">Register</button>
         </div>
       </div>
       <!-- <label id="mobile-nav-icon" for="show-navigation" title="Toggle Menu"></label> -->

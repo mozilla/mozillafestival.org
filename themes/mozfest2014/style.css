@@ -254,6 +254,43 @@ blue-band: #093d60;
   color: rgba(255,255,255,1);
 }
 
+/* ===[ General ]============================================================ */
+
+.tiles-container {
+  overflow: hidden;
+}
+
+/* ===[ Submit a Proposal Page ]============================================================ */
+
+.proposal-page-big-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.proposal-page-big-section:not(:last-of-type) {
+  border-bottom: 2px solid #CBE8EC;
+}
+
+.proposal-page-list li .item-title {
+  display: inline;
+  font-weight: bold;
+}
+
+.proposal-indent {
+  margin-left: 35px;
+}
+
+.proposal-subsection {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.proposal-subsection h5 + p {
+  margin-top: 0;
+}
+
+/* ===[ Responsive Design ]============================================================ */
+
 @media screen and (max-width: 839px){
 
   #carousel {
@@ -264,7 +301,8 @@ blue-band: #093d60;
     font-size: 40px;
   }
 
-  #footer-bar .sign-up-for-updates {
+  #footer-bar .sign-up-for-updates,
+  #social-media {
     float: left;
     margin-top: 20px;
     width: 100%;

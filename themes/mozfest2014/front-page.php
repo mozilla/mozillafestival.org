@@ -14,11 +14,11 @@ get_header();
 <div id="content" class="splash-2014">
   <div class="constrained">
     <article>
-      <h2>Come with an idea, leave with a community</h2>
+      <h2>MozFest: Arrive with an idea, leave with a community</h2>
       <div class="subsection">
         <div>
-          <h3 class="section-header">Copy blurb about MozFest (contains a little bit of history)</h3>
           <p>
+            The Mozilla Festival (#MozFest) is where many of Mozilla’s best and most innovative ideas spring to life. It’s where passionate thinkers and inventors come together to learn from one another and engage in a conversation about how the web can do more, and do better. As part of Mozilla’s mission to promote openness and opportunity on the web, MozFest invites you to nurture the spark of an idea through hands-on sessions and  interactive workshops  while in the company of extraordinary technologists and creators.
           </p>
         </div>
       </div>
