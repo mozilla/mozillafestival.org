@@ -61,30 +61,41 @@ get_header();
       <h2>The Team</h2>
         <ul class="bio-list">
           <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2013/06/michelle_thorne.jpg" alt="" /><span class="fn">Michelle Thorne</span> — <span class="role">Festival Director</span></h3>
-            <a class="url" href="http://michellethorne.cc/">Michelle Thorne</a> is Mozilla’s Manager for the Webmaker Mentor team, aiming to grow communities to teach the web through <a href="http://webmaker.org/events">live events</a>. She helps local organizers host anything from small <a href="https://webmaker.org/guides">“kitchen-table events”</a> to larger hack jams and campaigns, which bring together web makers of various stripes to build, make, and learn from each other. She curates Mozilla’s annual festival.
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/MichelleThorne.jpg" alt="Michell Thorne pic" class="photo"  />
+              <span class="fn">Michelle Thorne</span> — <span class="role">Festival Director</span>
+            </h3>
+            <a class="url" href="http://michellethorne.cc/">Michelle Thorne</a> is Mozilla’s Director for the Webmaker Mentor team, aiming to grow communities and best practices to teach web literacy. Through <a href="https://events.webmaker.org/">participatory events</a> and <a href="https://training.webmakerprototypes.org/">professional development</a>, she helps mentors around the world to bring together webmakers of various stripes to build, make, and learn from each other. Michelle curates MozFest and is proud to see the festival into its fifth year.
           </li>
           <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2013/09/spike.jpg" alt="" /><span class="fn">Chris "Spike" Foote</span> — <span class="role">Volunteer Coordinator</span></h3>
-            Chris Foote (always known as “Spike”) is the Volunteer Coordinator for MozFest13. A life-long professional Electronic Engineer with a passion for science and technology, he is a volunteer with global organisations such as CrisisCommons, CrisisMappers, OpenStreetMap (OSM), Humanitarian OSM Team (HOT), StandbyTaskForce (SBTF). He has co-organised a very successful London-based monthly Meetup group for people involved in or interested in ICT4D (Information and Communication Technologies for Development) as well as organising countless BarCamps and Hackathons. As a long-time user and supporter of Mozilla he is honoured to accept his post this year.
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/AllenGunn.jpg" alt="Allen Gunn pic" class="photo"  />
+              <span class="fn">Allen “Gunner” Gunn</span> — <span class="role">Festival Co-designer and MC</span>
+            </h3>
+            Gunner is Executive Director of <a href="https://aspirationtech.org/">Aspiration</a> in San Francisco, USA, and works to help NGOs, activists, foundations and software developers make more effective use of technology for social change. He is an experienced facilitator with a passion for designing collaborative open learning processes.
           </li>
           <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2012/08/Allen_Gunn.jpg" alt="" /><span class="fn">Allen Gunn</span> — <span class="role">Participation Designer</span></h3>
-            <a class="url" href="http://aspirationtech.org/about/people/gunner">Allen "Gunner" Gunn</a> is Executive Director of <a href="http://www.aspirationtech.org">Aspiration</a> in San Francisco, USA, and works to help NGOs, activists, foundations and software developers make more effective use of technology for social change. He is an experienced facilitator with a passion for designing collaborative open learning processes.
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/MistyAvila.jpg" alt="Misty Avila pic" class="photo"  />
+              <span class="fn">Misty Avila</span> — <span class="role">Festival Curator</span>
+            </h3>
+            Misty Avila is Director of Programs at Aspiration, an NGO based in San Francisco, California that supports community-based organizations to use technology effectively to achieve their social change efforts. She oversees Aspiration's program and communications activities and has experience training diverse audiences from urban and rural areas around the globe. With her background in both social justice groundwork and online advocacy, she is passionate about bringing people together and honored to be part of the MozFest community.
           </li>
           <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2013/06/Kam_Star.jpg" alt="" /><span class="fn">Kam Star</span> — <span class="role">Festival Producer</span></h3>
-            Kam Star is a digital media entrepreneur, inventor and an award winning games developer. Creating his first computer game in 1986, he studied Architecture and is deeply passionate about innovation in play and influence. Founder of PlayGen, Kam designs and develops playful solutions and platforms for delivering engaging experiences across the digital landscape. He has produced gaming projects for the BBC, AVIVA, Eden Project, UNESCO, McKinsey, Oxford and Cambridge Universities, NESTA, MoD, NHS, TSB, Wellcome Trust and many more.
-            Kam is also the founder of Digital Shoreditch, with the aim of bringing the outstanding creative, technical and entrepreneurial talent closer together and to one day create the SXSW of London.
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/SarahAllen.jpg" alt="Sarah Allen pic" class="photo"  />
+              <span class="fn">Sarah Allen</span> — <span class="role">Festival Producer</span>
+            </h3>
+            Sarah Allen is an event manager at Mozilla London and this year's MozFest producer. When not focused on Mozfest, she helps out with the <a href="http://party.webmaker.org/">Maker Party</a> and other <a href="https://webmaker.org">Webmaker events</a>. <br />
+            Sarah draws her experience from a diverse events background having worked with creative and inspiring companies such as Movember Europe, Secret Cinema and CSM iLUKA.
+MozFest 2014 will be Sarah's second festival.
           </li>
           <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2013/06/Ben-_Selby.jpg" alt="" /><span class="fn">Ben Selby</span> — <span class="role">Festival Manager</span></h3>
-            Marketing Student turned events and project manager, with some advertising experience thrown in for good measure. Ben grew up in the rolling hills of Devon, miles away from 'Tech City' but soon realised this was the place he wanted to be. After joining Digital Shoreditch shortly after graduating Ben found his passion for creative industries, startups, all things Digital and new technologies. Ben is now turning these passions to Mozfest 2013 to ensure the best festival to date!
-          </li>
-          <li class="vcard">
-            <h3><img class="photo" src="//2014.mozillafestival.org/wp-content/uploads/2013/06/Ella_Thiele.jpg" alt="" /><span class="fn">Ella Thiele</span> — <span class="role">Festival Manager</span></h3>
-            Ella kick started her event management career during her time at Trinity Laban Conservatoire of Music and Dance and was elected Student Union President after graduating. Alongside this position, Ella took on many projects which included curating and producing her own show at The Arts Theatre West End, July 2012, and working as a producer of 'Zoi Dimitriou Dance Company'.
-            Since joining Digital Shoreditch Ella has been introduced to the world of digital and is embracing what the community of Tech City has to offer, whilst playing a key role in large projects such as Digital Shoreditch Festival, MozFest and Million Pound Start-Up.
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/Spike.jpg" alt="Spike pic" class="photo"  />
+              <span class="fn">Spike</span> — <span class="role">Festival Volunteer Coordinator</span>
+            </h3>
+            Chris Foote (always known as “Spike”) is the Volunteer Coordinator for MozFest. A life-long professional electronic engineer with a passion for science and technology, he is a volunteer with global organizations such as CrisisCommons, CrisisMappers, OpenStreetMap (OSM), Humanitarian OSM Team (HOT), StandbyTaskForce (SBTF). He has co-organized a very successful London-based monthly Meetup group for people involved in or interested in ICT4D (Information and Communication Technologies for Development) as well as countless BarCamps and Hackathons. As a long-time user and supporter of Mozilla, he is honoured to be asked to be Volunteer Coordinator for the second year running.
           </li>
         </ul>
     </div>
