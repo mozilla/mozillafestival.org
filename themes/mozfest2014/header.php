@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media//font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media/css/core.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <script src="<?php echo get_template_directory_uri(); ?>/media/js/jquery-2.1.1.min.js"></script>
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
