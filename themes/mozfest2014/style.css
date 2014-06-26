@@ -264,6 +264,10 @@ h1 {
   color: rgba(255,255,255,1);
 }
 
+#menu-festival-history a[href*="2010"] {
+  pointer-events: none;
+}
+
 /* ===[ General ]============================================================ */
 
 .tiles-container {
@@ -328,6 +332,10 @@ h1.proposal-page {
 
 h1.proposal-page.page-heading {
   margin-bottom: 13px;
+}
+
+#guideline-link:hover {
+  cursor: pointer;
 }
 
 
