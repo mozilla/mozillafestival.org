@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: "Tracks & Sessions" Page
+ * Template Name: "Tracks" Page
  * Description:
  */
 get_header();
@@ -12,6 +12,9 @@ get_header();
     <div>
       <div class="header">
         <h2>2014 Mozfest Tracks</h2>
+
+        <h5>Now Accepting Session Proposals</h5>
+        <a class="button call-for-proposal" href="/propose">Submit a Proposal</a>
 
         <ul class="item-list">
           <li>
@@ -60,13 +63,6 @@ get_header();
             <h3>Open Badges Lab</h3>
             <p>
               Challenge  the conventional system of recognizing skills and learning. Celebrate   achievements from Open Badge creators and issuers.
-            </p>
-          </li>
-
-          <li>
-            <h3>Hive Learning Networks</h3>
-            <p>
-              Join  this lab for people working on building local city learning networks  (Hives) and how they can better globally connect to share learning  experiences for youth and digital media.
             </p>
           </li>
 

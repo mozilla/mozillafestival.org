@@ -27,6 +27,7 @@ blue-band: #093d60;
   float: right;
 }
 
+
 #content.splash-2014 .constrained{
   max-width: 940px;
   background: #fff;
@@ -100,7 +101,16 @@ blue-band: #093d60;
   line-height: 1.2;
   margin-top: 30px;
   margin-left: 30px;
+  color: #093d60;
 }
+
+
+/* ===[ Typography ]============================================================ */
+
+h1 {
+  color: #093d60;
+}
+
 
 /* ===[ Top Nav ]============================================================ */
 
@@ -260,6 +270,18 @@ blue-band: #093d60;
   overflow: hidden;
 }
 
+a.button.call-for-proposal {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* ===[ Home Page ]============================================================ */
+
+#submit-proposal-btn {
+  font-size: 20px;
+}
+
 /* ===[ Submit a Proposal Page ]============================================================ */
 
 .proposal-page-big-section {
@@ -288,6 +310,27 @@ blue-band: #093d60;
 .proposal-subsection h5 + p {
   margin-top: 0;
 }
+
+#call-for-proposal-form {
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background: none repeat scroll 0% 0% #FFF;
+  box-sizing: border-box;
+  margin: 30px 0px 20px 0;
+  border: 10px solid #FFF;
+  padding-top: 0;
+}
+
+h1.proposal-page {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h1.proposal-page.page-heading {
+  margin-bottom: 13px;
+}
+
+
 
 /* ===[ Responsive Design ]============================================================ */
 

@@ -7,7 +7,7 @@ get_header();
 <div id="carousel">
   <div class="constrained">
     <h2>Now Accepting Session Proposals</h2>
-    <a class="button" href="/submit-a-session-proposal">Submit a Proposal</a>
+    <a class="button" href="/propose" id="submit-proposal-btn">Submit a Proposal</a>
   </div>
 </div>
 

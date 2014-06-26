@@ -1,16 +1,24 @@
 <?php
 /*
- * Template Name: Get Proposal Page
+ * Template Name: "Propose" Page
  * Description: A Page for the Get Proposal Google Form to Live
  */
 get_header();
 ?>
 <div id="content">
   <div class="constrained">
-    <h2>Submit a proposal</h2>
-    <a class="button" href="https://docs.google.com/forms/d/18s7lBIRoE4toeIhmm_7bStFqoWf2v-pEdPrbw4Bk31A/viewform">Submit a Proposal</a>
+    <h1 class="proposal-page page-heading">Submit a Proposal</h1>
+    <h4>Please fill in the fields below to propose your session.</h4>
+
+    <!-- Call for Proposal Form ================= -->
+    <div class="proposal-page-big-section" id="call-for-proposal-form">
+      <iframe src="https://docs.google.com/forms/d/18s7lBIRoE4toeIhmm_7bStFqoWf2v-pEdPrbw4Bk31A/viewform?embedded=true" width="100%" height="1900px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+
+    <!-- ================= -->
 
     <div class="proposal-page-big-section">
+      <h1 class="proposal-page">Session Proposal Guidelines</h1>
       <p>
         At Mozfest, we believe that peer-to-peer sessions are the most powerful way to facilitate interaction, build networks and collaborate. We de-emphasize lectures and presentations, and instead encourage dialog and hacking in small groups.
       </p>
@@ -47,10 +55,13 @@ get_header();
     <!-- ================= -->
 
     <div class="proposal-page-big-section">
-      <h3>
-        To guide you in proposing your session, take a look at two of last year's successful submissions:
-      </h3><br />
+      <h1 class="proposal-page">Session Proposal Examples</h1>
 
+      <h4>
+        To guide you in proposing your session, take a look at two of last year's successful submissions:
+      </h4><br />
+
+      <h3>Example 1</h3>
       <h4>Dip Your Toes Into Twine. Make Web Based Storytelling Games</h4>
       <div class="proposal-indent">
         <div class="proposal-subsection">
@@ -85,6 +96,7 @@ get_header();
         </div>
       </div>
 
+      <h3>Example 2</h3>
       <h4>Open source science: not just for scientists</h4>
       <div class="proposal-indent">
         <div class="proposal-subsection">
@@ -119,13 +131,10 @@ get_header();
         </div>
       </div>
 
+      <!-- ================= -->
+
     </div>
 
-    <!-- ================= -->
-
-    <div class="proposal-page-big-section">
-      <iframe src="https://docs.google.com/forms/d/18s7lBIRoE4toeIhmm_7bStFqoWf2v-pEdPrbw4Bk31A/viewform?embedded=true" width="100%" height="2000px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
 
   </div>
 </div>
