@@ -101,18 +101,18 @@ get_header();
       <img src="<?php echo get_template_directory_uri(); ?>/media/img/park_plaza_westminister.jpg" alt="Park Plaza Westminster Bridge" class="size-full">
       </header>
       <section>
-        <h4><a href="/web/20131025134847/http://www.parkplaza.com/london-hotel-gb-se1-7ut/gbwestmi">Park Plaza Westminster Bridge</a></h4>
+        <h4><a href="http://www.parkplaza.com/london-hotel-gb-se1-7ut/gbwestmi">Park Plaza Westminster Bridge</a></h4>
         200 Westminster Bridge Road <br />
         London SE1 7UT <br />
       </section>
 
       <section>
-        <h4><a href="/web/20131025134847/http://www.parkplaza.com/london-hotel-gb-se1-7ry/gbcounty">Park Plaza County Hall</a></h4>
+        <h4><a href="http://www.parkplaza.com/london-hotel-gb-se1-7ry/gbcounty">Park Plaza County Hall</a></h4>
         1 Addington Street<br />
         London SE1 7RY<br />
         </section>
         <section>
-        <h4><a href="/web/20131025134847/http://www.premierinn.com/en/hotel/SOUANC/london-southwark-borough-market">Premier Inn Southwark </a></h4>
+        <h4><a href="http://www.premierinn.com/en/hotel/SOUANC/london-southwark-borough-market">Premier Inn Southwark </a></h4>
         Bankside, 34 Park Street <br />
         London SE1 9EF <br />
       </section>
