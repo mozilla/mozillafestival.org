@@ -59,7 +59,7 @@ get_header();
 
         <h4>
           To guide you in proposing your session, take a look at two of last year's successful submissions:
-        </h4><br />
+        </h4>
 
         <h3>Example 1</h3>
         <h4>Dip Your Toes Into Twine. Make Web Based Storytelling Games</h4>
