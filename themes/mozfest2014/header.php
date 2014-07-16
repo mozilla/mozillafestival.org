@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media/css/core.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php if( is_page_template( 'page-proposals.php' ) ): ?>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/media/css/proposal-listings.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/media/css/proposal-listings.css" media="screen" />
     <?php endif;?>
     <script src="<?php echo get_template_directory_uri(); ?>/media/js/jquery-2.1.1.min.js"></script>
     <?php wp_head(); ?>
