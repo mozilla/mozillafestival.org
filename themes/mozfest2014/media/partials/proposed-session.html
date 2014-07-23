@@ -11,5 +11,23 @@
     <p>{{ scale }}</p>
     <h4>What do you see as outcomes after the festival?</h4>
     <p>{{ outcomes }}</p>
+    <div class="proposal-2col-row">
+      <div class="proposal-2col-col">
+        <h4>Facilitator{{ 's' if facilitators.length > 1 else null }}</h4>
+        <ul>
+          {% for facilitator in facilitators %}
+          <li>{{ facilitator.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="proposal-2col-col">
+        {% if organization %}
+        <h4>Organization</h4>
+        <p>{{ organization }}</p>
+        {% endif %}
+        <h4>Theme</h4>
+        <p>{{ theme }}</p>
+      </div>
+    </div>
   </article>
 </section>

@@ -3,7 +3,7 @@
 
 $(function() {
 	// the url to point at for thunderhug
-	var apiURL = 'http://thunderhug.dev';
+	var apiURL = 'https://thunderhug.herokuapp.com';
 	// array to store theme slugs converted into url hashes
 	var themeHashes = [];
 
@@ -55,6 +55,10 @@ $(function() {
 			if( themeHashes.indexOf( location.hash ) === -1 ) {
 				displayProposals( data.sessions );
 			}
+		},
+		error: function() {
+			$( '.proposal-listings .constrained' ).empty().append( 'Ooops. Something went wrong.' );
+			console.error( 'Failed to load proposals.', arguments );
 		}
 	});
 
