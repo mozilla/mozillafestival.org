@@ -14,7 +14,7 @@ $(function() {
 	 */
 	function displayProposals( sessions ) {
 		// empty listing + mark as loading
-		$( '.proposal-listings .constrained' ).empty();
+		$( '#proposals' ).empty();
 		$( '.proposal-listings' ).addClass( 'loading' );
 
 		sessions.forEach( function( session ) {
@@ -26,7 +26,7 @@ $(function() {
 
 			nunjucks.render( 'proposed-session.html', session, function( error, result ) {
 				if( !error ) {
-					return $( '.proposal-listings .constrained' ).append( result );
+					return $( '#proposals' ).append( result );
 				}
 
 				console.log( error );
@@ -34,9 +34,21 @@ $(function() {
 		});
 
 		$( '.proposal-listings' ).removeClass( 'loading' );
-		if( $( '.proposal-listings .constrained' ).html() == '' ) {
-			$( '.proposal-listings .constrained' ).append( 'Ooops. Something went wrong.' );
-		}
+	}
+
+	/**
+	 * Display only sessions for a particular theme
+	 *
+	 * @param  {Array}  sessions   Full array of sessions proposed
+	 * @param  {String} themeSlug  Slug for the theme to display
+	 */
+	function displayThemeProposals( sessions, themeSlug ) {
+		var filteredSessions = sessions.filter( function( session ) {
+			console.log( location.hash.substring( 1 ) );
+			return session.themeSlug === themeSlug;
+		});
+
+		displayProposals( filteredSessions );
 	}
 
 	/*
@@ -46,15 +58,44 @@ $(function() {
 		url: apiURL + '/all',
 		dataType: 'jsonp',
 		success: function( data ) {
-			console.log( 'cake' );
+			var themes = {};
 			data.themes.forEach( function( theme ) {
 				themeHashes.push( '#' + theme.slug );
+				themes[ theme.themeSlug ] = theme;
+
+				$( '#proposal-filter' ).append( '<option value="' + theme.slug + '">' + theme.name + '</option>' );
 			});
+			var $select = $( '#proposal-filter' ).selectize()[0].selectize;
 
 			// if the url hash is not one of our themes just process all tracks
 			if( themeHashes.indexOf( location.hash ) === -1 ) {
 				displayProposals( data.sessions );
 			}
+			else {
+				displayThemeProposals( data.sessions, location.hash.substring( 1 ) );
+			}
+
+
+			function onChange( themeSlug ) {
+				if( typeof themeSlug !== 'string' ) {
+					themeSlug = location.hash.substring( 1 );
+				}
+
+				if( ! themeSlug ) {
+					return displayProposals( data.sessions );
+				}
+
+				if( themeHashes.indexOf( '#' + themeSlug ) === -1 ) {
+					return;
+				}
+
+				displayThemeProposals( data.sessions, themeSlug );
+			}
+
+			$( window ).on( 'hashchange', onChange );
+			$( '#proposal-filter' ).on( 'change', function() {
+				onChange( $( this ).val() );
+			});
 		},
 		error: function() {
 			$( '.proposal-listings .constrained' ).empty().append( 'Ooops. Something went wrong.' );
