@@ -1,4 +1,7 @@
 /* css here */
+#proposals {
+	min-height: 300px;
+}
 .proposal-listings h4 {
 	position: relative;
 }
@@ -73,6 +76,10 @@
 	right: 0;
 	color: #aaa;
 }
+	#proposal-filter-container select {
+		display: none;
+	}
+
 	#proposal-filter-container .selectize-control .selectize-input {
 		border-top: none;
 		border-right: none;

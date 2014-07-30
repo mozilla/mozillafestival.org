@@ -18,7 +18,9 @@ get_header();
 <div id="content" class="splash-2014 proposal-listings loading">
   <div class="constrained" id="proposal-listing">
     <div id="proposal-filter-container">
-      <select name="proposal-filter" id="proposal-filter"></select>
+      <select name="proposal-filter" id="proposal-filter">
+        <option value="all">All Proposals</option>
+      </select>
     </div>
     <div id="proposals"></div>
   </div>

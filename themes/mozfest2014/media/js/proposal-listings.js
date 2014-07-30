@@ -33,6 +33,10 @@ $(function() {
 			});
 		});
 
+		if( ! sessions.length ) {
+			$( '#proposals' ).append( '<p>No proposals for this track yet. <a href="/propose">Propose one now</a>.</p>' );
+		}
+
 		$( '.proposal-listings' ).removeClass( 'loading' );
 	}
 
@@ -77,11 +81,7 @@ $(function() {
 
 
 			function onChange( themeSlug ) {
-				if( typeof themeSlug !== 'string' ) {
-					themeSlug = location.hash.substring( 1 );
-				}
-
-				if( ! themeSlug ) {
+				if( ! themeSlug || themeSlug === 'all' ) {
 					return displayProposals( data.sessions );
 				}
 
@@ -92,9 +92,14 @@ $(function() {
 				displayThemeProposals( data.sessions, themeSlug );
 			}
 
-			$( window ).on( 'hashchange', onChange );
+			$( window ).on( 'hashchange', function() {
+				var themeSlug = location.hash.substring( 1 ) || 'all';
+
+				$select.setValue( themeSlug );
+				onChange( themeSlug );
+			});
 			$( '#proposal-filter' ).on( 'change', function() {
-				onChange( $( this ).val() );
+				location.hash = $( this ).val();
 			});
 		},
 		error: function() {
