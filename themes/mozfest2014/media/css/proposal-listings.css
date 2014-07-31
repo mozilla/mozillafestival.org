@@ -112,6 +112,17 @@
 	}
 }
 
+#carousel {
+	background-image: url(http://2014.mozillafestival.org/wp-content/uploads/2014/07/header_bluephoto.png);
+	color: white;
+	text-align: left;
+}
+
+	#carousel h2 {
+		text-align: center;
+	}
+
+/* loading animation */
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg);

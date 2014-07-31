@@ -16,7 +16,7 @@
         <h4>Facilitator{{ 's' if facilitators.length > 1 else null }}</h4>
         <ul>
           {% for facilitator in facilitators %}
-          <li>{{ facilitator.name }}</li>
+          <li>{{ facilitator.name }}{% if facilitator.twitter %} – <a href="https://twitter.com/{{ facilitator.twitter | replace( '@', '' ) }}">{{ facilitator.twitter }}</a>{% endif %}</li>
           {% endfor %}
         </ul>
       </div>
