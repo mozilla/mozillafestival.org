@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media//font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media/css/core.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <?php if( is_page_template( 'page-proposals.php' ) ): ?>
+      <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/media/css/selectize.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/media/css/proposal-listings.css" media="screen" />
+    <?php endif;?>
     <script src="<?php echo get_template_directory_uri(); ?>/media/js/jquery-2.1.1.min.js"></script>
     <?php wp_head(); ?>
   </head>
@@ -23,7 +27,7 @@
         </header>
         <a id="jump-to-content" href="#content">Jump to content</a>
         <div class="sign-up-for-updates">
-          <button onclick="location.href='https://sendto.mozilla.org/page/contribute/mozilla-festival-2014-registration'">Buy a Ticket</button>
+          <button onclick="location.href='https://sendto.mozilla.org/page/contribute/mozilla-festival-2014-registration'">Register</button>
         </div>
       </div>
       <!-- <label id="mobile-nav-icon" for="show-navigation" title="Toggle Menu"></label> -->
