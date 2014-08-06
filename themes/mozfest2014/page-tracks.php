@@ -11,10 +11,18 @@ get_header();
     <!-- Tracks ===================== -->
     <div>
       <div class="header">
-        <h2>2014 Mozfest Tracks</h2>
-
-        <h5>Now Accepting Session Proposals</h5>
-        <a class="button call-for-proposal" href="/propose">Submit a Proposal</a>
+        <h1>Tracks</h1>
+   <div class="panel">
+      <div class="header">
+        <h2>How the MozFest Program Works</h2>
+      </div>
+      <p>
+        MozFest is built each year on core <b>"tracks",</b> which are clusters of topics and sessions that we believe have the greatest potential for innovation and empowerment with the web. <b>Each track is curated by "Space Wranglers",</b> who are thought-leaders and community organizers in that particular topic. The tracks are spread across the entire venue and are the <b>central programmatic focus of the festival.</b>  
+      </p>
+	<p>
+  	  <a class="button call-for-proposal" href="/propose">Submit a Session Proposal</a>
+	</p>	
+    </div>
 
         <ul class="item-list">
           <li>
@@ -74,16 +82,16 @@ get_header();
           </li>
 
           <li>
-            <h3>Music Creators and the Open Web</h3>
+            <h3>Musicians and Music Creators on the Open Web</h3>
             <p>
               Play a role and explore what it takes to make music on the open web.
             </p>
           </li>
 
           <li>
-            <h3>Privacy and Trust: Advocating for The Web We Want</h3>
+            <h3>Policy & Advocacy</h3>
             <p>
-              Use innovative tools to uncover how your data is exposed online, how to  build trust, and how to enable people to hold their leaders accountable to keep the free and open web.
+              Privacy, Security, and Building the Movement to protect the free and open web.
             </p>
           </li>
 
@@ -102,7 +110,7 @@ get_header();
     <!-- Sessions ===================== -->
     <!-- <div>
       <div class="header">
-        <h2>(eventually we'll list approved sessions here)</h2>
+        <h2>(approved sessions will show up here soon)</h2>
       </div>
     </div> -->
 

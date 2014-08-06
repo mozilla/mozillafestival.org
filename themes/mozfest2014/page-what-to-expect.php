@@ -7,16 +7,53 @@ get_header();
 ?>
 <div id="content">
   <div class="constrained">
-    <h2>What to Expect Page</h2>
+    <h2>What to Expect</h2>
+
+    <section class="panel">
+      <div class="header">
+        <h3>Participating at MozFest</h3>
+      </div>
+      <p>
+        MozFest is a yearly festival with <b>hundreds of passionate people</b> exploring the Web, learning together, and making things that can change the world. It's <b>very hands-on and immersive.</b> Sometimes it will feel chaotic, but everyone is open-minded and eager to help you make and learn with them. 
+      </p>
+	<p>
+	<b>Participants of every age and experience are welcome.</b> We believe that everyone has something to share and something to learn. <b>Youth are especially encouraged to come and lead sessions,</b> but MozFest is truly an event for all ages! There's a <b>creche</b> on-site as well as activities for <b>young people and industry experts.</b>  
+	</p>
+	<p>
+	<b>MozFest runs for three days,</b> beginning on Friday evening with a <b>"Science Fair,"</b> where we demo exciting projects from across the web. <b>Saturday and Sunday are full days of sessions, hacking and good coffee.</b> There is a party on Saturday night, and the festival ends on Sunday evening with a <b>closing demo party,</b> showcasing what we made together.  
+	</p>
+	<p>
+      <img class="aligncenter" src="http://2014.mozillafestival.org/wp-content/uploads/2014/07/mozfest-making.jpg" alt="Mozfest Making">
+	</p>
+    </section>
 
     <!-- Location ===================== -->
     <section class="panel">
       <div class="header">
-        <h3>Location</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2483.625720762954!2d0.0055388!3d51.501735499999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a81c7eafaba3%3A0xc9dc7cd5a491fd50!2s6+Penrose+Way!5e0!3m2!1sen!2sca!4v1403672002980" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        <h3>Main Festival Venue </h3>
+		<br>
+		<h4> Ravensbourne </h4>
+		<address>6 Penrose Way<br/>Greenwich Peninsula<br />London<br />SE10 0EW</address>
+	</div>	 
+	<div style="overflow: hidden; margin-top: -1em;">
+      	 
+		<img src="http://content-2012.mozillafestival.org/uploads/2012/08/rave1.png" alt="" title="rave1" width="140" height="149" class="alignleft size-full wp-image-238"> 
+		<p>
+        	This year, Mozfest returns to <a href='http://www.ravensbourne.ac.uk/'>Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.
+		</p>
+		<p>
+        	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2483.625720762954!2d0.0055388!3d51.501735499999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a81c7eafaba3%3A0xc9dc7cd5a491fd50!2s6+Penrose+Way!5e0!3m2!1sen!2sca!4v1403672002980" width="600" height="450" frameborder="0" style="border:0"></iframe>
+		</p>
+      </div>
+    </section>
+
+    <!-- Travel Tips & Tricks ===================== -->
+    <section class="panel">
+      <div class="header">
+        <h3>Travel Tips & Tricks</h3>
       </div>
       <p>
-        This year, Mozfest returns to <a href='http://www.ravensbourne.ac.uk/'>Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.
+        Passport, local currency, device charger and socks...there are some items you should never leave home without! Check out these <a href="https://wiki.mozilla.org/Travel_Guide">comprehensive travel tips</a> from seasoned Mozilla travelers.
       </p>
     </section>
 
@@ -93,41 +130,6 @@ get_header();
     </section>
 
 
-    <!-- Hotels ===================== -->
-    <section class="panel">
-      <header>
-      <h3>Hotels</h3>
-      <p></p>
-      <img src="<?php echo get_template_directory_uri(); ?>/media/img/park_plaza_westminister.jpg" alt="Park Plaza Westminster Bridge" class="size-full">
-      </header>
-      <section>
-        <h4><a href="http://www.parkplaza.com/london-hotel-gb-se1-7ut/gbwestmi">Park Plaza Westminster Bridge</a></h4>
-        200 Westminster Bridge Road <br />
-        London SE1 7UT <br />
-      </section>
-
-      <section>
-        <h4><a href="http://www.parkplaza.com/london-hotel-gb-se1-7ry/gbcounty">Park Plaza County Hall</a></h4>
-        1 Addington Street<br />
-        London SE1 7RY<br />
-        </section>
-        <section>
-        <h4><a href="http://www.premierinn.com/en/hotel/SOUANC/london-southwark-borough-market">Premier Inn Southwark </a></h4>
-        Bankside, 34 Park Street <br />
-        London SE1 9EF <br />
-      </section>
-    </section>
-
-
-    <!-- Travel Tips & Tricks ===================== -->
-    <section class="panel">
-      <div class="header">
-        <h3>Travel Tips & Tricks</h3>
-      </div>
-      <p>
-        Passport, local currency, device charger and socks...there are some items you should never leave home without! Check out these <a href="https://wiki.mozilla.org/Travel_Guide">comprehensive travel tips</a> from seasoned Mozilla travelers.
-      </p>
-    </section>
 
 
   </div>

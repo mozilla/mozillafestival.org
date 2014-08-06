@@ -20,9 +20,6 @@
         <div class="left">
           <img id="mozfest-wordmark" src="http://2014.mozillafestival.org/wp-content/uploads/2014/05/mozfest_whitewordmark.png" />
         </div>
-        <div class="sign-up-for-updates">
-          <button onclick="location.href='https://sendto.mozilla.org/page/signup/mozfest2014-save-the-date'">Sign up for updates</button>
-        </div>
         <div id="social-media">
           <a href="https://secure.flickr.com/photos/mozillaeu/sets/72157636932514584/"><i class="fa fa-flickr"></i></a>
           <a href="https://twitter.com/mozillafestival"><i class="fa fa-twitter-square"></i></a>
