@@ -7,7 +7,7 @@ get_header();
 ?>
 <div id="content">
   <div class="constrained">
-    <h1 class="proposal-page page-heading">Submit a Proposal</h1>
+    <h1 class="proposal-page page-heading">Propose a Session</h1>
     <h4 style="font-weight: normal">Please fill in the fields below to propose your session. Need some help? Check out the <a href="/proposal-guidelines/">proposal guidelines</a> that will help to prepare you in proposing your session. We also offer <a href="/proposal-guidelines/">live proposal coaching</a> to help make your proposal better before you submit.</h4>
 
     <!-- Call for Proposal Form ================= -->
