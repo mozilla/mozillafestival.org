@@ -41,7 +41,7 @@ get_header();
         <h2>What We Made Last Year</h2>
       </div>
       <p>
-        From 3-D Papercrafts to a watercolour printer to a hack of Popcorn Maker for especially for journalists, MozFest 2013 was overflowing with brilliant projects and ideas. <a title="See what we made together" href="http://mozillafestival.mofostaging.net/blog/demoparty_2013/">See what we made together</a> and dream about what we can accomplish at MozFest 2014!
+        From 3-D Papercrafts to a watercolour printer to a hack of Popcorn Maker for especially for journalists, MozFest 2013 was overflowing with brilliant projects and ideas. <a title="See what we made together" href="/blog/demoparty_2013/">See what we made together</a> and dream about what we can accomplish at MozFest 2014!
       </p>
 	<p>
       <img class="aligncenter" src="//2014.mozillafestival.org/wp-content/uploads/2014/02/Mozilla_infographic_D6.jpg" alt="" width="700" height="1156" />
