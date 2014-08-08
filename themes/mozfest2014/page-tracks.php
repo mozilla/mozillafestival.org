@@ -20,7 +20,7 @@ get_header();
         MozFest is built each year on core <b>"tracks",</b> which are clusters of topics and sessions that we believe have the greatest potential for innovation and empowerment with the web. <b>Each track is curated by "Space Wranglers",</b> who are thought-leaders and community organizers in that particular topic. The tracks are spread across the entire venue and are the <b>central programmatic focus of the festival.</b>  
       </p>
 	<p>
-  	  <a class="button call-for-proposal" href="/propose">Submit a Session Proposal</a>
+  	  <a class="button call-for-proposal" href="/propose">Propose a Session</a>
 	</p>	
     </div>
 
