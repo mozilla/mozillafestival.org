@@ -3,6 +3,21 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- For sharing & search engines -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://2014.mozillafestival.org/wp-content/themes/mozfest2014/media/img/logo-og.png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="1400" />
+    <meta property="og:site_name" content="Mozilla Festival" />
+    <meta property="og:title" content="Mozilla Festival" />
+    <meta property="og:description" content="As part of Mozilla’s mission to promote openness and opportunity on the web, MozFest invites you to nurture the spark of an idea through hands-on sessions and interactive workshops while in the company of extraordinary technologists and creators." />
+    <meta property="og:url" content="http://2014.mozillafestival.org/" />
+
+    <link rel="canonical" href="http://2014.mozillafestival.org/" />
+    <meta property="description" content="As part of Mozilla’s mission to promote openness and opportunity on the web, MozFest invites you to nurture the spark of an idea through hands-on sessions and interactive workshops while in the company of extraordinary technologists and creators." />
+    <!-- /sharing -->
+
     <title><?php bloginfo('name'); echo (is_home() ? '' : wp_title('&raquo;',false)); ?></title>
     <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/media//font-awesome/css/font-awesome.min.css">
