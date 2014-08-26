@@ -17,6 +17,7 @@ $(function() {
 		$( '#proposals' ).empty();
 		$( '.proposal-listings' ).addClass( 'loading' );
 
+		var sessionsToRender = [];
 		sessions.forEach( function( session ) {
 			session.excerpt = session.goals;
 			session.goals = session.goals.replace(/\n/g, '<br />' );
@@ -24,13 +25,15 @@ $(function() {
 			session.scale = session.scale.replace(/\n/g, '<br />' );
 			session.outcomes = session.outcomes.replace(/\n/g, '<br />' );
 
-			nunjucks.render( 'proposed-session.html', session, function( error, result ) {
-				if( !error ) {
-					return $( '#proposals' ).append( result );
-				}
+			sessionsToRender.push( session );
+		});
 
-				console.log( error );
-			});
+		nunjucks.render( 'proposed-session.html', { sessions: sessionsToRender }, function( error, result ) {
+			if( !error ) {
+				return $( '#proposals' ).append( result );
+			}
+
+			console.log( error );
 		});
 
 		if( ! sessions.length ) {
