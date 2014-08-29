@@ -41,9 +41,6 @@
           <p class="site-desciption"><?php bloginfo('description'); ?></p>
         </header>
         <a id="jump-to-content" href="#content">Jump to content</a>
-        <div class="sign-up-for-updates">
-          <button onclick="location.href='https://sendto.mozilla.org/page/contribute/mozilla-festival-2014-registration'">Register</button>
-        </div>
       </div>
       <!-- <label id="mobile-nav-icon" for="show-navigation" title="Toggle Menu"></label> -->
       <nav id="top-nav">
