@@ -17,11 +17,8 @@ get_header();
         <h2>How the MozFest Program Works</h2>
       </div>
       <p>
-        MozFest is built each year on core <b>"tracks",</b> which are clusters of topics and sessions that we believe have the greatest potential for innovation and empowerment with the web. <b>Each track is curated by "Space Wranglers",</b> who are thought-leaders and community organizers in that particular topic. The tracks are spread across the entire venue and are the <b>central programmatic focus of the festival.</b>  
+        MozFest is built each year on core <b>"tracks",</b> which are clusters of topics and sessions that we believe have the greatest potential for innovation and empowerment with the web. <b>Each track is curated by "Space Wranglers",</b> who are thought-leaders and community organizers in that particular topic. The tracks are spread across the entire venue and are the <b>central programmatic focus of the festival.</b>
       </p>
-	<p>
-  	  <a class="button call-for-proposal" href="/propose">Propose a Session</a>
-	</p>	
     </div>
 
         <ul class="item-list">
