@@ -27,6 +27,9 @@ blue-band: #093d60;
   float: right;
 }
 
+.text-center {
+  text-align: center;
+}
 
 #content.splash-2014 .constrained{
   max-width: 940px;
@@ -282,7 +285,7 @@ a.button.call-for-proposal {
 
 /* ===[ Home Page ]============================================================ */
 
-#submit-proposal-btn {
+.home #carousel a.button {
   font-size: 20px;
 }
 
@@ -322,7 +325,8 @@ a.button.call-for-proposal {
   box-sizing: border-box;
   margin: 30px 0px 20px 0;
   border: 10px solid #FFF;
-  padding-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h1.proposal-page {
