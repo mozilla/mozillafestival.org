@@ -217,6 +217,72 @@ h1 {
 }
 
 
+/* ===[ Tracks ]============================================================ */
+
+#track-item-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#track-item-list > li {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: calc( 100% - 40px );
+  overflow: hidden;
+}
+
+#track-item-list > li .left-col {
+  width: 66.6%;
+  float: left;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-right: 1px solid #DDD;
+}
+
+#track-item-list > li .right-col {
+  width: 33.3%;
+  float: left;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+#track-item-list > li h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#track-item-list > li .left-col h4 {
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+#track-item-list > li .right-col h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+#track-item-list > li p,
+#track-item-list > li .space-wranglers li {
+  line-height: 1.5;
+}
+
+#track-item-list > li .space-wranglers ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#track-item-list > li .space-wranglers li {
+  margin-bottom: 10px;
+}
+
+#track-item-list > li .space-wranglers .twitter:before {
+  content: "\f099";
+  font-family: FontAwesome;
+  margin-right: 2px;
+}
+
 /* ===[ Footer ]============================================================ */
 
 #footer .menu a {
@@ -383,6 +449,15 @@ h1.proposal-page.page-heading {
   #header .sign-up-for-updates {
     margin-top: 20px;
     float: left;
+  }
+  #track-item-list > li .left-col,
+  #track-item-list > li .right-col {
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+  #track-item-list > li .right-col {
+    margin-top: 20px;
   }
 }
 
