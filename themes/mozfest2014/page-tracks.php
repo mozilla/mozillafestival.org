@@ -118,7 +118,7 @@ get_header();
           <li>
             <h3>Art and Culture of the Web</h3>
             <div class="left-col">
-              <h4></h4>
+              <h4>An exploration of the programs, practices and inspirations of open and networked digital art forms. </h4>
               <p>
                 Call for Artists: <a href="http://mozfestartoftheweb.tumblr.com/">http://mozfestartoftheweb.tumblr.com/</a>
               </p>
