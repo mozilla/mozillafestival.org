@@ -24,6 +24,29 @@ get_header();
         <ul id="track-item-list">
 
           <li>
+            <h3>Build and Teach the Web</h3>
+            <div class="left-col">
+              <h4>Keep the web wild through hands-on making with innovative tools and teaching the web as a community. </h4>
+              <p>
+                Let's build and teach the web together. From remixing public archives to mashing hip hop with politics, and from hacking on web-native storytelling tools to knitting projects that teach digital literacies, we'll inspire, share and empower. Get your feet wet by programming your first webpage, browse our art galleries, play with the Green Screen and help others with their making "to dos".
+              </p>
+            </div>
+            <div class="right-col">
+              <div class="space-wranglers">
+                <h4>Space Wranglers</h4>
+                <ul>
+                  <li>Paul Oh, National Writing Project</li>
+                  <li>Elyse Eidman-Aadahl, National Writing Project</li>
+                  <li>Christina Cantrill, National Writing Project</li>
+                  <li>Chad Sansing, National Writing Project</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Tracks Separator =================  -->
+
+          <li>
             <h3>Open Web With Things</h3>
             <div class="left-col">
               <h4>Escape the limitations of your computer and build the web using sensors, circuits and good old paper and scissors.</h4>
@@ -277,23 +300,6 @@ get_header();
                   <li>Dan Sinker, Director, <a href="http://opennews.org/">Knight-Mozilla OpenNews</a> <a href="https://twitter.com/@dansinker" class="twitter">@dansinker</a></li>
                   <li>Erika Owens, Program Manager, <a href="http://opennews.org/">Knight-Mozilla OpenNews</a> <a href="https://twitter.com/@erika_owens " class="twitter">@erika_owens </a></li>
                 </ul>
-              </div>
-            </div>
-          </li>
-
-          <!-- Tracks Separator =================  -->
-
-          <li>
-            <h3>Build and Teach the Web</h3>
-            <div class="left-col">
-              <h4>Keep the web wild through hands-on making with innovative tools and teaching the web as a community. </h4>
-              <p>
-                Let's build and teach the web together. From remixing public archives to mashing hip hop with politics, and from hacking on web-native storytelling tools to knitting projects that teach digital literacies, we'll inspire, share and empower. Get your feet wet by programming your first webpage, browse our art galleries, play with the Green Screen and help others with their making "to dos".
-              </p>
-            </div>
-            <div class="right-col">
-              <div class="space-wranglers">
-                <h4>Space Wranglers</h4>
               </div>
             </div>
           </li>
