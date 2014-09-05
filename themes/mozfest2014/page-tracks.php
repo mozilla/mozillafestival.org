@@ -96,7 +96,7 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Open Science and the Web</h3>
+            <h3>Science and the Web</h3>
             <div class="left-col">
               <h4>Examine the potential of the open web to re-define how we experiment, analyze and share scientific knowledge. </h4>
               <p>
@@ -136,7 +136,7 @@ get_header();
               <div class="space-wranglers">
                 <h4>Space Wranglers</h4>
                 <ul>
-                  <li><a href="http://codekat.net/" class="name">Kat Braybrooke</a>, Curation and Content Lead, Mozilla <a href="https://twitter.com/" class="twitter">@codekat</a></li>
+                  <li><a href="http://codekat.net/" class="name">Kat Braybrooke</a>, Curation and Content Lead, Mozilla <a href="https://twitter.com/@codekat" class="twitter">@codekat</a></li>
                   <li>Paula Le Dieu <a href="https://twitter.com/@archiville" class="twitter">@archiville</a></li>
                 </ul>
               </div>
@@ -254,7 +254,7 @@ get_header();
                 <ul>
                   <li>Dave Steer, Director, Advocacy</li>
                   <li>Alina Hua, Senior Data Privacy Manger, Mozilla <a href="https://twitter.com/@ahni" class="twitter">@ahni</a></li>
-                  <li>Stacy Martin, Senior Privacy & Engagement Manager </li>
+                  <li>Stacy Martin, Senior Privacy & Engagement Manager, Mozilla </li>
                 </ul>
               </div>
             </div>
@@ -288,7 +288,7 @@ get_header();
             <div class="left-col">
               <h4>Keep the web wild through hands-on making with innovative tools and teaching the web as a community. </h4>
               <p>
-                Let's build and teach the web together. From remixing public archives to mashing hip hop with politics, and from hacking on web-native storytelling tools to knitting projects that teach digital literacies, we'll inspire, share and empower. Get your feet wet by programming your first webpage, browse our art galleries, play with the Green Screen and help others with their making “to dos”.
+                Let's build and teach the web together. From remixing public archives to mashing hip hop with politics, and from hacking on web-native storytelling tools to knitting projects that teach digital literacies, we'll inspire, share and empower. Get your feet wet by programming your first webpage, browse our art galleries, play with the Green Screen and help others with their making "to dos".
               </p>
             </div>
             <div class="right-col">
