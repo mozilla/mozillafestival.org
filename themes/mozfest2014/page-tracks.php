@@ -35,10 +35,10 @@ get_header();
               <div class="space-wranglers">
                 <h4>Space Wranglers</h4>
                 <ul>
-                  <li>Paul Oh, National Writing Project</li>
-                  <li>Elyse Eidman-Aadahl, National Writing Project</li>
-                  <li>Christina Cantrill, National Writing Project</li>
-                  <li>Chad Sansing, National Writing Project</li>
+                  <li>Paul Oh, National Writing Project <a href="https://twitter.com/@poh" class="twitter">@poh</a></li>
+                  <li>Elyse Eidman-Aadahl, National Writing Project <a href="https://twitter.com/@elyseea" class="twitter">@elyseea</a></li>
+                  <li>Christina Cantrill, National Writing Project <a href="https://twitter.com/@seecantrill" class="twitter">@seecantrill</a></li>
+                  <li>Chad Sansing, National Writing Project <a href="https://twitter.com/@chadsansing" class="twitter">@chadsansing</a></li>
                 </ul>
               </div>
             </div>
@@ -131,6 +131,8 @@ get_header();
                 <h4>Space Wranglers</h4>
                 <ul>
                   <li>Kaitlin Thaney, Director, <a href="http://www.mozillascience.org/">Mozilla Science Lab</a> <a href="https://twitter.com/@kaythaney" class="twitter">@kaythaney</a> <a href="https://twitter.com/@mozillascience" class="twitter">@mozillascience</a></li>
+                  <li>Bill Mills <a href="https://twitter.com/@billdoesphysics" class="twitter">@billdoesphysics</a></li>
+                  <li>Abby Cabunoc <a href="https://twitter.com/@abbycabs" class="twitter">@abbycabs</a></li>
                 </ul>
               </div>
             </div>
@@ -278,27 +280,6 @@ get_header();
                   <li>Dave Steer, Director, Advocacy</li>
                   <li>Alina Hua, Senior Data Privacy Manger, Mozilla <a href="https://twitter.com/@ahni" class="twitter">@ahni</a></li>
                   <li>Stacy Martin, Senior Privacy & Engagement Manager, Mozilla </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <!-- Tracks Separator =================  -->
-
-           <li>
-            <h3>Open Data</h3>
-            <div class="left-col">
-              <h4>Uncover the data on the web and in our world that will help us better inform and organize our communities </h4>
-              <p>
-                Join civic hackers, government workers, data activists, journalists, and more to collaborate on accessing, managing, and creating with data. Through hands-on sessions and active discussions, we'll liberate and visualize data, and create concrete plans for how to make data better for our communities.
-              </p>
-            </div>
-            <div class="right-col">
-              <div class="space-wranglers">
-                <h4>Space Wranglers</h4>
-                <ul>
-                  <li>Dan Sinker, Director, <a href="http://opennews.org/">Knight-Mozilla OpenNews</a> <a href="https://twitter.com/@dansinker" class="twitter">@dansinker</a></li>
-                  <li>Erika Owens, Program Manager, <a href="http://opennews.org/">Knight-Mozilla OpenNews</a> <a href="https://twitter.com/@erika_owens " class="twitter">@erika_owens </a></li>
                 </ul>
               </div>
             </div>
