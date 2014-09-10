@@ -162,7 +162,7 @@ get_header();
                 <h4>Space Wranglers</h4>
                 <ul>
                   <li><a href="http://codekat.net/" class="name">Kat Braybrooke</a>, Curation and Content Lead, Mozilla <a href="https://twitter.com/@codekat" class="twitter">@codekat</a></li>
-                  <li>Paula Le Dieu <a href="https://twitter.com/@archiville" class="twitter">@archiville</a></li>
+                  <li>Erik Nelson <a href="https://twitter.com/@jenelson" class="twitter">@jenelson</a></li>
                 </ul>
               </div>
             </div>
