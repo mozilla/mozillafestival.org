@@ -35,9 +35,10 @@ get_header();
               <div class="space-wranglers">
                 <h4>Space Wranglers</h4>
                 <ul>
-                  <li>Paul Oh, National Writing Project <a href="https://twitter.com/@poh" class="twitter">@poh</a></li>
-                  <li>Elyse Eidman-Aadahl, National Writing Project <a href="https://twitter.com/@elyseea" class="twitter">@elyseea</a></li>
                   <li>Christina Cantrill, National Writing Project <a href="https://twitter.com/@seecantrill" class="twitter">@seecantrill</a></li>
+                  <li>Antero Garcia, Colorado State University Writing Project <a href="https://twitter.com/@anterobot" class="twitter">@anterobot</a></li>
+                  <li>Paul Oh, National Writing Project <a href="https://twitter.com/@poh" class="twitter">@poh</a></li>
+                  <li>Jane Park, Creative Commons <a href="https://twitter.com/@janedaily" class="twitter">@janedaily</a></li>
                   <li>Chad Sansing, National Writing Project <a href="https://twitter.com/@chadsansing" class="twitter">@chadsansing</a></li>
                 </ul>
               </div>
