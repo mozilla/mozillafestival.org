@@ -28,6 +28,7 @@
       <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/media/css/proposal-listings.css" media="screen" />
     <?php endif;?>
     <script src="<?php echo get_template_directory_uri(); ?>/media/js/jquery-2.1.1.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/media/js/jquery.validate.min.js"></script>
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
