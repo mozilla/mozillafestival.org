@@ -140,7 +140,7 @@ h1 {
 
 #top-nav .menu a {
   color: #fff;
-  padding: 8px 15px;
+  padding: 8px 13px;
 }
 
 #top-nav input {
@@ -217,7 +217,7 @@ h1 {
 }
 
 
-/* ===[ Tracks ]============================================================ */
+/* ===[ Tracks Page ]============================================================ */
 
 #track-item-list {
   padding-left: 0;
@@ -408,6 +408,207 @@ h1.proposal-page.page-heading {
   cursor: pointer;
 }
 
+/* ===[ Form ]============================================================ */
+
+.ss-required-asterisk {
+  color: #F00;
+}
+
+.ss-choice-item {
+  margin-bottom: 4px !important;
+  font-size: 0.938em;
+}
+
+input[type=email],
+input[type=text],
+select,
+textarea,
+button {
+  /*height: 27px;*/
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+  margin: 6px 0 10px 0;
+}
+
+.ss-q-checkbox {
+  margin-right: 8px;
+}
+
+.ss-secondary-text {
+  font-size: 0.875em;
+  margin: 2px 0 10px;
+  color: #666;
+}
+
+#ss-submit {
+  font-size: 16px;
+}
+
+.ss-datetime-box {
+  margin-right: 2em;
+  min-height: 32px;
+  padding-left: 3px;
+  vertical-align: middle;
+}
+
+.ss-datetime-box select {
+  margin: 4px 3px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.goog-inline-block {
+  position: relative;
+  display: inline-block;
+}
+
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password],
+input[type=text],
+textarea {
+  font-size: .857em;
+  border: 1px solid #dbdbdb;
+  background: transparent;
+  background: rgba(0,0,0,0.05);
+  box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  padding: 6px 10px;
+  -moz-transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -ms-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=search]:hover,
+input[type=password]:hover,
+input[type=text]:hover, textarea:hover {
+  border-color: #bbb;
+  background-color: rgba(0,0,0,0.03);
+}
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+textarea:focus {
+  border-color: #bbb;
+  background-color: #fafafa;
+  outline: 0 none;
+  box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+}
+
+.button-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button,
+input[type=submit], button {
+  border-radius: .25em;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 24px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+  font: 20px "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  background-color: #266194;
+  background-image: -moz-linear-gradient(#3c88cc,#276195);
+  background-image: -ms-linear-gradient(#3c88cc,#276195);
+  background-image: -webkit-linear-gradient(#3c88cc,#276195);
+  background-image: -o-linear-gradient(#3c88cc,#276195);
+  background-image: linear-gradient(#3c88cc,#276195);
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+input[type=submit]:hover,
+input[type=submit]:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button.focus {
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1), inset 0 -2px 0 0 rgba(0,0,0,0.2), inset 0 12px 24px 2px #3089d8;
+}
+
+.button.red {
+  background-image: #C6252F;
+  background-image: -moz-linear-gradient(#ea4c52,#C6252F);
+  background-image: -ms-linear-gradient(#ea4c52,#C6252F);
+  background-image: -webkit-linear-gradient(#ea4c52,#C6252F);
+  background-image: -o-linear-gradient(#ea4c52,#C6252F);
+  background-image: linear-gradient(#ea4c52,#C6252F);
+}
+
+.button.red:hover,
+.button.red:focus {
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1), inset 0 -2px 0 0 rgba(0,0,0,0.2), inset 0 12px 24px 2px #E5636F;
+}
+
+
+/* ===[ Fringe Events Page ]============================================================ */
+
+#fringe-event-intro-box {
+  background: #fff;
+}
+
+#fringe-event-intro-box .intro-p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#fringe-event-form {
+  margin-top: 25px;
+}
+
+#fringe-event-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#fringe-event-form input:not([type="checkbox"]),
+#fringe-event-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#fringe-event-form input[type="submit"] {
+  margin-top: 30px;
+  width: 300px;
+}
+
+
+#fringe-event-form input.error,
+#fringe-event-form textarea.error,
+#fringe-event-form select.error {
+  border: 1px solid #C6252F;
+  box-shadow: 0px 0px 2px #C6252F inset, 0px 1px 0px rgba(255, 255, 255, 0.9);
+}
+
+#fringe-event-form .error {
+  color: #C6252F;
+}
+
+#fringe-event-thank-you {
+  background: #CBE8EC;
+  margin: 20px 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#fringe-event-thank-you p {
+  margin: 0;
+}
 
 
 /* ===[ Responsive Design ]============================================================ */
@@ -431,7 +632,8 @@ h1.proposal-page.page-heading {
 
 }
 
-@media screen and (max-width: 768px){
+/*@media screen and (max-width: 768px){*/
+@media screen and (max-width: 900px) { /* increased the threshold as we have too many items on the nav bar */
   #tabzilla {
     display: none;
   }

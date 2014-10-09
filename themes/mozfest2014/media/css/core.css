@@ -405,7 +405,8 @@ pre.template {
   font-size: 1.11em;
   line-height: 1em;
 }
-@media all and (max-width: 768px){
+/*@media all and (max-width: 768px){*/
+@media all and (max-width: 900px){ /* increased the threshold as we have too many items on the nav bar */
   #content article img {
     max-width: 100%;
   }
