@@ -76,7 +76,7 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Web in Your Pocket</h3>
+            <h3>The Mobile Web</h3>
             <div class="left-col">
               <h4>Explore opportunities in the booming world of the open web on mobile. How can we experiment & tinker to customize our own experience on our phones? </h4>
               <p>
@@ -212,14 +212,12 @@ get_header();
               <p>
                 Sessions will address how our global network is overcoming common challenges in the education space in order to meet Hive's big, audacious goals:
               </p>
-              <p>
-                <ul>
-                  <li>Mobilize more educators to adopt connected learning practices and teach web literacy within a growing constellation of Hive Learning Networks</li>
-                  <li>Create high-quality connected learning and web literacy tools, content, curriculum and practices for broad use, increasing demand for Hives in new locations and sectors that can serve a range of learners</li>
-                  <li>Catalyze schools, youth programs, and city agencies to provide rich connected learning and web literacy programs, especially in under-served communities</li>
-                  <li>Grow demand for Hive Learning Events, Communities and Networks in new locations and sectors.</li>
-                </ul>
-              </p>
+              <ul>
+                <li>Mobilize more educators to adopt connected learning practices and teach web literacy within a growing constellation of Hive Learning Networks</li>
+                <li>Create high-quality connected learning and web literacy tools, content, curriculum and practices for broad use, increasing demand for Hives in new locations and sectors that can serve a range of learners</li>
+                <li>Catalyze schools, youth programs, and city agencies to provide rich connected learning and web literacy programs, especially in under-served communities</li>
+                <li>Grow demand for Hive Learning Events, Communities and Networks in new locations and sectors.</li>
+              </ul>
             </div>
             <div class="right-col">
               <div class="space-wranglers">
@@ -266,13 +264,11 @@ get_header();
               <p>
                 What are the innovative tools we need to understand and control how our data is used?
               </p>
-              <p>
-                <ul>
-                  <li>How can we re-imagine advocacy, enabling people, organizations and communities to be better rally and to better organize protect the internet?</li>
-                  <li>What is the role of digital literacy? What models and programs will democratize literacy about how the internet works?</li>
-                  <li>Who are the heroes of the Internet? How should we celebrate them?</li>
-                </ul>
-              </p>
+              <ul>
+                <li>How can we re-imagine advocacy, enabling people, organizations and communities to be better rally and to better organize protect the internet?</li>
+                <li>What is the role of digital literacy? What models and programs will democratize literacy about how the internet works?</li>
+                <li>Who are the heroes of the Internet? How should we celebrate them?</li>
+              </ul>
             </div>
             <div class="right-col">
               <div class="space-wranglers">
@@ -281,6 +277,33 @@ get_header();
                   <li>Dave Steer, Director, Advocacy</li>
                   <li>Alina Hua, Senior Data Privacy Manger, Mozilla <a href="https://twitter.com/@ahni" class="twitter">@ahni</a></li>
                   <li>Stacy Martin, Senior Privacy & Engagement Manager, Mozilla </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- Tracks Separator =================  -->
+
+          <li>
+            <h3>Community</h3>
+            <div class="left-col">
+              <h4>Take action together. Enable communities to have impact and to keep the web open. Gather best practices to be effective as openly networked, distributed leaders.</h4>
+              <p>
+                Through hands-on sessions and group work we'll explore what challenges a distributed, global community is best at tackling. We’ll look at how being different and unique is our strength, and how our local knowledge can fuel and inform a global movement.
+              </p>
+              <p>
+                We'll learn from each other how to create sustainable and outcome-driven collaborations, how to join forces with other organizations to maximise our impact. We’ll examine case studies of healthy governance processes and feedback loops which can help us be open, mindful and transparent.
+              </p>
+              <p>
+                We'll look into the power of collective mobilisation, identify meaningful actions, understand how metrics can improve our efforts, and learn how to empower ourselves and others to be the force and heart of the global Open Web movement.
+              </p>
+            </div>
+            <div class="right-col">
+              <div class="space-wranglers">
+                <h4>Space Wranglers</h4>
+                <ul>
+                  <li>Beatrice Martini, Open Knowledge <a href="https://twitter.com/@beatricemartini" class="twitter">@beatricemartini</a> <a href="https://twitter.com/@OKFestival" class="twitter">@OKFestival</a></li>
+                  <li>Rebekka Kahn, P2PU / Open Coalition <a href="https://twitter.com/@rebamex" class="twitter">@rebamex</a> <a href="https://twitter.com/@OpenCoalition" class="twitter">@OpenCoalition</a></li>
                 </ul>
               </div>
             </div>
