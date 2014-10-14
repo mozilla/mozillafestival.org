@@ -285,7 +285,7 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Community</h3>
+            <h3>Community Building</h3>
             <div class="left-col">
               <h4>Take action together. Enable communities to have impact and to keep the web open. Gather best practices to be effective as openly networked, distributed leaders.</h4>
               <p>
