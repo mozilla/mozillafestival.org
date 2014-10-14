@@ -212,14 +212,12 @@ get_header();
               <p>
                 Sessions will address how our global network is overcoming common challenges in the education space in order to meet Hive's big, audacious goals:
               </p>
-              <p>
-                <ul>
-                  <li>Mobilize more educators to adopt connected learning practices and teach web literacy within a growing constellation of Hive Learning Networks</li>
-                  <li>Create high-quality connected learning and web literacy tools, content, curriculum and practices for broad use, increasing demand for Hives in new locations and sectors that can serve a range of learners</li>
-                  <li>Catalyze schools, youth programs, and city agencies to provide rich connected learning and web literacy programs, especially in under-served communities</li>
-                  <li>Grow demand for Hive Learning Events, Communities and Networks in new locations and sectors.</li>
-                </ul>
-              </p>
+              <ul>
+                <li>Mobilize more educators to adopt connected learning practices and teach web literacy within a growing constellation of Hive Learning Networks</li>
+                <li>Create high-quality connected learning and web literacy tools, content, curriculum and practices for broad use, increasing demand for Hives in new locations and sectors that can serve a range of learners</li>
+                <li>Catalyze schools, youth programs, and city agencies to provide rich connected learning and web literacy programs, especially in under-served communities</li>
+                <li>Grow demand for Hive Learning Events, Communities and Networks in new locations and sectors.</li>
+              </ul>
             </div>
             <div class="right-col">
               <div class="space-wranglers">
@@ -266,13 +264,11 @@ get_header();
               <p>
                 What are the innovative tools we need to understand and control how our data is used?
               </p>
-              <p>
-                <ul>
-                  <li>How can we re-imagine advocacy, enabling people, organizations and communities to be better rally and to better organize protect the internet?</li>
-                  <li>What is the role of digital literacy? What models and programs will democratize literacy about how the internet works?</li>
-                  <li>Who are the heroes of the Internet? How should we celebrate them?</li>
-                </ul>
-              </p>
+              <ul>
+                <li>How can we re-imagine advocacy, enabling people, organizations and communities to be better rally and to better organize protect the internet?</li>
+                <li>What is the role of digital literacy? What models and programs will democratize literacy about how the internet works?</li>
+                <li>Who are the heroes of the Internet? How should we celebrate them?</li>
+              </ul>
             </div>
             <div class="right-col">
               <div class="space-wranglers">
