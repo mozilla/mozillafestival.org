@@ -6,8 +6,8 @@ get_header();
 
 <div id="carousel">
   <div class="constrained">
-    <h2>Register for MozFest!</h2>
-    <a class="button" href="https://sendto.mozilla.org/page/contribute/mozilla-festival-2014-registration">Register now</a>
+    <h2>MozFest 2014</h2>
+    <a class="button" style="pointer-events: none">Sold Out</a>
   </div>
 </div>
 
