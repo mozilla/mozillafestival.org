@@ -683,6 +683,16 @@ button:focus,
     width: 100%;
   }
 
+  .home #scribbleLive-wrapper {
+    width: 100%;
+  }
+
+  .home #home-sidebar {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+
 }
 
 /*@media screen and (max-width: 768px){*/
