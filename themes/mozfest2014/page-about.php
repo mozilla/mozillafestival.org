@@ -100,6 +100,13 @@ MozFest 2014 will be Sarah's second festival.
             </h3>
             Chris Foote (always known as “Spike”) is the Volunteer Coordinator for MozFest. A life-long professional electronic engineer with a passion for science and technology, he is a volunteer with global organizations such as CrisisCommons, CrisisMappers, OpenStreetMap (OSM), Humanitarian OSM Team (HOT), StandbyTaskForce (SBTF). He has co-organized a very successful London-based monthly Meetup group for people involved in or interested in ICT4D (Information and Communication Technologies for Development) as well as countless BarCamps and Hackathons. As a long-time user and supporter of Mozilla, he is honoured to be asked to be Volunteer Coordinator for the second year running.
           </li>
+          <li class="vcard">
+            <h3>
+              <img src="<?php echo get_template_directory_uri(); ?>/media/img/team/MarcWalsh.jpg" alt="Marc Walsh pic" class="photo"  />
+              <span class="fn">Marc Walsh</span> — <span class="role">Production Assistant</span>
+            </h3>
+            Marc Walsh is a Production Assistant at Mozilla Foundation, only joining the team in September for the final stretch. He was worked on the past 3 festivals that have been held at Ravensbourne as he used to be a student there. Marc in the past has worked in events, theatre and television, from The Great British Bake Off to the Edinburgh TV Festival. Last year he also taught theatre in Saudi Arabia as part of a cultural exchange program. He's going to miss being able to jump into the fox suit, but it's time to move on!
+          </li>
         </ul>
     </div>
 
