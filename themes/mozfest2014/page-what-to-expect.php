@@ -14,17 +14,48 @@ get_header();
         <h3>Participating at MozFest</h3>
       </div>
       <p>
-        MozFest is a yearly festival with <b>hundreds of passionate people</b> exploring the Web, learning together, and making things that can change the world. It's <b>very hands-on and immersive.</b> Sometimes it will feel chaotic, but everyone is open-minded and eager to help you make and learn with them. 
+        MozFest is a yearly festival with <b>hundreds of passionate people</b> exploring the Web, learning together, and making things that can change the world. It's <b>very hands-on and immersive.</b> Sometimes it will feel chaotic, but everyone is open-minded and eager to help you make and learn with them.
       </p>
 	<p>
-	<b>Participants of every age and experience are welcome.</b> We believe that everyone has something to share and something to learn. <b>Youth are especially encouraged to come and lead sessions,</b> but MozFest is truly an event for all ages! There's a <b>creche</b> on-site as well as activities for <b>young people and industry experts.</b>  
+	<b>Participants of every age and experience are welcome.</b> We believe that everyone has something to share and something to learn. <b>Youth are especially encouraged to come and lead sessions,</b> but MozFest is truly an event for all ages! There's a <b>creche</b> on-site as well as activities for <b>young people and industry experts.</b>
 	</p>
 	<p>
-	<b>MozFest runs for three days,</b> beginning on Friday evening with a <b>"Science Fair,"</b> where we demo exciting projects from across the web. <b>Saturday and Sunday are full days of sessions, hacking and good coffee.</b> There is a party on Saturday night, and the festival ends on Sunday evening with a <b>closing demo party,</b> showcasing what we made together.  
+	<b>MozFest runs for three days,</b> beginning on Friday evening with a <b>"Science Fair,"</b> where we demo exciting projects from across the web. <b>Saturday and Sunday are full days of sessions, hacking and good coffee.</b> There is a party on Saturday night, and the festival ends on Sunday evening with a <b>closing demo party,</b> showcasing what we made together.
 	</p>
 	<p>
       <img class="aligncenter" src="http://2014.mozillafestival.org/wp-content/uploads/2014/07/mozfest-making.jpg" alt="Mozfest Making">
 	</p>
+    </section>
+
+
+    <!-- MozFest Program ===================== -->
+    <section class="panel">
+      <div class="header">
+        <h3>MozFest Program</h3>
+      </div>
+      <h4>Friday October 24</h4>
+      <ul>
+        <li>18:00 ­to 21:00: Science Fair evening reception</li>
+      </ul>
+      <h4>Saturday October 25</h4>
+      <ul>
+        <li>8:00 Doors open</li>
+        <li>9:00 Welcome and opening keynotes by Mark Surman (Mozilla) & Mary Moloney (CoderDojo)</li>
+        <li>10:00 Morning sessions begin</li>
+        <li>12:30 Lunch</li>
+        <li>14:00 Afternoon sessions begin</li>
+        <li>17:30-18:30 Evening lighting talks by Mozilla community members</li>
+      </ul>
+      <h4>Sunday October 26</h4>
+      <ul>
+        <li>9:00 Doors open</li>
+        <li>10:00 Keynotes by Baroness Beeban Kidron (filmmaker and education activist) and Mitchell Baker (Mozilla)</li>
+        <li>11:30 Morning sessions begin</li>
+        <li>13:00 Lunch</li>
+        <li>15:00 Afternoon sessions begin</li>
+        <li>18:00 Demo party</li>
+      </ul>
+
     </section>
 
     <!-- Location ===================== -->
@@ -34,10 +65,10 @@ get_header();
 		<br>
 		<h4> Ravensbourne </h4>
 		<address>6 Penrose Way<br/>Greenwich Peninsula<br />London<br />SE10 0EW</address>
-	</div>	 
+	</div>
 	<div style="overflow: hidden; margin-top: -1em;">
-      	 
-		<img src="http://content-2012.mozillafestival.org/uploads/2012/08/rave1.png" alt="" title="rave1" width="140" height="149" class="alignleft size-full wp-image-238"> 
+
+		<img src="http://content-2012.mozillafestival.org/uploads/2012/08/rave1.png" alt="" title="rave1" width="140" height="149" class="alignleft size-full wp-image-238">
 		<p>
         	This year, Mozfest returns to <a href='http://www.ravensbourne.ac.uk/'>Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.
 		</p>
