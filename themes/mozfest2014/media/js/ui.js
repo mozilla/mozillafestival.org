@@ -6,6 +6,7 @@ if ( $("#proposal-guideline").length > 0 ) {
 
 $(document).ready(function(){
   applicationFormHandler();
+  removeExtraStringFromBlogList();
 });
 
 function applicationFormHandler() {
@@ -53,4 +54,10 @@ function applicationFormHandler() {
       });
     }
   });
+}
+
+// some hacks for the Webmaker RSS feed
+function removeExtraStringFromBlogList() {
+  var blogExcerpt = $("#home-sidebar").html();
+  $("#home-sidebar").html(blogExcerpt.replace(/Continue reading/g, ""));
 }

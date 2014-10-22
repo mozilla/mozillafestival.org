@@ -14,8 +14,7 @@ get_header();
 <div id="content" class="splash-2014">
   <div class="constrained">
     <div id="scribbleLive-wrapper">
-      <!-- FIXME, temp, using MozFest 2013's ScribbleLive as placeholder -->
-      <div class="scrbbl-embed" data-src="/event/237586"></div>
+      <div class="scrbbl-embed" data-src="/event/867043"></div>
       <script>(function(d, s, id) {var js,ijs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//embed.scribblelive.com/widgets/embed.js";ijs.parentNode.insertBefore(js, ijs);}(document, 'script', 'scrbbl-js'));</script>
     </div>
     <div id="home-sidebar">
