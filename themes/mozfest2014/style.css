@@ -23,6 +23,10 @@ li {
   line-height: 1.55em;
 }
 
+p {
+  margin: 1em 0;
+}
+
 .left{
   float: left;
 }
