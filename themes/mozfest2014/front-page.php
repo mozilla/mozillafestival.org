@@ -7,7 +7,7 @@ get_header();
 <div id="carousel">
   <div class="constrained">
     <h2>MozFest 2014</h2>
-    <a class="button" style="pointer-events: none">Sold Out</a>
+    <a class="button" href="http://schedule.mozillafestival.org/">Schedule</a>
   </div>
 </div>
 
