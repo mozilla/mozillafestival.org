@@ -58,6 +58,9 @@ get_header();
       <p>
         More than 3,300 people from 51 countries have collaborated at MozFest to shape the future of the web. Join us in 2014 for our fifth festival as we celebrate what we've achieved so far, and cast our eyes forward to what we can do next.
       </p>
+      <p>
+        As a participatory festival, MozFest is learning from and sharing best practices with other collaborative spaces, especially <a href="https://aspirationtech.org/">Aspiration</a> and the <a href="http://2014.okfestival.org">Open Knowledge Festival</a>. Thank you!"
+      </p>
     </div>
 
     <div class="tiles-container">

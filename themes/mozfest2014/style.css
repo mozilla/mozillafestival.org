@@ -18,6 +18,10 @@ yellow-band: #f8cb0e;
 blue-band: #093d60;
 */
 
+p,
+li {
+  line-height: 1.55em;
+}
 
 .left{
   float: left;
