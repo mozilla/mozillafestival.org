@@ -12,7 +12,7 @@ get_header();
     <div>
       <div class="header">
         <h1>Tracks</h1>
-   <div class="panel">
+    <div class="panel">
       <div class="header">
         <h2>How the MozFest Program Works</h2>
       </div>
@@ -24,9 +24,14 @@ get_header();
         <ul id="track-item-list">
 
           <li>
-            <h3>Build and Teach the Web</h3>
             <div class="left-col">
-              <h4>Keep the web wild through hands-on making with innovative tools and teaching the web as a community. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Build-and-Teach-the-Web.png" alt="Build and Teach the Web track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Build and Teach the Web</h3>
+                <h4>Keep the web wild through hands-on making with innovative tools and teaching the web as a community. </h4>
+              </div>
               <p>
                 Let's build and teach the web together. From remixing public archives to mashing hip hop with politics, and from hacking on web-native storytelling tools to knitting projects that teach digital literacies, we'll inspire, share and empower. Get your feet wet by programming your first webpage, browse our art galleries, play with the Green Screen and help others with their making "to dos".
               </p>
@@ -48,9 +53,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Open Web With Things</h3>
             <div class="left-col">
-              <h4>Escape the limitations of your computer and build the web using sensors, circuits and good old paper and scissors.</h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Open-Web-with-Things.png" alt="Open Web With Things track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Open Web With Things</h3>
+                <h4>Escape the limitations of your computer and build the web using sensors, circuits and good old paper and scissors.</h4>
+              </div>
               <p>
                 The web for most of you is rectangular. You live, work and play in a web that's experienced entirely through a flat rectangular screen.
               </p>
@@ -76,9 +86,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>The Mobile Web</h3>
             <div class="left-col">
-              <h4>Explore opportunities in the booming world of the open web on mobile. How can we experiment & tinker to customize our own experience on our phones? </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/The-Mobile-Web.png" alt="The Mobile Web track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>The Mobile Web</h3>
+                <h4>Explore opportunities in the booming world of the open web on mobile. How can we experiment & tinker to customize our own experience on our phones? </h4>
+              </div>
               <p>
                 It's no secret that mobile technology is a big thing, and, as people adopt new pocket-sized technology around the world, it's only getting bigger. There is a great opportunity to make an incredible, lasting, fun, interactive impact using another realm of technology that's carved its placed into our lives: the web -- still a relatively new and unclaimed space.
               </p>
@@ -99,9 +114,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Source Code for Journalism</h3>
             <div class="left-col">
-              <h4>Design next-generation web solutions to solve critical issues facing news organizations and help journalism thrive on the open web. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Source-Code-for-Journalism.png" alt="Source Code for Journalism track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Source Code for Journalism</h3>
+                <h4>Design next-generation web solutions to solve critical issues facing news organizations and help journalism thrive on the open web. </h4>
+              </div>
               <p>
                 Our engagement in the open web is changing expectations about the way journalism is done, and though the business of newsgathering is in flux, the practice is stronger than ever. Now we have the opportunity to make newsgathering a more collaborative process, developing compelling stories, driven by data, that change the world we live in. Join us in discussions, hands-on making, and wireframing, and help explore new ways to visualize data, present information, and foster connections between people interested in harnessing the power of the web to create great journalism.
               </p>
@@ -120,9 +140,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Science and the Web</h3>
             <div class="left-col">
-              <h4>Examine the potential of the open web to re-define how we experiment, analyze and share scientific knowledge. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Science-and-the-Web.png" alt="Science and the Web track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Science and the Web</h3>
+                <h4>Examine the potential of the open web to re-define how we experiment, analyze and share scientific knowledge. </h4>
+              </div>
               <p>
                 The open web is changing the way scientists explore, experiment and build on one anothers' research. Imagine what we can accomplish with collaborative tools, open content and partnerships between science and tech. Join us in developing resources for open research, trainings around open data and hack on tools in our Science Lab sprint.
               </p>
@@ -142,9 +167,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Art and Culture of the Web</h3>
             <div class="left-col">
-              <h4>An exploration of the programs, practices and inspirations of open and networked digital art forms. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Art-and-Culture-of-the-Web.png" alt="Art and Culture of the Web track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Art and Culture of the Web</h3>
+                <h4>An exploration of the programs, practices and inspirations of open and networked digital art forms. </h4>
+              </div>
               <p>
                 Call for Artists: <a href="http://mozfestartoftheweb.tumblr.com/">http://mozfestartoftheweb.tumblr.com/</a>
               </p>
@@ -172,9 +202,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Open Badges Lab</h3>
             <div class="left-col">
-              <h4>Challenge the conventional system of recognizing skills and learning. Celebrate achievements from Open Badge creators and issuers. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Open-Badges-Lab.png" alt="Open Badges Lab track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Open Badges Lab</h3>
+                <h4>Challenge the conventional system of recognizing skills and learning. Celebrate achievements from Open Badge creators and issuers. </h4>
+              </div>
               <p>
                 Step on to the Open Badges Yellow Brick Road with us at this year's Mozfest and get hands on by earning badges throughout the festival, creating your own and helping shape the future of the Open Badges ecosystem.
               </p>
@@ -203,9 +238,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Hive Learning Networks</h3>
             <div class="left-col">
-              <h4>Join this lab for people working on building local city learning networks (Hives) and how they can better globally connect to share learning experiences for youth and digital media. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Hive-Learning-Networks.png" alt="Hive Learning Networks track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Hive Learning Networks</h3>
+                <h4>Join this lab for people working on building local city learning networks (Hives) and how they can better globally connect to share learning experiences for youth and digital media. </h4>
+              </div>
               <p>
                 Join the Global Hive Meetup and put connected learning into action! Discover how Hive learning networks champion web literacy within cities and catalyze education innovation across the globe. Together, we'll explore how we can work across Hive cities to create, execute, and scale connected learning experiences for youth of all ages.
               </p>
@@ -233,9 +273,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Musicians and Music Creators on the Open Web</h3>
             <div class="left-col">
-              <h4>Play a role and explore what it takes to make music on the open web. </h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Musicians-and-Music-Creators-on-the-Open-Web.png" alt="Musicians and Music Creators on the Open Web track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Musicians and Music Creators on the Open Web</h3>
+                <h4>Play a role and explore what it takes to make music on the open web. </h4>
+              </div>
               <p>
                 Exploring art as a job and it's intersection with the open web around three central themes: culture, innovation, and economics. We want to foster collaboration between musicians and technologists, looking at new business and promotional models; using open source to find sustainability for musicians.
               </p>
@@ -255,9 +300,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Policy & Advocacy</h3>
             <div class="left-col">
-              <h4>Build the Web We Want: Protecting and advancing the free and open web for everyone.</h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Policy-and-Advocacy.png" alt="Policy and Advocacy track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Policy & Advocacy</h3>
+                <h4>Build the Web We Want: Protecting and advancing the free and open web for everyone.</h4>
+              </div>
               <p>
                 The Internet brings together societies and empowers people to make anything and share with anyone. But as a result of policies that undermine access to the web and massive government surveillance, we are at risk of losing the essential ethos of the Internet itself. We are at a critical point in history to protect and advance the free and open Internet. This track will explore the current state of public policy, what is needed and how to mobilize people to hold their leaders accountable to stronger privacy, security, net neutrality, free expression and access to the web.
               </p>
@@ -285,9 +335,14 @@ get_header();
           <!-- Tracks Separator =================  -->
 
           <li>
-            <h3>Community Building</h3>
             <div class="left-col">
-              <h4>Take action together. Enable communities to have impact and to keep the web open. Gather best practices to be effective as openly networked, distributed leaders.</h4>
+              <div class="track-icon">
+                <img src="<?php echo get_template_directory_uri(); ?>/media/img/track/Community-Building.png" alt="Community Building track icon" />
+              </div>
+              <div class="track-titles">
+                <h3>Community Building</h3>
+                <h4>Take action together. Enable communities to have impact and to keep the web open. Gather best practices to be effective as openly networked, distributed leaders.</h4>
+              </div>
               <p>
                 Through hands-on sessions and group work we'll explore what challenges a distributed, global community is best at tackling. We’ll look at how being different and unique is our strength, and how our local knowledge can fuel and inform a global movement.
               </p>

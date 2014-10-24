@@ -291,6 +291,23 @@ h1 {
   margin-right: 2px;
 }
 
+.track-icon {
+  float: left;
+  display: inline-block;
+  width: 20%;
+}
+
+.track-icon img {
+  width: 100%;
+}
+
+.track-titles {
+  float: left;
+  display: inline-block;
+  width: 80%;
+}
+
+
 /* ===[ Footer ]============================================================ */
 
 #footer .menu a {
@@ -674,35 +691,6 @@ button:focus,
 
 /* ===[ Responsive Design ]============================================================ */
 
-@media screen and (max-width: 839px){
-
-  #carousel {
-    background: url('http://2014.mozillafestival.org/wp-content/uploads/2014/05/header_bluephoto_small.png');
-  }
-
-  #carousel h2 {
-    font-size: 40px;
-  }
-
-  #footer-bar .sign-up-for-updates,
-  #social-media {
-    float: left;
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  .home #scribbleLive-wrapper {
-    width: 100%;
-  }
-
-  .home #home-sidebar {
-    margin-top: 30px;
-    margin-left: 0;
-    width: 100%;
-  }
-
-}
-
 /*@media screen and (max-width: 768px){*/
 @media screen and (max-width: 900px) { /* increased the threshold as we have too many items on the nav bar */
   #tabzilla {
@@ -734,3 +722,49 @@ button:focus,
   }
 }
 
+@media screen and (max-width: 839px){
+
+  #carousel {
+    background: url('http://2014.mozillafestival.org/wp-content/uploads/2014/05/header_bluephoto_small.png');
+  }
+
+  #carousel h2 {
+    font-size: 40px;
+  }
+
+  #footer-bar .sign-up-for-updates,
+  #social-media {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .home #scribbleLive-wrapper {
+    width: 100%;
+  }
+
+  .home #home-sidebar {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 480px){
+  #header .site-desciption {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .track-icon {
+    width: 100%;
+    text-align: center;
+  }
+  .track-icon img {
+    max-width: 150px;
+  }
+  .track-titles {
+    width: 100%;
+  }
+}
