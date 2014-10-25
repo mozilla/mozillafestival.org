@@ -789,3 +789,6 @@ function mf2012_menu ($location, $args=Null) {
 	return wp_nav_menu($args);
 }
 
+
+/*Set RSS widget updating rate to every half an hour */
+add_filter('wp_feed_cache_transient_lifetime',create_function('$a', 'return 1800;'));

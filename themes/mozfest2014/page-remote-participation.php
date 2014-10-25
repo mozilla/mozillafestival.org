@@ -25,7 +25,7 @@ get_header();
 
         <h4>Participate and organize</h4>
         <ul>
-          <li>Participate from afar by completing the <a href="https://jess.makes.org/thimble/MTc4NjgzOTI5Ng==/mozfest-remotee-challenge">Mozfest Remotee Challenge</a>.</li>
+          <li>Participate from afar by completing the <a href="https://jess.makes.org/thimble/LTgzMjI4MTY=/mozfest-remotee-challenge">Mozfest Remotee Challenge</a>.</li>
           <li>Remix this Thimble make to <a href="https://fuzzyfox.makes.org/thimble/i-believe-in-an-open-web-because">tell us why you believe in an open web</a>.</li>
           <li>Organize your own “mini Mozfest” with your local community using these <a href="https://webmaker.org/event-guides">helpful guides</a>.</li>
         </ul>
