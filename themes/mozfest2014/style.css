@@ -216,6 +216,7 @@ h1 {
 
 #carousel a.button:hover {
   box-shadow: none;
+  background-color: #ef8847;
 }
 
 #header .sign-up-for-updates{
@@ -387,23 +388,35 @@ a.button.call-for-proposal {
 
 .home #scribbleLive-wrapper {
   float: left;
-  width: 65%;
+  width: 62%;
 }
 
 .home #home-sidebar {
   float: left;
   box-sizing: border-box;
-  margin-left: 3%;
-  width: 32%;
+  margin-right: 3%;
+  width: 35%;
+}
+
+.home #home-sidebar .section {
   background: #fff;
   padding: 20px;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
+.home #home-sidebar .section h3,
 .home #blogs-list h2 {
   font-size: 20px;
+  font-weight: normal;
   font-style: normal;
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.home #blogs-list h2 {
   padding-bottom: 0;
   border-bottom: none;
 }
@@ -753,6 +766,15 @@ button:focus,
 
 
 @media screen and (max-width: 480px){
+  .home #carousel a.button {
+    font-size: 15px;
+  }
+
+  .home #home-sidebar {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
   #header .site-desciption {
     margin-top: 0;
     font-size: 15px;
