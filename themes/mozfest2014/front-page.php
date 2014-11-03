@@ -24,9 +24,8 @@ get_header();
       </div>
       <?php endif; ?>
     </div>
-    <div id="scribbleLive-wrapper">
-      <div class="scrbbl-embed" data-src="/event/867043"></div>
-      <script>(function(d, s, id) {var js,ijs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//embed.scribblelive.com/widgets/embed.js";ijs.parentNode.insertBefore(js, ijs);}(document, 'script', 'scrbbl-js'));</script>
+    <div id="home-main-wrapper">
+      <a href="<?php echo get_template_directory_uri(); ?>/media/img/MozillaFestival2014_WrapUpGraphic_Web_1240x4733.jpg"><img src="<?php echo get_template_directory_uri(); ?>/media/img/MozillaFestival2014_WrapUpGraphic_Web_620x2367.jpg" alt="MozFest 2014 Wrap-up graphic"  /></a>
     </div>
   </div>
 </div>

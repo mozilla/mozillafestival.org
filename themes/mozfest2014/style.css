@@ -386,16 +386,22 @@ a.button.call-for-proposal {
   box-shadow: none;
 }
 
-.home #scribbleLive-wrapper {
+.home #home-main-wrapper {
   float: left;
-  width: 62%;
+  width: 65%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.home #home-main-wrapper img {
+  width: 100%;
 }
 
 .home #home-sidebar {
   float: left;
   box-sizing: border-box;
   margin-right: 3%;
-  width: 35%;
+  width: 32%;
 }
 
 .home #home-sidebar .section {
@@ -407,7 +413,7 @@ a.button.call-for-proposal {
 
 .home #home-sidebar .section h3,
 .home #blogs-list h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   text-align: left;
@@ -752,7 +758,7 @@ button:focus,
     width: 100%;
   }
 
-  .home #scribbleLive-wrapper {
+  .home #home-main-wrapper {
     width: 100%;
   }
 
