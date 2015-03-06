@@ -1,0 +1,215 @@
+.pmxi_plugin #existing_meta_keys, .pmxi_plugin #existing_attributes{
+	margin-bottom: 10px;
+	padding: 2px;
+	width: 580px;
+	height:200px;
+}
+.pmxi_checkbox{
+	position: relative;
+	top: -2px;
+	width: 50px !important;
+}
+.pmxi_plugin .options_group{
+	padding-bottom: 10px;
+	/*overflow: hidden;*/
+}
+.pmxi_plugin .options_group .input{
+	padding-left: 8px;
+	margin-top: 10px;
+}
+.pmxi_plugin .options_group .input input{
+	width:auto !important;
+}
+.pmxi_plugin .options_group .input label{
+	padding-left: 7px;
+	position: relative;
+	top: -2px;
+	width: auto;
+	margin-left: 0;
+}
+.pmxi_plugin .woocommerce_options_panel label, .pmxi_plugin .woocommerce_options_panel legend{
+	margin: 0;
+}
+.pmxi_plugin .woocommerce_options_panel p.form-field{
+	padding-left: 20px !important;
+}
+.pmxi_plugin #woocommerce-product-data{
+	overflow: hidden;	
+}
+.pmxi_plugin #woocommerce-product-data .hndle{
+	margin-bottom: 0px;
+	cursor: default;
+	padding: 10px;
+	overflow: hidden;
+}
+.pmxi_plugin .main_choise{
+	float: left;
+	margin-right: 5px;
+	padding: 5px 0;
+}
+.pmxi_plugin .set_with_xpath{
+	/*padding-left:20px; */
+	position:absolute; 
+	left:0px; 
+	top:-15px;
+}
+.pmxi_plugin .in_variations select, .pmxi_plugin .is_visible select, .pmxi_plugin .is_taxonomy select{
+	float:none !important;
+}
+.pmxi_plugin .in_variations, .pmxi_plugin .is_visible, .pmxi_plugin .is_taxonomy, .pmxi_plugin .is_create_taxonomy{
+	display: block;
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;	
+}
+.pmxi_plugin .in_variations label, .pmxi_plugin .is_visible label, .pmxi_plugin .is_taxonomy label{
+	width: 80px;
+}
+.pmxi_plugin .is_create_taxonomy label{
+	width: 115px;
+}
+.pmxi_plugin .panel{
+	background: #fff;
+	padding-bottom: 20px;
+	min-height: 200px;
+}
+.pmxi_plugin .wc-tabs{
+	width:152px !important;
+}
+.pmxi_plugin ul.wc-tabs li.active a{
+	/*width:120px !important;*/
+	background-color: #fff !important;
+}
+.pmxi_plugin .fleft{
+	float: left;
+}
+.pmxi_plugin #woocommerce_attributes{
+	padding-left: 2%;
+	padding-top: 10px;
+	width:98% !important;
+}
+.pmxi_plugin .variations_tree{
+	font-family: sans-serif;
+	/*position: absolute;
+	width:100%;
+	top:-155px;*/
+}
+
+.pmxi_plugin .variations_tag {	
+	background-color: #fff;	
+	/*position: fixed;	*/
+	margin: 5px;			
+	border-top: 1px solid #DFDFDF;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	 border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-box-shadow: 0px 0px 15px #ccc;
+	-moz-box-shadow:    0px 0px 15px #ccc;
+	box-shadow:         0px 0px 15px #ccc;
+}
+.pmxi_plugin .options .variations_tag{
+	margin-top: 0px;		
+}
+	.pmxi_plugin .variations_tag .title {
+		font-weight: bold;
+		padding: 6px 8px;
+		color: #464646;
+		background: #DFDFDF;
+		font-size: 12px;
+	}
+	.pmxi_plugin .variations_tag .xml {
+		max-height: 300px;
+		overflow: auto;
+		border: 1px solid #DFDFDF;
+		border-top:none;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	.pmxi_plugin .variations_tag .navigation {
+		float: right;
+		margin: -2px -12px 0 0;
+	}
+		.pmxi_plugin .variations_tag .navigation a,
+		.pmxi_plugin .variations_tag .navigation span {
+			font-weight: bold;
+			padding: 0 12px;
+			text-decoration: none;
+		}
+
+@media screen and (max-height: 700px) {  
+	.pmxi_plugin .variations_tag {
+  		max-height:300px;
+  	}
+  	.pmxi_plugin .variations_tag .xml {
+  		max-height: 265px;
+  	}
+}
+.pmxi_plugin .use_parent{
+	display: inline-block;	
+	position: relative;
+}
+
+.pmxi_plugin #woocommerce_attributes label{
+	font-size: 12px;
+	position: relative;
+	top:-2px;
+	left: 3px;
+}
+
+.pmxi_plugin #variations_tag{
+	clear: both;	
+	position: fixed;
+	top:335px;
+	right:30%;	
+	width:300px;	
+	display: none;
+	z-index: 1;
+}
+.pmxi_plugin .variations_tag .title{
+	cursor: move;
+}
+.pmxi_plugin .variations_tag{
+	z-index: 999;
+}
+.pmxi_plugin .load_options{
+	float: right;
+	height: 0;
+	position: relative;
+	right: 10px;
+	top: -35px;
+}
+.pmxi_plugin  #dialog, .pmxi_plugin .ui-dialog{
+	padding: 0px;
+}
+.pmxi_plugin #variations_console{
+	margin: 0px 15px;
+}
+.pmxi_plugin #toggle_xml_tree{
+	margin: 0px 5px;
+}
+.pmxi_plugin #close_xml_tree{
+	display: block;
+	position: absolute;
+	top: -16px;
+	right: -10px;
+	background: url("../img/ico-remove.png") no-repeat scroll 0 0 transparent;
+	width:16px;
+	height:16px;
+
+}
+.pmxi_plugin #variable_product_options img{
+	margin: 4px;
+}
+.pmxi_plugin .highlight{
+	background: none repeat scroll 0 0 #CAD2DF;
+	padding: 5px;
+	margin-right: 20px;
+	text-align: center;
+}

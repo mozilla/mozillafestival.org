@@ -1,0 +1,19 @@
+.pmxi_plugin textarea, .pmxi_plugin .options input, .pmxi_plugin select, .pmxi_plugin p, .pmxi_plugin .wp_attachment_details label[for="content"]{
+	font-size: 12px !important;
+}
+.pmxi_plugin form.template .back{
+	top: 14px !important;
+	float: left;
+}
+.pmxi_plugin .submit-buttons .large_button{
+	font-size: 14px !important;
+}
+.pmxi_plugin .submit-buttons .large_button:hover{
+	vertical-align: baseline !important;
+}
+.pmxi_plugin #titlediv #titlewrap{
+	font-size: 13px !important;	
+}
+.pmxi_plugin #titlediv #title{
+	color: #444 !important;
+}

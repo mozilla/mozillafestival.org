@@ -1,0 +1,798 @@
+/*
+Theme Name: Mozilla Festival 2014
+Author: Mozilla Foundation
+Author URI: http://mozilla.org/
+Description: Theme for the Mozilla Festival 2014
+Version: 0.1
+Text Domain: mozfest2014
+*/
+
+@import url("../mozfest2014/style.css");
+
+/*
+light blue:; #CBE8EC
+red: #
+;
+orange-band: #ef8847;
+yellow-band: #f8cb0e;
+blue-band: #093d60;
+*/
+
+p,
+li {
+  line-height: 1.55em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#content.splash-2014 .constrained{
+  max-width: 940px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 2em 1.5em;
+  color: #000;
+  position: relative;
+  top: -120px;
+}
+
+#content.splash-2014 h2{
+  font-size: 35px;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#content.splash-2014 .subsection {
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+#content.splash-2014 .subsection:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+#content.splash-2014 .section-header{
+  margin-bottom: 20px;
+}
+
+#what-is-mozfest{
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+#what-is-mozfest h3{
+  margin-top: 10px;
+}
+
+
+#see-what-we-made-2013{
+  text-align: center;
+  clear: both;
+  padding-top: 30px;
+}
+
+#header h1 {
+  display: inline-block;
+  float: left;
+}
+
+#header h1 a {
+  width: 320px;
+}
+
+#header #tabzilla-container {
+  padding: 0;
+}
+
+#header header {
+  width: auto;
+}
+
+#header .site-desciption {
+  float: left;
+  padding-left: 0;
+  font-size: 25px;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #093d60;
+}
+
+
+/* ===[ Typography ]============================================================ */
+
+h1 {
+  color: #093d60;
+}
+
+
+/* ===[ Top Nav ]============================================================ */
+
+#top-nav {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background: #E12526;
+}
+
+#top-nav .constrained {
+  padding: 0;
+  position: static;
+}
+
+#top-nav .menu {
+  width: 100%;
+}
+
+#top-nav .menu li {
+  font-size: 16px;
+}
+
+#top-nav .menu a {
+  color: #fff;
+  padding: 8px 13px;
+}
+
+#top-nav input {
+  display: none;
+}
+
+#top-nav input:focus ~ label {
+  outline: 1px dotted;
+  outline: -webkit-focus-ring-color auto 8px;
+}
+
+#top-band {
+  border-bottom: 8px solid #ef8847;
+  position: relative;
+}
+
+#top-band::before,
+#top-band::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 8px;
+}
+
+#top-band::after {
+  left: 33.333%;
+  width: 33.333%;
+  background: #f8cb0e;
+  border: solid #FFF;
+  border-width: 0 4px;
+  margin-left: -4px;
+  z-index: 1;
+}
+
+#top-band::before {
+  left: 50%;
+  width: 50%;
+  background: #093d60;
+}
+
+/* ===[ Carousel ]============================================================ */
+
+#carousel {
+  background-size: 100% auto;
+  border-bottom: 0px solid transparent;
+  padding-bottom: 110px;
+  text-align: center;
+}
+
+#carousel h2 {
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 60px;
+  color: #FFF;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#carousel a.button {
+  display: inline-block;
+  margin-top: 10px;
+  background: #E12526;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#carousel a.button:hover {
+  box-shadow: none;
+  background-color: #ef8847;
+}
+
+#header .sign-up-for-updates{
+  float: right;
+  display: inline-block;
+  margin-top: 35px;
+}
+
+
+/* ===[ Tracks Page ]============================================================ */
+
+#track-item-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#track-item-list > li {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: calc( 100% - 40px );
+  overflow: hidden;
+}
+
+#track-item-list > li .left-col {
+  width: 66.6%;
+  float: left;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-right: 1px solid #DDD;
+}
+
+#track-item-list > li .right-col {
+  width: 33.3%;
+  float: left;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+#track-item-list > li h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#track-item-list > li .left-col h4 {
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+#track-item-list > li .right-col h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+#track-item-list > li p,
+#track-item-list > li .space-wranglers li {
+  line-height: 1.5;
+}
+
+#track-item-list > li .space-wranglers ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#track-item-list > li .space-wranglers li {
+  margin-bottom: 10px;
+}
+
+#track-item-list > li .space-wranglers .twitter:before {
+  content: "\f099";
+  font-family: FontAwesome;
+  margin-right: 2px;
+}
+
+.track-icon {
+  float: left;
+  display: inline-block;
+  width: 20%;
+}
+
+.track-icon img {
+  width: 100%;
+}
+
+.track-titles {
+  float: left;
+  display: inline-block;
+  width: 80%;
+}
+
+
+/* ===[ Footer ]============================================================ */
+
+#footer .menu a {
+  color: #093d60;
+}
+
+#footer .menu a:hover {
+  background: transparent;
+  color: #E12526;
+  padding-left: 0;
+}
+
+#footer .menu .current-menu-item a,
+#footer .menu .current-page-ancestor a {
+  color: #E12526;
+}
+
+#footer .menu-item {
+  width: 100%;
+}
+
+#footer-bar {
+  padding: 20px 0;
+  background: #093d60;
+}
+
+#footer img,
+#footer-bar img {
+  height: 50px;
+}
+
+#footer-bar .sign-up-for-updates {
+  float: right;
+}
+
+#social-media {
+  float: right;
+  line-height: 46px;
+}
+
+#social-media a {
+  font-size: 32px;
+  margin-right: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+#social-media a:hover {
+  color: rgba(255,255,255,1);
+}
+
+#menu-festival-history a[href*="2010"] {
+  pointer-events: none;
+}
+
+/* ===[ General ]============================================================ */
+
+.tiles-container {
+  overflow: hidden;
+}
+
+a.button.call-for-proposal {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* ===[ Home Page ]============================================================ */
+
+.home #carousel a.button {
+  font-size: 20px;
+}
+
+.home #content .constrained {
+  background: none;
+  box-shadow: none;
+}
+
+.home #home-main-wrapper {
+  float: left;
+  width: 65%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.home #home-main-wrapper img {
+  width: 100%;
+}
+
+.home #home-sidebar {
+  float: left;
+  box-sizing: border-box;
+  margin-right: 3%;
+  width: 32%;
+}
+
+.home #home-sidebar .section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.home #home-sidebar .section h3,
+.home #blogs-list h2 {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.home #blogs-list h2 {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.home #blogs-list h2 > a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.home #blogs-list img[alt="RSS"] {
+  display: none;
+}
+
+.home #blogs-list ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.home #blogs-list ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.home #blogs-list .rsswidget,
+.home #blogs-list .rssSummary {
+  display: inherit;
+  line-height: 1.3;
+}
+
+
+/* ===[ Submit a Proposal Page ]============================================================ */
+
+.proposal-page-big-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.proposal-page-big-section:not(:last-of-type) {
+  border-bottom: 2px solid #CBE8EC;
+}
+
+.proposal-page-list li .item-title {
+  display: inline;
+  font-weight: bold;
+}
+
+.proposal-indent {
+  margin-left: 35px;
+}
+
+.proposal-subsection {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.proposal-subsection h5 + p {
+  margin-top: 0;
+}
+
+#call-for-proposal-form {
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background: none repeat scroll 0% 0% #FFF;
+  box-sizing: border-box;
+  margin: 30px 0px 20px 0;
+  border: 10px solid #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h1.proposal-page {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h1.proposal-page.page-heading {
+  margin-bottom: 13px;
+}
+
+#guideline-link:hover {
+  cursor: pointer;
+}
+
+/* ===[ Form ]============================================================ */
+
+.ss-required-asterisk {
+  color: #F00;
+}
+
+.ss-choice-item {
+  margin-bottom: 4px !important;
+  font-size: 0.938em;
+}
+
+input[type=email],
+input[type=text],
+select,
+textarea,
+button {
+  /*height: 27px;*/
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+  margin: 6px 0 10px 0;
+}
+
+.ss-q-checkbox {
+  margin-right: 8px;
+}
+
+.ss-secondary-text {
+  font-size: 0.875em;
+  margin: 2px 0 10px;
+  color: #666;
+}
+
+#ss-submit {
+  font-size: 16px;
+}
+
+.ss-datetime-box {
+  margin-right: 2em;
+  min-height: 32px;
+  padding-left: 3px;
+  vertical-align: middle;
+}
+
+.ss-datetime-box select {
+  margin: 4px 3px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.goog-inline-block {
+  position: relative;
+  display: inline-block;
+}
+
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password],
+input[type=text],
+textarea {
+  font-size: .857em;
+  border: 1px solid #dbdbdb;
+  background: transparent;
+  background: rgba(0,0,0,0.05);
+  box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  padding: 6px 10px;
+  -moz-transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -ms-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=search]:hover,
+input[type=password]:hover,
+input[type=text]:hover, textarea:hover {
+  border-color: #bbb;
+  background-color: rgba(0,0,0,0.03);
+}
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+textarea:focus {
+  border-color: #bbb;
+  background-color: #fafafa;
+  outline: 0 none;
+  box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+}
+
+.button-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button,
+input[type=submit], button {
+  border-radius: .25em;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.2);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 24px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+  font: 20px "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  background-color: #266194;
+  background-image: -moz-linear-gradient(#3c88cc,#276195);
+  background-image: -ms-linear-gradient(#3c88cc,#276195);
+  background-image: -webkit-linear-gradient(#3c88cc,#276195);
+  background-image: -o-linear-gradient(#3c88cc,#276195);
+  background-image: linear-gradient(#3c88cc,#276195);
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+input[type=submit]:hover,
+input[type=submit]:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button.focus {
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1), inset 0 -2px 0 0 rgba(0,0,0,0.2), inset 0 12px 24px 2px #3089d8;
+}
+
+.button.red {
+  background-image: #C6252F;
+  background-image: -moz-linear-gradient(#ea4c52,#C6252F);
+  background-image: -ms-linear-gradient(#ea4c52,#C6252F);
+  background-image: -webkit-linear-gradient(#ea4c52,#C6252F);
+  background-image: -o-linear-gradient(#ea4c52,#C6252F);
+  background-image: linear-gradient(#ea4c52,#C6252F);
+}
+
+.button.red:hover,
+.button.red:focus {
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.1), inset 0 -2px 0 0 rgba(0,0,0,0.2), inset 0 12px 24px 2px #E5636F;
+}
+
+
+/* ===[ Fringe Events Page ]============================================================ */
+
+#fringe-event-intro-box {
+  background: #fff;
+}
+
+#fringe-event-intro-box .intro-p {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+#fringe-event-form {
+  margin-top: 25px;
+}
+
+#fringe-event-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#fringe-event-form input:not([type="checkbox"]),
+#fringe-event-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#fringe-event-form input[type="submit"] {
+  margin-top: 30px;
+  width: 300px;
+}
+
+
+#fringe-event-form input.error,
+#fringe-event-form textarea.error,
+#fringe-event-form select.error {
+  border: 1px solid #C6252F;
+  box-shadow: 0px 0px 2px #C6252F inset, 0px 1px 0px rgba(255, 255, 255, 0.9);
+}
+
+#fringe-event-form .error {
+  color: #C6252F;
+}
+
+#fringe-event-thank-you {
+  background: #CBE8EC;
+  margin: 20px 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#fringe-event-thank-you p {
+  margin: 0;
+}
+
+
+/* ===[ Responsive Design ]============================================================ */
+
+/*@media screen and (max-width: 768px){*/
+@media screen and (max-width: 900px) { /* increased the threshold as we have too many items on the nav bar */
+  #tabzilla {
+    display: none;
+  }
+  #header {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  #header h1,
+  #header .site-desciption {
+    width: 100%;
+  }
+  #header .site-desciption {
+    margin-left: 0;
+  }
+  #header .sign-up-for-updates {
+    margin-top: 20px;
+    float: left;
+  }
+  #track-item-list > li .left-col,
+  #track-item-list > li .right-col {
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+  #track-item-list > li .right-col {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 839px){
+
+  #carousel {
+    background: url('http://2014.mozillafestival.org/wp-content/uploads/2014/05/header_bluephoto_small.png');
+  }
+
+  #carousel h2 {
+    font-size: 40px;
+  }
+
+  #footer-bar .sign-up-for-updates,
+  #social-media {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .home #home-main-wrapper {
+    width: 100%;
+  }
+
+  .home #home-sidebar {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 480px){
+  .home #carousel a.button {
+    font-size: 15px;
+  }
+
+  .home #home-sidebar {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  #header .site-desciption {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .track-icon {
+    width: 100%;
+    text-align: center;
+  }
+  .track-icon img {
+    max-width: 150px;
+  }
+  .track-titles {
+    width: 100%;
+  }
+}

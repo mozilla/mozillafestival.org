@@ -1,0 +1,410 @@
+/* ===[ Buttons ]============================================================ */
+
+a.button,
+a.button:link,
+a.button:visited,
+input.button,
+button {
+	.box-shadow(~"0 2px 0 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 rgba(0, 0, 0, 0.2) inset");
+	.transition(~"box-shadow 0.25s linear 0s");
+	.gradient(~"#3C88CC, #276195");
+	.border-radius(0.25em);
+
+	background-color: #276195;
+	background-repeat: repeat-x;
+	border: 0 none;
+	color: #FFFFFF !important;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.77em 1.25em;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+
+	&:hover {
+		.box-shadow(~"0 2px 0 0 rgba(0, 0, 0, 0.1), 0 -2px 0 0 rgba(0, 0, 0, 0.2) inset, 0 12px 24px 2px #3089D8 inset");
+	}
+
+	&:active {
+		.box-shadow(~"0 2px 0 0 rgba(0, 0, 0, 0.2) inset, 0 12px 24px 6px rgba(0, 0, 0, 0.2) inset, 0 0 2px 2px rgba(0, 0, 0, 0.2) inset");
+	}
+}
+
+/* ===[ Sub-navigation ]===================================================== */
+
+nav.subnav {
+	.raised;
+	padding: 1em 1.5em;
+	margin: 2em 0;
+	overflow: hidden;
+
+	h1, h2, h3, h4, h5, p {
+		margin: 0;
+		padding: 0;
+		font-size: 1.11em;
+		line-height: 1.5em;
+		font-weight: bold;
+		float: left;
+
+		&::after {
+			content: ":";
+		}
+	}
+
+	ul, li {
+		line-height: 1.05em;
+		float: left;
+		list-style: none;
+		margin: 0.35em 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0 0 0 0.75em;
+		padding: 0 0 0 0.75em;
+		border-left: solid 1px @slate;
+
+		&:first-child {
+			border: none;
+			padding: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 520px), screen and (min-width: 700px) and (max-width: 839px) {
+	nav.subnav {
+		h1, h2, h3, h4, h5, p {
+			float: none;
+		}
+
+		ul {
+			float: none;
+			margin-left: 1em;
+		}
+
+		li {
+			width: 50%;
+			border: none;
+			padding: 0;
+			margin: 0;
+			line-height: 2em;
+		}
+
+		a {
+			display: block;
+		}
+	}
+}
+
+/* ===[ Panels ]============================================================= */
+
+.panel {
+	.raised(@pale_blue);
+	position: relative;
+	margin: 0 0 1.5em;
+	padding: 2em 1.5em;
+
+	&.empty {
+		padding-bottom: 0;
+	}
+}
+
+/* ---[ Headers ]------------------------------------------------------------ */
+
+.panel .header,
+article.panel header,
+section.panel header {
+	background: #FFF;
+	padding: 2em 1.5em;
+	margin: -2em -1.5em 2em;
+	border-bottom: solid 1px #DDDEDE;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	p {
+		font-size: 1.38em;
+		line-height: 1.67em;
+	}
+
+	img.flyer {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+	}
+}
+
+.panel.empty .header,
+article.panel.empty header,
+section.panel.empty header {
+	border-radius: 5px;
+	margin-bottom: 0;
+}
+
+/* ---[ Footers ]------------------------------------------------------------ */
+
+.panel .footer,
+article.panel footer,
+section.panel footer {
+	background: #FFF;
+	padding: 1em 1.5em 2em;
+	margin: 2em -1.5em -2em;
+	border-top: solid 1px #DDDEDE;
+	border-radius: 0 0 5px 5px;
+	overflow: hidden;
+
+	h3 {
+		margin-top: 0;
+	}
+}
+
+/* ===[ Steps ]============================================================== */
+
+ol, ul {
+	&.steps {
+		border-left: solid 10px #DDE4E4;
+		list-style: none;
+		margin: 50px 0 0 25px;
+		padding: 0 0 0 25px;
+		position: relative;
+		counter-reset: steps;
+
+		& > li {
+			counter-increment: steps;
+
+			&:first-child::before,
+			&:last-child::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -35px;
+				width: 10px;
+				height: 35px;
+				// Page background has gradient, so we need to guess and adjust
+				background: @background - #0C0C0C;
+			}
+
+			&:last-child::before {
+				top: 35px;
+				bottom: 0;
+				left: -35px;
+				height: auto;
+				background: @background;
+			}
+
+			&::after {
+				content: "";
+				font-size: 1.11em;
+				position: absolute;
+				top: 30px;
+				left: -30px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 50%;
+				margin: -0.5em 0 0 -18px;
+				border: solid 3px #FFF;
+				color: #FFF;
+				background: @light_blue;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+				box-shadow: 0 2px 4px rgba(0,0,0,0.25), inset 0 2px 4px rgba(0,0,0,0.25);
+			}
+
+			& > ul,
+			& > ol {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			& > ul > li,
+			& > ol > li,
+			& > p {
+				position: relative;
+			}
+
+			& > ul > li::after,
+			& > ol > li::after,
+			& > p::after {
+				content: "";
+				position: absolute;
+				top: 0.25em;
+				left: -50px;
+				width: 10px;
+				height: 10px;
+				border: solid 3px #FFF;
+				border-radius: 50%;
+				background: @light_blue;
+				margin: 0 0 0 -8px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+				box-shadow: 0 2px 4px rgba(0,0,0,0.25), inset 0 2px 4px rgba(0,0,0,0.25);
+			}
+		}
+	}
+}
+
+ol.steps > li::after {
+	content: counter(steps);
+}
+
+/* ===[ Bio and other Item Lists ]=========================================== */
+
+ul, ol {
+	&.bio-list,
+	&.item-list {
+		list-style: none;
+		margin: 0;
+		padding: 20px 0 0 20px;
+
+		> li {
+			.raised;
+			width: 50%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0 0 20px;
+			border: solid 10px #FFF;
+			float: left;
+
+			&:nth-child(odd) {
+				margin-left: -20px;
+				margin-right: 20px;
+				clear: left;
+			}
+		}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0.5em;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin: 10px 0 0;
+
+			&.footer {
+				border-top: solid 1px #DDDEDE;
+				background: #F5F5F5;
+				padding: 20px 10px;
+				margin: 10px -10px -10px;
+				border-radius: 0 0 5px 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 520px), screen and (min-width: 700px) and (max-width: 839px) {
+	ul, ol {
+		&.bio-list,
+		&.item-list {
+			padding-left: 0;
+
+			> li {
+				width: 100%;
+				float: none;
+				clear: both;
+
+				&:nth-child(odd) {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+/* ===[ Blockquotes ]======================================================== */
+
+blockquote.major {
+	.raised;
+	margin: 0 0 0 115px;
+	padding: 20px 30px;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 34px;
+		top: 28px;
+		right: 100%;
+		background: url(assets/box-arrow.png);
+	}
+
+	img.headshot {
+		position: absolute;
+		top: 0;
+		right: 100%;
+		margin: 0 25px 0 0;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 520px), screen and (min-width: 700px) and (max-width: 839px) {
+	blockquote.major {
+		margin-left: 0;
+
+		&::before {
+			display: none;
+		}
+
+		img.headshot {
+			display: none;
+		}
+	}
+}
+
+/* ===[ Split ]============================================================== */
+
+.split {
+	.columns(2);
+}
+
+@media screen and (max-width: 520px), screen and (min-width: 700px) and (max-width: 839px) {
+	.split {
+		.columns(1);
+	}
+}
+
+/* ===[ Share ]============================================================== */
+
+.share ul {
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 25px;
+
+	li {
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* ===[ Live Stream ]======================================================== */
+
+#livestream.panel {
+	iframe {
+		margin: -2em -1.5em -2.25em;
+		border-top: solid 1px #E5E5E6;
+		.border-radius(~"0 0 5px 5px");
+	}
+}

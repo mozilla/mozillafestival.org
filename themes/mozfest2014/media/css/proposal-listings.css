@@ -1,0 +1,159 @@
+/* css here */
+#proposals {
+	min-height: 300px;
+}
+.proposal-listings h4 {
+	position: relative;
+}
+
+.proposal-listings.loading .constrained::before {
+	content: '\f110';
+	font-family: 'FontAwesome';
+	display: inline-block;
+	font-size: 2em;
+	-webkit-animation: spin 2s infinite linear;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+
+.proposal-listings .session {
+	border-bottom: 1px solid #ccc;
+	padding: 1em 0;
+}
+
+.proposal-listings .session:last-child {
+	border-bottom: none;
+}
+
+.proposal-listings .session > article {
+	display: none;
+}
+
+.proposal-listings .session > header {
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.proposal-listings .session > header h3 {
+	display: inline-block;
+	margin-top: 0;
+}
+
+.proposal-listings .session > header .excerpt {
+	display: inline-block;
+	margin-bottom: 0;
+	color: #aaa;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.proposal-listings .session.expanded > header h3 {
+	display: block;
+}
+
+.proposal-listings .session.expanded > header .excerpt {
+	display: none;
+}
+
+.proposal-listings .session.expanded .fa-caret-right {
+	transform: rotate(90deg);
+}
+
+.proposal-listings .session.expanded > article {
+	display: block;
+}
+
+.proposal-listings h4 {
+	margin-top: 1em;
+}
+
+#proposal-filter-container {
+	float: right;
+	width: 200px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #aaa;
+}
+	#proposal-filter-container select {
+		display: none;
+	}
+
+	#proposal-filter-container .selectize-control .selectize-input {
+		border-top: none;
+		border-right: none;
+		border-radius: 0;
+	}
+
+
+/* 2col layout */
+.proposal-2col-row .proposal-2col-col {
+	width: 50%;
+	float: left;
+}
+
+.proposal-2col-row {
+	clear: both;
+}
+
+.proposal-2col-row::after {
+	content: '';
+	display: table;
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+
+/* 2col layout mobile */
+@media all and (max-width: 359px) {
+	.proposal-2col-row .proposal-2col-col {
+		width: 100%;
+	}
+}
+
+#carousel {
+	background-image: url(http://2014.mozillafestival.org/wp-content/uploads/2014/07/header_bluephoto.png);
+	color: white;
+	text-align: left;
+}
+
+	#carousel h2 {
+		text-align: center;
+	}
+
+/* loading animation */
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

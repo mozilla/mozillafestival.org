@@ -1,0 +1,314 @@
+#header {
+	border-bottom: solid 1px #D5DBDB;
+
+	.constrained {
+		position: relative;
+		padding: 35px 20px;
+	}
+}
+
+#header header {
+	float: left;
+	width: 320px;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: block;
+		height: 100px;
+		background: url(assets/header.png) 0 50% no-repeat;
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+		position: relative;
+
+		span,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			width: 110px;
+			height: 110px;
+			background: #FFF url(assets/header.png) 5px 5px no-repeat;
+			border-radius: 50%;
+		}
+
+		span {
+			-webkit-transform: rotate(0);
+			-moz-transform: rotate(0);
+			-webkit-transition: -webkit-transform 3s ease;
+			-moz-transition: -moz-transform 3s ease;
+		}
+
+		&::after {
+			width: 74px;
+			height: 74px;
+			top: 13px;
+			left: 12px;
+			background-position: -12px -13px;
+		}
+
+		&:hover,
+		&:focus {
+			span {
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+#header p {
+	margin: 0;
+	padding-left: 118px;
+}
+
+#jump-to-content {
+	position: absolute;
+	bottom: 100%;
+	margin: 0 20px -50px 0;
+	padding: 8px 0;
+	right: 0;
+	width: 1px;
+	height: 1px;
+	text-align: center;
+	border-radius: 3px;
+	color: inherit;
+	text-decoration: none;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+	&:hover,
+	&:focus {
+		width: 140px;
+		height: auto;
+		background: #EEE;
+		text-indent: 0;
+	}
+}
+
+#header nav {
+	float: right;
+	margin: 25px 140px 0 0;
+
+	input {
+		display: none;
+	}
+
+	input:focus ~ label {
+		outline: 1px dotted;
+		outline: -webkit-focus-ring-color auto 5px;
+	}
+
+	.menu {
+		width: 320px;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	li:nth-last-child(2) {
+		border-bottom: none;
+	}
+
+	.register {
+		float: right;
+		margin: 0 -140px 0 0;
+		padding: 0;
+		border: none;
+		font-weight: bold;
+		font-size: 1.11em;
+		line-height: 1em;
+	}
+}
+
+@media all and (max-width: 839px) {
+	#jump-to-content {
+		margin-bottom: -61px;
+		right: 320px;
+	}
+
+	#header nav {
+		margin-right: -20px;
+		margin-top: -10px;
+
+		.register {
+			float: none;
+			width: auto;
+			display: block;
+			margin: 0 20px 20px 0;
+		}
+	}
+}
+
+@media all and (max-width: 699px) {
+	#jump-to-content {
+		margin-bottom: -50px;
+		right: 0;
+	}
+
+	#header nav {
+		clear: both;
+		float: none;
+
+		input {
+			display: inline;
+			position: absolute;
+			left: -999em;
+		}
+
+		label {
+			color: #FFF;
+			cursor: pointer;
+			font-size: 1.11em;
+			line-height: 1em;
+			position: absolute;
+			display: block;
+			text-align: center;
+			top: 100px;
+			right: 20px;
+			width: 60px;
+			padding: 10px 40px;
+			background: #CCC url(assets/menu-toggle.png) 50% 50% no-repeat;
+			border-radius: 3px;
+
+			&::after {
+				content: "\00A0";
+			}
+		}
+
+		input:checked ~ label {
+			-webkit-box-shadow: inset 1px 1px 5px #999;
+			-moz-box-shadow: inset 1px 1px 5px #999;
+			box-shadow: inset 1px 1px 5px #999;
+			background-position: 51% 60%;
+		}
+
+		.menu {
+			width: 480px;
+			margin: 0 auto;
+		}
+
+		input:checked + .menu {
+			padding-top: 30px;
+
+			li {
+				display: list-item;
+			}
+		}
+
+		li {
+			display: none;
+
+			&:nth-last-child(3) {
+				border-bottom: none;
+			}
+		}
+
+		.register {
+			position: absolute;
+			display: block;
+			top: 60px;
+			right: 20px;
+			margin: 0;
+			width: 140px;
+		}
+	}
+}
+
+@media all and (max-width: 520px) {
+	#header .constrained {
+		padding: 36px 0 20px;
+	}
+
+	#header header {
+		float: none;
+		margin: 0 auto 30px;
+	}
+
+	#header nav {
+		margin: 0 auto;
+		max-width: 320px;
+		padding-left: 20px;
+		position: relative;
+
+		label {
+			top: 0;
+			right: 20px;
+			width: 1em;
+			height: 1em;
+			margin: 0;
+			padding: 0.77em;
+			background-position: 50% 50%;
+
+			&::after {
+				content: "\00A0";
+			}
+		}
+
+		input:checked ~ label {
+			background-position: 60% 60%;
+		}
+
+		.menu {
+			width: 320px;
+		}
+
+		input:checked + .menu {
+			padding-top: 0;
+
+			.register {
+				margin-bottom: 20px;
+			}
+		}
+
+		li:nth-last-child(3) {
+			border-bottom: @nav-border;
+		}
+
+		.register {
+			position: static;
+			width: auto;
+			margin: 0 69px 0 0;
+		}
+	}
+}
+
+@media all and (max-width: 359px) {
+	#header header {
+		width: auto;
+		padding: 0 20px;
+
+		a {
+			background-position: -128px 0;
+
+			span,
+			&::after {
+				display: none;
+			}
+		}
+
+		p {
+			padding: 0;
+		}
+	}
+
+	#header nav {
+		.menu,
+		li {
+			width: auto;
+			float: none;
+		}
+
+		li:nth-last-child(2) {
+			border-bottom: @nav-border;
+		}
+	}
+}

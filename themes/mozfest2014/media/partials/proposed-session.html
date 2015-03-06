@@ -1,0 +1,35 @@
+{% for session in sessions %}
+<section class="session">
+  <header>
+    <h3><i class="fa fa-caret-right"></i> {{ session.title }} <small class="excerpt">{{ session.excerpt | truncate( 70 ) }}</small></h3>
+  </header>
+  <article>
+    <h4>What will your session or activity allow people to make, learn or do?</h4>
+    <p>{{ session.goals }}</p>
+    <h4>How do you see that working?</h4>
+    <p>{{ session.agenda }}</p>
+    <h4>How will you deal with varying numbers of participants in your session?</h4>
+    <p>{{ session.scale }}</p>
+    <h4>What do you see as outcomes after the festival?</h4>
+    <p>{{ session.outcomes }}</p>
+    <div class="proposal-2col-row">
+      <div class="proposal-2col-col">
+        <h4>Facilitator{{ 's' if session.facilitators.length > 1 else null }}</h4>
+        <ul>
+          {% for facilitator in session.facilitators %}
+          <li>{{ facilitator.name }}{% if facilitator.twitter %} – <a href="https://twitter.com/{{ facilitator.twitter | replace( '@', '' ) }}">{{ facilitator.twitter }}</a>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="proposal-2col-col">
+        {% if session.organization %}
+        <h4>Organization</h4>
+        <p>{{ session.organization }}</p>
+        {% endif %}
+        <h4>Theme</h4>
+        <p>{{ session.theme }}</p>
+      </div>
+    </div>
+  </article>
+</section>
+{% endfor %}
