@@ -5,9 +5,10 @@ get_header();
 ?>
 
 <div id="carousel">
-  <div class="constrained">
-    <h2>MozFest 2014</h2>
-    <a class="button" href="https://blog.webmaker.org/mozfest-2014-we-made-this-together">See What We Made Together</a>
+  <div class="constrained save-the-date">
+    <h2>MozFest 2015</h2>
+    <h3>Nov 6-8</h3>
+    <a class="button" href="https://sendto.mozilla.org/page/s/mozfest-2015-save-the-date">Save the date</a>
   </div>
 </div>
 
