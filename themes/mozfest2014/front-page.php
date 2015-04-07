@@ -7,7 +7,7 @@ get_header();
 <div id="carousel">
   <div class="constrained save-the-date">
     <h2>MozFest 2015</h2>
-    <h3>Nov 6-8</h3>
+    <h3>November 6-8</h3>
     <a class="button" href="https://sendto.mozilla.org/page/s/mozfest-2015-save-the-date">Save the date</a>
   </div>
 </div>
