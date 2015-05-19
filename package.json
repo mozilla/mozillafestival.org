@@ -1,0 +1,26 @@
+{
+  "name": "mozillafestival.org",
+  "version": "0.0.1",
+  "description": "Mozfest site",
+  "author": "Mozilla Foundation",
+  "scripts": {
+    "start": "npm-run-all --parallel server watch:js watch:css",
+    "build:js": "webpack --progress --profile --colors",
+    "watch:js": "npm run build:js -- --watch",
+    "build:css": "npm run watch:css -- --no-watch",
+    "watch:css": "autoless less public",
+    "server": "node app.js"
+  },
+  "dependencies": {
+    "autoless": "0.1.7",
+    "express": "3.4.5",
+    "habitat": "0.4.1",
+    "json-loader": "0.5.1",
+    "jsx-loader": "0.13.2",
+    "mapbox.js": "2.1.5",
+    "npm-run-all": "1.2.4",
+    "react": "0.13.2",
+    "react-router": "0.13.3",
+    "webpack": "1.8.11"
+  }
+}
