@@ -11,6 +11,10 @@ html {
   text-align: center;
 }
 .content {
+  a {
+    text-decoration: none;
+    color: #588AD3;
+  }
   .button,
   button {
     color: #FFFFFF;
@@ -20,12 +24,18 @@ html {
     margin: 14px 0;
     display: inline-block;
     padding: 12px 38px;
+    text-decoration: none;
   }
   h1 {
     color: #B94D60;
     font-weight: 300;
     font-size: 38px;
     margin: 8px 0;
+  }
+  h2 {
+    font-size: 18px;
+    color: #B94D60;
+    font-weight: 600;
   }
   p {
     font-size: 20px;
@@ -43,10 +53,21 @@ html {
   .bold {
     font-weight: 800;
   }
+  .boldish {
+    font-weight: 700;
+  }
 }
-
+.white-background {
+  background: #FFFFFF;
+  overflow: hidden;
+}
 .half-content {
   width: 50%;
   float: left;
-  padding: 0px 25px;
+  padding-left: 0;
+  padding-right: 25px;
+  &:last-child {
+    padding-left: 25px;
+    padding-right: 0;
+  }
 }

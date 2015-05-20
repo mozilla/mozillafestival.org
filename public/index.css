@@ -16,6 +16,10 @@ html {
   max-width: 565px;
   overflow: hidden;
 }
+.content a {
+  text-decoration: none;
+  color: #588AD3;
+}
 .content .button,
 .content button {
   color: #FFFFFF;
@@ -25,12 +29,18 @@ html {
   margin: 14px 0;
   display: inline-block;
   padding: 12px 38px;
+  text-decoration: none;
 }
 .content h1 {
   color: #B94D60;
   font-weight: 300;
   font-size: 38px;
   margin: 8px 0;
+}
+.content h2 {
+  font-size: 18px;
+  color: #B94D60;
+  font-weight: 600;
 }
 .content p {
   font-size: 20px;
@@ -44,10 +54,22 @@ html {
 .content .bold {
   font-weight: 800;
 }
+.content .boldish {
+  font-weight: 700;
+}
+.white-background {
+  background: #FFFFFF;
+  overflow: hidden;
+}
 .half-content {
   width: 50%;
   float: left;
-  padding: 0px 25px;
+  padding-left: 0;
+  padding-right: 25px;
+}
+.half-content:last-child {
+  padding-left: 25px;
+  padding-right: 0;
 }
 .footer {
   background: linear-gradient(to right, #588bd2, #2f306c);
@@ -142,6 +164,11 @@ html {
   font-weight: 800;
   letter-spacing: 7px;
 }
+.expect-page .letter,
+.expect-page .participating {
+  overflow: hidden;
+  text-align: left;
+}
 .home-page .header {
   color: #FFFFFF;
   position: absolute;
@@ -182,6 +209,14 @@ html {
 }
 .location-page .map-box-container {
   height: 500px;
+}
+.location-page .small p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.location-page .mapbox-popup p {
+  font-size: 12px;
+  margin: 0;
 }
 .location-page .illustration {
   display: flex;

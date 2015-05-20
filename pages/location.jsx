@@ -7,7 +7,7 @@ var accessToken = 'pk.eyJ1IjoiYWxpY29kaW5nIiwiYSI6Il90WlNFdE0ifQ.QGGdXGA_2QH-6uj
 var Location = React.createClass({
   componentDidMount: function() {
     var self = this;
-    var head = document.getElementsByTagName('head')[0];
+    /*var head = document.getElementsByTagName('head')[0];
     [
       'https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css'
     ].filter(function(url) {
@@ -17,21 +17,45 @@ var Location = React.createClass({
       link.setAttribute('href', url);
       link.setAttribute('rel', 'stylesheet');
       head.appendChild(link);
-    });
+    });*/
     require([
       // These will automatically attach to the window object.
       'mapbox.js'
     ], function() {
-      var location = [51.501673, 0.00575];
+      var pinLocation = [51.501, 0.00575];
+      var popupLocation = [51.5025, 0.00575];
+      var viewLocation = [51.506, 0.00575];
       L.mapbox.accessToken = accessToken;
-      var map = L.mapbox.map(self.refs.map.getDOMNode(), 'mapbox.streets')
-          .setView(location, 15);
-      L.marker(location, {
+      var map = L.mapbox.map(self.refs.map.getDOMNode(), 'mapbox.run-bike-hike');
+
+      var popup = L.popup({
+        closeButton: false,
+        closeOnClick: false,
+        minWidth: 226
+      })
+      .setLatLng(popupLocation)
+      .setContent(
+        '<div class="mapbox-popup">' +
+          '<p>Ravensbourne</p>' +
+          '<img src="/assets/images/placeholder-popup-image.png"/>' +
+          '<p>61 Penrose Way</p>' +
+          '<p>Greenwich Peninsula</p>' +
+          '<p>London SE10 0EW</p>' +
+          '<a href="http://www.ravensbourne.ac.uk/">ravensbourne.ac.uk</a>' +
+          '<p>+44 20 3040 3500</p>' +
+        '</div>'
+      )
+      .openOn(map);
+
+      map.setView(viewLocation, 15);
+
+      var marker = L.marker(pinLocation, {
         icon: L.mapbox.marker.icon({
             'marker-size': 'large',
             'marker-color': '#BD4A5F'
         })
       }).addTo(map);
+      marker.bindPopup(popup);
     });
   },
   render: function() {
@@ -44,7 +68,7 @@ var Location = React.createClass({
           <p>This year, Mozfest returns to <a href="http://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
           <h1>How to get there</h1>
           <div className="illustration">
-            <div className="illustration-text">
+            <div className="illustration-text small">
               <h2>London Underground</h2>
               <p>Take the Jubilee Line to North Greenwich (Zone 2).</p>
               <p>
@@ -60,7 +84,7 @@ var Location = React.createClass({
           </div>
           <div className="illustration">
             <div className="illustration-image-container"></div>
-            <div className="illustration-text">
+            <div className="illustration-text small">
               <h2>Bus</h2>
               <p>Eight TfL bus routes operate to and from North Greenwich including three 24 hour bus services. Key destinations include Stratford, Charlton, Greenwich, Lewisham, Woolwich, Eltham, North Kent and Central London. Please visit <a href="http://www.tfl.gov.uk/">www.tfl.gov.uk</a> for timetable information.</p>
               <h2>Docklands Light Railway (DLR)</h2>
@@ -70,7 +94,7 @@ var Location = React.createClass({
             </div>
           </div>
           <div className="illustration">
-            <div className="illustration-text">
+            <div className="illustration-text small">
               <h2>Eurostar</h2>
               <p>The current network takes the Eurostar into King’s Cross St. Pancras Station, from where you only need to jump on the Northern Line down to London Bridge where you can then change for the Jubilee Line. </p>
               <h2>National Rail</h2>
