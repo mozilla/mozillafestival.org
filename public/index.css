@@ -130,6 +130,11 @@ html {
 .header {
   height: 90px;
 }
+.header .header-content {
+  max-width: 1200px;
+  margin: 0px auto;
+  height: 100%;
+}
 .header a {
   text-transform: uppercase;
   text-decoration: none;
@@ -158,7 +163,7 @@ html {
   height: 100%;
 }
 .hero-unit {
-  background-position: center top;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -172,10 +177,19 @@ html {
   font-weight: 800;
   letter-spacing: 7px;
 }
+.expect-page .hero-unit {
+  background-position: center 13%;
+}
 .expect-page .letter,
 .expect-page .participating {
   overflow: hidden;
   text-align: left;
+}
+.guidelines-page .hero-unit {
+  background-position: center 38%;
+}
+.home-page .hero-unit {
+  background-position: center bottom;
 }
 .home-page .header {
   color: #FFFFFF;
@@ -186,16 +200,14 @@ html {
   padding-top: 90px;
   height: 642px;
 }
-.home-page .hero-unit .play-icon {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  border: 6px solid #FFFFFF;
-  margin: 0 auto 15px;
-}
 .home-page .hero-unit h1 {
   margin: 0;
   font-size: 46px;
+}
+.home-page .hero-unit h1,
+.home-page .hero-unit h2 {
+  font-weight: 800;
+  letter-spacing: 7px;
 }
 .home-page .hero-unit .horizontal-rule {
   width: 84px;
@@ -209,9 +221,9 @@ html {
   letter-spacing: 2px;
 }
 .home-page .hero-unit div {
-  font-size: 26px;
+  font-size: 24px;
   text-transform: none;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: normal;
 }
 .location-page .map-box-container {
@@ -238,6 +250,9 @@ html {
 .location-page .illustration .illustration-image-container {
   width: 50%;
 }
+.proposals-page .hero-unit {
+  background-position: center 14%;
+}
 .proposals-page .proposals-form label,
 .proposals-page .proposals-form input[type='text'],
 .proposals-page .proposals-form textarea,
@@ -249,6 +264,23 @@ html {
 .proposals-page .proposals-form textarea.checkbox-input,
 .proposals-page .proposals-form select.checkbox-input {
   width: auto;
+}
+.proposals-page .proposals-form input,
+.proposals-page .proposals-form textarea {
+  margin-bottom: 20px;
+  border: solid 1px #D0D2D1;
+  border-radius: 4px;
+  padding: 11px 10px;
+  font-size: 18px;
+}
+.proposals-page .proposals-form textarea {
+  height: 300px;
+}
+.proposals-page .proposals-form label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 18px;
 }
 .proposals-page .proposals-form label,
 .proposals-page .proposals-form input[type='text'],
@@ -263,4 +295,10 @@ html {
 .proposals-page .proposals-form select.checkbox-input,
 .proposals-page .proposals-form button.checkbox-input {
   display: inline;
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+.contact-page .hero-unit {
+  background-position: center 14%;
 }

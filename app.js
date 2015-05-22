@@ -18,8 +18,17 @@ app.configure(function() {
 });
 
 app.post('/add-session', function (req, res) {
-  var sessionName = req.body.name;
-  // Request from API
+  var sessionName = req.body.sessionName;
+  var firstName = req.body.firstName;
+  var surname = req.body.surname;
+  var email = req.body.email;
+  var organization = req.body.organization;
+  var twitter = req.body.twitter;
+  var otherFacilitators = req.body.otherFacilitators;
+  var description = req.body.description;
+  var agenda = req.body.agenda;
+  var participants = req.body.participants;
+  var outcome = req.body.outcome;
   request({
     method: 'POST',
     url: "http://scotttest2015.sched.org/api/session/add" +
@@ -28,7 +37,17 @@ app.post('/add-session', function (req, res) {
       "&api_key=" + env.get("SCHED_KEY") +
       "&session_type=2015-mozfest-session" +
       "&session_start=15-01-01" +
-      "&session_end=15-01-01",
+      "&session_end=15-01-01" +
+      "&description=" + description +
+      "&firstName=" + firstName +
+      "&surname=" + surname +
+      "&email=" + email +
+      "&organization=" + organization +
+      "&twitter=" + twitter +
+      "&otherFacilitators=" + otherFacilitators +
+      "&agenda=" + agenda +
+      "&participants=" + participants +
+      "&outcome=" + outcome,
     headers: {
       'User-Agent': '2015-mozfest'
     }

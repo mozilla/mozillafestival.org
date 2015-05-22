@@ -6,7 +6,7 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var Contact = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="contact-page">
         <Header/>
         <HeroUnit image="/assets/images/contact.jpg"
                   image2x="/assets/images/contact.jpg">

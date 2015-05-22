@@ -1,4 +1,7 @@
 .proposals-page {
+  .hero-unit {
+    background-position: center 14%;
+  }
   .proposals-form {
     label,
     input[type='text'],
@@ -9,6 +12,23 @@
         width: auto;
       }
     }
+    input,
+    textarea {
+      margin-bottom: 20px;
+      border: solid 1px #D0D2D1;
+      border-radius: 4px;
+      padding: 11px 10px;
+      font-size: 18px;
+    }
+    textarea {
+      height: 300px;
+    }
+    label {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 18px;
+    }
     label,
     input[type='text'],
     textarea,
@@ -17,6 +37,9 @@
       display: block;
       &.checkbox-input {
         display: inline;
+        font-size: 16px;
+        margin-left: 5px;
+        font-weight: 400;
       }
     }
   }
