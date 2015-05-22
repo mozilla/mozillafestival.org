@@ -25,7 +25,7 @@ app.post('/add-session', function (req, res) {
     url: "http://scotttest2015.sched.org/api/session/add" +
       "?session_key=" + sessionName +
       "&name=" + sessionName +
-      "&api_key=" + env.get("SCHED_KEY")
+      "&api_key=" + env.get("SCHED_KEY") +
       "&session_type=2015-mozfest-session" +
       "&session_start=15-01-01" +
       "&session_end=15-01-01",
