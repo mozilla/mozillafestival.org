@@ -33,7 +33,7 @@ webpackJsonp([1],{
 	    gridLayer = __webpack_require__(146);
 
 	L.mapbox = module.exports = {
-	    VERSION: __webpack_require__(155).version,
+	    VERSION: __webpack_require__(198).version,
 	    geocoder: __webpack_require__(147),
 	    marker: __webpack_require__(148),
 	    simplestyle: __webpack_require__(149),
@@ -69,7 +69,7 @@ webpackJsonp([1],{
 	    ((document.location.protocol == 'https:' ||
 	    document.location.protocol == 'http:') ? '' : 'https:') +
 	    '//api.tiles.mapbox.com/mapbox.js/' + 'v' +
-	    __webpack_require__(155).version + '/images';
+	    __webpack_require__(198).version + '/images';
 
 
 /***/ },
@@ -1692,7 +1692,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 155:
+/***/ 198:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -11691,7 +11691,7 @@ webpackJsonp([1],{
 	'use strict';
 
 	var config = __webpack_require__(150),
-	    version = __webpack_require__(155).version;
+	    version = __webpack_require__(198).version;
 
 	module.exports = function(path, accessToken) {
 	    accessToken = accessToken || L.mapbox.accessToken;
@@ -11739,7 +11739,7 @@ webpackJsonp([1],{
 
 	'use strict';
 
-	var corslite = __webpack_require__(228),
+	var corslite = __webpack_require__(234),
 	    strict = __webpack_require__(201).strict,
 	    config = __webpack_require__(150),
 	    protocol = /^(https?:)?(?=\/\/(.|api)\.tiles\.mapbox\.com\/)/;
@@ -14317,7 +14317,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 228:
+/***/ 234:
 /***/ function(module, exports, __webpack_require__) {
 
 	function corslite(url, callback, cors) {

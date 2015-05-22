@@ -39,9 +39,29 @@ var Guidelines = React.createClass({
           </div>
         </div>
         <div className="centered content wide">
+          <h1>Inclusion and Diversity</h1>
+          <div className="half-content">
+            <p>The Mozilla Project welcome and encourages participation by everyone. It doesn&lsquo;t matter how you identify yourself or how others perceive you: we welcome you.</p>
+            <p>We welcome contributions from everyone as long as they interact constructively with our community and everybody at the Mozilla Festival, including, but not</p>
+          </div>
+          <div className="half-content">
+            <p>Limited to people of varied age, ability, culture, ethnicity, gender, gender-identity, language, race, sexual orientation, geographic location and religious & political views.</p>
+            <p>Mozilla-based activities should be inclusive and should support such diversity.</p>
+          </div>
         </div>
         <div className="white-background">
           <div className="centered content wide">
+            <h1>Raising Issues at Mozfest</h1>
+            <div className="half-content">
+              <p>If you believe you&lsquo;re experiencing practices at Mozfest which don&lsquo;t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Director, Michelle Thorne. Your concerns will be treated confidentially and respectfully.</p>
+            </div>
+            <div className="half-content">
+              <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
+              <p className="boldish">
+                Email: michelle@mozillafoundation.org<br/>
+                Phone: +49 172 711 Nine Eight Zero Seven
+              </p>
+            </div>
           </div>
         </div>
         <Footer/>

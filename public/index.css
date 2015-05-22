@@ -56,7 +56,7 @@ html {
   font-size: 20px;
   font-weight: 300;
   line-height: 23px;
-  margin: 8px 0;
+  margin: 23px 0;
 }
 .content.wide {
   max-width: 840px;
@@ -75,10 +75,10 @@ html {
   width: 50%;
   float: left;
   padding-left: 0;
-  padding-right: 25px;
+  padding-right: 16px;
 }
 .half-content:last-child {
-  padding-left: 25px;
+  padding-left: 16px;
   padding-right: 0;
 }
 .footer {
@@ -193,6 +193,12 @@ html {
 }
 .guidelines-page .hero-unit {
   background-position: center 38%;
+}
+.guidelines-page .half-content {
+  text-align: left;
+}
+.guidelines-page .treat-each-other-list {
+  text-transform: uppercase;
 }
 .home-page .hero-unit {
   background-position: center bottom;
