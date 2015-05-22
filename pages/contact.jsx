@@ -8,8 +8,8 @@ var Contact = React.createClass({
     return (
       <div>
         <Header/>
-        <HeroUnit image="/assets/images/placeholder-image.png"
-                  image2x="/assets/images/placeholder-image.png">
+        <HeroUnit image="/assets/images/contact.jpg"
+                  image2x="/assets/images/contact.jpg">
           contact us
         </HeroUnit>
         <div className="centered content wide">

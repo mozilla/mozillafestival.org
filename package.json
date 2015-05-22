@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "autoless": "0.1.7",
+    "body-parser": "1.12.4",
     "express": "3.4.5",
     "habitat": "0.4.1",
     "json-loader": "0.5.1",
@@ -21,6 +22,7 @@
     "npm-run-all": "1.2.4",
     "react": "0.13.2",
     "react-router": "0.13.3",
+    "request": "2.55.0",
     "webpack": "1.8.11"
   }
 }

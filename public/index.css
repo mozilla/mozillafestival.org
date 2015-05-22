@@ -10,6 +10,9 @@ html {
 .centered {
   text-align: center;
 }
+#embed-error {
+  display: none;
+}
 .content {
   width: 100%;
   margin: 35px auto;
@@ -30,6 +33,7 @@ html {
   display: inline-block;
   padding: 12px 38px;
   text-decoration: none;
+  cursor: pointer;
 }
 .content h1 {
   color: #B94D60;
@@ -109,6 +113,10 @@ html {
   height: 70px;
   border-radius: 50%;
   border: solid 2px #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .footer .link-container {
   text-align: center;
@@ -177,7 +185,6 @@ html {
 .home-page .hero-unit {
   padding-top: 90px;
   height: 642px;
-  background: blue;
 }
 .home-page .hero-unit .play-icon {
   border-radius: 50%;

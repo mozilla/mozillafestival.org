@@ -4,14 +4,17 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
+var ImageTag = require('../components/imagetag.jsx');
 
 var Home = React.createClass({
   render: function() {
     return (
       <div className="home-page">
-        <Header/>
-        <HeroUnit>
-          <div className="play-icon"></div>
+        <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
+        <HeroUnit image="/assets/images/home.jpg"
+                  image2x="/assets/images/home.jpg">
+          <ImageTag src1x="/assets/images/img-play.svg"
+            alt="play button icon"/>
           <h1>mozilla festival</h1>
           <h2>november 6-8 in london</h2>
           <div className="horizontal-rule"></div>

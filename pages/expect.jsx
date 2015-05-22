@@ -4,12 +4,22 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 
 var Expect = React.createClass({
+  componentDidMount: function() {
+    var schedContainer = this.refs.schedContainer.getDOMNode();
+    var schedWidget = document.querySelector(".sched-container");
+    schedContainer.appendChild(schedWidget);
+  },
+  componentWillUnmount: function() {
+    var schedWidget = this.refs.schedContainer.getDOMNode().querySelector(".sched-container");
+    var widgetContainer = document.querySelector(".widgets");
+    widgetContainer.appendChild(schedWidget);
+  },
   render: function() {
     return (
       <div className="expect-page">
         <Header/>
-        <HeroUnit image="/assets/images/placeholder-image.png"
-                  image2x="/assets/images/placeholder-image.png">
+        <HeroUnit image="/assets/images/expect.jpg"
+                  image2x="/assets/images/expect.jpg">
           what to expect
         </HeroUnit>
         <div className="white-background">
@@ -47,6 +57,7 @@ var Expect = React.createClass({
           <div className="content centered wide">
             <div className="outline">
               <h1>Weekend Outline</h1>
+              <div ref="schedContainer"></div>
             </div>
           </div>
         </div>

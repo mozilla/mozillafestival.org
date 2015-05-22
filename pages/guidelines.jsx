@@ -8,7 +8,8 @@ var Guidelines = React.createClass({
     return (
       <div>
         <Header/>
-        <HeroUnit/>
+        <HeroUnit image="/assets/images/guidelines.jpg"
+                  image2x="/assets/images/guidelines.jpg"/>
 
         <Footer/>
       </div>

@@ -1,6 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
+var ImageTag = require('./imagetag.jsx');
 
 var Linker = React.createClass({
   render: function() {
@@ -25,7 +26,10 @@ var FooterIcon = React.createClass({
     return (
       <div className="footer-icon">
         <Linker to={this.props.to} href={this.props.href}>
-          <div className="icon-circle"></div>
+          <div className="icon-circle">
+            <ImageTag src1x={this.props.icon}
+              alt={this.props.alt}/>
+          </div>
           {this.props.children}
         </Linker>
       </div>
@@ -49,13 +53,13 @@ var Footer = React.createClass({
       <div className="footer">
         <div className="footer-content">
           <FooterIcons>
-            <FooterIcon to="contact">
+            <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="contact">
               get in touch
             </FooterIcon>
-            <FooterIcon href="https://twitter.com/intent/tweet?text=%23mozfest&source=webclient">
+            <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=%23mozfest&source=webclient">
               tweet #mozfest
             </FooterIcon>
-            <FooterIcon to="volunteer">
+            <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="volunteer">
               volunteer with us
             </FooterIcon>
           </FooterIcons>

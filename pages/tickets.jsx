@@ -18,8 +18,8 @@ var Tickets = React.createClass({
     return (
       <div>
         <Header/>
-        <HeroUnit image="/assets/images/placeholder-image.png"
-                  image2x="/assets/images/placeholder-image.png">
+        <HeroUnit image="/assets/images/tickets.jpg"
+                  image2x="/assets/images/tickets.jpg">
           tickets
         </HeroUnit>
         <div className="content centered wide">

@@ -3,16 +3,8 @@ webpackJsonp([1],{
 /***/ 17:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(59);
 	__webpack_require__(60);
-
-
-/***/ },
-
-/***/ 59:
-/***/ function(module, exports, __webpack_require__) {
-
-	window.L = __webpack_require__(198);
+	__webpack_require__(61);
 
 
 /***/ },
@@ -20,23 +12,31 @@ webpackJsonp([1],{
 /***/ 60:
 /***/ function(module, exports, __webpack_require__) {
 
+	window.L = __webpack_require__(199);
+
+
+/***/ },
+
+/***/ 61:
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
-	var geocoderControl = __webpack_require__(137),
-	    gridControl = __webpack_require__(138),
-	    featureLayer = __webpack_require__(139),
-	    legendControl = __webpack_require__(140),
-	    shareControl = __webpack_require__(141),
-	    tileLayer = __webpack_require__(142),
-	    infoControl = __webpack_require__(143),
-	    map = __webpack_require__(144),
-	    gridLayer = __webpack_require__(145);
+	var geocoderControl = __webpack_require__(138),
+	    gridControl = __webpack_require__(139),
+	    featureLayer = __webpack_require__(140),
+	    legendControl = __webpack_require__(141),
+	    shareControl = __webpack_require__(142),
+	    tileLayer = __webpack_require__(143),
+	    infoControl = __webpack_require__(144),
+	    map = __webpack_require__(145),
+	    gridLayer = __webpack_require__(146);
 
 	L.mapbox = module.exports = {
-	    VERSION: __webpack_require__(197).version,
-	    geocoder: __webpack_require__(146),
-	    marker: __webpack_require__(147),
-	    simplestyle: __webpack_require__(148),
+	    VERSION: __webpack_require__(155).version,
+	    geocoder: __webpack_require__(147),
+	    marker: __webpack_require__(148),
+	    simplestyle: __webpack_require__(149),
 	    tileLayer: tileLayer.tileLayer,
 	    TileLayer: tileLayer.TileLayer,
 	    infoControl: infoControl.infoControl,
@@ -55,9 +55,9 @@ webpackJsonp([1],{
 	    FeatureLayer: featureLayer.FeatureLayer,
 	    map: map.map,
 	    Map: map.Map,
-	    config: __webpack_require__(149),
-	    sanitize: __webpack_require__(153),
-	    template: __webpack_require__(199).to_html
+	    config: __webpack_require__(150),
+	    sanitize: __webpack_require__(154),
+	    template: __webpack_require__(200).to_html
 	};
 
 
@@ -69,18 +69,18 @@ webpackJsonp([1],{
 	    ((document.location.protocol == 'https:' ||
 	    document.location.protocol == 'http:') ? '' : 'https:') +
 	    '//api.tiles.mapbox.com/mapbox.js/' + 'v' +
-	    __webpack_require__(197).version + '/images';
+	    __webpack_require__(155).version + '/images';
 
 
 /***/ },
 
-/***/ 137:
+/***/ 138:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var geocoder = __webpack_require__(146),
-	    util = __webpack_require__(200);
+	var geocoder = __webpack_require__(147),
+	    util = __webpack_require__(201);
 
 	var GeocoderControl = L.Control.extend({
 	    includes: L.Mixin.Events,
@@ -271,20 +271,20 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 138:
+/***/ 139:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200),
-	    Mustache = __webpack_require__(199);
+	var util = __webpack_require__(201),
+	    Mustache = __webpack_require__(200);
 
 	var GridControl = L.Control.extend({
 
 	    options: {
 	        pinnable: true,
 	        follow: false,
-	        sanitizer: __webpack_require__(153),
+	        sanitizer: __webpack_require__(154),
 	        touchTeaser: true,
 	        location: true
 	    },
@@ -476,16 +476,16 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 139:
+/***/ 140:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200),
-	    urlhelper = __webpack_require__(201),
-	    request = __webpack_require__(202),
-	    marker = __webpack_require__(147),
-	    simplestyle = __webpack_require__(148);
+	var util = __webpack_require__(201),
+	    urlhelper = __webpack_require__(202),
+	    request = __webpack_require__(203),
+	    marker = __webpack_require__(148),
+	    simplestyle = __webpack_require__(149);
 
 	// # featureLayer
 	//
@@ -494,7 +494,7 @@ webpackJsonp([1],{
 	var FeatureLayer = L.FeatureGroup.extend({
 	    options: {
 	        filter: function() { return true; },
-	        sanitizer: __webpack_require__(153),
+	        sanitizer: __webpack_require__(154),
 	        style: simplestyle.style,
 	        popupOptions: { closeButton: false }
 	    },
@@ -598,7 +598,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 140:
+/***/ 141:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -607,7 +607,7 @@ webpackJsonp([1],{
 
 	    options: {
 	        position: 'bottomright',
-	        sanitizer: __webpack_require__(153)
+	        sanitizer: __webpack_require__(154)
 	    },
 
 	    initialize: function(options) {
@@ -672,15 +672,15 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 141:
+/***/ 142:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var urlhelper = __webpack_require__(201);
+	var urlhelper = __webpack_require__(202);
 
 	var ShareControl = L.Control.extend({
-	    includes: [__webpack_require__(203)],
+	    includes: [__webpack_require__(204)],
 
 	    options: {
 	        position: 'topleft',
@@ -780,15 +780,15 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 142:
+/***/ 143:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200);
+	var util = __webpack_require__(201);
 
 	var TileLayer = L.TileLayer.extend({
-	    includes: [__webpack_require__(203)],
+	    includes: [__webpack_require__(204)],
 
 	    options: {
 	        format: 'png'
@@ -881,7 +881,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 143:
+/***/ 144:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -889,7 +889,7 @@ webpackJsonp([1],{
 	var InfoControl = L.Control.extend({
 	    options: {
 	        position: 'bottomright',
-	        sanitizer: __webpack_require__(153)
+	        sanitizer: __webpack_require__(154)
 	    },
 
 	    initialize: function(options) {
@@ -1002,20 +1002,20 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 144:
+/***/ 145:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200),
-	    tileLayer = __webpack_require__(142).tileLayer,
-	    featureLayer = __webpack_require__(139).featureLayer,
-	    gridLayer = __webpack_require__(145).gridLayer,
-	    gridControl = __webpack_require__(138).gridControl,
-	    infoControl = __webpack_require__(143).infoControl,
-	    shareControl = __webpack_require__(141).shareControl,
-	    legendControl = __webpack_require__(140).legendControl,
-	    mapboxLogoControl = __webpack_require__(204).mapboxLogoControl;
+	var util = __webpack_require__(201),
+	    tileLayer = __webpack_require__(143).tileLayer,
+	    featureLayer = __webpack_require__(140).featureLayer,
+	    gridLayer = __webpack_require__(146).gridLayer,
+	    gridControl = __webpack_require__(139).gridControl,
+	    infoControl = __webpack_require__(144).infoControl,
+	    shareControl = __webpack_require__(142).shareControl,
+	    legendControl = __webpack_require__(141).legendControl,
+	    mapboxLogoControl = __webpack_require__(205).mapboxLogoControl;
 
 	function withAccessToken(options, accessToken) {
 	    if (!accessToken || options.accessToken)
@@ -1024,7 +1024,7 @@ webpackJsonp([1],{
 	}
 
 	var LMap = L.Map.extend({
-	    includes: [__webpack_require__(203)],
+	    includes: [__webpack_require__(204)],
 
 	    options: {
 	        tileLayer: {},
@@ -1194,18 +1194,18 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 145:
+/***/ 146:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200),
-	    request = __webpack_require__(202),
-	    grid = __webpack_require__(205);
+	var util = __webpack_require__(201),
+	    request = __webpack_require__(203),
+	    grid = __webpack_require__(206);
 
 	// forked from danzel/L.UTFGrid
 	var GridLayer = L.Class.extend({
-	    includes: [L.Mixin.Events, __webpack_require__(203)],
+	    includes: [L.Mixin.Events, __webpack_require__(204)],
 
 	    options: {
 	        template: function() { return ''; }
@@ -1424,14 +1424,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 146:
+/***/ 147:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var util = __webpack_require__(200),
-	    urlhelper = __webpack_require__(201),
-	    request = __webpack_require__(202);
+	var util = __webpack_require__(201),
+	    urlhelper = __webpack_require__(202),
+	    request = __webpack_require__(203);
 
 	// Low-level geocoding interface - wraps specific API calls and their
 	// return values.
@@ -1528,14 +1528,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 147:
+/***/ 148:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var url = __webpack_require__(201),
-	    util = __webpack_require__(200),
-	    sanitize = __webpack_require__(153);
+	var url = __webpack_require__(202),
+	    util = __webpack_require__(201),
+	    sanitize = __webpack_require__(154);
 
 	// mapbox-related markers functionality
 	// provide an icon from mapbox's simple-style spec and hosted markers
@@ -1600,7 +1600,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 148:
+/***/ 149:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1652,7 +1652,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 149:
+/***/ 150:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1667,10 +1667,10 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 153:
+/***/ 154:
 /***/ function(module, exports, __webpack_require__) {
 
-	var html_sanitize = __webpack_require__(206);
+	var html_sanitize = __webpack_require__(207);
 
 	module.exports = function(_) {
 	    if (!_) return '';
@@ -1692,7 +1692,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 197:
+/***/ 155:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1889,7 +1889,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 198:
+/***/ 199:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -11075,7 +11075,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 199:
+/***/ 200:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11633,7 +11633,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 200:
+/***/ 201:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11685,13 +11685,13 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 201:
+/***/ 202:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var config = __webpack_require__(149),
-	    version = __webpack_require__(197).version;
+	var config = __webpack_require__(150),
+	    version = __webpack_require__(155).version;
 
 	module.exports = function(path, accessToken) {
 	    accessToken = accessToken || L.mapbox.accessToken;
@@ -11734,14 +11734,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 202:
+/***/ 203:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var corslite = __webpack_require__(233),
-	    strict = __webpack_require__(200).strict,
-	    config = __webpack_require__(149),
+	var corslite = __webpack_require__(228),
+	    strict = __webpack_require__(201).strict,
+	    config = __webpack_require__(150),
 	    protocol = /^(https?:)?(?=\/\/(.|api)\.tiles\.mapbox\.com\/)/;
 
 	module.exports = function(url, callback) {
@@ -11771,14 +11771,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 203:
+/***/ 204:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var request = __webpack_require__(202),
-	    url = __webpack_require__(201),
-	    util = __webpack_require__(200);
+	var request = __webpack_require__(203),
+	    url = __webpack_require__(202),
+	    util = __webpack_require__(201);
 
 	module.exports = {
 	    _loadTileJSON: function(_) {
@@ -11802,7 +11802,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 204:
+/***/ 205:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11841,7 +11841,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 205:
+/***/ 206:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11864,7 +11864,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 206:
+/***/ 207:
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -14317,7 +14317,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 233:
+/***/ 228:
 /***/ function(module, exports, __webpack_require__) {
 
 	function corslite(url, callback, cors) {
