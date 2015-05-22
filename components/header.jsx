@@ -4,6 +4,16 @@ var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
 
 var Header = React.createClass({
+  componentDidMount: function() {
+    var tabzillaContainer = this.refs.tabzillaContainer.getDOMNode();
+    var tabzilla = document.querySelector("#tabzilla");
+    tabzillaContainer.appendChild(tabzilla);
+  },
+  componentWillUnmount: function() {
+    var tabzilla = this.refs.tabzillaContainer.getDOMNode().querySelector("#tabzilla");
+    var widgetContainer = document.querySelector(".widgets");
+    widgetContainer.appendChild(tabzilla);
+  },
   render: function() {
     var logoImage = this.props.logoImage || "/assets/images/logo-mozilla-festival.svg";
     return (
@@ -19,8 +29,7 @@ var Header = React.createClass({
             <Link to="proposals">call for proposals</Link>
             <Link to="tickets">tickets</Link>
             <Link to="location">location</Link>
-            <div className="mozfest-tabzilla-container">
-              <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+            <div ref="tabzillaContainer" className="mozfest-tabzilla-container">
             </div>
           </div>
         </div>
