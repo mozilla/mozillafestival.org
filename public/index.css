@@ -153,7 +153,12 @@ html {
   margin: 0 31px;
   width: 96px;
 }
+.footer .footer-icons .footer-icon:hover .icon-circle {
+  top: -4px;
+}
 .footer .footer-icons .footer-icon .icon-circle {
+  position: relative;
+  top: 0;
   margin: 0 auto 15px;
   width: 70px;
   height: 70px;
@@ -163,6 +168,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.18s ease-in-out 0s;
 }
 .footer .link-container {
   text-align: center;

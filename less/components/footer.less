@@ -23,11 +23,18 @@
     flex-shrink: 0;
     .footer-icon {
       text-transform: uppercase;
-      font-weight: 600;     
+      font-weight: 600;
       text-align: center;
       margin: 0 31px;
       width: 96px;
+      &:hover {
+        .icon-circle {
+          top: -4px;
+        }
+      }
       .icon-circle {
+        position: relative;
+        top: 0;
         margin: 0 auto 15px;
         width: 70px;
         height: 70px;
@@ -37,7 +44,9 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        transition: all 0.18s ease-in-out 0s;
       }
+
     }
   }
   .link-container {
