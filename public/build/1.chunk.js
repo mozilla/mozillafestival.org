@@ -556,7 +556,7 @@ webpackJsonp([1],{
 =======
 	var util = __webpack_require__(206),
 	    urlhelper = __webpack_require__(207),
-	    request = __webpack_require__(209),
+	    request = __webpack_require__(208),
 	    marker = __webpack_require__(151),
 	    simplestyle = __webpack_require__(152);
 >>>>>>> 1022ae4... session proposal success page
@@ -763,10 +763,14 @@ webpackJsonp([1],{
 
 	var ShareControl = L.Control.extend({
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    includes: [__webpack_require__(166)],
 =======
 	    includes: [__webpack_require__(208)],
 >>>>>>> c35ef8c... footer mobile support
+=======
+	    includes: [__webpack_require__(209)],
+>>>>>>> f2cc4ea... finishing mobile view
 
 	    options: {
 	        position: 'topleft',
@@ -879,10 +883,14 @@ webpackJsonp([1],{
 
 	var TileLayer = L.TileLayer.extend({
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    includes: [__webpack_require__(166)],
 =======
 	    includes: [__webpack_require__(208)],
 >>>>>>> c35ef8c... footer mobile support
+=======
+	    includes: [__webpack_require__(209)],
+>>>>>>> f2cc4ea... finishing mobile view
 
 	    options: {
 	        format: 'png'
@@ -1139,10 +1147,14 @@ webpackJsonp([1],{
 
 	var LMap = L.Map.extend({
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    includes: [__webpack_require__(166)],
 =======
 	    includes: [__webpack_require__(208)],
 >>>>>>> c35ef8c... footer mobile support
+=======
+	    includes: [__webpack_require__(209)],
+>>>>>>> f2cc4ea... finishing mobile view
 
 	    options: {
 	        tileLayer: {},
@@ -1331,13 +1343,17 @@ webpackJsonp([1],{
 	    includes: [L.Mixin.Events, __webpack_require__(166)],
 =======
 	var util = __webpack_require__(206),
-	    request = __webpack_require__(209),
+	    request = __webpack_require__(208),
 	    grid = __webpack_require__(211);
 
 	// forked from danzel/L.UTFGrid
 	var GridLayer = L.Class.extend({
+<<<<<<< HEAD
 	    includes: [L.Mixin.Events, __webpack_require__(208)],
 >>>>>>> c35ef8c... footer mobile support
+=======
+	    includes: [L.Mixin.Events, __webpack_require__(209)],
+>>>>>>> f2cc4ea... finishing mobile view
 
 	    options: {
 	        template: function() { return ''; }
@@ -1572,8 +1588,12 @@ webpackJsonp([1],{
 =======
 	var util = __webpack_require__(206),
 	    urlhelper = __webpack_require__(207),
+<<<<<<< HEAD
 	    request = __webpack_require__(209);
 >>>>>>> c35ef8c... footer mobile support
+=======
+	    request = __webpack_require__(208);
+>>>>>>> f2cc4ea... finishing mobile view
 
 	// Low-level geocoding interface - wraps specific API calls and their
 	// return values.
@@ -11901,37 +11921,6 @@ webpackJsonp([1],{
 
 	'use strict';
 
-	var request = __webpack_require__(209),
-	    url = __webpack_require__(207),
-	    util = __webpack_require__(206);
-
-	module.exports = {
-	    _loadTileJSON: function(_) {
-	        if (typeof _ === 'string') {
-	            _ = url.tileJSON(_, this.options && this.options.accessToken);
-	            request(_, L.bind(function(err, json) {
-	                if (err) {
-	                    util.log('could not load TileJSON at ' + _);
-	                    this.fire('error', {error: err});
-	                } else if (json) {
-	                    this._setTileJSON(json);
-	                    this.fire('ready');
-	                }
-	            }, this));
-	        } else if (_ && typeof _ === 'object') {
-	            this._setTileJSON(_);
-	        }
-	    }
-	};
-
-
-/***/ },
-
-/***/ 209:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
 	var corslite = __webpack_require__(241),
 <<<<<<< HEAD
 	    strict = __webpack_require__(163).strict,
@@ -11970,14 +11959,24 @@ webpackJsonp([1],{
 /***/ },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ 166:
+=======
+/***/ 209:
+>>>>>>> f2cc4ea... finishing mobile view
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+<<<<<<< HEAD
 	var request = __webpack_require__(165),
 	    url = __webpack_require__(164),
 	    util = __webpack_require__(163);
+=======
+	var request = __webpack_require__(208),
+	    url = __webpack_require__(207),
+	    util = __webpack_require__(206);
+>>>>>>> f2cc4ea... finishing mobile view
 
 	module.exports = {
 	    _loadTileJSON: function(_) {
@@ -12001,8 +12000,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 167:
 =======
+=======
+>>>>>>> f2cc4ea... finishing mobile view
 /***/ 210:
 >>>>>>> c35ef8c... footer mobile support
 /***/ function(module, exports, __webpack_require__) {

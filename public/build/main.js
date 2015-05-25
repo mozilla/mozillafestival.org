@@ -1256,6 +1256,7 @@
 	    return (
 	      React.createElement("div", {className: "header"}, 
 	        React.createElement("div", {className: "header-content"}, 
+	          React.createElement("div", {ref: "tabzillaContainer", className: "mozfest-tabzilla-container"}), 
 	          React.createElement("div", {className: "nav-home"}, 
 	            React.createElement(Link, {to: "home"}, 
 	              React.createElement(ImageTag, {src1x: logoImage, 
@@ -1265,9 +1266,20 @@
 	          React.createElement("div", {className: "nav-items"}, 
 	            React.createElement(Link, {to: "proposals"}, "call for proposals"), 
 	            React.createElement(Link, {to: "tickets"}, "tickets"), 
-	            React.createElement(Link, {to: "location"}, "location"), 
-	            React.createElement("div", {ref: "tabzillaContainer", className: "mozfest-tabzilla-container"})
+	            React.createElement(Link, {to: "location"}, "location")
 	          )
+	          /*<div className="nav-home">
+	            <Link to="home">
+	              <ImageTag src1x={logoImage}
+	                alt="mozfest logo"/>
+	            </Link>
+	          </div>
+	          <div className="nav-items">
+	            <Link to="proposals">call for proposals</Link>
+	            <Link to="tickets">tickets</Link>
+	            <Link to="location">location</Link>
+	            <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
+	          </div>*/
 	        )
 	      )
 	    );
@@ -3613,7 +3625,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 
 	var invariant = __webpack_require__(66);
 
@@ -3837,10 +3849,10 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
-	var ReactFragment = __webpack_require__(81);
+	var PooledClass = __webpack_require__(81);
+	var ReactFragment = __webpack_require__(82);
 
-	var traverseAllChildren = __webpack_require__(82);
+	var traverseAllChildren = __webpack_require__(83);
 	var warning = __webpack_require__(69);
 
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
@@ -3993,7 +4005,7 @@
 
 	'use strict';
 
-	var ReactUpdateQueue = __webpack_require__(79);
+	var ReactUpdateQueue = __webpack_require__(80);
 
 	var invariant = __webpack_require__(66);
 	var warning = __webpack_require__(69);
@@ -4140,7 +4152,7 @@
 	var ReactLifeCycle = __webpack_require__(87);
 	var ReactPropTypeLocations = __webpack_require__(88);
 	var ReactPropTypeLocationNames = __webpack_require__(84);
-	var ReactUpdateQueue = __webpack_require__(79);
+	var ReactUpdateQueue = __webpack_require__(80);
 
 	var assign = __webpack_require__(58);
 	var invariant = __webpack_require__(66);
@@ -5519,7 +5531,7 @@
 	'use strict';
 
 	var ReactElement = __webpack_require__(47);
-	var ReactFragment = __webpack_require__(81);
+	var ReactFragment = __webpack_require__(82);
 	var ReactPropTypeLocations = __webpack_require__(88);
 	var ReactPropTypeLocationNames = __webpack_require__(84);
 	var ReactCurrentOwner = __webpack_require__(46);
@@ -6793,7 +6805,7 @@
 	var ReactMarkupChecksum = __webpack_require__(130);
 	var ReactPerf = __webpack_require__(54);
 	var ReactReconciler = __webpack_require__(56);
-	var ReactUpdateQueue = __webpack_require__(79);
+	var ReactUpdateQueue = __webpack_require__(80);
 	var ReactUpdates = __webpack_require__(131);
 
 	var emptyObject = __webpack_require__(91);
@@ -7784,7 +7796,7 @@
 	'use strict';
 
 	var ReactElement = __webpack_require__(47);
-	var ReactFragment = __webpack_require__(81);
+	var ReactFragment = __webpack_require__(82);
 	var ReactPropTypeLocationNames = __webpack_require__(84);
 
 	var emptyFunction = __webpack_require__(137);
@@ -9421,6 +9433,82 @@
 /* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule EventConstants
+	 */
+
+	'use strict';
+
+	var keyMirror = __webpack_require__(89);
+
+	var PropagationPhases = keyMirror({bubbled: null, captured: null});
+
+	/**
+	 * Types of raw signals from the browser caught at the top level.
+	 */
+	var topLevelTypes = keyMirror({
+	  topBlur: null,
+	  topChange: null,
+	  topClick: null,
+	  topCompositionEnd: null,
+	  topCompositionStart: null,
+	  topCompositionUpdate: null,
+	  topContextMenu: null,
+	  topCopy: null,
+	  topCut: null,
+	  topDoubleClick: null,
+	  topDrag: null,
+	  topDragEnd: null,
+	  topDragEnter: null,
+	  topDragExit: null,
+	  topDragLeave: null,
+	  topDragOver: null,
+	  topDragStart: null,
+	  topDrop: null,
+	  topError: null,
+	  topFocus: null,
+	  topInput: null,
+	  topKeyDown: null,
+	  topKeyPress: null,
+	  topKeyUp: null,
+	  topLoad: null,
+	  topMouseDown: null,
+	  topMouseMove: null,
+	  topMouseOut: null,
+	  topMouseOver: null,
+	  topMouseUp: null,
+	  topPaste: null,
+	  topReset: null,
+	  topScroll: null,
+	  topSelectionChange: null,
+	  topSubmit: null,
+	  topTextInput: null,
+	  topTouchCancel: null,
+	  topTouchEnd: null,
+	  topTouchMove: null,
+	  topTouchStart: null,
+	  topWheel: null
+	});
+
+	var EventConstants = {
+	  topLevelTypes: topLevelTypes,
+	  PropagationPhases: PropagationPhases
+	};
+
+	module.exports = EventConstants;
+
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2015, Facebook, Inc.
 	 * All rights reserved.
@@ -9720,7 +9808,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9839,7 +9927,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10027,7 +10115,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10044,7 +10132,7 @@
 	'use strict';
 
 	var ReactElement = __webpack_require__(47);
-	var ReactFragment = __webpack_require__(81);
+	var ReactFragment = __webpack_require__(82);
 	var ReactInstanceHandles = __webpack_require__(52);
 
 	var getIteratorFn = __webpack_require__(93);
@@ -10281,82 +10369,6 @@
 	module.exports = traverseAllChildren;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(78)))
-
-/***/ },
-/* 83 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule EventConstants
-	 */
-
-	'use strict';
-
-	var keyMirror = __webpack_require__(89);
-
-	var PropagationPhases = keyMirror({bubbled: null, captured: null});
-
-	/**
-	 * Types of raw signals from the browser caught at the top level.
-	 */
-	var topLevelTypes = keyMirror({
-	  topBlur: null,
-	  topChange: null,
-	  topClick: null,
-	  topCompositionEnd: null,
-	  topCompositionStart: null,
-	  topCompositionUpdate: null,
-	  topContextMenu: null,
-	  topCopy: null,
-	  topCut: null,
-	  topDoubleClick: null,
-	  topDrag: null,
-	  topDragEnd: null,
-	  topDragEnter: null,
-	  topDragExit: null,
-	  topDragLeave: null,
-	  topDragOver: null,
-	  topDragStart: null,
-	  topDrop: null,
-	  topError: null,
-	  topFocus: null,
-	  topInput: null,
-	  topKeyDown: null,
-	  topKeyPress: null,
-	  topKeyUp: null,
-	  topLoad: null,
-	  topMouseDown: null,
-	  topMouseMove: null,
-	  topMouseOut: null,
-	  topMouseOver: null,
-	  topMouseUp: null,
-	  topPaste: null,
-	  topReset: null,
-	  topScroll: null,
-	  topSelectionChange: null,
-	  topSubmit: null,
-	  topTextInput: null,
-	  topTouchCancel: null,
-	  topTouchEnd: null,
-	  topTouchMove: null,
-	  topTouchStart: null,
-	  topWheel: null
-	});
-
-	var EventConstants = {
-	  topLevelTypes: topLevelTypes,
-	  PropagationPhases: PropagationPhases
-	};
-
-	module.exports = EventConstants;
-
 
 /***/ },
 /* 84 */
@@ -11706,7 +11718,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPropagators = __webpack_require__(165);
 	var ExecutionEnvironment = __webpack_require__(61);
 	var FallbackCompositionState = __webpack_require__(166);
@@ -12204,7 +12216,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPluginHub = __webpack_require__(169);
 	var EventPropagators = __webpack_require__(165);
 	var ExecutionEnvironment = __webpack_require__(61);
@@ -12663,7 +12675,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPropagators = __webpack_require__(165);
 	var SyntheticMouseEvent = __webpack_require__(172);
 
@@ -13022,7 +13034,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 
 	var emptyFunction = __webpack_require__(137);
 
@@ -13263,7 +13275,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var LocalEventTrapMixin = __webpack_require__(175);
 	var ReactBrowserComponentMixin = __webpack_require__(106);
 	var ReactClass = __webpack_require__(44);
@@ -13316,7 +13328,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var LocalEventTrapMixin = __webpack_require__(175);
 	var ReactBrowserComponentMixin = __webpack_require__(106);
 	var ReactClass = __webpack_require__(44);
@@ -13537,7 +13549,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var LocalEventTrapMixin = __webpack_require__(175);
 	var ReactBrowserComponentMixin = __webpack_require__(106);
 	var ReactClass = __webpack_require__(44);
@@ -14149,7 +14161,7 @@
 
 	var EventListener = __webpack_require__(178);
 	var ExecutionEnvironment = __webpack_require__(61);
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 	var ReactInstanceHandles = __webpack_require__(52);
 	var ReactMount = __webpack_require__(53);
 	var ReactUpdates = __webpack_require__(131);
@@ -14381,7 +14393,7 @@
 	'use strict';
 
 	var CallbackQueue = __webpack_require__(182);
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 	var ReactBrowserEventEmitter = __webpack_require__(128);
 	var ReactInputSelection = __webpack_require__(183);
 	var ReactPutListenerQueue = __webpack_require__(184);
@@ -14559,7 +14571,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPropagators = __webpack_require__(165);
 	var ReactInputSelection = __webpack_require__(183);
 	var SyntheticEvent = __webpack_require__(170);
@@ -14793,7 +14805,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPluginUtils = __webpack_require__(41);
 	var EventPropagators = __webpack_require__(165);
 	var SyntheticClipboardEvent = __webpack_require__(188);
@@ -15765,7 +15777,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPluginHub = __webpack_require__(169);
 	var EventPluginRegistry = __webpack_require__(197);
 	var ReactEventEmitterMixin = __webpack_require__(198);
@@ -16272,7 +16284,7 @@
 	'use strict';
 
 	var CallbackQueue = __webpack_require__(182);
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 	var ReactCurrentOwner = __webpack_require__(46);
 	var ReactPerf = __webpack_require__(54);
 	var ReactReconciler = __webpack_require__(56);
@@ -17098,7 +17110,7 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 	var CallbackQueue = __webpack_require__(182);
 	var ReactPutListenerQueue = __webpack_require__(184);
 	var Transaction = __webpack_require__(173);
@@ -18049,7 +18061,7 @@
 
 	'use strict';
 
-	var EventConstants = __webpack_require__(83);
+	var EventConstants = __webpack_require__(79);
 	var EventPluginHub = __webpack_require__(169);
 
 	var accumulateInto = __webpack_require__(223);
@@ -18195,7 +18207,7 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 
 	var assign = __webpack_require__(58);
 	var getTextContentAccessor = __webpack_require__(225);
@@ -18670,7 +18682,7 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 
 	var assign = __webpack_require__(58);
 	var emptyFunction = __webpack_require__(137);
@@ -19842,7 +19854,7 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 
 	var assign = __webpack_require__(58);
 	var invariant = __webpack_require__(66);
@@ -20084,7 +20096,7 @@
 
 	'use strict';
 
-	var PooledClass = __webpack_require__(80);
+	var PooledClass = __webpack_require__(81);
 	var ReactBrowserEventEmitter = __webpack_require__(128);
 
 	var assign = __webpack_require__(58);
@@ -24077,7 +24089,7 @@
 
 	'use strict';
 
-	var traverseAllChildren = __webpack_require__(82);
+	var traverseAllChildren = __webpack_require__(83);
 	var warning = __webpack_require__(69);
 
 	/**

@@ -19,6 +19,7 @@ var Header = React.createClass({
     return (
       <div className="header">
         <div className="header-content">
+          <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
           <div className="nav-home">
             <Link to="home">
               <ImageTag src1x={logoImage}
@@ -29,8 +30,19 @@ var Header = React.createClass({
             <Link to="proposals">call for proposals</Link>
             <Link to="tickets">tickets</Link>
             <Link to="location">location</Link>
-            <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
           </div>
+          {/*<div className="nav-home">
+            <Link to="home">
+              <ImageTag src1x={logoImage}
+                alt="mozfest logo"/>
+            </Link>
+          </div>
+          <div className="nav-items">
+            <Link to="proposals">call for proposals</Link>
+            <Link to="tickets">tickets</Link>
+            <Link to="location">location</Link>
+            <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
+          </div>*/}
         </div>
       </div>
     );

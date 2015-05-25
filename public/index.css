@@ -202,13 +202,15 @@ html {
     margin-right: 0;
   }
 }
-.header {
-  height: 90px;
-}
 .header .header-content {
   max-width: 1200px;
   margin: 0px auto;
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 90px;
+  }
 }
 .header a {
   text-transform: uppercase;
@@ -218,12 +220,21 @@ html {
   font-size: 14px;
 }
 .header .nav-home {
-  float: left;
+  padding-top: 45px;
+  width: 100%;
 }
-.header .nav-items {
-  float: right;
+.header .nav-home a {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .header .nav-home {
+    float: left;
+    padding-top: 0;
+    width: auto;
+  }
 }
 .header .nav-items a {
+<<<<<<< HEAD
   position: relative;
   display: inline-block;
   margin-right: 30px;
@@ -249,16 +260,35 @@ html {
   height: 2px;
   opacity: 1;
   transform: translateY(0px);
+=======
+  display: block;
+  text-align: center;
+  margin: 0 0 15px 0;
+>>>>>>> f2cc4ea... finishing mobile view
 }
-.header .nav-home,
-.header .nav-items {
+@media screen and (min-width: 768px) {
+  .header .nav-items {
+    float: right;
+  }
+  .header .nav-items a {
+    display: inline;
+    margin: 0 30px 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .nav-items {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+.header .nav-home {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 .header .nav-home,
-.header .nav-items,
-.header .mozfest-tabzilla-container {
+.header .nav-items {
   height: 100%;
 }
 .hero-unit {
@@ -305,8 +335,13 @@ html {
   width: 100%;
 }
 .home-page .hero-unit {
-  padding-top: 90px;
+  padding-top: 305px;
   height: 642px;
+}
+@media screen and (min-width: 768px) {
+  .home-page .hero-unit {
+    padding-top: 90px;
+  }
 }
 .home-page .hero-unit h1 {
   margin: 0;
