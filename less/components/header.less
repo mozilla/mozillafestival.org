@@ -18,7 +18,33 @@
   .nav-items {
     float: right;
     a {
+      position: relative;
+      display: inline-block;
       margin-right: 30px;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      &.active {
+        border-bottom: 2px solid #56565A;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: white;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: height 0.3s ease 0s, opacity 0.3s ease 0s, transform 0.3s ease 0s;
+      }
+      &:hover {
+        &:after {
+          height: 2px;
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
     }
   }
   .nav-home,
