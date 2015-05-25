@@ -199,6 +199,9 @@ html {
 }
 .guidelines-page .treat-each-other-list {
   text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 2;
 }
 .home-page .hero-unit {
   background-position: center bottom;
@@ -293,6 +296,16 @@ html {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 18px;
+}
+.proposals-page .proposals-form input[type='checkbox'] {
+  float: left;
+}
+.proposals-page .proposals-form .error-message {
+  display: none;
+  color: #FF0000;
+}
+.proposals-page .proposals-form .error-message.show {
+  display: block;
 }
 .proposals-page .proposals-form label,
 .proposals-page .proposals-form input[type='text'],

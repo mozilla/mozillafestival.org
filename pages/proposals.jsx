@@ -3,37 +3,86 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 
+var RealInput = React.createClass({
+  render: function() {
+    if (this.props.type === "textarea") {
+      return (
+        <textarea onChange={this.props.updateFunction} id={this.props.for}/>
+      );
+    }
+    return (
+      <input onChange={this.props.updateFunction} id={this.props.for} type={this.props.type}/>
+    );
+  }
+});
+
+var InputCombo = React.createClass({
+  updateFunction: function() {
+    document.querySelector("#" + this.props.for + "Error").classList.remove("show");
+  },
+  render: function() {
+    return (
+      <div>
+        <label id={this.props.for + "Link"} className={this.props.className} htmlFor={this.props.for}>
+          {this.props.children}
+        </label>
+        <RealInput updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
+        <div id={this.props.for + "Error"} className="error-message">{this.props.errorMessage}</div>
+      </div>
+    );
+  }
+});
+
 var Proposals = React.createClass({
   onSubmit: function() {
-    var sessionName = this.refs.sessionName.getDOMNode().value;
-    var firstName = this.refs.firstName.getDOMNode().value;
-    var surname = this.refs.surname.getDOMNode().value;
-    var email = this.refs.email.getDOMNode().value;
-    var organization = this.refs.organization.getDOMNode().value;
-    var twitter = this.refs.twitter.getDOMNode().value;
-    var otherFacilitators = this.refs.otherFacilitators.getDOMNode().value;
-    var description = this.refs.description.getDOMNode().value;
-    var agenda = this.refs.agenda.getDOMNode().value;
-    var participants = this.refs.participants.getDOMNode().value;
-    var outcome = this.refs.outcome.getDOMNode().value;
+    var fieldNames = "sessionName firstName surname email organization twitter otherFacilitators description agenda participants outcome".split(" ");
+    var requiredFields = "sessionName firstName surname email description agenda participants outcome".split(" ");
+    var fieldValues = {};
+    var isError = "";
+
+    var privacyPolicy = document.querySelector("#privacyPolicy").checked;
+
+    for (var i = 0; i < fieldNames.length; i++) {
+      fieldValues[fieldNames[i]] = document.querySelector("#" + fieldNames[i]).value;
+      if (requiredFields[fieldNames[i]] && ( !fieldValues[fieldNames[i]] || !fieldValues[fieldNames[i]].trim() )) {
+        if (!isError) {
+          isError = "#" + fieldNames[i] + "Link";
+        }
+        if (document.querySelector("#" + fieldNames[i] + "Error")) {
+          document.querySelector("#" + fieldNames[i] + "Error").classList.add("show");
+        }
+      }
+    }
+
+    if (!privacyPolicy) {
+      if (!isError) {
+        isError = "#privacyPolicyLink";
+      }
+      document.querySelector("#privacyPolicyError").classList.add("show");
+    }
+
     function done(e) {
-      console.log(e);
+      window.location.href = "/session-add-success";
+    }
+    if (isError) {
+      window.location.href = window.location.origin + window.location.pathname + isError;
+      return;
     }
     $.ajax({
       url: "/add-session",
       type: "POST",
       data: JSON.stringify({
-        "sessionName": sessionName,
-        "firstName": firstName,
-        "surname": surname,
-        "email": email,
-        "organization": organization,
-        "twitter": twitter,
-        "otherFacilitators": otherFacilitators,
-        "description": description,
-        "agenda": agenda,
-        "participants": participants,
-        "outcome": outcome
+        "sessionName": fieldValues.sessionName,
+        "firstName": fieldValues.firstName,
+        "surname": fieldValues.surname,
+        "email": fieldValues.email,
+        "organization": fieldValues.organization,
+        "twitter": fieldValues.twitter,
+        "otherFacilitators": fieldValues.otherFacilitators,
+        "description": fieldValues.description,
+        "agenda": fieldValues.agenda,
+        "participants": fieldValues.participants,
+        "outcome": fieldValues.outcome
       }),
       contentType: "application/json; charset=utf-8",
       statusCode: {
@@ -55,43 +104,51 @@ var Proposals = React.createClass({
             <h1>Share your idea</h1>
             <p>The Mozilla Festival is designed around three days of peer-led conversations, hands on workshops and skillshares.</p>
 
-            <label htmlFor="sessionName">Session Name *</label>
-            <input id="sessionName" ref="sessionName" type="text"/>
+            <InputCombo errorMessage="session name error" for="sessionName" type="text">
+              Session Name *
+            </InputCombo>
 
-            <label htmlFor="firstName">First Name *</label>
-            <input id="firstName" ref="firstName" type="text"/>
-            <label htmlFor="surname">Surname *</label>
-            <input id="surname" ref="surname" type="text"/>
+            <InputCombo errorMessage="first name error" for="firstName" type="text">
+              First Name *
+            </InputCombo>
+            <InputCombo errorMessage="surname error" for="surname" type="text">
+              Surname *
+            </InputCombo>
+            <InputCombo errorMessage="email error" for="email" type="text">
+              Email *
+            </InputCombo>
 
-            <label htmlFor="email">Email *</label>
-            <input id="email" ref="email" type="text"/>
-            <label htmlFor="organization">Organization</label>
-            <input id="organization" ref="organization" type="text"/>
-            <label htmlFor="twitter">What's your Twitter handle?</label>
-            <input id="twitter" ref="twitter" type="text"/>
+            <InputCombo for="organization" type="text">
+              Organization
+            </InputCombo>
+            <InputCombo for="twitter" type="text">
+              What's your Twitter handle?
+            </InputCombo>
+            <InputCombo for="otherFacilitators" type="text">
+              Other facilitators
+            </InputCombo>
 
-            <label htmlFor="otherFacilitators">Other facilitators</label>
-            <input id="otherFacilitators" ref="otherFacilitators" type="text"/>
-
-            <label htmlFor="description">What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *</label>
-            <textarea id="description" ref="description"></textarea>
-
-            <label htmlFor="agenda">How do you see that working? Describe your session's agenda in 150 words or less. *</label>
-            <textarea id="agenda" ref="agenda"></textarea>
-
-            <label htmlFor="participants">How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? *</label>
-            <textarea id="participants" ref="participants"></textarea>
-
-            <label htmlFor="outcome">What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? *</label>
-            <textarea id="outcome" ref="outcome"></textarea>
+            <InputCombo errorMessage="participants error" for="description" type="textarea">
+              What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *
+            </InputCombo>
+            <InputCombo errorMessage="participants error" for="agenda" type="textarea">
+              How do you see that working? Describe your session's agenda in 150 words or less. *
+            </InputCombo>
+            <InputCombo errorMessage="participants error" for="participants" type="textarea">
+              How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? *
+            </InputCombo>
+            <InputCombo errorMessage="outcome error" for="outcome" type="textarea">
+              What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? *
+            </InputCombo>
 
             {/*<label>Tags - Click up to 7 that apply</label>
             <input type="text" placeholder="Other tags"/>*/}
 
-            <input ref="privacy-policy" id="privacy-policy" type="checkbox"/>
-            <label className="checkbox-input" htmlFor="privacy-policy">
+
+            <InputCombo errorMessage="privacy policy error" className="checkbox-input" for="privacyPolicy" type="checkbox">
               I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
-            </label>
+            </InputCombo>
+
             <button onClick={this.onSubmit}>Submit</button>
           </div>
         </div>
