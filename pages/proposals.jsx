@@ -2,6 +2,7 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var Icon = require('react-fa');
 
 var RealInput = React.createClass({
   render: function() {
@@ -35,6 +36,9 @@ var InputCombo = React.createClass({
 
 var Proposals = React.createClass({
   onSubmit: function() {
+    var self = this;
+    document.querySelector("#generic-error").classList.remove("show");
+    self.refs.submitButton.getDOMNode().classList.add("waiting");
     var fieldNames = "sessionName firstName surname email organization twitter otherFacilitators description agenda participants outcome".split(" ");
     var requiredFields = "sessionName firstName surname email description agenda participants outcome".split(" ");
     var fieldValues = {};
@@ -44,7 +48,7 @@ var Proposals = React.createClass({
 
     for (var i = 0; i < fieldNames.length; i++) {
       fieldValues[fieldNames[i]] = document.querySelector("#" + fieldNames[i]).value;
-      if (requiredFields[fieldNames[i]] && ( !fieldValues[fieldNames[i]] || !fieldValues[fieldNames[i]].trim() )) {
+      if (requiredFields.indexOf(fieldNames[i]) >= 0 && ( !fieldValues[fieldNames[i]] || !fieldValues[fieldNames[i]].trim() )) {
         if (!isError) {
           isError = "#" + fieldNames[i] + "Link";
         }
@@ -61,10 +65,8 @@ var Proposals = React.createClass({
       document.querySelector("#privacyPolicyError").classList.add("show");
     }
 
-    function done(e) {
-      window.location.href = "/session-add-success";
-    }
     if (isError) {
+      self.refs.submitButton.getDOMNode().classList.remove("waiting");
       window.location.href = window.location.origin + window.location.pathname + isError;
       return;
     }
@@ -85,9 +87,25 @@ var Proposals = React.createClass({
         "outcome": fieldValues.outcome
       }),
       contentType: "application/json; charset=utf-8",
-      statusCode: {
-        0: done,
-        200: done
+      complete: function(e) {
+        self.refs.submitButton.getDOMNode().classList.remove("waiting");
+        if (e.responseJSON.error) {
+          if (e.responseJSON.error === "ERR: Session Key 'test' already exists but has been deactivated! Use api/event/mod to set active=Y or to modify other data for this event.") {
+            document.querySelector("#name-exists-error").classList.add("show");
+            window.location.href = window.location.origin + window.location.pathname + "#sessionNameLink";
+            var sessionNameInput = document.querySelector("#sessionName");
+            function clearError() {
+              document.querySelector("#name-exists-error").classList.remove("show");
+              sessionNameInput.removeEventListener("input", clearError);
+            }
+            sessionNameInput.addEventListener("input", clearError);
+          } else {
+            document.querySelector("#generic-error").classList.add("show");
+            window.location.href = window.location.origin + window.location.pathname + "#submit-button";
+          }
+        } else {
+          window.location.href = "/session-add-success";
+        }
       }
     });
   },
@@ -104,17 +122,18 @@ var Proposals = React.createClass({
             <h1>Share your idea</h1>
             <p>The Mozilla Festival is designed around three days of peer-led conversations, hands on workshops and skillshares.</p>
 
-            <InputCombo errorMessage="session name error" for="sessionName" type="text">
+            <InputCombo errorMessage="Session name is required." for="sessionName" type="text">
               Session Name *
             </InputCombo>
+            <div id="name-exists-error" className="error-message">A session with that name already exists, please try another.</div>
 
-            <InputCombo errorMessage="first name error" for="firstName" type="text">
+            <InputCombo errorMessage="First name is required." for="firstName" type="text">
               First Name *
             </InputCombo>
-            <InputCombo errorMessage="surname error" for="surname" type="text">
+            <InputCombo errorMessage="Surname is required." for="surname" type="text">
               Surname *
             </InputCombo>
-            <InputCombo errorMessage="email error" for="email" type="text">
+            <InputCombo errorMessage="Email is required." for="email" type="text">
               Email *
             </InputCombo>
 
@@ -128,16 +147,16 @@ var Proposals = React.createClass({
               Other facilitators
             </InputCombo>
 
-            <InputCombo errorMessage="participants error" for="description" type="textarea">
+            <InputCombo errorMessage="Description is required." for="description" type="textarea">
               What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *
             </InputCombo>
-            <InputCombo errorMessage="participants error" for="agenda" type="textarea">
+            <InputCombo errorMessage="Agenda is required." for="agenda" type="textarea">
               How do you see that working? Describe your session's agenda in 150 words or less. *
             </InputCombo>
-            <InputCombo errorMessage="participants error" for="participants" type="textarea">
+            <InputCombo errorMessage="Participants is required." for="participants" type="textarea">
               How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? *
             </InputCombo>
-            <InputCombo errorMessage="outcome error" for="outcome" type="textarea">
+            <InputCombo errorMessage="Outcome is required." for="outcome" type="textarea">
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? *
             </InputCombo>
 
@@ -145,11 +164,11 @@ var Proposals = React.createClass({
             <input type="text" placeholder="Other tags"/>*/}
 
 
-            <InputCombo errorMessage="privacy policy error" className="checkbox-input" for="privacyPolicy" type="checkbox">
+            <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" type="checkbox">
               I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
             </InputCombo>
-
-            <button onClick={this.onSubmit}>Submit</button>
+            <button id="submit-button" ref="submitButton" onClick={this.onSubmit}>Submit <Icon spin name="spinner"/></button>
+            <div id="generic-error" className="error-message">Error submitting proposal, please try again later.</div>
           </div>
         </div>
         <Footer/>

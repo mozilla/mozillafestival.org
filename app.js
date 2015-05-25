@@ -52,8 +52,9 @@ app.post('/add-session', function (req, res) {
       'User-Agent': '2015-mozfest'
     }
   }, function(err, other) {
-    if (err) {
-      res.status(500).send({ error: err });
+      res.status(500).send({ error: err || other.body });
+    if (err || other.body !== "Ok") {
+      res.status(500).send({ error: err || other.body });
     } else {
       request({
         method: 'POST',
@@ -65,8 +66,8 @@ app.post('/add-session', function (req, res) {
           'User-Agent': '2015-mozfest'
         }
       }, function(err, other) {
-        if (err) {
-          res.status(500).send({ error: err });
+        if (err || other.body !== "Ok") {
+          res.status(500).send({ error: err || other.body });
         } else {
           res.send('Ok');
         }

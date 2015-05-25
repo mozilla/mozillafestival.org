@@ -35,8 +35,17 @@
     .error-message {
       display: none;
       color: #FF0000;
+      margin: 20px 0;
       &.show {
         display: block;
+      }
+    }
+    button {
+      .fa {
+        display: none;
+      }
+      &.waiting .fa {
+        display: inline-block;
       }
     }
     label,

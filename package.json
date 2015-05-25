@@ -14,15 +14,22 @@
   "dependencies": {
     "autoless": "0.1.7",
     "body-parser": "1.12.4",
+    "css-loader": "0.14.2",
     "express": "3.4.5",
+    "extract-text-webpack-plugin": "0.8.0",
+    "file-loader": "0.8.4",
     "habitat": "0.4.1",
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
     "mapbox.js": "2.1.5",
+    "node-libs-browser": "0.5.2",
     "npm-run-all": "1.2.4",
     "react": "0.13.2",
+    "react-fa": "3.2.0",
     "react-router": "0.13.3",
     "request": "2.55.0",
-    "webpack": "1.8.11"
+    "style-loader": "0.12.3",
+    "url-loader": "0.5.6",
+    "webpack": "1.9.9"
   }
 }

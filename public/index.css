@@ -303,9 +303,16 @@ html {
 .proposals-page .proposals-form .error-message {
   display: none;
   color: #FF0000;
+  margin: 20px 0;
 }
 .proposals-page .proposals-form .error-message.show {
   display: block;
+}
+.proposals-page .proposals-form button .fa {
+  display: none;
+}
+.proposals-page .proposals-form button.waiting .fa {
+  display: inline-block;
 }
 .proposals-page .proposals-form label,
 .proposals-page .proposals-form input[type='text'],
