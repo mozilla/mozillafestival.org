@@ -29,8 +29,7 @@ var Header = React.createClass({
             <Link to="proposals">call for proposals</Link>
             <Link to="tickets">tickets</Link>
             <Link to="location">location</Link>
-            <div ref="tabzillaContainer" className="mozfest-tabzilla-container">
-            </div>
+            <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
           </div>
         </div>
       </div>

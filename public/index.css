@@ -131,6 +131,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 100%;
 }
 .footer .horizontal-rule {
   background: #8E90AE;
@@ -144,16 +145,20 @@ html {
   text-decoration: none;
   display: inline-block;
 }
+.footer .footer-content {
+  max-width: 495px;
+  width: 100%;
+}
 .footer .footer-icons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   flex-shrink: 0;
 }
 .footer .footer-icons .footer-icon {
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  margin: 0 31px;
   width: 96px;
 }
 .footer .footer-icons .footer-icon:hover .icon-circle {
@@ -177,15 +182,25 @@ html {
   text-align: center;
 }
 .footer .link-container a {
+<<<<<<< HEAD
   margin-right: 30px;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
 }
 .footer .link-container a:hover {
   border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+=======
+  display: block;
+>>>>>>> c35ef8c... footer mobile support
 }
-.footer .link-container a:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .footer .link-container a {
+    display: inline;
+    margin-right: 30px;
+  }
+  .footer .link-container a:last-child {
+    margin-right: 0;
+  }
 }
 .header {
   height: 90px;

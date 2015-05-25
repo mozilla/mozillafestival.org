@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 100%;
   .horizontal-rule {
     background: #8E90AE;
     width: 322px;
@@ -17,15 +18,19 @@
     text-decoration: none;
     display: inline-block;
   }
+  .footer-content {
+    max-width: 495px;
+    width: 100%;
+  }
   .footer-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     flex-shrink: 0;
     .footer-icon {
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
-      margin: 0 31px;
       width: 96px;
       &:hover {
         .icon-circle {
@@ -52,14 +57,18 @@
   .link-container {
     text-align: center;
     a {
-      margin-right: 30px;
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
       &:hover {
         border-bottom: 2px solid rgba(255,255,255,0.9);
       }
-      &:last-child {
-        margin-right: 0;
+      display: block;
+      @media screen and (min-width: 768px) {
+        display: inline;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
