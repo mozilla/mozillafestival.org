@@ -1,15 +1,27 @@
 webpackJsonp([1],{
 
+<<<<<<< HEAD
 /***/ 18:
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(42);
 	__webpack_require__(43);
+=======
+/***/ 20:
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(62);
+	__webpack_require__(63);
+>>>>>>> 1022ae4... session proposal success page
 
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 42:
+=======
+/***/ 62:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	window.L = __webpack_require__(161);
@@ -17,11 +29,16 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 43:
+=======
+/***/ 63:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+<<<<<<< HEAD
 	var geocoderControl = __webpack_require__(79),
 	    gridControl = __webpack_require__(80),
 	    featureLayer = __webpack_require__(81),
@@ -37,6 +54,23 @@ webpackJsonp([1],{
 	    geocoder: __webpack_require__(88),
 	    marker: __webpack_require__(89),
 	    simplestyle: __webpack_require__(90),
+=======
+	var geocoderControl = __webpack_require__(141),
+	    gridControl = __webpack_require__(142),
+	    featureLayer = __webpack_require__(143),
+	    legendControl = __webpack_require__(144),
+	    shareControl = __webpack_require__(145),
+	    tileLayer = __webpack_require__(146),
+	    infoControl = __webpack_require__(147),
+	    map = __webpack_require__(148),
+	    gridLayer = __webpack_require__(149);
+
+	L.mapbox = module.exports = {
+	    VERSION: __webpack_require__(158).version,
+	    geocoder: __webpack_require__(150),
+	    marker: __webpack_require__(151),
+	    simplestyle: __webpack_require__(152),
+>>>>>>> 1022ae4... session proposal success page
 	    tileLayer: tileLayer.tileLayer,
 	    TileLayer: tileLayer.TileLayer,
 	    infoControl: infoControl.infoControl,
@@ -55,7 +89,11 @@ webpackJsonp([1],{
 	    FeatureLayer: featureLayer.FeatureLayer,
 	    map: map.map,
 	    Map: map.Map,
+<<<<<<< HEAD
 	    config: __webpack_require__(91),
+=======
+	    config: __webpack_require__(153),
+>>>>>>> 1022ae4... session proposal success page
 	    sanitize: __webpack_require__(157),
 	    template: __webpack_require__(162).to_html
 	};
@@ -74,13 +112,22 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 79:
+=======
+/***/ 141:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+<<<<<<< HEAD
 	var geocoder = __webpack_require__(88),
 	    util = __webpack_require__(163);
+=======
+	var geocoder = __webpack_require__(150),
+	    util = __webpack_require__(206);
+>>>>>>> 1022ae4... session proposal success page
 
 	var GeocoderControl = L.Control.extend({
 	    includes: L.Mixin.Events,
@@ -271,7 +318,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 80:
+=======
+/***/ 142:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -476,16 +527,28 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 81:
+=======
+/***/ 143:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+<<<<<<< HEAD
 	var util = __webpack_require__(163),
 	    urlhelper = __webpack_require__(164),
 	    request = __webpack_require__(165),
 	    marker = __webpack_require__(89),
 	    simplestyle = __webpack_require__(90);
+=======
+	var util = __webpack_require__(206),
+	    urlhelper = __webpack_require__(207),
+	    request = __webpack_require__(208),
+	    marker = __webpack_require__(151),
+	    simplestyle = __webpack_require__(152);
+>>>>>>> 1022ae4... session proposal success page
 
 	// # featureLayer
 	//
@@ -598,7 +661,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 82:
+=======
+/***/ 144:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -672,7 +739,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 83:
+=======
+/***/ 145:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -780,7 +851,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 84:
+=======
+/***/ 146:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -881,7 +956,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 85:
+=======
+/***/ 147:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1002,11 +1081,16 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 86:
+=======
+/***/ 148:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
+<<<<<<< HEAD
 	var util = __webpack_require__(163),
 	    tileLayer = __webpack_require__(84).tileLayer,
 	    featureLayer = __webpack_require__(81).featureLayer,
@@ -1016,6 +1100,17 @@ webpackJsonp([1],{
 	    shareControl = __webpack_require__(83).shareControl,
 	    legendControl = __webpack_require__(82).legendControl,
 	    mapboxLogoControl = __webpack_require__(167).mapboxLogoControl;
+=======
+	var util = __webpack_require__(206),
+	    tileLayer = __webpack_require__(146).tileLayer,
+	    featureLayer = __webpack_require__(143).featureLayer,
+	    gridLayer = __webpack_require__(149).gridLayer,
+	    gridControl = __webpack_require__(142).gridControl,
+	    infoControl = __webpack_require__(147).infoControl,
+	    shareControl = __webpack_require__(145).shareControl,
+	    legendControl = __webpack_require__(144).legendControl,
+	    mapboxLogoControl = __webpack_require__(210).mapboxLogoControl;
+>>>>>>> 1022ae4... session proposal success page
 
 	function withAccessToken(options, accessToken) {
 	    if (!accessToken || options.accessToken)
@@ -1194,7 +1289,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 87:
+=======
+/***/ 149:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1424,7 +1523,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 88:
+=======
+/***/ 150:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1528,7 +1631,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 89:
+=======
+/***/ 151:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1600,7 +1707,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 90:
+=======
+/***/ 152:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1652,7 +1763,11 @@ webpackJsonp([1],{
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 91:
+=======
+/***/ 153:
+>>>>>>> 1022ae4... session proposal success page
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11690,7 +11805,11 @@ webpackJsonp([1],{
 
 	'use strict';
 
+<<<<<<< HEAD
 	var config = __webpack_require__(91),
+=======
+	var config = __webpack_require__(153),
+>>>>>>> 1022ae4... session proposal success page
 	    version = __webpack_require__(158).version;
 
 	module.exports = function(path, accessToken) {
@@ -11740,8 +11859,13 @@ webpackJsonp([1],{
 	'use strict';
 
 	var corslite = __webpack_require__(241),
+<<<<<<< HEAD
 	    strict = __webpack_require__(163).strict,
 	    config = __webpack_require__(91),
+=======
+	    strict = __webpack_require__(206).strict,
+	    config = __webpack_require__(153),
+>>>>>>> 1022ae4... session proposal success page
 	    protocol = /^(https?:)?(?=\/\/(.|api)\.tiles\.mapbox\.com\/)/;
 
 	module.exports = function(url, callback) {

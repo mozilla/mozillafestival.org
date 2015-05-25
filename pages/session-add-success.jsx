@@ -12,8 +12,9 @@ var Success = React.createClass({
                   image2x="/assets/images/proposals.jpg">
           call for proposals
         </HeroUnit>
-        <div className="content">
-          Success!
+        <div className="centered content wide">
+          <h1>Success!</h1>
+          <p>Thank you for your session proposal</p>
         </div>
         <Footer/>
       </div>
