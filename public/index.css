@@ -23,6 +23,9 @@ html {
   text-decoration: none;
   color: #588AD3;
 }
+.content a:hover {
+  text-decoration: underline;
+}
 .content .horizontal-rule {
   background: #D0D2D1;
   width: 100%;
