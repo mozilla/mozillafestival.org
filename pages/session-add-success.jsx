@@ -2,6 +2,8 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Success = React.createClass({
   render: function() {
@@ -15,6 +17,7 @@ var Success = React.createClass({
         <div className="centered content wide">
           <h1>Success!</h1>
           <p>Thank you for your session proposal</p>
+          <Link to="proposals" className="button"><span>Want to submit another?</span></Link>
         </div>
         <Footer/>
       </div>
