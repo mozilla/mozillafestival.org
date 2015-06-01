@@ -4,7 +4,7 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 
 var Tickets = React.createClass({
-  componentDidMount: function() {
+  /*componentDidMount: function() {
     var titoContainer = this.refs.titoContainer.getDOMNode();
     var titoWidget = document.querySelector(".widgets tito-widget");
     titoContainer.appendChild(titoWidget);
@@ -13,7 +13,7 @@ var Tickets = React.createClass({
     var titoWidget = this.refs.titoContainer.getDOMNode().querySelector("tito-widget");
     var widgetContainer = document.querySelector(".widgets");
     widgetContainer.appendChild(titoWidget);
-  },
+  },*/
   render: function() {
     return (
       <div>
