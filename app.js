@@ -29,9 +29,10 @@ app.post('/add-session', function (req, res) {
   var agenda = req.body.agenda;
   var participants = req.body.participants;
   var outcome = req.body.outcome;
+  var schedPath = "https://mozillafestival2015.sched.org";
   request({
     method: 'POST',
-    url: "http://scotttest2015.sched.org/api/session/add" +
+    url: schedPath + "/api/session/add" +
       "?session_key=" + sessionName +
       "&name=" + sessionName +
       "&api_key=" + env.get("SCHED_KEY") +
@@ -52,16 +53,15 @@ app.post('/add-session', function (req, res) {
       'User-Agent': '2015-mozfest'
     }
   }, function(err, other) {
-      res.status(500).send({ error: err || other.body });
     if (err || other.body !== "Ok") {
       res.status(500).send({ error: err || other.body });
     } else {
       request({
         method: 'POST',
-        url: "http://scotttest2015.sched.org/api/session/mod" +
+        url: schedPath + "/api/session/mod" +
               "?session_key=" + sessionName +
               "&active=N" +
-              "&api_key=eaa8736ab6aeba0c90f5c84b3f4b8dc5",
+              "&api_key=" + env.get("SCHED_KEY"),
         headers: {
           'User-Agent': '2015-mozfest'
         }
