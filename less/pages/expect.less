@@ -29,12 +29,16 @@
   }
   .schedule-table {
     width: 100%;
+    border: none;
+    border-collapse: collapse;
     tr {
       &.table-header {
         text-transform: uppercase;
       }
       &:nth-child(odd) {
-        background: #E8E9E8;
+        .td-container {
+          background: #E8E9E8;
+        }
       }
       &:first-child {
         color: #FFFFFF;
@@ -42,17 +46,31 @@
         font-size: 20px;
         letter-spacing: 2px;
         td {
-          background: #32438E;
+          .td-container {
+            background: #32438E;
+          }
           &:first-child {
-            background: #C36127;
+            .td-container {
+              background: #C36127;
+            }
           }
           &:last-child {
-            background: #BB4E61;
+            .td-container {
+              background: #BB4E61;
+            }
           }
         }
       }
       td {
-        padding: 14px 0;
+        .td-container {
+          padding: 14px 0;
+          margin: 0 5px;
+          height: 100%;
+        }
+        border-right: solid 1px #D0D2D1;
+        &:last-child {
+          border-right: solid 0 #D0D2D1;
+        }
         .time {
           font-weight: 700;
         }
