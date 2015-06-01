@@ -14,7 +14,7 @@ var Contact = React.createClass({
         </HeroUnit>
         <div className="centered content wide">
           <h1>Hello there</h1>
-          <p>Please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> with your questions and suggestions! If you have a press inquiry, you can email us at <a href="mailto:mozfest@albiondrive.org">mozfest@albiondrive.org</a>.</p>
+          <p>Please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> with your questions and suggestions!</p>
           <div className="half-content">
             <h1>Make It Better!</h1>
             <p>Email us with suggestions to improve the Mozilla Festival. It's a collaborative event, and your feedback matters.</p>
