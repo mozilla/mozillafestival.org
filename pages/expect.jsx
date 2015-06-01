@@ -61,87 +61,115 @@ var Expect = React.createClass({
               <h1>Weekend Outline</h1>
               <table className="schedule-table">
                 <tr className="table-header">
-                  <td>fri nov 6</td>
-                  <td>sat nov 7</td>
-                  <td>sun nov 8</td>
-                </tr>
-                <tr>
-                  <td></td>
                   <td>
-                    <div className="time">8:00</div>
-                    <div>Doors open</div>
-                  </td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>
-                    <div className="time">9:00</div>
-                    <div>Welcome & Opening Keynotes</div>
+                    <div className="td-container">
+                      fri nov 6
+                    </div>
                   </td>
                   <td>
-                    <div className="time">9:00</div>
-                    <div>Doors open</div>
+                    <div className="td-container">
+                      sat nov 7
+                    </div>
+                  </td>
+                  <td>
+                    <div className="td-container">
+                      sun nov 8
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                   <td>
-                    <div className="time">10:00</div>
-                    <div>Morning sessions begin</div>
+                    <div className="td-container">
+                      <div className="time">8:00</div>
+                      <div>Doors open</div>
+                    </div>
                   </td>
                   <td>
-                    <div className="time">10:00</div>
-                    <div>Welcome & Opening Keynotes</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <div className="time">11:30</div>
-                    <div>Morning sessions begin</div>
+                    <div className="td-container">
+                      <div className="time">9:00</div>
+                      <div>Doors open</div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                   <td>
-                    <div className="time">12:30</div>
-                    <div>Lunch</div>
+                    <div className="td-container">
+                      <div className="time">9:00</div>
+                      <div>Welcome & Opening Keynotes</div>
+                    </div>
                   </td>
                   <td>
-                    <div className="time">13:00</div>
-                    <div>Lunch</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>
-                    <div className="time">14:00</div>
-                    <div>Afternoon sessions begin</div>
-                  </td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <div className="time">15:00</div>
-                    <div>Afternoon sessions begin</div>
+                    <div className="td-container">
+                      <div className="time">10:00</div>
+                      <div>Welcome & Opening Keynotes</div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
+                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                   <td>
-                    <div className="time">18:00 to 21:00</div>
-                    <div>Science Fair evening reception</div>
+                    <div className="td-container">
+                      <div className="time">10:00</div>
+                      <div>Morning sessions begin</div>
+                    </div>
                   </td>
                   <td>
-                    <div className="time">17:30 to 18:30</div>
-                    <div>Evening lightning talks</div>
+                    <div className="td-container">
+                      <div className="time">11:30</div>
+                      <div>Morning sessions begin</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">12:30</div>
+                      <div>Lunch</div>
+                    </div>
                   </td>
                   <td>
-                    <div className="time">18:00</div>
-                    <div>Demo party</div>
+                    <div className="td-container">
+                      <div className="time">13:00</div>
+                      <div>Lunch</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">14:00</div>
+                      <div>Afternoon sessions begin</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">15:00</div>
+                      <div>Afternoon sessions begin</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">18:00 to 21:00</div>
+                      <div>Science Fair evening reception</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">17:30 to 18:30</div>
+                      <div>Evening lightning talks</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="td-container">
+                      <div className="time">18:00</div>
+                      <div>Demo party</div>
+                    </div>
                   </td>
                 </tr>
               </table>
