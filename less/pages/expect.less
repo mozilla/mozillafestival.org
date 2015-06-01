@@ -29,47 +29,44 @@
   }
   .schedule-table {
     width: 100%;
-    border: none;
-    border-collapse: collapse;
+    border-collapse: seperate;
+    border-spacing: 4px 0;
     tr {
       &.table-header {
         text-transform: uppercase;
       }
-      &:nth-child(odd) {
-        .td-container {
-          background: #E8E9E8;
-        }
-      }
+      text-align: left;
       &:first-child {
+        text-align: center;
         color: #FFFFFF;
         font-weight: 700;
         font-size: 20px;
         letter-spacing: 2px;
         td {
-          .td-container {
-            background: #32438E;
-          }
+          background: #32438E;
           &:first-child {
-            .td-container {
-              background: #C36127;
-            }
+            background: #C36127;
           }
           &:last-child {
-            .td-container {
-              background: #BB4E61;
-            }
+            background: #BB4E61;
           }
+          padding: 14px;          
+        }
+      }
+      &:last-child {
+        td {
+          padding: 14px;
         }
       }
       td {
         .td-container {
           padding: 14px 0;
-          margin: 0 5px;
-          height: 100%;
+          border-bottom: 1px solid #B8C6E4;
         }
-        border-right: solid 1px #D0D2D1;
-        &:last-child {
-          border-right: solid 0 #D0D2D1;
+        padding: 0 14px;
+        background: #F4F6FB;
+        &:nth-child(odd) {
+          background: #F1F1F1;
         }
         .time {
           font-weight: 700;
