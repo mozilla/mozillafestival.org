@@ -13,7 +13,7 @@ var Home = React.createClass({
         <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
         <HeroUnit image="/assets/images/home.jpg"
                   image2x="/assets/images/home.jpg">
-          <a href="https://www.youtube.com/watch?v=dYoiHhsdHCk">
+          <a className="video-link" href="https://www.youtube.com/watch?v=dYoiHhsdHCk">
             <ImageTag src1x="/assets/images/img-play.svg"
               alt="play button icon"/>
           </a>
