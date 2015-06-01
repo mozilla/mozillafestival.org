@@ -43,16 +43,18 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background: white;
+        background: #56565A;
         opacity: 0;
         transform: translateY(-10px);
         transition: height 0.3s ease 0s, opacity 0.3s ease 0s, transform 0.3s ease 0s;
       }
       &:hover {
-        &:after {
-          height: 2px;
-          opacity: 1;
-          transform: translateY(0px);
+        &:not(.active) {
+          &:after {
+            height: 2px;
+            opacity: 1;
+            transform: translateY(0px);
+          }
         }
       }
       display: block;
