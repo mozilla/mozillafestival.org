@@ -2,6 +2,7 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var ImageTag = require('../components/imagetag.jsx');
 
 var Expect = React.createClass({
   componentDidMount: function() {
@@ -38,7 +39,15 @@ var Expect = React.createClass({
                   See you in London.<br/>
                   <span className="signature-bold">—Mark Surman</span>
                 </p>
-                <div className="signature">signature placeholder</div>
+                <div className="signature-container">
+                  <ImageTag src1x="/assets/images/signature.svg"
+                    alt="Mark Surman signature"/>
+                  <span className="surman-photo-crop">
+                    <ImageTag className="surman-image" src1x="/assets/images/img-mark.jpg"
+                      height="322" width="320"
+                      alt="Mark Surman image"/>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
