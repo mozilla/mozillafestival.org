@@ -34,7 +34,10 @@ var Expect = React.createClass({
               </div>
               <div className="half-content">
                 <p>The open Web needs you now more than ever. Billions of new users are just now discovering the Web through their smartphones, and it’s so important they find the same platform we love so much: one where everyone is an equal citizen, where all people can participate and create, and where opportunity is limitless.</p>
-                <p>See you in London.</p>
+                <p>
+                  See you in London.<br/>
+                  <span className="signature-bold">—Mark Surman</span>
+                </p>
                 <div className="signature">signature placeholder</div>
               </div>
             </div>
