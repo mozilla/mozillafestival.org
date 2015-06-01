@@ -27,4 +27,36 @@
     font-weight: 600;
     font-style: italic;
   }
+  .schedule-table {
+    width: 100%;
+    tr {
+      &.table-header {
+        text-transform: uppercase;
+      }
+      &:nth-child(odd) {
+        background: #E8E9E8;
+      }
+      &:first-child {
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 2px;
+        td {
+          background: #32438E;
+          &:first-child {
+            background: #C36127;
+          }
+          &:last-child {
+            background: #BB4E61;
+          }
+        }
+      }
+      td {
+        padding: 14px 0;
+        .time {
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
