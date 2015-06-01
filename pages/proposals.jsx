@@ -89,7 +89,7 @@ var Proposals = React.createClass({
       contentType: "application/json; charset=utf-8",
       complete: function(e) {
         self.refs.submitButton.getDOMNode().classList.remove("waiting");
-        if (e.responseJSON.error) {
+        if (e.responseJSON && e.responseJSON.error) {
           if (e.responseJSON.error === "ERR: Session Key 'test' already exists but has been deactivated! Use api/event/mod to set active=Y or to modify other data for this event.") {
             document.querySelector("#name-exists-error").classList.add("show");
             window.location.href = window.location.origin + window.location.pathname + "#sessionNameLink";
