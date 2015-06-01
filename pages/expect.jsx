@@ -20,11 +20,12 @@ var Expect = React.createClass({
             <div className="letter">
               <div className="half-content">
                 <p className="boldish">Dear Friends,</p>
-                <p>MozFest is an opportunity for those of us passionate about the open Web to unite and make the world a better place. Each year, makers, inventors and educators travel from around the globe to come together and collectively learn and create. And each year, we make a difference.</p>
-                <p>As advocates for the open Web, it’s our duty to improve, protect and share it. That’s what MozFest is all about. Come with an idea — no matter how big or small — and share it with the community. And come ready to lead, attend and interact in hundreds of meaningful, fun and creative sessions.</p>
+                <p>MozFest is an annual celebration of the world’s most valuable public resource: the open Web. Participants are diverse -- there are engineers and artists, activists and educators. But everyone shares a common belief: the Web can make lives better. The Web unlocks opportunity, spurs creativity, teaches valuable skills and connects far-flung people and ideas.</p>
+                <p>MozFest is about improving the open Web with new ideas and creations. It’s also about sharing the open philosophy. By 2025, five billion individuals will be online, many exclusively through their smartphones. And it’s so important these new users discover a Web that improves each and every person's life.</p>
               </div>
               <div className="half-content">
-                <p>The open Web needs you now more than ever. Billions of new users are just now discovering the Web through their smartphones, and it’s so important they find the same platform we love so much: one where everyone is an equal citizen, where all people can participate and create, and where opportunity is limitless.</p>
+                <p>There are threats and challenges. Some companies and governments seek to wrestle control of the Web away from the public. There is also a lack of education around web literacy, the ability to meaningfully interact and create online. When users don't fully understand how the Web works, they can't harness its potential.</p>
+                <p>We can change this. At MozFest, we unite for creative sessions, peer learning and brainstorms. Together, we devise ways to teach web literacy; to be Freedom Fighters who stand up for the Web; and to ensure the next billion people to come online find a fully-open platform.</p>
                 <p>
                   See you in London.<br/>
                   <span className="signature-bold">—Mark Surman</span>
