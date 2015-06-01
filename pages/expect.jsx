@@ -5,16 +5,6 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
 var Expect = React.createClass({
-  /*componentDidMount: function() {
-    var schedContainer = this.refs.schedContainer.getDOMNode();
-    var schedWidget = document.querySelector(".sched-container");
-    schedContainer.appendChild(schedWidget);
-  },
-  componentWillUnmount: function() {
-    var schedWidget = this.refs.schedContainer.getDOMNode().querySelector(".sched-container");
-    var widgetContainer = document.querySelector(".widgets");
-    widgetContainer.appendChild(schedWidget);
-  },*/
   render: function() {
     return (
       <div className="expect-page">
@@ -65,14 +55,13 @@ var Expect = React.createClass({
             </div>
           </div>
         </div>
-        {/*<div className="white-background">
+        <div className="white-background">
           <div className="content centered wide">
             <div className="outline">
               <h1>Weekend Outline</h1>
-              <div ref="schedContainer"></div>
             </div>
           </div>
-        </div>*/}
+        </div>
         <Footer/>
       </div>
     );
