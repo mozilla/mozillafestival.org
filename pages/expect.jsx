@@ -59,6 +59,92 @@ var Expect = React.createClass({
           <div className="content centered wide">
             <div className="outline">
               <h1>Weekend Outline</h1>
+              <table className="schedule-table">
+                <tr className="table-header">
+                  <td>fri nov 6</td>
+                  <td>sat nov 7</td>
+                  <td>sun nov 8</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div className="time">8:00</div>
+                    <div>Doors open</div>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div className="time">9:00</div>
+                    <div>Welcome & Opening Keynotes</div>
+                  </td>
+                  <td>
+                    <div className="time">9:00</div>
+                    <div>Doors open</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div className="time">10:00</div>
+                    <div>Morning sessions begin</div>
+                  </td>
+                  <td>
+                    <div className="time">10:00</div>
+                    <div>Welcome & Opening Keynotes</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <div className="time">11:30</div>
+                    <div>Morning sessions begin</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div className="time">12:30</div>
+                    <div>Lunch</div>
+                  </td>
+                  <td>
+                    <div className="time">13:00</div>
+                    <div>Lunch</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <div className="time">14:00</div>
+                    <div>Afternoon sessions begin</div>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <div className="time">15:00</div>
+                    <div>Afternoon sessions begin</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="time">18:00 to 21:00</div>
+                    <div>Science Fair evening reception</div>
+                  </td>
+                  <td>
+                    <div className="time">17:30 to 18:30</div>
+                    <div>Evening lightning talks</div>
+                  </td>
+                  <td>
+                    <div className="time">18:00</div>
+                    <div>Demo party</div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
