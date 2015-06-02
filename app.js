@@ -29,7 +29,11 @@ app.post('/add-session', function (req, res) {
   var agenda = req.body.agenda;
   var participants = req.body.participants;
   var outcome = req.body.outcome;
+  var theme = req.body.theme;
+  var mode = req.body.mode;
+  var audience = req.body.audience;
   var schedEndpoint = env.get("SCHED_ENDPOINT");
+
   request({
     method: 'POST',
     url: schedEndpoint + "/api/session/add" +
@@ -48,7 +52,10 @@ app.post('/add-session', function (req, res) {
       "&otherFacilitators=" + otherFacilitators +
       "&agenda=" + agenda +
       "&participants=" + participants +
-      "&outcome=" + outcome,
+      "&outcome=" + outcome +
+      "&theme=" + theme +
+      "&mode=" + mode +
+      "&audience=" + audience,
     headers: {
       'User-Agent': '2015-mozfest'
     }

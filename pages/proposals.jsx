@@ -70,6 +70,7 @@ var Proposals = React.createClass({
       window.location.href = window.location.origin + window.location.pathname + isError;
       return;
     }
+
     $.ajax({
       url: "/add-session",
       type: "POST",
@@ -84,13 +85,16 @@ var Proposals = React.createClass({
         "description": fieldValues.description,
         "agenda": fieldValues.agenda,
         "participants": fieldValues.participants,
-        "outcome": fieldValues.outcome
+        "outcome": fieldValues.outcome,
+        "theme": self.refs.theme.getDOMNode().value,
+        "mode": self.refs.mode.getDOMNode().value,
+        "audience": self.refs.audience.getDOMNode().value
       }),
       contentType: "application/json; charset=utf-8",
       complete: function(e) {
         self.refs.submitButton.getDOMNode().classList.remove("waiting");
         if (e.responseJSON && e.responseJSON.error) {
-          if (e.responseJSON.error === "ERR: Session Key 'test' already exists but has been deactivated! Use api/event/mod to set active=Y or to modify other data for this event.") {
+          if (e.responseJSON.error.contains("already exists")) {
             document.querySelector("#name-exists-error").classList.add("show");
             window.location.href = window.location.origin + window.location.pathname + "#sessionNameLink";
             var sessionNameInput = document.querySelector("#sessionName");
@@ -104,7 +108,35 @@ var Proposals = React.createClass({
             window.location.href = window.location.origin + window.location.pathname + "#submit-button";
           }
         } else {
-          window.location.href = "/session-add-success";
+          function done(e, other) {
+            window.location.href = "/session-add-success";
+          }
+          // We are storing these in a google form as a secondary option, only if storing it in Sched was successful to keep them in sync
+          $.ajax({
+            url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
+            data: {
+              "entry.1997444383": fieldValues.sessionName,
+              "entry.1998897375": fieldValues.firstName,
+              "entry.2103035832": fieldValues.surname,
+              "entry.867181236": fieldValues.email,
+              "entry.2119147272": fieldValues.organization,
+              "entry.19580374": fieldValues.twitter,
+              "entry.1737828681": fieldValues.otherFacilitators,
+              "entry.2044069696": fieldValues.description,
+              "entry.415053139": fieldValues.agenda,
+              "entry.1536930973": fieldValues.participants,
+              "entry.70607986": fieldValues.outcome,
+              "entry.1933249344": self.refs.theme.getDOMNode().value,
+              "entry.1397401732": self.refs.mode.getDOMNode().value,
+              "entry.91255530": self.refs.audience.getDOMNode().value
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+              0: done,
+              200: done
+            }
+          });
         }
       }
     });
@@ -160,8 +192,31 @@ var Proposals = React.createClass({
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? *
             </InputCombo>
 
-            {/*<label>Tags - Click up to 7 that apply</label>
-            <input type="text" placeholder="Other tags"/>*/}
+            <label id="theme">Theme</label>
+            <select ref="theme">
+              <option value="make">Make</option>
+              <option value="lead">Lead</option>
+              <option value="teach">Teach</option>
+              <option value="invent">Invent</option>
+              <option value="play">Play</option>
+            </select>
+            <label id="mode">Mode</label>
+            <select ref="mode">
+              <option value="learning">Learning</option>
+              <option value="craft">Craft</option>
+              <option value="citizenship">Citizenship</option>
+              <option value="science">Science</option>
+              <option value="journalism">Journalism</option>
+              <option value="arts">Arts</option>
+            </select>
+            <label id="audience">Audience</label>
+            <select ref="audience">
+              <option value="youth">Youth</option>
+              <option value="developers">Developers</option>
+              <option value="activists">Activists</option>
+              <option value="educators">Educators</option>
+              <option value="localizers">Localizers</option>
+            </select>
 
 
             <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" type="checkbox">
