@@ -58,7 +58,7 @@ var Guidelines = React.createClass({
             <div className="half-content">
               <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
               <p className="boldish">
-                Email: michelle@mozillafoundation.org
+                Email: <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>
               </p>
             </div>
           </div>
