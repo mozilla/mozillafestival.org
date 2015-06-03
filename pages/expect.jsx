@@ -106,7 +106,7 @@ var Expect = React.createClass({
                   <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                   <td>
                     <div className="td-container">
-                      <div className="time">10:00</div>
+                      <div className="time">10:30</div>
                       <div>Morning sessions begin</div>
                     </div>
                   </td>
