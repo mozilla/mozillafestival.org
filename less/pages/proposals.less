@@ -7,7 +7,7 @@
     input[type='text'],
     textarea,
     select {
-      width: 100%;
+      width: 565px;
       &.checkbox-input {
         width: auto;
       }
@@ -18,7 +18,6 @@
       border-radius: 4px;
       padding: 11px 10px;
       font-size: 18px;
-      width: 565px;
       &.has-wordcount {
         padding-bottom: 47px;
       }
@@ -26,7 +25,6 @@
     .input-container {
       position: relative;
       display: inline-block;
-      margin-bottom: 20px;
       &.input-container-has-wordcount {
         display: inline-block;
       }
@@ -57,7 +55,11 @@
       font-weight: 600;
       font-size: 18px;
     }
-    input[type='checkbox'] {
+    select,
+    .input-combo {
+      margin-bottom: 20px;
+    }
+    .privacyPolicy-container .input-container {
       float: left;
     }
     .error-message {

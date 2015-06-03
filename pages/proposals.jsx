@@ -54,7 +54,7 @@ var InputCombo = React.createClass({
       }
     }
     return (
-      <div className={this.props.for + "-container"}>
+      <div className={this.props.for + "-container input-combo"}>
         <label id={this.props.for + "Link"} className={this.props.className} htmlFor={this.props.for}>
           {this.props.children}
         </label>

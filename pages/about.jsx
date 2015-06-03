@@ -2,42 +2,23 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
-
-var TimeLine = React.createClass({
-  render: function() {
-    return (
-      <div>
-
-      </div>
-    );
-  }
-});
-
-var TimeLineContent = React.createClass({
-  render: function() {
-    return (
-      <div>
-
-      </div>
-    );
-  }
-});
-
-var TimeLineImage = React.createClass({
-  render: function() {
-    return (
-      <div>
-
-      </div>
-    );
-  }
-});
+var ImageTag = require('../components/imagetag.jsx');
 
 var TimeLineItem = React.createClass({
   render: function() {
     return (
-      <div>
-
+      <div className="timeline-item">
+        <div className="timeline-time-circle">{this.props.time}</div>
+        <div className="timeline-content-container">
+          <div className="timeline-image-container">
+            <ImageTag src1x={this.props.image}
+              alt={this.props.alt}/>
+          </div>
+          <div className="middle-line"></div>
+          <div className="timeline-content">
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }
@@ -77,19 +58,74 @@ var About = React.createClass({
             </CircleNumber>
           </div>
           <p>Mozilla's anual, hands-on festival (affectionaltely known as MozFest) is dedicated to forging the future of the open web. It's where passionate technologists, educatios and creators unite to hack on innovative solutions for the web's most pressing issues.</p>
-          <TimeLine>
-            <TimeLineItem time="2015">
-              <TimeLineImage></TimeLineImage>
-              <TimeLineContent header="header">
-                hm hm hm
-              </TimeLineContent>
-            </TimeLineItem>
-            <TimeLineItem time="2014"></TimeLineItem>
-            <TimeLineItem time="2013"></TimeLineItem>
-            <TimeLineItem time="2012"></TimeLineItem>
-            <TimeLineItem time="2011"></TimeLineItem>
-            <TimeLineItem time="2010"></TimeLineItem>
-          </TimeLine>
+        </div>
+        <div className="timeline-container">
+          <div className="starting-line"></div>
+          <TimeLineItem time="2015" label="the present"
+            image="/assets/images/about-1.png"
+            alt="2010 about image"
+          >
+            In 2015, we’re continuing the momentum from the 
+past ﬁve years. Join us as we collectively build and 
+teach the world’s most valuable public resource: 
+the Web.
+          </TimeLineItem>
+          <TimeLineItem time="2014" label="a free web" flip="true"
+            image="/assets/images/web.svg"
+            alt="2014 about image"
+          >
+            At MozFest 2014, nearly 1,700 participants from 
+more than 50 countries came together to improve 
+art, science, journalism, music, education and more 
+on the open Web. We hosted hundreds of diverse 
+sessions with a single guiding principle: keeping the 
+Web wild and free.
+          </TimeLineItem>
+          <TimeLineItem time="2013" label="hands on learning"
+            image="/assets/images/hands-01.svg"
+            alt="2013 about image"
+          >
+            Learning through building was a key theme at 
+MozFest 2013. We shared our passion for the open 
+Web by creating and teaching as a community. And 
+the venue sprang to life with DIY signage, sessions 
+and after-parties.
+          </TimeLineItem>
+          <TimeLineItem time="2012" label="building and making" flip="true"
+            image="/assets/images/about-3.jpg"
+            alt="2012 about image"
+          >
+            In 2012, MozFest was all about making. The event’s 
+opening-day Science Fair highlighted participants’ 
+innovative creations. And we made and hacked 
+awesome projects about gaming, mobile, privacy 
+and the Internet of Things.
+          </TimeLineItem>
+          <TimeLineItem time="2011" label="settling in london"
+            image="/assets/images/london-01.svg"
+            alt="2011 about image"
+          >
+            In 2011, MozFest relocated to London with a 
+sharpened focus: media, freedom and the Web. 
+Participants lent their passion and creativity to 
+improve journalism and digital storytelling on the 
+open Web. We established a dedicated space for 
+youngsters to learn and make. And we built on the 
+infectious community spirit ﬁrst ignited in 
+Barcelona.
+           </TimeLineItem>
+          <TimeLineItem time="2010" label="the beginning" flip="true"
+            image="/assets/images/about-2.png"
+            alt="2010 about image"
+          >
+            MozFest was born in Barcelona. Originally named 
+"Drumbeat," the festival convened a community of 
+people dedicated to learning, freedom and the 
+open Web. The inaugural event hosted 350 
+participants — and together, we wrote a book titled 
+“Learning Freedom and the Web.
+          </TimeLineItem>
+          <div className="ending-bit"></div>
         </div>
         <Footer/>
       </div>
