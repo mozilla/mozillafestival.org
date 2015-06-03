@@ -8,26 +8,64 @@ var RealInput = React.createClass({
   render: function() {
     if (this.props.type === "textarea") {
       return (
-        <textarea onChange={this.props.updateFunction} id={this.props.for}/>
+        <textarea className={this.props.className} maxLength={this.props.maxlength} onChange={this.props.updateFunction} id={this.props.for}/>
       );
     }
     return (
-      <input onChange={this.props.updateFunction} id={this.props.for} type={this.props.type}/>
+      <input maxLength={this.props.maxlength} onChange={this.props.updateFunction} id={this.props.for} type={this.props.type}/>
     );
   }
 });
 
 var InputCombo = React.createClass({
-  updateFunction: function() {
+  updateFunction: function(e, other) {
     document.querySelector("#" + this.props.for + "Error").classList.remove("show");
+    if (this.props.wordcount || this.props.wordcount === 0) {
+      var value = e.target.value.trim();
+      var wordcount = this.props.wordcount;
+      if (value) {
+        wordcount = this.props.wordcount - value.split(/\s+/).length;
+      }
+      this.setState({
+        wordcount: wordcount
+      });
+    }
+  },
+  getInitialState: function() {
+    if (this.props.wordcount || this.props.wordcount === 0) {
+      return {
+        wordcount: this.props.wordcount
+      };
+    } else {
+      return {};
+    }
   },
   render: function() {
+    var self = this;
+    var hasWordcount = (self.props.wordcount || self.props.wordcount === 0);
+    var inputClassName = "";
+    var wordcountClassName = "word-count";
+    var inputContainerClassName = "input-container";
+    if (hasWordcount) {
+      inputClassName = "has-wordcount";
+      inputContainerClassName += " input-container-has-wordcount";
+      if (self.state.wordcount < 0) {
+        wordcountClassName += " negative";
+      }
+    }
     return (
-      <div>
+      <div className={this.props.for + "-container"}>
         <label id={this.props.for + "Link"} className={this.props.className} htmlFor={this.props.for}>
           {this.props.children}
         </label>
-        <RealInput updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
+        <div className={inputContainerClassName}>
+          {function() {
+            if (hasWordcount) {
+              return (<p className={wordcountClassName}>{self.state.wordcount}</p>);
+            }
+          }()}
+          <RealInput className={inputClassName} maxlength={this.props.maxlength || 1650} updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
+        </div>
         <div id={this.props.for + "Error"} className="error-message">{this.props.errorMessage}</div>
       </div>
     );
@@ -55,6 +93,9 @@ var Proposals = React.createClass({
         if (document.querySelector("#" + fieldNames[i] + "Error")) {
           document.querySelector("#" + fieldNames[i] + "Error").classList.add("show");
         }
+      } else if (!isError && document.querySelector("." + fieldNames[i] + "-container .word-count") &&
+                 parseInt(document.querySelector("." + fieldNames[i] + "-container .word-count").textContent, 10) < 0) {
+        isError = "#" + fieldNames[i] + "Link";
       }
     }
 
@@ -154,7 +195,7 @@ var Proposals = React.createClass({
             <h1>Share your idea</h1>
             <p>The Mozilla Festival is designed around three days of peer-led conversations, hands on workshops and skillshares.</p>
 
-            <InputCombo errorMessage="Session name is required." for="sessionName" type="text">
+            <InputCombo maxlength="120" errorMessage="Session name is required." for="sessionName" type="text">
               Session Name *
             </InputCombo>
             <div id="name-exists-error" className="error-message">A session with that name already exists, please try another.</div>
@@ -179,10 +220,10 @@ var Proposals = React.createClass({
               Other facilitators
             </InputCombo>
 
-            <InputCombo errorMessage="Description is required." for="description" type="textarea">
+            <InputCombo wordcount="150" errorMessage="Description is required." for="description" type="textarea">
               What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *
             </InputCombo>
-            <InputCombo errorMessage="Agenda is required." for="agenda" type="textarea">
+            <InputCombo wordcount="150" errorMessage="Agenda is required." for="agenda" type="textarea">
               How do you see that working? Describe your session's agenda in 150 words or less. *
             </InputCombo>
             <InputCombo errorMessage="Participants is required." for="participants" type="textarea">

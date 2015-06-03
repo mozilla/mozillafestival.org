@@ -19,6 +19,25 @@
       border-radius: 4px;
       padding: 11px 10px;
       font-size: 18px;
+      &.has-wordcount {
+        padding-bottom: 47px;
+      }
+    }
+    .input-container {
+      position: relative;
+      display: inline;
+      &.input-container-has-wordcount {
+        display: block;
+      }
+      .word-count {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 12px 11px;
+        &.negative {
+          color: #FF0000;
+        }
+      }
     }
     select {
       margin-bottom: 20px;
@@ -26,8 +45,10 @@
       background: #FFFFFF;
       border-radius: 4px;
       font-size: 18px;
+      font-family: inherit;
     }
     textarea {
+      font-family: inherit;
       height: 300px;
     }
     label {

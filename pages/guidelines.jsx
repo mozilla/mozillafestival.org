@@ -41,7 +41,7 @@ var Guidelines = React.createClass({
         <div className="centered content wide">
           <h1>Inclusion and Diversity</h1>
           <div className="half-content">
-            <p>The Mozilla Project welcome and encourages participation by everyone. It doesn&lsquo;t matter how you identify yourself or how others perceive you: we welcome you.</p>
+            <p>The Mozilla Project welcomes and encourages participation by everyone. It doesn&lsquo;t matter how you identify yourself or how others perceive you: we welcome you.</p>
             <p>We welcome contributions from everyone as long as they interact constructively with our community, including, but not limited to</p>
           </div>
           <div className="half-content">
