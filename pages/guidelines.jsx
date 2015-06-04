@@ -15,7 +15,7 @@ var Guidelines = React.createClass({
         <div className="white-background">
           <div className="centered content wide">
             <h1>R-E-S-P-E-C-T</h1>
-            <p>The Mozilla Festival respects Mozilla's community participation guidelines. These guidelines cover out behaviour as participants, facilitators, speace wranglers, staff, volunteers, bendors, and anyone else involved in making MozFest possible.</p>
+            <p>The Mozilla Festival respects Mozilla's community participation guidelines. These guidelines cover our behaviour as participants, facilitators, speace wranglers, staff, volunteers, vendors, and anyone else involved in making MozFest possible.</p>
             <div className="horizontal-rule"></div>
             <h1>How to treat each other</h1>
             <div className="treat-each-other-list">
