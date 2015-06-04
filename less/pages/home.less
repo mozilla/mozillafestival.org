@@ -17,6 +17,13 @@
   .hero-unit {
     padding-top: 305px;
 
+    iframe {
+      margin: 0 auto;
+      border-width: 0;
+    }
+    .iframe-container {
+      box-sizing: content-box;
+    }
     @media screen and (min-width: 768px) {
       padding-top: 90px;
     }
@@ -25,6 +32,11 @@
       height: 112px;
       margin: 0 auto;
       border-radius: 50%;
+      cursor: pointer;
+      transition: transform .3s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     height: 642px;
     h1 {
