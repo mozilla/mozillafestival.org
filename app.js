@@ -36,27 +36,29 @@ app.post('/add-session', function (req, res) {
 
   request({
     method: 'POST',
-    url: schedEndpoint + "/api/session/add" +
-      "?session_key=" + sessionName +
-      "&name=" + sessionName +
-      "&api_key=" + env.get("SCHED_KEY") +
-      "&venue=2015-mozfest-session" +
-      "&session_type=" + theme +
-      "&tags=" + theme + "," + mode + "," + audience +
-      "&session_start=15-01-01" +
-      "&session_end=15-01-01" +
-      "&description=" + description +
-      "&active=N" +
+    url: schedEndpoint + "/api/session/add",
+    form: {
+      session_key: sessionName,
+      name: sessionName,
+      api_key: env.get("SCHED_KEY"),
+      venue: "2015-mozfest-session",
+      session_type: theme,
+      tags: theme + "," + mode + "," + audience,
+      session_start: "15-01-01",
+      session_end: "15-01-01",
+      description: description,
+      active: "N",
       // These are all custom fields.
-      "&firstName=" + firstName +
-      "&surname=" + surname +
-      "&email=" + email +
-      "&organization=" + organization +
-      "&twitter=" + twitter +
-      "&otherFacilitators=" + otherFacilitators +
-      "&agenda=" + agenda +
-      "&participants=" + participants +
-      "&outcome=" + outcome,
+      firstName: firstName,
+      surname: surname,
+      email: email,
+      organization: organization,
+      twitter: twitter,
+      otherFacilitators: otherFacilitators,
+      agenda: agenda,
+      participants: participants,
+      outcome: outcome
+    },
     headers: {
       'User-Agent': '2015-mozfest'
     }
