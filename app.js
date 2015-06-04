@@ -40,10 +40,14 @@ app.post('/add-session', function (req, res) {
       "?session_key=" + sessionName +
       "&name=" + sessionName +
       "&api_key=" + env.get("SCHED_KEY") +
-      "&session_type=2015-mozfest-session" +
+      "&venue=2015-mozfest-session" +
+      "&session_type=" + theme +
+      "&tags=" + theme + "," + mode + "," + audience +
       "&session_start=15-01-01" +
       "&session_end=15-01-01" +
       "&description=" + description +
+      "&active=N" +
+      // These are all custom fields.
       "&firstName=" + firstName +
       "&surname=" + surname +
       "&email=" + email +
@@ -52,10 +56,7 @@ app.post('/add-session', function (req, res) {
       "&otherFacilitators=" + otherFacilitators +
       "&agenda=" + agenda +
       "&participants=" + participants +
-      "&outcome=" + outcome +
-      "&theme=" + theme +
-      "&mode=" + mode +
-      "&audience=" + audience,
+      "&outcome=" + outcome,
     headers: {
       'User-Agent': '2015-mozfest'
     }
@@ -63,22 +64,7 @@ app.post('/add-session', function (req, res) {
     if (err || other.body !== "Ok") {
       res.status(500).send({ error: err || other.body });
     } else {
-      request({
-        method: 'POST',
-        url: schedEndpoint + "/api/session/mod" +
-              "?session_key=" + sessionName +
-              "&active=N" +
-              "&api_key=" + env.get("SCHED_KEY"),
-        headers: {
-          'User-Agent': '2015-mozfest'
-        }
-      }, function(err, other) {
-        if (err || other.body !== "Ok") {
-          res.status(500).send({ error: err || other.body });
-        } else {
-          res.send('Ok');
-        }
-      });
+      res.send('Ok');
     }
   });
 });

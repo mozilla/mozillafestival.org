@@ -226,11 +226,11 @@ var Proposals = React.createClass({
             <InputCombo wordcount="150" errorMessage="Agenda is required." for="agenda" type="textarea">
               How do you see that working? Describe your session's agenda in 150 words or less. *
             </InputCombo>
-            <InputCombo errorMessage="Participants is required." for="participants" type="textarea">
-              How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? *
+            <InputCombo wordcount="150" errorMessage="Participants is required." for="participants" type="textarea">
+              How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? In 150 words or less. *
             </InputCombo>
-            <InputCombo errorMessage="Outcome is required." for="outcome" type="textarea">
-              What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? *
+            <InputCombo wordcount="150" errorMessage="Outcome is required." for="outcome" type="textarea">
+              What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? In 150 words or less. *
             </InputCombo>
 
             <label id="theme">Theme</label>
