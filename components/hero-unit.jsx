@@ -30,8 +30,8 @@ var HeroUnit = React.createClass({
 
   render: function() {
     return (
-      <div className="row">
-        <div className="col-md-12 hero-unit" style={{
+      <div className={this.props.className}>
+        <div className="hero-unit" style={{
           backgroundImage: 'url(' + this.state.image + ')'
         }}>
           {this.props.children}
