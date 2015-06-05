@@ -22,8 +22,8 @@ var Home = React.createClass({
     return (
       <div className="home-page">
         <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
-        <HeroUnit className="home-hero-unit" image="https://mozillafestival-org-2015.herokuapp.com/assets/images/home.jpg"
-                  image2x="https://mozillafestival-org-2015.herokuapp.com/assets/images/home.jpg">
+        <HeroUnit className="home-hero-unit" image="/assets/images/home.jpg"
+                  image2x="/assets/images/home.jpg">
           {function() {
             if (self.state.playVideo) {
               return (
