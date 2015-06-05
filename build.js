@@ -6,7 +6,7 @@ Habitat.load();
 var env = new Habitat();
 var buildCommand = "build:dev";
 
-if ( env.get("PRODUCTION") ) {
+if ( env.get("OPTIMIZE") ) {
   buildCommand = 'build:production';
 }
 

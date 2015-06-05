@@ -5,7 +5,7 @@
   "author": "Mozilla Foundation",
   "scripts": {
     "start": "npm-run-all --parallel server watch:js watch:css",
-    "build:production": "npm-run-all --parallel npm run minify:js minify:css",
+    "build:production": "npm-run-all --parallel minify:js minify:css",
     "build:dev": "npm-run-all --parallel build:js build:css",
     "build:js": "webpack --progress --profile --colors",
     "build:css": "npm run watch:css -- --no-watch",
