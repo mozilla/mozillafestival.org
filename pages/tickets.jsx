@@ -4,19 +4,19 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 
 var Tickets = React.createClass({
-  /*componentDidMount: function() {
+  componentDidMount: function() {
     var titoContainer = this.refs.titoContainer.getDOMNode();
-    var titoWidget = document.querySelector(".widgets tito-widget");
+    var titoWidget = document.querySelector(".widgets .tito-tickets");
     titoContainer.appendChild(titoWidget);
   },
   componentWillUnmount: function() {
-    var titoWidget = this.refs.titoContainer.getDOMNode().querySelector("tito-widget");
+    var titoWidget = this.refs.titoContainer.getDOMNode().querySelector(".tito-tickets");
     var widgetContainer = document.querySelector(".widgets");
     widgetContainer.appendChild(titoWidget);
-  },*/
+  },
   render: function() {
     return (
-      <div>
+      <div className="tickets-page">
         <Header/>
         <HeroUnit image="/assets/images/tickets.jpg"
                   image2x="/assets/images/tickets.jpg">
