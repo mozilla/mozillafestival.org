@@ -111,7 +111,7 @@ var About = React.createClass({
             className="timeline-item-2015"
             image="/assets/images/about-1.png"
             alt="2010 about image"
-            imageHeight="343" imageWidth="534"
+            imageHeight={343} imageWidth={534}
           >
             In 2015, we’re continuing the momentum from the 
 past ﬁve years. Join us as we collectively build and 
@@ -122,7 +122,7 @@ the Web.
             className="timeline-item-2014"
             image="/assets/images/web.svg"
             alt="2014 about image"
-            imageHeight="500" imageWidth="680"
+            imageHeight={500} imageWidth={680}
           >
             At MozFest 2014, nearly 1,700 participants from 
 more than 50 countries came together to improve 
@@ -135,7 +135,7 @@ Web wild and free.
             className="timeline-item-2013"
             image="/assets/images/hands-01.svg"
             alt="2013 about image"
-            imageHeight="400" imageWidth="650"
+            imageHeight={400} imageWidth={650}
           >
             Learning through building was a key theme at 
 MozFest 2013. We shared our passion for the open 
@@ -147,7 +147,7 @@ and after-parties.
             className="timeline-item-2012"
             image="/assets/images/about-3.jpg"
             alt="2012 about image"
-            imageHeight="218" imageWidth="348"
+            imageHeight={218} imageWidth={348}
           >
             In 2012, MozFest was all about making. The event’s 
 opening-day Science Fair highlighted participants’ 
@@ -159,7 +159,7 @@ and the Internet of Things.
             className="timeline-item-2011"
             image="/assets/images/london-01.svg"
             alt="2011 about image"
-            imageHeight="400" imageWidth="700"
+            imageHeight={400} imageWidth={700}
           >
             In 2011, MozFest relocated to London with a 
 sharpened focus: media, freedom and the Web. 
@@ -174,7 +174,7 @@ Barcelona.
             className="timeline-item-2010"
             image="/assets/images/about-2.png"
             alt="2010 about image"
-            imageHeight="280" imageWidth="420"
+            imageHeight={280} imageWidth={420}
           >
             MozFest was born in Barcelona. Originally named 
 "Drumbeat," the festival convened a community of 
