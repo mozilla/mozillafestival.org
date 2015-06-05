@@ -7,6 +7,7 @@ var Fringe = React.createClass({
   render: function() {
     return (
       <div>
+        <Header/>
         <HeroUnit image="/assets/images/fringe.jpg"
                   image2x="/assets/images/fringe.jpg"/>
 

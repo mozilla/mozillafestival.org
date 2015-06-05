@@ -1,6 +1,5 @@
 *~
 .env
 /node_modules/
-public/build/1.chunk.js
-public/build/main.js
+public/build/*
 public/index.css
