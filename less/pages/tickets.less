@@ -1,3 +1,41 @@
 .tickets-page {
-
+  .tito-tickets {
+    button {
+      color: #FFFFFF;
+      cursor: pointer;
+      background: #BB4E61;
+      border: none;
+      overflow: hidden;
+      font-size: 30px;
+      font-weight: 600;
+      margin: 23px 34px;
+      position: relative;
+      padding: 28px 130px;
+      width: 350px;
+      border-radius: 4px;
+      transition: background .3s;
+      &:hover {
+        background: #9F4253;
+      }
+      &:before,
+      &:after {
+        background: #F5F5F5;
+        border-radius: 50%;
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        content: ' ';
+        margin-top: -14px;
+        top: 50%;
+      }
+      &:before {
+        left: 0;
+        margin-left: -14px;
+      }
+      &:after {
+        right: 0;
+        margin-right: -14px;
+      }
+    }
+  }
 }
