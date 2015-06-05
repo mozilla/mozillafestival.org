@@ -7,6 +7,7 @@
     "start": "npm-run-all --parallel server watch:js watch:css",
     "postinstall": "npm-run-all --parallel build:js build:css",
     "build:js": "webpack --progress --profile --colors",
+    "build:production": "npm run build:js -- --optimize-minimize --optimize-dedupe",
     "watch:js": "npm run build:js -- --watch",
     "build:css": "npm run watch:css -- --no-watch",
     "watch:css": "autoless less public",

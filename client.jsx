@@ -1,6 +1,5 @@
 var React = require('react'),
     Router = require('react-router'),
-    NotFoundRoute = Router.NotFoundRoute,
     Route = Router.Route;
 
 var routes = (
