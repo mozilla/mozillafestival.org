@@ -4,7 +4,8 @@ var express = require('express'),
     request = require('request'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
-    RateLimit = require('express-rate-limit');
+    RateLimit = require('express-rate-limit'),
+    hatchet = require("hatchet");
 
 Habitat.load();
 
@@ -68,6 +69,15 @@ app.post('/add-session', limiter, function (req, res) {
     if (err) {
       res.status(500).send({error: err});
     } else {
+      hatchet.send("mozfest_session_proposal", {
+        email: email
+      }, function(err, data) {
+        if (err) {
+          console.error("Error sending email: " + err);
+        } else {
+          console.log("we sent a message!");
+        }
+      });
       res.send("Ok");
     }
   });
