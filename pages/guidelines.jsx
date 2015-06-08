@@ -51,9 +51,9 @@ var Guidelines = React.createClass({
         </div>
         <div className="white-background">
           <div className="centered content wide">
-            <h1>Raising Issues at Mozfest</h1>
+            <h1>Raising Issues at MozFest</h1>
             <div className="half-content">
-              <p>If you believe you&lsquo;re experiencing practices at Mozfest which don&lsquo;t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Director, Michelle Thorne. Your concerns will be treated confidentially and respectfully.</p>
+              <p>If you believe you&lsquo;re experiencing practices at MozFest which don&lsquo;t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Director, Michelle Thorne. Your concerns will be treated confidentially and respectfully.</p>
             </div>
             <div className="half-content">
               <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
