@@ -4,6 +4,25 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var Icon = require('react-fa');
 
+function ajax(url, data, callback) {
+  var request = new XMLHttpRequest();
+  request.open('POST', url, true);
+  request.setRequestHeader('Content-Type', 'application/json');
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      if (request.response === "Ok") {
+        callback();
+      } else {
+        callback(request.response);
+      }
+    } else {
+      callback("error");
+    }
+  };
+  request.send(JSON.stringify(data));
+}
+
 var RealInput = React.createClass({
   render: function() {
     if (this.props.type === "textarea") {
@@ -112,10 +131,7 @@ var Proposals = React.createClass({
       return;
     }
 
-    $.ajax({
-      url: "/add-session",
-      type: "POST",
-      data: JSON.stringify({
+    ajax("/add-session", {
         "sessionName": fieldValues.sessionName,
         "firstName": fieldValues.firstName,
         "surname": fieldValues.surname,
@@ -130,12 +146,11 @@ var Proposals = React.createClass({
         "theme": self.refs.theme.getDOMNode().value,
         "mode": self.refs.mode.getDOMNode().value,
         "audience": self.refs.audience.getDOMNode().value
-      }),
-      contentType: "application/json; charset=utf-8",
-      complete: function(e) {
+      },
+      function(error) {
         self.refs.submitButton.getDOMNode().classList.remove("waiting");
-        if (e.responseJSON && e.responseJSON.error) {
-          if (e.responseJSON.error.contains("already exists")) {
+        if (error) {
+          if (error.contains("already exists")) {
             document.querySelector("#name-exists-error").classList.add("show");
             window.location.href = window.location.origin + window.location.pathname + "#sessionNameLink";
             var sessionNameInput = document.querySelector("#sessionName");
@@ -149,38 +164,10 @@ var Proposals = React.createClass({
             window.location.href = window.location.origin + window.location.pathname + "#submit-button";
           }
         } else {
-          function done(e, other) {
-            window.location.href = "/session-add-success";
-          }
-          // We are storing these in a google form as a secondary option, only if storing it in Sched was successful to keep them in sync
-          $.ajax({
-            url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
-            data: {
-              "entry.1997444383": fieldValues.sessionName,
-              "entry.1998897375": fieldValues.firstName,
-              "entry.2103035832": fieldValues.surname,
-              "entry.867181236": fieldValues.email,
-              "entry.2119147272": fieldValues.organization,
-              "entry.19580374": fieldValues.twitter,
-              "entry.1737828681": fieldValues.otherFacilitators,
-              "entry.2044069696": fieldValues.description,
-              "entry.415053139": fieldValues.agenda,
-              "entry.1536930973": fieldValues.participants,
-              "entry.70607986": fieldValues.outcome,
-              "entry.1933249344": self.refs.theme.getDOMNode().value,
-              "entry.1397401732": self.refs.mode.getDOMNode().value,
-              "entry.91255530": self.refs.audience.getDOMNode().value
-            },
-            type: "POST",
-            dataType: "xml",
-            statusCode: {
-              0: done,
-              200: done
-            }
-          });
+          window.location.href = "/session-add-success";
         }
       }
-    });
+    );
   },
   render: function() {
     return (
@@ -193,7 +180,13 @@ var Proposals = React.createClass({
         <div className="content">
           <div className="proposals-form">
             <h1>Share your idea</h1>
-            <p>The Mozilla Festival is designed around three days of peer-led conversations, hands on workshops and skillshares.</p>
+            <p>Please fill in the fields below to propose your session. Note: once you have submitted your session, you will not be able to edit it directly.</p>
+
+            <p>Some planning tips: we believe in peer-to-peer sessions, learning through making, open dialog and hacking in small groups. Think participation, not PowerPoint.</p>
+
+            <p>You should expect anywhere between five and 50 participants at your session. Be prepared for a range of group sizes, abilities and ages. As a facilitator, you will frame the session goals, team up small groups and ensure participants work productively and purposefully together.</p>
+
+            <p>We're looking forward to reviewing your submission. If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
 
             <InputCombo maxlength="120" errorMessage="Session name is required." for="sessionName" type="text">
               Session Name *
