@@ -150,19 +150,8 @@ var Proposals = React.createClass({
       function(error) {
         self.refs.submitButton.getDOMNode().classList.remove("waiting");
         if (error) {
-          if (error.contains("already exists")) {
-            document.querySelector("#name-exists-error").classList.add("show");
-            window.location.href = window.location.origin + window.location.pathname + "#sessionNameLink";
-            var sessionNameInput = document.querySelector("#sessionName");
-            function clearError() {
-              document.querySelector("#name-exists-error").classList.remove("show");
-              sessionNameInput.removeEventListener("input", clearError);
-            }
-            sessionNameInput.addEventListener("input", clearError);
-          } else {
-            document.querySelector("#generic-error").classList.add("show");
-            window.location.href = window.location.origin + window.location.pathname + "#submit-button";
-          }
+          document.querySelector("#generic-error").classList.add("show");
+          window.location.href = window.location.origin + window.location.pathname + "#submit-button";
         } else {
           window.location.href = "/session-add-success";
         }
@@ -191,7 +180,6 @@ var Proposals = React.createClass({
             <InputCombo maxlength="120" errorMessage="Session name is required." for="sessionName" type="text">
               Session Name *
             </InputCombo>
-            <div id="name-exists-error" className="error-message">A session with that name already exists, please try another.</div>
 
             <InputCombo errorMessage="First name is required." for="firstName" type="text">
               First Name *

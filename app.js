@@ -34,59 +34,31 @@ app.post('/add-session', function (req, res) {
   var theme = req.body.theme;
   var mode = req.body.mode;
   var audience = req.body.audience;
-  var schedEndpoint = env.get("SCHED_ENDPOINT");
+
   request({
+
     method: 'POST',
-    url: schedEndpoint + "/api/session/add",
+    url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
     form: {
-      session_key: sessionName,
-      name: sessionName,
-      api_key: env.get("SCHED_KEY"),
-      venue: "2015-mozfest-session",
-      session_type: theme,
-      tags: theme + "," + mode + "," + audience,
-      session_start: "15-01-01",
-      session_end: "15-01-01",
-      description: description,
-      active: "N",
-      // These are all custom fields.
-      firstName: firstName,
-      surname: surname,
-      email: email,
-      organization: organization,
-      twitter: twitter,
-      otherFacilitators: otherFacilitators,
-      agenda: agenda,
-      participants: participants,
-      outcome: outcome
-    },
-    headers: {
-      'User-Agent': '2015-mozfest'
+      "entry.1997444383": sessionName,
+      "entry.1998897375": firstName,
+      "entry.2103035832": surname,
+      "entry.867181236": email,
+      "entry.2119147272": organization,
+      "entry.19580374": twitter,
+      "entry.1737828681": otherFacilitators,
+      "entry.2044069696": description,
+      "entry.415053139": agenda,
+      "entry.1536930973": participants,
+      "entry.70607986": outcome,
+      "entry.1933249344": theme,
+      "entry.1397401732": mode,
+      "entry.91255530": audience
     }
-  }, function(err, other) {
-    if (err || other.body !== "Ok") {
-      res.send(err || other.body);
+  }, function(err) {
+    if (err) {
+      res.send(err);
     } else {
-      request({
-        method: 'POST',
-        url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
-        form: {
-          "entry.1997444383": sessionName,
-          "entry.1998897375": firstName,
-          "entry.2103035832": surname,
-          "entry.867181236": email,
-          "entry.2119147272": organization,
-          "entry.19580374": twitter,
-          "entry.1737828681": otherFacilitators,
-          "entry.2044069696": description,
-          "entry.415053139": agenda,
-          "entry.1536930973": participants,
-          "entry.70607986": outcome,
-          "entry.1933249344": theme,
-          "entry.1397401732": mode,
-          "entry.91255530": audience
-        }
-      });
       res.send("Ok");
     }
   });
