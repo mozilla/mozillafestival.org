@@ -2,7 +2,8 @@ var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
     request = require('request'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    compression = require('compression');
 
 Habitat.load();
 
@@ -10,6 +11,7 @@ var app = express(),
   env = new Habitat();
 
 app.configure(function() {
+  app.use(compression());
   app.use(express.static(__dirname + '/public'));
   app.use(bodyParser.json());
   app.use(function(err, req, res, next) {
