@@ -2,7 +2,8 @@ var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
     request = require('request'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    compression = require('compression');
 
 Habitat.load();
 
@@ -16,6 +17,8 @@ app.configure(function() {
     res.send(err);
   });
 });
+
+app.use(compression());
 
 app.post('/add-session', function (req, res) {
   var sessionName = req.body.sessionName;
