@@ -11,14 +11,13 @@ var app = express(),
   env = new Habitat();
 
 app.configure(function() {
+  app.use(compression());
   app.use(express.static(__dirname + '/public'));
   app.use(bodyParser.json());
   app.use(function(err, req, res, next) {
     res.send(err);
   });
 });
-
-app.use(compression());
 
 app.post('/add-session', function (req, res) {
   var sessionName = req.body.sessionName;
