@@ -102,7 +102,7 @@ var About = React.createClass({
                 workshops<br/>& sessions
               </CircleNumber>
             </div>
-            <p>Mozilla's anual, hands-on festival (affectionaltely known as MozFest) is dedicated to forging the future of the open web. It's where passionate technologists, educatios and creators unite to hack on innovative solutions for the web's most pressing issues.</p>
+            <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues.</p>
           </div>
         </div>
         <div className="timeline-container">
