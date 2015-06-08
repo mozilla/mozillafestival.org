@@ -33,7 +33,6 @@ app.post('/add-session', function (req, res) {
   var mode = req.body.mode;
   var audience = req.body.audience;
   var schedEndpoint = env.get("SCHED_ENDPOINT");
-
   request({
     method: 'POST',
     url: schedEndpoint + "/api/session/add",
@@ -64,9 +63,29 @@ app.post('/add-session', function (req, res) {
     }
   }, function(err, other) {
     if (err || other.body !== "Ok") {
-      res.status(500).send({ error: err || other.body });
+      res.send(err || other.body);
     } else {
-      res.send('Ok');
+      request({
+        method: 'POST',
+        url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
+        form: {
+          "entry.1997444383": sessionName,
+          "entry.1998897375": firstName,
+          "entry.2103035832": surname,
+          "entry.867181236": email,
+          "entry.2119147272": organization,
+          "entry.19580374": twitter,
+          "entry.1737828681": otherFacilitators,
+          "entry.2044069696": description,
+          "entry.415053139": agenda,
+          "entry.1536930973": participants,
+          "entry.70607986": outcome,
+          "entry.1933249344": theme,
+          "entry.1397401732": mode,
+          "entry.91255530": audience
+        }
+      });
+      res.send("Ok");
     }
   });
 });
