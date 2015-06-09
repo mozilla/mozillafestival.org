@@ -30,7 +30,7 @@ var HeroUnit = React.createClass({
 
   render: function() {
     return (
-      <div className={this.props.className}>
+      <div className="hero-unit-container">
         <div className="hero-unit" style={{
           backgroundImage: 'url(' + this.state.image + ')'
         }}>
