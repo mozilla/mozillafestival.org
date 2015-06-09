@@ -4,7 +4,7 @@ var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 
 var Tickets = React.createClass({
-  componentDidMount: function() {
+  /*componentDidMount: function() {
     var titoContainer = this.refs.titoContainer.getDOMNode();
     var titoWidget = document.querySelector(".widgets .tito-tickets");
     titoContainer.appendChild(titoWidget);
@@ -13,7 +13,7 @@ var Tickets = React.createClass({
     var titoWidget = this.refs.titoContainer.getDOMNode().querySelector(".tito-tickets");
     var widgetContainer = document.querySelector(".widgets");
     widgetContainer.appendChild(titoWidget);
-  },
+  },*/
   render: function() {
     return (
       <div className="tickets-page">
@@ -23,8 +23,9 @@ var Tickets = React.createClass({
           tickets
         </HeroUnit>
         <div className="content centered wide">
-          <h1>Make it official</h1>
-          <p>MozFest tickets go super fast, so we suggest securing your tickets as soon as possible</p>
+          <h1>Coming soon</h1>
+          <p>Tickets will be on sales from the 17th of June.<br/>
+If you have any questions please contact the festival team at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
           <div ref="titoContainer"></div>
         </div>
         <Footer/>
