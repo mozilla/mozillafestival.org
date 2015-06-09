@@ -3,25 +3,7 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var Icon = require('react-fa');
-
-function ajax(url, data, callback) {
-  var request = new XMLHttpRequest();
-  request.open('POST', url, true);
-  request.setRequestHeader('Content-Type', 'application/json');
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      if (request.response === "Ok") {
-        callback();
-      } else {
-        callback(request.response);
-      }
-    } else {
-      callback("error");
-    }
-  };
-  request.send(JSON.stringify(data));
-}
+require('whatwg-fetch');
 
 var RealInput = React.createClass({
   render: function() {
@@ -131,7 +113,13 @@ var Proposals = React.createClass({
       return;
     }
 
-    ajax("/add-session", {
+    fetch('/add-session', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
         "sessionName": fieldValues.sessionName,
         "firstName": fieldValues.firstName,
         "surname": fieldValues.surname,
@@ -146,17 +134,16 @@ var Proposals = React.createClass({
         "theme": self.refs.theme.getDOMNode().value,
         "mode": self.refs.mode.getDOMNode().value,
         "audience": self.refs.audience.getDOMNode().value
-      },
-      function(error) {
-        self.refs.submitButton.getDOMNode().classList.remove("waiting");
-        if (error) {
-          document.querySelector("#generic-error").classList.add("show");
-          window.location.href = window.location.origin + window.location.pathname + "#submit-button";
-        } else {
-          window.location.href = "/session-add-success";
-        }
+      })
+    }).then(function(response) {
+      self.refs.submitButton.getDOMNode().classList.remove("waiting");
+      if (response.ok) {
+        window.location.href = "/session-add-success";
+      } else {
+        document.querySelector("#generic-error").classList.add("show");
+        window.location.href = window.location.origin + window.location.pathname + "#submit-button";
       }
-    );
+    });
   },
   render: function() {
     return (
