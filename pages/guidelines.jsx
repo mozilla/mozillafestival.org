@@ -42,10 +42,10 @@ var Guidelines = React.createClass({
           <h1>Inclusion and Diversity</h1>
           <div className="half-content">
             <p>The Mozilla Project welcomes and encourages participation by everyone. It doesn&lsquo;t matter how you identify yourself or how others perceive you: we welcome you.</p>
-            <p>We welcome contributions from everyone as long as they interact constructively with our community, including, but not limited to</p>
+            <p>We welcome contributions from everyone as long as they interact constructively with our community, including, but not limited</p>
           </div>
           <div className="half-content">
-            <p>people of varied age, culture, ethnicity, gender, gender-identity, language, race, sexual orientation, geographical location and religious views.</p>
+            <p>to people of varied age, culture, ethnicity, gender, gender-identity, language, race, sexual orientation, geographical location and religious views.</p>
             <p>Mozilla-based activities should be inclusive and should support such diversity.</p>
           </div>
         </div>
