@@ -16,7 +16,7 @@ app.enable('trust proxy');
 var limiter = RateLimit({
   windowMs: 60 * 1000,
   delayMs: 1000,
-  max: 0,
+  max: 5,
   global: false
 });
 
