@@ -12,7 +12,7 @@ var app = express(),
 
 app.configure(function() {
   app.use(compression());
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
   app.use(bodyParser.json());
   app.use(function(err, req, res, next) {
     res.send(err);
