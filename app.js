@@ -3,12 +3,22 @@ var express = require('express'),
     path = require('path'),
     request = require('request'),
     bodyParser = require('body-parser'),
-    compression = require('compression');
+    compression = require('compression'),
+    RateLimit = require('express-rate-limit');
 
 Habitat.load();
 
 var app = express(),
   env = new Habitat();
+
+app.enable('trust proxy');
+
+var limiter = RateLimit({
+  windowMs: 60 * 1000,
+  delayMs: 1000,
+  max: 0,
+  global: false
+});
 
 app.configure(function() {
   app.use(compression());
@@ -19,7 +29,7 @@ app.configure(function() {
   });
 });
 
-app.post('/add-session', function (req, res) {
+app.post('/add-session', limiter, function (req, res) {
   var sessionName = req.body.sessionName;
   var firstName = req.body.firstName;
   var surname = req.body.surname;
@@ -36,7 +46,6 @@ app.post('/add-session', function (req, res) {
   var audience = req.body.audience;
 
   request({
-
     method: 'POST',
     url: "https://docs.google.com/forms/d/1MdPWZ6GsMpDiZnq3qwCfQSJ-7icdCQYGWuHIXrPlO3g/formResponse",
     form: {
@@ -57,7 +66,7 @@ app.post('/add-session', function (req, res) {
     }
   }, function(err) {
     if (err) {
-      res.send(err);
+      res.status(500).send({error: err});
     } else {
       res.send("Ok");
     }

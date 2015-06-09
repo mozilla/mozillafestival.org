@@ -23,6 +23,7 @@
     "cross-spawn": "0.2.9",
     "css-loader": "0.14.2",
     "express": "3.4.5",
+    "express-rate-limit": "1.0.2",
     "extract-text-webpack-plugin": "0.8.0",
     "file-loader": "0.8.4",
     "habitat": "0.4.1",
@@ -37,7 +38,8 @@
     "request": "2.55.0",
     "style-loader": "0.12.3",
     "url-loader": "0.5.6",
-    "webpack": "1.9.9"
+    "webpack": "1.9.9",
+    "whatwg-fetch": "0.9.0"
   },
   "engines": {
     "node": "~0.12.4"
