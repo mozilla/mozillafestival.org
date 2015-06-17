@@ -24,7 +24,8 @@ var Tickets = React.createClass({
         </HeroUnit>
         <div className="content centered wide">
           <h1>Coming soon</h1>
-          <p>Tickets will go on sale June 17, 2015.</p>
+          <p className="strike">Tickets will go on sale June 17, 2015.</p>
+          <p>Oops! We hit a snag with our ticketing software. Tickets will be available for purchase soon. <a href="https://sendto.mozilla.org/page/s/mozfest-2015-save-the-date">Sign up</a> to be notified about festival news, including ticket sales.</p>
           <div ref="titoContainer"></div>
         </div>
         <Footer/>
