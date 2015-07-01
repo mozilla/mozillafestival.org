@@ -70,7 +70,12 @@ var Location = React.createClass({
             <p>This year, MozFest returns to <a href="http://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
             <div className="horizontal-rule"></div>
             <h1>How to get there</h1>
-            <div className="illustration">
+            <div className="illustration flip-it">
+              <div className="illustration-image-container">
+                <ImageTag src1x="/assets/images/img-train.svg"
+                  height="219" width="214"
+                  alt="train icon"/>
+              </div>
               <div className="illustration-text small">
                 <h2>London Underground</h2>
                 <p>Take the Jubilee Line to North Greenwich (Zone 2).</p>
@@ -82,11 +87,6 @@ var Location = React.createClass({
                 </p>
                 <p>The Jubilee line is the only Underground route that connects with all others – so not only you can reach us easily, but National Rail passengers from all over the UK can, too. </p>
                 <p>It is a two minute walk from North Greenwich underground station to Ravensbourne. Upon exiting the station, please follow signs to The O2 and follow the covered walkway to The O2's main entrance. Before you reach the main entrance to The O2, turn right into Penrose Way and Ravensbourne’s entrance is on your right. </p>
-              </div>
-              <div className="illustration-image-container">
-                <ImageTag src1x="/assets/images/img-train.svg"
-                  height="219" width="214"
-                  alt="train icon"/>
               </div>
             </div>
           </div>
@@ -110,18 +110,18 @@ var Location = React.createClass({
         </div>
         <div className="white-background">
           <div className="centered content wide">
-            <div className="illustration">
+            <div className="illustration flip-it">
+              <div className="illustration-image-container">
+                <ImageTag src1x="/assets/images/img-ship.svg"
+                  height="218" width="286"
+                  alt="train icon"/>
+              </div>
               <div className="illustration-text small">
                 <h2>Eurostar</h2>
                 <p>The current network takes the Eurostar into King’s Cross St. Pancras Station, from where you only need to jump on the Northern Line down to London Bridge where you can then change for the Jubilee Line. </p>
                 <h2>National Rail</h2>
                 <p>Charlton mainline station is just a short ride on either a 486, 472 or 161 bus from North Greenwich underground station. All these buses start their route from North Greenwich underground so there is no confusion as to which way to go.</p>
                 <p>Southeastern runs services to Charlton train station. Turn left out of the station and catch 486, 472 or N472 buses to North Greenwich.</p>
-              </div>
-              <div className="illustration-image-container">
-                <ImageTag src1x="/assets/images/img-ship.svg"
-                  height="218" width="286"
-                  alt="train icon"/>
               </div>
             </div>
             <div className="horizontal-rule"></div>
