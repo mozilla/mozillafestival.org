@@ -1,6 +1,10 @@
 .about-page {
   .hero-unit {
     background-position: 67% center;
+    background-size: 164% 100%;
+    @media screen and (min-width: 768px) {
+      background-size: cover;
+    }
   }
   .circles-container {
     margin: 0 auto;
@@ -9,7 +13,10 @@
       text-align: center;
       width: 100%;
       max-width: 280px;
-      float: left;
+      margin: 0 auto;
+      @media screen and (min-width: 768px) {
+        float: left;
+      }
       .circle {
         display: flex;
         flex-shrink: 0;
@@ -32,6 +39,13 @@
     }
   }
   .timeline-item {
+    .timeline-content,
+    .timeline-label {
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+      }
+    }
     &.flip-it {
       .timeline-image-container {
         width: 420px;
@@ -40,7 +54,9 @@
       }
       .timeline-content,
       .timeline-label {
-        text-align: right;
+        @media screen and (min-width: 768px) {
+          text-align: right;
+        }
       }
     }
   }
@@ -48,13 +64,20 @@
     .timeline-item-container {
       width: 100%;
       max-width: 840px;
-      margin: 0 auto;
+      margin: 20px auto;
       display: flex;
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
+      }
     }
     .timeline-image-container {
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
       width: 420px;
       border-right: 1px solid #FFFFFF;
     }
@@ -69,8 +92,11 @@
       width: 28px;
       height: 1px;
       background: #FFFFFF;
-      display: inline-block;
       margin-bottom: 6px;
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+      }
     }
     .label {
       margin: 0 8px;
@@ -139,7 +165,7 @@
       width: 60px;
     }
     background: linear-gradient(to bottom, #EE8A01, #DC4B50);
-  }margin-left: -18px;
+  }
   .timeline-item-2015 {
     img {
       margin-left: -62px;

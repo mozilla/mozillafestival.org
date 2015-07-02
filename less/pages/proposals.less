@@ -6,11 +6,19 @@
     background: linear-gradient( to right, #599D73, #57949D);
   }
   .proposals-form {
+    .input-container {
+      width: 100%;
+    }
+    .privacyPolicy-container {
+      .input-container {
+        width: auto;
+      }
+    }
     label,
     input[type='text'],
     textarea,
     select {
-      width: 565px;
+      width: 100%;
       &.checkbox-input {
         width: auto;
       }

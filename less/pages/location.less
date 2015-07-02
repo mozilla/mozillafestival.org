@@ -1,6 +1,10 @@
 .location-page {
   .map-box-container {
     height: 500px;
+    margin: 0 20px;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
   }
   .small {
     p {
@@ -15,16 +19,44 @@
     }
   }
   .illustration {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
     .illustration-text {
       text-align: left;
+      @media screen and (min-width: 768px) {
+        float: right;
+      }
+    }
+    .illustration-image-container {
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: absolute;
+        left: 0;
+        right: 50%;
+        height: 100%;
+      }
     }
     .illustration-text,
     .illustration-image-container {
-      width: 50%;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        width: 50%;
+      }
+    }
+    &.flip-it {
+      @media screen and (min-width: 768px) {
+        .illustration-text {
+          float: left;
+        }
+        .illustration-image-container {
+          right: 0;
+          left: 50%;
+        }
+      }
     }
   }
 }

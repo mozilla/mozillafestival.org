@@ -116,12 +116,14 @@ html {
   overflow: hidden;
 }
 .half-content {
-  width: 50%;
-  float: left;
-  padding-left: 0;
-  padding-right: 16px;
-  &:last-child {
-    padding-left: 16px;
-    padding-right: 0;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    float: left;
+    padding-left: 0;
+    padding-right: 16px;
+    &:last-child {
+      padding-left: 16px;
+      padding-right: 0;
+    }
   }
 }

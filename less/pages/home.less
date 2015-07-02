@@ -17,6 +17,14 @@
   .hero-unit-container {
     background: linear-gradient( to right, #C26228, #AF404F);
   }
+  .iframe-container {
+    iframe {
+      @media screen and (min-width: 768px) {
+        width: 640px;
+        height: 390px;
+      }
+    }
+  }
   .hero-unit {
     padding-top: 305px;
     iframe {
@@ -26,8 +34,10 @@
     .iframe-container {
       box-sizing: content-box;
     }
+    height: 830px;
     @media screen and (min-width: 768px) {
       padding-top: 90px;
+      height: 705px;
     }
     .video-link {
       width: 112px;
@@ -40,7 +50,6 @@
         transform: scale(1.2);
       }
     }
-    height: 705px;
     h1 {
       margin: 0;
       font-size: 46px;

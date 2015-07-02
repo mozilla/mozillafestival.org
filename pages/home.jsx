@@ -28,7 +28,7 @@ var Home = React.createClass({
             if (self.state.playVideo) {
               return (
                 <div className="iframe-container">
-                  <iframe width="640" height="390" src="https://www.youtube.com/embed/dYoiHhsdHCk?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/dYoiHhsdHCk?autoplay=1" frameborder="0" allowfullscreen></iframe>
                 </div>
               );
             } else {
