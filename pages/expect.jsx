@@ -15,8 +15,7 @@ var Expect = React.createClass({
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">
-            <h1>A Note from Mark Surman,</h1>
-            <h1>Mozilla&#8217;s Executive Director</h1>
+            <h1 className="expect-header">A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>
             <div className="letter">
               <div className="half-content">
                 <p className="boldish">Dear Friends,</p>
