@@ -27,22 +27,16 @@ var Header = React.createClass({
             </Link>
           </div>
           <div className="nav-items">
-            <Link to="proposals">call for proposals</Link>
-            <Link to="tickets">tickets</Link>
-            <Link to="location">location</Link>
+            <div className="nav-link-container">
+              <Link to="proposals">call for proposals</Link>
+            </div>
+            <div className="nav-link-container">
+              <Link to="tickets">tickets</Link>
+            </div>
+            <div className="nav-link-container">
+              <Link to="location">location</Link>
+            </div>
           </div>
-          {/*<div className="nav-home">
-            <Link to="home">
-              <ImageTag src1x={logoImage}
-                alt="mozfest logo"/>
-            </Link>
-          </div>
-          <div className="nav-items">
-            <Link to="proposals">call for proposals</Link>
-            <Link to="tickets">tickets</Link>
-            <Link to="location">location</Link>
-            <div ref="tabzillaContainer" className="mozfest-tabzilla-container"></div>
-          </div>*/}
         </div>
       </div>
     );
