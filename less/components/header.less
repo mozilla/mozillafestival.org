@@ -19,14 +19,26 @@
     width: 100%;
     a {
       margin: 0 auto;
+      text-align: center;
+      img {
+        width: 85%;
+      }
     }
     @media screen and (min-width: 768px) {
       float: left;
       padding-top: 0;
       width: auto;
+      a {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
   .nav-items {
+    .nav-link-container {
+      text-align: center;
+    }
     a {
       position: relative;
       display: inline-block;
@@ -57,7 +69,6 @@
           }
         }
       }
-      display: block;
       text-align: center;
       margin: 0 0 15px 0;
     }

@@ -65,9 +65,15 @@ var Footer = React.createClass({
           </FooterIcons>
           <div className="horizontal-rule"></div>
           <div className="link-container">
-            <Link to="about">About</Link>
+            <div className="nav-link-container">
+              <Link to="about">About</Link>
+            </div>
+              <div className="nav-link-container">
             <Link to="expect">What to Expect</Link>
+            </div>
+              <div className="nav-link-container">
             <Link to="guidelines">Participation Guidelines</Link>
+            </div>
             {/*<Link to="fringe-events">Fringe Events</Link>*/}
           </div>
         </div>

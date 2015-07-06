@@ -8,11 +8,18 @@
   height: 315px;
   @media screen and (min-width: 768px) {
     height: 280px;
+    .nav-link-container {
+      display: inline;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
   .horizontal-rule {
     background: #8E90AE;
     width: 322px;
-    height: 1px;
+    height: 0;
     margin: 28px auto;
   }
   a {
@@ -65,14 +72,7 @@
       &:hover {
         border-bottom: 2px solid rgba(255,255,255,0.9);
       }
-      display: block;
-      @media screen and (min-width: 768px) {
-        display: inline;
-        margin-right: 30px;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+      display: inline;
     }
   }
 }
