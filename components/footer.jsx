@@ -59,7 +59,7 @@ var Footer = React.createClass({
             <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=%23mozfest&source=webclient">
               tweet #mozfest
             </FooterIcon>
-            <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" href="https://ti.to/Mozilla/mozfest-volunteers/registrations/pZxS526NvhNMyRVQF0zJ8Dg?registration_id=pZxS526NvhNMyRVQF0zJ8Dg">
+            <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" href="https://ti.to/Mozilla/mozfest-volunteers/">
               volunteer with us
             </FooterIcon>
           </FooterIcons>
