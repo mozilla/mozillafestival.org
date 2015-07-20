@@ -151,7 +151,10 @@ var Proposals = React.createClass({
         <Header/>
         <HeroUnit image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
-          call for proposals
+          <div>call for proposals</div>
+          <div className="deadline">
+            <span>Deadline for submission is 31st of August 2015 at 21:00 UTC</span>
+          </div>
         </HeroUnit>
         <div className="content">
           <div className="proposals-form">
@@ -226,7 +229,6 @@ var Proposals = React.createClass({
               <option value="educators">Educators</option>
               <option value="localizers">Localizers</option>
             </select>
-
 
             <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" type="checkbox">
               I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
