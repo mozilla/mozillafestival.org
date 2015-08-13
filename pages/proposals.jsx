@@ -50,38 +50,34 @@ var InputCombo = React.createClass({
     if (hasWordcount) {
       inputClassName = "has-wordcount";
       inputContainerClassName += " input-container-has-wordcount";
-      if (self.state.wordcount < 0) {
+      if (this.state.wordcount < 0) {
         wordcountClassName += " negative";
       }
     }
+    var wordcountElement;
+    if (hasWordcount) {
+      wordcountElement = (<p className={wordcountClassName}>{this.state.wordcount}</p>);
+    }
+    var labelElement = (
+      <label id={this.props.for + "Link"} className={this.props.className} htmlFor={this.props.for}>
+        {this.props.children}
+      </label>
+    );
+    var topLabel;
+    var bottomLabel;
+    if (this.props.type !== "checkbox") {
+      topLabel = labelElement;
+    } else {
+      bottomLabel = labelElement;
+    }
     return (
       <div className={this.props.for + "-container input-combo " + this.props.type + "-container"}>
-        {function() {
-          if (self.props.type !== "checkbox") {
-            return (
-              <label id={self.props.for + "Link"} className={self.props.className} htmlFor={self.props.for}>
-                {self.props.children}
-              </label>
-            );
-          }
-        }()}
+        {topLabel}
         <div className={inputContainerClassName}>
-          {function() {
-            if (hasWordcount) {
-              return (<p className={wordcountClassName}>{self.state.wordcount}</p>);
-            }
-          }()}
+          {wordcountElement}
           <RealInput onClick={this.props.onClick || function() {}} className={inputClassName} maxlength={this.props.maxlength || 1650} updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
         </div>
-        {function() {
-          if (self.props.type === "checkbox") {
-            return (
-              <label id={self.props.for + "Link"} className={self.props.className} htmlFor={self.props.for}>
-                {self.props.children}
-              </label>
-            );
-          }
-        }()}
+        {bottomLabel}
         <div id={this.props.for + "Error"} className="error-message">{this.props.errorMessage}</div>
       </div>
     );
