@@ -93,14 +93,15 @@ var Proposals = React.createClass({
     var checkbox = document.querySelector("#otherTheme");
     checkbox.checked = true;
     this.themeCheckboxClicked();
+    document.querySelector("#theme-other-error-message").classList.remove("show");
   },
   otherCheckboxClicked: function() {
     var input = document.querySelector(".other-theme-input");
     input.focus();
     this.themeCheckboxClicked();
+    document.querySelector("#theme-other-error-message").classList.remove("show");
   },
   themeCheckboxClicked: function() {
-console.log("hmmm?");
     document.querySelector("#theme-error-message").classList.remove("show");
   },
   onSubmit: function() {
@@ -130,12 +131,18 @@ console.log("hmmm?");
     }
 
     var themeValues = "";
+    var themeOtherError = false;
     var themes = "making science playing ethics storytelling journalism environment privacy teaching fundraising economy diversity inventing coding other".split(" ");
     themes.forEach(function(val) {
       var theme = document.querySelector("#" + val + "Theme");
       if (theme.checked) {
         if (val === "other") {
-          themeValues += document.querySelector(".other-theme-input").value;
+          var otherValue = document.querySelector(".other-theme-input").value.trim();
+          if (!otherValue) {
+            themeOtherError = true;
+          } else {
+            themeValues += otherValue;
+          }
         } else {
           themeValues += val;
         }
@@ -143,7 +150,11 @@ console.log("hmmm?");
       }
     });
     themeValues = themeValues.trim();
- 
+
+    if (themeOtherError) {
+      document.querySelector("#theme-other-error-message").classList.add("show");
+    }
+
     if (!themeValues) {
       if (!isError) {
         isError = "#otherTheme";
@@ -299,6 +310,7 @@ console.log("hmmm?");
             <InputCombo onClick={this.otherCheckboxClicked} className="checkbox-input theme-checkbox" for="otherTheme" type="checkbox">
               Other: <input onClick={this.otherInputClicked} className="other-theme-input" type="text"/>
             </InputCombo>
+            <div id="theme-other-error-message" className="error-message">Other cannot be empty.</div>
             <div id="theme-error-message" className="error-message">At least one theme is required.</div>
 
             <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" type="checkbox">
