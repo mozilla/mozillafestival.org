@@ -42,8 +42,7 @@ var InputCombo = React.createClass({
     }
   },
   render: function() {
-    var self = this;
-    var hasWordcount = (self.props.wordcount || self.props.wordcount === 0);
+    var hasWordcount = (this.props.wordcount || this.props.wordcount === 0);
     var inputClassName = "";
     var wordcountClassName = "word-count";
     var inputContainerClassName = "input-container";
