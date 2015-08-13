@@ -21,9 +21,10 @@
     .input-container {
       width: 100%;
     }
-    .privacyPolicy-container {
+    .checkbox-container {
       .input-container {
         width: auto;
+        float: left;
       }
     }
     label,
@@ -81,9 +82,18 @@
     select,
     .input-combo {
       margin-bottom: 20px;
-    }
-    .privacyPolicy-container .input-container {
-      float: left;
+      &.checkbox-container {
+        margin-bottom: 0;
+        &.privacyPolicy-container {
+          margin-top: 20px;
+        }
+      }
+      .other-theme-input {
+        display: inline;
+        padding: 0 5px;
+        width: auto;
+        font-size: 16px;
+      }
     }
     .error-message {
       display: none;
@@ -112,6 +122,9 @@
         font-size: 16px;
         margin-left: 5px;
         font-weight: 400;
+        &.theme-checkbox {
+          margin-top: 0;
+        }
       }
     }
   }

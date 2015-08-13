@@ -13,7 +13,7 @@ var RealInput = React.createClass({
       );
     }
     return (
-      <input maxLength={this.props.maxlength} onChange={this.props.updateFunction} id={this.props.for} type={this.props.type}/>
+      <input maxLength={this.props.maxlength} onClick={this.props.onClick || function() {}} onChange={this.props.updateFunction} id={this.props.for} type={this.props.type}/>
     );
   }
 });
@@ -55,18 +55,33 @@ var InputCombo = React.createClass({
       }
     }
     return (
-      <div className={this.props.for + "-container input-combo"}>
-        <label id={this.props.for + "Link"} className={this.props.className} htmlFor={this.props.for}>
-          {this.props.children}
-        </label>
+      <div className={this.props.for + "-container input-combo " + this.props.type + "-container"}>
+        {function() {
+          if (self.props.type !== "checkbox") {
+            return (
+              <label id={self.props.for + "Link"} className={self.props.className} htmlFor={self.props.for}>
+                {self.props.children}
+              </label>
+            );
+          }
+        }()}
         <div className={inputContainerClassName}>
           {function() {
             if (hasWordcount) {
               return (<p className={wordcountClassName}>{self.state.wordcount}</p>);
             }
           }()}
-          <RealInput className={inputClassName} maxlength={this.props.maxlength || 1650} updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
+          <RealInput onClick={this.props.onClick || function() {}} className={inputClassName} maxlength={this.props.maxlength || 1650} updateFunction={this.updateFunction} for={this.props.for} type={this.props.type}/>
         </div>
+        {function() {
+          if (self.props.type === "checkbox") {
+            return (
+              <label id={self.props.for + "Link"} className={self.props.className} htmlFor={self.props.for}>
+                {self.props.children}
+              </label>
+            );
+          }
+        }()}
         <div id={this.props.for + "Error"} className="error-message">{this.props.errorMessage}</div>
       </div>
     );
@@ -74,6 +89,20 @@ var InputCombo = React.createClass({
 });
 
 var Proposals = React.createClass({
+  otherInputClicked: function() {
+    var checkbox = document.querySelector("#otherTheme");
+    checkbox.checked = true;
+    this.themeCheckboxClicked();
+  },
+  otherCheckboxClicked: function() {
+    var input = document.querySelector(".other-theme-input");
+    input.focus();
+    this.themeCheckboxClicked();
+  },
+  themeCheckboxClicked: function() {
+console.log("hmmm?");
+    document.querySelector("#theme-error-message").classList.remove("show");
+  },
   onSubmit: function() {
     var self = this;
     document.querySelector("#generic-error").classList.remove("show");
@@ -100,6 +129,28 @@ var Proposals = React.createClass({
       }
     }
 
+    var themeValues = "";
+    var themes = "making science playing ethics storytelling journalism environment privacy teaching fundraising economy diversity inventing coding other".split(" ");
+    themes.forEach(function(val) {
+      var theme = document.querySelector("#" + val + "Theme");
+      if (theme.checked) {
+        if (val === "other") {
+          themeValues += document.querySelector(".other-theme-input").value;
+        } else {
+          themeValues += val;
+        }
+        themeValues += " ";
+      }
+    });
+    themeValues = themeValues.trim();
+ 
+    if (!themeValues) {
+      if (!isError) {
+        isError = "#otherTheme";
+      }
+      document.querySelector("#theme-error-message").classList.add("show");
+    }
+ 
     if (!privacyPolicy) {
       if (!isError) {
         isError = "#privacyPolicyLink";
@@ -131,9 +182,7 @@ var Proposals = React.createClass({
         "agenda": fieldValues.agenda,
         "participants": fieldValues.participants,
         "outcome": fieldValues.outcome,
-        "theme": self.refs.theme.getDOMNode().value,
-        "mode": self.refs.mode.getDOMNode().value,
-        "audience": self.refs.audience.getDOMNode().value
+        "theme": themeValues
       })
     }).then(function(response) {
       self.refs.submitButton.getDOMNode().classList.remove("waiting");
@@ -195,7 +244,7 @@ var Proposals = React.createClass({
               What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *
             </InputCombo>
             <InputCombo wordcount="150" errorMessage="Agenda is required." for="agenda" type="textarea">
-              How do you see that working? Describe your session's agenda in 150 words or less. *
+              How do you see that working? Describe your session's agenda in 150 words or less. Please also describe the format of the session, such as workshop, fireside chat or other. *
             </InputCombo>
             <InputCombo wordcount="150" errorMessage="Participants is required." for="participants" type="textarea">
               How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? In 150 words or less. *
@@ -204,31 +253,53 @@ var Proposals = React.createClass({
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? In 150 words or less. *
             </InputCombo>
 
-            <label id="theme">Theme</label>
-            <select ref="theme">
-              <option value="make">Make</option>
-              <option value="lead">Lead</option>
-              <option value="teach">Teach</option>
-              <option value="invent">Invent</option>
-              <option value="play">Play</option>
-            </select>
-            <label id="mode">Mode</label>
-            <select ref="mode">
-              <option value="learning">Learning</option>
-              <option value="craft">Craft</option>
-              <option value="citizenship">Citizenship</option>
-              <option value="science">Science</option>
-              <option value="journalism">Journalism</option>
-              <option value="arts">Arts</option>
-            </select>
-            <label id="audience">Audience</label>
-            <select ref="audience">
-              <option value="youth">Youth</option>
-              <option value="developers">Developers</option>
-              <option value="activists">Activists</option>
-              <option value="educators">Educators</option>
-              <option value="localizers">Localizers</option>
-            </select>
+            <label id="theme">Theme *</label>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="makingTheme" type="checkbox">
+              Making
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="scienceTheme" type="checkbox">
+              Science
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="playingTheme" type="checkbox">
+              Playing
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="ethicsTheme" type="checkbox">
+              Ethics
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="storytellingTheme" type="checkbox">
+              Storytelling
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="journalismTheme" type="checkbox">
+              Journalism
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="environmentTheme" type="checkbox">
+              Environment
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="privacyTheme" type="checkbox">
+              Privacy
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="teachingTheme" type="checkbox">
+              Teaching
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="fundraisingTheme" type="checkbox">
+              Fundraising
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="economyTheme" type="checkbox">
+              Economy
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="diversityTheme" type="checkbox">
+              Diversity
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="inventingTheme" type="checkbox">
+              Inventing
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="codingTheme" type="checkbox">
+              Coding
+            </InputCombo>
+            <InputCombo onClick={this.otherCheckboxClicked} className="checkbox-input theme-checkbox" for="otherTheme" type="checkbox">
+              Other: <input onClick={this.otherInputClicked} className="other-theme-input" type="text"/>
+            </InputCombo>
+            <div id="theme-error-message" className="error-message">At least one theme is required.</div>
 
             <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" type="checkbox">
               I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
