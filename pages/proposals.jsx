@@ -129,11 +129,11 @@ var Proposals = React.createClass({
     var themeOtherError = false;
     var themes = "Advocacy,Citizenship,Data,Inclusion,Economics,Environment,Ethics and Values,Journalism,Leadership,Open Practices,Place,Privacy,Science,Sustainability,User Control,Web Literacy,Youth,Other".split(",");
     themes.forEach(function(val) {
-      val = val.replace(/ /g, "");
-      val = val[0].toLowerCase() + val.slice(1);
-      var theme = document.querySelector("#" + val + "Theme");
+      var dataVal = val.replace(/ /g, "");
+      dataVal = dataVal[0].toLowerCase() + dataVal.slice(1);
+      var theme = document.querySelector("#" + dataVal + "Theme");
       if (theme.checked) {
-        if (val === "other") {
+        if (dataVal === "other") {
           var otherValue = document.querySelector(".other-theme-input").value.trim();
           if (!otherValue) {
             themeOtherError = true;
@@ -143,11 +143,13 @@ var Proposals = React.createClass({
         } else {
           themeValues += val;
         }
-        themeValues += " ";
+        themeValues += ", ";
       }
     });
     themeValues = themeValues.trim();
-console.log(themeValues);
+    // Remove last comma.
+    themeValues = themeValues.substring(0, themeValues.length-1);
+
     if (themeOtherError) {
       document.querySelector("#theme-other-error-message").classList.add("show");
     }
