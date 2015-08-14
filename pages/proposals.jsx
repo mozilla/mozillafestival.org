@@ -127,7 +127,7 @@ var Proposals = React.createClass({
 
     var themeValues = "";
     var themeOtherError = false;
-    var themes = "making science playing ethics storytelling journalism environment privacy teaching fundraising economy diversity inventing coding other".split(" ");
+    var themes = "making science playing ethics storytelling youth journalism environment privacy teaching fundraising economy diversity inventing coding other".split(" ");
     themes.forEach(function(val) {
       var theme = document.querySelector("#" + val + "Theme");
       if (theme.checked) {
@@ -156,7 +156,7 @@ var Proposals = React.createClass({
       }
       document.querySelector("#theme-error-message").classList.add("show");
     }
- 
+
     if (!privacyPolicy) {
       if (!isError) {
         isError = "#privacyPolicyLink";
@@ -259,7 +259,7 @@ var Proposals = React.createClass({
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? In 150 words or less. *
             </InputCombo>
 
-            <label id="theme">Theme *</label>
+            <label id="theme">Themes - Please indicate the ideas which best represent your session, you can choose more than one from the list below *</label>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="makingTheme" type="checkbox">
               Making
             </InputCombo>
@@ -275,8 +275,8 @@ var Proposals = React.createClass({
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="storytellingTheme" type="checkbox">
               Storytelling
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="journalismTheme" type="checkbox">
-              Journalism
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="youthTheme" type="checkbox">
+              Youth
             </InputCombo>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="environmentTheme" type="checkbox">
               Environment
@@ -289,6 +289,9 @@ var Proposals = React.createClass({
             </InputCombo>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="fundraisingTheme" type="checkbox">
               Fundraising
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="journalismTheme" type="checkbox">
+              Journalism
             </InputCombo>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="economyTheme" type="checkbox">
               Economy
