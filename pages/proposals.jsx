@@ -127,11 +127,13 @@ var Proposals = React.createClass({
 
     var themeValues = "";
     var themeOtherError = false;
-    var themes = "making science playing ethics storytelling youth journalism environment privacy teaching fundraising economy diversity inventing coding other".split(" ");
+    var themes = "Advocacy,Citizenship,Data,Inclusion,Economics,Environment,Ethics and Values,Journalism,Leadership,Open Practices,Place,Privacy,Science,Sustainability,User Control,Web Literacy,Youth,Other".split(",");
     themes.forEach(function(val) {
-      var theme = document.querySelector("#" + val + "Theme");
+      var dataVal = val.replace(/ /g, "");
+      dataVal = dataVal[0].toLowerCase() + dataVal.slice(1);
+      var theme = document.querySelector("#" + dataVal + "Theme");
       if (theme.checked) {
-        if (val === "other") {
+        if (dataVal === "other") {
           var otherValue = document.querySelector(".other-theme-input").value.trim();
           if (!otherValue) {
             themeOtherError = true;
@@ -141,10 +143,12 @@ var Proposals = React.createClass({
         } else {
           themeValues += val;
         }
-        themeValues += " ";
+        themeValues += ", ";
       }
     });
     themeValues = themeValues.trim();
+    // Remove last comma.
+    themeValues = themeValues.substring(0, themeValues.length-1);
 
     if (themeOtherError) {
       document.querySelector("#theme-other-error-message").classList.add("show");
@@ -259,51 +263,57 @@ var Proposals = React.createClass({
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? In 150 words or less. *
             </InputCombo>
 
-            <label id="theme">Themes - Please indicate the ideas which best represent your session, you can choose more than one from the list below *</label>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="makingTheme" type="checkbox">
-              Making
+            <label id="theme">Which topics are relevant for your session? You can choose multiple items. *</label>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="advocacyTheme" type="checkbox">
+              Advocacy
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="scienceTheme" type="checkbox">
-              Science
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="citizenshipTheme" type="checkbox">
+              Citizenship
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="playingTheme" type="checkbox">
-              Playing
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="dataTheme" type="checkbox">
+              Data
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="ethicsTheme" type="checkbox">
-              Ethics
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="inclusionTheme" type="checkbox">
+              Inclusion
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="storytellingTheme" type="checkbox">
-              Storytelling
-            </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="youthTheme" type="checkbox">
-              Youth
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="economicsTheme" type="checkbox">
+              Economics
             </InputCombo>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="environmentTheme" type="checkbox">
               Environment
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="privacyTheme" type="checkbox">
-              Privacy
-            </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="teachingTheme" type="checkbox">
-              Teaching
-            </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="fundraisingTheme" type="checkbox">
-              Fundraising
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="ethicsandValuesTheme" type="checkbox">
+              Ethics and Values
             </InputCombo>
             <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="journalismTheme" type="checkbox">
               Journalism
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="economyTheme" type="checkbox">
-              Economy
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="leadershipTheme" type="checkbox">
+              Leadership
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="diversityTheme" type="checkbox">
-              Diversity
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="openPracticesTheme" type="checkbox">
+              Open Practices
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="inventingTheme" type="checkbox">
-              Inventing
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="placeTheme" type="checkbox">
+              Place
             </InputCombo>
-            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="codingTheme" type="checkbox">
-              Coding
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="privacyTheme" type="checkbox">
+              Privacy
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="scienceTheme" type="checkbox">
+              Science
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="sustainabilityTheme" type="checkbox">
+              Sustainability
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="userControlTheme" type="checkbox">
+              User Control
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="webLiteracyTheme" type="checkbox">
+              Web Literacy
+            </InputCombo>
+            <InputCombo onClick={this.themeCheckboxClicked} className="checkbox-input theme-checkbox" for="youthTheme" type="checkbox">
+              Youth
             </InputCombo>
             <InputCombo onClick={this.otherCheckboxClicked} className="checkbox-input theme-checkbox" for="otherTheme" type="checkbox">
               Other: <input onClick={this.otherInputClicked} className="other-theme-input" type="text"/>
