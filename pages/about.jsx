@@ -102,7 +102,7 @@ var About = React.createClass({
                 workshops<br/>& sessions
               </CircleNumber>
             </div>
-            <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues.</p>
+            <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues. We explore topics like privacy, ethics, literacy and economy on the Web.</p>
           </div>
         </div>
         <div className="timeline-container">
@@ -113,10 +113,7 @@ var About = React.createClass({
             alt="2010 about image"
             imageHeight={343} imageWidth={534}
           >
-            In 2015, we’re continuing the momentum from the 
-past ﬁve years. Join us as we collectively build and 
-teach the world’s most valuable public resource: 
-the Web.
+            This year, we're focusing on leadership, advocacy and impact. We'll train tomorrow's leaders, empower participants to make a positive difference on the Web, and work toward universal web literacy.
           </TimeLineItem>
           <TimeLineItem time="2014" label="a free web" flip="true"
             className="timeline-item-2014"
@@ -124,11 +121,11 @@ the Web.
             alt="2014 about image"
             imageHeight={500} imageWidth={680}
           >
-            At MozFest 2014, nearly 1,700 participants from 
-more than 50 countries came together to improve 
-art, science, journalism, music, education and more 
-on the open Web. We hosted hundreds of diverse 
-sessions with a single guiding principle: keeping the 
+            At MozFest 2014, nearly 1,700 participants from
+more than 50 countries came together to improve
+art, science, journalism, music, education and more
+on the open Web. We hosted hundreds of diverse
+sessions with a single guiding principle: keeping the
 Web wild and free.
           </TimeLineItem>
           <TimeLineItem time="2013" label="hands on learning"
@@ -137,10 +134,10 @@ Web wild and free.
             alt="2013 about image"
             imageHeight={400} imageWidth={650}
           >
-            Learning through building was a key theme at 
-MozFest 2013. We shared our passion for the open 
-Web by creating and teaching as a community. And 
-the venue sprang to life with DIY signage, sessions 
+            Learning through building was a key theme at
+MozFest 2013. We shared our passion for the open
+Web by creating and teaching as a community. And
+the venue sprang to life with DIY signage, sessions
 and after-parties.
           </TimeLineItem>
           <TimeLineItem time="2012" label="building and making" flip="true"
@@ -149,10 +146,10 @@ and after-parties.
             alt="2012 about image"
             imageHeight={218} imageWidth={348}
           >
-            In 2012, MozFest was all about making. The event’s 
-opening-day Science Fair highlighted participants’ 
-innovative creations. And we made and hacked 
-awesome projects about gaming, mobile, privacy 
+            In 2012, MozFest was all about making. The event’s
+opening-day Science Fair highlighted participants’
+innovative creations. And we made and hacked
+awesome projects about gaming, mobile, privacy
 and the Internet of Things.
           </TimeLineItem>
           <TimeLineItem time="2011" label="settling in london"
@@ -161,13 +158,13 @@ and the Internet of Things.
             alt="2011 about image"
             imageHeight={400} imageWidth={700}
           >
-            In 2011, MozFest relocated to London with a 
-sharpened focus: media, freedom and the Web. 
-Participants lent their passion and creativity to 
-improve journalism and digital storytelling on the 
-open Web. We established a dedicated space for 
-youngsters to learn and make. And we built on the 
-infectious community spirit ﬁrst ignited in 
+            In 2011, MozFest relocated to London with a
+sharpened focus: media, freedom and the Web.
+Participants lent their passion and creativity to
+improve journalism and digital storytelling on the
+open Web. We established a dedicated space for
+youngsters to learn and make. And we built on the
+infectious community spirit ﬁrst ignited in
 Barcelona.
            </TimeLineItem>
           <TimeLineItem time="2010" label="the beginning" flip="true"
@@ -176,11 +173,11 @@ Barcelona.
             alt="2010 about image"
             imageHeight={280} imageWidth={420}
           >
-            MozFest was born in Barcelona. Originally named 
-"Drumbeat," the festival convened a community of 
-people dedicated to learning, freedom and the 
-open Web. The inaugural event hosted 350 
-participants — and together, we wrote a book titled 
+            MozFest was born in Barcelona. Originally named
+"Drumbeat," the festival convened a community of
+people dedicated to learning, freedom and the
+open Web. The inaugural event hosted 350
+participants — and together, we wrote a book titled
 “Learning Freedom and the Web.
           </TimeLineItem>
           <div className="content centered">

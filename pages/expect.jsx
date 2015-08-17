@@ -24,10 +24,10 @@ var Expect = React.createClass({
               </div>
               <div className="half-content">
                 <p>There are threats and challenges. Some companies and governments seek to wrestle control of the Web away from the public. There is also a lack of education around web literacy, the ability to meaningfully interact and create online. When users don't fully understand how the Web works, they can't harness its potential.</p>
-                <p>We can change this. At MozFest, we unite for creative sessions, peer learning and brainstorms. Together, we devise ways to teach web literacy; to be Freedom Fighters who stand up for the Web; and to ensure the next billion people to come online find a fully-open platform.</p>
+                <p>We can change this. At MozFest, we unite for creative sessions, peer learning and brainstorms. Together, we devise ways to teach web literacy; to be Freedom Fighters who stand up for the Web; and to ensure the next billion people to come online find a fully-open platform. We're seeking leaders and mentors to join us in London this year; individuals eager to empower others and make a real impact online. If you're passionate about literacy, privacy and inclusion on the Web, we hope to see you in London.</p>
                 <p>
-                  See you in London.<br/>
-                  <span className="signature-bold">—Mark Surman</span>
+                  Best,<br/>
+                  <span className="signature-bold">—Mark</span>
                 </p>
                 <div className="signature-container">
                   <ImageTag src1x="/assets/images/signature.svg"
