@@ -102,7 +102,7 @@ var About = React.createClass({
                 workshops<br/>& sessions
               </CircleNumber>
             </div>
-            <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues.</p>
+            <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues. We explore topics like privacy, ethics, literacy and economy on the Web.</p>
           </div>
         </div>
         <div className="timeline-container">
@@ -113,10 +113,9 @@ var About = React.createClass({
             alt="2010 about image"
             imageHeight={343} imageWidth={534}
           >
-            In 2015, we’re continuing the momentum from the 
-past ﬁve years. Join us as we collectively build and 
-teach the world’s most valuable public resource: 
-the Web.
+            This year, we're focusing on leadership, advocacy and impact. 
+We'll train tomorrow's leaders, empower participants to make a 
+positive difference on the Web, and work toward universal web literacy.
           </TimeLineItem>
           <TimeLineItem time="2014" label="a free web" flip="true"
             className="timeline-item-2014"
