@@ -211,9 +211,6 @@ var Proposals = React.createClass({
         <HeroUnit image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
           <div>call for proposals</div>
-          <div className="deadline">
-            <span>Deadline for submission is 31st of August 2015 at 21:00 UTC</span>
-          </div>
         </HeroUnit>
         <div className="content">
           <div className="proposals-form">
