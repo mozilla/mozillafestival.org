@@ -13,3 +13,5 @@ $> cp sample.env .env
 ```
 $> npm start
 ```
+
+By default this will run the website on http://localhost:9090
