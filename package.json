@@ -13,7 +13,7 @@
     "minify:css": "npm run watch:css -- --no-watch",
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "autoless --autoprefix '> 1%, last 2 versions' less public",
-    "postinstall": "node build.js",
+    "postinstall": "mkdirp last && node build.js",
     "server": "node app.js"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
     "mapbox.js": "2.1.5",
+    "mkdirp": "^0.5.1",
     "node-libs-browser": "0.5.2",
     "npm-run-all": "1.2.4",
     "react": "0.13.2",
