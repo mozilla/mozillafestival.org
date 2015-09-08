@@ -221,7 +221,7 @@ var Proposals = React.createClass({
 
             <p>You should expect anywhere between five and 50 participants at your session. Be prepared for a range of group sizes, abilities and ages. As a facilitator, you will frame the session goals, team up small groups and ensure participants work productively and purposefully together.</p>
 
-            <p>We're looking forward to reviewing your submission. If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
+            <p>We’re looking forward to reviewing your submission. If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
 
             <InputCombo maxlength="120" errorMessage="Session name is required." for="sessionName" type="text">
               Session Name *
@@ -241,20 +241,20 @@ var Proposals = React.createClass({
               Organization
             </InputCombo>
             <InputCombo for="twitter" type="text">
-              What's your Twitter handle?
+              What’s your Twitter handle?
             </InputCombo>
             <InputCombo for="otherFacilitators" type="text">
               Other facilitators
             </InputCombo>
 
             <InputCombo wordcount="150" errorMessage="Description is required." for="description" type="textarea">
-              What will your session or activity allow people to make, learn or do? Describe your session's goals in 150 words or less. *
+              What will your session or activity allow people to make, learn or do? Describe your session’s goals in 150 words or less. *
             </InputCombo>
             <InputCombo wordcount="150" errorMessage="Agenda is required." for="agenda" type="textarea">
-              How do you see that working? Describe your session's agenda in 150 words or less. Please also describe the format of the session, such as workshop, fireside chat or other. *
+              How do you see that working? Describe your session’s agenda in 150 words or less. Please also describe the format of the session, such as workshop, fireside chat or other. *
             </InputCombo>
             <InputCombo wordcount="150" errorMessage="Participants is required." for="participants" type="textarea">
-              How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 5 participants. 15? 50? In 150 words or less. *
+              How will you accommodate varying numbers of participants in your session? Tell us what you’ll do with 5 participants. 15? 50? In 150 words or less. *
             </InputCombo>
             <InputCombo wordcount="150" errorMessage="Outcome is required." for="outcome" type="textarea">
               What do you see as outcomes after the festival? How will you and your participants take the learning and activities forward? In 150 words or less. *
@@ -322,7 +322,7 @@ var Proposals = React.createClass({
               I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
             </InputCombo>
             <button className="button" id="submit-button" ref="submitButton" onClick={this.onSubmit}>Submit <Icon spin name="spinner"/></button>
-            <div id="generic-error" className="error-message">Uh oh! There's an unknown error with your session proposal. Please try again later, or email <a href="mailto:festival@mozilla.org ">festival@mozilla.org</a> for help.</div>
+            <div id="generic-error" className="error-message">Uh oh! There’s an unknown error with your session proposal. Please try again later, or email <a href="mailto:festival@mozilla.org ">festival@mozilla.org</a> for help.</div>
           </div>
         </div>
         <Footer/>
