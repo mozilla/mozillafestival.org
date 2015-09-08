@@ -51,7 +51,7 @@ var Home = React.createClass({
         <div className="centered content wide">
           <h1>Help Make the Web a Better Place</h1>
           <p>Share your ideas for improving the open Internet</p>
-          <Link to="proposals" className="button"><span>Submit a Proposal</span></Link>
+          <Link to="tickets" className="button"><span>Buy a Ticket</span></Link>
         </div>
         <Footer/>
       </div>
