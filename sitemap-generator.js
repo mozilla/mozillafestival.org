@@ -1,5 +1,5 @@
 var sm = require("sitemap"),
-    paths = require('./routes.js').paths;
+    paths = require('./client.jsx').paths;
 
 var PATH_TO_SKIP = [
   "/proposals-2015"
