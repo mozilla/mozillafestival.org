@@ -19,6 +19,25 @@ var routes = (
   </Route>
 );
 
+var urls = [];
+React.Children.forEach(routes.props.children, function(item) {
+  var path = item.props.path;
+
+  if (!path && item.props.from) {
+    path = item.props.from;
+    redirects[path] = item.props.to;
+  }
+
+  console.log(path);
+  urls.push(path || '/');
+});
+
+console.log(Object.keys(routes)); 
+// Array [ "type", "key", "ref", "_owner", "_context", "_store" ]
+
 Router.run(routes, Router.HistoryLocation, function (Handler) {
   React.render(<Handler/>, document.querySelector("#my-app"));
 });
+
+
+exports.paths = urls;

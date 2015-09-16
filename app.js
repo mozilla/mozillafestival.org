@@ -6,6 +6,7 @@ var express = require('express'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
     hatchet = require("hatchet");
+    // Sitemap = require('./sitemap-generator');
 
 Habitat.load();
 
@@ -29,6 +30,13 @@ app.configure(function() {
     res.send(err);
   });
 });
+
+// app.get('/sitemap.xml', function(req, res) {
+//   Sitemap.toXML( function (xml) {
+//     res.header('Content-Type', 'application/xml');
+//     res.send(xml);
+//   });
+// });
 
 app.post('/add-session', limiter, function (req, res) {
   var sessionName = req.body.sessionName;
