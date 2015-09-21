@@ -3,11 +3,14 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var ImageTag = require('../components/imagetag.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Expect = React.createClass({
+  pageMetaDescription: "MozFest is an annual celebration of the world’s most valuable public resource: the open Web.",
   render: function() {
     return (
       <div className="expect-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/expect.jpg"
                   image2x="/assets/images/expect.jpg">

@@ -5,8 +5,10 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('../components/imagetag.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Home = React.createClass({
+  pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
   getInitialState: function() {
     return {
       playVideo: false
@@ -21,6 +23,7 @@ var Home = React.createClass({
     var self = this;
     return (
       <div className="home-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
         <HeroUnit className="home-hero-unit" image="/assets/images/home.jpg"
                   image2x="/assets/images/home.jpg">

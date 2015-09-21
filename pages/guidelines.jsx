@@ -2,11 +2,14 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Guidelines = React.createClass({
+  pageMetaDescription: "The Mozilla Festival respects Mozilla's community participation guidelines.",
   render: function() {
     return (
       <div className="guidelines-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/guidelines.jpg"
                   image2x="/assets/images/guidelines.jpg">

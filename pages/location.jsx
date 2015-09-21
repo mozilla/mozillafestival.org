@@ -2,10 +2,12 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var ImageTag = require('../components/imagetag.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var accessToken = 'pk.eyJ1IjoiYWxpY29kaW5nIiwiYSI6Il90WlNFdE0ifQ.QGGdXGA_2QH-6ujyZE2oSg';
 
 var Location = React.createClass({
+  pageMetaDescription: "This year, MozFest returns to Ravensbourne, a media campus in the heart of London.",
   componentDidMount: function() {
     var self = this;
     /*var head = document.getElementsByTagName('head')[0];
@@ -62,6 +64,7 @@ var Location = React.createClass({
   render: function() {
     return (
       <div className="location-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <div className="map-box-container" ref="map"></div>
         <div className="white-background">

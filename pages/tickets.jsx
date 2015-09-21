@@ -2,8 +2,10 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Tickets = React.createClass({
+  pageMetaDescription: "Tickets are available for youth and adults.",
   componentDidMount: function() {
     var titoContainer = this.refs.titoContainer.getDOMNode();
     var titoWidget = document.querySelector(".widgets .tito-tickets");
@@ -17,6 +19,7 @@ var Tickets = React.createClass({
   render: function() {
     return (
       <div className="tickets-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/tickets.jpg"
                   image2x="/assets/images/tickets.jpg">
