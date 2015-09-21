@@ -1,10 +1,11 @@
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var ImageTag = require('../components/imagetag.jsx');
-var Router = require('react-router');
-var Link = Router.Link;
+var generateHelmet = require('../lib/helmet.jsx');
 
 var TimeLineItem = React.createClass({
   render: function() {
@@ -82,9 +83,11 @@ var CircleNumber = React.createClass({
 });
 
 var About = React.createClass({
+  pageMetaDescription: "Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web.",
   render: function() {
     return (
       <div className="about-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/about.jpg"
                   image2x="/assets/images/about.jpg">

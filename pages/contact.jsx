@@ -2,11 +2,14 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Contact = React.createClass({
+  pageMetaDescription: "Please email festival@mozilla.org with your questions and suggestions!",
   render: function() {
     return (
       <div className="contact-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/contact.jpg"
                   image2x="/assets/images/contact.jpg">

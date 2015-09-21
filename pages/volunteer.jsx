@@ -2,8 +2,10 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
+var generateHelmet = require('../lib/helmet.jsx');
 
 var Volunteer = React.createClass({
+  pageMetaDescription: "Volunteers are integral to what we do at Mozilla, and MozFest is no different.",
   componentDidMount: function() {
     var titoContainer = this.refs.titoContainer.getDOMNode();
     var titoWidget = document.querySelector(".widgets .tito-volunteer-tickets");
@@ -17,6 +19,7 @@ var Volunteer = React.createClass({
   render: function() {
     return (
       <div className="volunteer-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <HeroUnit image="/assets/images/tickets.jpg"
                   image2x="/assets/images/tickets.jpg">
