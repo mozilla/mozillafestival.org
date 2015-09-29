@@ -1,6 +1,4 @@
 var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
@@ -192,8 +190,6 @@ participants — and together, we wrote a book titled
                 <div className="inner-circle-2"></div>
               </div>
             </div>
-            <h1>Want to participate?</h1>
-            <Link to="proposals" className="button"><span>Submit a Proposal</span></Link>
           </div>
         </div>
         <Footer/>
