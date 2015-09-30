@@ -1,5 +1,6 @@
 # 2015.mozillafestival.org
-2015 Mozilla Festival site
+
+The 2015 Mozilla Festival web site.
 
 ## Setup
 
