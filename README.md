@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mozilla/2015.mozillafestival.org.svg?branch=master)](https://travis-ci.org/mozilla/2015.mozillafestival.org)
+
 # 2015.mozillafestival.org
 
 The 2015 Mozilla Festival web site.
