@@ -188,8 +188,8 @@ var SessionsPage = React.createClass({
     return (
       <div className="sessions-page">
         <Header/>
-        <HeroUnit image="/assets/images/spaces.jpg"
-                  image2x="/assets/images/spaces.jpg">
+        <HeroUnit image="/assets/images/sessions.jpg"
+                  image2x="/assets/images/sessions.jpg">
           Sessions
         </HeroUnit>
         <div className="white-background">
