@@ -6,9 +6,6 @@ var ImageTag = require('../components/imagetag.jsx');
 
 var SpacesInfo = [
   {
-    iconUrl: "/assets/images/space-icon/Journalism.png",
-    icon2xUrl: "/assets/images/space-icon/Journalism@2x.png",
-    iconAlt: "Journalism icon",
     name: "Journalism",
     description: 
       "<p>Journalism has an indelible impact on the Web. Code developed in newsrooms — like Django and Backbone — shape our experiences online; reporting amuses us, enrages us and leads to meaningful change in our communities; and millions of readers engage with online coverage daily.</p>" +
@@ -25,9 +22,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/Science.png",
-    icon2xUrl: "/assets/images/space-icon/Science@2x.png",
-    iconAlt: "Science icon",
     name: "Science",
     description:
       "<p>Science and the Web both help us understand the world around us. In the Science Space, participants learn, tinker, explore and hack at the intersection of science and the Internet, and learn how the Web can advance scientific work.</p>" +
@@ -45,9 +39,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/DigitalCitizenship.png",
-    icon2xUrl: "/assets/images/space-icon/DigitalCitizenship@2x.png",
-    iconAlt: "Digital Citizenship icon",
     name: "Digital Citizenship",
     description:
       "<p>We believe everyone should be able to read, write and participate on the Web. The Digital Citizenship Space is all about unpacking how we achieve this.</p>" +
@@ -71,9 +62,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/MozillaLearningNetworks.png",
-    icon2xUrl: "/assets/images/space-icon/MozillaLearningNetworks@2x.png",
-    iconAlt: "Mozilla Learning Networks icon",
     name: "Mozilla Learning Networks",
     description:
       "<p>The key to empowering individuals online and cementing the Web as a public resource is web literacy. In the Mozilla Learning Networks Space, we explore how to best teach and spread web literacy.</p>" +
@@ -90,9 +78,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/GlobalVillages.png",
-    icon2xUrl: "/assets/images/space-icon/GlobalVillages@2x.png",
-    iconAlt: "Global Villages icon",
     name: "Global Villages",
     description:
       "<p>What is the Global Village? A collection of self-contained but interconnected places from around the world where participants at Mozfest meet, learn and tinker with tomorrow’s places. The Global Village cultivates leading practitioners to build, teach and advocate for an Internet of things that empowers its users.</p>" +
@@ -110,9 +95,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/Participation.png",
-    icon2xUrl: "/assets/images/space-icon/Participation@2x.png",
-    iconAlt: "Participation icon",
     name: "Participation",
     description:
       "<p>Participation is at the heart of Mozilla’s approach to learning. But participation doesn’t just happen — it’s built through great design and great leadership.</p>" +
@@ -128,9 +110,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/YouthZone.png",
-    icon2xUrl: "/assets/images/space-icon/YouthZone@2x.png",
-    iconAlt: "Youth Zone icon",
     name: "Youth Zone",
     description:
       "<p>There’s sometimes a fundamental clash between youth and adults on the Web. Young people discover platforms and activities that are important and meaningful to them — but adults disagree, wishing youngsters would invest their time elsewhere. In the Youth Zone Space, we’ll explore and aim to reconcile this conflict.</p>" +
@@ -146,9 +125,6 @@ var SpacesInfo = [
     ]
   },
   {
-    iconUrl: "/assets/images/space-icon/Localization.png",
-    icon2xUrl: "/assets/images/space-icon/Localization@2x.png",
-    iconAlt: "Localization icon",
     name: "Localization",
     description:
       "<p>All languages and cultures are uniquely different and valuable — and they should be treated this way on the Web, too. In order for the Web to empower everyone, it must be adapted to diverse communities and peoples. The next billion people to come online shouldn’t find an English-only Web.</p>" +
@@ -170,11 +146,6 @@ var Space = React.createClass({
       <div className="space-card">
         <div className="detail">
           <div className="header">
-            <div className="img-container">
-              <ImageTag src1x={this.props.iconUrl}
-                        src2x={this.props.icon2xUrl}
-                        alt={this.props.iconAlt}/>
-            </div>
             <h1>{this.props.name}</h1>
           </div>
           <div className="description" dangerouslySetInnerHTML={{__html: this.props.description}}></div>
