@@ -195,13 +195,13 @@ var SessionsPage = React.createClass({
         <div className="white-background">
           <div className="content centered wide">
             <h1>Spaces and Pathways</h1>
-            <p>To help you get the most out of MozFest, we’ve introduced two new concepts to the program: Spaces and Pathways. Spaces are physical hubs, typically located on a single floor, with sessions exploring a shared theme. Pathways are a series of three or more complementary sessions and experiences that may cross multiple Spaces. Each Pathway has been tailored for participants to learn a particular set of skills. Participants are encouraged to make use of the recommended Pathways or design their own unique MozFest experience.</p>
+            <p>To help you get the most out of MozFest, we’ve introduced two new concepts to the program: Spaces and Pathways. Spaces are physical hubs, typically located on a single floor, with sessions exploring a shared theme. Pathways are a series of three or more complementary sessions and experiences that may cross multiple Spaces.</p>
             <div className="horizontal-rule"></div>
           </div>
         </div>
         <div className="white-background">
           <div className="content centered wide no-vertical-margin">
-            <h1>Sessions</h1>
+            <h1>Spaces</h1>
           </div>
         </div>
         {this.spaces}
