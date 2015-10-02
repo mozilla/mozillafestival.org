@@ -36,6 +36,9 @@ var Header = React.createClass({
             <div className="nav-link-container">
               <Link to="expect">What to Expect</Link>
             </div>
+            <div className="nav-link-container">
+              <Link to="sessions">Sessions</Link>
+            </div>
           </div>
         </div>
       </div>
