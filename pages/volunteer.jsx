@@ -21,8 +21,8 @@ var Volunteer = React.createClass({
       <div className="volunteer-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/tickets.jpg"
-                  image2x="/assets/images/tickets.jpg">
+        <HeroUnit image="/assets/images/volunteer.jpg"
+                  image2x="/assets/images/volunteer.jpg">
           volunteer
         </HeroUnit>
         <div className="content centered wide">
