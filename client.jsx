@@ -16,6 +16,7 @@ var routes = (
     <Route name="fringe-events" path="/fringe-events" handler={require('./pages/fringe-events.jsx')} />
     <Route name="volunteer" path="/volunteer" handler={require('./pages/volunteer.jsx')} />
     <Route name="session-add-success" path="/session-add-success" handler={require('./pages/session-add-success.jsx')} />
+    <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />
   </Route>
 );
 
