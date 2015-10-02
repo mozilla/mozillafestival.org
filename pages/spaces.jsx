@@ -199,14 +199,25 @@ var Space = React.createClass({
   }
 });
 
-
 var SpacesPage = React.createClass({
   spaces: SpacesInfo,
+  componentWillMount: function() {
+    this.spaces = this.spaces.map(function(space,i) {
+      var whiteBg = (i%2==0) ? "white-background" : "";
+      return (
+        <div className={whiteBg} key={i}>
+          <div className="content wide">
+            <Space {...space} />
+          </div>
+        </div>
+      );
+    });
+  },
   render: function() {
     return (
       <div className="volunteer-page">
         <Header/>
-        <HeroUnit image="/assets/images/spaces.png"
+        <HeroUnit image="/assets/images/spaces.jpg"
                   image2x="/assets/images/spaces.jpg">
           Spaces
         </HeroUnit>
@@ -219,18 +230,7 @@ var SpacesPage = React.createClass({
             <div className="horizontal-rule"></div>
           </div>
         </div>
-        {
-           this.spaces.map(function(space,i){
-            var whiteBg = (i%2==0) ? "white-background" : "";
-            return(
-              <div className={whiteBg} key={i}>
-                <div className="content wide">
-                  <Space {...space} />
-                </div>
-              </div>
-            )
-          })
-        }
+        {this.spaces}
         <Footer/>
       </div>
     );
