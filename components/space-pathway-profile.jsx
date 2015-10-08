@@ -1,0 +1,37 @@
+var React = require('react');
+
+var SpacePathwayProfile = React.createClass({
+  render: function() {
+    return (
+      <div className="space-pathway-profile">
+        <div className="detail">
+          <div className="header">
+            <h1>{this.props.name}</h1>
+          </div>
+          { this.props.type ? <div className="type">{this.props.type}</div> : null }
+          <div className="description">
+            { this.props.description.map(function(text,i) { return <p key={i}>{text}</p>; }) }
+          </div>
+        </div>
+        <div className="contacts">
+          { this.props.contacts ? <h2>{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>
+                                : null}
+          <ul>
+          {
+            this.props.contacts ? this.props.contacts.map(function(contact) {
+              return (
+                <li key={contact.name}>
+                  <div className="name">{contact.name}</div>
+                  { contact.twitter ? <div className="twitter"><a href={"https://twitter.com/"+contact.twitter}>{contact.twitter}</a></div> : null }
+                </li>
+              )
+            }) : null
+          }
+          </ul>
+        </div>
+      </div>
+    );
+  }
+});
+
+module.exports = SpacePathwayProfile;

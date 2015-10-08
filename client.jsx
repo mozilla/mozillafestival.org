@@ -18,6 +18,7 @@ var routes = (
     <Route name="session-add-success" path="/session-add-success" handler={require('./pages/session-add-success.jsx')} />
     <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />
     <Route name="sessions" path="/sessions" handler={require('./pages/sessions.jsx')} />
+    <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
   </Route>
 );
 
