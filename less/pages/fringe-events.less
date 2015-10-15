@@ -1,3 +1,29 @@
 .fringe-events-page {
+  .cta {
+    margin-top: 35px;
+    h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #55565A;
+    }
+    .button {
+      &:before, {
+        display: none;
+      }
+      &:hover {
+        &:before {
+          left: 0;
+        }
+        span {
+          transform: none;
+        }
+      }
 
+    }
+  }
+  .required-note {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    font-size: 18px;
+  }
 }
