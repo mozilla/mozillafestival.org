@@ -4,8 +4,7 @@ var express = require('express'),
     request = require('request'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
-    RateLimit = require('express-rate-limit'),
-    hatchet = require("hatchet");
+    RateLimit = require('express-rate-limit');
 
 Habitat.load();
 
@@ -42,15 +41,6 @@ app.post('/add-fringe-event', limiter, function (req, res) {
     if (err) {
       res.status(500).send({error: err});
     } else {
-      // hatchet.send("mozfest_session_proposal", {
-      //   email: email
-      // }, function(err, data) {
-      //   if (err) {
-      //     console.error("Error sending email: " + err);
-      //   } else {
-      //     console.log("we sent a message!");
-      //   }
-      // });
       res.send("Ok");
     }
   });
