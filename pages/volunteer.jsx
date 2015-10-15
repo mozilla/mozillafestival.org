@@ -6,16 +6,6 @@ var generateHelmet = require('../lib/helmet.jsx');
 
 var Volunteer = React.createClass({
   pageMetaDescription: "Volunteers are integral to what we do at Mozilla, and MozFest is no different.",
-  componentDidMount: function() {
-    var titoContainer = this.refs.titoContainer.getDOMNode();
-    var titoWidget = document.querySelector(".widgets .tito-volunteer-tickets");
-    titoContainer.appendChild(titoWidget);
-  },
-  componentWillUnmount: function() {
-    var titoWidget = this.refs.titoContainer.getDOMNode().querySelector(".tito-volunteer-tickets");
-    var widgetContainer = document.querySelector(".widgets");
-    widgetContainer.appendChild(titoWidget);
-  },
   render: function() {
     return (
       <div className="volunteer-page">
@@ -33,7 +23,8 @@ var Volunteer = React.createClass({
           <p>Volunteers are asked to share four hours of their time. As a thank you, we’ll cover the festival’s ticket cost. Volunteers also receive meals and a MozFest t-shirt. Unfortunately, we cannot cover travel to and from the event.</p>
 
           <p>The MozFest team meets bi-monthly in Mozilla’s London office, so come say hi and learn more. The next Mozpub is in October — email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> for details.</p>
-          <div ref="titoContainer"></div>
+          <div className="horizontal-rule"></div>
+          <p className="thank-you">Thanks for your interest. All volunteer roles have now been filled.</p>
         </div>
         <Footer/>
       </div>
