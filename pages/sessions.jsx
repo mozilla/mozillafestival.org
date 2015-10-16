@@ -121,7 +121,7 @@ var SpacesInfo = [
     name: "Youth Zone",
     description: [
       "There’s sometimes a fundamental clash between youth and adults on the Web. Young people discover platforms and activities that are important and meaningful to them — but adults disagree, wishing youngsters would invest their time elsewhere. In the Youth Zone Space, we’ll explore and aim to reconcile this conflict.",
-      "Young people and adults will work in tandem across three workshops and 30 sessions. Together, we’ll explore new technology and how it’s relevant to all participants. We’ll also build things together, and learn about fulfilling careers based in new media.",
+      "Young people and adults will work in tandem across three pathways and 30 sessions. Together, we’ll explore new technology and how it’s relevant to all participants. We’ll also build things together, and learn about fulfilling careers based in new media.",
     ],
     contacts: [
       {

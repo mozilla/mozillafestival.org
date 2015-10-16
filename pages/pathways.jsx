@@ -62,11 +62,12 @@ var PathwaysInfo = [
     name: "Storytellers and Coders Unite",
     type: "Independent Pathway",
     description: [
-      "This is a pathway for those interested in creating interactive storytelling like immersive journalism, documentaries, activism campaigns and additional content. Join others to create new interfaces and dynamics for storytelling on the Web.",
+      "This is a pathway for those interested in creating factual interactive stories that can change the world. Join others to create new interfaces and interactive dynamics for stories to feel meaningful on the Web. Brainstorm on real projects and help building a community of professionals that want to work together and create amazing projects!",
     ],
     contacts: [
       {
-        name: "Sandra Gaudenzi"
+        name: "Sandra Gaudenzi",
+        twitter: "@sgaudenzi"
       }
     ]
   },
