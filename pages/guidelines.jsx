@@ -3,6 +3,7 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
+var Link = require("react-router").Link;
 
 var Guidelines = React.createClass({
   pageMetaDescription: "The Mozilla Festival respects Mozilla's community participation guidelines.",
@@ -64,6 +65,10 @@ var Guidelines = React.createClass({
                 Email: <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>
               </p>
             </div>
+          </div>
+          <div className="centered content wide">
+            <h1>Working in the Open</h1>
+            <p>MozFest planning is <Link to="submission-process">done in the open</Link> because working in the open is one of our core values. We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. We recommend bookmarking WorkOpen.org and reading through the interviews with passionate advocates for open practices.</p>
           </div>
         </div>
         <Footer/>
