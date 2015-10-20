@@ -4,8 +4,7 @@ var express = require('express'),
     request = require('request'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
-    RateLimit = require('express-rate-limit'),
-    hatchet = require("hatchet");
+    RateLimit = require('express-rate-limit');
 
 Habitat.load();
 
@@ -27,6 +26,23 @@ app.configure(function() {
   app.use(bodyParser.json());
   app.use(function(err, req, res, next) {
     res.send(err);
+  });
+});
+
+app.post('/add-fringe-event', limiter, function (req, res) {
+  console.log("/////////////")
+  console.log(req.body);
+  request({
+    method: 'POST',
+    // my temp form
+    url: "https://docs.google.com/a/mozillafoundation.org/forms/d/1PPD9q83CYhSdmlWTDWfo1JSHb3dE4Jy0JZ7ZB8yJ8BA/formResponse",
+    form: req.body
+  }, function(err) {
+    if (err) {
+      res.status(500).send({error: err});
+    } else {
+      res.send("Ok");
+    }
   });
 });
 
