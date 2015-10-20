@@ -69,6 +69,9 @@ var Footer = React.createClass({
               <Link to="about">About</Link>
             </div>
             <div className="nav-link-container">
+              <Link to="team">Festival Team</Link>
+            </div>
+            <div className="nav-link-container">
               <Link to="guidelines">Participation Guidelines</Link>
             </div>
             <div className="nav-link-container">
