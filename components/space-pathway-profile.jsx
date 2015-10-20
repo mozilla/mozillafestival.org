@@ -1,4 +1,5 @@
 var React = require('react');
+var ImageTag = require('./imagetag.jsx');
 
 var SpacePathwayProfile = React.createClass({
   render: function() {
@@ -6,6 +7,8 @@ var SpacePathwayProfile = React.createClass({
       <div className="space-pathway-profile">
         <div className="detail">
           <div className="header">
+            { this.props.iconPath ? <ImageTag src1x={this.props.iconPath} width="100" /> 
+                                  : null}
             <h1>{this.props.name}</h1>
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
