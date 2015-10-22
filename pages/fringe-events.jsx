@@ -50,7 +50,7 @@ var Input = React.createClass({
         {this.props.additionalText ? <p className="additional-text">{this.props.additionalText}</p> : null }
         {field}
         {this.props.exampleValue ? <p className="example-value">{this.props.exampleValue}</p> : null }
-        {this.props.label === "Privacy Policy" ? <span>I’m okay with Mozilla handling this info as you explain in your <a href="https://www.mozilla.org/privacy/">privacy policy</a>. Please note: the information in this form will be submitted via a private Google form.</span>
+        {this.props.name === "privacy" ? <span>I’m okay with Mozilla handling this info as you explain in your <a href="https://www.mozilla.org/privacy/">privacy policy</a>. Please note: the information in this form will be submitted via a private Google form.</span>
                                                : null
         }
         <ErrorMessage field={this.props.name} />
@@ -64,23 +64,23 @@ var FringeEventForm = Formation.CreateForm({
     return {
       "name": {
         required: true,
-        label: 'Name of Fringe Event'
+        label: 'Name of fringe event'
       },
       "time": {
         required: true,
-        label: 'Date and Time',
+        label: 'Date and time',
         validations: this.dateTimeValidator,
         placeholder: "dd/mm/yyyy --:-- --",
         exampleValue: "Example: 31/10/2015 03:30 PM"
       },
       "location": {
         required: true,
-        label: 'Event Location',
+        label: 'Event location',
         additionalText: "Please add full address here, including post code"
       },
       "description": {
         required: true,
-        label: 'Description of your Event',
+        label: 'Description of your event',
         validations: this.wordCountValidator,
         additionalText: "Maximum 100 words / 1,000 characters",
         fieldType: "textarea"
@@ -92,7 +92,7 @@ var FringeEventForm = Formation.CreateForm({
       },
       "privacy": {
         required: true,
-        label: 'Privacy Policy',
+        label: 'Privacy policy',
         fieldType: "checkbox"
       }
     };
