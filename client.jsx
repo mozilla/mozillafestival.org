@@ -13,12 +13,13 @@ var routes = (
     <Route name="contact" path="/contact" handler={require('./pages/contact.jsx')} />
     <Route name="expect" path="/expect" handler={require('./pages/expect.jsx')} />
     <Route name="guidelines" path="/guidelines" handler={require('./pages/guidelines.jsx')} />
-    <Route name="fringe-events" path="/fringe-events" handler={require('./pages/fringe-events.jsx')} />
+    <Route name="fringe-events" path="/fringe" handler={require('./pages/fringe-events.jsx')} />
     <Route name="volunteer" path="/volunteer" handler={require('./pages/volunteer.jsx')} />
-    <Route name="session-add-success" path="/session-add-success" handler={require('./pages/session-add-success.jsx')} />
+    <Route name="fringe-event-add-success" path="/fringe-event-add-success" handler={require('./pages/fringe-event-add-success.jsx')} />
     <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />
     <Route name="sessions" path="/sessions" handler={require('./pages/sessions.jsx')} />
     <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
+    <Route name="team" path="/team" handler={require('./pages/team.jsx')} />
   </Route>
 );
 

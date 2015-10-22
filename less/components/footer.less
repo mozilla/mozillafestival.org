@@ -9,7 +9,7 @@
   @media screen and (min-width: 768px) {
     height: 280px;
     .nav-link-container {
-      display: inline;
+      display: inline-block;
       margin-right: 30px;
       &:last-child {
         margin-right: 0;
@@ -29,8 +29,7 @@
     display: inline-block;
   }
   .footer-content {
-    max-width: 495px;
-    width: 100%;
+    max-width: 768px;
   }
   .footer-icons {
     display: flex;
@@ -60,6 +59,9 @@
         justify-content: center;
         flex-shrink: 0;
         transition: all 0.18s ease-in-out 0s;
+        img {
+          width: 35px;
+        }
       }
 
     }

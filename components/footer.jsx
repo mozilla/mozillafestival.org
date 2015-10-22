@@ -62,6 +62,9 @@ var Footer = React.createClass({
             <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="volunteer">
               volunteer with us
             </FooterIcon>
+            <FooterIcon icon="/assets/images/img-fringe.svg" alt="fringe event icon" to="fringe-events">
+              Fringe events
+            </FooterIcon>
           </FooterIcons>
           <div className="horizontal-rule"></div>
           <div className="link-container">
@@ -69,12 +72,14 @@ var Footer = React.createClass({
               <Link to="about">About</Link>
             </div>
             <div className="nav-link-container">
+              <Link to="team">Festival Team</Link>
+            </div>
+            <div className="nav-link-container">
               <Link to="guidelines">Participation Guidelines</Link>
             </div>
             <div className="nav-link-container">
               <Link to="submission-process">Submission Process</Link>
             </div>
-            {/*<Link to="fringe-events">Fringe Events</Link>*/}
           </div>
         </div>
       </div>
