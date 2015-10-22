@@ -30,6 +30,32 @@ app.configure(function() {
   });
 });
 
+app.post('/add-fringe-event', limiter, function (req, res) {
+  console.log("/////////////")
+  console.log(req.body);
+  request({
+    method: 'POST',
+    // my temp form
+    url: "https://docs.google.com/a/mozillafoundation.org/forms/d/1PPD9q83CYhSdmlWTDWfo1JSHb3dE4Jy0JZ7ZB8yJ8BA/formResponse",
+    form: req.body
+  }, function(err) {
+    if (err) {
+      res.status(500).send({error: err});
+    } else {
+      // hatchet.send("mozfest_session_proposal", {
+      //   email: email
+      // }, function(err, data) {
+      //   if (err) {
+      //     console.error("Error sending email: " + err);
+      //   } else {
+      //     console.log("we sent a message!");
+      //   }
+      // });
+      res.send("Ok");
+    }
+  });
+});
+
 app.get('*', function (request, response) {
   response.sendfile(path.join(__dirname, '/public/index.html'));
 });
