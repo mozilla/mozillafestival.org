@@ -12,7 +12,7 @@ var Success = React.createClass({
         <Header/>
         <HeroUnit image="/assets/images/fringe.jpg"
                   image2x="/assets/images/fringe.jpg">
-          call for proposals
+          Fringe Events
         </HeroUnit>
         <div className="centered content wide">
           <h1>Success!</h1>

@@ -5,7 +5,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
-    hatchet = require("hatchet");
+    GoogleSpreadsheet = require("google-spreadsheet");
 
 Habitat.load();
 
@@ -31,33 +31,51 @@ app.configure(function() {
 });
 
 app.post('/add-fringe-event', limiter, function (req, res) {
-  console.log("/////////////")
-  console.log(req.body);
+  var userInputs = {};
+  var fringeFormFields = env.get("FRINGE_FORM_FIELD");
+  var realFieldNames = {
+    name: fringeFormFields.name,
+    time: fringeFormFields.time,
+    location: fringeFormFields.location,
+    description: fringeFormFields.description,
+    link: fringeFormFields.link,
+    privacy: fringeFormFields.privacy
+  };
+  Object.keys(req.body).forEach(function(maskedFieldName){
+    var realFieldName = realFieldNames[maskedFieldName];
+    userInputs[realFieldName] = req.body[maskedFieldName];
+  });
   request({
     method: 'POST',
-    // my temp form
-    url: "https://docs.google.com/a/mozillafoundation.org/forms/d/1PPD9q83CYhSdmlWTDWfo1JSHb3dE4Jy0JZ7ZB8yJ8BA/formResponse",
-    form: req.body
+    url: env.get('FRINGE_EVENT_FORM_ACTION_URL'),
+    form: userInputs
   }, function(err) {
     if (err) {
+      console.log("[Error] ", err);
       res.status(500).send({error: err});
     } else {
-      // hatchet.send("mozfest_session_proposal", {
-      //   email: email
-      // }, function(err, data) {
-      //   if (err) {
-      //     console.error("Error sending email: " + err);
-      //   } else {
-      //     console.log("we sent a message!");
-      //   }
-      // });
       res.send("Ok");
     }
   });
 });
 
 app.get('*', function (request, response) {
-  response.sendfile(path.join(__dirname, '/public/index.html'));
+  if (request.path === "/get-fringe-events") {
+    // this fetches data stored in the Fringe Events Google Spreadsheet
+    var sheet = new GoogleSpreadsheet(env.get('FRINGE_EVENT_SPREADSHEET_ID'));
+    sheet.getRows(1, function(err, rows){
+      if (err) {
+        console.log("[Error] ", err);
+        response.status(500).json(err);
+      } else {
+        response.send( rows.filter(function(row) {
+                        return row.approved;
+                      }));
+      }
+    });
+  } else {
+    response.sendfile(path.join(__dirname, '/public/index.html'));
+  }
 });
 
 app.listen(env.get('PORT'), function () {

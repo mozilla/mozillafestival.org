@@ -8,24 +8,42 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
+var Event = React.createClass({
+  render: function() {
+    var link = this.props.linktoregisterfortheeventifavailable;
+    return (
+      <li>
+        <h1>{this.props.nameofevent}</h1>
+        <div className="details">
+          <div className="time">{moment(this.props.dateandtime,"DD/MM/YYYY hh:mm A").format("MMM DD, YYYY hh:mm A")}</div>
+          <div className="location">{this.props.eventlocation}</div>
+          { link ? <div className="url"><a href={link}>{link}</a></div>
+                 : null
+          }
+          <p className="description">{this.props.descriptionofyourevent}</p>
+        </div>
+      </li>
+    );
+  }
+})
+
 var Input = React.createClass({
   mixins: [Formation.FormMixin],
   render: function () {
     var fieldType = this.props.fieldType || "text";
-    var field = fieldType !== "textarea" ? <input type={this.props.fieldType || "text"}
-                                                  name={this.props.name}
-                                                  id={this.props.id}
-                                                  placeholder={this.props.placeholder}
-                                                  valueLink={this.linkField(this.props.name)} />
-                                         : <textarea type={this.props.fieldType || "text"}
-                                                     name={this.props.name}
-                                                     id={this.props.id}
-                                                     placeholder={this.props.placeholder}
-                                                     valueLink={this.linkField(this.props.name)}
-                                                     rows="3" />;
+    var fieldId = "fringe_form_" + this.props.name;
+    var sharedProps = {
+      type: fieldType,
+      name: this.props.name,
+      id: fieldId,
+      placeholder: this.props.placeholder,
+      valueLink: this.linkField(this.props.name)
+    };
+    var field = fieldType !== "textarea" ? <input {...sharedProps} />
+                                         : <textarea {...sharedProps} rows="3" />;
     return (
       <fieldset>
-        <label htmlFor={this.props.id}>
+        <label htmlFor={fieldId}>
           {this.props.label}
           {this.props.required ? <span>*</span> : null}
         </label>
@@ -44,62 +62,58 @@ var Input = React.createClass({
 var FringeEventForm = Formation.CreateForm({
   getSchema: function () {
     return {
-      "entry.904055858": {
+      "name": {
         required: true,
-        label: 'Name of Fringe Event',
-        id: "entry_904055858"
+        label: 'Name of Fringe Event'
       },
-      "entry.686031215": {
+      "time": {
         required: true,
         label: 'Date and Time',
         validations: this.dateTimeValidator,
-        id: "entry_686031215",
         placeholder: "dd/mm/yyyy --:-- --",
         exampleValue: "Example: 31/10/2015 03:30 PM"
       },
-      "entry.1740904233": {
+      "location": {
         required: true,
         label: 'Event Location',
-        validations: "",
-        id: "entry_1740904233",
         additionalText: "Please add full address here, including post code"
       },
-      "entry.1100204806": {
+      "description": {
         required: true,
         label: 'Description of your Event',
         validations: this.wordCountValidator,
-        id: "entry_1100204806",
-        additionalText: "Maximum 100 words",
+        additionalText: "Maximum 100 words / 1,000 characters",
         fieldType: "textarea"
       },
-      "entry.1926329450": {
+      "link": {
         required: false,
         label: 'Link to register for the event if available',
-        validations: Validator.url(),
-        id: "entry_1926329450"
+        validations: Validator.url()
       },
-      "entry.774776501": {
+      "privacy": {
         required: true,
         label: 'Privacy Policy',
-        validations: "",
-        id: "group_774776501_1",
         fieldType: "checkbox"
       }
     };
   },
   wordCountValidator: function(value) {
-    return value.split(" ").length >= 100 ? "Description should be under 100 words." : false;
+    return (value.split(" ").length > 100 || value.length > 1000) ? "Maximum input length exceeded." : false;
   },
   dateTimeValidator: function(value) {
     var validDate = moment(value, "DD/MM/YYYY hh:mm A", true).isValid();
-    // console.log("date entered: ", value, ", parsed: ", validDate);
     return !validDate ? "Make sure the format of your input is correct" : false;
   },
+  handleAddEvent: function(response) {
+    this.refs.submitButton.getDOMNode().classList.remove("waiting");
+    if (response.ok) {
+      window.location.href = "/fringe-event-add-success";
+    } else {
+      window.location.href = window.location.origin + window.location.pathname + "#fringe-submit-button";
+    }
+  },
   onSuccess: function (data) {
-    console.log("onSuccess //////////", data);
-    var self = this;
-    self.refs.submitButton.getDOMNode().classList.add("waiting");
-
+    this.refs.submitButton.getDOMNode().classList.add("waiting");
     fetch('/add-fringe-event', {
       method: 'post',
       headers: {
@@ -107,39 +121,92 @@ var FringeEventForm = Formation.CreateForm({
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    }).then(function(response) {
-      self.refs.submitButton.getDOMNode().classList.remove("waiting");
-      if (response.ok) {
-        console.log("okkk");
-        // window.location.href = "/fringe-event-add-success";
-      } else {
-        console.log("faileddd");
-        // window.location.href = window.location.origin + window.location.pathname + "#fringe-submit-button";
-      }
-    });
+    }).then(this.handleAddEvent);
   },
   render: function () {
     var schema = this.getSchema();
     return (
-    <form action="/add-fringe-event" method="POST" className="mozfest-form">
-      {
-        Object.keys(schema).map(function(formName) {
-          var props = schema[formName];
-          schema[formName].name = formName;
-          return (
-            <Input {...props} key={formName}>{formName}</Input>
-          );
-        })
-      }
-      <fieldset>
-        <a onClick={this.submitForm} ref="submitButton" className="button centered" id="fringe-submit-button"><span>Submit</span></a>
-      </fieldset>
-    </form>);
+      <form action="/add-fringe-event" method="POST" className="mozfest-form">
+        {
+          Object.keys(schema).map(function(formName) {
+            var props = schema[formName];
+            schema[formName].name = formName;
+            return (
+              <Input {...props} key={formName}>{formName}</Input>
+            );
+          })
+        }
+        <fieldset>
+          <a onClick={this.submitForm} ref="submitButton" className="button centered" id="fringe-submit-button"><span>Submit</span></a>
+        </fieldset>
+      </form>
+    );
   }
 });
 
 var FringePage = React.createClass({
+  getInitialState: function() {
+    return {
+      events: [],
+      eventsLoaded: false,
+      unableToLoadEvents: false
+    }
+  },
+  componentWillMount: function() {
+    this.getFringeEvents();
+  },
+  handleEventResponse: function(response) {
+    return response.json();
+  },
+  handleEventData: function(data) {
+    this.setState({ 
+      events: data, 
+      eventsLoaded: true,
+      unableToLoadEvents: false
+    });
+  },
+  handleEventDataError: function(error) {
+    console.log("Error: ", error);
+    this.setState({ 
+      eventsLoaded: true,
+      unableToLoadEvents: true
+    });
+  },
+  getFringeEvents: function() {
+    var self = this;
+    fetch('/get-fringe-events', {
+      method: 'get'
+    })
+    .then(this.handleEventResponse)
+    .then(this.handleEventData)
+    .catch(this.handleEventDataError);
+  },
   render: function() {
+    var events = false;
+    if ( this.state.eventsLoaded ) {
+      events = this.state.events.map(function(event,i) {
+                return (
+                  <div className="event-block" key={event.nameofevent}>
+                    <div className="content wide">
+                      <Event {...event} />
+                    </div>
+                  </div>
+                );
+              });
+    } else {
+      events = ( 
+        <div className="white-background">
+          <div className="content wide">
+            {
+              this.state.unableToLoadEvents 
+                ? <p>Unable to load Fringe Events.</p>
+                : <p className="loading-message">Loading Fringe Events</p>
+            }
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="fringe-events-page">
         <Header/>
@@ -155,13 +222,17 @@ var FringePage = React.createClass({
             <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must align with the MozFest ethos: open, collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
             <div className="cta">
               <h2>Be part of the Fringe scene and list your event!</h2>
-              <a className="button"><span>Submit Your Fringe Event</span></a>
+              <a className="button" href="#fringe-form-section"><span>Submit Your Fringe Event</span></a>
             </div>
             <div className="horizontal-rule"></div>
           </div>
         </div>
-        <div className="white-background">
+        <div className="events">
+          <ul>{events}</ul>
+        </div>
+        <div className="white-background" id="fringe-form-section">
           <div className="content wide">
+            <div className="horizontal-rule"></div>
             <h1>Submit Your Fringe Event</h1>
             <p className="required-note">* Required</p>
             <FringeEventForm/>
