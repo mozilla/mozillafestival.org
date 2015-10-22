@@ -8,6 +8,8 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
+var DATE_TIME_FORMAT = "MMM DD, YYYY h:mm A";
+
 var Event = React.createClass({
   render: function() {
     var link = this.props.linktoregisterfortheeventifavailable;
@@ -15,7 +17,7 @@ var Event = React.createClass({
       <li>
         <h1>{this.props.nameofevent}</h1>
         <div className="details">
-          <div className="time">{moment(this.props.dateandtime,"DD/MM/YYYY hh:mm A").format("MMM DD, YYYY hh:mm A")}</div>
+          <div className="time">{moment(this.props.dateandtime, DATE_TIME_FORMAT).format("MMM DD, YYYY [at] h:mm A")}</div>
           <div className="location">{this.props.eventlocation}</div>
           { link ? <div className="url"><a href={link}>{link}</a></div>
                  : null
@@ -70,8 +72,8 @@ var FringeEventForm = Formation.CreateForm({
         required: true,
         label: 'Date and time',
         validations: this.dateTimeValidator,
-        placeholder: "dd/mm/yyyy --:-- --",
-        exampleValue: "Example: 31/10/2015 03:30 PM"
+        placeholder: "MMM DD, YYYY --:-- --",
+        exampleValue: "Example: Oct 30, 2015 12:30 PM"
       },
       "location": {
         required: true,
@@ -101,7 +103,7 @@ var FringeEventForm = Formation.CreateForm({
     return (value.split(" ").length > 100 || value.length > 1000) ? "Maximum input length exceeded." : false;
   },
   dateTimeValidator: function(value) {
-    var validDate = moment(value, "DD/MM/YYYY hh:mm A", true).isValid();
+    var validDate = moment(value, DATE_TIME_FORMAT, true).isValid();
     return !validDate ? "Make sure the format of your input is correct" : false;
   },
   handleAddEvent: function(response) {
@@ -183,8 +185,15 @@ var FringePage = React.createClass({
   },
   render: function() {
     var events = false;
+    var sortByTime = function(a,b) {
+      var dateA = moment(a.dateandtime,DATE_TIME_FORMAT);
+      var dateB = moment(b.dateandtime,DATE_TIME_FORMAT);
+      if (dateA < dateB) { return -1; }
+      if (dateA > dateB) { return 1; }
+      return 0;
+    } 
     if ( this.state.eventsLoaded ) {
-      events = this.state.events.map(function(event,i) {
+      events = this.state.events.sort(sortByTime).map(function(event,i) {
                 return (
                   <div className="event-block" key={event.nameofevent}>
                     <div className="content wide">
