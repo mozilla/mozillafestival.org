@@ -120,6 +120,7 @@ var SpacesInfo = [
       },
       {
         name: "Emma Irwin",
+        twitter: "@sunnydeveloper"
       }
     ]
   },
