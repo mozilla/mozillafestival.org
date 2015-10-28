@@ -8,6 +8,8 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
+require('whatwg-fetch');
+
 var DATE_TIME_FORMAT = "MMM DD, YYYY h:mm A";
 
 var Event = React.createClass({
