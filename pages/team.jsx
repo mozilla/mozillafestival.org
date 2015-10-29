@@ -10,7 +10,7 @@ var MembersInfo = [
     name: "Michelle Thorne",
     imgSrc: "/assets/images/team/MichelleThorne.jpg",
     title: "Festival Director",
-    bio: <p><a href="http://michellethorne.cc/">Michelle Thorne</a> is Mozilla’s Director for Web Literacy programs, aiming to grow communities and best practices to teach web literacy. Through <a href="https://teach.mozilla.org/events/">participatory events</a> and professional development, she serves volunteer mentors around the world to teach their communities how to read, write and participate on the web. Michelle curates Mozfest and is proud to see the festival into its seventh year.</p>
+    bio: <p><a href="http://michellethorne.cc/">Michelle Thorne</a> is Mozilla’s Director for Web Literacy programs, aiming to grow communities and best practices to teach web literacy. Through <a href="https://teach.mozilla.org/events/">participatory events</a> and professional development, she serves volunteer mentors around the world to teach their communities how to read, write and participate on the web. Michelle curates Mozfest and is proud to see the festival into its sixth year.</p>
   },
   {
     name: "Allen “Gunner” Gunn",
