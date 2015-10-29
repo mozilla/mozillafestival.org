@@ -1,0 +1,71 @@
+.remote-page .hero-unit {
+  background-position: center 13%;
+}
+.remote-page .hero-unit-container {
+  background: linear-gradient(to right, #c46128, #b94c5f);
+}
+.remote-page .letter,
+.remote-page .participating {
+  overflow: hidden;
+  text-align: left;
+}
+.remote-page .remote-header {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.remote-page .ragged {
+  text-align: left;
+}
+.remote-page .illustration {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.remote-page .illustration .illustration-text {
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .remote-page .illustration .illustration-text {
+    float: right;
+  }
+}
+.remote-page .illustration .illustration-image-container img {
+  margin: 15px 0;
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .remote-page .illustration .illustration-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    right: 50%;
+    height: 100%;
+  }
+  .remote-page .illustration .illustration-image-container img {
+    width: 100%;
+    margin: 0;
+  }
+}
+.remote-page .illustration .illustration-text,
+.remote-page .illustration .illustration-image-container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .remote-page .illustration .illustration-text,
+  .remote-page .illustration .illustration-image-container {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .remote-page .illustration.flip-it .illustration-text {
+    float: left;
+  }
+  .remote-page .illustration.flip-it .illustration-image-container {
+    right: 0;
+    left: 50%;
+  }
+}

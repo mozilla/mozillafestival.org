@@ -66,7 +66,9 @@ var Footer = React.createClass({
               Fringe events
             </FooterIcon>
           </FooterIcons>
+
           <div className="horizontal-rule"></div>
+
           <div className="link-container">
             <div className="nav-link-container">
               <Link to="about">About</Link>
