@@ -17,54 +17,5 @@
       font-size: 12px;
       margin: 0;
     }
-  }
-  .illustration {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    .illustration-text {
-      text-align: left;
-      @media screen and (min-width: 768px) {
-        float: right;
-      }
-    }
-    .illustration-image-container {
-      img {
-        margin: 15px 0;
-        width: 80%;
-      }
-      @media screen and (min-width: 768px) {
-        img {
-          width: 100%;
-          margin: 0;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        position: absolute;
-        left: 0;
-        right: 50%;
-        height: 100%;
-      }
-    }
-    .illustration-text,
-    .illustration-image-container {
-      width: 100%;
-      @media screen and (min-width: 768px) {
-        width: 50%;
-      }
-    }
-    &.flip-it {
-      @media screen and (min-width: 768px) {
-        .illustration-text {
-          float: left;
-        }
-        .illustration-image-container {
-          right: 0;
-          left: 50%;
-        }
-      }
-    }
-  }
+  }  
 }
