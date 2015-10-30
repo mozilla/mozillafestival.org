@@ -73,8 +73,8 @@ var SpacesInfo = [
     name: "Mozilla Learning Networks",
     iconPath: "/assets/images/space-icons/Mozilla_Learning_Networks.svg",
     description: [
-      "The key to empowering individuals online and cementing the Web as a public resource is web literacy. In the Mozilla Learning Networks Space, we explore how to best teach and spread web literacy.",
-      "We will convene and empower leaders from diverse backgrounds who are eager to teach the Web in their communities. Help us achieve the spread, scale and adoption of web literacy networks and programs around the globe.",
+      "Leaders demonstrate what the Web can do. The Mozilla Learning Network Space at MozFest will convene and catalyze leaders who equip others to advance their lives on the Web.",
+      "Our leadership Space and Pathways are part of a broad effort to cultivate a global network of web literacy leaders, people of all stripes and ages who are teaching others to read, write and participate on the Web while still actively learning themselves.",
     ],
     contacts: [
       {
