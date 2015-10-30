@@ -49,7 +49,7 @@ var MemberProfile = React.createClass({
     return (
       <div className="member-profile">
         <div className="image-container">
-          <ImageTag src1x={this.props.imgSrc} alt={"photo of " + this.props.name} width={200} />
+          <ImageTag src1x={this.props.imgSrc} alt={"photo of " + this.props.name} />
         </div>
         <div className="details">
           <h1>{this.props.name}</h1>
