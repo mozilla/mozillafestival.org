@@ -97,12 +97,15 @@ var SpacesInfo = [
     contacts: [
       {
         name: "Jon Rogers"
+           twitter: "@ileddigital"
       },
       {
         name: "Ian Forrester"
+        twitter: "@cubicgarden
       },
       {
         name: "Jasmine Cox"
+        twitter: "@wearesorryfor"
       }
     ]
   },
