@@ -29,18 +29,31 @@
     display: inline-block;
   }
   .footer-content {
-    max-width: 768px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+    }
   }
   .footer-icons {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     width: 100%;
     flex-shrink: 0;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+    }
     .footer-icon {
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
-      width: 96px;
+      width: 50%;
+      margin-bottom: 20px;
+      @media screen and (min-width: 768px) {
+        width: 96px;
+        margin-bottom: 0;
+      }
       &:hover {
         .icon-circle {
           top: -4px;
@@ -49,9 +62,9 @@
       .icon-circle {
         position: relative;
         top: 0;
-        margin: 0 auto 15px;
-        width: 70px;
-        height: 70px;
+        margin: 0 auto;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         border: solid 2px #FFFFFF;
         display: flex;
@@ -59,8 +72,16 @@
         justify-content: center;
         flex-shrink: 0;
         transition: all 0.18s ease-in-out 0s;
+        @media screen and (min-width: 768px) {
+          margin: 0 auto 15px;
+          width: 70px;
+          height: 70px;
+        }
         img {
-          width: 35px;
+          width: 20px;
+          @media screen and (min-width: 768px) {
+            width: 35px;
+          }
         }
       }
 
