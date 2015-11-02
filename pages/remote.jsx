@@ -81,14 +81,14 @@ var Expect = React.createClass({
               <li><a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/8541/">Test @ the Fest</a></li>
               <li><a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/7293/">Wild About MozFest</a></li>
               <li><a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/7978/">Wish You Were Here Postcard</a></li>
-              <li><a href="">L10n Curriculum Localization Campaign</a></li>
+              <li><a href="https://blog.webmaker.org/help-us-get-local-with-web-literacy">L10n Curriculum Localization Campaign</a></li>
             </ul>
           </HalfColumn>
           <HalfColumn>
             <h1>Conversations</h1>
             <ul>
               <li><a href="https://air.mozilla.org/">Air Mozilla</a></li>
-              <li><a href="https://twitter.com/hashtag/mozfest">#MozFest Hashtag </a></li>
+              <li><a href="https://twitter.com/hashtag/mozfest">#MozFest Hashtag</a></li>
               <li><a href="https://twitter.com/mozfesttimeline">Digital memories on @mozfesttimeline</a></li>
               <li><a href="https://discourse.webmaker.org/c/events/mozfest">MozFest Discourse threads</a></li>
               <li><a href="https://twitter.com/hashtag/mozfestlive">Twitter chat with @MozTeach at #mozfestlive</a></li>
@@ -114,7 +114,7 @@ var Expect = React.createClass({
           </HalfColumn>
           <HalfColumn ragged>
             <p>
-              There are as many ways to meet this year's Remote Challenge as there are champions like you. You might lead a group of friends at the kitchen table through a Thimble remix, join a project at MozFest from your part of the world, or remix or localize the projects below. You might follow along online or start your own online project. Check out the opportunities above and get local at MozFest from wherever you live!
+              There are as many ways to meet this year's Remote Challenge as there are champions like you. You might lead a group of friends at the kitchen table through a <a href="https://thimble.mozilla.org">Thimble remix</a>, join a project at MozFest from your part of the world, or remix or localize the projects below. You might follow along online or start your own online project. Check out the opportunities above and get local at MozFest from wherever you live!
             </p>
           </HalfColumn>
         </FullWidth>
