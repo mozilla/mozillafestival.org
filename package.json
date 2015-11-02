@@ -13,7 +13,7 @@
     "minify:css": "npm run watch:css -- --no-watch",
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "autoless --autoprefix '> 1%, last 2 versions' less public",
-    "postinstall": "mkdirp last && node build.js",
+    "postinstall": "mkdirp last && mkdirp public/pages && node build.js",
     "server": "node app.js"
   },
   "dependencies": {
