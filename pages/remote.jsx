@@ -5,41 +5,11 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
-var FullWidth = React.createClass({
-  render: function() {
-    var className = "content wide";
-    if (this.props.center) { className += " centered"; }
-    var content = <div className={className}>{ this.props.children }</div>;
-    if (this.props.white) {
-      content = <div className="white-background">{ content }</div>;
-    }
-    return content;
-  }
-});
+var FullWidth = require('../components/fullwidth.jsx');
+var HalfColumn = require('../components/halfcolumn.jsx');
+var ImageText = require('../components/imagetext.jsx');
+var Page = require('../components/page.jsx');
 
-var HalfColumn = React.createClass({
-  render: function() {
-    var className = "half-content";
-    if (this.props.ragged) { className += " ragged"; }
-    return <div className={className}>{this.props.children}</div>;
-  }
-});
-
-var ImageText = React.createClass({
-  render: function() {
-    var imagetag = <ImageTag src1x={this.props.src1x} width={this.props.width||null} height={this.props.height||null} alt={this.props.alt}/>;
-    var img = <div className="illustration-image-container">{imagetag}</div>;
-    var text = <div className="illustration-text">{ this.props.children }</div>;
-    var className = "illustration" + (this.props.right ? " flip-it": "");
-    return <div className={className}>{img}{text}</div>;
-  }
-});
-
-var Page = React.createClass({
-  render: function() {
-    return <div className={this.props.name + "-page"}>{ this.props.children }</div>;
-  }
-});
 
 var Expect = React.createClass({
   pageMetaDescription: "This year's MozFest Remote Challenge wants you to get involved and spread the MozFest spirit around the world, help others help you, and work locally, while sharing globally.",
