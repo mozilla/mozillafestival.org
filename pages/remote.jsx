@@ -30,10 +30,8 @@ var ImageText = React.createClass({
     var imagetag = <ImageTag src1x={this.props.src1x} width={this.props.width||null} height={this.props.height||null} alt={this.props.alt}/>;
     var img = <div className="illustration-image-container">{imagetag}</div>;
     var text = <div className="illustration-text">{ this.props.children }</div>;
-    var order = [img, text];
-    if (this.props.right) { order = [text, img]; }
     var className = "illustration" + (this.props.right ? " flip-it": "");
-    return <div className={className}>{order}</div>;
+    return <div className={className}>{img}{text}</div>;
   }
 });
 
