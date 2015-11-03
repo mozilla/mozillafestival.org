@@ -14,7 +14,11 @@ var PathwaysInfo = [
     contacts: [
       {
         name: "Bekka Kahn",
-        twitter: "@rebamex"
+        twitter: "@rebamex",
+        bio: {
+          photoSrc: "/assets/images/bio/BekkaKahn.jpg",
+          bio: <p>Bekka Kahn works for P2PU and The Open Coalition, and is has been working on open education, open practice and free culture for 10 years. She’s also a recovering librarian, a PhD student at King’s College London, and an avid maker of jam.</p>
+        }
       },
       {
         name: "Grif Peterson",
@@ -50,11 +54,19 @@ var PathwaysInfo = [
     contacts: [
       {
         name: "Grainne Hamilton",
-        twitter: "@grainnehamilton"
+        twitter: "@grainnehamilton",
+        bio: {
+          photoSrc: "/assets/images/bio/GrainneHamilton.jpg",
+          bio: <p>Grainne’s varied background includes leading the development of the Jisc Open Badges Toolkit, contributing to the Mozilla Discover project, which involved developing badge-based pathways to employment, as well as founding and facilitating the Open Badges in Scottish Education Group. Most recently, she was Senior Consultant at Blackboard, which involved helping a global range of clients make best use of their teaching and learning systems.</p>
+        }
       },
       {
         name: "Matt Rogers",
-        twitter: "@mattdigitalme"
+        twitter: "@mattdigitalme",
+        bio: {
+          photoSrc: "/assets/images/bio/MattRogers.jpg",
+          bio: <p>Matt is passionate about working with young people, particularly when it comes to using and experimenting with existing and emerging technologies. Before working for DigitalMe, Matt was a KS1-KS4 teacher for eight years most recently at a Primary School in South East London, where he also held the roles of CAS Lead Educatorand Mathletics Lead Educator. This experience directly feeds into Matt’s work on Safe, Naace CPD badges and Scout badges at DigitalMe.</p>
+        }
       }
     ]
   },
@@ -67,7 +79,14 @@ var PathwaysInfo = [
     contacts: [
       {
         name: "Sandra Gaudenzi",
-        twitter: "@sgaudenzi"
+        twitter: "@sgaudenzi",
+        bio: {
+          photoSrc: "/assets/images/bio/SandraGaudenzi.jpeg",
+          bio: <div>
+                  <p>Sandra consults, researches, lectures, writes and blogs about interactive factual narratives.</p>
+                  <p>She is one of the co-directors of the i-Docs conference (i-docs.org) and the Head of Studies of IF Lab (iflab.net), an EU training initiative for interactive documentary makers. She also hosts a regular IF Meetup in London, with the aim to create a community of professionals that want to work together and make their projects become reality!</p>
+                </div>
+        }
       }
     ]
   },
@@ -174,7 +193,11 @@ var PathwaysInfo = [
       },
       {
         name: "Julia Vallera",
-        twitter: "@colorwheelz"
+        twitter: "@colorwheelz",
+        bio: {
+          photoSrc: "/assets/images/bio/JuliaVallera.jpg",
+          bio: <p>Julia Vallera (<a href="https://twitter.com/@colorwheelz">@colorwheelz</a>) has been working in the arts as an educator, printmaker, public engagement artist, illustrator, consultant and designer for 16 years. She is a technology enthusiast and collaborates with many people to invent new ways to use it for STEAM (Science, Tech, Engineering, Arts, Math) education. As Network Manager at Mozilla Hive NYC Julia works with more than 70 cultural organizations to create new learning pathways and innovative educational practices for youth, educators, families, artists, technologists and more.</p>
+        }
       }
     ]
   },
@@ -204,7 +227,11 @@ var PathwaysInfo = [
     contacts: [
       {
         name: "Chad Sansing",
-        twitter: "@chadsansing"
+        twitter: "@chadsansing",
+        bio: {
+          photoSrc: "/assets/images/bio/ChadSansing.jpg",
+          bio: <p>Chad Sansing works as a curriculum developer for the Mozilla Foundation and has a special interest in playful, participatory, and production-centered teaching and learning. Chad joined Mozilla after serving 14 years as a middle school language arts, social studies, and technology teacher and after several years of activity in the Mozilla and National Writing Project communities.</p>
+        }
       },
       {
         name: "An-Me Chung",
@@ -212,7 +239,11 @@ var PathwaysInfo = [
       },
       {
         name: "Sam Dyson",
-        twitter: "@samueledyson"
+        twitter: "@samueledyson",
+        bio: {
+          photoSrc: "/assets/images/bio/SamDyson.jpeg",
+          bio: <p>Sam is Director of Hive Chicago on the Mozilla Learning Network team. He's exploring the power of human networks to meet the opportunities and challenges inherent in the work of teaching and learning in the digital age. He provides strategic direction and sustainability for Hive Chicago as part of Mozilla's global leadership development and web literacy efforts. Sam has worked elsewhere in education including 10 years teaching high school physics.</p>
+        }
       }
     ]
   }

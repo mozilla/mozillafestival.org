@@ -1,6 +1,20 @@
 var React = require('react');
 var ImageTag = require('./imagetag.jsx');
 
+var BioTooltip = React.createClass({
+  render: function() {
+    return(
+      <div className="bio-section">
+        <div className="tooltip-arrow"></div>
+        <div className="content-box">
+          { this.props.photoSrc ? <img src={this.props.photoSrc} /> : null }
+          { this.props.bio ? <div>{this.props.bio}</div> : null }
+        </div>
+      </div>
+    );
+  }
+});
+
 var SpacePathwayProfile = React.createClass({
   render: function() {
     return (
@@ -26,6 +40,7 @@ var SpacePathwayProfile = React.createClass({
                 <li key={contact.name}>
                   <div className="name">{contact.name}</div>
                   { contact.twitter ? <div className="twitter"><a href={"https://twitter.com/"+contact.twitter}>{contact.twitter}</a></div> : null }
+                  { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )
             }) : null
