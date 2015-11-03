@@ -40,7 +40,11 @@ var SpacesInfo = [
       },
       {
         name: "Abby Cabunoc Mayes",
-        twitter: "@abbycabs"
+        twitter: "@abbycabs",
+        bio: {
+          photoSrc: "/assets/images/bio/AbigailCabunocMayes.jpg",
+          bio: <p>Abigail Cabunoc Mayes is the lead developer for Mozilla Science Lab, which is a community of researchers, tool developers, librarians, and publishers working to leverage the open web in research. Prior to joining Mozilla, Abby worked as a bioinformatics software developer at the Ontario Institute for Cancer Research where she was the technical lead on the WormBase website.</p>
+        }
       }
     ]
   },
@@ -57,7 +61,11 @@ var SpacesInfo = [
         twitter: "@melechuga"
       },
       {
-        name: "Stacy Martin"
+        name: "Stacy Martin",
+        bio: {
+          photoSrc: "/assets/images/bio/StacyMartin.png",
+          bio: <p>Stacy Martin is part of the Policy Team at Mozilla. As a Senior Manager of Privacy and Engagement, Stacy focuses on building privacy community and education / awareness materials. She has created several teaching kits on topics such as privacy, passwords, and DRM. Stacy also organizes Mozilla’s Privacy Lab, team teaches New Hire Privacy Training and leads Mozilla’s Privacy Day planning. She has been with Mozilla for 4 years. Her latest passion is building a Global Advocacy and Teaching Task Force for privacy and other key Internet issues. If you’d like to get involved with privacy issues or advocacy task forces, she invites you to come talk to her!</p>
+        }
       },
       {
         name: "Shane Caraveo",
@@ -79,11 +87,19 @@ var SpacesInfo = [
     contacts: [
       {
         name: "Lindsey Frost",
-        twitter: "@lindsey_in_cha"
+        twitter: "@lindsey_in_cha",
+        bio: {
+          photoSrc: "/assets/images/bio/LindseyFrost.jpg",
+          bio: <p>Lindsey is the Gigabit City Lead for the MLN team, leading Mozilla's five-city effort to explore how high-speed networks can be leveraged for learning. A native of Chattanooga, Tennessee, Lindsey is passionate about empowering leaders and learners to read, write, and participate on the (super fast!) Web. She's previously worked with the University of Tennessee and the Public Education Foundation and is a founder of DEV DEV, Chattanooga's citywide digital literacy initiative.</p>
+        }
       },
       {
         name: "Sam Dyson",
-        twitter: "@samueledyson"
+        twitter: "@samueledyson",
+        bio: {
+          photoSrc: "/assets/images/bio/SamDyson.jpeg",
+          bio: <p>Sam is Director of Hive Chicago on the Mozilla Learning Network team. He's exploring the power of human networks to meet the opportunities and challenges inherent in the work of teaching and learning in the digital age. He provides strategic direction and sustainability for Hive Chicago as part of Mozilla's global leadership development and web literacy efforts. Sam has worked elsewhere in education including 10 years teaching high school physics.</p>
+        }
       }
     ]
   },
@@ -99,7 +115,12 @@ var SpacesInfo = [
         name: "Jon Rogers"
       },
       {
-        name: "Ian Forrester"
+        name: "Ian Forrester",
+        twitter: "@cubicgarden",
+        bio: {
+          photoSrc: "/assets/images/bio/IanForrester.jpg",
+          bio: <p>Ian Forrester is a well known and likeable character on the digital scene in the UK. He has now made Manchester, UK his home, where he works for the BBC's R&D north lab. He focuses on open innovation and new disruptive opportunities via open engagement and collaborations with startups, early adopters and hackers</p>
+        }
       },
       {
         name: "Jasmine Cox"
@@ -150,10 +171,18 @@ var SpacesInfo = [
     ],
     contacts: [
       {
-        name: "Heather Bailey"
+        name: "Heather Bailey",
+        bio: {
+          photoSrc: "/assets/images/bio/HeatherBailey.JPG",
+          bio: <p>Heather Bailey works for Translate, working behind the scenes for the last 15 years on localisations projects trying not to let them take over her house and her life. Born and raised in Southern Africa she loves the variety of people and culture in it and will always be a part of her identity. She has Illustrated a number of children’s books makes wedding dresses for fun and mostly loves connecting with people.</p>
+        }
       },
       {
-        name: "Dwayne Bailey"
+        name: "Dwayne Bailey",
+        bio: {
+          photoSrc: "/assets/images/bio/DwayneBailey.JPG",
+          bio: <p>Dwayne Bailey is a proud father to two beautiful girls. His mission in life is to create a world where people can access and create in their own language. His motivation behind starting the Translate (a specialised localisation company) was to remove the language barrier between people and technology. For all the effort we put into getting information on screens, it might as well be miles away from the eyes that can’t read it. So he travels the world passing on knowledge and giving localisers the tools to be able to make the changes they need for their languages. He loves Africa despite potholes and politics and would just like people to be able to get on with it without limitation.</p>
+        }
       }
     ]
   }
