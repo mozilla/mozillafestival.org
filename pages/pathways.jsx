@@ -246,6 +246,62 @@ var PathwaysInfo = [
         }
       }
     ]
+  },
+  {
+    name: "Open Research Accelerator",
+    type: "Open Science Pathway",
+    description: [
+      "Have a project you'd like help with? We'll be running an Open Research Accelerator at the Festival, to provide 1-on-1 mentorship around open source and project skills to help you run your very own session at the Festival.",
+    ],
+    contacts: [
+      {
+        name: "Robert Davey",
+        twitter: "@froggleston"
+      },
+      {
+        name: "Billy Meinke",
+        twitter: "@billymeinke"
+      }
+    ]
+  },
+  {
+    name: "Open Data",
+    type: "Open Science Pathway",
+    description: [
+      "Do you like data? Do you like data out in the open? Then the Open Data Pathway is for you! This pathway for all things open data- creating, curating, sharing, and using data out in the open! We'll be exploring ideas around using open data, open data ethics, open science, reproducibility, and collaboration.",
+    ],
+    contacts: [
+      {
+        name: "Christie Bahlai",
+        twitter: "@cbahlai"
+      }
+    ]
+  },
+  {
+    name: "Citizen Science",
+    type: "Open Science Pathway",
+    description: [
+      "We all need a little science in our lives. If you celebrate that notion, then you'll love this pathway which is designed to highlight sessions that might be useful to individuals looking to roll-up their sleeves and engage with or lead a scientific research project.",
+    ],
+    contacts: [
+      {
+        name: "Jason Bobe",
+        twitter: "@jasonbobe"
+      }
+    ]
+  },
+  {
+    name: "Science Communication",
+    type: "Open Science Pathway",
+    description: [
+      "The Science Communication Pathway is an tasty mix of sessions ranging topics in data visualization, research and analysis tools, collaboration building, and outreach methods. Hop on this pathway if you're looking to blend your exposure to the tools that support science communication, science visualization, and community building and outreach.",
+    ],
+    contacts: [
+      {
+        name: "Joey Lee",
+        twitter: "@leejoeyk"
+      }
+    ]
   }
 ];
 
