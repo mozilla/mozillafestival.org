@@ -33,7 +33,7 @@ var PathwaysInfo = [
     ]
   },
   {
-    name: "Seeing, Drawing, Producing Smilies",
+    name: "Seeing, Drawing, Producing Smileys",
     type: "Independent Pathway",
     description: [
       "It’s visual literacy meets graphic design. In this pathway, participants identify materials and oddities around the MozFest venue that resemble faces. Then, we reproduce the faces on paper and through vector graphics to create digital emoticons.",
