@@ -37,7 +37,7 @@ var Header = React.createClass({
               <Link to="expect">What to Expect</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="sessions">Sessions</Link>
+              <a href="https://app.mozillafestival.org">Schedule</a>
             </div>
             <div className="nav-link-container">
               <Link to="remote">Remote</Link>
