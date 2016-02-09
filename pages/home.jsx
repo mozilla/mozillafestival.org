@@ -46,7 +46,7 @@ var Home = React.createClass({
             }
           }()}
           <h1>mozilla festival</h1>
-          <h2>november 6-8 in london</h2>
+          <h2>2016 dates coming soon</h2>
           <div className="horizontal-rule"></div>
           <div>Three days of building a truly global web together.</div>
           <div>Come with an idea, leave with a community.</div>
