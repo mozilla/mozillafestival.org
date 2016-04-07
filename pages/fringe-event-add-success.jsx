@@ -17,7 +17,6 @@ var Success = React.createClass({
         <div className="centered content wide">
           <h1>Success!</h1>
           <p>Thank you for your submission.</p>
-          <Link to="fringe-events" className="button"><span>Want to submit another?</span></Link>
         </div>
         <Footer/>
       </div>

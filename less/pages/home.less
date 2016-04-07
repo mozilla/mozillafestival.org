@@ -17,17 +17,29 @@
   .hero-unit-container {
     background: linear-gradient( to right, #C26228, #AF404F);
   }
+  .video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+  }
   .iframe-container {
+    position: relative;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 0 20px;
     iframe {
-      @media screen and (min-width: 768px) {
-        width: 640px;
-        height: 390px;
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   .hero-unit {
-    padding-top: 350px;
-    height: 890px;
+    padding-top: 280px;
+    padding-bottom: 40px;
+    height: 100%;
     iframe {
       margin: 0 auto;
       border-width: 0;
@@ -37,8 +49,8 @@
       margin-top: 50px;
     }
     @media screen and (min-width: 768px) {
-      padding-top: 90px;
-      height: 705px;
+      padding-top: 200px;
+      padding-bottom: 150px;
     }
     .video-link {
       width: 112px;

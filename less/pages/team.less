@@ -2,20 +2,30 @@
 
 }
 
-.member-profile {
+.member-profiles {
   display: flex;
   flex-direction: column;
-  padding-top: 23px;
+  margin: -10px 0 0 -10px;
+  flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
+}
+
+.member-profile.white-background {
+  background: white;
+}
+
+.member-profile {
+  flex: 1;
+  background: #F5F5F5;
+  display: block;
+  box-sizing: border-box;
+  padding: 15px;
   .image-container {
     text-align: center;
-    @media screen and (min-width: 768px) {
-      width: 30%;
-      text-align: left;
-      padding-right: 30px;
-    }
+    max-width: 100%;
+    margin-bottom: 15px;
     img {
       width: 250px;
       @media screen and (min-width: 768px) {
@@ -23,31 +33,22 @@
       }
     }
   }
-  .details {
-    text-align: center;
-    @media screen and (min-width: 768px) {
-      width: 70%;
-      text-align: left;
-    }
-  }
   h1 {
     font-weight: 800;
     margin: 0;
     text-align: center;
     line-height: 1;
-    @media screen and (min-width: 768px) {
-      text-align: left;
-    }
+    font-size: 20px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 300;
     color: inherit;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    @media screen and (min-width: 768px) {
-      text-align: left;
-    }
+  }
+  .details p {
+    font-size: 16px;
   }
 }
