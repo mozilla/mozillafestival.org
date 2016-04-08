@@ -68,7 +68,7 @@ var Guidelines = React.createClass({
           </div>
           <div className="centered content wide">
             <h1>Working in the Open</h1>
-            <p>Because working open is one of our core values, MozFest program planning is done in the open on Github (check out our 2015 repo <a href="https://github.com/mozilla/mozfest-program">here</a>). We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. We recommend bookmarking WorkOpen.org and reading through the interviews with passionate advocates for open practices.</p>
+            <p>Because working open is one of our core values, MozFest program planning is done in the open on Github (check out our 2015 repo <a href="https://github.com/mozilla/mozfest-program">here</a>). We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. We recommend bookmarking <a href="http://workopen.org/">WorkOpen.org</a> and reading through the interviews with passionate advocates for open practices.</p>
           </div>
         </div>
         <Footer/>

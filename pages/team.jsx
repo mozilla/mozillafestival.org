@@ -10,7 +10,7 @@ var MembersInfo = [
     name: "Sarah Allen",
     imgSrc: "/assets/images/team/SarahAllen.jpg",
     title: "Festival Producer",
-    bio: <p>Sarah Allen is this year’s festival producer. When she is not focused on MozFest, she helps with other Mozilla convenings in London and beyond. Sarah draws her experience from a diverse events background having worked with creative and inspiring companies, such as Movember Europe, Secret Cinema and CSM iLUKA. MozFest 2016 will be Sarah’s fourth festival.</p>
+    bio: <p>Sarah Allen is MozFest's producer. When she is not focused on MozFest, she helps with other Mozilla convenings in London and beyond. Sarah draws her experience from a diverse events background having worked with creative and inspiring companies, such as Movember Europe, Secret Cinema and CSM iLUKA. MozFest 2016 will be Sarah’s fourth festival.</p>
   },
   {
     name: "Erika Drushka",
