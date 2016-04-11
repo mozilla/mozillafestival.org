@@ -16,7 +16,7 @@ var MembersInfo = [
     name: "Erika Drushka",
     imgSrc: "/assets/images/team/ErikaDrushka.jpg",
     title: "Program Designer",
-    bio: <p>Erika Drushka is the Program Designer for MozFest 2016. With a background in documentary film making, advocacy and fundraising, Erika has spent the last three years on the MozFest communications team. This year, Erika has shifted her focus at Mozilla to building network strength in the open internet movement through convenings.</p>
+    bio: <p>Erika Drushka is the Program Designer for MozFest 2016. With a background in documentary film making, advocacy and fundraising, Erika has spent the last three years on the MozFest communications team. This year, Erika has shifted her focus at Mozilla to building network strength in the open Internet movement through convenings.</p>
   },
   {
     name: "Spike",
