@@ -1,6 +1,6 @@
 {
   "name": "mozillafestival.org",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Mozfest site",
   "author": "Mozilla Foundation",
   "scripts": {

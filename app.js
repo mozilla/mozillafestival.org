@@ -30,52 +30,64 @@ app.configure(function() {
   });
 });
 
-app.post('/add-fringe-event', limiter, function (req, res) {
-  var userInputs = {};
-  var fringeFormFields = env.get("FRINGE_FORM_FIELD");
-  var realFieldNames = {
-    name: fringeFormFields.name,
-    time: fringeFormFields.time,
-    location: fringeFormFields.location,
-    description: fringeFormFields.description,
-    link: fringeFormFields.link,
-    privacy: fringeFormFields.privacy
-  };
-  Object.keys(req.body).forEach(function(maskedFieldName){
-    var realFieldName = realFieldNames[maskedFieldName];
-    userInputs[realFieldName] = req.body[maskedFieldName];
-  });
-  request({
-    method: 'POST',
-    url: env.get('FRINGE_EVENT_FORM_ACTION_URL'),
-    form: userInputs
-  }, function(err) {
-    if (err) {
-      console.log("[Error] ", err);
-      res.status(500).send({error: err});
-    } else {
-      res.send("Ok");
-    }
-  });
-});
+/* ********************
+* temporarily disable posting to /add-fringe-event 
+* leaving code here so we can quickly turn these pages back on in June and September
+******************** */
+
+// app.post('/add-fringe-event', limiter, function (req, res) {
+//   var userInputs = {};
+//   var fringeFormFields = env.get("FRINGE_FORM_FIELD");
+//   var realFieldNames = {
+//     name: fringeFormFields.name,
+//     time: fringeFormFields.time,
+//     location: fringeFormFields.location,
+//     description: fringeFormFields.description,
+//     link: fringeFormFields.link,
+//     privacy: fringeFormFields.privacy
+//   };
+//   Object.keys(req.body).forEach(function(maskedFieldName){
+//     var realFieldName = realFieldNames[maskedFieldName];
+//     userInputs[realFieldName] = req.body[maskedFieldName];
+//   });
+//   request({
+//     method: 'POST',
+//     url: env.get('FRINGE_EVENT_FORM_ACTION_URL'),
+//     form: userInputs
+//   }, function(err) {
+//     if (err) {
+//       console.log("[Error] ", err);
+//       res.status(500).send({error: err});
+//     } else {
+//       res.send("Ok");
+//     }
+//   });
+// });
 
 app.get('*', function (request, response) {
-  if (request.path === "/get-fringe-events") {
-    // this fetches data stored in the Fringe Events Google Spreadsheet
-    var sheet = new GoogleSpreadsheet(env.get('FRINGE_EVENT_SPREADSHEET_ID'));
-    sheet.getRows(1, function(err, rows){
-      if (err) {
-        console.log("[Error] ", err);
-        response.status(500).json(err);
-      } else {
-        response.send( rows.filter(function(row) {
-                        return row.approved;
-                      }));
-      }
-    });
-  } else {
-    response.sendfile(path.join(__dirname, '/public/index.html'));
-  }
+  response.sendfile(path.join(__dirname, '/public/index.html'));
+
+  /* ********************
+  * temporarily disable the following
+  * leaving code here so we can quickly turn these pages back on in June and September
+  ******************** */
+
+  // if (request.path === "/get-fringe-events") {
+  //   // this fetches data stored in the Fringe Events Google Spreadsheet
+  //   var sheet = new GoogleSpreadsheet(env.get('FRINGE_EVENT_SPREADSHEET_ID'));
+  //   sheet.getRows(1, function(err, rows){
+  //     if (err) {
+  //       console.log("[Error] ", err);
+  //       response.status(500).json(err);
+  //     } else {
+  //       response.send( rows.filter(function(row) {
+  //                       return row.approved;
+  //                     }));
+  //     }
+  //   });
+  // } else {
+  //   response.sendfile(path.join(__dirname, '/public/index.html'));
+  // }
 });
 
 app.listen(env.get('PORT'), function () {
