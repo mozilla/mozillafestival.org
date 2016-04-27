@@ -25,8 +25,8 @@ var Home = React.createClass({
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
-        <HeroUnit className="home-hero-unit" image="/assets/images/home.jpg"
-                  image2x="/assets/images/home.jpg">
+        <HeroUnit className="home-hero-unit" image="/assets/images/mozfest_2016.jpg"
+                  image2x="/assets/images/mozfest_2016.jpg">
           <div className="video-wrapper">
           {function() {
             if (self.state.playVideo) {
@@ -65,4 +65,3 @@ var Home = React.createClass({
 });
 
 module.exports = Home;
-
