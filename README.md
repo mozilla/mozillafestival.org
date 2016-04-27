@@ -18,3 +18,11 @@ $> npm start
 ```
 
 By default this will run the website on [http://localhost:9090](http://localhost:9090)
+
+## Development
+
+Deployment to `staging` and `production` servers is automated via [Travis-CI](https://travis-ci.org).
+
+develop – Deploys to [http://mozillafestival-org-staging.herokuapp.com/](http://mozillafestival-org-staging.herokuapp.com/)
+
+master – Deploys to [http://mozillafestival-org-production.herokuapp.com/](http://mozillafestival-org-production.herokuapp.com/)
