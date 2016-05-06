@@ -1,0 +1,19 @@
+module.exports = [
+  '/',
+  '/proposals',
+  '/proposals-2015',
+  '/tickets',
+  '/location',
+  '/about',
+  '/contact',
+  '/expect',
+  '/guidelines',
+  '/fringe',
+  '/volunteer',
+  '/fringe-event-add-success',
+  '/submission-process',
+  '/remote',
+  '/sessions',
+  '/pathways',
+  '/team'
+];
