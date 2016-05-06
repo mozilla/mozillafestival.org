@@ -6,16 +6,6 @@ var generateHelmet = require('../lib/helmet.jsx');
 
 var Tickets = React.createClass({
   pageMetaDescription: "Tickets are available for youth and adults.",
-  componentDidMount: function() {
-    var titoContainer = this.refs.titoContainer.getDOMNode();
-    var titoWidget = document.querySelector(".widgets .tito-tickets");
-    titoContainer.appendChild(titoWidget);
-  },
-  componentWillUnmount: function() {
-    var titoWidget = this.refs.titoContainer.getDOMNode().querySelector(".tito-tickets");
-    var widgetContainer = document.querySelector(".widgets");
-    widgetContainer.appendChild(titoWidget);
-  },
   render: function() {
     return (
       <div className="tickets-page">

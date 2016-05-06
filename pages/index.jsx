@@ -18,9 +18,9 @@ var Index = React.createClass({
         <link rel="icon" type="image/png" sizes="180x180" href="assets/images/favicon/apple-touch-icon-180x180.png" />
         <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/images/favicon/apple-touch-icon-180x180.png" />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300" />
-        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="/index.css" />
         <link rel="stylesheet" type="text/css" href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' />
-        <link rel="stylesheet" type="text/css" href="build/bundle.css" />
+        <link rel="stylesheet" type="text/css" href="/build/bundle.css" />
       </head>
       <body>
         <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
