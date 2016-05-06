@@ -8,8 +8,6 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
-require('whatwg-fetch');
-
 var DATE_TIME_FORMAT = "MMM DD, YYYY h:mm A";
 
 var Event = React.createClass({
@@ -156,22 +154,22 @@ var FringePage = React.createClass({
       unableToLoadEvents: false
     }
   },
-  componentWillMount: function() {
+  componentDidMount: function() {
     this.getFringeEvents();
   },
   handleEventResponse: function(response) {
     return response.json();
   },
   handleEventData: function(data) {
-    this.setState({ 
-      events: data, 
+    this.setState({
+      events: data,
       eventsLoaded: true,
       unableToLoadEvents: false
     });
   },
   handleEventDataError: function(error) {
     console.log("Error: ", error);
-    this.setState({ 
+    this.setState({
       eventsLoaded: true,
       unableToLoadEvents: true
     });
@@ -193,7 +191,7 @@ var FringePage = React.createClass({
       if (dateA < dateB) { return -1; }
       if (dateA > dateB) { return 1; }
       return 0;
-    } 
+    }
     if ( this.state.eventsLoaded ) {
       events = this.state.events.sort(sortByTime).map(function(event,i) {
                 return (
@@ -205,11 +203,11 @@ var FringePage = React.createClass({
                 );
               });
     } else {
-      events = ( 
+      events = (
         <div className="white-background">
           <div className="content wide">
             {
-              this.state.unableToLoadEvents 
+              this.state.unableToLoadEvents
                 ? <p>Unable to load Fringe Events.</p>
                 : <p className="loading-message">Loading Fringe Events</p>
             }
