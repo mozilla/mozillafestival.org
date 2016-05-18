@@ -47,16 +47,16 @@ var Home = React.createClass({
             }
           }()}
           </div>
-          <h1>mozilla festival</h1>
+          <h1>MozFest</h1>
           <h2>October 28-30, 2016<br/>Ravensbourne, London</h2>
           <div className="horizontal-rule"></div>
-          <div>Three days of building a truly global web together.</div>
-          <div>Come with an idea, leave with a community.</div>
+          <div>The world’s leading event for and by the open Internet movement.</div>
+          <div>Join us to build, debate, and explore the future of our lives online.</div>
         </HeroUnit>
         <div className="centered content wide">
-          <h1>Help Make the Web a Better Place</h1>
-          <p>Receive festival news and updates by email</p>
-          <a href="https://ti.to/Mozilla/mozfest-2016" className="button"><span>Sign up</span></a>
+          <h1>Submit a Session for MozFest 2016</h1>
+          <p>We invite people from all fields: policy, science, journalism, technology, arts and more. MozFest is for everyone, regardless of your gender, geography, age or language. </p>
+          <a href="/proposals" className="button"><span>Submit a Session</span></a>
         </div>
         <Footer/>
       </div>
