@@ -14,7 +14,7 @@ var Linker = React.createClass({
       )
     }
     return (
-      <a href={this.props.href}>
+      <a href={this.props.href} target={this.props.target}>
         {this.props.children}
       </a>
     )
@@ -25,7 +25,7 @@ var FooterIcon = React.createClass({
   render: function() {
     return (
       <div className="footer-icon">
-        <Linker to={this.props.to} href={this.props.href}>
+        <Linker to={this.props.to} href={this.props.href} target={this.props.target}>
           <div className="icon-circle">
             <ImageTag src1x={this.props.icon}
               alt={this.props.alt}/>
@@ -58,6 +58,9 @@ var Footer = React.createClass({
             </FooterIcon>
             <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=%23mozfest&source=webclient">
               tweet #mozfest
+            </FooterIcon>
+            <FooterIcon icon="/assets/images/img-blog.svg" alt="blog icon" target="_blank" href="https://medium.com/mozfest-2016">
+              read the blog
             </FooterIcon>
             <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="volunteer">
               volunteer with us
