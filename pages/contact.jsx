@@ -17,14 +17,15 @@ var Contact = React.createClass({
         </HeroUnit>
         <div className="centered content wide">
           <h1>Hello there</h1>
-          <p>Please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> with your questions and suggestions!</p>
+          <p><a href="https://ti.to/Mozilla/mozfest-2016">Sign up here</a> to receive festival news and updates by email.</p>
           <div className="half-content">
             <h1>Make It Better</h1>
             <p><a href="mailto:festival@mozilla.org">Email us</a> with suggestions to improve the Mozilla Festival. It's a collaborative event, and your feedback matters.</p>
           </div>
           <div className="half-content">
             <h1>Social Media</h1>
-            <p>Use the hashtag <a href="https://twitter.com/search?f=realtime&q=%23mozfest&src=typd">#mozfest</a> and join the conversation. Follow #mozfest on Twitter and Flickr.</p>
+            <p>Use the hashtag <a href="https://twitter.com/search?f=realtime&q=%23mozfest&src=typd">#mozfest</a> on Twitter and join the conversation. Read the <a href="https://medium.com/mozfest-2016">MozFest blog</a> on Medium.
+            </p>
           </div>
         </div>
         <Footer/>
@@ -34,4 +35,3 @@ var Contact = React.createClass({
 });
 
 module.exports = Contact;
-
