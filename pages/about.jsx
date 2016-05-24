@@ -122,29 +122,35 @@ var About = React.createClass({
         </div>
         <div className="content centered wide">
           <div className="circles-container">
-            <CircleNumber number="1700">
-              over 1.7k<br/>attendees
+            <CircleNumber number="1600+">
+              over 1.6k<br/>attendees
             </CircleNumber>
             <CircleNumber number="50+">
               participants from more<br/>than 50 countries
             </CircleNumber>
-            <CircleNumber number="343">
+            <CircleNumber number="325">
               workshops<br/>& sessions
             </CircleNumber>
           </div>
-          <p>Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web. It's where passionate technologists, educators and creators unite to hack on innovative solutions for the Web's most pressing issues. We explore topics like privacy, ethics, literacy and economy on the Web.</p>
+          <p>The seventh-annual MozFest will be held in London, from Friday, Oct. 28 - Sunday, Oct. 29. MozFest is an annual celebration of the open Internet movement. It's where passionate technologists, educators, and makers come together to explore the future of the open Web.</p>
         </div>
         <div className="timeline-container">
           <div className="starting-line"></div>
-          <TimeLineItem time="2015" label="the present"
+            <TimeLineItem time="2016" label="the present" flip="true"
+              className="timeline-item-2016"
+              image="/assets/images/mozfest-flag.svg"
+              alt="MozFest Flag"
+              imageHeight={190} imageWidth={180}
+            >
+              This year, we'll highlight how the Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We'll examine how issues like Web literacy, online privacy and encryption are relevant across the globe, and address challenges faced by people who don't yet feel they are welcome on the Web.
+            </TimeLineItem>
+          <TimeLineItem time="2015" label="2015"
             className="timeline-item-2015"
             image="/assets/images/about-1.png"
             alt="2010 about image"
             imageHeight={343} imageWidth={534}
           >
-            This year, we're focusing on leadership, advocacy and impact.
-We'll train tomorrow's leaders, empower participants to make a
-positive difference on the Web, and work toward universal web literacy.
+            In 2015, we focused on leadership, advocacy and impact. We placed a particular emphasis on training tomorrow's leaders, empowering participants to make a positive difference on the Web, and working toward universal web literacy.
           </TimeLineItem>
           <TimeLineItem time="2014" label="a free web" flip="true"
             className="timeline-item-2014"
