@@ -3,6 +3,49 @@
     background-position: 100% center;
     background-size: 115%;
   }
+  .letter,
+  .participating {
+    overflow: hidden;
+    text-align: left;
+  }
+  .expect-header {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .signature-bold {
+    font-weight: 600;
+    font-style: italic;
+  }
+  .signature-container {
+    text-align: right;
+    margin-top: -70px;
+    .surman-photo-crop {
+      margin-top: 45px;
+      margin-left: 20px;
+      height: 128px;
+      width: 128px;
+      img {
+        -webkit-transform: scale(0.6) translate(-49%, -34%);
+        -ms-transform: scale(0.6) translate(-49%, -34%);
+        transform: scale(0.6) translate(-49%, -34%);
+      }
+      @media screen and (min-width: 768px) {
+        margin-top: 0;
+        margin-left: 0;
+        height: 160px;
+        width: 160px;
+        img {
+          -webkit-transform: scale(0.75) translate(-33%, -17%);
+          -ms-transform: scale(0.75) translate(-33%, -17%);
+          transform: scale(0.75) translate(-33%, -17%);
+        }
+      }
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+    }
+  }
   .circles-container {
     margin: 0 auto;
     overflow: hidden;
