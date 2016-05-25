@@ -138,9 +138,9 @@ var About = React.createClass({
           <div className="starting-line"></div>
             <TimeLineItem time="2016" label="the present" flip="true"
               className="timeline-item-2016"
-              image="/assets/images/mozfest-flag.svg"
+              image="/assets/images/img-2016.svg"
               alt="MozFest Flag"
-              imageHeight={190} imageWidth={180}
+              imageHeight={230} imageWidth={220}
             >
               This year, we'll highlight how the Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We'll examine how issues like Web literacy, online privacy and encryption are relevant across the globe, and address challenges faced by people who don't yet feel they are welcome on the Web.
             </TimeLineItem>
