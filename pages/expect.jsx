@@ -38,127 +38,127 @@ var Expect = React.createClass({
           </div>
         </div>
         <div className="content centered wide">
-          <h1>Participating at MozFest</h1>
-          <div className="participating">
-            <div className="half-content">
-              <p>MozFest is an annual festival where hundreds of passionate people gather to wield the Web for good. We create, teach and learn as a community in order to make the Internet, and by extension the world, a better place. Guiding the festival is Mozilla’s core learning vision: learning should be hands-on, immersive, and done collectively.</p>
-
-              <p>MozFest is populated with people that are open, friendly and eager to help. Participants of all ages and skill levels are welcome. We believe that everyone has something to contribute. Youth especially are encouraged to come and lead sessions -- we’re dedicated to mentoring and celebrating tomorrow’s leaders. For our youngest participants, on-site day care and activities are provided.</p>
-            </div>
-            <div className="half-content">
-              <p>We try to accommodate all interaction styles at MozFest. While many sessions are hands-on and fully interactive, we also have plenty of listening-based activities for those who participate best in that manner, as well as individual maker stations where attendees can focus -- individually or in a group -- on a single activity.</p>
-
-              <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has Participation Guidelines outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival, so we can all enjoy a safe, respectful and rewarding weekend.</p>
-
-            </div>
+          <div className="outline">
+            <h1>Weekend Outline</h1>
+            <table className="schedule-table">
+              <tr className="table-header">
+                <td>
+                  fri oct 28
+                </td>
+                <td>
+                  sat oct 29
+                </td>
+                <td>
+                  sun oct 30
+                </td>
+              </tr>
+              <tr>
+                <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">8:00</div>
+                    <div>Doors open</div>
+                  </div>
+                </td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">9:00</div>
+                    <div>Doors open</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">9:00</div>
+                    <div>Welcome & Opening Keynotes</div>
+                  </div>
+                </td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">10:00</div>
+                    <div>Welcome & Opening Keynotes</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">10:30</div>
+                    <div>Morning sessions begin</div>
+                  </div>
+                </td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">11:30</div>
+                    <div>Morning sessions begin</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">12:30</div>
+                    <div>Lunch</div>
+                  </div>
+                </td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">13:00</div>
+                    <div>Lunch</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">14:00</div>
+                    <div>Afternoon sessions begin</div>
+                  </div>
+                </td>
+                <td>
+                  <div className="td-container">
+                    <div className="time">15:00</div>
+                    <div>Afternoon sessions begin</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="time">18:00 to 21:00</div>
+                  <div>Science Fair evening reception</div>
+                </td>
+                <td>
+                  <div className="time">17:30 to 18:30</div>
+                  <div>Evening lightning talks</div>
+                </td>
+                <td>
+                  <div className="time">18:00</div>
+                  <div>Demo party</div>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
         <div className="white-background">
           <div className="content centered wide">
-            <div className="outline">
-              <h1>Weekend Outline</h1>
-              <table className="schedule-table">
-                <tr className="table-header">
-                  <td>
-                    fri nov 6
-                  </td>
-                  <td>
-                    sat nov 7
-                  </td>
-                  <td>
-                    sun nov 8
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">8:00</div>
-                      <div>Doors open</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">9:00</div>
-                      <div>Doors open</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">9:00</div>
-                      <div>Welcome & Opening Keynotes</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">10:00</div>
-                      <div>Welcome & Opening Keynotes</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">10:30</div>
-                      <div>Morning sessions begin</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">11:30</div>
-                      <div>Morning sessions begin</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">12:30</div>
-                      <div>Lunch</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">13:00</div>
-                      <div>Lunch</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">14:00</div>
-                      <div>Afternoon sessions begin</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">15:00</div>
-                      <div>Afternoon sessions begin</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div className="time">18:00 to 21:00</div>
-                    <div>Science Fair evening reception</div>
-                  </td>
-                  <td>
-                    <div className="time">17:30 to 18:30</div>
-                    <div>Evening lightning talks</div>
-                  </td>
-                  <td>
-                    <div className="time">18:00</div>
-                    <div>Demo party</div>
-                  </td>
-                </tr>
-              </table>
+            <h1>Participating at MozFest</h1>
+            <div className="participating">
+              <div className="half-content">
+                <p>MozFest is an annual festival where hundreds of passionate people gather to wield the Web for good. We create, teach and learn as a community in order to make the Internet, and by extension the world, a better place. Guiding the festival is Mozilla’s core learning vision: learning should be hands-on, immersive, and done collectively.</p>
+
+                <p>MozFest is populated with people that are open, friendly and eager to help. Participants of all ages and skill levels are welcome. We believe that everyone has something to contribute. Youth especially are encouraged to come and lead sessions -- we’re dedicated to mentoring and celebrating tomorrow’s leaders. For our youngest participants, on-site day care and activities are provided.</p>
+              </div>
+              <div className="half-content">
+                <p>We try to accommodate all interaction styles at MozFest. While many sessions are hands-on and fully interactive, we also have plenty of listening-based activities for those who participate best in that manner, as well as individual maker stations where attendees can focus -- individually or in a group -- on a single activity.</p>
+
+                <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has Participation Guidelines outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival, so we can all enjoy a safe, respectful and rewarding weekend.</p>
+
+              </div>
             </div>
           </div>
         </div>
