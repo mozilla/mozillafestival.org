@@ -19,7 +19,7 @@ var Guidelines = React.createClass({
         <div className="white-background">
           <div className="centered content wide">
             <h1>R-E-S-P-E-C-T</h1>
-            <p>The Mozilla Festival respects Mozilla's community participation guidelines. These guidelines cover our behaviour as participants, facilitators, space wranglers, staff, volunteers, vendors, and anyone else involved in making MozFest possible.</p>
+            <p>The Mozilla Festival respects Mozilla's <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/">community participation guidelines</a>. These guidelines cover our behaviour as participants, facilitators, space wranglers, staff, volunteers, vendors, and anyone else involved in making MozFest possible.</p>
             <div className="horizontal-rule"></div>
             <h1>How to treat each other</h1>
             <div className="treat-each-other-list">
@@ -57,10 +57,11 @@ var Guidelines = React.createClass({
           <div className="centered content wide">
             <h1>Raising Issues at MozFest</h1>
             <div className="half-content">
-              <p>If you believe you&lsquo;re experiencing practices at MozFest which don&lsquo;t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Producer, Sarah Allen.</p>
+              <p>If you believe you‘re experiencing practices at MozFest which don‘t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Producer, Sarah Allen.</p>
+              <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
             </div>
             <div className="half-content">
-              <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
+              <p>MozFest organisers reserve the right to refuse admission to anyone violating these policies, and/or take further action including expulsion from the event.</p>
               <p className="boldish">
                 Email: <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>
               </p>
@@ -68,7 +69,7 @@ var Guidelines = React.createClass({
           </div>
           <div className="centered content wide">
             <h1>Working in the Open</h1>
-            <p>Because working open is one of our core values, MozFest program planning is done in the open on Github (check out our 2015 repo <a href="https://github.com/mozilla/mozfest-program">here</a>). We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. Learn more about <a href="https://wiki.mozilla.org/Working_open">how we work open at Mozilla</a>.</p>
+            <p>Because working open is one of our core values, MozFest program planning is done in the open on Github (check out our repo <a href="https://github.com/mozilla/mozfest-program-2016">here</a>). We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. Learn more about <a href="https://wiki.mozilla.org/Working_open">how we work open at Mozilla</a>.</p>
           </div>
         </div>
         <Footer/>
@@ -78,4 +79,3 @@ var Guidelines = React.createClass({
 });
 
 module.exports = Guidelines;
-
