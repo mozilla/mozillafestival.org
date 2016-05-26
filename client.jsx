@@ -14,11 +14,12 @@ var routes = (
     <Route name="guidelines" path="/guidelines" handler={require('./pages/guidelines.jsx')} />
     <Route name="volunteer" path="/volunteer" handler={require('./pages/volunteer.jsx')} />
     <Route name="team" path="/team" handler={require('./pages/team.jsx')} />
+    <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />
   </Route>
 );
 
 /* ********************
-* temporarily hiding these routes 
+* temporarily hiding these routes
 * leaving code here so we can quickly turn these pages back on in June and September
 ******************** */
 
@@ -26,7 +27,6 @@ var routes = (
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
 // <Route name="fringe-events" path="/fringe" handler={require('./pages/fringe-events.jsx')} />
 // <Route name="fringe-event-add-success" path="/fringe-event-add-success" handler={require('./pages/fringe-event-add-success.jsx')} />
-// <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />
 // <Route name="sessions" path="/sessions" handler={require('./pages/sessions.jsx')} />
 // <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
 

@@ -13,9 +13,9 @@ var SubmissionProcessPage = React.createClass({
           Submission Process
         </HeroUnit>
         <div className="centered content wide">
-          <p>This year, we're using GitHub to manage, review and curate sessions for MozFest. GitHub allows us to better collaborate and coordinate across the program in an open fashion.</p>
-          <p>Leading up to the event, MozFest's Space Wranglers will be reviewing all proposals and choosing sessions that best align with their Space objectives. You can follow this process on our <a href="https://github.com/mozilla/mozfest-program/issues">GitHub repo</a>.</p>
-          <p>Unfortunately, not all proposals will be accepted; the weekend simply is not long enough. But there's good news: everyone who proposed a session will be gifted a free ticket to the festival. </p>
+          <p>We use GitHub to manage, review and curate sessions for MozFest. GitHub allows us to openly collaborate, and it provides a record for how the festival program came together.</p>
+          <p>When the Call for Proposals closes on August 1, Space Wranglers will review all proposals and choosing sessions that best align with their Space objectives. You can follow this process on our <a href="https://github.com/MozillaFoundation/mozfest-program-2016">GitHub repo</a>.</p>
+          <a href="/proposals" className="button"><span>Submit a Proposal for MozFest 2016</span></a>
         </div>
         <Footer/>
       </div>
@@ -24,4 +24,3 @@ var SubmissionProcessPage = React.createClass({
 });
 
 module.exports = SubmissionProcessPage;
-
