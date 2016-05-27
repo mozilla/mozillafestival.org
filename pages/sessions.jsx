@@ -10,7 +10,7 @@ var SpacesInfo = [
   {
     name: "Journalism",
     iconPath: "/assets/images/space-icons/Journalism.svg",
-    description: [ 
+    description: [
       "Journalism has an indelible impact on the Web. Code developed in newsrooms — like Django and Backbone — shape our experiences online; reporting amuses us, enrages us and leads to meaningful change in our communities; and millions of readers engage with online coverage daily.",
       "In the Journalism Space, we explore how journalism carried out both in and out of newsrooms can strengthen the open Web and improve people’s lives. Participants will learn how closely linked journalism and the Web truly are, and how they can contribute to the fourth estate online.",
     ],
@@ -208,11 +208,11 @@ var SessionsPage = React.createClass({
         <Header/>
         <HeroUnit image="/assets/images/sessions.jpg"
                   image2x="/assets/images/sessions.jpg">
-          Sessions
+          Spaces & Sessions
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">
-            <h1>Spaces and Pathways</h1>
+            <h1>Spaces and Sessions</h1>
             <p>To help you get the most out of MozFest, we’ve introduced two new concepts to the program: Spaces and <Link to="pathways">Pathways</Link>. Spaces are physical hubs, typically located on a single floor, with sessions exploring a shared theme. Pathways are a series of three or more complementary sessions and experiences that may cross multiple Spaces.</p>
             <div className="horizontal-rule"></div>
           </div>
@@ -230,4 +230,3 @@ var SessionsPage = React.createClass({
 });
 
 module.exports = SessionsPage;
-
