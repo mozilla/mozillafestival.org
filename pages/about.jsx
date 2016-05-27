@@ -96,16 +96,21 @@ var About = React.createClass({
             <div className="letter">
               <div className="half-content">
                 <p className="boldish">Dear Friends,</p>
-                <p>MozFest is an annual celebration of the world’s most valuable public resource: the open Web. Participants are diverse -- there are engineers and artists, activists and educators. But everyone shares a common belief: the Web can make lives better. The Web unlocks opportunity, spurs creativity, teaches valuable skills and connects far-flung people and ideas.</p>
-                <p>MozFest is about improving the open Web with new ideas and creations. It’s also about sharing the open philosophy. By 2025, five billion individuals will be online, many exclusively through their smartphones. And it’s so important these new users discover a Web that improves each and every person's life.</p>
+                <p>I like to think of the Mozilla community as a reflection of the Internet: Creative. Eclectic. Speaking many languages, spanning many disciplines, always open to new ideas.</p>
+
+                <p>This is most apparent at MozFest, the annual celebration of our community and the greater open Internet movement. Three days each year, we gather together and discuss, debate, create and hack to build a better Internet. We’re a diverse crew: Scientists from the UK. Educators from Kenya. Technologists from Shenzhen.</p>
+
+                <p>When we come together this year, we want to celebrate our diversity. We want to show that the open Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We have the proof: Over the past year, the next generation of open Internet leaders have campaigned for net neutrality in India; taught digital skills in Nairobi and Cape Town; and explored the future of the Internet of Things in Berlin.</p>
               </div>
               <div className="half-content">
-                <p>There are threats and challenges. Some companies and governments seek to wrestle control of the Web away from the public. There is also a lack of education around web literacy, the ability to meaningfully interact and create online. When users don't fully understand how the Web works, they can't harness its potential.</p>
-                <p>We can change this. At MozFest, we unite for creative sessions, peer learning and brainstorms. Together, we devise ways to teach web literacy; to be Freedom Fighters who stand up for the Web; and to ensure the next billion people to come online find a fully-open platform.</p>
-                <p>We're seeking leaders and mentors to join us in London this year; individuals eager to empower others and make a real impact online. If you're passionate about literacy, privacy and inclusion on the Web, we hope to see you in London.</p>
+                <p>This year at MozFest, we also want to do our duty as outlined in the Mozilla Manifesto: Ensure the Internet is a global public resource, open and accessible to all. That means teaching web literacy to more people in more places. It also means asking hard questions about what an ‘inclusive Internet’ really means. We need to actively address the challenges faced by people who don't yet feel they are welcome on the Web.</p>
+
+                <p>We have our work cut out for us -- there’s no shortage of threats to the open Internet. Online privacy and important safeguards like encryption are in jeopardy. And walled gardens are making the Web more closed and less hackable.</p>
+
+                <p>At MozFest this year, we’ll work on solutions to these issues and so many others. Our MozFest brainstorms, sessions and creativity always inspire me, and I can’t wait to see what we build together this year.</p>
                 <p>
-                  Best,<br/>
-                  <span className="signature-bold">—Mark</span>
+                  See you in London,<br/>
+                <span className="signature-bold">—Mark Surman</span>
                 </p>
                 <div className="signature-container">
                   <ImageTag src1x="/assets/images/signature.svg"
