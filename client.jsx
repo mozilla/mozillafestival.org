@@ -19,6 +19,7 @@ var routes = (
     <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
     <Route name="fringe-events" path="/fringe" handler={require('./pages/fringe-events.jsx')} />
     <Route name="fringe-event-add-success" path="/fringe-event-add-success" handler={require('./pages/fringe-event-add-success.jsx')} />
+    <Route name="tickets" path="/tickets" handler={require('./pages/tickets.jsx')} />
   </Route>
 );
 
@@ -27,7 +28,6 @@ var routes = (
 * leaving code here so we can quickly turn these pages back on in June and September
 ******************** */
 
-// <Route name="tickets" path="/tickets" handler={require('./pages/tickets.jsx')} />
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
 
 Router.run(routes, Router.HistoryLocation, function (Handler) {
