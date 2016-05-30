@@ -24,7 +24,7 @@ var Volunteer = React.createClass({
 
           <p>The MozFest team meets bi-monthly in Mozilla’s London office, so come say hi and learn more.</p>
           {/* This button is an empty link for now. Waiting on the ti.to link to be published later on.*/}
-          <a href="#" className="button"><span>Sign Up to be a MozFest Volunteer</span></a>
+          <a href="https://ti.to/Mozilla/mozfest2016-volunteers" className="button"><span>Sign Up to be a MozFest Volunteer</span></a>
         </div>
         <Footer/>
       </div>
