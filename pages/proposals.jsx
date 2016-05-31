@@ -315,18 +315,18 @@ var Proposals = React.createClass({
         </InputCombo>
         <InputCombo for="organization" type="text" name="organization">
           <div>Organisation</div>
-          <div>Please leave blank if you don't want it publised.</div>
+          <div>Please leave blank if you don't want it published.</div>
         </InputCombo>
         <InputCombo for="otherFacilitators" type="text" name="other-facilitators">
           <div>Other facilitators</div>
-          <div>One per line, (e.g. John Doe @j.doe j.doe@example.com)</div>
+          <div>One per line, format is Name[single space]Twitter handle [single space]email (e.g. John Doe @j.doe j.doe@example.com)</div>
         </InputCombo>
         <InputCombo for="twitter" type="text" name="twitter-handle">
-          <div>What's your Twitter handle?</div>
-          <div>Please leave blank if you don't want it publised.</div>
+          <div>Twitter handle</div>
+          <div>Please leave blank if you don't want it published.</div>
         </InputCombo>
 
-        <label>What Space are you submitting your proposal to? *</label>
+        <label>What Space are you submitting your proposal to? Read details on each Space <a href="/spaces-and-sessions">here</a>. *</label>
         <InputCombo onClick={this.onSpaceClicked} name="space-radio" className="radio-input" for="digital" type="radio">
           Digital Arts and Culture
         </InputCombo>
@@ -388,7 +388,7 @@ var Proposals = React.createClass({
           Why do you think Mozfest is a good place to show your work? *
         </InputCombo>
 
-        <label>Is there another space you believe this exhibit could be shown within?</label>
+        <label>s there another space you believe this exhibit could be shown within? Read details on each Space <a href="/spaces-and-sessions">here</a>.</label>
         <InputCombo name="another-space-radio" className="radio-input" for="another-digital" type="radio">
           Digital  Arts and Culture
         </InputCombo>
@@ -450,7 +450,7 @@ var Proposals = React.createClass({
   renderStepThree: function() {
     return (
       <div>
-        <label>MozFest accepts many different session formats. What do you think would work best for your session? (multi select option) *</label>
+        <label>MozFest accepts many different session formats. What do you think would work best for your session? (you may select multiple formats) *</label>
         <InputCombo name="format-checkbox" onClick={this.formatCheckboxClicked} className="checkbox-input" for="demo" type="checkbox">
           Demo or Lightning talk - 5-15 minute showcase of completed work  or product
         </InputCombo>
@@ -474,7 +474,7 @@ var Proposals = React.createClass({
         </InputCombo>
         <div id="format-checkboxError" className="error-message">Format is required.</div>
 
-        <label>If you chose "other" above, please outline why below</label>
+        <label>If you chose "other" above, please outline why.</label>
         <input onClick={this.otherFormatInputClicked} className="format-checkbox other-input format-other-input" type="text"/>
         <div id="format-other-error-message" className="error-message">Other cannot be empty.</div>
 
@@ -507,7 +507,7 @@ var Proposals = React.createClass({
         </InputCombo>
         <div id="travel-radioError" className="error-message">Travel stipend is required.</div>
 
-        <label>If your session is not accepted in your preferred Space is there another space you would like your session to be considered within?</label>
+        <label>If your session is not accepted in your preferred Space is there another space you would like your session to be considered within? Read details on each Space  <a href="/spaces-and-sessions">here</a>.</label>
         <InputCombo name="backup-space-radio" className="radio-input" for="digital-backup" type="radio">
           Digital Art and Culture
         </InputCombo>
@@ -603,7 +603,7 @@ var Proposals = React.createClass({
                   image2x="/assets/images/proposals.jpg">
           <div>call for proposals</div>
           <div className="deadline">
-            <span>Deadline for submission is 1st of August 2016 at 21:00 UTC</span>
+            <span>Deadline for submissions is August 1, 2016 at 21:00 UTC</span>
           </div>
         </HeroUnit>
         <div className="content">
