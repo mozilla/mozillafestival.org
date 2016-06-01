@@ -6,186 +6,222 @@ var HeroUnit = require('../components/hero-unit.jsx');
 var SpacePathwayProfile = require('../components/space-pathway-profile.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
+// TODO:FIXME: unable to use <Link> in <SpacePathwayProfile>
+// error raised: "Failed Context Types: Required context `router` was not specified in `Link`."
+// had to use vaillia <a> for now
+
 var SpacesInfo = [
   {
+    name: "Digital Arts and Culture",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description: 
+    (<div>
+      <p>21st Century, the relationship between art and technology has grown deeper and more nuanced than ever before. We use technology to create art. We view and share art using new and impressive digital tools. And often, technology itself — from products to Web pages — is art
+      </p>
+      <p>Join the Digital Arts and Culture Space for workshops, demos, and discussions that unpack the relationship between art, technology, and the Web. We’ll explore how vlogging is becoming an art form of its own; discover how digital tech is making the arts accessible to people with all abilities; ask when code is at its most creative; and understand the role of digital arts in society. Whether you’re a professional artist or a DIY maker, everyone will have an opportunity to create and be inspired.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
+    contacts: [
+      {
+        name: "Julie Neville"
+      }
+    ]
+  },
+  {
     name: "Journalism",
-    iconPath: "/assets/images/space-icons/Journalism.svg",
-    description: [
-      "Journalism has an indelible impact on the Web. Code developed in newsrooms — like Django and Backbone — shape our experiences online; reporting amuses us, enrages us and leads to meaningful change in our communities; and millions of readers engage with online coverage daily.",
-      "In the Journalism Space, we explore how journalism carried out both in and out of newsrooms can strengthen the open Web and improve people’s lives. Participants will learn how closely linked journalism and the Web truly are, and how they can contribute to the fourth estate online.",
-    ],
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>Journalism doesn't just tell the story of the Internet — it's part of it. Software like Django, D3, and Backbone has emerged from newsrooms to power some of the most innovative work on the open Web. And reporting entertains and challenges millions of readers online every day, giving them the information they need to engage with their communities.</p>
+      <p>In the Journalism Space, we explore how journalism can change our lives, both in person and online. Participants will learn how developers, designers, and data analysts collaborate to cover the most important stories of the day, and how they can contribute to the kind of work that protects the open Web and drives it forward.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Erika Owens",
-        twitter: "@erika_owens"
+        name: "Erika Owens"
       },
       {
-        name: "Ryan Pitts",
-        twitter: "@ryanpitts"
+        name: "Ryan Pitts"
+      },
+      {
+        name: "Eva Constantaras"
       }
     ]
   },
   {
-    name: "Science",
-    iconPath: "/assets/images/space-icons/Science.svg",
-    description: [
-      "Science and the Web both help us understand the world around us. In the Science Space, participants learn, tinker, explore and hack at the intersection of science and the Internet, and learn how the Web can advance scientific work.",
-      "We cover topics like citizen science, open data, open mapping and open research, all the while learning news skills and tools. We also collaborate on each other’s projects and empower one another: our Open Research Accelerator provides one-on-one mentorship.",
-      "The Science Space is open to everyone: we invite hobbyists, researchers, librarians, data scientists, developers and all others to join us.",
-    ],
+    name: "Open Science",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>Science and the Web both help us understand the world around us. In the Open Science Space, participants explore, remix, and hack at the intersection of science and the Internet, and learn how the Web is transforming research and discovery.</p>
+      <p>We cover topics like open data and research, citizen science, and science communication — all the while learning news skills and tools. We also collaborate on each other’s projects, and our Open Research Accelerator provides one-on-one mentorship for making your project open source. The Open Science Space is open to everyone: We invite hobbyists, researchers, librarians, data scientists, developers, and all others to join us.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Arliss Collins",
-        twitter: "@arlissc99"
+        name: "Arliss Collins"
       },
       {
-        name: "Abby Cabunoc Mayes",
-        twitter: "@abbycabs",
-        bio: {
-          photoSrc: "/assets/images/bio/AbigailCabunocMayes.jpg",
-          bio: <p>Abigail Cabunoc Mayes is the lead developer for Mozilla Science Lab, which is a community of researchers, tool developers, librarians, and publishers working to leverage the open web in research. Prior to joining Mozilla, Abby worked as a bioinformatics software developer at the Ontario Institute for Cancer Research where she was the technical lead on the WormBase website.</p>
-        }
+        name: "Joey Lee"
+      },
+      {
+        name: "Richard Smith-Unna"
+      },
+      {
+        name: "Kirstie Whitaker"
       }
     ]
   },
   {
-    name: "Digital Citizenship",
-    iconPath: "/assets/images/space-icons/Digital_Citizenship.svg",
-    description: [
-      "We believe everyone should be able to read, write and participate on the Web. The Digital Citizenship Space is all about unpacking how we achieve this.",
-      "Limitations to digital citizenship are many: access, lack of privacy, marginalization, and socio-cultural beliefs that bleed into online life. Join a collection of policy experts, legal practitioners, activists and technologists from around the globe eager to solve these problems and increase online participation. Together we’ll discuss campaigns, tools and other avenues that can make a difference.",
-    ],
+    name: "Open Badges",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>Open Badges are transforming how we recognise and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
+      <p>Open Badges are taking root around the world, from non-profits to major employers and universities. And the technical infrastructure that makes badges possible is constantly evolving. In the Open Badges Space, we’ll showcase exciting badges projects, hack on and build badge infrastructure, and encourage new partners and networks adopt badges. We’re also plugging Open Badges into other spaces and sessions across MozFest.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Melissa Romaine",
-        twitter: "@melechuga"
+        name: "Matt Rogers"
       },
       {
-        name: "Stacy Martin",
-        bio: {
-          photoSrc: "/assets/images/bio/StacyMartin.png",
-          bio: <p>Stacy Martin is part of the Policy Team at Mozilla. As a Senior Manager of Privacy and Engagement, Stacy focuses on building privacy community and education / awareness materials. She has created several teaching kits on topics such as privacy, passwords, and DRM. Stacy also organizes Mozilla’s Privacy Lab, team teaches New Hire Privacy Training and leads Mozilla’s Privacy Day planning. She has been with Mozilla for 4 years. Her latest passion is building a Global Advocacy and Teaching Task Force for privacy and other key Internet issues. If you’d like to get involved with privacy issues or advocacy task forces, she invites you to come talk to her!</p>
-        }
+        name: "Tim Riches"
       },
       {
-        name: "Shane Caraveo",
-        twitter: "@mixedpuppy"
-      },
-      {
-        name: "Sara Haghdoosti",
-        twitter: "@sarahaghdoosti"
+        name: "Lucy Neale"
       }
     ]
   },
   {
-    name: "Mozilla Learning Networks",
-    iconPath: "/assets/images/space-icons/Mozilla_Learning_Networks.svg",
-    description: [
-      "Leaders demonstrate what the Web can do. The Mozilla Learning Network Space at MozFest will convene and catalyze leaders who equip others to advance their lives on the Web.",
-      "Our leadership Space and Pathways are part of a broad effort to cultivate a global network of web literacy leaders, people of all stripes and ages who are teaching others to read, write and participate on the Web while still actively learning themselves.",
-    ],
+    name: "Fuel The Movement",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>The open Internet movement needs you! When everyday Internet users band together, we can overcome the many threats to the free and open Internet, and keep it a global public resource.</p>
+      <p>This year, we're focusing on copyright. We believe copyright should foster innovation, creation and competition. Sessions should help participants understand how changes in copyright law in the European Union could impact them through interactive workshops, DIY making, and lightning talks. In the Fuel the Movement Space, we couple fun and creativity with Internet policy and advocacy. Participants will walk away energized and equipped to take advantage of present-day opportunities online.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Lindsey Frost",
-        twitter: "@lindsey_in_cha",
-        bio: {
-          photoSrc: "/assets/images/bio/LindseyFrost.jpg",
-          bio: <p>Lindsey is the Gigabit City Lead for the MLN team, leading Mozilla's five-city effort to explore how high-speed networks can be leveraged for learning. A native of Chattanooga, Tennessee, Lindsey is passionate about empowering leaders and learners to read, write, and participate on the (super fast!) Web. She's previously worked with the University of Tennessee and the Public Education Foundation and is a founder of DEV DEV, Chattanooga's citywide digital literacy initiative.</p>
-        }
+        name: "Melissa Romaine"
       },
       {
-        name: "Sam Dyson",
-        twitter: "@samueledyson",
-        bio: {
-          photoSrc: "/assets/images/bio/SamDyson.jpeg",
-          bio: <p>Sam is Director of Hive Chicago on the Mozilla Learning Network team. He's exploring the power of human networks to meet the opportunities and challenges inherent in the work of teaching and learning in the digital age. He provides strategic direction and sustainability for Hive Chicago as part of Mozilla's global leadership development and web literacy efforts. Sam has worked elsewhere in education including 10 years teaching high school physics.</p>
-        }
+        name: "Stacy Martin"
+      },
+      {
+        name: "Raegan MacDonald"
+      },
+      {
+        name: "Georgia Bullen"
       }
     ]
   },
   {
-    name: "Global Village",
-    iconPath: "/assets/images/space-icons/Global_Village.svg",
-    description: [
-      "What is the Global Village? A collection of self-contained but interconnected places from around the world where participants at Mozfest meet, learn and tinker with tomorrow’s places. The Global Village cultivates leading practitioners to build, teach and advocate for an Internet of things that empowers its users.",
-      "Turn off your screen. Close your book. End that meeting. Pick up a sketchpad, a pair of scissors, a hot-glue gun, some parcel tape and come cry “If We Build It They Will Come.” This is a springboard for tomorrow and welcoming place for those inclusive citizens and communities.",
-    ],
+    name: "Localisation",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>The Internet spans many cultures and languages — and so does the Localisation Space.</p>
+      <p>This space reflects the diversity of the Web and the people who use it. It’s set up like a marketplace, rich with different colors, smells, and flavours. We’ll explore how people participate in the digital world in a way that reflects their unique culture and identity. Localisation experts and amateurs alike will share localisation tools, discuss their experiences on a multicultural Internet, and explore how we can create a Web that’s truly inclusive of all languages and societies.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Jon Rogers"
+        name: "Heather Bailey"
       },
       {
-        name: "Ian Forrester",
-        twitter: "@cubicgarden",
-        bio: {
-          photoSrc: "/assets/images/bio/IanForrester.jpg",
-          bio: <p>Ian Forrester is a well known and likeable character on the digital scene in the UK. He has now made Manchester, UK his home, where he works for the BBC's R&D north lab. He focuses on open innovation and new disruptive opportunities via open engagement and collaborations with startups, early adopters and hackers</p>
-        }
+        name: "Dwayne Bailey"
       },
       {
-        name: "Jasmine Cox"
-      }
-    ]
-  },
-  {
-    name: "Participation",
-    iconPath: "/assets/images/space-icons/Participation.svg",
-    description: [
-      "Participation is at the heart of Mozilla’s approach to learning. But participation doesn’t just happen — it’s built through great design and great leadership.",
-      "The Participation Space will be a mixture of workshops, hack sessions, open challenges and product tinkering aimed at building participation and developing leaders who can inspire others. Participants will cover personal leadership exploration, skill development and community building.",
-    ],
-    contacts: [
-      {
-        name: "George Roter",
-        twitter: "@geroter"
-      },
-      {
-        name: "Emma Irwin",
-        twitter: "@sunnydeveloper"
+        name: "Manal Hassan"
       }
     ]
   },
   {
     name: "Youth Zone",
-    iconPath: "/assets/images/space-icons/Youth_Zone.svg",
-    description: [
-      "There’s sometimes a fundamental clash between youth and adults on the Web. Young people discover platforms and activities that are important and meaningful to them — but adults disagree, wishing youngsters would invest their time elsewhere. In the Youth Zone Space, we’ll explore and aim to reconcile this conflict.",
-      "Young people and adults will work in tandem across three pathways and 30 sessions. Together, we’ll explore new technology and how it’s relevant to all participants. We’ll also build things together, and learn about fulfilling careers based in new media.",
-    ],
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>Too often, current-day education systems are prescriptive. Learning is based around certain objectives, like exams. And independent thinking isn’t encouraged.</p>
+      <p>In the Youth Zone Space, we’re creating an environment where independent thinking isn’t just encouraged — it’s rewarded. Our space is a sandbox for kids, teens, and adults alike to tinker, hack, build, and play as a means of learning. Sessions will be hands-on and centered around Raspberry Pi and virtual reality, with a focus on the artistry of these tools. We’ll also reimagine what a 21st-century library should look like — a collection of open source tools and activities.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
+    </div>),
     contacts: [
       {
-        name: "Dorine Flies",
-        twitter: "@dorineflies"
+        name: "Dorine Flies"
       },
       {
-        name: "Harry Smith"
+        name: "Andrew Mulholland"
       }
     ]
   },
   {
-    name: "Localization",
-    iconPath: "/assets/images/space-icons/Localization.svg",
-    description: [
-      "All languages and cultures are uniquely different and valuable — and they should be treated this way on the Web, too. In order for the Web to empower everyone, it must be adapted to diverse communities and peoples. The next billion people to come online shouldn’t find an English-only Web.",
-      "In the Localization Space, participants learn language localization skills and nuances, how to include diversity in products, and how to bring this philosophy back to their local communities.",
-    ],
+    name: "Demystify the Web",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>Grab your ticket to our carnival of learning! All who enter will gain the most important skills of our age: the ability to read, write and participate in our digital world.</p>
+      <p>The Demystify the Web Space invites teachers and learners of all ages to join our funhouse of Web literacy. Embrace the unknown! Experience the thrills! Imagine and share the full potential of the Web with everyone!</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>. We’re looking for sessions that share fun, interactive ways to teach and learn the Web in diverse, inclusive spaces; sessions designed for creative collisions; sessions that inspire people to engage in an openly networked world.</p>
+    </div>),
     contacts: [
       {
-        name: "Heather Bailey",
-        bio: {
-          photoSrc: "/assets/images/bio/HeatherBailey.JPG",
-          bio: <p>Heather Bailey works for Translate, working behind the scenes for the last 15 years on localisations projects trying not to let them take over her house and her life. Born and raised in Southern Africa she loves the variety of people and culture in it and will always be a part of her identity. She has Illustrated a number of children’s books makes wedding dresses for fun and mostly loves connecting with people.</p>
-        }
+        name: "Robert Friedman"
       },
       {
-        name: "Dwayne Bailey",
-        bio: {
-          photoSrc: "/assets/images/bio/DwayneBailey.JPG",
-          bio: <p>Dwayne Bailey is a proud father to two beautiful girls. His mission in life is to create a world where people can access and create in their own language. His motivation behind starting the Translate (a specialised localisation company) was to remove the language barrier between people and technology. For all the effort we put into getting information on screens, it might as well be miles away from the eyes that can’t read it. So he travels the world passing on knowledge and giving localisers the tools to be able to make the changes they need for their languages. He loves Africa despite potholes and politics and would just like people to be able to get on with it without limitation.</p>
-        }
+        name: "Kim Wilkens"
+      },
+      {
+        name: "Su Adams"
+      },
+      {
+        name: "Simeon Oriko"
       }
     ]
-  }
+  },
+  {
+    name: "A Tale of Two Cities: Dilemmas in Connected Spaces",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>As our lives and physical environments become even more connected online, we're faced with dilemmas. Should I allow my personal data to be used if it improves my daily life? Should my everyday objects be online?</p>
+      <p>This space will allow makers and learners to explore these dilemmas through a series of interactive experiences and mischievous interventions. Participants might nap on a squishy chair that generates sleep data; cook a snack in a connected kitchen where appliances only sometimes do as you say; and hack on IoT hardware.</p>
+      <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>. We're seeking fellow pranksters who want to create memorable moments. We're less interested in traditional sessions and more interested in experiences like dance-offs, exhibits, interactive comic books, and newly-invented sports.</p>
+    </div>),
+    contacts: [
+      {
+        name: "Michelle Thorne"
+      },
+      {
+        name: "Jon Rogers"
+      },
+      {
+        name: "Ian Forrester"
+      },
+      {
+        name: "Dietrich Ayala"
+      },
+      {
+        name: "George Roter"
+      }
+    ]
+  },
+  {
+    name: "MozEx (Art Exhibit)",
+    // iconPath: "/assets/images/space-icons/icon_file",
+    description:
+    (<div>
+      <p>MozEx is an art exhibition with a 21st-century twist. Curated by the digital learning teams at both the Tate and the V&A, this space showcases dynamic digital artwork that spans many disciplines and media.</p>
+      <p>The MozEx exhibit explores links between art, society, and the digital world. Created by both individual practitioners and cross-disciplinary collaborations, the exhibit will explore the value of art to society through Web literacy, digital inclusion and accessibility, privacy, policy, and hacking.</p>
+      <p>Have a great artwork idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>. We are keen to see submissions that explore the exchange of knowledge and practice with audiences.</p>
+    </div>),
+    contacts: [
+      {
+        name: "Luca Damiani"
+      }
+    ]
+  },
 ];
 
 var SessionsPage = React.createClass({
@@ -213,7 +249,7 @@ var SessionsPage = React.createClass({
         <div className="white-background">
           <div className="content centered wide">
             <h1>Spaces and Sessions</h1>
-            <p>To help you get the most out of MozFest, we’ve introduced two new concepts to the program: Spaces and <Link to="pathways">Pathways</Link>. Spaces are physical hubs, typically located on a single floor, with sessions exploring a shared theme. Pathways are a series of three or more complementary sessions and experiences that may cross multiple Spaces.</p>
+            <p>Spaces are physical and thematic learning hubs based around a broad topic, like science, art, or journalism. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
             <div className="horizontal-rule"></div>
           </div>
         </div>
