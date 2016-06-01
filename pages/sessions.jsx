@@ -16,7 +16,7 @@ var SpacesInfo = [
     // iconPath: "/assets/images/space-icons/icon_file",
     description: 
     (<div>
-      <p>21st Century, the relationship between art and technology has grown deeper and more nuanced than ever before. We use technology to create art. We view and share art using new and impressive digital tools. And often, technology itself — from products to web pages — is art
+      <p>21st Century, the relationship between art and technology has grown deeper and more nuanced than ever before. We use technology to create art. We view and share art using new and impressive digital tools. And often, technology itself — from products to Web pages — is art
       </p>
       <p>Join the Digital Arts and Culture Space for workshops, demos, and discussions that unpack the relationship between art, technology, and the Web. We’ll explore how vlogging is becoming an art form of its own; discover how digital tech is making the arts accessible to people with all abilities; ask when code is at its most creative; and understand the role of digital arts in society. Whether you’re a professional artist or a DIY maker, everyone will have an opportunity to create and be inspired.</p>
       <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
@@ -213,7 +213,7 @@ var SpacesInfo = [
     description:
     (<div>
       <p>MozEx is an art exhibition with a 21st-century twist. Curated by the digital learning teams at both the Tate and the V&A, this space showcases dynamic digital artwork that spans many disciplines and media.</p>
-      <p>The MozEx exhibit explores links between art, society, and the digital world. Created by both individual practitioners and cross-disciplinary collaborations, the exhibit will explore the value of art to society through web literacy, digital inclusion and accessibility, privacy, policy, and hacking.</p>
+      <p>The MozEx exhibit explores links between art, society, and the digital world. Created by both individual practitioners and cross-disciplinary collaborations, the exhibit will explore the value of art to society through Web literacy, digital inclusion and accessibility, privacy, policy, and hacking.</p>
       <p>Have a great artwork idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>. We are keen to see submissions that explore the exchange of knowledge and practice with audiences.</p>
     </div>),
     contacts: [
@@ -249,6 +249,7 @@ var SessionsPage = React.createClass({
         <div className="white-background">
           <div className="content centered wide">
             <h1>Spaces and Sessions</h1>
+            <p>Spaces are physical and thematic learning hubs based around a broad topic, like science, art, or journalism. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
             <div className="horizontal-rule"></div>
           </div>
         </div>
