@@ -38,13 +38,13 @@ var SpacesInfo = [
     </div>),
     contacts: [
       {
-        name: "Eva Constantaras"
-      },
-      {
         name: "Erika Owens"
       },
       {
         name: "Ryan Pitts"
+      },
+      {
+        name: "Eva Constantaras"
       }
     ]
   },
@@ -59,7 +59,7 @@ var SpacesInfo = [
     </div>),
     contacts: [
       {
-        name: "Kirstie Whitaker"
+        name: "Arliss Collins"
       },
       {
         name: "Joey Lee"
@@ -68,7 +68,7 @@ var SpacesInfo = [
         name: "Richard Smith-Unna"
       },
       {
-        name: "Arliss Collins"
+        name: "Kirstie Whitaker"
       }
     ]
   },
@@ -77,7 +77,7 @@ var SpacesInfo = [
     // iconPath: "/assets/images/space-icons/icon_file",
     description:
     (<div>
-      <p>Open Badges are transforming how we recognize and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
+      <p>Open Badges are transforming how we recognise and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
       <p>Open Badges are taking root around the world, from non-profits to major employers and universities. And the technical infrastructure that makes badges possible is constantly evolving. In the Open Badges Space, we’ll showcase exciting badges projects, hack on and build badge infrastructure, and encourage new partners and networks adopt badges. We’re also plugging Open Badges into other spaces and sessions across MozFest.</p>
       <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
     </div>),
@@ -89,7 +89,7 @@ var SpacesInfo = [
         name: "Tim Riches"
       },
       {
-        name: "Lucy Lewis"
+        name: "Lucy Neale"
       }
     ]
   },
@@ -99,12 +99,12 @@ var SpacesInfo = [
     description:
     (<div>
       <p>The open Internet movement needs you! When everyday Internet users band together, we can overcome threats to the free and open Internet and keep it a global public resource.</p>
-      <p>We believe intellectual property rights should foster innovation, creation and competition. We are looking for sessions to help participants understand how changes in copyright law in the European Union could impact them through interactive workshops, DIY making, and lightning talks. In the Fuel the Movement Space, we couple fun and creativity with Internet policy and advocacy. Participants will walk away energized and equipped to stand up to present-day threats to the open Internet.</p>
+      <p>We believe intellectual property rights should foster innovation, creation and competition. We are looking for sessions to help participants understand how changes in copyright law in the European Union could impact them through interactive workshops, DIY making, and lightning talks. In the Fuel the Movement Space, we couple fun and creativity with Internet policy and advocacy. Participants will walk away energised and equipped to stand up to present-day threats to the open Internet.</p>
       <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
     </div>),
     contacts: [
       {
-        name: "Georgia Bullen"
+        name: "Melissa Romaine"
       },
       {
         name: "Stacy Martin"
@@ -113,7 +113,7 @@ var SpacesInfo = [
         name: "Raegan MacDonald"
       },
       {
-        name: "Melissa Romaine"
+        name: "Georgia Bullen"
       }
     ]
   },
@@ -167,10 +167,10 @@ var SpacesInfo = [
     </div>),
     contacts: [
       {
-        name: "Kim Wilkens"
+        name: "Robert Friedman"
       },
       {
-        name: "Robert Friedman"
+        name: "Kim Wilkens"
       },
       {
         name: "Su Adams"
@@ -208,7 +208,7 @@ var SpacesInfo = [
     ]
   },
   {
-    name: "MozEx",
+    name: "MozEx (Art Exhibit)",
     // iconPath: "/assets/images/space-icons/icon_file",
     description:
     (<div>
