@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - '0.12'
+- '0.12'
 deploy:
   provider: heroku
   api_key:
-    secure: RCUYAeETpI/75exmUf5OzRJlSgw4uZI5Gjz/8mmwiKWTi8Dwile/KLSPD5xxvhY1ValJW2svQDJX+7pke+6ExbRBuObDOyymDel1k9sKCUwPn7HJP99s4z7oSePsBjCMHmkL7O0EyEHaOW55zBrie1O7Bu0G4UaA3+BBJVhcs9E=
+    secure: IZDZzWrhcAMjVNmcJRfIu3aTa6yU4VlHaPjeZTt0oCKkPSlBATQ9Dh3dSNwyZp1WukPceYRrRJtZvD+v6TfOQRc1ixn+K4O/MZ6c6TcMkTT0UBbZzAaI5wm3W6RB6NkriRt6FpDhPFllPRiEk7lw2nEN9pZ6qqz8sTnkLq9a0pw=
   app:
     develop: mozillafestival-org-staging
     master: mozillafestival-org-production
