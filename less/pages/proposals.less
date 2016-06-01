@@ -1,8 +1,175 @@
 .proposals-page {
   .hero-unit {
     background-position: center 14%;
+    .deadline {
+      margin-top: 5px;
+      span {
+        font-size: 20px;
+        text-transform: none;
+        font-weight: 400;
+        letter-spacing: normal;
+        color: #FFF;
+        background: rgba(93, 160, 143, 0.85);
+        padding: 12px 19px;
+      }
+    }
   }
   .hero-unit-container {
     background: linear-gradient( to right, #599D73, #57949D);
   }
+  .original-work-item-container {
+    padding: 3px 16px;
+    background: #FFFFFF;
+    .original-work-item {
+      margin: 10px 0;
+      padding: 0 4px;
+    }
+  }
+  .proposals-form {
+    .input-container {
+      width: 100%;
+    }
+    .proposal-section {
+      &.hidden {
+        display: none;
+      }
+    }
+    .radio-container,
+    .checkbox-container {
+      .input-container {
+        width: auto;
+        float: left;
+      }
+    }
+    label,
+    input[type='text'],
+    textarea,
+    select {
+      width: 100%;
+      &.radio-input,
+      &.checkbox-input {
+        width: auto;
+      }
+    }
+    input,
+    textarea {
+      border: solid 1px #D0D2D1;
+      border-radius: 4px;
+      padding: 11px 10px;
+      font-size: 17px;
+      &.has-wordcount {
+        padding-bottom: 47px;
+      }
+    }
+    .input-container {
+      position: relative;
+      display: inline-block;
+      &.input-container-has-wordcount {
+        display: inline-block;
+      }
+      .word-count {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 12px 21px;
+        &.negative {
+          color: #FF0000;
+        }
+      }
+    }
+    select {
+      border: 1px solid #D0D2D1;
+      background: #FFFFFF;
+      border-radius: 4px;
+      font-size: 17px;
+      font-family: inherit;
+    }
+    textarea {
+      font-family: inherit;
+      height: 150px;
+    }
+    label {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 17px;
+    }
+    select,
+    .input-combo {
+      margin-bottom: 20px;
+      &.checkbox-container {
+        margin: 10px 0;
+        overflow: hidden;
+        &.privacyPolicy-container {
+          margin-top: 20px;
+        }
+      }
+      .other-input {
+        display: inline;
+        padding: 0 5px;
+        width: auto;
+        font-size: 16px;
+      }
+    }
+    .error-message {
+      display: none;
+      color: #FF0000;
+      margin: 0 0 20px 0;
+      &.show {
+        display: block;
+      }
+      &#format-other-error-message {
+        margin: 0;
+      }
+    }
+    button {
+      .fa {
+        display: none;
+      }
+      &.waiting .fa {
+        display: inline-block;
+      }
+    }
+    label,
+    input[type='text'],
+    textarea,
+    select,
+    button {
+      display: block;
+      &.radio-input,
+      &.checkbox-input {
+        display: inline;
+        font-size: 16px;
+        margin-left: 5px;
+        font-weight: 400;
+        &.theme-checkbox {
+          margin-top: 0;
+        }
+      }
+    }
+    input[type='radio'],
+    input[type='checkbox'] {
+      cursor: pointer;
+    }
+    label[for="privacyPolicy"],
+    label[for="privacyPolicy-2"] {
+      font-size: 15px;
+    }
+    .radio-container {
+      position: relative;
+      .radio-input {
+        margin-left: 28px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .input-container {
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: -4px;
+        width: auto;
+      }
+    }
+  }
+
 }

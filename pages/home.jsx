@@ -56,7 +56,7 @@ var Home = React.createClass({
         <div className="centered content wide">
           <h1>Submit a Session for MozFest 2016</h1>
           <p>We invite people from all fields: policy, science, journalism, technology, arts and more. MozFest is for everyone, regardless of your gender, geography, age or language. </p>
-          <a href="/proposals" className="button"><span>Submit a Session</span></a>
+          <Link to="proposals" className="button"><span>Submit a Session</span></Link>
         </div>
         <Footer/>
       </div>
