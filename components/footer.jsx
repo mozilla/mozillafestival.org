@@ -14,7 +14,7 @@ var Linker = React.createClass({
       )
     }
     return (
-      <a href={this.props.href}>
+      <a href={this.props.href} target={this.props.target}>
         {this.props.children}
       </a>
     )
@@ -25,7 +25,7 @@ var FooterIcon = React.createClass({
   render: function() {
     return (
       <div className="footer-icon">
-        <Linker to={this.props.to} href={this.props.href}>
+        <Linker to={this.props.to} href={this.props.href} target={this.props.target}>
           <div className="icon-circle">
             <ImageTag src1x={this.props.icon}
               alt={this.props.alt}/>
@@ -56,8 +56,11 @@ var Footer = React.createClass({
             <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="contact">
               get in touch
             </FooterIcon>
-            <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=%23mozfest&source=webclient">
+            <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=I'm%20attending%20%23mozfest%2C%20the%20biggest%20event%20for%20%26%20by%20the%20open%20Internet%20movement.%20Join%20me%20%26%20%40Mozilla%20in%20London%3A%20mzl.la%2Fmozfest&source=webclient">
               tweet #mozfest
+            </FooterIcon>
+            <FooterIcon icon="/assets/images/img-blog.svg" alt="blog icon" target="_blank" href="https://medium.com/mozfest-2016">
+              read the blog
             </FooterIcon>
             <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="volunteer">
               volunteer with us

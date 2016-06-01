@@ -17,8 +17,10 @@ var BioTooltip = React.createClass({
 
 var SpacePathwayProfile = React.createClass({
   render: function() {
+    var id = this.props.name.replace(/\s+/g, '-').toLowerCase();
+
     return (
-      <div className="space-pathway-profile">
+      <div className="space-pathway-profile" id={id}>
         <div className="detail">
           <div className="header">
             { this.props.iconPath ? <ImageTag src1x={this.props.iconPath} width="100" /> 
@@ -26,9 +28,7 @@ var SpacePathwayProfile = React.createClass({
             <h1>{this.props.name}</h1>
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
-          <div className="description">
-            { this.props.description.map(function(text,i) { return <p key={i}>{text}</p>; }) }
-          </div>
+          <div className="description">{this.props.description}</div>
         </div>
         <div className="contacts">
           { this.props.contacts ? <h2>{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>

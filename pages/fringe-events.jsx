@@ -75,7 +75,7 @@ var FringeEventForm = Formation.CreateForm({
         label: 'Date and time',
         validations: this.dateTimeValidator,
         placeholder: "MMM DD, YYYY --:-- --",
-        exampleValue: "Example: Oct 30, 2015 12:30 PM"
+        exampleValue: "Example: Oct 30, 2016 12:30 PM"
       },
       "location": {
         required: true,
@@ -163,15 +163,15 @@ var FringePage = React.createClass({
     return response.json();
   },
   handleEventData: function(data) {
-    this.setState({ 
-      events: data, 
+    this.setState({
+      events: data,
       eventsLoaded: true,
       unableToLoadEvents: false
     });
   },
   handleEventDataError: function(error) {
     console.log("Error: ", error);
-    this.setState({ 
+    this.setState({
       eventsLoaded: true,
       unableToLoadEvents: true
     });
@@ -193,7 +193,7 @@ var FringePage = React.createClass({
       if (dateA < dateB) { return -1; }
       if (dateA > dateB) { return 1; }
       return 0;
-    } 
+    }
     if ( this.state.eventsLoaded ) {
       events = this.state.events.sort(sortByTime).map(function(event,i) {
                 return (
@@ -205,11 +205,11 @@ var FringePage = React.createClass({
                 );
               });
     } else {
-      events = ( 
+      events = (
         <div className="white-background">
           <div className="content wide">
             {
-              this.state.unableToLoadEvents 
+              this.state.unableToLoadEvents
                 ? <p>Unable to load Fringe Events.</p>
                 : <p className="loading-message">Loading Fringe Events</p>
             }
@@ -256,4 +256,3 @@ var FringePage = React.createClass({
 });
 
 module.exports = FringePage;
-

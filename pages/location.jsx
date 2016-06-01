@@ -70,7 +70,7 @@ var Location = React.createClass({
         <div className="white-background">
           <div className="centered content wide">
             <h1>Main Festival Venue</h1>
-            <p>This year, MozFest returns to <a href="http://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
+            <p>Mozfest 2016 will be held once again in <a href="http://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
             <div className="horizontal-rule"></div>
             <h1>How to get there</h1>
             <div className="illustration flip-it">
