@@ -307,7 +307,7 @@ var Proposals = React.createClass({
         <InputCombo errorMessage="First name is required." for="firstName" type="text" name="first-name">
           First Name *
         </InputCombo>
-        <InputCombo errorMessage="Surname name is required." for="surname" type="text" name="surname">
+        <InputCombo errorMessage="Surname is required." for="surname" type="text" name="surname">
           Surname *
         </InputCombo>
         <InputCombo errorMessage="Email is required." for="email" type="text" name="email">
@@ -319,7 +319,7 @@ var Proposals = React.createClass({
         </InputCombo>
         <InputCombo for="otherFacilitators" type="text" name="other-facilitators">
           <div>Other facilitators</div>
-          <div>One per line, format is Name[single space]Twitter handle [single space]email (e.g. John Doe @j.doe j.doe@example.com)</div>
+          <div>One per line, format is Name[comma] Twitter handle[comma] email (e.g. John Doe, @j.doe, j.doe@example.com)</div>
         </InputCombo>
         <InputCombo for="twitter" type="text" name="twitter-handle">
           <div>Twitter handle</div>
@@ -388,7 +388,7 @@ var Proposals = React.createClass({
           Why do you think Mozfest is a good place to show your work? *
         </InputCombo>
 
-        <label>s there another space you believe this exhibit could be shown within? Read details on each Space <a href="/spaces-and-sessions">here</a>.</label>
+        <label>Is there another Space you believe this exhibit could be shown within? Read details on each Space <a href="/spaces-and-sessions">here</a>.</label>
         <InputCombo name="another-space-radio" className="radio-input" for="another-digital" type="radio">
           Digital  Arts and Culture
         </InputCombo>
@@ -486,7 +486,7 @@ var Proposals = React.createClass({
           Describe how you see that working in 150 words or less. *
         </InputCombo>
 
-        <InputCombo errorMessage="Field is required." for="participants" name="participants" type="text">
+        <InputCombo errorMessage="Field is required." for="participants" name="participants" type="textarea">
           How will you accommodate varying numbers of participants in your session? Tell us what you'll do with 3 participants? 15? 25? *
         </InputCombo>
 
@@ -505,7 +505,7 @@ var Proposals = React.createClass({
         <InputCombo className="radio-input" name="travel-radio" for="travel-none" type="radio">
           I do not require a travel stipend as I, or my work, can cover my costs
         </InputCombo>
-        <div id="travel-radioError" className="error-message">Travel stipend is required.</div>
+        <div id="travel-radioError" className="error-message">Field is required.</div>
 
         <label>If your session is not accepted in your preferred Space is there another space you would like your session to be considered within? Read details on each Space  <a href="/spaces-and-sessions">here</a>.</label>
         <InputCombo name="backup-space-radio" className="radio-input" for="digital-backup" type="radio">

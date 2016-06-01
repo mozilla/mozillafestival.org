@@ -90,7 +90,7 @@ app.post('/add-session', limiter, function (req, res) {
     if (err) {
       res.status(500).send({error: err});
     } else {
-      hatchet.send("mozfest_session_proposal", {
+      /*hatchet.send("mozfest_session_proposal", {
         email: email
       }, function(err, data) {
         if (err) {
@@ -98,7 +98,7 @@ app.post('/add-session', limiter, function (req, res) {
         } else {
           console.log("we sent a message!");
         }
-      });
+      });*/
       res.send("Ok");
     }
   });
