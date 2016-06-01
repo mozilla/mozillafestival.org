@@ -574,7 +574,7 @@ var Proposals = React.createClass({
 
           <p>Anyone may submit a proposal for MozFest 2016. Once you have submitted your session, it will enter an open curation process on Github. </p>
 
-          <p>This year we are accepting proposals in Spanish, French and Arabic.</p>
+          <p>This year we are accepting proposals in <a href="https://bit.ly/MozFestSpanish">Spanish</a>, <a href="https://mzl.la/Fran%C3%A7ais">French</a> and <a href="https://mzl.la/MozFestArabic">Arabic</a>.</p>
 
           <p>If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
         </div>
