@@ -114,6 +114,7 @@ var lazyDataMap = {
   "another-space-radio": "exhibitAnotherSpace",
 
   "format-checkbox": "descWorkBest",
+  "session-title": "sessionTitle",
   "desc-allow": "descMakeLearn",
   "desc-working": "descHowWorking",
   "participants": "descParticipants",
@@ -251,7 +252,7 @@ var Proposals = React.createClass({
   },
   descOnSubmit: function() {
     document.querySelector("#generic-error-2").classList.remove("show");
-    var valid = this.validate("privacyPolicy-2, travel-radio, outcome, participants, desc-working, desc-allow".split(", "));
+    var valid = this.validate("privacyPolicy-2, travel-radio, outcome, participants, desc-working, session-title, desc-allow".split(", "));
     var checkbox = document.querySelector("#other-format");
     if (checkbox.checked) {
       var input = document.querySelector(".format-other-input");
@@ -268,7 +269,7 @@ var Proposals = React.createClass({
       return;
     }
     this.refs.submitButton2.getDOMNode().classList.add("waiting");
-    this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, format-checkbox, desc-allow, desc-working, participants, outcome, languge, travel-radio, backup-space-radio".split(", "));
+    this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, format-checkbox, session-title, desc-allow, desc-working, participants, outcome, languge, travel-radio, backup-space-radio".split(", "));
   },
   exhibitOnSubmit: function() {
     document.querySelector("#generic-error-1").classList.remove("show");
@@ -477,6 +478,10 @@ var Proposals = React.createClass({
         <label>If you chose "other" above, please outline why.</label>
         <input onClick={this.otherFormatInputClicked} className="format-checkbox other-input format-other-input" type="text"/>
         <div id="format-other-error-message" className="error-message">Other cannot be empty.</div>
+
+        <InputCombo errorMessage="Session title is required." for="sessionTitle" type="text" name="session-title">
+          Session title *
+        </InputCombo>
 
         <InputCombo wordcount="150" errorMessage="Field is required." for="desc-allow" name="desc-allow" type="textarea">
           Describe what your session or activity will allow people to make, learn or do in 150 words or less. *

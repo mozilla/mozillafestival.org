@@ -48,6 +48,7 @@ app.post('/add-session', limiter, function (req, res) {
   var exhibitWhyGoodMozfest = req.body.exhibitWhyGoodMozfest;
   var exhibitAnotherSpace = req.body.exhibitAnotherSpace;
 
+  var sessionTitle = req.body.sessionTitle;
   var descWorkBest = req.body.descWorkBest;
   var descMakeLearn = req.body.descMakeLearn;
   var descHowWorking = req.body.descHowWorking;
@@ -77,6 +78,7 @@ app.post('/add-session', limiter, function (req, res) {
       "entry.1161931220": exhibitWhyGoodMozfest,
       "entry.881836083": exhibitAnotherSpace,
 
+      "entry.1193243393": sessionTitle,
       "entry.2012896072": descWorkBest,
       "entry.742790242": descMakeLearn,
       "entry.1229027759": descHowWorking,
