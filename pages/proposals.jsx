@@ -525,7 +525,7 @@ var Proposals = React.createClass({
         <InputCombo name="backup-space-radio" className="radio-input" for="journalism-backup" type="radio">
           Journalism
         </InputCombo>
-        <InputCombo name="backup-space-radio" className="radio-input" for="moz-ex-backup" type="radio">
+        <InputCombo name="backup-space-radio" className="radio-input" for="exhibit-backup" type="radio">
           Moz Ex (exhibit)
         </InputCombo>
         <InputCombo name="backup-space-radio" className="radio-input" for="cities-backup" type="radio">

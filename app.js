@@ -6,7 +6,10 @@ var express = require('express'),
     compression = require('compression'),
     hatchet = require('hatchet'),
     RateLimit = require('express-rate-limit'),
-    GoogleSpreadsheet = require("google-spreadsheet");
+    GoogleSpreadsheet = require("google-spreadsheet"),
+    uuid = require('uuid');
+
+var proposalHandler = require('./lib/proposal-handler');
 
 Habitat.load();
 
@@ -32,79 +35,49 @@ app.configure(function() {
 });
 
 app.post('/add-session', limiter, function (req, res) {
-  var firstName = req.body.firstName;
-  var surname = req.body.surname;
-  var email = req.body.email;
-  var affiliationOrganization = req.body.affiliationOrganization;
-  var otherFacilitators = req.body.otherFacilitators;
-  var twitter = req.body.twitter;
-  var space = req.body.space;
+  var formUrl = env.get("PROPOSAL_FORM_ACTION_URL");
+  var proposalUUID = uuid.v4();
+  var userInputs = {
+    firstName: req.body.firstName,
+    surname: req.body.surname,
+    email: req.body.email,
+    affiliationOrganization: req.body.affiliationOrganization,
+    otherFacilitators: req.body.otherFacilitators,
+    twitter: req.body.twitter,
+    space: req.body.space,
 
-  var exhibitTitle = req.body.exhibitTitle;
-  var exhibitMethod = req.body.exhibitMethod;
-  var exhibitLink = req.body.exhibitLink;
-  var exhibitDescription = req.body.exhibitDescription;
-  var exhibitLearnReflect = req.body.exhibitLearnReflect;
-  var exhibitWhyGoodMozfest = req.body.exhibitWhyGoodMozfest;
-  var exhibitAnotherSpace = req.body.exhibitAnotherSpace;
+    exhibitTitle: req.body.exhibitTitle,
+    exhibitMethod: req.body.exhibitMethod,
+    exhibitLink: req.body.exhibitLink,
+    exhibitDescription: req.body.exhibitDescription,
+    exhibitLearnReflect: req.body.exhibitLearnReflect,
+    exhibitWhyGoodMozfest: req.body.exhibitWhyGoodMozfest,
+    exhibitAnotherSpace: req.body.exhibitAnotherSpace,
 
-  var sessionTitle = req.body.sessionTitle;
-  var descWorkBest = req.body.descWorkBest;
-  var descMakeLearn = req.body.descMakeLearn;
-  var descHowWorking = req.body.descHowWorking;
-  var descParticipants = req.body.descParticipants;
-  var descOutcome = req.body.descOutcome;
-  var descAnotherLang = req.body.descAnotherLang;
-  var descTravel = req.body.descTravel;
-  var descOtherSpace = req.body.descOtherSpace;
+    sessionTitle: req.body.sessionTitle,
+    descWorkBest: req.body.descWorkBest,
+    descMakeLearn: req.body.descMakeLearn,
+    descHowWorking: req.body.descHowWorking,
+    descParticipants: req.body.descParticipants,
+    descOutcome: req.body.descOutcome,
+    descAnotherLang: req.body.descAnotherLang,
+    descTravel: req.body.descTravel,
+    descOtherSpace: req.body.descOtherSpace,
+  };
 
-  request({
-    method: 'POST',
-    url: "https://docs.google.com/forms/d/1E0-DnkmwsXLJNwe5l5S56-cGuKxjkpgYJhI5iXvuEZg/formResponse",
-    form: {
-      "entry.1690539558": firstName,
-      "entry.261675776": surname,
-      "entry.218044069": email,
-      "entry.1795974313": affiliationOrganization,
-      "entry.23778947": otherFacilitators,
-      "entry.744026452": twitter,
-      "entry.1083667921": space,
-
-      "entry.2071720042": exhibitTitle,
-      "entry.112655350": exhibitMethod,
-      "entry.2017683266": exhibitLink,
-      "entry.1475043467": exhibitDescription,
-      "entry.221338538": exhibitLearnReflect,
-      "entry.1161931220": exhibitWhyGoodMozfest,
-      "entry.881836083": exhibitAnotherSpace,
-
-      "entry.1193243393": sessionTitle,
-      "entry.2012896072": descWorkBest,
-      "entry.742790242": descMakeLearn,
-      "entry.1229027759": descHowWorking,
-      "entry.644649977": descParticipants,
-      "entry.1907976042": descOutcome,
-      "entry.1376483821": descAnotherLang,
-      "entry.928325971": descTravel,
-      "entry.2085186584": descOtherSpace
-    }
-  }, function(err) {
+  proposalHandler.submitProposalToGoogleSheet(formUrl, userInputs, proposalUUID, function(err) {
     if (err) {
       res.status(500).send({error: err});
     } else {
-      /*hatchet.send("mozfest_session_proposal", {
-        email: email
-      }, function(err, data) {
-        if (err) {
-          console.error("Error sending email: " + err);
+      proposalHandler.postToGithub(env, userInputs, proposalUUID, function(githubErr) {
+        if (githubErr) {
+          res.status(500).send({error: githubErr});
         } else {
-          console.log("we sent a message!");
+          res.send("OK");
         }
-      });*/
-      res.send("Ok");
+      });
     }
   });
-  res.send("Ok");
 });
 
 /* ********************
