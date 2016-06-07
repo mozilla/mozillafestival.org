@@ -4,7 +4,6 @@ var express = require('express'),
     request = require('request'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
-    hatchet = require('hatchet'),
     RateLimit = require('express-rate-limit'),
     GoogleSpreadsheet = require("google-spreadsheet"),
     uuid = require('uuid');
