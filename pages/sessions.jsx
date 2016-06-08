@@ -89,7 +89,10 @@ var SpacesInfo = [
         name: "Tim Riches"
       },
       {
-        name: "Lucy Neale"
+        name: "Lucy Lewis"
+      },
+      {
+        name: "Grainne Hamilton"
       }
     ]
   },
@@ -219,6 +222,9 @@ var SpacesInfo = [
     contacts: [
       {
         name: "Luca Damiani"
+      },
+      {
+        name: "Irini Papadimitriou"
       }
     ]
   },
