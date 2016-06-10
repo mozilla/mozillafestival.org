@@ -5,7 +5,7 @@
 <% if (typeof(submitterTwitter) !== "undefined") { %>**[ Submitter's Twitter ]** <%= submitterTwitter %><% } %>
 
 **[ Space ]** <%= space %>
-**[ Secondary Space ]** <%= secondarySpace %>
+<% if (secondarySpace !== "none") { %>**[ Secondary Space ]** <%= secondarySpace %><% } %>
 
 <% if (typeof(exhibitMethod) !== "undefined") { %>**[ Exhibit Method ]** <%= exhibitMethod %><% } %>
 <% if (typeof(exhibitLink) !== "undefined") { %>**[ Exhibit Link ]** <%= exhibitLink %><% } %>
