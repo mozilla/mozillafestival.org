@@ -65,6 +65,9 @@ var Footer = React.createClass({
             <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="volunteer">
               volunteer with us
             </FooterIcon>
+            <FooterIcon icon="/assets/images/img-fringe.svg" alt="fringe event icon" to="fringe-events">
+              fringe events
+            </FooterIcon>
           </FooterIcons>
 
           <div className="horizontal-rule"></div>
