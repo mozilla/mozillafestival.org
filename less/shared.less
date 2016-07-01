@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background: #F5F5F5;
-  color: #56565A;
+  background: @light-grey;
+  color: @grey;
   font-family: "Open Sans",sans-serif;
 }
 html {
@@ -22,7 +22,7 @@ html {
     }
   }
   .horizontal-rule {
-    background: #D0D2D1;
+    background: @border-grey;
     width: 100%;
     height: 1px;
     margin: 45px 0 20px;
@@ -39,7 +39,7 @@ html {
     backface-visibility: hidden;
 
     color: #FFFFFF;
-    background: #B94D60;
+    background: @dull-red;
     border-radius: 2px;
     border-width: 0;
 
@@ -78,21 +78,21 @@ html {
     }
     &:active {
       top: 2px;
-      background: lighten(#B94D60, 10%)
+      background: lighten(@dull-red, 10%)
     }
     &.full-width {
       width: 100%;
     }
   }
   h1 {
-    color: #B94D60;
+    color: @dull-red;
     font-weight: 300;
     font-size: 38px;
     margin: 8px 0;
   }
   h2 {
     font-size: 18px;
-    color: #B94D60;
+    color: @dull-red;
     font-weight: 600;
   }
   p {
@@ -156,7 +156,7 @@ html {
   }
   input,
   textarea {
-    border: solid 1px #D0D2D1;
+    border: solid 1px @border-grey;
     border-radius: 4px;
     padding: 11px 10px;
     font-size: 18px;
@@ -176,12 +176,12 @@ html {
       bottom: 0;
       margin: 12px 21px;
       &.negative {
-        color: #FF0000;
+        color: @red;
       }
     }
   }
   select {
-    border: 1px solid #D0D2D1;
+    border: 1px solid @border-grey;
     background: #FFFFFF;
     border-radius: 4px;
     font-size: 18px;
@@ -215,7 +215,7 @@ html {
   }
   .error-message {
     display: none;
-    color: #FF0000;
+    color: @red;
     margin: 0 0 20px 0;
     &.show {
       display: block;
@@ -249,7 +249,7 @@ html {
     }
   }
   .errors {
-    color: #B94D60;
+    color: @dull-red;
   }
   .additional-text,
   .example-value {
