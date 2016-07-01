@@ -2,4 +2,4 @@
 .env
 /node_modules/
 public/build/*
-public/index.css
+public/*.css
