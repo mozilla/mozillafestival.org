@@ -53,7 +53,7 @@
     }
     input,
     textarea {
-      border: solid 1px #D0D2D1;
+      border: solid 1px @border-grey;
       border-radius: 4px;
       padding: 11px 10px;
       font-size: 17px;
@@ -73,12 +73,12 @@
         bottom: 0;
         margin: 12px 21px;
         &.negative {
-          color: #FF0000;
+          color: @red;
         }
       }
     }
     select {
-      border: 1px solid #D0D2D1;
+      border: 1px solid @border-grey;
       background: #FFFFFF;
       border-radius: 4px;
       font-size: 17px;
@@ -113,7 +113,7 @@
     }
     .error-message {
       display: none;
-      color: #FF0000;
+      color: @red;
       margin: 0 0 20px 0;
       &.show {
         display: block;
