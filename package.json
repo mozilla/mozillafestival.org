@@ -5,8 +5,8 @@
   "author": "Mozilla Foundation",
   "scripts": {
     "start": "npm-run-all --parallel server watch:js watch:css copy-tabzilla",
-    "build:production": "npm-run-all --parallel minify:js minify:css",
-    "build:dev": "npm-run-all --parallel build:js build:css",
+    "build:production": "npm-run-all --parallel minify:js minify:css copy-tabzilla",
+    "build:dev": "npm-run-all --parallel build:js build:css copy-tabzilla",
     "build:js": "webpack --progress --profile --colors",
     "build:css": "npm run watch:css -- --no-watch",
     "copy-tabzilla": "mkdirp public/vendor && cp -r node_modules/mozilla-tabzilla public/vendor/mozilla-tabzilla",
