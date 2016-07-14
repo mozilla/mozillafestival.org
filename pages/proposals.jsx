@@ -393,7 +393,7 @@ var Proposals = React.createClass({
         <InputCombo name="another-space-radio" className="radio-input" for="another-digital" type="radio">
           Digital  Arts and Culture
         </InputCombo>
-        <InputCombo name="another-space-radio" className="radio-input" for="another-locale" type="radio">
+        <InputCombo name="another-space-radio" className="radio-input" for="another-localisation" type="radio">
           Localisation
         </InputCombo>
         <InputCombo name="another-space-radio" className="radio-input" for="another-science" type="radio">
@@ -402,7 +402,7 @@ var Proposals = React.createClass({
         <InputCombo name="another-space-radio" className="radio-input" for="another-journalism" type="radio">
           Journalism
         </InputCombo>
-        <InputCombo name="another-space-radio" className="radio-input" for="another-dilemmas" type="radio">
+        <InputCombo name="another-space-radio" className="radio-input" for="another-cities" type="radio">
           A Tale of Two Cities: Dilemmas in Connected Spaces
         </InputCombo>
         <InputCombo name="another-space-radio" className="radio-input" for="another-demystify" type="radio">
