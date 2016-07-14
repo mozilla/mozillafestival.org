@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mozilla/2015.mozillafestival.org.svg?branch=master)](https://travis-ci.org/mozilla/mozillafestival.org)
+[![Build Status](https://travis-ci.org/mozilla/mozillafestival.org.svg?branch=master)](https://travis-ci.org/mozilla/mozillafestival.org)
 
 # mozillafestival.org
 
