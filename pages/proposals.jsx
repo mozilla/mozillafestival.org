@@ -318,7 +318,7 @@ var Proposals = React.createClass({
           <div>Organisation</div>
           <div>Please leave blank if you don't want it published.</div>
         </InputCombo>
-        <InputCombo for="otherFacilitators" type="text" name="other-facilitators">
+        <InputCombo for="otherFacilitators" type="textarea" name="other-facilitators">
           <div>Other facilitators</div>
           <div>One per line, format is Name[comma] Twitter handle[comma] email (e.g. John Doe, @j.doe, j.doe@example.com)</div>
         </InputCombo>
