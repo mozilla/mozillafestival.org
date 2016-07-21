@@ -101,8 +101,8 @@ var SpacesInfo = [
     // iconPath: "/assets/images/space-icons/icon_file",
     description:
     (<div>
-      <p>The open Internet movement needs you! When everyday Internet users band together, we can overcome the many threats to the free and open Internet, and keep it a global public resource.</p>
-      <p>This year, we're focusing on copyright. We believe copyright should foster innovation, creation and competition. Sessions should help participants understand how changes in copyright law in the European Union could impact them through interactive workshops, DIY making, and lightning talks. In the Fuel the Movement Space, we couple fun and creativity with Internet policy and advocacy. Participants will walk away energized and equipped to take advantage of present-day opportunities online.</p>
+      <p>Who do you think should create culture? How do we build a movement to encourage creativity and imagination? If these questions keep you up at night, the open internet movement — and Fuel The Movement Space — needs you!</p>
+      <p>We're bringing people together to talk about how current copyright laws aren't equipped for the internet age. Right now, we have a unique opportunity in the European Union to update and reform copyright laws to enhance -- not hinder -- creativity and innovation. Fuel The Movement will help participants explore how these and other laws impact them -- and what YOU can do about it -- through interactive art installations, hands-on workshops, and lightning talks. Participants will walk away energized to support creativity on the open internet.</p>
       <p>Have a great session idea? Head to the <a href="proposals">MozFest Call for Proposals page</a>.</p>
     </div>),
     contacts: [
