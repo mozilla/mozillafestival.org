@@ -25,7 +25,7 @@ var SpacePathwayProfile = React.createClass({
           <div className="header">
             { this.props.iconPath ? <ImageTag src1x={this.props.iconPath} width="100" /> 
                                   : null}
-            <h1>{this.props.name}</h1>
+            <h1><a href={"#"+id}>{this.props.name}</a></h1>
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
           <div className="description">{this.props.description}</div>
