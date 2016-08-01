@@ -54,9 +54,9 @@ var Home = React.createClass({
           <div>Join us to build, debate, and explore the future of our lives online.</div>
         </HeroUnit>
         <div className="centered content wide">
-          <h1>Submit a Session for MozFest 2016</h1>
-          <p>We invite people from all fields: policy, science, journalism, technology, arts and more. MozFest is for everyone, regardless of your gender, geography, age or language. </p>
-          <Link to="proposals" className="button"><span>Submit a Session</span></Link>
+          <h1>Buy a Ticket for MozFest 2016</h1>
+          <p>Join leaders of the open Web -- artists, activists, educators, scientists, journalists, policy-makers and technologists -- who are building a better internet.</p>
+          <Link to="tickets" className="button"><span>Buy a Ticket</span></Link>
         </div>
         <Footer/>
       </div>
