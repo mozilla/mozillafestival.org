@@ -5,8 +5,7 @@ var React = require('react'),
 var routes = (
   <Route>
     <Route name="home" path="/" handler={require('./pages/home.jsx')} />
-    <Route name="proposals" path="/proposals" handler={require('./pages/proposals.jsx')} />
-    <Route name="proposals-extended" path="/proposals-2015" handler={require('./pages/proposals.jsx')} />
+    <Route name="proposals" path="/late-proposals" handler={require('./pages/proposals.jsx')} />
     <Route name="location" path="/location" handler={require('./pages/location.jsx')} />
     <Route name="about" path="/about" handler={require('./pages/about.jsx')} />
     <Route name="contact" path="/contact" handler={require('./pages/contact.jsx')} />
