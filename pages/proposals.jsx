@@ -329,34 +329,34 @@ var Proposals = React.createClass({
 
         <label>What Space are you submitting your proposal to? Read details on each Space <a href="/spaces-and-sessions">here</a>. *</label>
         <InputCombo onClick={this.onSpaceClicked} name="space-radio" className="radio-input" for="digital" type="radio">
-          Digital Arts and Culture
+          <a href="https://mozillafestival.org/spaces-and-sessions#digital-arts-and-culture" target="_blank"> Digital Arts and Culture</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked} name="space-radio" className="radio-input" for="localisation" type="radio">
-          Localisation
+           <a href="https://mozillafestival.org/spaces-and-sessions#localisation" target="_blank"> Localisation</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="science" type="radio">
-          Open Science
+           <a href="https://mozillafestival.org/spaces-and-sessions#open-science" target="_blank"> Open Science</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="journalism" type="radio">
-          Journalism
+           <a href="https://mozillafestival.org/spaces-and-sessions#journalism" target="_blank"> Journalism</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="exhibit" type="radio">
-          Moz Ex (art exhibit)
+           <a href="https://mozillafestival.org/spaces-and-sessions#mozex-(art-exhibit)" target="_blank"> Moz Ex (art exhibit)</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="cities" type="radio">
-          A Tale of Two Cities: Dilemmas of Connected Spaces
+           <a href="https://mozillafestival.org/spaces-and-sessions#a-tale-of-two-cities:-dilemmas-in-connected-spaces" target="_blank"> A Tale of Two Cities: Dilemmas of Connected Spaces</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="demystify" type="radio">
-          Demystify the Web
+           <a href="https://mozillafestival.org/spaces-and-sessions#demystify-the-web" target="_blank"> Demystify the Web</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="badges" type="radio">
-          Open Badges
+           <a href="https://mozillafestival.org/spaces-and-sessions#open-badges" target="_blank"> Open Badges</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="youth" type="radio">
-          Youth Zone
+           <a href="https://mozillafestival.org/spaces-and-sessions#youth-zone" target="_blank"> Youth Zone</a>
         </InputCombo>
         <InputCombo onClick={this.onSpaceClicked}  name="space-radio" className="radio-input" for="movement" type="radio">
-          Fuel the Movement
+           <a href="https://mozillafestival.org/spaces-and-sessions#fuel-the-movement" target="_blank"> Fuel the Movement</a>
         </InputCombo>
         <div id="space-radioError" className="error-message">A Space is required.</div>
 
