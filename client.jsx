@@ -1,10 +1,12 @@
 var React = require('react'),
     Router = require('react-router'),
-    Route = Router.Route;
+    Route = Router.Route,
+    Redirect = Router.Redirect;
 
 var routes = (
   <Route>
     <Route name="home" path="/" handler={require('./pages/home.jsx')} />
+    <Redirect from="/proposals" to="/" />
     <Route name="proposals" path="/late-proposals" handler={require('./pages/proposals.jsx')} />
     <Route name="location" path="/location" handler={require('./pages/location.jsx')} />
     <Route name="about" path="/about" handler={require('./pages/about.jsx')} />
