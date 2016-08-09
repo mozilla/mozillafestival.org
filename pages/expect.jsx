@@ -72,13 +72,13 @@ var Expect = React.createClass({
                 <td>
                   <div className="td-container">
                     <div className="time">9:00</div>
-                    <div>Welcome & Opening Keynotes</div>
+                    <div>Welcome & Opening</div>
                   </div>
                 </td>
                 <td>
                   <div className="td-container">
                     <div className="time">10:00</div>
-                    <div>Welcome & Opening Keynotes</div>
+                    <div>Welcome & Opening</div>
                   </div>
                 </td>
               </tr>
@@ -86,13 +86,13 @@ var Expect = React.createClass({
                 <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                 <td>
                   <div className="td-container">
-                    <div className="time">10:30</div>
+                    <div className="time">10:00</div>
                     <div>Morning sessions begin</div>
                   </div>
                 </td>
                 <td>
                   <div className="td-container">
-                    <div className="time">11:30</div>
+                    <div className="time">11:00</div>
                     <div>Morning sessions begin</div>
                   </div>
                 </td>
@@ -122,7 +122,7 @@ var Expect = React.createClass({
                 </td>
                 <td>
                   <div className="td-container">
-                    <div className="time">15:00</div>
+                    <div className="time">14:30</div>
                     <div>Afternoon sessions begin</div>
                   </div>
                 </td>
@@ -133,8 +133,8 @@ var Expect = React.createClass({
                   <div>Science Fair evening reception</div>
                 </td>
                 <td>
-                  <div className="time">17:30 to 18:30</div>
-                  <div>Evening lightning talks</div>
+                  <div className="time">18:00</div>
+                  <div>Evening activities begin</div>
                 </td>
                 <td>
                   <div className="time">18:00</div>
