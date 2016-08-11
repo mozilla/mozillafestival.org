@@ -52,6 +52,6 @@
     "whatwg-fetch": "0.9.0"
   },
   "engines": {
-    "node": "~0.12.4"
+    "node": "^4.7.7"
   }
 }
