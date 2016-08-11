@@ -1,0 +1,60 @@
+{
+  "name": "mozillafestival.org",
+  "description": "https://mozillafestival.org website",
+  "scripts": {
+  },
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "FRINGE_EVENT_FORM_ACTION_URL": {
+      "required": true
+    },
+    "FRINGE_EVENT_SPREADSHEET_ID": {
+      "required": true
+    },
+    "GITHUB_BOT_PASSWORD": {
+      "required": true
+    },
+    "GITHUB_BOT_USERNAME": {
+      "required": true
+    },
+    "GITHUB_REPO": {
+      "required": true
+    },
+    "GOOGLE_API_CLIENT_EMAIL": {
+      "required": true
+    },
+    "GOOGLE_API_PRIVATE_KEY": {
+      "required": true
+    },
+    "HATCHET_APP_NAME": {
+      "required": true
+    },
+    "HATCHET_QUEUE_REGION": {
+      "required": true
+    },
+    "HATCHET_QUEUE_URL": {
+      "required": true
+    },
+    "PROPOSAL_FORM_ACTION_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
