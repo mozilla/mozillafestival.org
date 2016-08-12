@@ -57,8 +57,8 @@ var Guidelines = React.createClass({
           <div className="centered content wide">
             <h1>Raising Issues at MozFest</h1>
             <div className="half-content">
-              <p>If you believe you‘re experiencing practices at MozFest which don‘t meet the above policies, or if you feel you are being harrassed in any way, please immediately contact the Festival Producer, Sarah Allen.</p>
-              <p>At the festival venue, contact the info desk and they will immediately find the Festival Director for you.</p>
+              <p>If you believe you‘re experiencing practices at MozFest which don‘t meet the above policies, or if you feel you are being harassed in any way, please immediately contact the Festival Producer, Sarah Allen.</p>
+              <p>At the festival venue, contact the info desk and they will immediately find the Festival Producer for you.</p>
             </div>
             <div className="half-content">
               <p>MozFest organisers reserve the right to refuse admission to anyone violating these policies, and/or take further action including expulsion from the event.</p>
