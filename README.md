@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/mozilla/mozillafestival.org.svg?branch=master)](https://travis-ci.org/mozilla/mozillafestival.org)
-
 # mozillafestival.org
 
 The Mozilla Festival website.
@@ -21,8 +19,8 @@ By default this will run the website on [http://localhost:9090](http://localhost
 
 ## Development
 
-Deployment to `staging` and `production` servers is automated via [Travis-CI](https://travis-ci.org).
+Deployment to `staging` and `production` servers is automated via [Heroku](https://heroku.com).
 
-develop – Deploys to [http://mozillafestival-org-staging.herokuapp.com/](http://mozillafestival-org-staging.herokuapp.com/)
+master – Deploys to [http://mozillafestival-org-staging.herokuapp.com/](http://mozillafestival-org-staging.herokuapp.com/)
 
-master – Deploys to [http://mozillafestival-org-production.herokuapp.com/](http://mozillafestival-org-production.herokuapp.com/)
+Production pushes are handled manually. Email [Mozilla Foundation DevOps](mailto:devops@mozillafoundation.org) or an active contributor to this repo to ask about a production push.
