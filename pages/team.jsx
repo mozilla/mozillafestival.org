@@ -30,6 +30,12 @@ var MembersInfo = [
     title: "Co-designer and Emcee",
     bio: <p><a href="https://aspirationtech.org/about/people/gunner">Gunner</a> is Executive Director of <a href="https://aspirationtech.org/">Aspiration</a> in San Francisco, USA, and works to help NGOs, activists, foundations and software developers make more effective use of technology for social change. He is an experienced facilitator with a passion for designing collaborative open learning processes.</p>
   },
+  {
+    name: "Marc Walsh",
+    imgSrc: "/assets/images/team/Marc.jpg",
+    title: "Production Coordinator",
+    bio:<p>Marc Walsh is the Production Coordinator for MozFest 2016. He brings valuable experience in large-scale event and television production, having previously worked on Glastonbury Festival, the FA Cup and the National Television Awards. A volunteer for his first two years, this is Marc's fifth MozFest.</p>
+  }
 ];
 
 var MemberProfile = React.createClass({
