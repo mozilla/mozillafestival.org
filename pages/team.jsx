@@ -33,7 +33,7 @@ var MembersInfo = [
   {
     name: "Kevin Zawacki",
     imgSrc: "/assets/images/team/Kevin.jpg",
-    title: "Communications Manager",
+    title: "Comms Manager & Speaker Series Designer",
     bio: <p>Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and this year is the mastermind behind the new Dialogues and Debates speakers series. 2016 will be Kevin's third MozFest.</p>
   },
   {
