@@ -24,7 +24,7 @@ var Contact = React.createClass({
           </div>
           <div className="half-content">
             <h1>Social Media</h1>
-            <p>Use the hashtag <a href="https://twitter.com/search?f=realtime&q=%23mozfest&src=typd">#mozfest</a> on Twitter and join the conversation. Read the <a href="https://medium.com/mozfest-2016">MozFest blog</a> on Medium.
+            <p>Use the hashtag <a href="https://twitter.com/search?f=realtime&q=%23mozfest&src=typd">#mozfest</a> on Twitter and join the conversation. Read the <a href="https://www.medium.com/mozilla-festival">MozFest blog</a> on Medium.
             </p>
           </div>
         </div>
