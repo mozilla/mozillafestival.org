@@ -13,7 +13,14 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loaders: ['jsx-loader'] },
+      {
+        test: /\.js(x?)$/,
+        exclude: /node_modules/,
+        loader: `babel`,
+        query: {
+          presets: [`es2015`, `react`]
+        }
+      },
       { test: /\.json$/, loaders: ['json-loader'] },
       {
         test: /\.css$/,
