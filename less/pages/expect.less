@@ -64,27 +64,14 @@
         font-size: 20px;
         letter-spacing: 2px;
         td {
-          background: #32438E;
-          &:first-child {
-            background: #C36127;
-          }
-          &:last-child {
-            background: @dull-red;
-          }
-          padding: 14px;
-        }
-      }
-      &:last-child {
-        td {
-          padding: 14px;
+          background: @blue;
         }
       }
       td {
-        .td-container {
-          padding: 14px 0;
-          border-bottom: 1px solid #DADADA;
-        }
-        padding: 0 14px;
+        padding: 14px;
+      }
+      &:not(:first-child) td {
+        border-bottom: 1px solid #DADADA;
         background: @light-grey;
         &:nth-child(odd) {
           background: #EAEAEA;
@@ -93,6 +80,9 @@
           font-weight: 700;
         }
       }
+    }
+    :last-child td {
+      border-bottom: none;
     }
   }
 }

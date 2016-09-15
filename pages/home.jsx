@@ -24,7 +24,7 @@ var Home = React.createClass({
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header logoImage="/assets/images/logo-mozilla-festival-white.svg"/>
+        <Header logoImage="/assets/images/logo-mozfest-white.svg"/>
         <HeroUnit className="home-hero-unit" image="/assets/images/mozfest_2016.jpg"
                   image2x="/assets/images/mozfest_2016.jpg">
           <div className="video-wrapper">

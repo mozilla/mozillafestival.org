@@ -50,7 +50,7 @@ var FooterIcons = React.createClass({
 var Footer = React.createClass({
   render: function() {
     return (
-      <div className="footer">
+      <footer>
         <div className="footer-content">
           <FooterIcons>
             <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="contact">
@@ -70,8 +70,6 @@ var Footer = React.createClass({
             </FooterIcon>
           </FooterIcons>
 
-          <div className="horizontal-rule"></div>
-
           <div className="link-container">
             <div className="nav-link-container">
               <Link to="about">About</Link>
@@ -90,7 +88,7 @@ var Footer = React.createClass({
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     );
   }
 });

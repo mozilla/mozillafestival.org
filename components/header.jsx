@@ -5,13 +5,10 @@ var ImageTag = require('./imagetag.jsx');
 
 var Header = React.createClass({
   render: function() {
-    var logoImage = this.props.logoImage || "/assets/images/logo-mozilla-festival.svg";
+    var logoImage = this.props.logoImage || "/assets/images/logo-mozfest-pink.svg";
     return (
       <div className="header">
         <div className="header-content">
-          <div id="tabzilla">
-            <a href="https://www.mozilla.org/">Mozilla</a>
-          </div>
           <div className="nav-home">
             <Link to="home">
               <ImageTag src1x={logoImage}
@@ -31,6 +28,9 @@ var Header = React.createClass({
             <div className="nav-link-container">
               <Link to="sessions">Spaces & Sessions</Link>
             </div>
+          </div>
+          <div id="tabzilla">
+            <a href="https://www.mozilla.org/">Mozilla</a>
           </div>
         </div>
       </div>
