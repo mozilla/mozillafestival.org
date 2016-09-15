@@ -1,0 +1,64 @@
+.tab-switcher {
+  &.pull-up {
+    margin-top: -2.75rem;
+  }
+  .tabs {
+    display: flex;
+
+    .btn {
+      line-height: 2rem;
+      border: 0;
+      flex: 1;
+      margin: 0 0.5rem;
+      text-transform: none;
+      color: $white;
+      // background: rgba($nightly-blue, 0.9);
+      font-weight: 300;
+      font-size: 1.25rem;
+
+      .icon {
+        max-width: 1.375em;
+        max-height: 1.375em;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        // background: $off-white;
+        color: inherit;
+      }
+    }
+  }
+
+  &.inline .tabs {
+    .btn {
+      // background: lighten($developer-blue, 40%);
+      // color: $developer-blue;
+      // border: 0.0625rem solid $off-white;
+      border-bottom: 0;
+
+      &.active {
+        // border: 0.0625rem solid $developer-blue;
+        border-bottom: 1px solid #f2f2f2;
+        // background: $off-white;
+        margin-bottom: -0.0625rem;
+      }
+    }
+
+    // border-bottom: 0.0625rem solid $developer-blue;
+  }
+
+  .panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
