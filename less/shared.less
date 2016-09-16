@@ -10,6 +10,15 @@ body {
 #embed-error {
   display: none;
 }
+.button {
+  display: inline-block;
+  color: #FFFFFF;
+  background: @pink;
+  border-radius: 2px;
+  padding: 12px 38px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
 .content {
   a {
     text-decoration: none;
@@ -27,17 +36,11 @@ body {
   .button {
     display: inline-block;
     position: relative;
+    color: #fff;
     margin: 14px 0;
-    padding: 12px 38px;
-    // height: 50px;
-    // min-width: 260px;
-
     overflow: hidden;
     backface-visibility: hidden;
 
-    color: #FFFFFF;
-    background: @pink;
-    border-radius: 2px;
     border-width: 0;
 
     line-height: 27px;
@@ -104,7 +107,7 @@ body {
   max-width: 565px;
   overflow: hidden;
   &.wide {
-    max-width: 840px;
+    max-width: @max-container-width;
   }
   .bold {
     font-weight: 800;

@@ -12,9 +12,9 @@ var Guidelines = React.createClass({
       <div className="guidelines-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/guidelines.jpg"
-                  image2x="/assets/images/guidelines.jpg">
-          participation<br/>guidelines
+        <HeroUnit image="/assets/images/hero/guidelines.jpg"
+                  image2x="/assets/images/hero/guidelines.jpg">
+          <h1>participation<br/>guidelines</h1>
         </HeroUnit>
         <div className="white-background">
           <div className="centered content wide">

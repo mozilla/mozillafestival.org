@@ -25,38 +25,37 @@ var Home = React.createClass({
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/logo-mozfest-white.svg"/>
-        <HeroUnit className="home-hero-unit" image="/assets/images/mozfest_2016.jpg"
-                  image2x="/assets/images/mozfest_2016.jpg">
-          <div className="video-wrapper">
-          {function() {
-            if (self.state.playVideo) {
-              return (
-                <div className="iframe-container">
-                  <iframe src="https://player.vimeo.com/video/154774646?color=ffffff&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
-                </div>
-              );
-            } else {
-              return (
-                <div>
-                  <div onClick={self.playVideo} className="video-link">
-                    <ImageTag src1x="/assets/images/img-play.svg"
-                      alt="play button icon"/>
+        <HeroUnit className="home-hero-unit" image="/assets/images/hero/home/home.jpg"
+                  image2x="/assets/images/hero/home/home.jpg"
+                  hideBackgroundLines={true}>
+          <div className="content-wrapper">
+            <h1>MozFest</h1>
+            <h2>The world's leading festival for the open internet movement.</h2>
+            <div className="horizontal-rule"></div>
+            <p>Join influential thinkers from around the world to build, debate, and explore the future of a healthy internet.</p>
+            <h3>October 28-30, 2016 • Ravensbourne College, London</h3>
+            {function() {
+              if (self.state.playVideo) {
+                return (
+                  <div className="iframe-container">
+                    <iframe src="https://player.vimeo.com/video/154774646?color=ffffff&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
                   </div>
-                </div>
-              );
-            }
-          }()}
+                );
+              } else {
+                return (
+                  <a onClick={self.playVideo} className="video-play-link button">
+                    Watch Video
+                  </a>
+                );
+              }
+            }()}
           </div>
-          <h1>MozFest</h1>
-          <h2>October 28-30, 2016<br/>Ravensbourne, London</h2>
-          <div className="horizontal-rule"></div>
-          <div>The world’s leading event for and by the open Internet movement.</div>
-          <div>Join us to build, debate, and explore the future of our lives online.</div>
         </HeroUnit>
         <div className="centered content wide">
-          <h1>Buy a Ticket for MozFest 2016</h1>
-          <p>Join leaders of the open Web -- artists, activists, educators, scientists, journalists, policy-makers and technologists -- who are building a better internet.</p>
-          <Link to="tickets" className="button"><span>Buy a Ticket</span></Link>
+          <h1>More ways to participate</h1>
+          <p>The MozFest 2016 speaker series and keynotes will be broadcast live.</p>
+          <p>Sign up for email alerts and ways to participate remotely.</p>
+          <Link to="tickets" className="button"><span>Sign Up (FIXME)</span></Link>
         </div>
         <Footer/>
       </div>

@@ -87,8 +87,8 @@ var About = React.createClass({
       <div className="about-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/about.jpg"
-                  image2x="/assets/images/about.jpg">
+        <HeroUnit image="/assets/images/hero/about.jpg"
+                  image2x="/assets/images/hero/about.jpg">
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">

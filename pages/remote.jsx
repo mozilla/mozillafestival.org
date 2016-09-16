@@ -22,7 +22,7 @@ var Expect = React.createClass({
 
         <HeroUnit image="/assets/images/remote.jpg"
                   image2x="/assets/images/remote.jpg">
-          Remote Participation
+          <h1>Remote Participation</h1>
         </HeroUnit>
 
         <FullWidth white center>

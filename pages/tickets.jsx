@@ -21,9 +21,9 @@ var Tickets = React.createClass({
       <div className="tickets-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/tickets.jpg"
-                  image2x="/assets/images/tickets.jpg">
-          tickets
+        <HeroUnit image="/assets/images/hero/tickets.jpg"
+                  image2x="/assets/images/hero/tickets.jpg">
+          <h1>tickets</h1>
         </HeroUnit>
         <div className="content centered wide">
           <div ref="titoContainer"></div>
