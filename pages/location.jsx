@@ -75,8 +75,8 @@ var Location = React.createClass({
             <h1>How to get there</h1>
             <div className="illustration flip-it">
               <div className="illustration-image-container">
-                <ImageTag src1x="/assets/images/img-train.svg"
-                  height="219" width="214"
+                <ImageTag src1x="/assets/images/icon_train.svg"
+                  height="122" width="260"
                   alt="train icon"/>
               </div>
               <div className="illustration-text small">
@@ -97,9 +97,9 @@ var Location = React.createClass({
         <div className="centered content wide">
           <div className="illustration">
             <div className="illustration-image-container">
-              <ImageTag src1x="/assets/images/img-bus.svg"
-                height="219" width="274"
-                alt="train icon"/>
+              <ImageTag src1x="/assets/images/icon_bus.svg"
+                height="184" width="230"
+                alt="bus icon"/>
             </div>
             <div className="illustration-text small">
               <h2>Bus</h2>
@@ -115,9 +115,9 @@ var Location = React.createClass({
           <div className="centered content wide">
             <div className="illustration flip-it">
               <div className="illustration-image-container">
-                <ImageTag src1x="/assets/images/img-ship.svg"
-                  height="218" width="286"
-                  alt="train icon"/>
+                <ImageTag src1x="/assets/images/icon_ship.svg"
+                  height="165" width="260"
+                  alt="ship icon"/>
               </div>
               <div className="illustration-text small">
                 <h2>Eurostar</h2>
@@ -130,9 +130,9 @@ var Location = React.createClass({
             <div className="horizontal-rule"></div>
             <div className="illustration">
               <div className="illustration-image-container">
-                <ImageTag src1x="/assets/images/img-lightbulb.svg"
-                  height="252" width="240"
-                  alt="train icon"/>
+                <ImageTag src1x="/assets/images/icon_tip.svg"
+                  height="200" width="194"
+                  alt="tip icon"/>
               </div>
               <div className="illustration-text">
                 <h1>Travel Tips & Tricks</h1>

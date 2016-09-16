@@ -1,13 +1,12 @@
-.footer {
-  background: linear-gradient(to right, #588BD2, #2F306C);
+footer {
+  background: @blue;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   width: 100%;
-  height: 315px;
+  padding: 50px 0;
   @media screen and (min-width: 768px) {
-    height: 280px;
     .nav-link-container {
       display: inline-block;
       margin-right: 30px;
@@ -15,12 +14,6 @@
         margin-right: 0;
       }
     }
-  }
-  .horizontal-rule {
-    background: #8E90AE;
-    width: 322px;
-    height: 0;
-    margin: 28px auto;
   }
   a {
     font-size: 15px;
@@ -37,13 +30,12 @@
   .footer-icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 120px;
     width: 100%;
+    margin-bottom: 30px;
     flex-shrink: 0;
     flex-wrap: wrap;
     @media screen and (min-width: 768px) {
       flex-wrap: nowrap;
-      margin-top: 20px;
     }
     .footer-icon {
       text-transform: uppercase;
