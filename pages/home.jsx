@@ -55,7 +55,7 @@ var Home = React.createClass({
           <h1>More ways to participate</h1>
           <p>The MozFest 2016 speaker series and keynotes will be broadcast live.</p>
           <p>Sign up for email alerts and ways to participate remotely.</p>
-          <Link to="tickets" className="button"><span>Sign Up (FIXME)</span></Link>
+          <a href="https://ti.to/Mozilla/mozfest-2016" className="button"><span>Sign Up</span></a>
         </div>
         <Footer/>
       </div>

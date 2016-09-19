@@ -29,12 +29,17 @@ var HeroUnit = React.createClass({
   },
 
   render: function() {
+    // backgroundLines are line patterns to layer on hero banner image,
+    // one at bottom left and one at top right.
+    // Ordering in this array matters as CSS rules are set correspondingly
     var backgroundLines = [
       `/assets/images/hero/lines-left.png`,
       `/assets/images/hero/lines-right.png`,
     ];
     var backgroundImages = [ this.state.image ];
 
+    // Layers line patterns on top of hero banner image unless 
+    // this.props.hideBackgroundLines is set to true
     if ( !this.props.hideBackgroundLines ) {
       backgroundImages = backgroundLines.concat(backgroundImages);
     }
