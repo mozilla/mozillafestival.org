@@ -52,10 +52,9 @@ var Home = React.createClass({
           </div>
         </HeroUnit>
         <div className="centered content wide">
-          <h1>More ways to participate</h1>
-          <p>The MozFest 2016 speaker series and keynotes will be broadcast live.</p>
-          <p>Sign up for email alerts and ways to participate remotely.</p>
-          <a href="https://ti.to/Mozilla/mozfest-2016" className="button"><span>Sign Up</span></a>
+          <h1>Buy a Ticket for MozFest 2016</h1>
+          <p>MozFest 2016 is a chance to build something, grow your network and get inspired. Sound interesting?</p>
+          <Link to="tickets" className="button"><span>Buy a Ticket</span></Link>
         </div>
         <Footer/>
       </div>
