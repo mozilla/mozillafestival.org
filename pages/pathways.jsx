@@ -326,7 +326,7 @@ var PathwaysPage = React.createClass({
         <Header/>
         <HeroUnit image="/assets/images/pathways.jpg"
                   image2x="/assets/images/pathways.jpg">
-          Pathways
+          <h1>Pathways</h1>
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">

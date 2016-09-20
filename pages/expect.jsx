@@ -12,9 +12,9 @@ var Expect = React.createClass({
       <div className="expect-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/expect.jpg"
-                  image2x="/assets/images/expect.jpg">
-          what to expect
+        <HeroUnit image="/assets/images/hero/expect.jpg"
+                  image2x="/assets/images/hero/expect.jpg">
+          <h1>what to expect</h1>
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">

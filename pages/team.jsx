@@ -75,9 +75,9 @@ var TeamPage = React.createClass({
     return (
       <div className="team-page">
         <Header/>
-        <HeroUnit image="/assets/images/team.png"
-                  image2x="/assets/images/team.png">
-          Team
+        <HeroUnit image="/assets/images/hero/team.jpg"
+                  image2x="/assets/images/hero/team.jpg">
+          <h1>Team</h1>
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">

@@ -10,9 +10,9 @@ var Success = React.createClass({
     return (
       <div className="proposals-page">
         <Header/>
-        <HeroUnit image="/assets/images/fringe.jpg"
-                  image2x="/assets/images/fringe.jpg">
-          Fringe Events
+        <HeroUnit image="/assets/images/hero/fringe.jpg"
+                  image2x="/assets/images/hero/fringe.jpg">
+          <h1>Fringe Events</h1>
         </HeroUnit>
         <div className="centered content wide">
           <h1>Success!</h1>

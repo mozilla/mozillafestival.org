@@ -11,9 +11,9 @@ var Contact = React.createClass({
       <div className="contact-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/contact.jpg"
-                  image2x="/assets/images/contact.jpg">
-          contact us
+        <HeroUnit image="/assets/images/hero/contact.jpg"
+                  image2x="/assets/images/hero/contact.jpg">
+          <h1>contact us</h1>
         </HeroUnit>
         <div className="centered content wide">
           <h1>Hello there</h1>

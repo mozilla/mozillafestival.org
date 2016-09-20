@@ -10,7 +10,7 @@ var SubmissionProcessPage = React.createClass({
         <Header/>
         <HeroUnit image="/assets/images/submission-process.jpg"
                   image2x="/assets/images/submission-process.jpg">
-          Submission Process
+          <h1>Submission Process</h1>
         </HeroUnit>
         <div className="centered content wide">
           <p>We use GitHub to manage, review and curate sessions for MozFest. GitHub allows us to openly collaborate, and it provides a record for how the festival program came together.</p>

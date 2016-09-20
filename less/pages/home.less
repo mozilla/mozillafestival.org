@@ -12,16 +12,28 @@
     }
   }
   .hero-unit-container {
-    background: linear-gradient(to right, #151d5f, #7b3a62);
+    padding-bottom: 10px;
+    background: linear-gradient(to right, @blue, @pink);
+    &:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: url(assets/images/hero/home/home-bar.jpg); 
+    }
+  }
+  .content-wrapper {
+    max-width: @max-container-width;
+    padding: 0 15px;
+    margin: 0 auto;
   }
   .video-wrapper {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
+    margin-bottom: 30px;
   }
   .iframe-container {
     position: relative;
-    max-width: 800px;
     height: 0;
     padding-bottom: 56.25%;
     margin: 0 20px;
@@ -37,6 +49,11 @@
     padding-top: 350px;
     padding-bottom: 40px;
     height: 100%;
+    background-size: cover;
+    @media screen and (min-width: 768px) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
     iframe {
       margin: 0 auto;
       border-width: 0;
@@ -45,29 +62,15 @@
       box-sizing: content-box;
       margin-top: 50px;
     }
-    @media screen and (min-width: 768px) {
-      padding-top: 200px;
-      padding-bottom: 150px;
-    }
-    .video-link {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto;
-      border-radius: 50%;
+    .video-play-link {
+      border: 1px solid #fff;
+      color: #fff;
+      background: none;
       cursor: pointer;
-      transition: transform .3s;
       &:hover {
-        transform: scale(1.2);
+        color: @pink;
+        background: #fff;
       }
-    }
-    h1 {
-      margin: 0;
-      font-size: 46px;
-    }
-    h1, h2 {
-      font-weight: 800;
-      letter-spacing: 7px;
-      text-transform: uppercase;
     }
     .horizontal-rule {
       width: 84px;
@@ -75,16 +78,22 @@
       background: #FFFFFF;
       margin: 10px auto 6px;
     }
-    h2 {
+    h1 {
       margin: 0;
-      font-size: 28px;
-      letter-spacing: 2px;
     }
-    div {
-      font-size: 24px;
-      text-transform: none;
-      font-weight: 400;
-      letter-spacing: normal;
+    h2 {
+      margin-top: 15px;
+    }
+  }
+  .content {
+    p {
+      margin-bottom: 0;
+    }
+    p + p {
+      margin-top: 0;
+    }
+    .button {
+      margin-top: 30px;
     }
   }
 }

@@ -11,9 +11,9 @@ var Volunteer = React.createClass({
       <div className="volunteer-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/volunteer.jpg"
-                  image2x="/assets/images/volunteer.jpg">
-          volunteer
+        <HeroUnit image="/assets/images/hero/volunteer.jpg"
+                  image2x="/assets/images/hero/volunteer.jpg">
+          <h1>volunteer</h1>
         </HeroUnit>
         <div className="content centered wide">
           <p>Volunteers are integral to what we do at Mozilla, and MozFest is no different. The annual festival could not take place without the time, dedication and love of our local volunteers.</p>

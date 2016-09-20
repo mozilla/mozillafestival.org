@@ -248,9 +248,9 @@ var SessionsPage = React.createClass({
     return (
       <div className="sessions-page">
         <Header/>
-        <HeroUnit image="/assets/images/sessions.jpg"
-                  image2x="/assets/images/sessions.jpg">
-          Spaces & Sessions
+        <HeroUnit image="/assets/images/hero/sessions.jpg"
+                  image2x="/assets/images/hero/sessions.jpg">
+          <h1>Spaces & Sessions</h1>
         </HeroUnit>
         <div className="white-background">
           <div className="content centered wide">
