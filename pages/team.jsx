@@ -254,7 +254,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
     name: `Michael Saunby`,
     twitter: `@msaunby`,
     // pic: `/assets/images/team/wrangler/`,
-    bio: <p></p>
+    bio: <p>Michael Saunby, a *****</p>
   },
   {
     name: `George Roter`,
