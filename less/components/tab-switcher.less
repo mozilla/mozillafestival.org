@@ -11,8 +11,8 @@
       flex: 1;
       margin: 0 0.5rem;
       text-transform: none;
-      color: $white;
-      // background: rgba($nightly-blue, 0.9);
+      color: #fff;
+      background: fade(@blue,90%);
       font-weight: 300;
       font-size: 1.25rem;
 
@@ -30,8 +30,12 @@
       }
 
       &.active {
-        // background: $off-white;
-        color: inherit;
+        color: @grey;
+        background: #fff;
+      }
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }
@@ -59,6 +63,10 @@
 
     &.active {
       display: block;
+    }
+
+    h1 {
+      text-align: center;
     }
   }
 }

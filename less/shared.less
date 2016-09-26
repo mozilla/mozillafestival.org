@@ -10,14 +10,10 @@ body {
 #embed-error {
   display: none;
 }
-.button {
-  display: inline-block;
-  color: #FFFFFF;
+.button,
+a.button,
+a.button:hover {
   background: @pink;
-  border-radius: 2px;
-  padding: 12px 38px;
-  letter-spacing: 1px;
-  font-weight: 500;
 }
 .content {
   a {
@@ -37,16 +33,10 @@ body {
     display: inline-block;
     position: relative;
     color: #fff;
-    margin: 14px 0;
     overflow: hidden;
     backface-visibility: hidden;
 
     border-width: 0;
-
-    line-height: 27px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
 
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -94,10 +84,9 @@ body {
     font-size: 18px;
     color: @blue;
     font-weight: 600;
+    letter-spacing: 0;
   }
   p {
-    font-size: 21px;
-    font-weight: 300;
     margin: 23px 0;
     line-height: 1.3;
   }

@@ -14,7 +14,7 @@ var TabSwitcher = React.createClass({
       props: React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
         slug: React.PropTypes.string.isRequired,
-        iconDefault: React.PropTypes.string.isRequired,
+        iconDefault: React.PropTypes.string,
         iconActive: React.PropTypes.string
       }).isRequired
     }))
@@ -57,7 +57,6 @@ var TabSwitcher = React.createClass({
 
     // Remove undefined values from buttons
     buttons = buttons.filter(Boolean);
-    console.log(this.props.children);
     let panels = this.props.children.map((element, index) => {
       return (
         <div

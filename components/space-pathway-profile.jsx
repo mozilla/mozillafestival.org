@@ -1,5 +1,10 @@
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
+
+var slug = require(`slug`);
+slug.defaults.mode = `rfc3986`;
 
 var BioTooltip = React.createClass({
   render: function() {
@@ -39,8 +44,7 @@ var SpacePathwayProfile = React.createClass({
             this.props.contacts ? this.props.contacts.map(function(contact) {
               return (
                 <li key={contact.name}>
-                  <div className="name">{contact.name}</div>
-                  { contact.twitter ? <div className="twitter"><a href={"https://twitter.com/"+contact.twitter}>{contact.twitter}</a></div> : null }
+                  <Link to={"/team/wranglers#"+slug(contact.name)}>{contact.name}</Link>
                   { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )

@@ -1,14 +1,9 @@
 var React = require('react');
-var Link = require('react-router').Link;
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var HeroUnit = require('../components/hero-unit.jsx');
 var SpacePathwayProfile = require('../components/space-pathway-profile.jsx');
 var ImageTag = require('../components/imagetag.jsx');
-
-// TODO:FIXME: unable to use <Link> in <SpacePathwayProfile>
-// error raised: "Failed Context Types: Required context `router` was not specified in `Link`."
-// had to use vaillia <a> for now
 
 var SpacesInfo = [
   {
@@ -232,7 +227,7 @@ var SpacesInfo = [
 
 var SessionsPage = React.createClass({
   spaces: SpacesInfo,
-  componentWillMount: function() {
+  render: function() {
     this.spaces = this.spaces.map(function(space,i) {
       var whiteBg = (i%2==0) ? "white-background" : "";
       return (
@@ -243,8 +238,7 @@ var SessionsPage = React.createClass({
         </div>
       );
     });
-  },
-  render: function() {
+
     return (
       <div className="sessions-page">
         <Header/>
