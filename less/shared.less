@@ -16,6 +16,14 @@ a.button:hover {
   background: @pink;
 }
 .content {
+  width: 100%;
+  margin: 35px auto;
+  padding: 0 15px;
+  max-width: 565px;
+  overflow: hidden;
+  &.wide {
+    max-width: @max-container-width;
+  }
   a {
     text-decoration: none;
     color: @pink;
@@ -89,14 +97,6 @@ a.button:hover {
   p {
     margin: 23px 0;
     line-height: 1.3;
-  }
-  width: 100%;
-  margin: 35px auto;
-  padding: 0 15px;
-  max-width: 565px;
-  overflow: hidden;
-  &.wide {
-    max-width: @max-container-width;
   }
   .bold {
     font-weight: 800;

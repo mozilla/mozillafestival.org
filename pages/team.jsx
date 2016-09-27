@@ -1,4 +1,4 @@
-var React = require(`react`);
+var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
@@ -326,56 +326,50 @@ var Partners = React.createClass({
       link: `http://www.digitalme.co.uk/`
     }
   ],
-  groupPartners: function(partners) {
-    return (
-      <div className="row">
-        {
-          partners.map(partner => {
-            return {partner};
-          })
-        }
-      </div>
-    );
-  },
   render: function() {
     let groups = [];
     let tempGroup = [];
 
     this.partnersInfo.forEach((partner) => {
-      let thePartner = (<div className="col-sm-4 partner" key={partner.name}>
-        <a href={partner.link}>
-          { partner.logo ? <img src={partner.logo} alt={partner.name} /> : partner.name }
-        </a>
-      </div>);
+      let thePartner = ( <a href={partner.link}>
+                          { partner.logo ? <img src={partner.logo} alt={partner.name} /> : partner.name }
+                        </a>);
 
-      tempGroup.push(thePartner);
+      tempGroup.push({
+        key: partner.name,
+        component: thePartner
+      });
       if (tempGroup.length === 3) {
-        groups.push(
-          <div className="row">
-            {tempGroup[0]}
-            {tempGroup[1]}
-            {tempGroup[2]}
-          </div>
-        );
+        groups.push({
+          key: `the ${tempGroup[0].key} row`,
+          component: tempGroup
+        });
         tempGroup = [];
       }
     });
 
     // don't forget to include leftover items, if any
     if (tempGroup.length !== 0) {
-      groups.push(
-        <div className="row">
-          { tempGroup[0] }
-          { tempGroup[1] ? tempGroup[1] : null }
-        </div>
-      );
+      groups.push({
+        key: `the ${tempGroup[0].key} row`,
+        component: tempGroup
+      });
+      tempGroup = [];
     }
 
     return (
       <div>
         {
-          groups.map( (group,index) => {
-            return (<div className="partners" key={index}>{group}</div>);
+          groups.map( (group) => {
+            return (
+              <div className="row partners" key={group.key}>
+                {
+                  group.component.map((partner) => {
+                    return <div className="col-sm-4 partner" key={partner.key}>{partner.component}</div>;
+                  })
+                }
+              </div>
+            );
           })
         }
       </div>
