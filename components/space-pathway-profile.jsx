@@ -4,6 +4,8 @@ var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
 
 var slug = require(`slug`);
+// https://www.npmjs.com/package/slug#options
+// we want to use the "rfc3986" mode
 slug.defaults.mode = `rfc3986`;
 
 var BioTooltip = React.createClass({
