@@ -324,6 +324,16 @@ var Partners = React.createClass({
       name: `Digital Me`,
       logo: `/assets/images/team/partner/DigitalMe.jpg`,
       link: `http://www.digitalme.co.uk/`
+    },
+    {
+      name: `Translate`,
+      logo: `/assets/images/team/partner/Translate.jpg`,
+      link: `http://www.translate.org.za/`
+    },
+    {
+      name: `UCanToo`,
+      logo: `/assets/images/team/partner/UCanToo.jpg`,
+      link: `http://www.ucantoo.org.uk/`
     }
   ],
   render: function() {
