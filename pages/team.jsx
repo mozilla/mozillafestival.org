@@ -69,14 +69,14 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Ryan Pitts`,
     twitter: `@ryanpitts`,
-    // pic: `/assets/images/team/wrangler/RyanPitts.jpg`,
+    pic: `/assets/images/team/wrangler/RyanPitts.jpg`,
     bio: <p>Ryan is a former reporter and editor who found his way into writing code thanks to a baseball stats habit. He's been working in digital and data journalism for more than a decade, at newspapers and on projects like Census Reporter. Now he helps the Knight-Mozilla OpenNews team support the developers, designers, and data analysts covering the news and building the next generation of storytelling tools</p>
   },
   {
     name: `Eva Constantaras`,
     twitter: ``,
     pic: `/assets/images/team/wrangler/EvaConstantaras.jpg`,
-    bio: <p></p>
+    bio: <p>Eva spends a lot of time coaxing her little data journalism seedlings in countries with messy data, overworked journalists, hostile governments and little internet projects into bloom. Some of these data teams, like in Kenya in Afghanistan, are thriving, while others, such as in Sudan and Myanmar are still taking root.</p>
   },
   // Open Science wranglers
   {
@@ -107,25 +107,25 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Matt Rogers`,
     twitter: `@mattdigitalme`,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/MattRogers.jpg`,
     bio: <p>Matt is passionate about working with young people, particularly when it comes to using and experimenting with existing and emerging technologies. Before working for DigitalMe, Matt was a KS1-KS4 teacher for eight years most recently at a Primary School in South East London, where he also held the roles of CAS Lead Educatorand Mathletics Lead Educator. This experience directly feeds into Matt’s work on Safe, Naace CPD badges and Scout badges at DigitalMe.</p>
   },
   {
     name: `Tim Riches`,
     twitter: ``,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/TimRiches.jpg`,
     bio: <p>Tim has worked in education for the past 12 years. First working with arts groups, helping to develop web based participation projects and then co-founding award winning open learning platforms including Radiowaves & NUMU.  His main focus is working with partners to develop a new skills currency using Mozilla Open Badges. Tim also works with the Open Badges developing international partnerships and projects.</p>
   },
   {
     name: `Lucy Lewis`,
     twitter: ``,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/LucyLewis.jpg`,
     bio: <p>Lucy Lewis is Projects Director at DigitalMe. She has extensive experience in developing and managing award winning digital learning programmes, reaching over 10,000 learners, with partners including The Imperial War Museum, The Children’s Society and The London 2012 Olympics.Since 2011, Lucy has worked in the field of Open Badges and digital credentials, working with employers, learning providers and charities to implement Open Badge programmes and developing tools such as the Badge Design canvas and The Open Badge Academy platform.</p>
   },
   {
     name: `Grainne Hamilton`,
     twitter: ``,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/GrainneHamilton.jpg`,
     bio: <p>Grainne’s varied background includes leading the development of the Jisc Open Badges Toolkit, contributing to the Mozilla Discover project, which involved developing badge-based pathways to employment, as well as founding and facilitating the Open Badges in Scottish Education Group. Most recently, she was Senior Consultant at Blackboard, which involved helping a global range of clients make best use of their teaching and learning systems. At DigitalMe, Grainne contributes her expertise to a range of projects and further develops the Open Badges ecosystem in Scotland</p>
   },
   // Fuel The Movement wranglers
@@ -141,7 +141,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Stacy Martin`,
     twitter: ``,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/StacyMartin.jpg`,
     bio: <p>Stacy Martin is part of the Policy Team at Mozilla. As a Senior Manager of Privacy and Engagement, Stacy focuses on building privacy community and education/awareness materials. She has created several teaching kits on topics such as privacy, passwords, and DRM.  Stacy is a co-founder of Privacy Lab, which she and Noah Swartz started in San Francisco and are now expanding to include Europe. She has been with Mozilla for 5 years. Her passion is online safety and privacy for vulnerable populations. She has worked with domestic violence organizations, city councils and other nonprofits. She also works with Mozilla volunteers on various privacy-related projects.</p>
   },
   {
@@ -209,7 +209,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Su Adams`,
     twitter: `@SuAdams`,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/SuAdams.jpg`,
     bio:  (<div>
             <p>I teach teachers to teach tech, deliver workshops and write curriculum.</p>
             <p>Oozing enthusiasm and always keen to share, I'm a Mozilla Regional Clubs Co-ordinator, CoderDojo London Mentor, a member of A11yhacks: coding with vision impaired and am a UK Code Week Ambassador.  In my spare time, I sleep!</p>
@@ -253,7 +253,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Michael Saunby`,
     twitter: `@msaunby`,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/MichaelSaunby.jpg`,
     bio: <p>Michael Saunby, a *****</p>
   },
   {
@@ -272,7 +272,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
   {
     name: `Irini Papadimitriou`,
     twitter: ``,
-    // pic: `/assets/images/team/wrangler/`,
+    pic: `/assets/images/team/wrangler/IriniPapadimitriou.jpg`,
     bio:  (<div>
             <p>Irini Papadimitriou is Digital Programmes Manager at the V&A and responsible for programmes such as the annual Digital Design Weekend, a big-scale event presenting intersections of art, design and technology; and the monthly Digital Futures, an open platform & networking event for displaying and discussing work by researchers, artists, designers, companies and other professionals working with art, technology, design, science and beyond.</p>
             <p>Irini is also Head of New Media Arts Development at Watermans, an arts organisation presenting innovative work and supporting artists working with technology, where she is curating the exhibition programme and an annual Digital Performance festival, exploring intersections in digital art, dance, sound, performance, science and more.</p>
