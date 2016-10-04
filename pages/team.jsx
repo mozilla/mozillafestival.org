@@ -22,7 +22,7 @@ var productionMembers = [
     name: `Erika Drushka`,
     title: `Program Designer`,
     pic: `/assets/images/team/production/ErikaDrushka.jpg`,
-    bio: <p>Erika Drushka is the Program Designer for MozFest 2016. With a background in documentary film making, advocacy and fundraising, Erika has spent the last three years on the MozFest communications team. This year, Erika has shifted her focus at Mozilla to building network strength in the open Internet movement through convenings.</p>
+    bio: <p>Erika Drushka is the Program Designer for MozFest 2016. With a background in documentary film making, advocacy and fundraising, Erika has spent the last three years on the MozFest communications team. This year, Erika has shifted her focus at Mozilla to building network strength in the open internet movement through convenings.</p>
   },
   {
     name: `Allen “Gunner” Gunn`,
@@ -46,7 +46,7 @@ var productionMembers = [
     name: `Spike`,
     title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/Spike.jpg`,
-    bio: <p>Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and this year is the mastermind behind the new Dialogues and Debates speakers series. 2016 will be Kevin's third MozFest.</p>
+    bio: <p>Chris Foote (known as “Spike”) is the Volunteer Coordinator for MozFest 2016. A life-long professional Electronic Engineer with a passion for science and technology, he is a volunteer with global organisations such as CrisisCommons, CrisisMappers, OpenStreetMap (OSM), Humanitarian OSM Team (HOT), StandbyTaskForce (SBTF). He has co-organised a very successful London-based monthly Meetup group for people involved in or interested in ICT4D (Information and Communication Technologies for Development) as well as organising countless BarCamps and Hackathons. This is Spike's sixth MozFest, and his fourth as Volunteer Coordinator.</p>
   }
 ];
 
@@ -365,7 +365,7 @@ var Partners = React.createClass({
               <div className="row partners" key={group.key}>
                 {
                   group.component.map((partner) => {
-                    return <div className="col-sm-4 partner" key={partner.key}>{partner.component}</div>;
+                    return <div className="col-xs-12 col-sm-4 partner" key={partner.key}>{partner.component}</div>;
                   })
                 }
               </div>

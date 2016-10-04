@@ -21,6 +21,18 @@
         max-height: 1.375em;
       }
 
+      span {
+        /* this is to override the styling from `hidden-xs-down` class
+           this will be taken care of once we are able to use `mofo-ui` and when
+           https://github.com/mozilla/mofo-ui/issues/43 is fixed
+        */
+        display: block !important;
+        font-size: .7rem;
+        @media screen and (min-width: 480px) {
+          font-size: inherit;
+        }
+      }
+
       &:first-child {
         margin-left: 0;
       }
