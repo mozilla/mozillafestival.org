@@ -26,7 +26,7 @@ var SpacesInfo = [
   {
     name: "Journalism",
     iconPath: "/assets/images/space-icons/journalism.svg",
-    iconWidth: "86",
+    iconWidth: "80",
     description:
     (<div>
       <p>Journalism doesn't just tell the story of the Internet — it's part of it. Software like Django, D3, and Backbone has emerged from newsrooms to power some of the most innovative work on the open Web. And reporting entertains and challenges millions of readers online every day, giving them the information they need to engage with their communities.</p>
@@ -48,7 +48,7 @@ var SpacesInfo = [
   {
     name: "Open Science",
     iconPath: "/assets/images/space-icons/openScience.svg",
-    iconWidth: "90",
+    iconWidth: "80",
     description:
     (<div>
       <p>Science and the Web both help us understand the world around us. In the Open Science Space, participants explore, remix, and hack at the intersection of science and the Internet, and learn how the Web is transforming research and discovery.</p>
@@ -73,7 +73,7 @@ var SpacesInfo = [
   {
     name: "Open Badges",
     iconPath: "/assets/images/space-icons/openBadges.svg",
-    iconWidth: "76",
+    iconWidth: "80",
     description:
     (<div>
       <p>Open Badges are transforming how we recognise and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
@@ -98,7 +98,7 @@ var SpacesInfo = [
   {
     name: "Fuel The Movement",
     iconPath: "/assets/images/space-icons/fuelMovement.svg",
-    iconWidth: "94",
+    iconWidth: "80",
     description:
     (<div>
       <p>Who do you think should create culture? How do we build a movement to encourage creativity and imagination? If these questions keep you up at night, the open internet movement — and Fuel The Movement Space — needs you!</p>
@@ -123,7 +123,7 @@ var SpacesInfo = [
   {
     name: "Localisation",
     iconPath: "/assets/images/space-icons/localisation.svg",
-    iconWidth: "56",
+    iconWidth: "76",
     description:
     (<div>
       <p>The Internet spans many cultures and languages — and so does the Localisation Space.</p>
@@ -164,7 +164,7 @@ var SpacesInfo = [
   {
     name: "Demystify the Web",
     iconPath: "/assets/images/space-icons/demystify.svg",
-    iconWidth: "62",
+    iconWidth: "82",
     sessionsLink: "https://github.com/MozillaFoundation/mozfest-program-2016/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Session+accepted%22+label%3A%22%5BSpace%5D+Demystify+the+web%22",
     description:
     (<div>
