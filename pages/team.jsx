@@ -291,6 +291,11 @@ I care about empowering young people to take the lead.  I think arts, culture an
 var Partners = React.createClass({
   partnersInfo: [
     {
+      name: `Youth Led EU`,
+      logo: `/assets/images/team/partner/YouthLedEU.jpg`,
+      link: `https://www.facebook.com/YouthLedEU/`
+    },
+    {
       name: `The Tate`,
       logo: `/assets/images/team/partner/Tate.jpg`,
       link: `http://www.tate.org.uk/`
@@ -333,12 +338,16 @@ var Partners = React.createClass({
     {
       name: `Tech4girls`,
       logo: `/assets/images/team/partner/Tech4girls.jpg`
-    }
-    ,
+    },
     {
       name: `The Met Office`,
       logo: `/assets/images/team/partner/TheMetOffice.jpg`,
       link: `http://www.informaticslab.co.uk`
+    },
+    {
+      name: `Open Technology Institute`,
+      logo: `/assets/images/team/partner/OpenTechnologyInstitute.jpg`,
+      link: `http://www.newamerica.org/oti/`
     }
   ],
   render: function() {
