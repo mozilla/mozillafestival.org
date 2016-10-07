@@ -177,11 +177,12 @@ I care about empowering young people to take the lead.  I think arts, culture an
   // Youth Zone wranglers
   {
     name: `Dorine Flies`,
-    twitter: `@EPIKhub`,
+    twitter: `@dorineFlies`,
     pic: `/assets/images/team/wrangler/DorineFlies.jpg`,
     bio:  (<div>
             <p>Heading up the "Youth led" programme at MozFest, her interest in Sociology and Anthropology led her to explore how digital culture can build resilience and inclusion across communities.</p>
             <p>A keen RPG gamer, Dorine’s years spent assembling raid teams of young people in World of Warcraft lead her to a second career in HR supporting engineers (naturally)!</p>
+            <p><a href="https://medium.com/@DorineFlies">https://medium.com/@DorineFlies</a></p>
           </div>)
   },
   {
