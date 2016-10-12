@@ -75,7 +75,7 @@ var FringeEventForm = Formation.CreateForm({
         label: 'Date and time',
         validations: this.dateTimeValidator,
         placeholder: "MMM DD, YYYY --:-- --",
-        exampleValue: "Example: Oct 30, 2016 12:30 PM"
+        exampleValue: "Example: Oct 30, 2016 03:00 PM"
       },
       "location": {
         required: true,
