@@ -268,7 +268,7 @@ I care about empowering young people to take the lead.  I think arts, culture an
     name: `Luca Damiani`,
     twitter: `@mozexhibit`,
     pic: `/assets/images/team/wrangler/LucaDamiani.jpg`,
-    bio: <p>Visual Artist, Luca M Damiani works and practices internationally in the fields of Arts&Design, Technology, Visual Culture. He is also Digital Studio Producer at Tate and Lecturer in Graphic and Media Design at University Arts London. Luca is always looking at creating ongoing conversations about the role of the arts in society. Title- Digital Studio Producer, Tate and  Lecturer in Media Design, University Arts London.</p>
+    bio: <p>Visual Artist, Luca M Damiani works and practices internationally in the fields of Arts&Design, Technology, Visual Culture. He is also Digital Studio Producer at Tate and Lecturer in Graphic and Media Design at University Arts London. Luca is always looking at creating ongoing conversations about the role of the arts in society.</p>
   },
   {
     name: `Irini Papadimitriou`,
