@@ -53,24 +53,22 @@
     border-collapse: separate;
     border-spacing: 4px 0;
     tr {
-      &.table-header {
-        text-transform: uppercase;
-      }
       text-align: left;
-      &:first-child {
+      th,
+      td {
+        padding: .5rem;
+      }
+      th {
+        text-align: center;
+        background: @blue;
+        text-transform: uppercase;
         text-align: center;
         color: #FFFFFF;
         font-weight: 700;
-        font-size: 20px;
         letter-spacing: 2px;
-        td {
-          background: @blue;
-        }
+        width: 33.333%;
       }
       td {
-        padding: 14px;
-      }
-      &:not(:first-child) td {
         border-bottom: 1px solid #DADADA;
         background: @light-grey;
         &:nth-child(odd) {
@@ -81,8 +79,16 @@
         }
       }
     }
-    :last-child td {
-      border-bottom: none;
+    @media screen and (min-width: 768px) {
+      tr {
+        th,
+        td {
+          padding: 1rem;
+        }
+        th {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
