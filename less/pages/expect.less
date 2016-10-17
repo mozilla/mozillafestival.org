@@ -56,7 +56,7 @@
       text-align: left;
       th,
       td {
-        padding: 14px;
+        padding: .5rem;
       }
       th {
         text-align: center;
@@ -65,8 +65,8 @@
         text-align: center;
         color: #FFFFFF;
         font-weight: 700;
-        font-size: 20px;
         letter-spacing: 2px;
+        width: 33.333%;
       }
       td {
         border-bottom: 1px solid #DADADA;
@@ -76,6 +76,17 @@
         }
         .time {
           font-weight: 700;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      tr {
+        th,
+        td {
+          padding: 1rem;
+        }
+        th {
+          font-size: 20px;
         }
       }
     }
