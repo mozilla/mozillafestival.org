@@ -77,8 +77,8 @@ var Expect = React.createClass({
                 </td>
                 <td>
                   <div className="td-container">
-                    <div className="time">10:00</div>
-                    <div>Welcome & Opening</div>
+                    <div className="time">9:30</div>
+                    <div>MozFest Breakfast</div>
                   </div>
                 </td>
               </tr>
@@ -101,7 +101,7 @@ var Expect = React.createClass({
                 <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
                 <td>
                   <div className="td-container">
-                    <div className="time">12:30</div>
+                    <div className="time">12:00</div>
                     <div>Lunch</div>
                   </div>
                 </td>
@@ -122,7 +122,7 @@ var Expect = React.createClass({
                 </td>
                 <td>
                   <div className="td-container">
-                    <div className="time">14:30</div>
+                    <div className="time">14:00</div>
                     <div>Afternoon sessions begin</div>
                   </div>
                 </td>
