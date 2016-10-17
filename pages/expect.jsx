@@ -42,15 +42,15 @@ var Expect = React.createClass({
             <h1>Weekend Outline</h1>
             <table className="schedule-table">
               <tr className="table-header">
-                <td>
+                <th>
                   fri oct 28
-                </td>
-                <td>
+                </th>
+                <th>
                   sat oct 29
-                </td>
-                <td>
+                </th>
+                <th>
                   sun oct 30
-                </td>
+                </th>
               </tr>
               <tr>
                 <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
