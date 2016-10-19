@@ -349,6 +349,11 @@ var Partners = React.createClass({
       name: `Open Technology Institute`,
       logo: `/assets/images/team/partner/OpenTechnologyInstitute.jpg`,
       link: `http://www.newamerica.org/oti/`
+    },
+    {
+      name: `Internews`,
+      logo: `/assets/images/team/partner/Internews.jpg`,
+      link: `http://internews.org/`
     }
   ],
   render: function() {
