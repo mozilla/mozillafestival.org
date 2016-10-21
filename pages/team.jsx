@@ -338,7 +338,8 @@ var Partners = React.createClass({
     },
     {
       name: `Tech4girls`,
-      logo: `/assets/images/team/partner/Tech4girls.jpg`
+      logo: `/assets/images/team/partner/Tech4girls.jpg`,
+      link: `http://www.tech-girls.org`
     },
     {
       name: `The Met Office`,
