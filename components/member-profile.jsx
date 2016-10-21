@@ -19,7 +19,7 @@ var MemberProfile = React.createClass({
     return (
       <div className="row m-y-3 member-profile" id={id}>
         <div className="col-sm-3 center-vertical">
-          <img className="circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
+          <img className="img-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
         <div className="col-sm-9">
           <h3 className="m-b-0 name"><a href={`#`+id}>{this.props.name}</a></h3>

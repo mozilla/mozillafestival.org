@@ -4,3 +4,4 @@
 public/build/*
 public/*.css
 public/vendor/*
+.DS_Store
