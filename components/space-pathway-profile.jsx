@@ -23,6 +23,11 @@ var BioTooltip = React.createClass({
 });
 
 var SpacePathwayProfile = React.createClass({
+  getDefaultProps: function() {
+    return {
+      linkText: "See the sessions in this space."
+    }
+  },
   render: function() {
     var id = this.props.name.replace(/\s+/g, '-').toLowerCase();
 
@@ -36,7 +41,7 @@ var SpacePathwayProfile = React.createClass({
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
           <div className="description">{this.props.description}</div>
-          <p><a href={this.props.sessionsLink}>See the sessions in this space.</a></p>
+          <p><a href={this.props.sessionsLink}>{this.props.linkText}</a></p>
         </div>
         <div className="contacts">
           { this.props.contacts ? <h2>{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>
