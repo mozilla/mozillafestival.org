@@ -82,11 +82,12 @@ var Home = React.createClass({
                   image2x="/assets/images/hero/home/home2-cropped.jpg"
                   hideBackgroundLines={true}>
           <div className="content-wrapper">
-            <h1>Welcome to MozFest</h1>
+            <h1>MozFest</h1>
             <h2>The world's leading festival for the open internet movement.</h2>
             <div className="horizontal-rule"></div>
-            <p>Watch MozFest's speaker series live, beginning Oct 29, 11am BST</p>
-            <a href="https://www.facebook.com/mozilla" className="button">Watch Live</a>
+            <p>Watch videos from MozFest 2016</p>
+            <a href="#" className="button">Opening Keynote</a>
+            <a href="#" className="button">Speakers Series</a>
           </div>
         </HeroUnit>
         <div className="white-background">
