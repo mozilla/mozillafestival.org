@@ -72,13 +72,13 @@ var speakersInfo = [
   {
     name: `Simone Browne`,
     pic: `/assets/images/speakers/Browne.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/`
   },
   {
     name: `Eliot Higgins`,
     twitter: `@EliotHiggins`,
     pic: `/assets/images/speakers/Higgins.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/`
   }
 ];
 
