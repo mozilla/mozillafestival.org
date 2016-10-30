@@ -13,60 +13,72 @@ var speakersInfo = [
   {
     name: `Zeynep Tufekci`,
     twitter: `@zeynep`,
-    pic: `/assets/images/speakers/Tufekci.jpg`
+    pic: `/assets/images/speakers/Tufekci.jpg`,
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
   },
   {
     name: `Brian Behlendorf`,
     twitter: `@brianbehlendorf`,
-    pic: `/assets/images/speakers/Behlendorf.jpg`
+    pic: `/assets/images/speakers/Behlendorf.jpg`,
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
   },
   {
     name: `Maggie Vail`,
     twitter: `@magicbeans`,
-    pic: `/assets/images/speakers/Vail.jpg`
+    pic: `/assets/images/speakers/Vail.jpg`,
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
   },
   {
     name: `Mark Surman`,
     twitter: `@msurman`,
-    pic: `/assets/images/speakers/Surman.jpg`
+    pic: `/assets/images/speakers/Surman.jpg`,
+    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/`
   },
   {
     name: `Sahar Aziz`,
     twitter: `@saharazizlaw`,
-    pic: `/assets/images/speakers/Aziz.jpg`
+    pic: `/assets/images/speakers/Aziz.jpg`,
+    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/`
   },
   {
     name: `Katherine Maher`,
     twitter: `@krmaher`,
-    pic: `/assets/images/speakers/Maher.jpg`
+    pic: `/assets/images/speakers/Maher.jpg`,
+    link: ``
   },
   {
     name: `Chris Soghoian`,
     twitter: `@csoghoian`,
-    pic: `/assets/images/speakers/Soghoian.jpg`
+    pic: `/assets/images/speakers/Soghoian.jpg`,
+    link: ``
   },
   {
     name: `Ashe Dryden`,
     twitter: `@ashedryden`,
-    pic: `/assets/images/speakers/Dryden.jpg`
+    pic: `/assets/images/speakers/Dryden.jpg`,
+    link: ``
   },
   {
     name: `Volker Birk`,
-    pic: `/assets/images/speakers/Birk.jpg`
+    pic: `/assets/images/speakers/Birk.jpg`,
+    link: ``
   },
   {
     name: `Katharina Borchert`,
     twitter: `@lyssaslounge`,
-    pic: `/assets/images/speakers/Borchert.jpg`
+    pic: `/assets/images/speakers/Borchert.jpg`,
+    link: ``
   },
   {
     name: `Simone Browne`,
-    pic: `/assets/images/speakers/Browne.jpg`
+    pic: `/assets/images/speakers/Browne.jpg`,
+    link: ``
   },
   {
     name: `Eliot Higgins`,
     twitter: `@EliotHiggins`,
-    pic: `/assets/images/speakers/Higgins.jpg`
+    pic: `/assets/images/speakers/Higgins.jpg`,
+    link: ``
   }
 ];
 
@@ -86,8 +98,8 @@ var Home = React.createClass({
             <h2>The world's leading festival for the open internet movement.</h2>
             <div className="horizontal-rule"></div>
             <p>Watch videos from MozFest 2016</p>
-            <a href="https://air.mozilla.org/mozfest-2016/" className="button">Opening Keynote</a>
-            <a href="#" className="button">Speakers Series</a>
+            <a href="https://air.mozilla.org/mozfest-2016/" className="button m-a-1">Opening Keynote</a>
+            <a href="#" className="button m-a-1">Speakers Series</a>
           </div>
         </HeroUnit>
         <div className="white-background">
