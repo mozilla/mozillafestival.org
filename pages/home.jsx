@@ -99,7 +99,7 @@ var Home = React.createClass({
             <div className="horizontal-rule"></div>
             <p>Watch videos from MozFest 2016</p>
             <a href="https://air.mozilla.org/mozfest-2016/" className="button m-a-1">Opening Keynote</a>
-            <a href="#" className="button m-a-1">Speakers Series</a>
+            <a href="https://air.mozilla.org/search/?ss=20" className="button m-a-1">Speaker Series</a>
           </div>
         </HeroUnit>
         <div className="white-background">
