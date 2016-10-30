@@ -86,7 +86,7 @@ var Home = React.createClass({
             <h2>The world's leading festival for the open internet movement.</h2>
             <div className="horizontal-rule"></div>
             <p>Watch videos from MozFest 2016</p>
-            <a href="#" className="button">Opening Keynote</a>
+            <a href="https://air.mozilla.org/mozfest-2016/" className="button">Opening Keynote</a>
             <a href="#" className="button">Speakers Series</a>
           </div>
         </HeroUnit>
