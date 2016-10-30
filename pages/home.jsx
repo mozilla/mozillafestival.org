@@ -44,30 +44,30 @@ var speakersInfo = [
     name: `Katherine Maher`,
     twitter: `@krmaher`,
     pic: `/assets/images/speakers/Maher.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
   },
   {
     name: `Chris Soghoian`,
     twitter: `@csoghoian`,
     pic: `/assets/images/speakers/Soghoian.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
   },
   {
     name: `Ashe Dryden`,
     twitter: `@ashedryden`,
     pic: `/assets/images/speakers/Dryden.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
   },
   {
     name: `Volker Birk`,
     pic: `/assets/images/speakers/Birk.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/`
   },
   {
     name: `Katharina Borchert`,
     twitter: `@lyssaslounge`,
     pic: `/assets/images/speakers/Borchert.jpg`,
-    link: ``
+    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/`
   },
   {
     name: `Simone Browne`,
