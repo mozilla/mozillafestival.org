@@ -14,7 +14,8 @@ var routes = (
     <Route name="expect" path="/expect" handler={require('./pages/expect.jsx')} />
     <Route name="guidelines" path="/guidelines" handler={require('./pages/guidelines.jsx')} />
     <Route name="volunteer" path="/volunteer" handler={require('./pages/volunteer.jsx')} />
-    <Route name="team" path="/team" handler={require('./pages/team.jsx')}>
+    <Route name="projects" path="/projects" handler={require('./pages/projects.jsx')} />
+    <Route name="team" path="/team" handler={require('./pages/team.jsx')} >
       <Route path=":tab" handler={require('./pages/team.jsx')} />
     </Route>
     <Route name="submission-process" path="/submission-process" handler={require('./pages/submission-process.jsx')} />

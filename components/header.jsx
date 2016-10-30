@@ -17,6 +17,9 @@ var Header = React.createClass({
           </div>
           <div className="nav-items">
             <div className="nav-link-container">
+              <Link to="projects">Projects</Link>
+            </div>
+            <div className="nav-link-container">
               <a href="https://app.mozillafestival.org/">Schedule</a>
             </div>
             <div className="nav-link-container">
