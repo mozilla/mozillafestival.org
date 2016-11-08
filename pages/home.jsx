@@ -14,71 +14,71 @@ var speakersInfo = [
     name: `Zeynep Tufekci`,
     twitter: `@zeynep`,
     pic: `/assets/images/speakers/Tufekci.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/#@25s`
   },
   {
     name: `Brian Behlendorf`,
     twitter: `@brianbehlendorf`,
     pic: `/assets/images/speakers/Behlendorf.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/#@28m32s`
   },
   {
     name: `Maggie Vail`,
     twitter: `@magicbeans`,
     pic: `/assets/images/speakers/Vail.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-our-digital-lives/#@50m43s`
   },
   {
     name: `Mark Surman`,
     twitter: `@msurman`,
     pic: `/assets/images/speakers/Surman.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/#@1m4s`
   },
   {
     name: `Sahar Aziz`,
     twitter: `@saharazizlaw`,
     pic: `/assets/images/speakers/Aziz.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-surveillance-and-privacy-online/#@24m54s`
   },
   {
     name: `Katherine Maher`,
     twitter: `@krmaher`,
     pic: `/assets/images/speakers/Maher.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/#@43s`
   },
   {
     name: `Chris Soghoian`,
     twitter: `@csoghoian`,
     pic: `/assets/images/speakers/Soghoian.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/#@19m15s`
   },
   {
     name: `Ashe Dryden`,
     twitter: `@ashedryden`,
     pic: `/assets/images/speakers/Dryden.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-privacy-and-harassment-on-the-internet/#@41m14s`
   },
   {
     name: `Volker Birk`,
     pic: `/assets/images/speakers/Birk.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/#@1s`
   },
   {
     name: `Katharina Borchert`,
     twitter: `@lyssaslounge`,
     pic: `/assets/images/speakers/Borchert.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-building-a-secure-and-equal-web/#@14m59s`
   },
   {
     name: `Simone Browne`,
     pic: `/assets/images/speakers/Browne.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/#@`
   },
   {
     name: `Eliot Higgins`,
     twitter: `@EliotHiggins`,
     pic: `/assets/images/speakers/Higgins.jpg`,
-    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/`
+    link: `https://air.mozilla.org/mozfest-speaker-series-inclusion-and-secrets-online/#@17m27s`
   }
 ];
 
