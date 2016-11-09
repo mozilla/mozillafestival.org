@@ -30,6 +30,7 @@ var Expect = React.createClass({
                 <p>Some people choose to enjoy MozFest by completely immersing themselves in a single space, while others like to roam around the venue. Both options are equally welcome, and the festival features pathways -- curated sets of related sessions that explore a subject area like open data, dealing with online harassment, or mobilizing communities -- to guide you between spaces.</p>
 
                 <p>The festival wraps on Sunday evening with a demo party, where we showcase and celebrate what we built together.</p>
+                <p><a href="https://mzl.la/mozfest-2016">Read our Festival Guide</a></p>
               </div>
               <div>
                 <iframe src="https://player.vimeo.com/video/154774646?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
