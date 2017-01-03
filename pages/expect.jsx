@@ -32,6 +32,7 @@ var Expect = React.createClass({
                 <p>The festival wraps on Sunday evening with a demo party, where we showcase and celebrate what we built together.</p>
                 <p><a href="https://mzl.la/mozfest-2016">Read our Festival Guide</a></p>
               </div>
+              <p><a href="https://mzl.la/mozfest-2016"><img src="/assets/images/festival-guide.jpg" alt="Festival guide" width="1612" height="1014"/></a></p>
               <div>
                 <iframe src="https://player.vimeo.com/video/154774646?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
