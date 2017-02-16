@@ -22,9 +22,8 @@ var Volunteer = React.createClass({
 
           <p>Volunteers are asked to share four hours of their time. As a thank you, we’ll cover the festival’s ticket cost. Volunteers also receive meals and a MozFest t-shirt. Unfortunately, we cannot cover travel to and from the event or provide accommodation.</p>
 
-          <p>The MozFest team meets bi-monthly in Mozilla’s London office, so come say hi and learn more.</p>
+          <p>Volunteer positions for MozFest 2017 will open in the summer.</p>
           
-          <p><strong>All volunteer roles for MozFest 2016 have been filled.</strong></p>
         </div>
         <Footer/>
       </div>
