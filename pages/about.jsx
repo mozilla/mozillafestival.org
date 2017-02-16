@@ -137,19 +137,19 @@ var About = React.createClass({
               workshops<br/>& sessions
             </CircleNumber>
           </div>
-          <p>The seventh-annual MozFest will be held in London, from Friday, Oct. 28 - Sunday, Oct. 29. MozFest is an annual celebration of the open Internet movement. It's where passionate technologists, educators, and makers come together to explore the future of the open Web.</p>
+          <p>The eighth annual MozFest will be held in London, from Friday, Oct. 27 to Sunday, Oct. 29. MozFest is an annual celebration of the open Internet movement. It's where passionate technologists, educators, and makers come together to explore the future of the open Web.</p>
         </div>
         <div className="timeline-container">
           <div className="starting-line"></div>
-            <TimeLineItem time="2016" label="the present" flip="true"
+            <TimeLineItem time="2016" label="inclusion" flip="true"
               className="timeline-item-2016"
               image="/assets/images/img-2016.svg"
               alt="MozFest Flag"
               imageHeight={230} imageWidth={220}
             >
-              This year, we'll highlight how the Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We'll examine how issues like Web literacy, online privacy and encryption are relevant across the globe, and address challenges faced by people who don't yet feel they are welcome on the Web.
+              In 2016, we highlighted how the Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We examined how issues like Web literacy, online privacy and encryption are relevant across the globe, and address challenges faced by people who don't yet feel they are welcome on the Web.
             </TimeLineItem>
-          <TimeLineItem time="2015" label="2015"
+          <TimeLineItem time="2015" label="training leaders"
             className="timeline-item-2015"
             image="/assets/images/about-1.png"
             alt="2010 about image"
