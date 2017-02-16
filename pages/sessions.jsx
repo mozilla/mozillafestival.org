@@ -272,7 +272,7 @@ var SessionsPage = React.createClass({
         </div>
         <div className="white-background">
           <div className="content centered wide no-vertical-margin">
-            <h1>Spaces</h1>
+            <h1>MozFest 2016 Spaces</h1>
           </div>
         </div>
         {this.spaces}
