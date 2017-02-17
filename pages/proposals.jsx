@@ -167,8 +167,8 @@ var Proposals = React.createClass({
       },
       body: JSON.stringify(fieldValues)
     }).then(function(response) {
-      self.refs.submitButton1.getDOMNode().classList.remove("waiting");
-      self.refs.submitButton2.getDOMNode().classList.remove("waiting");
+      self.refs.submitButton1.classList.remove("waiting");
+      self.refs.submitButton2.classList.remove("waiting");
       if (response.ok) {
         window.location.href = "/session-add-success#success";
       } else {
@@ -268,7 +268,7 @@ var Proposals = React.createClass({
       window.location.hash = "#anchor-form";
       return;
     }
-    this.refs.submitButton2.getDOMNode().classList.add("waiting");
+    this.refs.submitButton2.classList.add("waiting");
     this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, format-checkbox, session-title, desc-allow, desc-working, participants, outcome, languge, travel-radio, backup-space-radio".split(", "));
   },
   exhibitOnSubmit: function() {
@@ -278,7 +278,7 @@ var Proposals = React.createClass({
       window.location.hash = "#anchor-form";
       return;
     }
-    this.refs.submitButton1.getDOMNode().classList.add("waiting");
+    this.refs.submitButton1.classList.add("waiting");
     this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, exhibit-title, exhibit-method, exhibit-link, desc-your-work, learn-and-reflect, good-to-show, another-space-radio".split(", "));
   },
   onNext: function() {

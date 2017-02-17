@@ -109,7 +109,7 @@ var FringeEventForm = Formation.CreateForm({
     return !validDate ? "Make sure the format of your input is correct" : false;
   },
   handleAddEvent: function(response) {
-    this.refs.submitButton.getDOMNode().classList.remove("waiting");
+    this.refs.submitButton.classList.remove("waiting");
     if (response.ok) {
       window.location.href = "/fringe-event-add-success";
     } else {
@@ -117,7 +117,7 @@ var FringeEventForm = Formation.CreateForm({
     }
   },
   onSuccess: function (data) {
-    this.refs.submitButton.getDOMNode().classList.add("waiting");
+    this.refs.submitButton.classList.add("waiting");
     fetch('/add-fringe-event', {
       method: 'post',
       headers: {
