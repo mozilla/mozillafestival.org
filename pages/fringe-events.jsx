@@ -234,10 +234,10 @@ var FringePage = React.createClass({
               <h2>We are expanding the festival in 2017 to feature an entire week of Fringe Events. Contact us to learn more.</h2>
               <a className="button" href="mailto:festival@mozilla.org"><span>Contact Us</span></a>
             </div>
-            <div className="horizontal-rule"></div>
+            {/* <div className="horizontal-rule"></div> */}
           </div>
         </div>
-        <div className="events">
+        {/* <div className="events">
           <ul>{events}</ul>
         </div>
         <div className="white-background" id="fringe-form-section">
@@ -247,7 +247,7 @@ var FringePage = React.createClass({
             <p className="required-note">* Required</p>
             <FringeEventForm/>
           </div>
-        </div>
+        </div> */}
         <Footer/>
       </div>
     );
