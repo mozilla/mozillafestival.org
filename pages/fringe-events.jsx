@@ -4,7 +4,7 @@ var moment = require('moment');
 
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
@@ -221,10 +221,10 @@ var FringePage = React.createClass({
     return (
       <div className="fringe-events-page">
         <Header/>
-        <HeroUnit image="/assets/images/hero/fringe.jpg"
+        <Jumbotron image="/assets/images/hero/fringe.jpg"
                   image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>If MozFest wasn’t enough for you&hellip;</h1>

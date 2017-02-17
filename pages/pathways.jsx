@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var SpacePathwayProfile = require('../components/space-pathway-profile.jsx');
 
 var PathwaysInfo = [
@@ -324,10 +324,10 @@ var PathwaysPage = React.createClass({
     return (
       <div className="sessions-page">
         <Header/>
-        <HeroUnit image="/assets/images/pathways.jpg"
+        <Jumbotron image="/assets/images/pathways.jpg"
                   image2x="/assets/images/pathways.jpg">
           <h1>Pathways</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>Pathways</h1>

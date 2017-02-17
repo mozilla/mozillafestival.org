@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
@@ -87,9 +87,9 @@ var About = React.createClass({
       <div className="about-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/hero/about.jpg"
+        <Jumbotron image="/assets/images/hero/about.jpg"
                   image2x="/assets/images/hero/about.jpg">
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1 className="expect-header">A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>

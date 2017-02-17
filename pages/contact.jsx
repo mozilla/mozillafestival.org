@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
 var Contact = React.createClass({
@@ -11,10 +11,10 @@ var Contact = React.createClass({
       <div className="contact-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/hero/contact.jpg"
+        <Jumbotron image="/assets/images/hero/contact.jpg"
                   image2x="/assets/images/hero/contact.jpg">
           <h1>contact us</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="centered content wide">
           <h1>Hello there</h1>
           <p><a href="https://ti.to/Mozilla/mozfest-2016">Sign up here</a> to receive festival news and updates by email.</p>

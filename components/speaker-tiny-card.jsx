@@ -8,12 +8,12 @@ var SpeakerTinyCard = React.createClass({
     link: React.PropTypes.string
   },
   render: function() {
-    var headshot = <img className="img-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>;
+    var headshot = <img className="rounded-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>;
 
     return (
       <div className="speaker-tiny-card">
         {this.props.link ? <a href={this.props.link}>{headshot}</a>:{headshot}}
-        <p className="m-b-0 name">{this.props.name}</p>
+        <p className="mb-0 name">{this.props.name}</p>
         {
           this.props.twitter ?
           <p className="twitter"><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter}</a></p>

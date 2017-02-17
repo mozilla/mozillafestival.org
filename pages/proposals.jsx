@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var Icon = require('react-fa');
 require('whatwg-fetch');
 
@@ -604,13 +604,13 @@ var Proposals = React.createClass({
     return (
       <div className="proposals-page">
         <Header/>
-        <HeroUnit image="/assets/images/proposals.jpg"
+        <Jumbotron image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
           <h1>call for proposals</h1>
           <div className="deadline">
             <span>Deadline for submissions is August 1, 2016 at 21:00 UTC</span>
           </div>
-        </HeroUnit>
+        </Jumbotron>
         <div className="content">
           <div className="proposals-form">
             <div id="anchor-top"></div>

@@ -72,13 +72,13 @@ var Footer = React.createClass({
 
           <div className="link-container">
             <div className="nav-link-container">
-              <Link to="about">About</Link>
+              <Link to="/about">About</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="team">Festival Team</Link>
+              <Link to="/team">Festival Team</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="guidelines">Participation Guidelines</Link>
+              <Link to="/guidelines">Participation Guidelines</Link>
             </div>
             <div className="nav-link-container">
               <a href="https://beta.webmaker.org/#/legal" target="_blank">Terms</a>
