@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 var routes = (
-  <Router history={browserHistory}>
+  <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
     <Redirect from="/proposals" to="/" />
     <Route name="proposals" path="/late-proposals" component={require(`./pages/proposals.jsx`)} />
