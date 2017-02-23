@@ -32,9 +32,6 @@ var Header = React.createClass({
               <a href="https://medium.com/mozilla-festival/tagged/mozfest2016">Blog</a>
             </div>
           </div>
-          <div id="tabzilla">
-            <a href="https://www.mozilla.org/">Mozilla</a>
-          </div>
         </div>
       </div>
     );
