@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var Icon = require('react-fa');
 require('whatwg-fetch');
 
@@ -167,8 +167,8 @@ var Proposals = React.createClass({
       },
       body: JSON.stringify(fieldValues)
     }).then(function(response) {
-      self.refs.submitButton1.getDOMNode().classList.remove("waiting");
-      self.refs.submitButton2.getDOMNode().classList.remove("waiting");
+      self.refs.submitButton1.classList.remove("waiting");
+      self.refs.submitButton2.classList.remove("waiting");
       if (response.ok) {
         window.location.href = "/session-add-success#success";
       } else {
@@ -268,7 +268,7 @@ var Proposals = React.createClass({
       window.location.hash = "#anchor-form";
       return;
     }
-    this.refs.submitButton2.getDOMNode().classList.add("waiting");
+    this.refs.submitButton2.classList.add("waiting");
     this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, format-checkbox, session-title, desc-allow, desc-working, participants, outcome, languge, travel-radio, backup-space-radio".split(", "));
   },
   exhibitOnSubmit: function() {
@@ -278,7 +278,7 @@ var Proposals = React.createClass({
       window.location.hash = "#anchor-form";
       return;
     }
-    this.refs.submitButton1.getDOMNode().classList.add("waiting");
+    this.refs.submitButton1.classList.add("waiting");
     this.submit("email, first-name, surname, organization, other-facilitators, twitter-handle, space-radio, exhibit-title, exhibit-method, exhibit-link, desc-your-work, learn-and-reflect, good-to-show, another-space-radio".split(", "));
   },
   onNext: function() {
@@ -604,13 +604,13 @@ var Proposals = React.createClass({
     return (
       <div className="proposals-page">
         <Header/>
-        <HeroUnit image="/assets/images/proposals.jpg"
+        <Jumbotron image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
           <h1>call for proposals</h1>
           <div className="deadline">
             <span>Deadline for submissions is August 1, 2016 at 21:00 UTC</span>
           </div>
-        </HeroUnit>
+        </Jumbotron>
         <div className="content">
           <div className="proposals-form">
             <div id="anchor-top"></div>

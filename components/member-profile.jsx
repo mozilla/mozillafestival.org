@@ -17,12 +17,12 @@ var MemberProfile = React.createClass({
     let id = slug(this.props.name);
 
     return (
-      <div className="row m-y-3 member-profile" id={id}>
+      <div className="row my-5 member-profile" id={id}>
         <div className="col-sm-3 center-vertical">
-          <img className="img-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
+          <img className="rounded-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
         <div className="col-sm-9">
-          <h3 className="m-b-0 name"><a href={`#`+id}>{this.props.name}</a></h3>
+          <h3 className="mb-0 name"><a href={`#`+id}>{this.props.name}</a></h3>
           <div className="subhead">
             { this.props.title ? <h4 className="title">{this.props.title}</h4> : null }
             { this.props.twitter ? <h4 className="twitter"><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter}</a></h4> : null }

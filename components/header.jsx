@@ -10,20 +10,20 @@ var Header = React.createClass({
       <div className="header">
         <div className="header-content">
           <div className="nav-home">
-            <Link to="home">
+            <Link to="/">
               <ImageTag src1x={logoImage}
                 alt="mozfest logo"/>
             </Link>
           </div>
           <div className="nav-items">
             <div className="nav-link-container">
-              <Link to="expect">What to Expect</Link>
+              <Link to="/expect" activeClassName="active">What to Expect</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="sessions">Spaces & Sessions</Link>
+              <Link to="/spaces-and-sessions" activeClassName="active">Spaces & Sessions</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="projects">Projects</Link>
+              <Link to="/projects" activeClassName="active">Projects</Link>
             </div>
             <div className="nav-link-container">
               <a href="https://app.mozillafestival.org/">Schedule</a>

@@ -2,7 +2,7 @@ var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var MemberProfile = require('../components/member-profile.jsx');
 
 var productionMembers = [
@@ -413,13 +413,13 @@ var TeamPage = React.createClass({
     return (
       <div className="team-page">
         <Header/>
-        <HeroUnit image="/assets/images/hero/team.jpg"
+        <Jumbotron image="/assets/images/hero/team.jpg"
                   image2x="/assets/images/hero/team.jpg">
           <h1>Team</h1>
-        </HeroUnit>
-        <div className="content wide">
+        </Jumbotron>
+        <div className="content wide mt-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
-            <div className="p-y-3" name="Production" slug="production">
+            <div name="Production" slug="production">
               <h1>Our 2016 Production Team</h1>
               <div className="horizontal-rule"></div>
               {
@@ -428,7 +428,7 @@ var TeamPage = React.createClass({
                 })
               }
             </div>
-            <div className="p-y-3" name="Wranglers" slug="wranglers">
+            <div name="Wranglers" slug="wranglers">
               <h1>Our 2016 Space Wranglers</h1>
               <div className="horizontal-rule"></div>
               {
@@ -437,7 +437,7 @@ var TeamPage = React.createClass({
                 })
               }
             </div>
-            <div className="p-y-3" name="Partners" slug="partners">
+            <div name="Partners" slug="partners">
               <h1>Our 2016 Partners</h1>
               <div className="horizontal-rule"></div>
               <Partners />

@@ -4,7 +4,7 @@ var moment = require('moment');
 
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var ErrorMessage = Formation.ErrorMessage;
 var Validator = Formation.Validator;
 
@@ -109,7 +109,7 @@ var FringeEventForm = Formation.CreateForm({
     return !validDate ? "Make sure the format of your input is correct" : false;
   },
   handleAddEvent: function(response) {
-    this.refs.submitButton.getDOMNode().classList.remove("waiting");
+    this.refs.submitButton.classList.remove("waiting");
     if (response.ok) {
       window.location.href = "/fringe-event-add-success";
     } else {
@@ -117,7 +117,7 @@ var FringeEventForm = Formation.CreateForm({
     }
   },
   onSuccess: function (data) {
-    this.refs.submitButton.getDOMNode().classList.add("waiting");
+    this.refs.submitButton.classList.add("waiting");
     fetch('/add-fringe-event', {
       method: 'post',
       headers: {
@@ -221,10 +221,10 @@ var FringePage = React.createClass({
     return (
       <div className="fringe-events-page">
         <Header/>
-        <HeroUnit image="/assets/images/hero/fringe.jpg"
+        <Jumbotron image="/assets/images/hero/fringe.jpg"
                   image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>If MozFest wasn’t enough for you&hellip;</h1>
