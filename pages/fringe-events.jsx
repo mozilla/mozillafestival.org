@@ -229,16 +229,16 @@ var FringePage = React.createClass({
           <div className="content centered wide">
             <h1>If MozFest wasn’t enough for you&hellip;</h1>
             <p>MozFest is about working in the open and sharing ideas with the greater community. There are several innovative events taking place around the world with this same philosophy, and we would love to align them with MozFest.</p>
-            <p>If you are running an aligned event independent of the festival, please fill out our Fringe Event form. We will share your event details on our Fringe Events page.</p>
-            <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must align with the MozFest ethos: open, collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
+            <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must include collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
             <div className="cta">
-              <h2>Be part of the Fringe scene and list your event!</h2>
-              <a className="button" href="#fringe-form-section"><span>Submit Your Fringe Event</span></a>
+              <h2>We are expanding the festival in 2017 to feature an entire week of Fringe Events. Contact us to learn more.</h2>
+              <a className="btn btn-primary-outline" href="mailto:festival@mozilla.org"><span>Contact Us</span></a>
             </div>
-            <div className="horizontal-rule"></div>
+            {/* <div className="horizontal-rule"></div> */}
           </div>
         </div>
-        <div className="events">
+        {/*Commenting this out to save for future use, it's just outdated for now. But bringing it back in may require some google sheets integration work again (namely authentication)*/}
+        {/* <div className="events">
           <ul>{events}</ul>
         </div>
         <div className="white-background" id="fringe-form-section">
@@ -248,7 +248,7 @@ var FringePage = React.createClass({
             <p className="required-note">* Required</p>
             <FringeEventForm/>
           </div>
-        </div>
+        </div> */}
         <Footer/>
       </div>
     );
