@@ -79,7 +79,7 @@ var Footer = React.createClass({
               <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="/contact">
                 get in touch
               </FooterIcon>
-              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=I'm%20attending%20%23mozfest%2C%20the%20biggest%20event%20for%20%26%20by%20the%20open%20Internet%20movement.%20Join%20me%20%26%20%40Mozilla%20in%20London%3A%20mzl.la%2Fmozfest&source=webclient">
+              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=For+those+who+believe+the+Internet+is+worth+protecting%3A+%23MozFest+2017+will+take+place+October+27-29+in+London+www.mozfest.org&source=webclient">
                 tweet #mozfest
               </FooterIcon>
               <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="/volunteer">
