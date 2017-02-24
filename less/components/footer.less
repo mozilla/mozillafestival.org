@@ -1,11 +1,15 @@
-footer {
+.mofo-footer {
   background: @blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 100%;
-  padding: 50px 0;
+  padding-top: 0;
+}
+
+.mofo-footer .footer-links li a {
+  padding: 0;
+}
+
+.site-footer {
+  background: @blue;
+  padding: 50px 0 0;
   @media screen and (min-width: 768px) {
     .nav-link-container {
       display: inline-block;
@@ -33,12 +37,7 @@ footer {
     }
   }
   .footer-icons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
+    padding-bottom: 30px;
     @media screen and (min-width: 768px) {
       flex-wrap: nowrap;
     }
