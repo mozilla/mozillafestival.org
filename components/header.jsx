@@ -5,7 +5,7 @@ var ImageTag = require('./imagetag.jsx');
 
 var Header = React.createClass({
   render: function() {
-    var logoImage = this.props.logoImage || "/assets/images/logo-mozfest-pink.svg";
+    var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
     return (
       <div className="header">
         <div className="header-content">

@@ -89,7 +89,7 @@ var Home = React.createClass({
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header logoImage="/assets/images/logo-mozfest-white.svg"/>
+        <Header logoImage="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg"/>
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/home2-cropped.jpg"
                   image2x="/assets/images/hero/home/home2-cropped.jpg"
                   hideBackgroundLines={true}>
