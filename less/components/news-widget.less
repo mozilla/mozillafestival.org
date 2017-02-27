@@ -17,12 +17,23 @@
   .author {
     font-size: 1rem;
   }
-  .medium-logo::before {
+  [class*="-logo"]::before {
     content: '';
     background-size: cover;
-    background-image: url('assets/images/logo-medium-m-dark-100px.png');
     display: inline-block;
-    width: 1.3em;
     height: 1em;
+    width: 1em;
+    margin-right: .3em;
+  }
+  .medium-logo::before {
+    background-image: url('assets/images/logo-medium-m-dark-100px.png');
+    width: 1.3em;
+    margin-right: .1em;
+  }
+  .mozilla-logo::before {
+    background-image: url('assets/images/moz-fav-bw-rgb.svg');
+  }
+  .t3-logo::before {
+    background-image: url('assets/images/T3n-bw.svg')
   }
 }

@@ -127,12 +127,12 @@ var Home = React.createClass({
                 <div className="publish-date text-muted">Nov 21, 2016</div>
               </div>
               <div className="news-widget my-4">
-                <div className="source text-muted">Mozilla Festival</div>
+                <div className="source t3-logo text-muted">Mozilla Festival</div>
                 <a href="http://t3n.de/news/mozilla-festival-internet-gesundheit-761360/3/" className="title">Wie steht es um die Gesundheit des Internets? Auf Spurensuche beim Mozilla-Festival</a>
                 <div className="author">by Kim Rixecker</div>
               </div>
               <div className="news-widget">
-                <div className="source text-muted">Internet Health</div>
+                <div className="source text-muted mozilla-logo">Internet Health</div>
                 <a href="https://blog.mozilla.org/blog/2017/01/19/digital-citizens-lets-talk-about-internet-health/" className="title">Digital Citizens, Let’s Talk About Internet Health</a>
                 <div className="author">by Mark Surman</div>
                 <div className="publish-date text-muted">Jan 19, 2017</div>
