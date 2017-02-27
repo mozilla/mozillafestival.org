@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
@@ -12,10 +12,10 @@ var Expect = React.createClass({
       <div className="expect-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/hero/expect.jpg"
+        <Jumbotron image="/assets/images/hero/expect.jpg"
                   image2x="/assets/images/hero/expect.jpg">
           <h1>what to expect</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>What is MozFest like?</h1>

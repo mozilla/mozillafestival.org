@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('../components/imagetag.jsx');
@@ -90,7 +90,7 @@ var Home = React.createClass({
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/logo-mozfest-white.svg"/>
-        <HeroUnit className="home-hero-unit" image="/assets/images/hero/home/home2-cropped.jpg"
+        <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/home2-cropped.jpg"
                   image2x="/assets/images/hero/home/home2-cropped.jpg"
                   hideBackgroundLines={true}>
           <div className="content-wrapper">
@@ -98,10 +98,10 @@ var Home = React.createClass({
             <h2>The world's leading festival for the open internet movement.</h2>
             <div className="horizontal-rule"></div>
             <p>Watch videos from MozFest 2016</p>
-            <a href="https://air.mozilla.org/mozfest-2016/" className="button m-a-1">Opening Keynote</a>
-            <a href="https://air.mozilla.org/search/?ss=20" className="button m-a-1">Speaker Series</a>
+            <a href="https://air.mozilla.org/mozfest-2016/" className="btn p-3 m-3">Opening Keynote</a>
+            <a href="https://air.mozilla.org/search/?ss=20" className="btn p-3 m-3">Speaker Series</a>
           </div>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="centered content wide">
             <h1>Speaker Series Presenters</h1>
@@ -111,7 +111,7 @@ var Home = React.createClass({
         <div className="centered content wide">
           <h1>Join us at MozFest!</h1>
           <p>Sign up for MozFest updates and be first in line to get your tickets for 2017.</p>
-          <a href="https://ti.to/Mozilla/mozfest-2017" className="button"><span>Sign Up</span></a>
+          <a href="https://ti.to/Mozilla/mozfest-2017" className="btn btn-arrow"><span>Sign Up</span></a>
         </div>
         <Footer/>
       </div>

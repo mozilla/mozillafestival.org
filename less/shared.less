@@ -2,6 +2,8 @@ body {
   margin: 0;
   background: @light-grey;
   color: @grey;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 .centered {
   text-align: center;
@@ -9,11 +11,26 @@ body {
 #embed-error {
   display: none;
 }
-.button,
-a.button,
-a.button:hover {
+.btn,
+a.btn,
+a.btn:hover {
   background: @pink;
 }
+
+//This should just be overriding mofo-bootstrap, but since this is still .less that's not an easy thing to do.
+//Also this is overly specific but the previous style is too and I don't want to break that.
+.btn.btn-primary-outline {
+  color: #fa1bab;
+  background: transparent;
+  border: 1px solid currentColor;
+  &:hover {
+    background-color: #fa1bab;
+    border-color: #fa1bab;
+    color: white;
+    text-decoration: none;
+  }
+}
+
 .content {
   width: 100%;
   margin: 35px auto;
@@ -36,13 +53,14 @@ a.button:hover {
     height: 1px;
     margin: 45px 0 20px;
   }
-  .button {
+
+  .btn-arrow {
     display: inline-block;
     position: relative;
     color: #fff;
     overflow: hidden;
     backface-visibility: hidden;
-
+    vertical-align: baseline;
     border-width: 0;
 
     cursor: pointer;
@@ -54,7 +72,7 @@ a.button:hover {
       content: url(assets/images/right-arrow.svg);
       height: 100%;
       width: 100%;
-      line-height: 1.7;
+      line-height: 1.25;
       font-size: 180%;
       transition: all 0.3s ease 0s;
     }

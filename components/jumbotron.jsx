@@ -1,6 +1,6 @@
 var React = require('react');
 
-var HeroUnit = React.createClass({
+var Jumbotron = React.createClass({
   calculateDensity: function () {
     var
         ratio;
@@ -38,7 +38,7 @@ var HeroUnit = React.createClass({
     ];
     var backgroundImages = [ this.state.image ];
 
-    // Layers line patterns on top of hero banner image unless 
+    // Layers line patterns on top of hero banner image unless
     // this.props.hideBackgroundLines is set to true
     if ( !this.props.hideBackgroundLines ) {
       backgroundImages = backgroundLines.concat(backgroundImages);
@@ -49,8 +49,8 @@ var HeroUnit = React.createClass({
     }).join(`,`);
 
     return (
-      <div className="hero-unit-container">
-        <div className="hero-unit" style={{
+      <div className="jumbotron-container">
+        <div className="jumbotron m-0" style={{
           backgroundImage: backgroundImages
         }}>
           {this.props.children}
@@ -60,4 +60,4 @@ var HeroUnit = React.createClass({
   }
 });
 
-module.exports = HeroUnit;
+module.exports = Jumbotron;

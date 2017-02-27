@@ -29,7 +29,7 @@ var Location = React.createClass({
       var popupLocation = [51.5025, 0.00575];
       var viewLocation = [51.506, 0.00575];
       L.mapbox.accessToken = accessToken;
-      var map = L.mapbox.map(self.refs.map.getDOMNode(), 'mapbox.run-bike-hike');
+      var map = L.mapbox.map(self.refs.map, 'mapbox.run-bike-hike');
 
       var popup = L.popup({
         closeButton: false,

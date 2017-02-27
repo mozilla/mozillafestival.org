@@ -1,18 +1,18 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
 var Tickets = React.createClass({
   pageMetaDescription: "Tickets are available for youth and adults.",
   componentDidMount: function() {
-    var titoContainer = this.refs.titoContainer.getDOMNode();
+    var titoContainer = this.refs.titoContainer;
     var titoWidget = document.querySelector(".widgets .tito-tickets");
     titoContainer.appendChild(titoWidget);
   },
   componentWillUnmount: function() {
-    var titoWidget = this.refs.titoContainer.getDOMNode().querySelector(".tito-tickets");
+    var titoWidget = this.refs.titoContainer.querySelector(".tito-tickets");
     var widgetContainer = document.querySelector(".widgets");
     widgetContainer.appendChild(titoWidget);
   },
@@ -21,10 +21,10 @@ var Tickets = React.createClass({
       <div className="tickets-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/hero/tickets.jpg"
+        <Jumbotron image="/assets/images/hero/tickets.jpg"
                   image2x="/assets/images/hero/tickets.jpg">
           <h1>tickets</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="content centered wide">
           <div ref="titoContainer"></div>
           <div className="ticket-desc">

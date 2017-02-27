@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 
@@ -10,10 +10,10 @@ var Success = React.createClass({
     return (
       <div className="proposals-page">
         <Header/>
-        <HeroUnit image="/assets/images/proposals.jpg"
+        <Jumbotron image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
           <h1>call for proposals</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="centered content wide">
           <h1 id="success">Success!</h1>
           <p>Thank you for your session proposal</p>

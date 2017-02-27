@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var SpacePathwayProfile = require('../components/space-pathway-profile.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
@@ -9,8 +9,8 @@ var SpacesInfo = [
   {
     name: "Digital Arts and Culture",
     iconPath: "/assets/images/space-icons/digitalArts.svg",
-    iconWidth: "84",
-    description: 
+    iconWidth: 84,
+    description:
     (<div>
       <p>21st Century, the relationship between art and technology has grown deeper and more nuanced than ever before. We use technology to create art. We view and share art using new and impressive digital tools. And often, technology itself — from products to Web pages — is art
       </p>
@@ -26,7 +26,7 @@ var SpacesInfo = [
   {
     name: "Journalism",
     iconPath: "/assets/images/space-icons/journalism.svg",
-    iconWidth: "80",
+    iconWidth: 80,
     description:
     (<div>
       <p>Journalism doesn't just tell the story of the Internet — it's part of it. Software like Django, D3, and Backbone has emerged from newsrooms to power some of the most innovative work on the open Web. And reporting entertains and challenges millions of readers online every day, giving them the information they need to engage with their communities.</p>
@@ -48,7 +48,7 @@ var SpacesInfo = [
   {
     name: "Open Science",
     iconPath: "/assets/images/space-icons/openScience.svg",
-    iconWidth: "80",
+    iconWidth: 80,
     description:
     (<div>
       <p>Science and the Web both help us understand the world around us. In the Open Science Space, participants explore, remix, and hack at the intersection of science and the Internet, and learn how the Web is transforming research and discovery.</p>
@@ -73,7 +73,7 @@ var SpacesInfo = [
   {
     name: "Open Badges",
     iconPath: "/assets/images/space-icons/openBadges.svg",
-    iconWidth: "80",
+    iconWidth: 80,
     description:
     (<div>
       <p>Open Badges are transforming how we recognise and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
@@ -98,7 +98,7 @@ var SpacesInfo = [
   {
     name: "Fuel The Movement",
     iconPath: "/assets/images/space-icons/fuelMovement.svg",
-    iconWidth: "80",
+    iconWidth: 80,
     description:
     (<div>
       <p>Who do you think should create culture? How do we build a movement to encourage creativity and imagination? If these questions keep you up at night, the open internet movement — and Fuel The Movement Space — needs you!</p>
@@ -123,7 +123,7 @@ var SpacesInfo = [
   {
     name: "Localisation",
     iconPath: "/assets/images/space-icons/localisation.svg",
-    iconWidth: "76",
+    iconWidth: 76,
     description:
     (<div>
       <p>The Internet spans many cultures and languages — and so does the Localisation Space.</p>
@@ -145,7 +145,7 @@ var SpacesInfo = [
   {
     name: "Youth Zone",
     iconPath: "/assets/images/space-icons/youthZone.svg",
-    iconWidth: "86",
+    iconWidth: 86,
     description:
     (<div>
       <p>Too often, current-day education systems are prescriptive. Learning is based around certain objectives, like exams. And independent thinking isn’t encouraged.</p>
@@ -164,7 +164,7 @@ var SpacesInfo = [
   {
     name: "Demystify the Web",
     iconPath: "/assets/images/space-icons/demystify.svg",
-    iconWidth: "82",
+    iconWidth: 82,
     sessionsLink: "https://app.mozillafestival.org/#_space-demystify-the-web",
     description:
     (<div>
@@ -189,7 +189,7 @@ var SpacesInfo = [
   {
     name: "A Tale of Two Cities: Dilemmas in Connected Spaces",
     iconPath: "/assets/images/space-icons/dilemmas.svg",
-    iconWidth: "76",
+    iconWidth: 76,
     description:
     (<div>
       <p>As our lives and physical environments become even more connected online, we're faced with dilemmas. Should I allow my personal data to be used if it improves my daily life? Should my everyday objects be online?</p>
@@ -220,7 +220,7 @@ var SpacesInfo = [
   {
     name: "MozEx (Art Exhibit)",
     iconPath: "/assets/images/space-icons/mozEx.svg",
-    iconWidth: "86",
+    iconWidth: 86,
     description:
     (<div>
       <p>MozEx is an art exhibition with a 21st-century twist. Curated by the digital learning teams at both the Tate and the V&A, this space showcases dynamic digital artwork that spans many disciplines and media.</p>
@@ -256,10 +256,10 @@ var SessionsPage = React.createClass({
     return (
       <div className="sessions-page">
         <Header/>
-        <HeroUnit image="/assets/images/hero/sessions.jpg"
+        <Jumbotron image="/assets/images/hero/sessions.jpg"
                   image2x="/assets/images/hero/sessions.jpg">
           <h1>Spaces & Sessions</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>Spaces and Sessions</h1>

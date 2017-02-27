@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 var Link = require("react-router").Link;
 
@@ -12,10 +12,10 @@ var Guidelines = React.createClass({
       <div className="guidelines-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <HeroUnit image="/assets/images/hero/guidelines.jpg"
+        <Jumbotron image="/assets/images/hero/guidelines.jpg"
                   image2x="/assets/images/hero/guidelines.jpg">
           <h1>participation<br/>guidelines</h1>
-        </HeroUnit>
+        </Jumbotron>
         <div className="white-background">
           <div className="centered content wide">
             <h1>R-E-S-P-E-C-T</h1>

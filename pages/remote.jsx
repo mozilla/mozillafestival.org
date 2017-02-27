@@ -1,7 +1,7 @@
 var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
-var HeroUnit = require('../components/hero-unit.jsx');
+var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
@@ -20,10 +20,10 @@ var Expect = React.createClass({
 
         <Header/>
 
-        <HeroUnit image="/assets/images/remote.jpg"
+        <Jumbotron image="/assets/images/remote.jpg"
                   image2x="/assets/images/remote.jpg">
           <h1>Remote Participation</h1>
-        </HeroUnit>
+        </Jumbotron>
 
         <FullWidth white center>
           <h1 className="remote-header">The MozFest Remote Challenge</h1>
