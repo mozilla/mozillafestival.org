@@ -109,7 +109,7 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="centered content wide">
-          <h1>Missed MozFest this year?</h1>
+          <h1>Join us at MozFest!</h1>
           <p>Sign up for MozFest updates and be first in line to get your tickets for 2017.</p>
           <a href="https://ti.to/Mozilla/mozfest-2017" className="btn btn-arrow"><span>Sign Up</span></a>
         </div>
