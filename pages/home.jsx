@@ -114,15 +114,15 @@ var Home = React.createClass({
               <div className="news-widget mb-3">
                 <img src="assets/images/simone.png" alt="Simone Browne speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
                 <div className="source medium-logo text-muted">Mozilla Festival</div>
-                <a href="https://medium.com/mozilla-festival/surveillance-and-race-online" className="title">Surveillance and Race Online</a>
+                <a href="https://medium.com/mozilla-festival/surveillance-and-race-online-c03dda350fb9" className="title">Surveillance and Race Online</a>
                 <div className="publish-date text-muted">Feb 10, 2017</div>
-                <p className="description">Simone Browne is Associate Professor in the Department of African and African Diaspora Studies at the University of Texas at Austin. She spoke at MozFest 2016 about surveillance and race online.</p>
+                <p className="mt-2">Simone Browne is Associate Professor in the Department of African and African Diaspora Studies at the University of Texas at Austin. She spoke at MozFest 2016 about surveillance and race online.</p>
               </div>
             </div>
             <div className="col-12 col-md-6">
               <div className="news-widget">
                 <div className="source medium-logo text-muted">Mozilla Festival</div>
-                <a href="https://medium.com/mozilla-festival/journalism-at-mozfest-2016-great-stories-strong-communities-new-tools-dd99e9829167#.g3mk196yp" className="title">Journalism at MozFest 2016: Great Stories, Strong Communities, New Tools</a>
+                <a href="https://medium.com/mozilla-festival/journalism-at-mozfest-2016-great-stories-strong-communities-new-tools-dd99e9829167" className="title">Journalism at MozFest 2016: Great Stories, Strong Communities, New Tools</a>
                 <div className="author">by Lindsay Muscato</div>
                 <div className="publish-date text-muted">Nov 21, 2016</div>
               </div>
