@@ -7,7 +7,7 @@ var Header = React.createClass({
   render: function() {
     var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
     return (
-      <div className="header">
+      <div className="page-header">
         <div className="header-content">
           <div className="nav-home">
             <Link to="/">
