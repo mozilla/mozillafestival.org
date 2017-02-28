@@ -9,10 +9,8 @@
     "browser": true
   },
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-      "sourceType": "module"
-    }
+    "jsx": true,
+    "sourceType": "module"
   },
   "rules": {
     "react/jsx-uses-vars": [

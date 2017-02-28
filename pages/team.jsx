@@ -16,13 +16,13 @@ var productionMembers = [
     name: `Sarah Allen`,
     title: `Executive Festival Director`,
     pic: `/assets/images/team/production/SarahAllen.jpg`,
-    bio: <p>Sarah Allen is MozFest's producer. When she is not focused on MozFest, she helps with other Mozilla convenings in London and beyond. Sarah draws her experience from a diverse events background having worked with creative and inspiring companies, such as Movember Europe, Secret Cinema and CSM iLUKA. MozFest 2016 will be Sarah’s fourth festival.</p>
+    bio: <p>Sarah Allen is MozFest's producer. When she is not focused on MozFest, she helps with other Mozilla convenings in London and beyond. Sarah draws her experience from a diverse events background having worked with creative and inspiring companies, such as Movember Europe, Secret Cinema and CSM iLUKA. MozFest 2017 will be Sarah’s fifth festival.</p>
   },
   {
     name: `Erika Drushka`,
     title: `Program Designer`,
     pic: `/assets/images/team/production/ErikaDrushka.jpg`,
-    bio: <p>Erika Drushka is the Program Designer for MozFest 2016. With a background in documentary film making, advocacy and fundraising, Erika has spent the last three years on the MozFest communications team. This year, Erika has shifted her focus at Mozilla to building network strength in the open internet movement through convenings.</p>
+    bio: <p>Erika Drushka is the Program Designer for MozFest 2017. With a background in documentary film making, advocacy and fundraising, Erika's focus at Mozilla is building network strength in the open internet movement through convenings. This will be Erika's fifth MozFest.</p>
   },
   {
     name: `Allen “Gunner” Gunn`,
@@ -31,22 +31,10 @@ var productionMembers = [
     bio: <p><a href="https://aspirationtech.org/about/people/gunner">Gunner</a> is Executive Director of <a href="https://aspirationtech.org/">Aspiration</a> in San Francisco, USA, and works to help NGOs, activists, foundations and software developers make more effective use of technology for social change. He is an experienced facilitator with a passion for designing collaborative open learning processes.</p>
   },
   {
-    name: `Marc Walsh`,
-    title: `Production Coordinator`,
-    pic: `/assets/images/team/production/Marc.jpg`,
-    bio:<p>Marc Walsh is the Production Coordinator for MozFest 2016. He brings valuable experience in large-scale event and television production, having previously worked on Glastonbury Festival, the FA Cup and the National Television Awards. A volunteer for his first two years, this is Marc's fifth MozFest.</p>
-  },
-  {
     name: `Kevin Zawacki`,
     title: `Comms Manager & Speaker Series Designer`,
     pic: `/assets/images/team/production/Kevin.jpg`,
-    bio: <p>Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and this year is the mastermind behind the new Dialogues and Debates speakers series. 2016 will be Kevin's third MozFest.</p>
-  },
-  {
-    name: `Spike`,
-    title: `Volunteer Coordinator`,
-    pic: `/assets/images/team/production/Spike.jpg`,
-    bio: <p>Chris Foote (known as “Spike”) is the Volunteer Coordinator for MozFest 2016. A life-long professional Electronic Engineer with a passion for science and technology, he is a volunteer with global organisations such as CrisisCommons, CrisisMappers, OpenStreetMap (OSM), Humanitarian OSM Team (HOT), StandbyTaskForce (SBTF). He has co-organised a very successful London-based monthly Meetup group for people involved in or interested in ICT4D (Information and Communication Technologies for Development) as well as organising countless BarCamps and Hackathons. This is Spike's sixth MozFest, and his fourth as Volunteer Coordinator.</p>
+    bio: <p>Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and is the mastermind behind the Dialogues and Debates speakers series. 2017 will be Kevin's fourth MozFest.</p>
   }
 ];
 

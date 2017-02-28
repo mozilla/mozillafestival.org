@@ -17,7 +17,7 @@ var Contact = React.createClass({
         </Jumbotron>
         <div className="centered content wide">
           <h1>Hello there</h1>
-          <p><a href="https://ti.to/Mozilla/mozfest-2016">Sign up here</a> to receive festival news and updates by email.</p>
+          <p><a href="https://ti.to/Mozilla/mozfest-2017">Sign up here</a> to receive festival news and updates by email.</p>
           <div className="half-content">
             <h1>Make It Better</h1>
             <p><a href="mailto:festival@mozilla.org">Email us</a> with suggestions to improve the Mozilla Festival. It's a collaborative event, and your feedback matters.</p>

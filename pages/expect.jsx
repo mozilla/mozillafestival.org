@@ -30,12 +30,12 @@ var Expect = React.createClass({
                 <p>Some people choose to enjoy MozFest by completely immersing themselves in a single space, while others like to roam around the venue. Both options are equally welcome, and the festival features pathways -- curated sets of related sessions that explore a subject area like open data, dealing with online harassment, or mobilizing communities -- to guide you between spaces.</p>
 
                 <p>The festival wraps on Sunday evening with a demo party, where we showcase and celebrate what we built together.</p>
-                <p><a href="https://mzl.la/mozfest-2016">Read our Festival Guide</a></p>
+                <p><a href="https://mzl.la/mozfest-2016">Read the 2016 Festival Guide</a></p>
               </div>
               <div className="full-content"><p><a href="https://mzl.la/mozfest-2016" className="guide-image-wrapper"><img src="/assets/images/festival-guide.jpg" alt="Festival guide" width="1612" height="1014"/></a></p>
               </div>
               <div>
-                <iframe src="https://player.vimeo.com/video/154774646?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -46,13 +46,13 @@ var Expect = React.createClass({
             <table className="schedule-table">
               <tr className="table-header">
                 <th>
-                  fri oct 28
+                  fri oct 27
                 </th>
                 <th>
-                  sat oct 29
+                  sat oct 28
                 </th>
                 <th>
-                  sun oct 30
+                  sun oct 29
                 </th>
               </tr>
               <tr>
@@ -159,7 +159,7 @@ var Expect = React.createClass({
               <div className="half-content">
                 <p>We try to accommodate all interaction styles at MozFest. While many sessions are hands-on and fully interactive, we also have plenty of listening-based activities for those who participate best in that manner, as well as individual maker stations where attendees can focus -- individually or in a group -- on a single activity.</p>
 
-                <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has Participation Guidelines outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival, so we can all enjoy a safe, respectful and rewarding weekend.</p>
+                <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" target="_blank">Participation Guidelines</a> outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival, so we can all enjoy a safe, respectful and rewarding weekend.</p>
 
               </div>
             </div>

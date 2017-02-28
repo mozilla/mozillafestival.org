@@ -90,16 +90,15 @@ var Home = React.createClass({
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg"/>
-        <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/home2-cropped.jpg"
-                  image2x="/assets/images/hero/home/home2-cropped.jpg"
+        <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
+                  image2x="/assets/images/hero/home/banner-home_5.jpg"
                   hideBackgroundLines={true}>
           <div className="content-wrapper">
             <h1>MozFest</h1>
             <h2>The world's leading festival for the open internet movement.</h2>
             <div className="horizontal-rule"></div>
-            <p>Watch videos from MozFest 2016</p>
-            <a href="https://air.mozilla.org/mozfest-2016/" className="btn p-3 m-3">Opening Keynote</a>
-            <a href="https://air.mozilla.org/search/?ss=20" className="btn p-3 m-3">Speaker Series</a>
+            <p>October 27-29, 2017 Ravensbourne College, London</p>
+            <a href="https://vimeo.com/205552025/37560e3619" className="btn p-3 m-3">Watch Video</a>
           </div>
         </Jumbotron>
         <div className="white-background">
@@ -109,7 +108,7 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="centered content wide">
-          <h1>Missed MozFest this year?</h1>
+          <h1>Join us at MozFest!</h1>
           <p>Sign up for MozFest updates and be first in line to get your tickets for 2017.</p>
           <a href="https://ti.to/Mozilla/mozfest-2017" className="btn btn-arrow"><span>Sign Up</span></a>
         </div>
