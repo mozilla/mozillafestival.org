@@ -5,9 +5,9 @@ var ImageTag = require('./imagetag.jsx');
 
 var Header = React.createClass({
   render: function() {
-    var logoImage = this.props.logoImage || "/assets/images/logo-mozfest-pink.svg";
+    var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
     return (
-      <div className="header">
+      <div className="page-header">
         <div className="header-content">
           <div className="nav-home">
             <Link to="/">
@@ -16,6 +16,9 @@ var Header = React.createClass({
             </Link>
           </div>
           <div className="nav-items">
+            <div className="nav-link-container">
+              <a href="https://medium.com/mozilla-festival/tagged/mozfest2016">Blog</a>
+            </div>
             <div className="nav-link-container">
               <Link to="/expect" activeClassName="active">What to Expect</Link>
             </div>
@@ -27,9 +30,6 @@ var Header = React.createClass({
             </div>
             <div className="nav-link-container">
               <a href="https://app.mozillafestival.org/">Schedule</a>
-            </div>
-            <div className="nav-link-container">
-              <a href="https://medium.com/mozilla-festival/tagged/mozfest2016">Blog</a>
             </div>
           </div>
         </div>
