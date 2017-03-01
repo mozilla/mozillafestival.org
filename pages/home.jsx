@@ -84,7 +84,7 @@ var speakersInfo = [
 
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
-  render: function() {
+  render: function () {
     var self = this;
     return (
       <div className="home-page">
@@ -107,12 +107,47 @@ var Home = React.createClass({
             <SpeakersPromo speakersInfo={speakersInfo} />
           </div>
         </div>
-        <div className="centered content wide">
+        <div className="news content wide">
+          <h1 className="text-center">Latest News</h1>
+          <div className="row mt-5">
+            <div className="col-12 col-md-6 text-left">
+              <div className="news-widget mb-3">
+                <img src="assets/images/simone.png" alt="Simone Browne speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
+                <div className="source medium-logo text-muted">Mozilla Festival</div>
+                <a href="https://medium.com/mozilla-festival/surveillance-and-race-online-c03dda350fb9" className="title">Surveillance and Race Online</a>
+                <div className="publish-date text-muted">Feb 10, 2017</div>
+                <p className="mt-2">Simone Browne is Associate Professor in the Department of African and African Diaspora Studies at the University of Texas at Austin. She spoke at MozFest 2016 about surveillance and race online.</p>
+              </div>
+            </div>
+            <div className="col-12 col-md-6">
+              <div className="news-widget">
+                <div className="source medium-logo text-muted">Mozilla Festival</div>
+                <a href="https://medium.com/mozilla-festival/journalism-at-mozfest-2016-great-stories-strong-communities-new-tools-dd99e9829167" className="title">Journalism at MozFest 2016: Great Stories, Strong Communities, New Tools</a>
+                <div className="author">by Lindsay Muscato</div>
+                <div className="publish-date text-muted">Nov 21, 2016</div>
+              </div>
+              <div className="news-widget my-4">
+                <div className="source t3-logo text-muted">T3n</div>
+                <a href="http://t3n.de/news/mozilla-festival-internet-gesundheit-761360/3/" className="title">Wie steht es um die Gesundheit des Internets? Auf Spurensuche beim Mozilla-Festival</a>
+                <div className="author">by Kim Rixecker</div>
+              </div>
+              <div className="news-widget">
+                <div className="source text-muted mozilla-logo">Mozilla Blog</div>
+                <a href="https://blog.mozilla.org/blog/2017/01/19/digital-citizens-lets-talk-about-internet-health/" className="title">Digital Citizens, Let’s Talk About Internet Health</a>
+                <div className="author">by Mark Surman</div>
+                <div className="publish-date text-muted">Jan 19, 2017</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="white-background">
+          <div className="centered content wide">
           <h1>Join us at MozFest!</h1>
           <p>Sign up for MozFest updates and be first in line to get your tickets for 2017.</p>
           <a href="https://ti.to/Mozilla/mozfest-2017" className="btn btn-arrow"><span>Sign Up</span></a>
+          </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
