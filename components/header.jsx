@@ -29,7 +29,7 @@ var Header = React.createClass({
               <Link to="/projects" activeClassName="active">Projects</Link>
             </div>
             <div className="nav-link-container">
-              <a href="https://app.mozillafestival.org/">Schedule</a>
+              <a href="https://app.mozillafestival.org/" target="_blank">Schedule</a>
             </div>
           </div>
         </div>
