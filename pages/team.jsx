@@ -408,7 +408,7 @@ var TeamPage = React.createClass({
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" slug="production">
-              <h1>Our 2016 Production Team</h1>
+              <h1>Our 2017 Production Team</h1>
               <div className="horizontal-rule"></div>
               {
                 productionMembers.map( member => {

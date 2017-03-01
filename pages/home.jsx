@@ -95,7 +95,7 @@ var Home = React.createClass({
                   hideBackgroundLines={true}>
           <div className="content-wrapper">
             <h1>MozFest</h1>
-            <h2>The world's leading festival for the open internet movement.</h2>
+            <h2>The world's leading festival for the open Internet movement.</h2>
             <div className="horizontal-rule"></div>
             <p>October 27-29, 2017 Ravensbourne College, London</p>
             <a href="https://vimeo.com/205552025/37560e3619" className="btn p-3 m-3">Watch Video</a>
@@ -103,7 +103,7 @@ var Home = React.createClass({
         </Jumbotron>
         <div className="white-background">
           <div className="centered content wide">
-            <h1>Dialogues and Debates</h1>
+            <h1>Watch now: 2016 Dialogues and Debates</h1>
             <SpeakersPromo speakersInfo={speakersInfo} />
           </div>
         </div>
