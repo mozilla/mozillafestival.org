@@ -36,31 +36,32 @@
       display: inline-block;
       color: inherit;
       font-weight: 700;
+      height: 18px;
       font-size: 14px;
       text-transform: uppercase;
       text-decoration: none;
-      border-bottom: 2px solid transparent;
+      z-index: 1;
+      padding-left: .125rem;
+      padding-right: .125rem;
       &.active {
-        border-bottom: 2px solid white;
+        background-color: black;
       }
       &:after {
         position: absolute;
         content: '';
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 1px;
-        background: white;
+        background: #000000;
         opacity: 0;
-        transform: translateY(-10px);
         transition: height 0.3s ease 0s, opacity 0.3s ease 0s, transform 0.3s ease 0s;
       }
       &:hover {
         &:not(.active) {
           &:after {
-            height: 2px;
+            height: 18px;
             opacity: 1;
-            transform: translateY(0px);
+            z-index: -1;
           }
         }
       }
