@@ -36,13 +36,13 @@
       display: inline-block;
       color: inherit;
       font-weight: 700;
-      height: 18px;
+      height: 1.3em;
       font-size: 14px;
       text-transform: uppercase;
       text-decoration: none;
       z-index: 1;
-      padding-left: .125rem;
-      padding-right: .125rem;
+      padding-left: .25em;
+      padding-right: .25em;
       &.active {
         background-color: black;
       }
@@ -59,8 +59,9 @@
       &:hover {
         &:not(.active) {
           &:after {
-            height: 18px;
+            height: 1.3em;
             opacity: 1;
+            transform: translateY(0px);
             z-index: -1;
           }
         }
