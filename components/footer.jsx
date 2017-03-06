@@ -23,6 +23,10 @@ const FOOTER_LINKS = [
   {
     link: `https://www.mozilla.org/privacy/websites`,
     text: `Privacy`
+  },
+  {
+    link: `https://www.mozilla.org/privacy/websites/#cookies`,
+    text: `Cookies`
   }
 ];
 
