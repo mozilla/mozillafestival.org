@@ -2,11 +2,7 @@ var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
-
-var slug = require(`slug`);
-// https://www.npmjs.com/package/slug#options
-// we want to use the "rfc3986" mode
-slug.defaults.mode = `rfc3986`;
+var Utility = require('../lib/utility')
 
 var BioTooltip = React.createClass({
   render: function() {
@@ -29,7 +25,7 @@ var SpacePathwayProfile = React.createClass({
     }
   },
   render: function() {
-    var id = this.props.name.replace(/\s+/g, '-').toLowerCase();
+    var id = Utility.slugify(this.props.name);
 
     return (
       <div className="space-pathway-profile" id={id}>
@@ -51,7 +47,7 @@ var SpacePathwayProfile = React.createClass({
             this.props.contacts ? this.props.contacts.map(function(contact) {
               return (
                 <li key={contact.name}>
-                  <Link to={"/team/wranglers#"+slug(contact.name)}>{contact.name}</Link>
+                  <Link to={"/team/wranglers#"+Utility.slugify(contact.name)}>{contact.name}</Link>
                   { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )
