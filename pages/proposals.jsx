@@ -2,7 +2,6 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var Icon = require('react-fa');
 require('whatwg-fetch');
 
 var RealInput = React.createClass({
@@ -360,7 +359,7 @@ var Proposals = React.createClass({
         </InputCombo>
         <div id="space-radioError" className="error-message">A Space is required.</div>
 
-        <button className="button full-width" id="next-button" ref="nextButton" onClick={this.onNext}>Next <Icon spin name="spinner"/></button>
+        <button className="button full-width" id="next-button" ref="nextButton" onClick={this.onNext}>Next <span className="fa fa-spinner"></span></button>
       </div>
     );
   },
@@ -443,7 +442,7 @@ var Proposals = React.createClass({
         <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy" name="privacyPolicy" type="checkbox">
           I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
         </InputCombo>
-        <button className="button full-width" id="submit-button" ref="submitButton1" onClick={this.exhibitOnSubmit}>Submit <Icon spin name="spinner"/></button>
+        <button className="button full-width" id="submit-button" ref="submitButton1" onClick={this.exhibitOnSubmit}>Submit <span className="fa fa-spinner"></span></button>
         <div id="generic-error-1" className="error-message">Uh oh! There's an unknown error with your session proposal. Please try again later, or email <a href="mailto:festival@mozilla.org ">festival@mozilla.org</a> for help.</div>
       </div>
     );
@@ -550,7 +549,7 @@ var Proposals = React.createClass({
         <InputCombo errorMessage="You must agree to our privacy policy." className="checkbox-input" for="privacyPolicy-2" name="privacyPolicy-2" type="checkbox">
           I&lsquo;m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/">Privacy Policy</a>.
         </InputCombo>
-        <button className="button full-width" id="submit-button" ref="submitButton2" onClick={this.descOnSubmit}>Submit <Icon spin name="spinner"/></button>
+        <button className="button full-width" id="submit-button" ref="submitButton2" onClick={this.descOnSubmit}>Submit <span className="fa fa-spinner"></span></button>
         <div id="generic-error-2" className="error-message">Uh oh! There's an unknown error with your session proposal. Please try again later, or email <a href="mailto:festival@mozilla.org ">festival@mozilla.org</a> for help.</div>
       </div>
     );

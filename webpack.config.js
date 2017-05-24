@@ -1,13 +1,25 @@
 var path = require(`path`);
-var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
 var webpack = require(`webpack`);
+
+var plugins = [];
+
+if (process.env.NODE_ENV === `production`) {
+  console.log(`bundling for production.`);
+  plugins = [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(`production`)
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin()
+  ];
+}
 
 module.exports = {
   entry: `./client.jsx`,
 
   output: {
     filename: `[name].js`,
-    chunkFilename: `[id].chunk.js`,
     path: path.join(`public`, `build`),
     publicPath: `/build/`
   },
@@ -22,24 +34,8 @@ module.exports = {
           presets: [`es2015`, `react`]
         }
       },
-      { test: /\.json$/, loaders: [`json-loader`] },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract(`style-loader`, `css-loader`)
-      },
-      {
-        test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        loader: `url-loader?limit=8192`
-      }
+      { test: /\.json$/, loaders: [`json-loader`] }
     ]
   },
-  plugins: [
-    new ExtractTextPlugin(`bundle.css`),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(`production`)
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin()
-  ]
+  plugins: plugins
 };
