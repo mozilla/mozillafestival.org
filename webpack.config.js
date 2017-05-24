@@ -30,12 +30,6 @@ module.exports = {
         use: [
           `babel-loader`
         ]
-      },
-      {
-        test: /\.json$/,
-        use: [
-          `json-loader`
-        ]
       }
     ]
   },
