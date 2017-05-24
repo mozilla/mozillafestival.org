@@ -1,4 +1,3 @@
-var path = require(`path`);
 var webpack = require(`webpack`);
 
 var plugins = [];
@@ -16,25 +15,28 @@ if (process.env.NODE_ENV === `production`) {
 }
 
 module.exports = {
+  context: `${__dirname}`,
   entry: `./client.jsx`,
-
   output: {
-    filename: `[name].js`,
-    path: path.join(`public`, `build`),
+    path: `${__dirname}/public/build`,
+    filename: `bundle.js`,
     publicPath: `/build/`
   },
-
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js(x?)$/,
+        test: /.jsx?$/,
         exclude: /node_modules/,
-        loader: `babel`,
-        query: {
-          presets: [`es2015`, `react`]
-        }
+        use: [
+          `babel-loader`
+        ]
       },
-      { test: /\.json$/, loaders: [`json-loader`] }
+      {
+        test: /\.json$/,
+        use: [
+          `json-loader`
+        ]
+      }
     ]
   },
   plugins: plugins
