@@ -18,7 +18,7 @@
     "bootstrap:prefix": "postcss --use autoprefixer -o public/vendor/css/mofo-bootstrap.css public/vendor/css/mofo-bootstrap.css",
     "watch:js": "chokidar 'client.jsx' 'lib/**/*.js' 'lib/**/*.jsx' 'components/**/*.jsx' 'pages/**/*.jsx' 'pages/**/*.js' 'webpack.config.js' -c 'npm run build:js'",
     "watch:css": "chokidar 'components/**/*.less' 'pages/**/*.less' 'less/**/*.less' -c 'npm run build:css'",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && npm run server",
     "server": "node app.js"
   },
   "dependencies": {
