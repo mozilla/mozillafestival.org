@@ -1,45 +1,37 @@
-var path = require(`path`);
-var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
 var webpack = require(`webpack`);
 
-module.exports = {
-  entry: `./client.jsx`,
+var plugins = [];
 
-  output: {
-    filename: `[name].js`,
-    chunkFilename: `[id].chunk.js`,
-    path: path.join(`public`, `build`),
-    publicPath: `/build/`
-  },
-
-  module: {
-    loaders: [
-      {
-        test: /\.js(x?)$/,
-        exclude: /node_modules/,
-        loader: `babel`,
-        query: {
-          presets: [`es2015`, `react`]
-        }
-      },
-      { test: /\.json$/, loaders: [`json-loader`] },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract(`style-loader`, `css-loader`)
-      },
-      {
-        test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        loader: `url-loader?limit=8192`
-      }
-    ]
-  },
-  plugins: [
-    new ExtractTextPlugin(`bundle.css`),
+if (process.env.NODE_ENV === `production`) {
+  console.log(`bundling for production.`);
+  plugins = [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(`production`)
+        NODE_ENV: JSON.stringify(`production`)
       }
     }),
     new webpack.optimize.UglifyJsPlugin()
-  ]
+  ];
+}
+
+module.exports = {
+  context: `${__dirname}`,
+  entry: `./client.jsx`,
+  output: {
+    path: `${__dirname}/public/build`,
+    filename: `bundle.js`,
+    publicPath: `/build/`
+  },
+  module: {
+    rules: [
+      {
+        test: /.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          `babel-loader`
+        ]
+      }
+    ]
+  },
+  plugins: plugins
 };

@@ -1,9 +1,5 @@
 var React = require('react');
-var slug = require(`slug`);
-
-// https://www.npmjs.com/package/slug#options
-// we want to use the "rfc3986" mode
-slug.defaults.mode = `rfc3986`;
+var slugify = require('slugify');
 
 var MemberProfile = React.createClass({
   propTypes: {
@@ -14,7 +10,7 @@ var MemberProfile = React.createClass({
     bio: React.PropTypes.object
   },
   render: function() {
-    let id = slug(this.props.name);
+    let id = slugify(this.props.name);
 
     return (
       <div className="row my-5 member-profile" id={id}>
