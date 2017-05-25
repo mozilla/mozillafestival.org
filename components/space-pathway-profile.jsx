@@ -1,8 +1,8 @@
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
+var slugify = require('slugify');
 var ImageTag = require('./imagetag.jsx');
-var Utility = require('../lib/utility')
 
 var BioTooltip = React.createClass({
   render: function() {
@@ -25,7 +25,7 @@ var SpacePathwayProfile = React.createClass({
     }
   },
   render: function() {
-    var id = Utility.slugify(this.props.name);
+    var id = slugify(this.props.name);
 
     return (
       <div className="space-pathway-profile" id={id}>
@@ -47,7 +47,7 @@ var SpacePathwayProfile = React.createClass({
             this.props.contacts ? this.props.contacts.map(function(contact) {
               return (
                 <li key={contact.name}>
-                  <Link to={"/team/wranglers#"+Utility.slugify(contact.name)}>{contact.name}</Link>
+                  <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
                   { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )

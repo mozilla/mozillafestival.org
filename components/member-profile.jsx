@@ -1,5 +1,5 @@
 var React = require('react');
-var utility = require(`../lib/utility`);
+var slugify = require('slugify');
 
 var MemberProfile = React.createClass({
   propTypes: {
@@ -10,7 +10,7 @@ var MemberProfile = React.createClass({
     bio: React.PropTypes.object
   },
   render: function() {
-    let id = utility.slugify(this.props.name);
+    let id = slugify(this.props.name);
 
     return (
       <div className="row my-5 member-profile" id={id}>
