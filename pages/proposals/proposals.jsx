@@ -57,7 +57,7 @@ var Proposal = React.createClass({
 
   },
   submitProposal(proposal) {  
-    if (proposal.bilingual && proposal.bilingual == `Other` && proposal.bilingualother) {
+    if (proposal.bilingual && proposal.bilingual === `Other` && proposal.bilingualother) {
       proposal.bilingual = `Other: ${proposal.bilingualother}`;
       delete proposal.bilingualother;
     }

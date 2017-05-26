@@ -187,9 +187,13 @@ let partFourFields = {
   },
   'needs': {
     type: `textarea`,
-    label: `Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector, and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible`,
+    label: `Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible`,
     placeholder: ``,
-    fieldClassname: `form-control`
+    labelClassname: `word-length-restriction max-120-words`,
+    fieldClassname: `form-control`,
+    validator: [
+      validator.maxWordsValidator(120)
+    ]
   }
 };
 
