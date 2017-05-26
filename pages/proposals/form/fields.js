@@ -49,13 +49,13 @@ let partOneFields = {
   'twitterhandle': {
     type: `text`,
     label: `Twitter handle`,
-    placeholder: `Twitter handle`,
+    placeholder: `@twitterhandle`,
     fieldClassname: `form-control`
   },
   'githubhandle': {
     type: `text`,
     label: `GitHub handle`,
-    placeholder: `Github handle`,
+    placeholder: `@githubhandle`,
     fieldClassname: `form-control`
   },
   'otherfacilitators': {

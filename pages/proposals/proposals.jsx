@@ -133,6 +133,7 @@ var Proposal = React.createClass({
         <p>Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend your session.</p>
         <p>Anyone may submit a proposal for MozFest 2017. Once you have submitted your session, it will enter an open curation process on <a href="https://github.com/MozillaFoundation/mozfest-program-2017" target="_blank">GitHub</a>.</p>
         <p>This year we are accepting proposals in English, [Spanish, French and German]<b style={{color: 'red'}}>(hyperlink to be added?)</b>.</p>
+        <p>If you would like to submit a session and have difficulty using this text-based form, please <a href="mailto:festival@mozilla.org">email us</a> to discuss other options.</p>
         <p>If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
         <p>Submission deadline: August 1, 2017</p>
       </div>
