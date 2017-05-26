@@ -5,10 +5,6 @@ import { MofoFooter } from 'mofo-ui';
 
 const FOOTER_LINKS = [
   {
-    link: `/about`,
-    text: `About`
-  },
-  {
     link: `/team`,
     text: `Festival Team`
   },

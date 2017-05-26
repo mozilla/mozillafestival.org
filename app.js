@@ -6,9 +6,8 @@ var express = require('express'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
     GoogleSpreadsheet = require("google-spreadsheet"),
+    moment = require('moment'),
     uuid = require('uuid');
-
-var proposalHandler = require('./lib/proposal-handler');
 
 Habitat.load();
 
@@ -41,49 +40,35 @@ app.configure(function() {
   });
 });
 
-app.post('/add-session', limiter, function (req, res) {
-  var formUrl = env.get("PROPOSAL_FORM_ACTION_URL");
-  var proposalUUID = uuid.v4();
-  var userInputs = {
-    firstName: req.body.firstName,
-    surname: req.body.surname,
-    email: req.body.email,
-    affiliationOrganization: req.body.affiliationOrganization,
-    otherFacilitators: req.body.otherFacilitators,
-    twitter: req.body.twitter,
-    space: req.body.space,
+app.post(`/add-proposal`, limiter, function(req, res) {
+  // make sure keys are all lowercase and contain no symbols or spaces
+  // reference: https://www.npmjs.com/package/google-spreadsheet#row-based-api-limitations
+  var proposal = Object.assign({}, req.body, {
+    uuid: uuid.v4(),
+    githubissuenumber: ``,
+    timestamp: moment.utc().toString() // time in GMT (e.g., Fri May 26 2017 19:57:11 GMT+0000)
+  });
 
-    exhibitTitle: req.body.exhibitTitle,
-    exhibitMethod: req.body.exhibitMethod,
-    exhibitLink: req.body.exhibitLink,
-    exhibitDescription: req.body.exhibitDescription,
-    exhibitLearnReflect: req.body.exhibitLearnReflect,
-    exhibitWhyGoodMozfest: req.body.exhibitWhyGoodMozfest,
-    exhibitAnotherSpace: req.body.exhibitAnotherSpace,
+  var sheet = new GoogleSpreadsheet(env.get(`PROPOSAL_SPREADSHEET_ID_2017`));
+  var privateKey = env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`);
 
-    sessionTitle: req.body.sessionTitle,
-    descWorkBest: req.body.descWorkBest,
-    descMakeLearn: req.body.descMakeLearn,
-    descHowWorking: req.body.descHowWorking,
-    descParticipants: req.body.descParticipants,
-    descOutcome: req.body.descOutcome,
-    descAnotherLang: req.body.descAnotherLang,
-    descTravel: req.body.descTravel,
-    descOtherSpace: req.body.descOtherSpace,
-  };
-
-  proposalHandler.submitProposalToGoogleSheet(formUrl, userInputs, proposalUUID, function(err) {
+  sheet.useServiceAccountAuth({
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    "private_key": privateKey
+  }, (err) => {
     if (err) {
-      res.status(500).send({error: err});
-    } else {
-      proposalHandler.postToGithub(env, userInputs, proposalUUID, function(githubErr) {
-        if (githubErr) {
-          res.status(500).send({error: githubErr});
-        } else {
-          res.send("OK");
-        }
-      });
+      console.log(`[Error] ${err}`);
+      res.status(500).json(err);
     }
+
+    sheet.addRow(1, proposal, (addRowErr) => {
+      if (addRowErr) {
+        console.log(`[addRowErr]`, addRowErr);
+        res.status(500).json(addRowErr);
+      }
+
+      res.send(`Success!`);
+    });
   });
 });
 
@@ -146,6 +131,10 @@ app.get('*', function (request, response) {
   }
 });
 
-app.listen(env.get('PORT'), function () {
-  console.log('Server listening ( http://localhost:%d )', env.get('PORT'));
+app.listen(env.get(`PORT`), () => {
+  console.log(`\n*******************************************`);
+  console.log(`*                                         *`);
+  console.log(`*  MozFest listening on port ${env.get(`PORT`)}         *`);
+  console.log(`*                                         *`);
+  console.log(`*******************************************\n`);
 });

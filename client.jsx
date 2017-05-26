@@ -6,8 +6,7 @@ import ReactDOM from 'react-dom';
 var routes = (
   <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
-    <Redirect from="/proposals" to="/" />
-    <Route name="proposals" path="/late-proposals" component={require(`./pages/proposals.jsx`)} />
+    <Route name="proposals" path="/proposals" component={require(`./pages/proposals/proposals.jsx`)} />
     <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
     <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
     <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
@@ -19,11 +18,10 @@ var routes = (
       <Route path=":tab" component={require(`./pages/team.jsx`)} />
     </Route>
     <Route name="submission-process" path="/submission-process" component={require(`./pages/submission-process.jsx`)} />
-    <Route name="sessions" path="/spaces-and-sessions" component={require(`./pages/sessions.jsx`)} />
+    <Route name="sessions" path="/spaces" component={require(`./pages/sessions.jsx`)} />
     <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events.jsx`)} />
     <Route name="fringe-event-add-success" path="/fringe-event-add-success" component={require(`./pages/fringe-event-add-success.jsx`)} />
     <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
-    <Route name="session-add-success" path="/session-add-success" component={require(`./pages/session-add-success.jsx`)} />
   </Router>
 );
 

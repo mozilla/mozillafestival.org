@@ -17,19 +17,19 @@ var Header = React.createClass({
           </div>
           <div className="nav-items">
             <div className="nav-link-container">
-              <a href="https://medium.com/mozilla-festival/tagged/mozfest2016">Blog</a>
+              <Link to="/proposals" activeClassName="active">Propose</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="/expect" activeClassName="active">What to Expect</Link>
+              <Link to="/about" activeClassName="active">About</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="/spaces-and-sessions" activeClassName="active">Spaces & Sessions</Link>
+              <Link to="/spaces" activeClassName="active">Spaces</Link>
+            </div>
+            <div className="nav-link-container">
+              <Link to="/expect" activeClassName="active">What to expect</Link>
             </div>
             <div className="nav-link-container">
               <Link to="/projects" activeClassName="active">Projects</Link>
-            </div>
-            <div className="nav-link-container">
-              <a href="https://app.mozillafestival.org/" target="_blank">Schedule</a>
             </div>
           </div>
         </div>
