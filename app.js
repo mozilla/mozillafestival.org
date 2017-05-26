@@ -50,6 +50,8 @@ app.post(`/add-proposal`, limiter, function(req, res) {
   });
 
   var sheet = new GoogleSpreadsheet(env.get(`PROPOSAL_SPREADSHEET_ID_2017`));
+  // line breaks are essential for the private key. 
+  // if reading this private key from env var this extra replace step is a MUST
   var privateKey = env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`);
 
   sheet.useServiceAccountAuth({

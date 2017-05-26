@@ -149,7 +149,7 @@ let partThreeFields = {
   },
   'bilingual': {
     type: `choiceGroup`,
-    label: `What space do feel your session will best contribute to?`,
+    label: `Would you like to deliver this session bilingually in one of the following languages?`,
     options: [
       `Spanish`,
       `German`,
