@@ -42,6 +42,7 @@
     "mofo-bootstrap": "^3.2.0",
     "mofo-ui": "^1.6.1",
     "moment": "^2.10.3",
+    "moment-timezone": "^0.5.13",
     "npm-run-all": "^4.0.2",
     "postcss-cli-simple": "^1.0.4",
     "react": "15.4.2",

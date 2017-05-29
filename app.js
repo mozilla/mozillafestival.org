@@ -6,7 +6,7 @@ var express = require('express'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
     GoogleSpreadsheet = require("google-spreadsheet"),
-    moment = require('moment'),
+    moment = require('moment-timezone'),
     uuid = require('uuid');
 
 Habitat.load();
@@ -46,7 +46,7 @@ app.post(`/add-proposal`, limiter, function(req, res) {
   var proposal = Object.assign({}, req.body, {
     uuid: uuid.v4(),
     githubissuenumber: ``,
-    timestamp: moment.utc().toString() // time in GMT (e.g., Fri May 26 2017 19:57:11 GMT+0000)
+    timestamp: moment().tz(`Europe/London`).format(`MMM DD, YYYY, h:mm:ssa zz`) // (e.g., May 29, 2017, 8:51:14pm BST)
   });
 
   var sheet = new GoogleSpreadsheet(env.get(`PROPOSAL_SPREADSHEET_ID_2017`));
