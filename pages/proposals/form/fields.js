@@ -95,9 +95,11 @@ let partTwoFields = {
       `Open Innovation`,
       `Digital Inclusion`,
       `Privacy and Security`,
-      `Youth Zone`
+      `Youth Zone`,
+      `None`
     ],
-    fieldClassname: `form-control choice-group`
+    colCount: 1,
+    fieldClassname: `form-control choice-group`,
   }
 };
 

@@ -56,11 +56,22 @@ var Proposal = React.createClass({
     });
 
   },
-  submitProposal(proposal) {  
-    if (proposal.bilingual && proposal.bilingual === `Other` && proposal.bilingualother) {
-      proposal.bilingual = `Other: ${proposal.bilingualother}`;
-      delete proposal.bilingualother;
+  formatProposal(proposal) {
+    let formatted = Object.assign({}, proposal);
+
+    if (formatted.bilingual && formatted.bilingual === `Other` && formatted.bilingualother) {
+      formatted.bilingual = `Other: ${formatted.bilingualother}`;
+      delete formatted.bilingualother;
     }
+
+    if (formatted.alternatespace && formatted.alternatespace === `None`) {
+      delete formatted.alternatespace;
+    }
+
+    return formatted;
+  },
+  submitProposal(proposal) {
+    let formattedProposal = this.formatProposal(proposal);
 
     let request = new XMLHttpRequest();
     request.open(`POST`, `/add-proposal`, true);
@@ -79,7 +90,7 @@ var Proposal = React.createClass({
       console.log(err);
     };
 
-    request.send(JSON.stringify(proposal));
+    request.send(JSON.stringify(formattedProposal));
   },
   renderForm() {
     return (
