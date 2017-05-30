@@ -42,7 +42,6 @@ app.configure(function() {
 app.post(`/add-proposal`, limiter, function(req, res) {
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
-  // 'var' because 'SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode' and we probably don't need to have strict mode here
   var GOOGLE_API_CRED = {
     email: env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
     key: env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
