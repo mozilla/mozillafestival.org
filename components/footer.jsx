@@ -35,6 +35,9 @@ const ORGS = [
   }
 ];
 
+const SAMPLE_TWEET = encodeURIComponent(`I just proposed a session for #MozFest 2017. Check out mine, and others, at`);
+const PROPOSALS_REPO_URL = `https://github.com/MozillaFoundation/mozfest-program-2017/issues`;
+
 var Linker = React.createClass({
   render: function() {
     // Swap out Link or a simple anchor depending on the props we have.
@@ -79,7 +82,7 @@ var Footer = React.createClass({
               <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="/contact">
                 get in touch
               </FooterIcon>
-              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href="https://twitter.com/intent/tweet?text=For+those+who+believe+the+Internet+is+worth+protecting%3A+%23MozFest+2017+will+take+place+October+27-29+in+London+www.mozfest.org&source=webclient">
+              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href={`https://twitter.com/intent/tweet?text=${SAMPLE_TWEET}&url=${PROPOSALS_REPO_URL}`}>
                 tweet #mozfest
               </FooterIcon>
               <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="/volunteer">
