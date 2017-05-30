@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
@@ -7,236 +8,105 @@ var ImageTag = require('../components/imagetag.jsx');
 
 var SpacesInfo = [
   {
-    name: "Digital Arts and Culture",
-    iconPath: "/assets/images/space-icons/digitalArts.svg",
-    iconWidth: 84,
+    name: "Privacy and Security",
     description:
     (<div>
-      <p>21st Century, the relationship between art and technology has grown deeper and more nuanced than ever before. We use technology to create art. We view and share art using new and impressive digital tools. And often, technology itself — from products to Web pages — is art
-      </p>
-      <p>Join the Digital Arts and Culture Space for workshops, demos, and discussions that unpack the relationship between art, technology, and the Web. We’ll explore how vlogging is becoming an art form of its own; discover how digital tech is making the arts accessible to people with all abilities; ask when code is at its most creative; and understand the role of digital arts in society. Whether you’re a professional artist or a DIY maker, everyone will have an opportunity to create and be inspired.</p>
+      <p>Do you feel safe online?</p>
+      <p>Sometimes, online security can feel unattainable. State-sponsored surveillance, theft of personal information, trolls arrogantly abusing others—this has become normal. And every day, many of us trade personal information for convenience.</p>
+      <p>It’s time to flip the script. Not everyone knows how to install a VPN or use encryption—but everyone should feel safe online. Can we imagine a future where manufacturers respect our safety by default when they build products? Where governments take steps to protect us? Can we find fun, new ways to engage our friends and neighbours around these issues?</p>
+      <p>At Mozfest, we’ll build, teach and play with these new approaches to Privacy & Security. Let’s put safety first.</p>
     </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-digital-arts-and-culture",
     contacts: [
-      {
-        name: "Julie Neville"
-      }
+      { name: "Stéphanie Ouillon" },
+      { name: "Brett Gaylor" },
+      { name: "Mavis Ou" },
+      { name: "David Ross" },
+      { name: "Jonathan Kingston" }
     ]
   },
   {
-    name: "Journalism",
-    iconPath: "/assets/images/space-icons/journalism.svg",
-    iconWidth: 80,
+    name: "Open Innovation",
     description:
     (<div>
-      <p>Journalism doesn't just tell the story of the Internet — it's part of it. Software like Django, D3, and Backbone has emerged from newsrooms to power some of the most innovative work on the open Web. And reporting entertains and challenges millions of readers online every day, giving them the information they need to engage with their communities.</p>
-      <p>In the Journalism Space, we explore how journalism can change our lives, both in person and online. Participants will learn how developers, designers, and data analysts collaborate to cover the most important stories of the day, and how they can contribute to the kind of work that protects the open Web and drives it forward.</p>
+      <p>An open web provides the opportunity to publish and invent online without permission. To keep it this way, the technologies used to run the web should remain transparent and understandable.</p>
+      <p>Open Innovation is a space for challenging and learning about open source, open projects and growth on the web. We’ll investigate the challenges to open production (misinformation, draconian copyright) and the values of open creativity (working open techniques, tools and tactical transparency). The space is programmed as a highly-interactive platform for producing and protecting the principles of the open web. Join us in evolving our epically-open online world.</p>
     </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-journalism",
     contacts: [
-      {
-        name: "Erika Owens"
-      },
-      {
-        name: "Ryan Pitts"
-      },
-      {
-        name: "Eva Constantaras"
-      }
+      { name: "Aurelia Moser" },
+      { name: "Christos Bacharakis" },
+      { name: "Raegan MacDonald" },
+      { name: "Phillip Smith" }
     ]
   },
   {
-    name: "Open Science",
-    iconPath: "/assets/images/space-icons/openScience.svg",
-    iconWidth: 80,
+    name: "Decentralization",
     description:
     (<div>
-      <p>Science and the Web both help us understand the world around us. In the Open Science Space, participants explore, remix, and hack at the intersection of science and the Internet, and learn how the Web is transforming research and discovery.</p>
-      <p>We cover topics like open data and research, citizen science, and science communication — all the while learning news skills and tools. We also collaborate on each other’s projects, and our Open Research Accelerator provides one-on-one mentorship for making your project open source. The Open Science Space is open to everyone: We invite hobbyists, researchers, librarians, data scientists, developers, and all others to join us.</p>
+      <p>The year is 2027: Who owns the Internet?</p>
+      <p>In the dystopian version of 2027, the Internet is owned by a powerful few. Big tech corporations, select media companies and closed governments control the content on the Internet, the data that flows across the Internet and how people connect to the Internet. This dystopian future is closer than you may think.</p>
+      <p>On the flip side, what is the utopian version of the Internet in 2027? What future do we want to build? Where do emerging technologies like AI, mesh networking and Blockchain fit in? How do we ensure people are the most important part of the Internet?</p>
+      <p>Join us at Mozfest as we look into the future. Dystopian, utopian or somewhere in between &mdash; let’s explore the Internet of 2027.</p>
     </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-open-science",
     contacts: [
-      {
-        name: "Arliss Collins"
-      },
-      {
-        name: "Joey Lee"
-      },
-      {
-        name: "Richard Smith-Unna"
-      },
-      {
-        name: "Kirstie Whitaker"
-      }
+      { name: "Vigneshwer ‘Viki’ Dhinakaran" },
+      { name: "Ian Forrester" },
+      { name: "Tim Cowlishaw" },
+      { name: "Jon Tutcher" }
     ]
   },
   {
-    name: "Open Badges",
-    iconPath: "/assets/images/space-icons/openBadges.svg",
-    iconWidth: 80,
+    name: "Web Literacy",
     description:
     (<div>
-      <p>Open Badges are transforming how we recognise and reward learning. These digital credentials showcase and communicate learners’ skills — from HTML to design — in a way that traditional CVs and transcripts cannot.</p>
-      <p>Open Badges are taking root around the world, from non-profits to major employers and universities. And the technical infrastructure that makes badges possible is constantly evolving. In the Open Badges Space, we’ll showcase exciting badges projects, hack on and build badge infrastructure, and encourage new partners and networks adopt badges. We’re also plugging Open Badges into other spaces and sessions across MozFest.</p>
+      <p>The web is like a garden that we all plant and eat from. We need to consider what we sow as well as what, and how much, we consume.</p>
+      <p>In the Web Literacy space, we’ll dig into the skills that help us read, write and participate on the web in a way that enriches both it and ourselves. Web literacy isn’t just writing Python—it’s knowing how to wield a search engine, how to craft a strong password and when our online activities are being tracked.</p>
+      <p>Through hands-on workshops, participants will explore, make and play with the tools and technologies that form the fabric of the web. And through discussion and talks, we’ll invite our guests to reflect on, and improve, their relationship with the web. Our space will instill the skills and confidence in both young and old, students and teachers, to make the web a more vibrant, diverse ecosystem.</p>
     </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-open-badges",
     contacts: [
-      {
-        name: "Matt Rogers"
-      },
-      {
-        name: "Tim Riches"
-      },
-      {
-        name: "Lucy Lewis"
-      },
-      {
-        name: "Grainne Hamilton"
-      }
+      { name: "Luke Pacholski" },
+      { name: "Fredrick Sigalla" },
+      { name: "Phillipa Bailey" },
+      { name: "Julie Neville" },
+      { name: "Mariana Delgado" },
+      { name: "Edoardo Viola" }
     ]
   },
   {
-    name: "Fuel The Movement",
-    iconPath: "/assets/images/space-icons/fuelMovement.svg",
-    iconWidth: 80,
+    name: "Digital Inclusion",
     description:
     (<div>
-      <p>Who do you think should create culture? How do we build a movement to encourage creativity and imagination? If these questions keep you up at night, the open internet movement — and Fuel The Movement Space — needs you!</p>
-      <p>We're bringing people together to talk about how current copyright laws aren't equipped for the internet age. Right now, we have a unique opportunity in the European Union to update and reform copyright laws to enhance -- not hinder -- creativity and innovation. Fuel The Movement will help participants explore how these and other laws impact them -- and what YOU can do about it -- through interactive art installations, hands-on workshops, and lightning talks. Participants will walk away energized to support creativity on the open internet.</p>
+      <p>Imagine an Internet that truly puts people first &mdash; where individuals can shape their own experience and are empowered, safe and independent. </p>
+      <p>The Digital Inclusion space explores ways of increasing equity of access and participation across the web. We’re addressing restrictive infrastructure and finding ways to overcome the cost of technology; celebrating linguistic diversity and sharing ways to make the Internet more representative of the planet’s many cultures; and developing solutions to make all people safer and empowered in their digital lives. As you move through this space, you will see how an inclusive web truly benefits humanity.</p>
     </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-fuel-the-movement",
     contacts: [
-      {
-        name: "Melissa Romaine"
-      },
-      {
-        name: "Stacy Martin"
-      },
-      {
-        name: "Raegan MacDonald"
-      },
-      {
-        name: "Georgia Bullen"
-      }
-    ]
-  },
-  {
-    name: "Localisation",
-    iconPath: "/assets/images/space-icons/localisation.svg",
-    iconWidth: 76,
-    description:
-    (<div>
-      <p>The Internet spans many cultures and languages — and so does the Localisation Space.</p>
-      <p>This space reflects the diversity of the Web and the people who use it. It’s set up like a marketplace, rich with different colors, smells, and flavours. We’ll explore how people participate in the digital world in a way that reflects their unique culture and identity. Localisation experts and amateurs alike will share localisation tools, discuss their experiences on a multicultural Internet, and explore how we can create a Web that’s truly inclusive of all languages and societies.</p>
-    </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-localisation",
-    contacts: [
-      {
-        name: "Heather Bailey"
-      },
-      {
-        name: "Dwayne Bailey"
-      },
-      {
-        name: "Manal Hassan"
-      }
+      { name: "Kenyatta Forbes" },
+      { name: "Hannah Kane" },
+      { name: "Michael Saunby" },
+      { name: "Heather Bailey" },
+      { name: "Martha Segwick" }
     ]
   },
   {
     name: "Youth Zone",
-    iconPath: "/assets/images/space-icons/youthZone.svg",
-    iconWidth: 86,
     description:
     (<div>
-      <p>Too often, current-day education systems are prescriptive. Learning is based around certain objectives, like exams. And independent thinking isn’t encouraged.</p>
-      <p>In the Youth Zone Space, we’re creating an environment where independent thinking isn’t just encouraged — it’s rewarded. Our space is a sandbox for kids, teens, and adults alike to tinker, hack, build, and play as a means of learning. Sessions will be hands-on and centered around Raspberry Pi and virtual reality, with a focus on the artistry of these tools. We’ll also reimagine what a 21st-century library should look like — a collection of open source tools and activities.</p>
-    </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-youth-zone",
-    contacts: [
-      {
-        name: "Dorine Flies"
-      },
-      {
-        name: "Andrew Mulholland"
-      }
-    ]
-  },
-  {
-    name: "Demystify the Web",
-    iconPath: "/assets/images/space-icons/demystify.svg",
-    iconWidth: 82,
-    sessionsLink: "https://app.mozillafestival.org/#_space-demystify-the-web",
-    description:
-    (<div>
-      <p>Grab your ticket to our carnival of learning! All who enter will gain the most important skills of our age: the ability to read, write and participate in our digital world.</p>
-      <p>The Demystify the Web Space invites teachers and learners of all ages to join our funhouse of Web literacy. Embrace the unknown! Experience the thrills! Imagine and share the full potential of the Web with everyone!</p>
+      <p>
+        For our collective sake<br/>
+        Let your passion create a story<br/>
+        Let your passion design the day<br/>
+        Let that passion fight the cause<br/>
+        Let our voice be heard
+      </p>
+      <p>The Youth Zone is like a poem &mdash; creative, unexpected, powerful. Join this space for youth leaders and their mentors who are creating art, technology and positive social change. From a Raspberry Pi-coded singing potato to our teen artists-in-residence to our fireside chat on Internet health, come explore our collective tomorrow.</p>
     </div>),
     contacts: [
-      {
-        name: "Robert Friedman"
-      },
-      {
-        name: "Kim Wilkens"
-      },
-      {
-        name: "Su Adams"
-      },
-      {
-        name: "Simeon Oriko"
-      }
+      { name: "Dorine Flies" },
+      { name: "Shwetal Shah" },
+      { name: "Emrys Green" },
+      { name: "Andrew Mulholland" },
+      { name: "Connor Ballard-Pateman" }
     ]
-  },
-  {
-    name: "A Tale of Two Cities: Dilemmas in Connected Spaces",
-    iconPath: "/assets/images/space-icons/dilemmas.svg",
-    iconWidth: 76,
-    description:
-    (<div>
-      <p>As our lives and physical environments become even more connected online, we're faced with dilemmas. Should I allow my personal data to be used if it improves my daily life? Should my everyday objects be online?</p>
-      <p>This space will allow makers and learners to explore these dilemmas through a series of interactive experiences and mischievous interventions. Participants might nap on a squishy chair that generates sleep data; cook a snack in a connected kitchen where appliances only sometimes do as you say; and hack on IoT hardware.</p>
-    </div>),
-    sessionsLink: "https://app.mozillafestival.org/#_space-dilemmas-in-connected-spaces",
-    contacts: [
-      {
-        name: "Michelle Thorne"
-      },
-      {
-        name: "Jon Rogers"
-      },
-      {
-        name: "Ian Forrester"
-      },
-      {
-        name: "Dietrich Ayala"
-      },
-      {
-        name: "George Roter"
-      },
-      {
-        name: "Michael Saunby"
-      }
-    ]
-  },
-  {
-    name: "MozEx (Art Exhibit)",
-    iconPath: "/assets/images/space-icons/mozEx.svg",
-    iconWidth: 86,
-    description:
-    (<div>
-      <p>MozEx is an art exhibition with a 21st-century twist. Curated by the digital learning teams at both the Tate and the V&A, this space showcases dynamic digital artwork that spans many disciplines and media.</p>
-      <p>The MozEx exhibit explores links between art, society, and the digital world. Created by both individual practitioners and cross-disciplinary collaborations, the exhibit will explore the value of art to society through Web literacy, digital inclusion and accessibility, privacy, policy, and hacking.</p>
-    </div>),
-    linkText: "See the artwork in this space.",
-    sessionsLink: "https://issuu.com/mozfest/docs/mozex",
-    contacts: [
-      {
-        name: "Luca Damiani"
-      },
-      {
-        name: "Irini Papadimitriou"
-      }
-    ]
-  },
+  }
 ];
 
 var SessionsPage = React.createClass({
@@ -258,14 +128,14 @@ var SessionsPage = React.createClass({
         <Header/>
         <Jumbotron image="/assets/images/hero/sessions.jpg"
                   image2x="/assets/images/hero/sessions.jpg">
-          <h1>Spaces & Sessions</h1>
+          <h1>Spaces</h1>
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
-            <h1>Spaces and Sessions</h1>
-            <p>Spaces are physical and thematic learning hubs based around a broad topic, like science, art, or journalism. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
+            <h1>Spaces</h1>
+            <p>Spaces are physical and thematic learning hubs based around a broad topic, like web literacy or digital inclusion. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
             <p>
-              <a href="https://app.mozillafestival.org/">View the MozFest 2016 schedule</a>.
+              <Link to="/proposals">Submit a session</Link>
             </p>
             <div className="horizontal-rule"></div>
           </div>

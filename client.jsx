@@ -31,6 +31,5 @@ var routes = (
 ******************** */
 
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
-// <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
 
 ReactDOM.render(routes, document.querySelector(`#my-app`));
