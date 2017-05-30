@@ -51,10 +51,10 @@
 
     fieldset {
       .mb-4;
-      &.bilingual {
+      &.additionallanguage {
         .mb-0;
       }
-      &.bilingualother {
+      &.additionallanguageother {
         .ml-3;
         input {
           max-width: 300px;
@@ -65,9 +65,9 @@
       font-weight: inherit;
     }
     .space,
-    .alternatespace,
-    .duration,
-    .bilingual,
+    .secondaryspace,
+    .timeneeded,
+    .additionallanguage,
     .travelstipend {
       label {
         .ml-0;
@@ -82,7 +82,10 @@
     }
     .inline.error {
       .mt-1;
-      color: red;
+      .px-1;
+      display: inline-block;
+      color: darken(@pink, 15%);
+      background: lighten(@pink, 40%);
       font-style: italic;
       font-size: 0.875rem;
     }

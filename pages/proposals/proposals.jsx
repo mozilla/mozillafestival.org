@@ -59,14 +59,16 @@ var Proposal = React.createClass({
   formatProposal(proposal) {
     let formatted = Object.assign({}, proposal);
 
-    if (formatted.bilingual && formatted.bilingual === `Other` && formatted.bilingualother) {
-      formatted.bilingual = `Other: ${formatted.bilingualother}`;
-      delete formatted.bilingualother;
+    if (formatted.additionallanguage && formatted.additionallanguage === `Other` && formatted.additionallanguageother) {
+      formatted.additionallanguage = `Other: ${formatted.additionallanguageother}`;
+      delete formatted.additionallanguageother;
     }
 
     if (formatted.alternatespace && formatted.alternatespace === `None`) {
       delete formatted.alternatespace;
     }
+
+    formatted.travelstipend = formatted.travelstipend === fields.LABEL_STIPEND_REQUIRED ? `required` : ``;
 
     return formatted;
   },

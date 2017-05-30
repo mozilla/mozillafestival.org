@@ -6,8 +6,7 @@ var express = require('express'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
     GoogleSpreadsheet = require("google-spreadsheet"),
-    moment = require('moment-timezone'),
-    uuid = require('uuid');
+    proposalHandler = require('./lib/proposal-handler');
 
 Habitat.load();
 
@@ -41,35 +40,31 @@ app.configure(function() {
 });
 
 app.post(`/add-proposal`, limiter, function(req, res) {
-  // make sure keys are all lowercase and contain no symbols or spaces
-  // reference: https://www.npmjs.com/package/google-spreadsheet#row-based-api-limitations
-  var proposal = Object.assign({}, req.body, {
-    uuid: uuid.v4(),
-    githubissuenumber: ``,
-    timestamp: moment().tz(`Europe/London`).format(`MMM DD, YYYY, h:mm:ssa zz`) // (e.g., May 29, 2017, 8:51:14pm BST)
-  });
-
-  var sheet = new GoogleSpreadsheet(env.get(`PROPOSAL_SPREADSHEET_ID_2017`));
-  // line breaks are essential for the private key. 
+  // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
-  var privateKey = env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`);
+  let GOOGLE_API_CRED = {
+    email: env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    key: env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+  };
+  let SPREADSHEET_ID = env.get(`PROPOSAL_SPREADSHEET_ID_2017`);
 
-  sheet.useServiceAccountAuth({
-    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
-    "private_key": privateKey
-  }, (err) => {
-    if (err) {
-      console.log(`[Error] ${err}`);
-      res.status(500).json(err);
-    }
+  proposalHandler.postToSpreadsheet(req.body, SPREADSHEET_ID, GOOGLE_API_CRED, (err, proposal) => {
+    if (err) res.status(500).json(err);
 
-    sheet.addRow(1, proposal, (addRowErr) => {
-      if (addRowErr) {
-        console.log(`[addRowErr]`, addRowErr);
-        res.status(500).json(addRowErr);
-      }
+    proposalHandler.postToGithub({
+      token: env.get(`GITHUB_TOKEN`),
+      owner: env.get(`GITHUB_OWNER`),
+      repo: env.get(`GITHUB_REPO`)
+    }, proposal, (githubErr, issueNum) => {
+      if (githubErr) res.status(500).json(githubErr);
 
-      res.send(`Success!`);
+      let rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
+      proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
+        // if (updateErr) res.status(500).json(updateErr);
+
+
+        res.send(`Success!`);
+      });
     });
   });
 });
