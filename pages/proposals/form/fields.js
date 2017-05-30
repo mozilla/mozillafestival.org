@@ -14,7 +14,6 @@ let partOneFields = {
   'firstname': {
     type: `text`,
     label: `First name`,
-    placeholder: `First name`,
     labelClassname: `required`,
     fieldClassname: `form-control`,
     validator: [
@@ -24,7 +23,6 @@ let partOneFields = {
   'surname': {
     type: `text`,
     label: `Surname`,
-    placeholder: `Surname`,
     labelClassname: `required`,
     fieldClassname: `form-control`,
     validator: [
@@ -44,8 +42,7 @@ let partOneFields = {
   },
   'organisation': {
     type: `text`,
-    label: `Organisation `,
-    placeholder: `Organisation `,
+    label: `Organisation`,
     fieldClassname: `form-control`,
     validator: []
   },
@@ -110,7 +107,6 @@ let partThreeFields = {
   'name': {
     type: `text`,
     label: `Session name`,
-    placeholder: `Session name`,
     labelClassname: `required`,
     fieldClassname: `form-control`,
     validator: [
@@ -137,6 +133,16 @@ let partThreeFields = {
       validator.maxWordsValidator(120)
     ]
   },
+  'afterfestival': {
+    type: `textarea`,
+    label: `After the festival, how will you and your participants take the learning and activities forward?`,
+    labelClassname: `required word-length-restriction max-120-words`,
+    fieldClassname: `form-control`,
+    validator: [
+      validator.emptyValueValidator(),
+      validator.maxWordsValidator(120)
+    ]
+  },
   'timeneeded': {
     type: `choiceGroup`,
     label: `How much time you will need?`,
@@ -150,6 +156,16 @@ let partThreeFields = {
     fieldClassname: `form-control choice-group`,
     validator: [
       validator.emptyValueValidator()
+    ]
+  },
+  'numsofparticipants': {
+    type: `textarea`,
+    label: `How will you deal with varying numbers of participants in your session? What if 30 participants attend? What if there are 3?`,
+    labelClassname: `required word-length-restriction max-120-words`,
+    fieldClassname: `form-control`,
+    validator: [
+      validator.emptyValueValidator(),
+      validator.maxWordsValidator(120)
     ]
   },
   'additionallanguage': {
@@ -193,7 +209,6 @@ let partFourFields = {
   'needs': {
     type: `textarea`,
     label: `Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible`,
-    placeholder: ``,
     labelClassname: `word-length-restriction max-120-words`,
     fieldClassname: `form-control`,
     validator: [
