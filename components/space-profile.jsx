@@ -31,7 +31,7 @@ var SpacePathwayProfile = React.createClass({
     var showWranglerLink = this.props.showWranglerLink;
 
     return (
-      <div className="space-pathway-profile" id={id}>
+      <div className="space-profile" id={id}>
         <div className="detail">
           <div className="header">
             { this.props.iconPath ? <div className="image-container"><ImageTag alt={`${this.props.name} icon`} src1x={this.props.iconPath} width={this.props.iconWidth} /></div>

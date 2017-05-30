@@ -3,8 +3,7 @@ var Link = require('react-router').Link;
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var SpacePathwayProfile = require('../components/space-pathway-profile.jsx');
-var ImageTag = require('../components/imagetag.jsx');
+var SpaceProfile = require('../components/space-profile.jsx');
 
 var SpacesInfo = [
   {
@@ -117,7 +116,7 @@ var SessionsPage = React.createClass({
       return (
         <div className={whiteBg} key={space.name}>
           <div className="content wide">
-            <SpacePathwayProfile {...space} contactTitle="wrangler" />
+            <SpaceProfile {...space} contactTitle="wrangler" />
           </div>
         </div>
       );
