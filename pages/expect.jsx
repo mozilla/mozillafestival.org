@@ -142,7 +142,7 @@ var Expect = React.createClass({
                   </td>
                   <td>
                     <div className="time">18:00</div>
-                    <div>Demo party</div>
+                    <div>Closing Celebration</div>
                   </td>
                 </tr>
               </tbody>
