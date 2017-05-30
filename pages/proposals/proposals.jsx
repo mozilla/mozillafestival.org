@@ -121,7 +121,6 @@ var Proposal = React.createClass({
         </div>
         <div className="form-section">
           <h1>Additional support</h1>
-          <p>At MozFest, sessions are thematically organized into spaces. Please read the brief descriptions of each space <Link to="/spaces">here</Link> before answering the following questions.</p>
           <Form ref="formPartFour" 
             fields={fields.partFour}
             inlineErrors={true}
@@ -142,11 +141,12 @@ var Proposal = React.createClass({
   renderIntro() {
     return (
       <div>
-        <p>Welcome to the MozFest 2017 Call for Proposals. MozFest sessions cover a wide range of topics, but share two important qualities: they are interactive and inclusive.</p>
+        <h1>Welcome to the MozFest 2017 Call for Proposals.</h1>
+        <p>MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>.</p>
         <p>Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend your session.</p>
         <p>Anyone may submit a proposal for MozFest 2017. Once you have submitted your session, it will enter an open curation process on <a href="https://github.com/MozillaFoundation/mozfest-program-2017" target="_blank">GitHub</a>.</p>
-        <p>This year we are accepting proposals in English, [Spanish, French and German]<b style={{color: 'red'}}>(hyperlink to be added?)</b>.</p>
-        <p>If you would like to submit a session and have difficulty using this text-based form, please <a href="mailto:festival@mozilla.org">email us</a> to discuss other options.</p>
+        <p>In addition to English, this year we are accepting proposals in Spanish, French and German. Please check back in by June 15 to find localized versions of this form.</p>
+        <p>If you would like to submit a session and have difficulty using this text-based form, please <a href="mailto:festival@mozilla.org">email us</a> to discuss accessibility options.</p>
         <p>If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
         <p>Submission deadline: August 1, 2017</p>
       </div>
