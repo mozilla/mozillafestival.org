@@ -1,3 +1,13 @@
+// Importing mofo-bootstrap.css inline seems redundant here since we already include that file in index.html.
+// However, since mofo-bootstrap.css is built from SCSS and MozFest site uses LESS, this is the only way we can start utilizing mofo-bootstrap classes directly in these .less files. This way we can use those classes as mixins.
+// e.g., 
+// #foo {
+//  .some-mofo-bootstrap-class; 
+// }
+// Eventually we will want to use SCSS here and we should be able to easily import source files like
+// @import '../node_modules/mofo-bootstrap/src/scss/file.scss';
+@import (less) "../node_modules/mofo-bootstrap/dest/css/mofo-bootstrap.css";
+
 @import "variables";
 @import "shared";
 @import "components/index";
