@@ -59,7 +59,7 @@ app.post(`/add-proposal`, limiter, function(req, res) {
     }, proposal, (githubErr, issueNum) => {
       if (githubErr) res.status(500).json(githubErr);
 
-      let rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
+      var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
       proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
         // if (updateErr) res.status(500).json(updateErr);
 
