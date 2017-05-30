@@ -1,5 +1,8 @@
 import validator from './validator';
 
+const LABEL_STIPEND_NOT_REQUIRED = `I do not require a travel stipend as I, or my work, can cover my costs`;
+const LABEL_STIPEND_REQUIRED = `I can only attend MozFest if I receive a travel stipend covering my travel and accommodation`;
+
 // *** IMPORTANT ***
 //
 // make sure all keys are all lowercase and contain no symbols or spaces
@@ -86,7 +89,7 @@ let partTwoFields = {
       validator.emptyValueValidator()
     ]
   },
-  'alternatespace': {
+  'secondaryspace': {
     type: `choiceGroup`,
     label: `Is there an alternate space your session could contribute to?`,
     options: [
@@ -134,7 +137,7 @@ let partThreeFields = {
       validator.maxWordsValidator(120)
     ]
   },
-  'duration': {
+  'timeneeded': {
     type: `choiceGroup`,
     label: `How much time you will need?`,
     options: [
@@ -149,7 +152,7 @@ let partThreeFields = {
       validator.emptyValueValidator()
     ]
   },
-  'bilingual': {
+  'additionallanguage': {
     type: `choiceGroup`,
     label: `Would you like to deliver this session bilingually in one of the following languages?`,
     options: [
@@ -161,12 +164,12 @@ let partThreeFields = {
     fieldClassname: `form-control choice-group`,
     validator: []
   },
-  'bilingualother': {
+  'additionallanguageother': {
     type: `text`,
     labelClassname: `required`,
     fieldClassname: `form-control`,
     controller: {
-      name: `bilingual`,
+      name: `additionallanguage`,
       value: `Other`
     }
   }
@@ -177,8 +180,8 @@ let partFourFields = {
     type: `choiceGroup`,
     label: `MozFest offers limited places for travel sponsorship covering flights and accommodation over the festival weekend. These stipends are offered to those who need support traveling to the event and would have no other means to attend through work or personal covering of costs. We offer these stipends to encourage diversity in facilitators.`,
     options: [
-      `I do not require a travel stipend as I, or my work, can cover my costs`,
-      `I can only attend MozFest if I receive a travel stipend covering my travel and accommodation`
+      LABEL_STIPEND_NOT_REQUIRED,
+      LABEL_STIPEND_REQUIRED
     ],
     labelClassname: `required`,
     fieldClassname: `form-control choice-group`,
@@ -203,5 +206,7 @@ module.exports = {
   partOne: partOneFields,
   partTwo: partTwoFields,
   partThree: partThreeFields,
-  partFour: partFourFields
+  partFour: partFourFields,
+  LABEL_STIPEND_NOT_REQUIRED: LABEL_STIPEND_NOT_REQUIRED,
+  LABEL_STIPEND_REQUIRED: LABEL_STIPEND_REQUIRED
 };
