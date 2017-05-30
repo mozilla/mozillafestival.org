@@ -1,4 +1,4 @@
-**[ ID ]** <%= id %>
+**[ UUID ]** <%= id %>
 
 **[ Submitter's Name ]** <%= submitterName %>
 <% if (typeof(submitterOrg) !== "undefined") { %>**[ Submitter's Affiliated Organisation ]** <%= submitterOrg %><% } %>
