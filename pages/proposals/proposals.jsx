@@ -106,7 +106,7 @@ var Proposal = React.createClass({
         </div>
         <div className="form-section">
           <h1>Festival Spaces</h1>
-          <p>At MozFest, sessions are thematically organized into spaces. Please read the brief descriptions of each space <Link to="/spaces">here</Link> before answering the following questions.</p>
+          <p>At MozFest, sessions are thematically organised into spaces. Please read the brief descriptions of each space <Link to="/spaces" target="_blank">here</Link> before answering the following questions.</p>
           <Form ref="formPartTwo" 
             fields={fields.partTwo}
             inlineErrors={true}
@@ -194,7 +194,7 @@ var Proposal = React.createClass({
                   image2x="/assets/images/proposals.jpg">
           <h1>Call for Proposals</h1>
           <div className="deadline">
-            <span>Deadline for submissions is 12:00am BST August 1, 2017</span>
+            <span>August 1st 2017</span>
           </div>
         </Jumbotron>
         {generateHelmet(this.pageMetaDescription)}
