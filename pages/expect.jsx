@@ -171,7 +171,7 @@ var Expect = React.createClass({
               </div>
               <div className="half-content text-left">
                 <p>When you register to attend MozFest, please let us know if you have an accessibility need such as visual or auditory support, wheelchair access, or the need for a quiet space. We are committed to discussing attendees’ individual needs, and providing support to the best of our abilities.</p>
-                <p>Making MozFest more accessible is an ongoing process. We welcome your suggestions and ideas and would like to learn from your experiences. Please contact us for more information, or to ask for support.</p>
+                <p>Making MozFest more accessible is an ongoing process. We welcome your suggestions and ideas and would like to learn from your experiences. Please <a href="mailto:festival@mozilla.org">contact us</a> for more information, or to ask for support.</p>
               </div>
             </div>
           </div>
