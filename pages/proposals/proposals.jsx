@@ -120,9 +120,18 @@ var Proposal = React.createClass({
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          <h1>Additional support</h1>
+          <h1>Travel support</h1>
+          <p>MozFest offers limited places for travel sponsorship covering flights and accommodation over the festival weekend. These stipends are offered to those who need support traveling to the event and would have no other means to attend through work or personal covering of costs. We offer these stipends to encourage diversity in facilitators.</p>
           <Form ref="formPartFour" 
             fields={fields.partFour}
+            inlineErrors={true}
+            onUpdate={this.handleFormUpdate} />
+        </div>
+        <div className="form-section">
+          <h1>Session materials</h1>
+          <p>Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible.</p>
+          <Form ref="formPartFive" 
+            fields={fields.partFive}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>

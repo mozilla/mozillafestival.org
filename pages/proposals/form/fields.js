@@ -73,12 +73,12 @@ let partTwoFields = {
     type: `choiceGroup`,
     label: `What space do feel your session will best contribute to?`,
     options: [
-      `Web Literacy`,
       `Decentralisation`,
-      `Open Innovation`,
       `Digital Inclusion`,
+      `Open Innovation`,
       `Privacy and Security`,
-      `Youth Zone`
+      `Web Literacy`,
+      `Youth Zone`,
     ],
     labelClassname: `required`,
     fieldClassname: `form-control choice-group`,
@@ -90,11 +90,11 @@ let partTwoFields = {
     type: `choiceGroup`,
     label: `Is there an alternate space your session could contribute to?`,
     options: [
-      `Web Literacy`,
       `Decentralisation`,
-      `Open Innovation`,
       `Digital Inclusion`,
+      `Open Innovation`,
       `Privacy and Security`,
+      `Web Literacy`,
       `Youth Zone`,
       `None`
     ],
@@ -194,7 +194,7 @@ let partThreeFields = {
 let partFourFields = {
   'travelstipend': {
     type: `choiceGroup`,
-    label: `MozFest offers limited places for travel sponsorship covering flights and accommodation over the festival weekend. These stipends are offered to those who need support traveling to the event and would have no other means to attend through work or personal covering of costs. We offer these stipends to encourage diversity in facilitators.`,
+    label: `Do you require a travel stipend?`,
     options: [
       LABEL_STIPEND_NOT_REQUIRED,
       LABEL_STIPEND_REQUIRED
@@ -205,10 +205,13 @@ let partFourFields = {
     validator: [
       validator.emptyValueValidator()
     ]
-  },
+  }
+};
+
+let partFiveFields = {
   'needs': {
     type: `textarea`,
-    label: `Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible`,
+    label: `If your session requires additional materials or electronic equipment, please outline your needs.`,
     labelClassname: `word-length-restriction max-120-words`,
     fieldClassname: `form-control`,
     validator: [
@@ -222,6 +225,7 @@ module.exports = {
   partTwo: partTwoFields,
   partThree: partThreeFields,
   partFour: partFourFields,
+  partFive: partFiveFields,
   LABEL_STIPEND_NOT_REQUIRED: LABEL_STIPEND_NOT_REQUIRED,
   LABEL_STIPEND_REQUIRED: LABEL_STIPEND_REQUIRED
 };
