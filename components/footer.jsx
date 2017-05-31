@@ -5,6 +5,10 @@ import { MofoFooter } from 'mofo-ui';
 
 const FOOTER_LINKS = [
   {
+    link: `https://medium.com/mozilla-festival/tagged/mozfest2016`,
+    text: `Blog`
+  },
+  {
     link: `/team`,
     text: `Festival Team`
   },
