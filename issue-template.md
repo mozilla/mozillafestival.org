@@ -1,29 +1,22 @@
-**[ ID ]** <%= id %>
+**[ UUID ]** <%= id %>
 
 **[ Submitter's Name ]** <%= submitterName %>
 <% if (typeof(submitterOrg) !== "undefined") { %>**[ Submitter's Affiliated Organisation ]** <%= submitterOrg %><% } %>
-<% if (typeof(submitterTwitter) !== "undefined") { %>**[ Submitter's Twitter ]** <%= submitterTwitter %><% } %>
+<% if (typeof(submitterGithub) !== "undefined") { %>**[ Submitter's Github ]** <%= submitterGithub %><% } %>
 
-**[ Space ]** <%= space %>
-<% if (secondarySpace !== "none") { %>**[ Secondary Space ]** <%= secondarySpace %><% } %>
+<% if (typeof(additionalFacilitators) !== "undefined") { %>**[ Additional facilitators ]** <%= additionalFacilitators %><% } %>
 
-<% if (typeof(exhibitMethod) !== "undefined") { %>**[ Exhibit Method ]** <%= exhibitMethod %><% } %>
-<% if (typeof(exhibitLink) !== "undefined") { %>**[ Exhibit Link ]** <%= exhibitLink %><% } %>
 
-<% if (typeof(format) !== "undefined") { %>**[ Format ]** <%= format %><% } %>
-
-### Description
+### What will happen in your session?
 <%= description %>
 
-### Agenda
-<%= agenda %>
-
-<% if (typeof(participants) !== "undefined") { %>
-### Participants
-<%= participants %>
-<% } %>
-
-<% if (typeof(outcome) !== "undefined") { %>
-### Outcome
+### What is the goal or outcome of your session?
 <%= outcome %>
+
+<% if (typeof(needs) !== "undefined") { %>
+### If your session requires additional materials or electronic equipment, please outline your needs.
+<%= needs %>
 <% } %>
+
+### Time needed
+<%= timeNeeded %>

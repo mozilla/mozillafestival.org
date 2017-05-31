@@ -266,135 +266,15 @@ I care about empowering young people to take the lead.  I think arts, culture an
             <p>Irini Papadimitriou is Digital Programmes Manager at the V&A and responsible for programmes such as the annual Digital Design Weekend, a big-scale event presenting intersections of art, design and technology; and the monthly Digital Futures, an open platform & networking event for displaying and discussing work by researchers, artists, designers, companies and other professionals working with art, technology, design, science and beyond.</p>
             <p>Irini is also Head of New Media Arts Development at Watermans, an arts organisation presenting innovative work and supporting artists working with technology, where she is curating the exhibition programme and an annual Digital Performance festival, exploring intersections in digital art, dance, sound, performance, science and more.</p>
             <p>She is also one of the organisers for London's Mini Maker Faire, and one of the co-founders of Maker Assembly, a critical gathering about maker cultures.</p>
-            <p>Links
-              <ul>
-                <li><a href="http://www.vam.ac.uk/blog/author/irini-papadimitriou">V&A blog</a></li>
-                <li><a href="https://www.watermans.org.uk/new-media-arts-archive/">Watermans New Media Arts</a></li>
-                <li><a href="http://makerassembly.org ">Maker Assembly</a></li>
-              </ul>
-            </p>
+            <p>Links</p>
+            <ul>
+              <li><a href="http://www.vam.ac.uk/blog/author/irini-papadimitriou">V&A blog</a></li>
+              <li><a href="https://www.watermans.org.uk/new-media-arts-archive/">Watermans New Media Arts</a></li>
+              <li><a href="http://makerassembly.org ">Maker Assembly</a></li>
+            </ul>
           </div>)
   }
 ];
-
-var Partners = React.createClass({
-  partnersInfo: [
-    {
-      name: `Youth Led EU`,
-      logo: `/assets/images/team/partner/YouthLedEU.jpg`,
-      link: `https://www.facebook.com/YouthLedEU/`
-    },
-    {
-      name: `The Tate`,
-      logo: `/assets/images/team/partner/Tate.jpg`,
-      link: `http://www.tate.org.uk/`
-    },
-    {
-      name: `The V&A`,
-      logo: `/assets/images/team/partner/VA.jpg`,
-      link: `https://www.vam.ac.uk/`
-    },
-    {
-      name: `Arts Award`,
-      logo: `/assets/images/team/partner/ArtsAward.jpg`,
-      link: `http://www.artsaward.org.uk/`
-    },
-    {
-      name: `BBC`,
-      logo: `/assets/images/team/partner/BBC.jpg`,
-      link: `http://www.bbc.co.uk/rd`
-    },
-    {
-      name: `Ravensbourne`,
-      logo: `/assets/images/team/partner/Ravensbourne.jpg`,
-      link: `http://www.ravensbourne.ac.uk/`
-    },
-    {
-      name: `Digital Me`,
-      logo: `/assets/images/team/partner/DigitalMe.jpg`,
-      link: `http://www.digitalme.co.uk/`
-    },
-    {
-      name: `Translate`,
-      logo: `/assets/images/team/partner/Translate.jpg`,
-      link: `http://www.translate.org.za/`
-    },
-    {
-      name: `UCanToo`,
-      logo: `/assets/images/team/partner/UCanToo.jpg`,
-      link: `http://www.ucantoo.org.uk/`
-    },
-    {
-      name: `Tech4girls`,
-      logo: `/assets/images/team/partner/Tech4girls.jpg`,
-      link: `http://www.tech-girls.org`
-    },
-    {
-      name: `The Met Office`,
-      logo: `/assets/images/team/partner/TheMetOffice.jpg`,
-      link: `http://www.informaticslab.co.uk`
-    },
-    {
-      name: `Open Technology Institute`,
-      logo: `/assets/images/team/partner/OpenTechnologyInstitute.jpg`,
-      link: `http://www.newamerica.org/oti/`
-    },
-    {
-      name: `Internews`,
-      logo: `/assets/images/team/partner/Internews.jpg`,
-      link: `http://internews.org/`
-    }
-  ],
-  render: function() {
-    let groups = [];
-    let tempGroup = [];
-
-    this.partnersInfo.forEach((partner) => {
-      let thePartner = ( <a href={partner.link}>
-                          { partner.logo ? <img src={partner.logo} alt={partner.name} /> : partner.name }
-                        </a>);
-
-      tempGroup.push({
-        key: partner.name,
-        component: thePartner
-      });
-      if (tempGroup.length === 3) {
-        groups.push({
-          key: `the ${tempGroup[0].key} row`,
-          component: tempGroup
-        });
-        tempGroup = [];
-      }
-    });
-
-    // don't forget to include leftover items, if any
-    if (tempGroup.length !== 0) {
-      groups.push({
-        key: `the ${tempGroup[0].key} row`,
-        component: tempGroup
-      });
-      tempGroup = [];
-    }
-
-    return (
-      <div>
-        {
-          groups.map( (group) => {
-            return (
-              <div className="row partners" key={group.key}>
-                {
-                  group.component.map((partner) => {
-                    return <div className="col-xs-12 col-sm-4 partner" key={partner.key}>{partner.component}</div>;
-                  })
-                }
-              </div>
-            );
-          })
-        }
-      </div>
-    );
-  }
-});
 
 var TeamPage = React.createClass({
   render: function() {
@@ -416,19 +296,17 @@ var TeamPage = React.createClass({
                 })
               }
             </div>
-            <div name="Wranglers" slug="wranglers">
-              <h1>Our 2016 Space Wranglers</h1>
-              <div className="horizontal-rule"></div>
-              {
-                wranglers.map( member => {
-                  return ( <MemberProfile name={member.name} twitter={member.twitter} pic={member.pic} bio={member.bio} key={member.name} /> );
-                })
-              }
+
+            {/* hiding('hidden') this tab for now as requested in https://github.com/mozilla/mozillafestival.org/issues/554 */}
+            <div name="Wranglers" slug="wranglers" hidden>
+              <h1>Our 2017 Space Wranglers</h1>
+              <div>To be announced</div>
             </div>
-            <div name="Partners" slug="partners">
-              <h1>Our 2016 Partners</h1>
-              <div className="horizontal-rule"></div>
-              <Partners />
+
+            {/* hiding this tab for now as requested in https://github.com/mozilla/mozillafestival.org/issues/554 */}
+            <div name="Partners" slug="partners" hidden>
+              <h1>Our 2017 Partners</h1>
+              <div>To be announced</div>
             </div>
           </TabSwitcher>
         </div>

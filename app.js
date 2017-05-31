@@ -6,9 +6,7 @@ var express = require('express'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
     GoogleSpreadsheet = require("google-spreadsheet"),
-    uuid = require('uuid');
-
-var proposalHandler = require('./lib/proposal-handler');
+    proposalHandler = require('./lib/proposal-handler');
 
 Habitat.load();
 
@@ -41,49 +39,33 @@ app.configure(function() {
   });
 });
 
-app.post('/add-session', limiter, function (req, res) {
-  var formUrl = env.get("PROPOSAL_FORM_ACTION_URL");
-  var proposalUUID = uuid.v4();
-  var userInputs = {
-    firstName: req.body.firstName,
-    surname: req.body.surname,
-    email: req.body.email,
-    affiliationOrganization: req.body.affiliationOrganization,
-    otherFacilitators: req.body.otherFacilitators,
-    twitter: req.body.twitter,
-    space: req.body.space,
-
-    exhibitTitle: req.body.exhibitTitle,
-    exhibitMethod: req.body.exhibitMethod,
-    exhibitLink: req.body.exhibitLink,
-    exhibitDescription: req.body.exhibitDescription,
-    exhibitLearnReflect: req.body.exhibitLearnReflect,
-    exhibitWhyGoodMozfest: req.body.exhibitWhyGoodMozfest,
-    exhibitAnotherSpace: req.body.exhibitAnotherSpace,
-
-    sessionTitle: req.body.sessionTitle,
-    descWorkBest: req.body.descWorkBest,
-    descMakeLearn: req.body.descMakeLearn,
-    descHowWorking: req.body.descHowWorking,
-    descParticipants: req.body.descParticipants,
-    descOutcome: req.body.descOutcome,
-    descAnotherLang: req.body.descAnotherLang,
-    descTravel: req.body.descTravel,
-    descOtherSpace: req.body.descOtherSpace,
+app.post(`/add-proposal`, limiter, function(req, res) {
+  // line breaks are essential for the private key.
+  // if reading this private key from env var this extra replace step is a MUST
+  var GOOGLE_API_CRED = {
+    email: env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    key: env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
   };
+  var SPREADSHEET_ID = env.get(`PROPOSAL_SPREADSHEET_ID_2017`);
 
-  proposalHandler.submitProposalToGoogleSheet(formUrl, userInputs, proposalUUID, function(err) {
-    if (err) {
-      res.status(500).send({error: err});
-    } else {
-      proposalHandler.postToGithub(env, userInputs, proposalUUID, function(githubErr) {
-        if (githubErr) {
-          res.status(500).send({error: githubErr});
-        } else {
-          res.send("OK");
-        }
+  proposalHandler.postToSpreadsheet(req.body, SPREADSHEET_ID, GOOGLE_API_CRED, (err, proposal) => {
+    if (err) res.status(500).json(err);
+
+    proposalHandler.postToGithub({
+      token: env.get(`GITHUB_TOKEN`),
+      owner: env.get(`GITHUB_OWNER`),
+      repo: env.get(`GITHUB_REPO`)
+    }, proposal, (githubErr, issueNum) => {
+      if (githubErr) res.status(500).json(githubErr);
+
+      var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
+      proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
+        // if (updateErr) res.status(500).json(updateErr);
+
+
+        res.send(`Success!`);
       });
-    }
+    });
   });
 });
 
@@ -146,6 +128,10 @@ app.get('*', function (request, response) {
   }
 });
 
-app.listen(env.get('PORT'), function () {
-  console.log('Server listening ( http://localhost:%d )', env.get('PORT'));
+app.listen(env.get(`PORT`), () => {
+  console.log(`\n*******************************************`);
+  console.log(`*                                         *`);
+  console.log(`*  MozFest listening on port ${env.get(`PORT`)}         *`);
+  console.log(`*                                         *`);
+  console.log(`*******************************************\n`);
 });
