@@ -52,9 +52,9 @@ app.post(`/add-proposal`, limiter, function(req, res) {
     if (err) res.status(500).json(err);
 
     proposalHandler.postToGithub({
-      token: env.get(`GITHUB_TOKEN`),
-      owner: env.get(`GITHUB_OWNER`),
-      repo: env.get(`GITHUB_REPO`)
+      token: env.get(`GITHUB_BOT_TOKEN_2017`),
+      owner: env.get(`GITHUB_REPO_OWNER_2017`),
+      repo: env.get(`GITHUB_REPO_NAME_2017`)
     }, proposal, (githubErr, issueNum) => {
       if (githubErr) res.status(500).json(githubErr);
 
