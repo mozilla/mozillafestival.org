@@ -10,25 +10,19 @@
     "AWS_SECRET_ACCESS_KEY": {
       "required": true
     },
-    "FRINGE_EVENT_FORM_ACTION_URL": {
+    "GITHUB_BOT_TOKEN_2017": {
       "required": true
     },
-    "FRINGE_EVENT_SPREADSHEET_ID": {
+    "GITHUB_REPO_NAME_2017": {
       "required": true
     },
-    "GITHUB_BOT_PASSWORD": {
+    "GOOGLE_API_CLIENT_EMAIL_2017": {
       "required": true
     },
-    "GITHUB_BOT_USERNAME": {
+    "GOOGLE_API_PRIVATE_KEY_2017": {
       "required": true
     },
-    "GITHUB_REPO": {
-      "required": true
-    },
-    "GOOGLE_API_CLIENT_EMAIL": {
-      "required": true
-    },
-    "GOOGLE_API_PRIVATE_KEY": {
+    "PROPOSAL_SPREADSHEET_ID_2017": {
       "required": true
     },
     "HATCHET_APP_NAME": {
@@ -38,9 +32,6 @@
       "required": true
     },
     "HATCHET_QUEUE_URL": {
-      "required": true
-    },
-    "PROPOSAL_FORM_ACTION_URL": {
       "required": true
     }
   },
