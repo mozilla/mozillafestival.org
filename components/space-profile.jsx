@@ -21,14 +21,17 @@ var BioTooltip = React.createClass({
 var SpacePathwayProfile = React.createClass({
   getDefaultProps: function() {
     return {
-      linkText: "See the sessions in this space."
+      linkText: "Propose a session in this space.",
+      linkTo: "/proposals",
+      showWranglerLink: false
     }
   },
   render: function() {
     var id = slugify(this.props.name);
+    var showWranglerLink = this.props.showWranglerLink;
 
     return (
-      <div className="space-pathway-profile" id={id}>
+      <div className="space-profile" id={id}>
         <div className="detail">
           <div className="header">
             { this.props.iconPath ? <div className="image-container"><ImageTag alt={`${this.props.name} icon`} src1x={this.props.iconPath} width={this.props.iconWidth} /></div>
@@ -37,7 +40,7 @@ var SpacePathwayProfile = React.createClass({
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
           <div className="description">{this.props.description}</div>
-          <p><a href={this.props.sessionsLink}>{this.props.linkText}</a></p>
+          <p><Link to={this.props.linkTo}>{this.props.linkText}</Link></p>
         </div>
         <div className="contacts">
           { this.props.contacts ? <h2>{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>
@@ -47,7 +50,8 @@ var SpacePathwayProfile = React.createClass({
             this.props.contacts ? this.props.contacts.map(function(contact) {
               return (
                 <li key={contact.name}>
-                  <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
+                  { showWranglerLink ? <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
+                                     : contact.name}
                   { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )

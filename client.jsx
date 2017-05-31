@@ -18,7 +18,7 @@ var routes = (
       <Route path=":tab" component={require(`./pages/team.jsx`)} />
     </Route>
     <Route name="submission-process" path="/submission-process" component={require(`./pages/submission-process.jsx`)} />
-    <Route name="sessions" path="/spaces" component={require(`./pages/sessions.jsx`)} />
+    <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
     <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events.jsx`)} />
     <Route name="fringe-event-add-success" path="/fringe-event-add-success" component={require(`./pages/fringe-event-add-success.jsx`)} />
     <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
@@ -31,6 +31,5 @@ var routes = (
 ******************** */
 
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
-// <Route name="pathways" path="/pathways" handler={require('./pages/pathways.jsx')} />
 
 ReactDOM.render(routes, document.querySelector(`#my-app`));
