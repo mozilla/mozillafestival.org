@@ -73,7 +73,7 @@ let partTwoFields = {
     type: `choiceGroup`,
     label: `What space do feel your session will best contribute to?`,
     options: [
-      `Decentralisation`,
+      `Decentralization`,
       `Digital Inclusion`,
       `Open Innovation`,
       `Privacy and Security`,
@@ -90,7 +90,7 @@ let partTwoFields = {
     type: `choiceGroup`,
     label: `Is there an alternate space your session could contribute to?`,
     options: [
-      `Decentralisation`,
+      `Decentralization`,
       `Digital Inclusion`,
       `Open Innovation`,
       `Privacy and Security`,
