@@ -94,13 +94,28 @@ var Home = React.createClass({
                   image2x="/assets/images/hero/home/banner-home_5.jpg"
                   hideBackgroundLines={true}>
           <div className="content-wrapper">
-            <h1>MozFest</h1>
-            <h2>The world's leading festival for the open Internet movement.</h2>
-            <div className="horizontal-rule"></div>
-            <p>October 27-29, 2017 Ravensbourne College, London</p>
-            <a href="https://vimeo.com/205552025/37560e3619" className="btn p-3 m-3">Watch Video</a>
+            <h1>Welcome to MozFest</h1>
+            <p className="mb-0">The world's leading festival for the open Internet movement.</p>
+            <p className="mb-0">October 27-29, 2017 Ravensbourne College, London</p>
+            <Link to="/proposals" className="btn p-3 m-3">Propose a Session</Link>
           </div>
         </Jumbotron>
+        <div className="white-background">
+          <div className="content wide">
+            <div className="row">
+              <div className="col-sm-4 text-left">
+                <h1>What is MozFest like?</h1>
+                <p>MozFest is for advocates of a healthy Internet. Explore the intersection of the web with civil society, journalism, public policy, and art through interactive sessions.</p>
+              </div>
+              <div className="col-sm-8">
+                <div className="embed-responsive embed-responsive-16by9">
+                  <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" allowFullScreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div className="horizontal-rule"></div>
+          </div>
+        </div>
         <div className="white-background">
           <div className="centered content wide">
             <h1>Watch now: 2016 Dialogues and Debates</h1>
@@ -112,30 +127,29 @@ var Home = React.createClass({
           <div className="row mt-5">
             <div className="col-12 col-md-6 text-left">
               <div className="news-widget mb-3">
-                <img src="assets/images/simone.png" alt="Simone Browne speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
-                <div className="source medium-logo text-muted">Mozilla Festival</div>
-                <a href="https://medium.com/mozilla-festival/surveillance-and-race-online-c03dda350fb9" className="title">Surveillance and Race Online</a>
-                <div className="publish-date text-muted">Feb 10, 2017</div>
-                <p className="mt-2">Simone Browne is Associate Professor in the Department of African and African Diaspora Studies at the University of Texas at Austin. She spoke at MozFest 2016 about surveillance and race online.</p>
+                <img src="assets/images/BrianBehlendorf.jpeg" alt="Brian Behlendorf speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
+                <div className="source text-muted">Mozilla Festival</div>
+                <a href="https://medium.com/mozilla-festival/bringing-back-the-decentralized-web-5598408037c7" className="title">Bringing Back the Decentralized Web</a>
+                <div className="publish-date text-muted">Feb 23, 2017</div>
+                <p className="mt-2">Brian Behlendorf is Executive Director at the Hyperledger Project. He spoke at MozFest 2016 about blockchain.</p>
               </div>
             </div>
             <div className="col-12 col-md-6">
               <div className="news-widget">
-                <div className="source medium-logo text-muted">Mozilla Festival</div>
-                <a href="https://medium.com/mozilla-festival/journalism-at-mozfest-2016-great-stories-strong-communities-new-tools-dd99e9829167" className="title">Journalism at MozFest 2016: Great Stories, Strong Communities, New Tools</a>
-                <div className="author">by Lindsay Muscato</div>
-                <div className="publish-date text-muted">Nov 21, 2016</div>
+                <div className="source text-muted">Mozilla</div>
+                <a href="https://internethealthreport.org/v01/" className="title">Internet Health Report</a>
               </div>
               <div className="news-widget my-4">
-                <div className="source t3-logo text-muted">T3n</div>
-                <a href="http://t3n.de/news/mozilla-festival-internet-gesundheit-761360/3/" className="title">Wie steht es um die Gesundheit des Internets? Auf Spurensuche beim Mozilla-Festival</a>
-                <div className="author">by Kim Rixecker</div>
+                <div className="source text-muted">El País</div>
+                <a href="http://tecnologia.elpais.com/tecnologia/2016/10/31/actualidad/1477905484_625075.html" className="title">Mozilla planta cara a los ‘trolls’</a>
+                <div className="author">by José Mendiola Zuriarrain</div>
+                <div className="publish-date text-muted">Nov 3, 2016</div>
               </div>
               <div className="news-widget">
-                <div className="source text-muted mozilla-logo">Mozilla Blog</div>
-                <a href="https://blog.mozilla.org/blog/2017/01/19/digital-citizens-lets-talk-about-internet-health/" className="title">Digital Citizens, Let’s Talk About Internet Health</a>
-                <div className="author">by Mark Surman</div>
-                <div className="publish-date text-muted">Jan 19, 2017</div>
+                <div className="source text-muted">CBC</div>
+                <a href="http://www.cbc.ca/radio/spark/internet-health-as-a-social-issue-1.4053202" className="title">Internet health as a social issue</a>
+                <div className="author">by Nora Young</div>
+                <div className="publish-date text-muted">April 9, 2017</div>
               </div>
             </div>
           </div>
