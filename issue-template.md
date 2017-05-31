@@ -2,7 +2,6 @@
 
 **[ Submitter's Name ]** <%= submitterName %>
 <% if (typeof(submitterOrg) !== "undefined") { %>**[ Submitter's Affiliated Organisation ]** <%= submitterOrg %><% } %>
-<% if (typeof(submitterTwitter) !== "undefined") { %>**[ Submitter's Twitter ]** [`<%= submitterTwitter %>`](https://twitter.com/<%= submitterTwitter %>)<% } %>
 <% if (typeof(submitterGithub) !== "undefined") { %>**[ Submitter's Github ]** <%= submitterGithub %><% } %>
 
 <% if (typeof(additionalFacilitators) !== "undefined") { %>**[ Additional facilitators ]** <%= additionalFacilitators %><% } %>
