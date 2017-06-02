@@ -1,4 +1,12 @@
 .proposals-page {
+  .error-styling {
+    .px-1;
+    color: darken(@pink, 15%);
+    background: lighten(@pink, 40%);
+    font-style: italic;
+    font-size: 0.875rem;
+  }
+
   .form-section {
     h1 {
       .mt-5;
@@ -86,12 +94,8 @@
     }
     .inline.error {
       .mt-1;
-      .px-1;
+      .error-styling;
       display: inline-block;
-      color: darken(@pink, 15%);
-      background: lighten(@pink, 40%);
-      font-style: italic;
-      font-size: 0.875rem;
     }
   }
 
@@ -139,5 +143,9 @@
 
   .submit-another {
     color: @pink;
+  }
+
+  .form-invalid-error {
+    .error-styling;
   }
 }
