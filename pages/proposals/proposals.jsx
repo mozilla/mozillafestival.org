@@ -19,7 +19,8 @@ var Proposal = React.createClass({
     return {
       formValues: {},
       submitting: false,
-      submissionStatus: ``
+      submissionStatus: ``,
+      showFormInvalidNotice: false
     };
   },
   handleSubmitAnother(event) {
@@ -29,7 +30,12 @@ var Proposal = React.createClass({
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
-    this.setState({ formValues });
+    this.setState({ 
+      formValues,
+      // hide notice once user starts typing again
+      // this is a quick fix.
+      showFormInvalidNotice: false
+    });
   },
   handleFormSubmit(event) {
     event.preventDefault();
@@ -45,10 +51,13 @@ var Proposal = React.createClass({
 
             if (partOneIsValid && partTwoIsValid && partThreeIsValid && partFourIsValid) {
               this.setState({
-                submitting: true
+                submitting: true,
+                showFormInvalidNotice: false
               }, () => {
                 this.submitProposal(this.state.formValues);
               });
+            } else {
+              this.setState({showFormInvalidNotice: true});
             }
           });
         });
@@ -135,13 +144,16 @@ var Proposal = React.createClass({
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
-        <button
-          ref="submitBtn" 
-          className="btn btn-primary-outline mr-3 my-5"
-          type="submit"
-          onClick={this.handleFormSubmit}
-          disabled={this.state.submitting ? `disabled` : null}
-        >{ this.state.submitting ? SUBMITTING_LABEL : PRE_SUBMIT_LABEL }</button>
+        <div>
+          <button
+            ref="submitBtn" 
+            className="btn btn-primary-outline mr-3 my-5"
+            type="submit"
+            onClick={this.handleFormSubmit}
+            disabled={this.state.submitting ? `disabled` : null}
+          >{ this.state.submitting ? SUBMITTING_LABEL : PRE_SUBMIT_LABEL }</button>
+          { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">Something isn't right. Please fix the errors indicated above.</div> }
+        </div>
 
         { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
       </div>
