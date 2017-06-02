@@ -4,21 +4,19 @@ var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
+var classnames = require('classnames');
 
 var TimeLineItem = React.createClass({
   render: function() {
-    var className = "timeline-item";
-    if (this.props.flip) {
-      className += " flip-it";
-    }
-    if (this.props.className) {
-      className += " " + this.props.className;
-    }
+    var className = classnames(this.props.className, "timeline-item", {
+      "flip-it": this.props.flip
+    });
+
     var self = this;
     return (
       <div className={className}>
         <div className="timeline-time-circle">{this.props.time}</div>
-        <div className="timeline-item-container">
+        <div className="timeline-item-container w-100 d-flex align-items-center justify-content-center">
           {function() {
             if (!self.props.flip) {
               return (
@@ -71,7 +69,7 @@ var CircleNumber = React.createClass({
   render: function() {
     return (
       <div className="circle-container">
-        <div className="circle">
+        <div className="circle rounded-circle d-flex align-items-center justify-content-center">
           {this.props.number}
         </div>
         <div className="label">{this.props.children}</div>
