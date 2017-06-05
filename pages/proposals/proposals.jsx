@@ -67,14 +67,21 @@ var Proposal = React.createClass({
   },
   formatProposal(proposal) {
     let formatted = Object.assign({}, proposal);
+    let additionalLang = formatted.additionallanguage;
+    let otherAdditionalLang = formatted.additionallanguageother;
 
-    if (formatted.additionallanguage && formatted.additionallanguage === `Other` && formatted.additionallanguageother) {
-      formatted.additionallanguage = `Other: ${formatted.additionallanguageother}`;
+    if (additionalLang === `Other`) {
+      delete formatted.additionallanguage;
       delete formatted.additionallanguageother;
+
+      // we record "additionallanguage" only if user has specified the language
+      if (otherAdditionalLang) {
+        formatted.additionallanguage = `Other: ${otherAdditionalLang}`;
+      }
     }
 
-    if (formatted.alternatespace && formatted.alternatespace === `None`) {
-      delete formatted.alternatespace;
+    if (formatted.secondaryspace === `None`) {
+      delete formatted.secondaryspace;
     }
 
     formatted.travelstipend = formatted.travelstipend === fields.LABEL_STIPEND_REQUIRED ? `required` : ``;
