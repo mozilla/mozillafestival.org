@@ -16,10 +16,11 @@ var SpacesInfo = [
       <p>Join us at Mozfest as we look into the future. Dystopian, utopian or somewhere in between &mdash; let’s explore the Internet of 2027.</p>
     </div>),
     contacts: [
-      { name: "Vigneshwer ‘Viki’ Dhinakaran" },
+      { name: "D. Vigneshwer 'Viki'" },
       { name: "Ian Forrester" },
       { name: "Tim Cowlishaw" },
-      { name: "Jon Tutcher" }
+      { name: "Jon Tutcher" },
+      { name: "Mark Boas" }
     ]
   },
   {
