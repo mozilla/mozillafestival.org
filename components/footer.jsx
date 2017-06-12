@@ -17,7 +17,7 @@ const FOOTER_LINKS = [
     text: `Participation Guidelines`
   },
   {
-    link: `https://www.mozilla.org/en-US/about/legal/terms/mozilla/`,
+    link: `https://www.mozilla.org/about/legal/terms/mozilla/`,
     text: `Terms`
   },
   {
