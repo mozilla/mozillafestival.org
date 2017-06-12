@@ -170,7 +170,7 @@ var Proposal = React.createClass({
     return (
       <div>
         <h1>Welcome to the MozFest 2017 Call for Proposals.</h1>
-        <p>MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>.</p>
+        <p>MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>. We welcome workshops and exhibits, and often shy away from sessions that are exclusively lectures and slide presentations.</p>
         <p>Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend your session.</p>
         <p>Anyone may submit a proposal for MozFest 2017. Once you have submitted your session, it will enter an open curation process on <a href="https://github.com/MozillaFoundation/mozfest-program-2017" target="_blank">GitHub</a>.</p>
         <p>In addition to English, this year we are accepting proposals in Spanish, French and German. Please check back in by June 15 to find localized versions of this form.</p>
