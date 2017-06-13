@@ -1,0 +1,97 @@
+{
+  "language": "English",
+  "page_banner_header": "Call for Proposals",
+  "page_banner_subheader": "Deadline for submissions is August 1, 2017",
+  "form_section_intro": {
+    "background": {
+      "header": "Welcome to the MozFest 2017 Call for Proposals",
+      "body": [
+        "MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>. We welcome workshops and exhibits, and strongly favor these over sessions that are exclusively lectures and slide presentations.",
+        "Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend your session.",
+        "Anyone may submit a proposal for MozFest 2017. Once you have submitted your session, it will enter an open curation process on <a href=\"https://github.com/MozillaFoundation/mozfest-program-2017\" target=\"_blank\">GitHub</a>.",
+        "In addition to English, this year we are accepting proposals in <a href=\"/proposals/espanol\">Spanish</a>, <a href=\"/proposals/francais\">French</a> and <a href=\"/proposals/deutsch\">German</a>. Please check back in by June 15 to find localized versions of this form.",
+        "If you would like to submit a session and have difficulty using this text-based form, please <a href=\"mailto:festival@mozilla.org\">email us</a> to discuss accessibility options.",
+        "If you have any questions, please email <a href=\"mailto:festival@mozilla.org\">festival@mozilla.org</a>.",
+        "Submission deadline: August 1, 2017"
+      ]
+    },
+    "space": {
+      "header": "Festival Spaces",
+      "body": [
+        "At MozFest, sessions are thematically organised into spaces. Please read the brief descriptions of each space <a href=\"/spaces\" target=\"_blank\">here</a> before answering the following questions."
+      ]
+    },
+    "describe": {
+      "header": "Describe your session",
+      "body": [
+      ]
+    },
+    "travel": {
+      "header": "Travel support",
+      "body": [
+        "MozFest offers limited places for travel sponsorship covering flights and accommodation over the festival weekend. These stipends are offered to those who need support traveling to the event and would have no other means to attend through work or personal covering of costs. We offer these stipends to encourage diversity in facilitators."
+      ]
+    },
+    "material": {
+      "header": "Session materials",
+      "body": [
+        "Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible."
+      ]
+    }
+  },
+  "form_field_labels": {
+    "firstname": "First name",
+    "surname": "Surname",
+    "email": "Email address",
+    "organisation": "Organisation",
+    "twitterhandle": "Twitter handle",
+    "githubhandle": "GitHub handle",
+    "otherfacilitators": "Additional facilitators for your session",
+    "space": "What space do feel your session will best contribute to?",
+    "secondaryspace": "Is there an alternate space your session could contribute to?",
+    "name": "Session name",
+    "description": "What will happen in your session?",
+    "outcome": "What is the goal or outcome of your session?",
+    "afterfestival": "After the festival, how will you and your participants take the learning and activities forward?",
+    "timeneeded": "How much time you will need?",
+    "numsofparticipants": "How will you deal with varying numbers of participants in your session? What if 30 participants attend? What if there are 3?",
+    "additionallanguage": "Would you like to deliver this session bilingually in one of the following languages?",
+    "travelstipend": "Do you require a travel stipend?",
+    "needs": "If your session requires additional materials or electronic equipment, please outline your needs."
+  },
+  "form_field_options": {
+    "spaces": {
+      "decentralization": "Decentralization",
+      "digital_inclusion": "Digital Inclusion",
+      "open_innovation": "Open Innovation",
+      "privacy_and_security": "Privacy and Security",
+      "web_literacy": "Web Literacy",
+      "youth_zone": "Youth Zone",
+      "none": "None"
+    },
+    "timeneeded": {
+      "less_than_60_mins": "less than 60 mins",
+      "60_mins": "60 mins",
+      "90_mins": "90 mins",
+      "all_weekend": "All weekend, as an installation, exhibit or drop-in session"
+    },
+    "languages": {
+      "spanish": "Spanish",
+      "german": "German",
+      "french": "French",
+      "other": "Other"
+    },
+    "stipendnotrequired": "I do not require a travel stipend as I, or my work, can cover my costs",
+    "stipendrequired": "I can only attend MozFest if I receive a travel stipend covering my travel and accommodation"
+  },
+  "form_field_controls": {
+    "add_another": "+ Add another",
+    "submit": "Submit",
+    "submitting": ""
+  },
+   "form_validation_errors": {
+    "empty_value": "This field cannot be left blank.",
+    "max_word_reached": "You have typed more words than allowed.",
+    "email_invalid": "Not an valid email."
+  }
+}

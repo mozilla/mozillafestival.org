@@ -1,12 +1,29 @@
 import React from 'react';
-import {Router, Route, Redirect, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, Redirect, browserHistory} from 'react-router';
 import ReactDOM from 'react-dom';
+import Proposals from './pages/proposals/proposals.jsx';
+import EnglishStrings from './pages/proposals/language/english.json';
 
+const LANGUAGE = {
+  deutsch: require('./pages/proposals/language/deutsch.json'),
+  espanol: require('./pages/proposals/language/espanol.json'),
+  francais: require('./pages/proposals/language/francais.json')
+};
+
+const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
+  var component = () => (<Proposals lang={lang} localizedStrings={LANGUAGE[lang]} />);
+  return <Route key={lang} name={lang} path={lang} component={component} />;
+});
+
+var ProposalEnglish = () => ( <Proposals lang="english" localizedStrings={EnglishStrings} /> );
 
 var routes = (
   <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
-    <Route name="proposals" path="/proposals" component={require(`./pages/proposals/proposals.jsx`)} />
+    <Route name="proposals" path="/proposals">
+      <IndexRoute component={ProposalEnglish} />
+      { LOCALIZED_PROPOSAL_ROUTES }
+    </Route>
     <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
     <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
     <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
