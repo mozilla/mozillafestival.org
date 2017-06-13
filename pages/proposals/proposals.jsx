@@ -8,7 +8,7 @@ var Router = require('react-router');
 var Form = require('react-formbuilder').Form;
 var fields = require('./form/fields');
 var generateHelmet = require('../../lib/helmet.jsx');
-var EnglishStrings = require('./language/English.json');
+var EnglishStrings = require('./language/english.json');
 
 const SUBMISSION_STATUS_SUCCESS = `success`;
 const SUBMISSION_STATUS_FAIL = `fail`;
