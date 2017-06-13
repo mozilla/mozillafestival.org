@@ -15,7 +15,7 @@ const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
   return <Route key={lang} name={lang} path={lang} component={component} />;
 });
 
-var ProposalEnglish = () => ( <Proposals lang="english" localizedStrings={EnglishStrings} /> );
+var ProposalEnglish = () => <Proposals lang="english" localizedStrings={EnglishStrings} />;
 
 var routes = (
   <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>

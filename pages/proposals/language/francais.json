@@ -95,7 +95,7 @@
   "form_field_controls": {
     "add_another": "+ Ajouter",
     "submit": "Envoyer",
-    "submitting": ""
+    "submitting": "Envoi…"
   },
   "form_validation_errors": {
     "empty_value": "Ce champ ne peut rester vide.",

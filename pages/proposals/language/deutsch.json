@@ -86,7 +86,7 @@
   "form_field_controls": {
     "add_another": "+ Weitere hinzufügen",
     "submit": "Absenden",
-    "submitting": ""
+    "submitting": "Wird übermittelt…"
   },
   "form_validation_errors": {
     "empty_value": "Dieses Feld darf nicht leer sein.",

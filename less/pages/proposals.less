@@ -198,4 +198,27 @@
       }
     }
   }
+
+  &.espanol {
+    form {
+      label {
+
+        &.required {
+          &::after {
+            content: "(obligatorio)";
+          }
+        }
+        &.word-length-restriction.max-120-words {
+          &::after {
+            content: "(Máx. 120 palabras)";
+          }
+        }
+        &.word-length-restriction.max-120-words.required {
+          &::after {
+            content: "(Máx. 120 palabras) (obligatorio)";
+          }
+        }
+      }
+    }
+  }
 }
