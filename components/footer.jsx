@@ -5,26 +5,32 @@ import { MofoFooter } from 'mofo-ui';
 
 const FOOTER_LINKS = [
   {
+    iconType: `chat`,
     link: `https://medium.com/mozilla-festival/tagged/mozfest2016`,
     text: `Blog`
   },
   {
+    iconType: `info`,
     link: `/team`,
     text: `Festival Team`
   },
   {
+    iconType: `code-of-conduct`,
     link: `/guidelines`,
     text: `Participation Guidelines`
   },
   {
+    iconType: `legal`,
     link: `https://www.mozilla.org/about/legal/terms/mozilla/`,
     text: `Terms`
   },
   {
+    iconType: `privacy`,
     link: `https://www.mozilla.org/privacy/websites`,
     text: `Privacy`
   },
   {
+    iconType: `cookies`,
     link: `https://www.mozilla.org/privacy/websites/#cookies`,
     text: `Cookies`
   }
