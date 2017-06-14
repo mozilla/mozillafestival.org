@@ -91,6 +91,13 @@
   "form_validation_errors": {
     "empty_value": "Dieses Feld darf nicht leer sein.",
     "max_word_reached": "Sie haben mehr Wörter als erlaubt eingegeben.",
-    "email_invalid": "Keine gültige E-Mail-Adresse."
+    "email_invalid": "Keine gültige E-Mail-Adresse.",
+    "errors_above": "Da stimmt etwas nicht. Bitte beheben Sie die oben genannten Fehler."
+  },
+  "form_system_messages": {
+    "server_error": "Leider können wir Ihren Vorschlag derzeit nicht übermitteln. Bitte versuchen Sie es erneut oder <a href=\"mailto:festival@mozilla.org\">kontaktieren Sie uns</a>.",
+    "success": "Fertig!",
+    "thank_you": "Danke für Ihren Veranstaltungsvorschlag",
+    "submit_another": "Möchten Sie noch einen einreichen?"
   }
 }

@@ -92,6 +92,13 @@
    "form_validation_errors": {
     "empty_value": "Este campo no se puede dejar en blanco.",
     "max_word_reached": "Has escrito más palabras de las permitidas.",
-    "email_invalid": "No es un email válido."
+    "email_invalid": "No es un email válido.",
+    "errors_above": "Algo no está bien. Por favor, corrige los errores indicados más arriba."
+  },
+  "form_system_messages": {
+    "server_error": "¡Lo sentimos! No hemos podido enviar tu propuesta. Vuelve a intentarlo o <a href=\"mailto:festival@mozilla.org\">escríbenos un correo</a>.",
+    "success": "¡Conseguido!",
+    "thank_you": "Gracias por tu propuesta de sesión",
+    "submit_another": "¿Quieres enviar otra?"
   }
 }
