@@ -1,5 +1,6 @@
 var React = require('react');
 var Link = require('react-router').Link;
+var classnames = require('classnames');
 var Header = require('../../components/header.jsx');
 var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
@@ -7,9 +8,8 @@ var Router = require('react-router');
 var Form = require('react-formbuilder').Form;
 var fields = require('./form/fields');
 var generateHelmet = require('../../lib/helmet.jsx');
+var EnglishStrings = require('./language/english.json');
 
-const PRE_SUBMIT_LABEL = `Submit`;
-const SUBMITTING_LABEL = `Submitting...`;
 const SUBMISSION_STATUS_SUCCESS = `success`;
 const SUBMISSION_STATUS_FAIL = `fail`;
 
@@ -63,28 +63,71 @@ var Proposal = React.createClass({
         });
       });      
     });
-
   },
   formatProposal(proposal) {
+    const DEFAULT_OPTIONS = EnglishStrings.form_field_options;
+    const FIELD_OPTIONS = this.props.stringSource.form_field_options;
+    const SPACES = FIELD_OPTIONS.spaces;
+    const TIME = FIELD_OPTIONS.timeneeded;
+    const LANGUAGES = FIELD_OPTIONS.languages;
+
     let formatted = Object.assign({}, proposal);
-    let additionalLang = formatted.additionallanguage;
-    let otherAdditionalLang = formatted.additionallanguageother;
 
-    if (additionalLang === `Other`) {
-      delete formatted.additionallanguage;
-      delete formatted.additionallanguageother;
-
-      // we record "additionallanguage" only if user has specified the language
-      if (otherAdditionalLang) {
-        formatted.additionallanguage = `Other: ${otherAdditionalLang}`;
+    // Although Space names on the form are localized, when we submit the entry to
+    // Google Spreadsheet and GitHub we want them to be in English.
+    // This is to make the curation process simpler.
+    for (let key in SPACES) {
+      if (SPACES[key] === formatted.space) {
+        formatted.space = DEFAULT_OPTIONS.spaces[key];
+      }
+      if (SPACES[key] === formatted.secondaryspace) {
+        formatted.secondaryspace = DEFAULT_OPTIONS.spaces[key];
       }
     }
-
-    if (formatted.secondaryspace === `None`) {
+    if (formatted.secondaryspace === DEFAULT_OPTIONS.spaces.none) {
       delete formatted.secondaryspace;
     }
 
-    formatted.travelstipend = formatted.travelstipend === fields.LABEL_STIPEND_REQUIRED ? `required` : ``;
+    // Similarly, although Language labels are localized, when we submit the entry to
+    // Google Spreadsheet and GitHub we want them to be in English.
+    // This is to make the curation process simpler.
+    let additionalLang = formatted.additionallanguage;
+    let otherAdditionalLang = formatted.additionallanguageother;
+
+    delete formatted.additionallanguage;
+    delete formatted.additionallanguageother;
+
+    if (additionalLang === LANGUAGES.other) {
+      // we record "additionallanguage" only if user has specified the language
+      if (otherAdditionalLang) {
+        formatted.additionallanguage = `${DEFAULT_OPTIONS.languages.other}: ${otherAdditionalLang}`;
+      }
+    } else {
+      for (let key in LANGUAGES) {
+        if (LANGUAGES[key] === additionalLang) {
+          formatted.additionallanguage = DEFAULT_OPTIONS.languages[key];
+        }
+      }
+    }
+
+    // "proposallanguage"
+    // We should record the language the proposal was written in.
+    // Make sure the name of the language is recorded in English.
+    // (e.g., record it as "German" but not "Deutsch")
+    let proposalLang = this.props.lang;
+    // Capitalize the first letter
+    formatted.proposallanguage = proposalLang.charAt(0).toUpperCase() + proposalLang.slice(1);
+
+    // Do the same for "timeneeded" - translate the values to English
+    for (let key in TIME) {
+      if (TIME[key] === formatted.timeneeded) {
+        formatted.timeneeded = DEFAULT_OPTIONS.timeneeded[key];
+      }
+    }
+
+    // let's simplify the value for "travelstipend" from a long string
+    // to just "required" or blank
+    formatted.travelstipend = formatted.travelstipend === FIELD_OPTIONS.stipendrequired ? `required` : ``;
 
     return formatted;
   },
@@ -111,43 +154,43 @@ var Proposal = React.createClass({
     request.send(JSON.stringify(formattedProposal));
   },
   renderForm() {
+    let stringSource = this.props.stringSource;
+    let formFields = fields.createFields(stringSource);
+
     return (
       <div className="content wide">
-        {this.renderIntro()}
         <div className="form-section">
+          {this.renderIntro(stringSource.form_section_intro.background)}
           <Form ref="formPartOne" 
-            fields={fields.partOne}
+            fields={formFields.partOne}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          <h1>Festival Spaces</h1>
-          <p>At MozFest, sessions are thematically organised into spaces. Please read the brief descriptions of each space <Link to="/spaces" target="_blank">here</Link> before answering the following questions.</p>
+          {this.renderIntro(stringSource.form_section_intro.space)}
           <Form ref="formPartTwo" 
-            fields={fields.partTwo}
+            fields={formFields.partTwo}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          <h1>Describe your session</h1>
+          {this.renderIntro(stringSource.form_section_intro.describe)}
           <Form ref="formPartThree" 
-            fields={fields.partThree}
+            fields={formFields.partThree}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          <h1>Travel support</h1>
-          <p>MozFest offers limited places for travel sponsorship covering flights and accommodation over the festival weekend. These stipends are offered to those who need support traveling to the event and would have no other means to attend through work or personal covering of costs. We offer these stipends to encourage diversity in facilitators.</p>
+          {this.renderIntro(stringSource.form_section_intro.travel)}
           <Form ref="formPartFour" 
-            fields={fields.partFour}
+            fields={formFields.partFour}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          <h1>Session materials</h1>
-          <p>Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector and office supplies (paper, pens, post-it notes). Please note we may not be capable of supporting all your needs but will work with you to provide the best solution possible.</p>
+          {this.renderIntro(stringSource.form_section_intro.material)}
           <Form ref="formPartFive" 
-            fields={fields.partFive}
+            fields={formFields.partFive}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
@@ -158,7 +201,7 @@ var Proposal = React.createClass({
             type="submit"
             onClick={this.handleFormSubmit}
             disabled={this.state.submitting ? `disabled` : null}
-          >{ this.state.submitting ? SUBMITTING_LABEL : PRE_SUBMIT_LABEL }</button>
+          >{ this.state.submitting ? `Submiting...` : stringSource.form_field_controls.submit }</button>
           { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">Something isn't right. Please fix the errors indicated above.</div> }
         </div>
 
@@ -166,17 +209,16 @@ var Proposal = React.createClass({
       </div>
     )
   },
-  renderIntro() {
+  renderIntro(content) {
+    let paragraphs = content.body.map((paragraph, i) => {
+      // using dangerouslySetInnerHTML is okay here since we are pulling strings from a static json file, not user content or anything change dynamically over time without our attention
+      return <p dangerouslySetInnerHTML={{__html: paragraph}} key={i}></p>;
+    });
+
     return (
       <div>
-        <h1>Welcome to the MozFest 2017 Call for Proposals.</h1>
-        <p>MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>. We welcome workshops and exhibits, and often shy away from sessions that are exclusively lectures and slide presentations.</p>
-        <p>Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend your session.</p>
-        <p>Anyone may submit a proposal for MozFest 2017. Once you have submitted your session, it will enter an open curation process on <a href="https://github.com/MozillaFoundation/mozfest-program-2017" target="_blank">GitHub</a>.</p>
-        <p>In addition to English, this year we are accepting proposals in Spanish, French and German. Please check back in by June 15 to find localized versions of this form.</p>
-        <p>If you would like to submit a session and have difficulty using this text-based form, please <a href="mailto:festival@mozilla.org">email us</a> to discuss accessibility options.</p>
-        <p>If you have any questions, please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</p>
-        <p>Submission deadline: August 1, 2017</p>
+        <h1>{content.header}</h1>
+        { paragraphs }
       </div>
     );
   },
@@ -206,14 +248,16 @@ var Proposal = React.createClass({
     return this.renderForm();
   },
   render: function() {
+    let stringSource = this.props.stringSource;
+
     return (
-      <div className="proposals-page">
+      <div className={classnames(`proposals-page`, this.props.lang)}>
         <Header/>
         <Jumbotron image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
-          <h1>Call for Proposals</h1>
+          <h1>{stringSource.page_banner_header}</h1>
           <div className="deadline">
-            <span>Deadline for submissions is August 1, 2017</span>
+            <span dangerouslySetInnerHTML={{__html: stringSource.page_banner_subheader}}></span>
           </div>
         </Jumbotron>
         {generateHelmet(this.pageMetaDescription)}

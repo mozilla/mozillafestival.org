@@ -1,0 +1,96 @@
+{
+  "language": "Deutsch",
+  "page_banner_header": "Aufruf für Vorschläge",
+  "page_banner_subheader": "Die Frist zur Einreichung ist der 1. August 2017",
+  "form_section_intro": {
+    "background": {
+      "header": "Willkommen beim Aufruf für Vorschläge zum MozFest 2017",
+      "body": [
+        "MozFest-Veranstaltungen umfassen eine Reihe von Themen, haben aber zwei wichtige Gemeinsamkeiten: Sie sind interaktiv und inklusiv.",
+        "Veranstaltungen können 3 bis 25 Teilnehmer haben, die unterschiedliche Fähigkeiten haben und verschiedenen Altersgruppen angehören. Jeder beim Festival ist eingeladen, Ihre Veranstaltung zu besuchen.",
+        "Jeder kann Vorschläge für das MozFest 2017 machen. Sobald Sie Ihre Veranstaltung vorgeschlagen haben, wird Sie öffentlich auf <a href=\"https://github.com/MozillaFoundation/mozfest-program-2017\" target=\"_blank\">GitHub</a> verwaltet.",
+        "Neben Vorschlägen auf Englisch akzeptieren wir in diesem Jahr auch Vorschläge auf <a href=\"/proposals/espanol\">Spanisch</a>, <a href=\"/proposals/francais\">Französisch</a> und <a href=\"/proposals/deutsch\">Deutsch</a>.",
+        "Wenn Sie eine Veranstaltung vorschlagen möchten und Probleme mit diesem textbasierten Formular haben, <a href=\"mailto:festival@mozilla.org\">schreiben Sie uns bitte eine E-Mail</a>, um barrierefreie Optionen zu besprechen.",
+        "Wenn Sie Fragen haben, melden Sie sich bitte unter <a href=\"mailto:festival@mozilla.org\">festival@mozilla.org</a>.",
+        "Frist zur Einreichung: 1. August 2017"
+      ]
+    },
+    "space": {
+      "header": "Festival-Orte",
+      "body": [
+      ]
+    },
+    "describe": {
+      "header": "Beschreiben Sie Ihre Veranstaltung",
+      "body": [
+      ]
+    },
+    "travel": {
+      "header": "Reiseunterstützung",
+      "body": [
+        "MozFest bietet eine begrenze Zahl an Plätzen für Reise-Sponsoring, was Flüge und Unterkunft für das Festival-Wochenende umfasst. Diese Stipendien werden denen angeboten, die Unterstützung bei der Reise zur Veranstaltung benötigen und nicht beruflich oder auf eigene Kosten teilnehmen können. Wir bieten diese Stipendien zur Förderung von Vielfalt unter den Moderatoren an."
+      ]
+    },
+    "material": {
+      "header": "Veranstaltungsmaterialien",
+      "body": [
+        "Viele Teilnehmer bringen ein eigenes Gerät (Smartphone, Laptop oder Tablet) mit zum Festival. Wir können Ihnen einen Projektor und Büromaterial (Papier, Stifte, Klebezettel) zur Verfügung stellen. Wir können vielleicht nicht alle Ihre Bedürfnisse befriedigen, aber wir arbeiten mit Ihnen an der bestmöglichen Lösung."
+      ]
+    }
+  },
+  "form_field_labels": {
+    "firstname": "Vorname",
+    "surname": "Nachname",
+    "email": "E-Mail-Adresse",
+    "organisation": "Organisation",
+    "twitterhandle": "Twitter-Name",
+    "githubhandle": "GitHub-Name",
+    "otherfacilitators": "Zusätzliche Moderatoren für Ihre Veranstaltung",
+    "space": "An welchem Ort wird Ihre Veranstaltung am meisten beitragen?",
+    "secondaryspace": "Gibt es einen alternativen Ort, an dem Ihre Veranstaltung beitragen könnte?",
+    "name": "Name der Veranstaltung",
+    "description": "Was passiert in Ihrer Veranstaltung?",
+    "outcome": "Was ist das Ziel oder Ergebnis Ihrer Veranstaltung?",
+    "afterfestival": "Wie werden Sie und Ihre Teilnehmer nach dem Festival weiteres Lernen und weitere Aktivitäten organisieren?",
+    "timeneeded": "Wie viel Zeit Sie benötigen",
+    "numsofparticipants": "Wie werden Sie mit unterschiedlichen Teilnehmerzahlen in Ihrer Veranstaltung umgehen? Was ist, wenn 30 Personen teilnehmen? Was ist, wenn es 3 sind?",
+    "additionallanguage": "Möchten Sie die Veranstaltung in einer der folgenden Sprachen zweisprachig abhalten?",
+    "travelstipend": "Benötigen Sie ein Reisestipendium?",
+    "needs": "Wenn Ihre Veranstaltung zusätzliche Materialien oder elektronische Ausrüstung benötigt, beschreiben Sie bitte Ihre Bedürfnisse."
+  },
+  "form_field_options": {
+    "spaces": {
+      "decentralization": "Dezentralisierung",
+      "digital_inclusion": "Digitale Inklusion",
+      "open_innovation": "Offene Innovation",
+      "privacy_and_security": "Datenschutz und Sicherheit",
+      "web_literacy": "Web-Kenntnisse",
+      "youth_zone": "Jugend-Bereich",
+      "none": "Keiner"
+    },
+    "timeneeded": {
+      "less_than_60_mins": "weniger als 60 Minuten",
+      "60_mins": "60 Minuten",
+      "90_mins": "90 Minuten",
+      "all_weekend": "Das ganze Wochenende, als Installation, Ausstellung oder Veranstaltung zur spontanen Teilnahme"
+    },
+    "languages": {
+      "spanish": "Spanisch",
+      "german": "Deutsch",
+      "french": "Französisch",
+      "other": "Autre"
+    },
+    "stipendnotrequired": "Ich benötige kein Reisestipendium, da ich selbst oder mein Arbeitgeber meine Kosten übernehmen kann",
+    "stipendrequired": "Ich kann nur dann am MozFest teilnehmen, wenn ich ein Reisestipendium erhalte, das meine Kosten für Reise und Unterkunft abdeckt"
+  },
+  "form_field_controls": {
+    "add_another": "+ Weitere hinzufügen",
+    "submit": "Absenden",
+    "submitting": "Wird übermittelt…"
+  },
+  "form_validation_errors": {
+    "empty_value": "Dieses Feld darf nicht leer sein.",
+    "max_word_reached": "Sie haben mehr Wörter als erlaubt eingegeben.",
+    "email_invalid": "Keine gültige E-Mail-Adresse."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "language": "Francais",
+  "page_banner_header": "Appel à propositions",
+  "page_banner_subheader": "La date limite pour les propositions est le 1<sup>er</sup> août 2017",
+  "spaces": {
+    "Decentralization": "Décentralisation",
+    "Digital Inclusion": "Inclusion numérique",
+    "Open Innovation": "Innovation ouverte",
+    "Privacy and Security": "Vie privée et sécurité",
+    "Web Literacy": "Éducation au Web",
+    "Youth Zone": "Espace jeunesse",
+    "None": "Aucun"
+  },
+  "form_section_intro": {
+    "background": {
+      "header": "Bienvenue sur l’appel à propositions pour le MozFest 2017",
+      "body": [
+        "Les sessions du MozFest couvrent un large éventail de sujets, mais partagent deux qualités essentielles: elles sont interactives et inclusives.",
+        "Le nombre de participants à une session peut varier de 3 à 25, et l’âge et les aptitudes de chacun peuvent grandement varier. Tout le monde est le bienvenu à votre session.",
+        "N’importe qui peut proposer une session pour le MozFest 2017. Une fois la session proposée, elle sera soumise à un processus de sélection ouvert qui aura lieu sur <a href=\"https://github.com/MozillaFoundation/mozfest-program-2017\" target=\"_blank\">GitHub</a>.",
+        "En plus de l’anglais, cette année nous acceptons les propositions en <a href=\"/proposals/espanol\">espagnol</a>, <a href=\"/proposals/francais\">français</a> et <a href=\"/proposals/deutsch\">allemand</a>.",
+        "Si vous souhaitez proposer une session et avez des difficultés à utiliser ce formulaire, merci de <a href=\"mailto:festival@mozilla.org\">nous contacter</a> pour discuter des options d’accessibilité.",
+        "Si vous avez des questions, veuillez contacter <a href=\"mailto:festival@mozilla.org\">festival@mozilla.org</a>.",
+        "Date limite d’envoi: 1<sup>er</sup> août 2017"
+      ]
+    },
+    "space": {
+      "header": "Espaces du festival",
+      "body": [
+        "Au MozFest, les sessions sont organisées selon des espaces thématiques. Vous pouvez <a href=\"/spaces\" target=\"_blank\">consulter une brève description de chacun des espaces</a> avant de répondre aux questions suivantes."
+      ]
+    },
+    "describe": {
+      "header": "Décrivez votre session",
+      "body": [
+      ]
+    },
+    "travel": {
+      "header": "Frais de déplacement",
+      "body": [
+      ]
+    },
+    "material": {
+      "header": "Matériel nécessaire pour la session",
+      "body": [
+        "De nombreux participants apportent un appareil personnel (smartphone, ordinateur portable ou tablette) au festival. Nous pouvons vous fournir un projecteur ou des fournitures de bureau (papier, stylos, post-its). Il est possible que nous ne soyons pas en mesure de satisfaire toutes vos demandes, cependant nous discuterons avec vous pour trouver la meilleure solution possible."
+      ]
+    }
+  },
+  "form_field_labels": {
+    "firstname": "Prénom",
+    "surname": "Nom",
+    "email": "Adresse électronique",
+    "organisation": "Société",
+    "twitterhandle": "Identifiant Twitter",
+    "githubhandle": "Identifiant GitHub",
+    "otherfacilitators": "Animateurs supplémentaires pour votre session",
+    "space": "Dans quel espace pensez-vous que votre session serait la plus pertinente?",
+    "secondaryspace": "Y a-t-il un espace alternatif auquel votre session pourrait contribuer?",
+    "name": "Nom de la session",
+    "description": "Que se passera-t-il pendant votre session?",
+    "outcome": "Quel est le but ou les résultats attendus de votre session?",
+    "afterfestival": "À la suite du festival, comment vos participants et vous-même prévoyez de tirer parti des enseignements et activités de la session?",
+    "timeneeded": "De combien de temps avez-vous besoin?",
+    "numsofparticipants": "De quelle façon prendrez-vous en compte la possible variation du nombre de participants à votre session? Que ferez-vous si 30 personnes participent? Que ferez-vous si 3 personnes participent?",
+    "additionallanguage": "Souhaitez-vous présenter cette session également dans l’une des langues suivantes?",
+    "travelstipend": "Avez-vous besoin d’un remboursement de vos frais de déplacement?",
+    "needs": "Si vous avez besoin de matériel ou d’équipement électronique supplémentaire pour votre session, veuillez les détailler ci-dessous."
+  },
+  "form_field_options": {
+    "spaces": {
+      "decentralization": "Décentralisation",
+      "digital_inclusion": "Inclusion numérique",
+      "open_innovation": "Innovation ouverte",
+      "privacy_and_security": "Vie privée et sécurité",
+      "web_literacy": "Éducation au Web",
+      "youth_zone": "Espace jeunesse",
+      "none": "Aucun"
+    },
+    "timeneeded": {
+      "less_than_60_mins": "moins de 60 minutes",
+      "60_mins": "60 minutes",
+      "90_mins": "90 minutes",
+      "all_weekend": "L’ensemble du weekend, en tant qu’installation, exposition ou session libre"
+    },
+    "languages": {
+      "spanish": "Espagnol",
+      "german": "Allemand",
+      "french": "Français",
+      "other": "Autre"
+    },
+    "stipendnotrequired": "Je n’ai pas besoin que mes frais de déplacement soient pris en charge, car mon employeur ou moi-même les prenons en charge",
+    "stipendrequired": "Je peux seulement assister au MozFest si mes frais de déplacement et mon hébergement sont pris en charge"
+  },
+  "form_field_controls": {
+    "add_another": "+ Ajouter",
+    "submit": "Envoyer",
+    "submitting": "Envoi…"
+  },
+  "form_validation_errors": {
+    "empty_value": "Ce champ ne peut rester vide.",
+    "max_word_reached": "Vous avez saisi plus de mots qu’autorisé.",
+    "email_invalid": "Adresse électronique invalide."
+  }
+}

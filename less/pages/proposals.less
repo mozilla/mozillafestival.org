@@ -14,45 +14,11 @@
   }
 
   form {
-    label {
-      .mb-1;
-      font-weight: 600;
-      line-height: 1.2;
-
-      &.required,
-      &.word-length-restriction {
-        &::after {
-          display: inline-block;
-          font-style: italic;
-          font-size: 75%;
-          font-weight: 300;
-          margin-left: 0.5rem;
-          color: @grey;
-        }
-      }
-
-      &.required {
-        &::after {
-          content: "(required)";
-        }
-      }
-      &.word-length-restriction.max-120-words {
-        &::after {
-          content: "(max 120 words)";
-        }
-      }
-      &.word-length-restriction.max-120-words.required {
-        &::after {
-          content: "(max 120 words) (required)";
-        }
-      }
-    }
-
-    // we don't have individual options in a .choice-group to have a "required" note next to them
     .choice-group {
+      // we don't have individual options in a .choice-group to have a "required" note next to them
       label {
         &::after {
-          display: none;
+          display: none !important;
         }
       }
     }
@@ -147,5 +113,112 @@
 
   .form-invalid-error {
     .error-styling;
+  }
+}
+
+.proposals-page {
+  form {
+    label {
+      .mb-1;
+      font-weight: 600;
+      line-height: 1.2;
+
+      &.required,
+      &.word-length-restriction {
+        &::after {
+          display: inline-block;
+          font-style: italic;
+          font-size: 75%;
+          font-weight: 300;
+          margin-left: 0.5rem;
+          color: @grey;
+        }
+      }
+
+      &.required {
+        &::after {
+          content: "(required)";
+        }
+      }
+      &.word-length-restriction.max-120-words {
+        &::after {
+          content: "(max 120 words)";
+        }
+      }
+      &.word-length-restriction.max-120-words.required {
+        &::after {
+          content: "(max 120 words) (required)";
+        }
+      }
+    }
+  }
+
+  &.german {
+    form {
+      label {
+
+        &.required {
+          &::after {
+            content: "(Pflichtfeld)";
+          }
+        }
+        &.word-length-restriction.max-120-words {
+          &::after {
+            content: "(maximal 120 Wörter)";
+          }
+        }
+        &.word-length-restriction.max-120-words.required {
+          &::after {
+            content: "(maximal 120 Wörter) (Pflichtfeld)";
+          }
+        }
+      }
+    }
+  }
+
+  &.french {
+    form {
+      label {
+
+        &.required {
+          &::after {
+            content: "(requis)";
+          }
+        }
+        &.word-length-restriction.max-120-words {
+          &::after {
+            content: "(120 mots maximum)";
+          }
+        }
+        &.word-length-restriction.max-120-words.required {
+          &::after {
+            content: "(120 mots maximum) (requis)";
+          }
+        }
+      }
+    }
+  }
+
+  &.spanish {
+    form {
+      label {
+
+        &.required {
+          &::after {
+            content: "(obligatorio)";
+          }
+        }
+        &.word-length-restriction.max-120-words {
+          &::after {
+            content: "(Máx. 120 palabras)";
+          }
+        }
+        &.word-length-restriction.max-120-words.required {
+          &::after {
+            content: "(Máx. 120 palabras) (obligatorio)";
+          }
+        }
+      }
+    }
   }
 }
