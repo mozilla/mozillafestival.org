@@ -201,8 +201,8 @@ var Proposal = React.createClass({
             type="submit"
             onClick={this.handleFormSubmit}
             disabled={this.state.submitting ? `disabled` : null}
-          >{ this.state.submitting ? `Submiting...` : stringSource.form_field_controls.submit }</button>
-          { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">Something isn't right. Please fix the errors indicated above.</div> }
+          >{ this.state.submitting ? stringSource.form_field_controls.submitting : stringSource.form_field_controls.submit }</button>
+          { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">{stringSource.form_validation_errors.errors_above}</div> }
         </div>
 
         { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
@@ -223,20 +223,25 @@ var Proposal = React.createClass({
     );
   },
   renderSubmissionSuccess() {
+    let messages = this.props.stringSource.form_system_messages;
+
     return (
       <div className="centered content wide">
-        <h1 id="success">Success!</h1>
-        <p>Thank you for your session proposal.</p>
-        <button className="btn-link submit-another" onClick={this.handleSubmitAnother}>Want to submit another?</button>
+        <h1 id="success">{messages.success}</h1>
+        <p>{messages.thank_you}</p>
+        <button className="btn-link submit-another"
+                onClick={(event)=>this.handleSubmitAnother(event)}>
+          {messages.submit_another}
+        </button>
       </div>
     );
   },
   renderSubmissionFail() {
+    let stringSource = this.props.stringSource;
+
     return (
-      <div className="text-center server-error mb-5 px-2 py-4">
-        <p className="m-0"><strong>Sorry!</strong></p>
-        <p className="m-0">We are unable to submit your proposal at the moment.</p>
-        <p className="m-0">Please try again or <a href="mailto:festival@mozilla.org">contact us</a>.</p>
+      <div className="text-center server-error mb-5 px-5 py-4">
+        <p className="m-0" dangerouslySetInnerHTML={{__html: stringSource.form_system_messages.server_error}}></p>
       </div>
     );
   },

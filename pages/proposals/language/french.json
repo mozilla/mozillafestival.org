@@ -100,6 +100,13 @@
   "form_validation_errors": {
     "empty_value": "Ce champ ne peut rester vide.",
     "max_word_reached": "Vous avez saisi plus de mots qu’autorisé.",
-    "email_invalid": "Adresse électronique invalide."
+    "email_invalid": "Adresse électronique invalide.",
+    "errors_above": "Il y a un problème. Merci de corriger les erreurs indiquées ci-dessus."
+  },
+  "form_system_messages": {
+    "server_error": "Nous sommes désolés, nous ne pouvons pas envoyer votre proposition pour le moment. Veuillez réessayer ou <a href=\"mailto:festival@mozilla.org\">nous contacter</a>.",
+    "success": "Proposition envoyée",
+    "thank_you": "Merci d’avoir proposé une session.",
+    "submit_another": "Souhaitez-vous en proposer une autre ?"
   }
 }

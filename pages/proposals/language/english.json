@@ -87,11 +87,18 @@
   "form_field_controls": {
     "add_another": "+ Add another",
     "submit": "Submit",
-    "submitting": ""
+    "submitting": "Submitting..."
   },
    "form_validation_errors": {
     "empty_value": "This field cannot be left blank.",
     "max_word_reached": "You have typed more words than allowed.",
-    "email_invalid": "Not an valid email."
+    "email_invalid": "Not an valid email.",
+    "errors_above": "Something isn't right. Please fix the errors indicated above."
+  },
+  "form_system_messages": {
+    "server_error": "Sorry! We are unable to submit your proposal at the moment. Please try again or <a href=\"mailto:festival@mozilla.org\">contact us</a>.",
+    "success": "Success!",
+    "thank_you": "Thank you for your session proposal.",
+    "submit_another": "Want to submit another?"
   }
 }
