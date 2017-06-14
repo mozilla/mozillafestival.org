@@ -58,3 +58,14 @@ const LANGUAGE = {
 The localized proposal page should be available on `/proposals/newlanguage`. (e.g., `/proposals/deutsch`)
 
 3. Replace all the English strings in `newlanguage.json` with the localized strings. (**NOTE:** make sure the strings you are pasting in don't have scripts in them as these strings will be rendered as HTML without sanitization.)
+
+4. In the `sendConfirmationEmail` function in`proposal-handler.js`, add the new `language: localecode` key-value pair to `localeMap`. Make sure the `localecode` matches what's on https://github.com/mozilla/webmaker-mailroom/tree/master/locale
+e.g.,
+```js
+var localeMap = {
+  ...
+  "German": "de",
+  ...
+};
+```
+
