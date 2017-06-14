@@ -63,18 +63,17 @@ var Proposal = React.createClass({
         });
       });      
     });
-
   },
   formatProposal(proposal) {
     const DEFAULT_OPTIONS = EnglishStrings.form_field_options;
-    const FIELD_OPTIONS = this.props.localizedStrings.form_field_options;
+    const FIELD_OPTIONS = this.props.stringSource.form_field_options;
     const SPACES = FIELD_OPTIONS.spaces;
     const TIME = FIELD_OPTIONS.timeneeded;
     const LANGUAGES = FIELD_OPTIONS.languages;
 
     let formatted = Object.assign({}, proposal);
 
-    // Although Space labels are localized, when we submit the entry to
+    // Although Space names on the form are localized, when we submit the entry to
     // Google Spreadsheet and GitHub we want them to be in English.
     // This is to make the curation process simpler.
     for (let key in SPACES) {
@@ -105,13 +104,21 @@ var Proposal = React.createClass({
       }
     } else {
       for (let key in LANGUAGES) {
-        if (LANGUAGES[key] === formatted.space) {
+        if (LANGUAGES[key] === additionalLang) {
           formatted.additionallanguage = DEFAULT_OPTIONS.languages[key];
         }
       }
     }
 
-    // Do the same for "timeneeded"
+    // "proposallanguage"
+    // We should record the language the proposal was written in.
+    // Make sure the name of the language is recorded in English.
+    // (e.g., record it as "German" but not "Deutsch")
+    let proposalLang = this.props.lang;
+    // Capitalize the first letter
+    formatted.proposallanguage = proposalLang.charAt(0).toUpperCase() + proposalLang.slice(1);
+
+    // Do the same for "timeneeded" - translate the values to English
     for (let key in TIME) {
       if (TIME[key] === formatted.timeneeded) {
         formatted.timeneeded = DEFAULT_OPTIONS.timeneeded[key];
@@ -147,7 +154,7 @@ var Proposal = React.createClass({
     request.send(JSON.stringify(formattedProposal));
   },
   renderForm() {
-    let stringSource = this.props.localizedStrings;
+    let stringSource = this.props.stringSource;
     let formFields = fields.createFields(stringSource);
 
     return (
@@ -241,7 +248,7 @@ var Proposal = React.createClass({
     return this.renderForm();
   },
   render: function() {
-    let stringSource = this.props.localizedStrings;
+    let stringSource = this.props.stringSource;
 
     return (
       <div className={classnames(`proposals-page`, this.props.lang)}>

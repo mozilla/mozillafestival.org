@@ -43,15 +43,18 @@ Production pushes are handled manually. Email [Mozilla Foundation DevOps](mailto
 
 MozFest site currently is only available in English. However, this year (2017) we offer proposal form in English(`/proposals`) plus three non-English languages - Spanish(`/proposals/espanol`), French(`/proposals/francais`), and German(`/proposals/deutsch)`. Note that there's no localization infrastructure in place that automatically pulls localized strings from an external resource. Localized strings and proposal pages are created manually:
 
-1. clone `pages/proposals/language/english.json` and rename it to `newlanguage.json` with `newlanguage` being the language the strings are in. For consistency, make sure all letters are in lowercase. (e.g., `japanese.json`, `irish.json`, etc.)
+1. clone `pages/proposals/language/english.json` and rename it to `newlanguage.json` with `newlanguage` being the language the strings are in. For consistency, make sure all letters are in lowercase. (e.g., `german.json`)
 
 2. In `client.jsx`. Add the new key-value pair to the `LANGUAGE` object. For example:
 ```jsx
 const LANGUAGE = {
   ...
-  japanese: require('./pages/proposals/language/japanese.json')
+  german: {
+    name: `deutsch`, // this will be used as slug in the url (e.g., `/proposals/deutsch`)
+    stringSource: require('./pages/proposals/language/german.json')
+  }
 };
 ```
-The localized proposal page should be available on `/proposals/newlanguage`. (e.g., `/proposals/japanese`)
+The localized proposal page should be available on `/proposals/newlanguage`. (e.g., `/proposals/deutsch`)
 
 3. Replace all the English strings in `newlanguage.json` with the localized strings. (**NOTE:** make sure the strings you are pasting in don't have scripts in them as these strings will be rendered as HTML without sanitization.)

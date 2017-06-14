@@ -5,17 +5,29 @@ import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 
 const LANGUAGE = {
-  deutsch: require('./pages/proposals/language/deutsch.json'),
-  espanol: require('./pages/proposals/language/espanol.json'),
-  francais: require('./pages/proposals/language/francais.json')
+  german: {
+    name: `deutsch`,
+    stringSource: require('./pages/proposals/language/german.json')
+  },
+  spanish: {
+    name: `espanol`,
+    stringSource: require('./pages/proposals/language/spanish.json')
+  },
+  french: {
+    name: `francais`,
+    stringSource: require('./pages/proposals/language/french.json')
+  }
 };
 
 const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
-  var component = () => (<Proposals lang={lang} localizedStrings={LANGUAGE[lang]} />);
-  return <Route key={lang} name={lang} path={lang} component={component} />;
+  var component = () => (<Proposals lang={lang}
+                                    stringSource={LANGUAGE[lang].stringSource} />);
+  var name = LANGUAGE[lang].name;
+  return <Route key={name} name={name} path={name} component={component} />;
 });
 
-var ProposalEnglish = () => <Proposals lang="english" localizedStrings={EnglishStrings} />;
+var ProposalEnglish = () => <Proposals lang="english"
+                                       stringSource={EnglishStrings} />;
 
 var routes = (
   <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
