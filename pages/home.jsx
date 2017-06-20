@@ -91,8 +91,7 @@ var Home = React.createClass({
         {generateHelmet(this.pageMetaDescription)}
         <Header logoImage="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg"/>
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
-                  image2x="/assets/images/hero/home/banner-home_5.jpg"
-                  hideBackgroundLines={true}>
+                  image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
             <h1>Welcome to MozFest</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
