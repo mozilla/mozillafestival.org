@@ -297,6 +297,17 @@ var TeamPage = React.createClass({
               }
             </div>
 
+            <div name="Sponsors" slug="sponsors" className="sponsors">
+              <h1>Our 2017 Sponsors</h1>
+              <div>
+                <p>MozFest is the world’s leading event for and by the open Internet movement, and one of Mozilla’s largest annual networking opportunities. This three-day festival of interactive sessions, hands-on activities, and engaging talks brings together 1,800 passionate advocates of the open web from around the world for the flagship event in Mozilla’s leadership network.</p>
+                <p>
+                  For 2017, Mozilla is offering new sponsorship opportunities for supporters to help us deliver MozFest in London. The festival is growing at a phenomenal rate, as are the opportunities to collaborate, build, and convene with this dynamic network.
+                </p>
+                <p>If you would like to sponsor MozFest 2017, please reach out to us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>. A festival team member will share with you the various options for support and next steps. We look forward to hearing from you.</p>
+              </div>
+            </div>
+
             {/* hiding('hidden') this tab for now as requested in https://github.com/mozilla/mozillafestival.org/issues/554 */}
             <div name="Wranglers" slug="wranglers" hidden>
               <h1>Our 2017 Space Wranglers</h1>
