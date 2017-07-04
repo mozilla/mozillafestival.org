@@ -6,8 +6,8 @@
     "background": {
       "header": "Willkommen beim Aufruf für Vorschläge zum MozFest 2017",
       "body": [
-        "MozFest-Veranstaltungen umfassen eine Reihe von Themen, haben aber zwei wichtige Gemeinsamkeiten: Sie sind interaktiv und inklusiv. Veranstaltungen sind nicht dann erfolgreich, wenn Vorträge oder Folien präsentiert werden, sondern wenn die Teilnehmer erfolgreich zur Mitarbeit animiert werden.",
-        "Veranstaltungen können 3 bis 25 Teilnehmer haben, die unterschiedliche Fähigkeiten haben und verschiedenen Altersgruppen angehören. Jeder beim Festival ist eingeladen, Ihre Veranstaltung zu besuchen.",
+        "MozFest-Veranstaltungen umfassen eine Reihe von Themen, haben aber zwei wichtige Gemeinsamkeiten: Sie sind interaktiv und inklusiv. Veranstaltungen sind nicht dann erfolgreich, wenn Vorträge oder Folien präsentiert werden, sondern wenn die Teilnehmer(innen) erfolgreich zur Mitarbeit animiert werden.",
+        "Veranstaltungen können 3 bis 25 Teilnehmer(innen) haben, die unterschiedliche Fähigkeiten haben und verschiedenen Altersgruppen angehören. Jeder beim Festival ist eingeladen, Ihre Veranstaltung zu besuchen.",
         "Jeder kann Vorschläge für das MozFest 2017 machen. Sobald Sie Ihre Veranstaltung vorgeschlagen haben, wird Sie öffentlich auf <a href=\"https://github.com/MozillaFoundation/mozfest-program-2017\" target=\"_blank\">GitHub</a> verwaltet. Alle hier von Ihnen übermittelten Daten, außer Ihrer E-Mail-Adresse und Ihrem Twitter-Namen werden öffentlich auf GitHub zu sehen sein. Mozilla kann Sie zu Ihrem Vorschlag per E-Mail-Kontaktieren.",
         "Neben Vorschlägen auf Englisch akzeptieren wir in diesem Jahr auch Vorschläge auf <a href=\"/proposals/espanol\">Spanisch</a>, <a href=\"/proposals/francais\">Französisch</a> und <a href=\"/proposals/deutsch\">Deutsch</a>.",
         "Wenn Sie eine Veranstaltung vorschlagen möchten und Probleme mit diesem textbasierten Formular haben, <a href=\"mailto:festival@mozilla.org\">schreiben Sie uns bitte eine E-Mail</a>, um barrierefreie Optionen zu besprechen.",
@@ -34,7 +34,7 @@
     "material": {
       "header": "Veranstaltungsmaterialien",
       "body": [
-        "Viele Teilnehmer bringen ein eigenes Gerät (Smartphone, Laptop oder Tablet) mit zum Festival. Wir können Ihnen einen Projektor und Büromaterial (Papier, Stifte, Klebezettel) zur Verfügung stellen. Wir können vielleicht nicht alle Ihre Bedürfnisse befriedigen, aber wir arbeiten mit Ihnen an der bestmöglichen Lösung."
+        "Viele Teilnehmer(innen) bringen ein eigenes Gerät (Smartphone, Laptop oder Tablet) mit zum Festival. Wir können Ihnen einen Projektor und Büromaterial (Papier, Stifte, Klebezettel) zur Verfügung stellen. Wir können vielleicht nicht alle Ihre Bedürfnisse befriedigen, aber wir arbeiten mit Ihnen an der bestmöglichen Lösung."
       ]
     }
   },
@@ -51,7 +51,7 @@
     "name": "Name der Veranstaltung",
     "description": "Was passiert in Ihrer Veranstaltung?",
     "outcome": "Was ist das Ziel oder Ergebnis Ihrer Veranstaltung?",
-    "afterfestival": "Wie werden Sie und Ihre Teilnehmer nach dem Festival weiteres Lernen und weitere Aktivitäten organisieren?",
+    "afterfestival": "Wie werden Sie und Ihre Teilnehmer(innen) nach dem Festival weiteres Lernen und weitere Aktivitäten organisieren?",
     "timeneeded": "Wie viel Zeit Sie benötigen",
     "numsofparticipants": "Wie werden Sie mit unterschiedlichen Teilnehmerzahlen in Ihrer Veranstaltung umgehen? Was ist, wenn 30 Personen teilnehmen? Was ist, wenn es 3 sind?",
     "additionallanguage": "Möchten Sie die Veranstaltung in einer der folgenden Sprachen zweisprachig abhalten?",
