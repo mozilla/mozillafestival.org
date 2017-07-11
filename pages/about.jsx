@@ -93,22 +93,20 @@ var About = React.createClass({
             <h1 className="expect-header">A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>
             <div className="letter">
               <div className="half-content">
-                <p className="boldish">Dear Friends,</p>
-                <p>I like to think of the Mozilla community as a reflection of the Internet: Creative. Eclectic. Speaking many languages, spanning many disciplines, always open to new ideas.</p>
-
-                <p>This is most apparent at MozFest, the annual celebration of our community and the greater open Internet movement. Three days each year, we gather together and discuss, debate, create and hack to build a better Internet. We’re a diverse crew: Scientists from the UK. Educators from Kenya. Technologists from Shenzhen.</p>
-
-                <p>When we come together this year, we want to celebrate our diversity. We want to show that the open Internet movement’s boldest, most game-changing ideas can come from anyone, anywhere. We have the proof: Over the past year, the next generation of open Internet leaders have campaigned for net neutrality in India; taught digital skills in Nairobi and Cape Town; and explored the future of the Internet of Things in Berlin.</p>
+                <p>This October marks our eighth MozFest. It’s also our most ambitious one yet &mdash; more than ever, the movement for a healthy Internet needs a place to convene, organize and act.</p>
+                <p>At its start, MozFest &mdash; then called Drumbeat and nestled in Barcelona’s Museum of Contemporary Art &mdash; featured a small band of hackers and makers.</p>
+                <p>Since that 2010 gathering, MozFest has grown significantly. In size, yes &mdash; but more importantly, in scope. In 2011, the festival turned its attention to digital media, welcoming journalists and newsroom coders into the fold. In 2013, we focused on web literacy, inviting educators from around the world to craft tools and curricula for teaching the web. And in 2016, we talked about digital inclusion: who isn’t unlocking opportunity online, why that is, and what we can do to fix it.</p>
+                <p>This is an evolution that mirrors the growth of the Internet health movement. Today, the concept of Internet health reaches far beyond the realm of open source code: it’s linked to civil liberties and public policy, free expression and inclusion. Discussions about the state of the web include engineers, but now also teachers, lawmakers, community organizers and artists.</p>
               </div>
               <div className="half-content">
-                <p>This year at MozFest, we also want to do our duty as outlined in the Mozilla Manifesto: Ensure the Internet is a global public resource, open and accessible to all. That means teaching web literacy to more people in more places. It also means asking hard questions about what an ‘inclusive Internet’ really means. We need to actively address the challenges faced by people who don't yet feel they are welcome on the Web.</p>
-
-                <p>We have our work cut out for us -- there’s no shortage of threats to the open Internet. Online privacy and important safeguards like encryption are in jeopardy. And walled gardens are making the Web more closed and less hackable.</p>
-
-                <p>At MozFest this year, we’ll work on solutions to these issues and so many others. Our MozFest brainstorms, sessions and creativity always inspire me, and I can’t wait to see what we build together this year.</p>
+                <p>This is a positive and heartening development. It’s also a necessary one. The Internet is layered into our lives like we never could have imagined. Access is no longer a luxury &mdash; it’s a fundamental part of 21st century life. A virus is no longer a nuisance consigned to a single terminal &mdash; it’s an existential threat that can disrupt hospitals, governments and entire cities.</p>
+                <p>The movement for a healthy Internet is primed to address these problems. But we need a hub to trade ideas, find inspiration, swap code and build solutions.</p>
+                <p>MozFest is that hub.</p>
+                <p>Our sessions, speakers and workshops are built to foster collaboration across disciplines, borders and continents. We’re ready to face the biggest issues of the day &mdash; from fake news and online harassment to global cyberattacks &mdash; together, with an eye toward practical, open source solutions. </p>
+                <p>The challenges we’re facing are sizable. But we’re prepared to roll up our sleeves and address them head on in London &mdash; then return to our communities, classrooms and computers, better equipped to defend the Internet as a global public resource.</p>
                 <p>
-                  See you in London,<br/>
-                <span className="signature-bold">—Mark Surman</span>
+                  See you there,<br/>
+                  <span className="signature-bold">—Mark Surman</span>
                 </p>
                 <div className="signature-container">
                   <ImageTag src1x="/assets/images/signature.svg"
