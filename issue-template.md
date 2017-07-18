@@ -1,5 +1,10 @@
 **[ UUID ]** <%= id %>
 
+**[ Session Name ]** <%= sessionName %>
+**[ Primary Space ]** <%= primarySpace %>
+<% if (typeof(secondarySpace) !== "undefined") { %>**[ Secondary Space ]** <%= secondarySpace %><% } %>
+
+
 **[ Submitter's Name ]** <%= submitterName %>
 <% if (typeof(submitterOrg) !== "undefined") { %>**[ Submitter's Affiliated Organisation ]** <%= submitterOrg %><% } %>
 <% if (typeof(submitterGithub) !== "undefined") { %>**[ Submitter's Github ]** <%= submitterGithub %><% } %>
