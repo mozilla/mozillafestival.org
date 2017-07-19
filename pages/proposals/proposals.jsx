@@ -100,7 +100,9 @@ var Proposal = React.createClass({
     if (additionalLang === LANGUAGES.other) {
       // we record "additionallanguage" only if user has specified the language
       if (otherAdditionalLang) {
-        formatted.additionallanguage = `${DEFAULT_OPTIONS.languages.other}: ${otherAdditionalLang}`;
+        formatted.additionallanguage = otherAdditionalLang.split(`,`)
+                                        .map((lang) => lang.trim())
+                                        .filter((lang) => !!lang);
       }
     } else {
       for (let key in LANGUAGES) {
