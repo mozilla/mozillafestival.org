@@ -276,6 +276,65 @@ I care about empowering young people to take the lead.  I think arts, culture an
   }
 ];
 
+var Partners = React.createClass({
+  partnersInfo: [
+    {
+      name: `Youth Led EU`,
+      logo: `/assets/images/team/partner/YouthLedEU.jpg`,
+      link: `https://www.facebook.com/YouthLedEU/`
+    },
+    {
+      name: `The Tate`,
+      logo: `/assets/images/team/partner/Tate.jpg`,
+      link: `http://www.tate.org.uk/`
+    },
+    {
+      name: `The V&A`,
+      logo: `/assets/images/team/partner/VA.jpg`,
+      link: `https://www.vam.ac.uk/`
+    },
+    {
+      name: `Arts Award`,
+      logo: `/assets/images/team/partner/ArtsAward.jpg`,
+      link: `http://www.artsaward.org.uk/`
+    },
+    {
+      name: `BBC`,
+      logo: `/assets/images/team/partner/BBC.jpg`,
+      link: `http://www.bbc.co.uk/rd`
+    },
+    {
+      name: `Ravensbourne`,
+      logo: `/assets/images/team/partner/Ravensbourne.jpg`,
+      link: `http://www.ravensbourne.ac.uk/`
+    },
+    {
+      name: `Digital Me`,
+      logo: `/assets/images/team/partner/DigitalMe.jpg`,
+      link: `http://www.digitalme.co.uk/`
+    },
+    {
+      name: `Translate`,
+      logo: `/assets/images/team/partner/Translate.jpg`,
+      link: `http://www.translate.org.za/`
+    },
+  ],
+  renderPartnerLogos: function(partner) {
+    return this.partnersInfo.map((partner) => {
+      console.log(partner);
+      return <div className="col-12 col-sm-4 partner" key={partner.key}>
+                <a href={partner.link}>
+                  { partner.logo ? <img src={partner.logo} alt={partner.name} className="img-fluid mb-4" /> : partner.name }
+                </a>
+              </div>
+    });
+  },
+  render: function() {
+    return <div className="row">{this.renderPartnerLogos()}</div>
+  }
+});
+
+
 var TeamPage = React.createClass({
   render: function() {
     return (
@@ -299,6 +358,7 @@ var TeamPage = React.createClass({
 
             <div name="Sponsors" slug="sponsors" className="sponsors">
               <h1>Our 2017 Sponsors</h1>
+              <div className="horizontal-rule mb-5"></div>
               <div>
                 <p>MozFest is the world’s leading event for and by the open Internet movement, and one of Mozilla’s largest annual networking opportunities. This three-day festival of interactive sessions, hands-on activities, and engaging talks brings together 1,800 passionate advocates of the open web from around the world for the flagship event in Mozilla’s leadership network.</p>
                 <p>
@@ -311,13 +371,15 @@ var TeamPage = React.createClass({
             {/* hiding('hidden') this tab for now as requested in https://github.com/mozilla/mozillafestival.org/issues/554 */}
             <div name="Wranglers" slug="wranglers" hidden>
               <h1>Our 2017 Space Wranglers</h1>
+              <div className="horizontal-rule mb-5"></div>
               <div>To be announced</div>
             </div>
 
             {/* hiding this tab for now as requested in https://github.com/mozilla/mozillafestival.org/issues/554 */}
-            <div name="Partners" slug="partners" hidden>
+            <div name="Partners" slug="partners">
               <h1>Our 2017 Partners</h1>
-              <div>To be announced</div>
+              <div className="horizontal-rule mb-5"></div>
+              <Partners />
             </div>
           </TabSwitcher>
         </div>
