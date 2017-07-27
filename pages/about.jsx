@@ -90,7 +90,9 @@ var About = React.createClass({
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
-            <h1 className="expect-header">A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>
+            <div className="confined-width-header text-center">
+              <h1>A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>
+            </div>
             <div className="letter">
               <div className="half-content">
                 <p>This October marks our eighth MozFest. It’s also our most ambitious one yet &mdash; more than ever, the movement for a healthy Internet needs a place to convene, organize and act.</p>
