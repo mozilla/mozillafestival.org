@@ -26,7 +26,9 @@ var Expect = React.createClass({
         </Jumbotron>
 
         <FullWidth white center>
-          <h1 className="remote-header">The MozFest Remote Challenge</h1>
+          <div className="confined-width-header text-center">
+            <h1>The MozFest Remote Challenge</h1>
+          </div>
           <p>
             This year's MozFest Remote Challenge wants you to get involved and spread the MozFest spirit around the world, help others help you, and work locally, while sharing globally.
           </p>
