@@ -7,11 +7,6 @@
       color: @grey;
     }
   }
-  .required-note {
-    margin: 0 0 1rem 0;
-    font-weight: 600;
-    font-size: 18px;
-  }
 }
 
 .events {
@@ -57,6 +52,39 @@
       text-transform: capitalize;
     }
   }
+
+  .date-and-time,
+  .location,
+  .url {
+    &:before {
+      display: inline-block;
+      text-align: center;
+      width: 20px;
+      height: auto;
+      margin-right: 5px; 
+    }
+  }
+
+  .date-and-time {
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f017";
+    }
+  }
+
+  .location {
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f041";
+    }
+  }
+
+  .url {
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f015";
+    }
+  }
 }
 
 .event-block {
@@ -68,6 +96,10 @@
 #fringe-form-section {
   h1 {
     margin-top: 40px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -93,5 +125,50 @@
     vertical-align: bottom;
     line-height: 1;
     animation: loading 1.2s linear infinite;
+  }
+}
+
+.fringe-events-page {
+  form {
+    label {
+      .mb-1;
+      font-weight: 600;
+      line-height: 1.2;
+
+      &.word-length-restriction.max-120-words {
+        &::after {
+          content: "(max 120 words)";
+        }
+      }
+      &.word-length-restriction.max-120-words.required {
+        &::after {
+          content: "(max 120 words) (required)";
+        }
+      }
+    }
+
+    .privacypolicy {
+      input {
+        width: auto;
+      }
+    }
+  }
+
+  .react-datepicker__input-container {
+    input {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
+  .rc-time-picker {
+    display: block;
+    input {
+      .form-control;
+      width: auto;
+      font-size: inherit;
+      color: inherit;
+      height: auto;
+    }
   }
 }

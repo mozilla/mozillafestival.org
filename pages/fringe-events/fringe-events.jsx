@@ -1,0 +1,250 @@
+var React = require('react');
+var ReactRouter = require('react-router')
+var moment = require('moment');
+var Form = require('react-formbuilder').Form;
+var Header = require('../../components/header.jsx');
+var Footer = require('../../components/footer.jsx');
+var Jumbotron = require('../../components/jumbotron.jsx');
+
+var fields = require('./form/fields');
+
+require('whatwg-fetch');
+
+const DATE_FORMAT = `MMM DD, YYYY`;
+const TIME_FORMAT = `h:mma`;
+const DATE_TIME_FORMAT = `${DATE_FORMAT} ${TIME_FORMAT}`;
+
+var Event = React.createClass({
+  renderDescription() {
+    return this.props.description.split(`\n`).map((paragraph) => {
+      if (!paragraph) return null;
+
+      return <p key={paragraph}>{paragraph}</p>;
+    });
+  },
+  render: function() {
+    var link = this.props.link;
+    return (
+      <li>
+        <h1>{this.props.eventname}</h1>
+        <div className="details">
+          <div className="date-and-time">
+            { moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT)} {moment(this.props.time, TIME_FORMAT).format(TIME_FORMAT) }
+          </div>
+          <div className="location">
+            {this.props.location}
+          </div>
+          { link ? <div className="url"><a href={link}>{link}</a></div>
+                 : null
+          }
+          <div className="description">
+            { this.renderDescription() }
+          </div>
+        </div>
+      </li>
+    );
+  }
+});
+
+var FringeEventForm = React.createClass({
+  getInitialState: function() {
+    return {
+      submitting: false,
+      formValues: {}
+    }
+  },
+  handleFormUpdate(evt, name, field, value) {
+    let formValues = this.state.formValues;
+    formValues[name] = value;
+    this.setState({ 
+      formValues,
+      // hide notice once user starts typing again
+      // this is a quick fix.
+      showFormInvalidNotice: false
+    });
+  },
+  handleFormSubmit: function(event) {
+    event.preventDefault();
+
+    this.refs.formPartOne.validates(partOneIsValid => {
+      this.refs.formPartTwo.validates(partTwoIsValid => {
+        if (!partOneIsValid) console.error(`Form Part One does not pass validation!`);
+        if (!partTwoIsValid) console.error(`Form Part Two does not pass validation!`);
+
+        if (partOneIsValid && partTwoIsValid) {
+          this.setState({
+            submitting: true,
+            showFormInvalidNotice: false
+          }, () => {
+            this.submitFringeEvent(this.state.formValues);
+          });
+        } else {
+          this.setState({showFormInvalidNotice: true});
+        }
+      });      
+    });
+  },
+  submitFringeEvent(fringeEvent) {
+    fringeEvent.timestamp = moment().format('MMM DD, YYYY hh:mm a');
+
+    let request = new XMLHttpRequest();
+    request.open(`POST`, `/add-fringe-event`, true);
+    request.setRequestHeader("Content-type", "application/json");
+
+    request.onload = (event) => {
+      let resStatus = event.currentTarget.status;
+      console.log(`event`, event);
+      console.log(`resStatus`, resStatus);
+
+      this.setState({ submitting: false }, () => {
+        if (resStatus >= 200 && resStatus < 400) {
+          ReactRouter.browserHistory.push({
+            pathname: `/fringe/success`
+          });
+        }
+      });
+    };
+
+    request.onerror = (err) => {
+      console.log(err);
+    };
+
+    request.send(JSON.stringify(fringeEvent));
+  },
+  render: function() {
+    let formFields = fields.createFields();
+
+    return <div>
+              <h2>Event Info</h2>
+              <Form ref="formPartOne" 
+                    fields={formFields.partOne}
+                    inlineErrors={true}
+                    onUpdate={this.handleFormUpdate} />
+              <h2>Privacy Policy</h2>
+              <p>Read more about <a href="https://www.mozilla.org/privacy/" target="_blank">Mozilla's privacy policy</a>.</p>
+              <Form ref="formPartTwo" 
+                    fields={formFields.partTwo}
+                    inlineErrors={true}
+                    onUpdate={this.handleFormUpdate} />
+              <div>
+                <button
+                  ref="submitBtn" 
+                  className="btn btn-primary-outline mr-3 my-5"
+                  type="submit"
+                  onClick={this.handleFormSubmit}
+                  disabled={this.state.submitting ? `disabled` : null}
+                >{ this.state.submitting ? 'Submitting...' : 'Submit' }</button>
+              </div>
+           </div>
+  }
+}); 
+
+
+var FringePage = React.createClass({
+  getInitialState: function() {
+    return {
+      events: [],
+      eventsLoaded: false,
+      unableToLoadEvents: false
+    }
+  },
+  componentWillMount: function() {
+    this.getFringeEvents();
+  },
+  handleEventResponse: function(response) {
+    return response.json();
+  },
+  handleEventData: function(data) {
+    console.log(data);
+    this.setState({
+      events: data,
+      eventsLoaded: true,
+      unableToLoadEvents: false
+    });
+  },
+  handleEventDataError: function(error) {
+    console.log("Error: ", error);
+    this.setState({
+      eventsLoaded: true,
+      unableToLoadEvents: true
+    });
+  },
+  getFringeEvents: function() {
+    // var self = this;
+    fetch('/get-fringe-events', {
+      method: 'get'
+    })
+    .then(this.handleEventResponse)
+    .then(this.handleEventData)
+    .catch(this.handleEventDataError);
+  },
+  render: function() {
+    var events = false;
+    var sortByTime = function(a,b) {
+      var timeA = moment(`${a.date} ${a.time}`, DATE_TIME_FORMAT);
+      var timeB = moment(`${b.date} ${b.time}`, DATE_TIME_FORMAT);
+      if (timeA < timeB) { return -1; }
+      if (timeA > timeB) { return 1; }
+      return 0;
+    }
+    if ( this.state.eventsLoaded ) {
+      events = this.state.events.sort(sortByTime).map(function(event,i) {
+                return (
+                  <div className="event-block" key={event.nameofevent}>
+                    <div className="content wide">
+                      <Event {...event} key={event.eventname} />
+                    </div>
+                  </div>
+                );
+              });
+    } else {
+      events = (
+        <div className="white-background">
+          <div className="content wide">
+            {
+              this.state.unableToLoadEvents
+                ? <p>Unable to load Fringe Events.</p>
+                : <p className="loading-message">Loading Fringe Events</p>
+            }
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="fringe-events-page">
+        <Header/>
+        <Jumbotron image="/assets/images/hero/fringe.jpg"
+                  image2x="/assets/images/hero/fringe.jpg">
+          <h1>Fringe Events</h1>
+        </Jumbotron>
+        <div className="white-background">
+          <div className="content centered wide">
+            <h1>If MozFest wasn’t enough for you&hellip;</h1>
+            <p>MozFest is about working in the open and sharing ideas with the greater community. There are several innovative events taking place around the world with this same philosophy, and we would love to align them with MozFest.</p>
+            <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must include collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
+            <div className="cta">
+              <p>Add your event to the MozFest Fringe calendar.</p>
+              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section"><span>Add Fringe Event</span></a>
+            </div>
+            {/* <div className="horizontal-rule"></div> */}
+          </div>
+        </div>
+        {/*Commenting this out to save for future use, it's just outdated for now. But bringing it back in may require some google sheets integration work again (namely authentication)*/}
+        <div className="events">
+          <ul>{events}</ul>
+        </div>
+        <div className="white-background" id="fringe-form-section">
+          <div className="content wide">
+            <div className="horizontal-rule"></div>
+            <h1 className="text-center">Submit Your Fringe Event</h1>
+            <FringeEventForm />
+          </div>
+        </div>
+        <Footer/>
+      </div>
+    );
+  }
+});
+
+module.exports = FringePage;

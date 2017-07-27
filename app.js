@@ -70,59 +70,64 @@ app.post(`/add-proposal`, limiter, function(req, res) {
 });
 
 app.post('/add-fringe-event', limiter, function (req, res) {
-  var userInputs = {};
-  var realFieldNames = {
-    name: "entry.904055858",
-    time: "entry.686031215",
-    location: "entry.1740904233",
-    description: "entry.1100204806",
-    link: "entry.1926329450",
-    privacy: "entry.774776501"
-  };
-  Object.keys(req.body).forEach(function(maskedFieldName){
-    var realFieldName = realFieldNames[maskedFieldName];
-    userInputs[realFieldName] = req.body[maskedFieldName];
-  });
-  request({
-    method: 'POST',
-    url: env.get('FRINGE_EVENT_FORM_ACTION_URL'),
-    form: userInputs
-  }, function(err) {
+  var SPREADSHEET_ID = env.get(`FRINGE_EVENT_SPREADSHEET_ID_2017`);
+  var sheet = new GoogleSpreadsheet(SPREADSHEET_ID);
+  var fringeEvent = req.body;
+
+  // line breaks are essential for the private key.
+  // if reading this private key from env var this extra replace step is a MUST
+  sheet.useServiceAccountAuth({
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+  }, (err) => {
     if (err) {
-      console.log("[Error] ", err);
-      res.status(500).send({error: err});
-    } else {
-      res.send("Ok");
+      console.log(`[Error] ${err}`);
+      res.status(500).json(err);
     }
+
+    sheet.addRow(1, fringeEvent, (addRowErr) => {
+      if (addRowErr) {
+        console.log(`[addRowErr]`, addRowErr);
+        res.status(500).json(addRowErr);
+      }
+
+      res.status(200).send({ result: `Fringe event submitted!`});
+    });
   });
 });
 
+
+function getFringeEvents(response) {
+  // fetches data stored in the Fringe Events Google Spreadsheet
+  var sheet = new GoogleSpreadsheet(env.get(`FRINGE_EVENT_SPREADSHEET_ID_2017`));
+
+  // line breaks are essential for the private key.
+  // if reading this private key from env var this extra replace step is a MUST
+  sheet.useServiceAccountAuth({
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+  }, function(err) {
+    if (err) {
+      console.log(`[Error] ${err}`);
+      response.status(500).json(err);
+    }
+    // GoogleSpreadsheet.getRows(worksheet_id, callback)
+    sheet.getRows(1, function(sheetErr, rows) {
+      if (sheetErr) {
+        console.log("[Error] ", sheetErr);
+        response.status(500).json(sheetErr);
+      } else {
+        response.send(rows.filter(function(row) {
+          return row.approved;
+        }));
+      }
+    });
+  });
+}
+
 app.get('*', function (request, response) {
   if (request.path === "/get-fringe-events") {
-    // fetches data stored in the Fringe Events Google Spreadsheet
-    var sheet = new GoogleSpreadsheet(env.get('FRINGE_EVENT_SPREADSHEET_ID'));
-    // line breaks are essential for the private key. 
-    // if reading this private key from env var this extra replace step is a MUST
-    var privateKey = env.get("GOOGLE_API_PRIVATE_KEY").replace(/\\n/g, '\n')
-    sheet.useServiceAccountAuth({
-      client_email: env.get("GOOGLE_API_CLIENT_EMAIL"),
-      private_key: privateKey
-    }, function(err,sheet_info) {
-      if (err) {
-        console.log("[Error] ", err);
-        response.status(500).json(err);
-      }
-      sheet.getRows(1, function(sheetErr, rows){
-        if (sheetErr) {
-          console.log("[Error] ", sheetErr);
-          response.status(500).json(sheetErr);
-        } else {
-          response.send( rows.filter(function(row) {
-            return row.approved;
-          }));
-        }
-      });
-    });
+    getFringeEvents(response);
   } else {
     response.sendfile(path.join(__dirname, '/public/index.html'));
   }
