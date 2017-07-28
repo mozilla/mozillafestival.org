@@ -6,3 +6,4 @@ public/*.css
 public/vendor/*
 .DS_Store
 yarn.lock
+package-lock.json
