@@ -35,6 +35,12 @@ var productionMembers = [
     title: `Comms Manager & Speaker Series Designer`,
     pic: `/assets/images/team/production/Kevin.jpg`,
     bio: <p>Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and is the mastermind behind the Dialogues and Debates speakers series. 2017 will be Kevin's fourth MozFest.</p>
+  },
+  {
+    name: `Marc Walsh`,
+    title: `Senior Production Coordinator`,
+    pic: `/assets/images/team/production/Marc-2.jpg`,
+    bio: <p>Marc is the Senior Production Coordinator for MozFest 2017, his sixth year with the festival. Since last year he’s worked on various large scale experimental events as well as Glastonbury and the BBC Music Awards. Drawing on this experience, he brings his logistical and production mind-set to help make sure the cogs keep turning across the weekend.</p>
   }
 ];
 
