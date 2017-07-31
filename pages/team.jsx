@@ -39,7 +39,7 @@ var productionMembers = [
   {
     name: `Marc Walsh`,
     title: `Senior Production Coordinator`,
-    pic: `/assets/images/team/production/Marc-2.jpg`,
+    pic: `/assets/images/team/production/Marc.jpg`,
     bio: <p>Marc is the Senior Production Coordinator for MozFest 2017, his sixth year with the festival. Since last year he’s worked on various large scale experimental events as well as Glastonbury and the BBC Music Awards. Drawing on this experience, he brings his logistical and production mind-set to help make sure the cogs keep turning across the weekend.</p>
   }
 ];
