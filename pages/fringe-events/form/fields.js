@@ -98,10 +98,11 @@ var createPartOneFields = function() {
     'description': {
       type: `textarea`,
       label: `Description`,
-      labelClassname: `required`,
+      labelClassname: `required word-length-restriction max-50-words`,
       fieldClassname: `form-control`,
       validator: [
-        validator.emptyValueValidator()
+        validator.emptyValueValidator(),
+        validator.maxWordsValidator(50)
       ]
     },
     'link': {

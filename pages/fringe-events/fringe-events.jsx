@@ -25,20 +25,20 @@ var Event = React.createClass({
   render: function() {
     var link = this.props.link;
     return (
-      <li>
-        <h1>{this.props.eventname}</h1>
-        <div className="details">
-          <div className="date-and-time">
-            { moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT)} {moment(this.props.time, TIME_FORMAT).format(TIME_FORMAT) }
-          </div>
-          <div className="location">
-            {this.props.location}
-          </div>
-          { link ? <div className="url"><a href={link}>{link}</a></div>
-                 : null
-          }
-          <div className="description">
-            { this.renderDescription() }
+      <li className="col-12 col-sm-6 mb-4">
+        <div className="inner-wrapper p-3">
+          <header className="font-weight-bold mb-3">{this.props.eventname}</header>
+          <div className="details">
+            <div className="date-and-time">
+              { moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT)} {moment(this.props.time, TIME_FORMAT).format(TIME_FORMAT) }
+            </div>
+            <div className="location">
+              {this.props.location}
+            </div>
+            { link && <div className="url"><a href={link}>{link}</a></div> }
+            <div className="description">
+              { this.renderDescription() }
+            </div>
           </div>
         </div>
       </li>
@@ -93,8 +93,6 @@ var FringeEventForm = React.createClass({
 
     request.onload = (event) => {
       let resStatus = event.currentTarget.status;
-      console.log(`event`, event);
-      console.log(`resStatus`, resStatus);
 
       this.setState({ submitting: false }, () => {
         if (resStatus >= 200 && resStatus < 400) {
@@ -155,7 +153,6 @@ var FringePage = React.createClass({
     return response.json();
   },
   handleEventData: function(data) {
-    console.log(data);
     this.setState({
       events: data,
       eventsLoaded: true,
@@ -163,20 +160,22 @@ var FringePage = React.createClass({
     });
   },
   handleEventDataError: function(error) {
-    console.log("Error: ", error);
     this.setState({
       eventsLoaded: true,
       unableToLoadEvents: true
     });
   },
   getFringeEvents: function() {
-    // var self = this;
     fetch('/get-fringe-events', {
       method: 'get'
     })
     .then(this.handleEventResponse)
     .then(this.handleEventData)
     .catch(this.handleEventDataError);
+  },
+  handleScrollToFringeForm(event) {
+    event.preventDefault();
+    this.refs.fringeForm.scrollIntoView(true);
   },
   render: function() {
     var events = false;
@@ -189,26 +188,12 @@ var FringePage = React.createClass({
     }
     if ( this.state.eventsLoaded ) {
       events = this.state.events.sort(sortByTime).map(function(event,i) {
-                return (
-                  <div className="event-block" key={event.nameofevent}>
-                    <div className="content wide">
-                      <Event {...event} key={event.eventname} />
-                    </div>
-                  </div>
-                );
+                return <Event {...event} key={event.eventname} />;
               });
+      events = <ul className="row">{events}</ul>;
     } else {
-      events = (
-        <div className="white-background">
-          <div className="content wide">
-            {
-              this.state.unableToLoadEvents
-                ? <p>Unable to load Fringe Events.</p>
-                : <p className="loading-message">Loading Fringe Events</p>
-            }
-          </div>
-        </div>
-      );
+      events = this.state.unableToLoadEvents ? <p>Unable to load Fringe Events.</p>
+                                             : <p className="loading-message">Loading Fringe Events</p>;
     }
 
     return (
@@ -225,16 +210,16 @@ var FringePage = React.createClass({
             <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must include collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
             <div className="cta">
               <p>Add your event to the MozFest Fringe calendar.</p>
-              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section"><span>Add Fringe Event</span></a>
+              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add Fringe Event</span></a>
             </div>
-            {/* <div className="horizontal-rule"></div> */}
           </div>
         </div>
-        {/*Commenting this out to save for future use, it's just outdated for now. But bringing it back in may require some google sheets integration work again (namely authentication)*/}
-        <div className="events">
-          <ul>{events}</ul>
+        <div className="events white-background">
+          <div className="content wide">
+            {events}
+          </div>
         </div>
-        <div className="white-background" id="fringe-form-section">
+        <div className="white-background" id="fringe-form-section" ref="fringeForm">
           <div className="content wide">
             <div className="horizontal-rule"></div>
             <h1 className="text-center">Submit Your Fringe Event</h1>

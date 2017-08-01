@@ -1,148 +1,113 @@
 .fringe-events-page {
-  .cta {
-    margin-top: 35px;
-    h2 {
-      font-size: 28px;
-      font-weight: 800;
-      color: @grey;
-    }
-  }
-}
 
-.events {
-  ol .content,
-  ul .content {
-    /* to override mofo-bootstrap's rules */
-    margin: 35px auto;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  li {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-        h1,
-        .details {
-          width: 50%;
-        }
-        .details {
-          padding-left: 30px;
-        }
-    }
-    h1 {
-      font-weight: 700;
-      margin: 0 0 15px 0;
+  .events {
+    .content {
       padding: 0;
     }
-    .details {
-      font-size: 17px;
-      font-weight: 300;
-      p {
-        font-size: 17px;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    li {
+      .details {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      header:first-letter,
+      .location:first-letter,
+      .description:first-letter {
+        text-transform: capitalize;
+      }
+      .inner-wrapper {
+        background: @light-grey;
+        height: 100%;
       }
     }
-    h1:first-letter,
-    .location:first-letter,
-    .description:first-letter {
-      text-transform: capitalize;
+
+    .date-and-time,
+    .location,
+    .url {
+      &:before {
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: auto;
+        margin-right: 5px; 
+      }
+    }
+
+    .date-and-time {
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f017";
+      }
+    }
+
+    .location {
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f041";
+      }
+    }
+
+    .url {
+      &:before {
+        font-family: "FontAwesome";
+        content: "\f015";
+      }
     }
   }
 
-  .date-and-time,
-  .location,
-  .url {
-    &:before {
+  #fringe-form-section {
+    h1 {
+      margin-top: 40px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 1.8rem;
+    }
+  }
+
+  .loading-message {
+    &:after {
+      content: "...";
       display: inline-block;
-      text-align: center;
-      width: 20px;
-      height: auto;
-      margin-right: 5px; 
+      overflow: hidden;
+      position: relative;
+      top: -4px;
+      width: 0;
+      margin-left: .5rem;
+      font-size: 2rem;
+      vertical-align: bottom;
+      line-height: 1;
+      animation: loading 1.2s linear infinite;
     }
   }
 
-  .date-and-time {
-    &:before {
-      font-family: "FontAwesome";
-      content: "\f017";
-    }
-  }
-
-  .location {
-    &:before {
-      font-family: "FontAwesome";
-      content: "\f041";
-    }
-  }
-
-  .url {
-    &:before {
-      font-family: "FontAwesome";
-      content: "\f015";
-    }
-  }
-}
-
-.event-block {
-  &:nth-child(2n+1) {
-    .white-background;
-  }
-}
-
-#fringe-form-section {
-  h1 {
-    margin-top: 40px;
-  }
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@keyframes loading {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 1.8rem;
-  }
-}
-
-.loading-message {
-  &:after {
-    content: "...";
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    top: -4px;
-    width: 0;
-    margin-left: .5rem;
-    font-size: 2rem;
-    vertical-align: bottom;
-    line-height: 1;
-    animation: loading 1.2s linear infinite;
-  }
-}
-
-.fringe-events-page {
   form {
     label {
       .mb-1;
       font-weight: 600;
       line-height: 1.2;
 
-      &.word-length-restriction.max-120-words {
+      &.word-length-restriction.max-50-words {
         &::after {
-          content: "(max 120 words)";
+          content: "(max 50 words)";
         }
       }
-      &.word-length-restriction.max-120-words.required {
+      &.word-length-restriction.max-50-words.required {
         &::after {
-          content: "(max 120 words) (required)";
+          content: "(max 50 words) (required)";
         }
       }
     }
