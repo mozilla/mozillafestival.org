@@ -28,7 +28,7 @@ var Tickets = React.createClass({
             <p className="font-weight-bold">Friday Night Science Fair Ticket £10</p>
             <p>Join us for the MozFest opening Science Fair on Friday 27th October from 18:00 - 21:00 for a night of exciting demos, prototypes, networking and drinks. This ticket is valid for entry on Friday evening only. <a href="https://ti.to/Mozilla/mozfest-2017/with/xvj7y1v7lmo" target="_blank">Buy a Friday Night Science Fair Ticket</a>.</p>
             <p className="font-weight-bold">Youth Ticket £3</p>
-            <p>Join us for two days of hacking, building, and crafting at MozFest. This ticket covers entry for Saturday 28th and Sunday 29th October for youth aged 18 and under. It includes lunch for both days. (Youth tickets must be accompanied by one adult ticket or be part of a school group.) <a href="https://ti.to/Mozilla/mozfest-2017/with/o-pwuh3rljs" target="_blank">Buy a Youth Ticket</a>.</p>
+            <p>Join us for two days of hacking, building, and crafting at MozFest. This ticket covers entry for Saturday 28th and Sunday 29th October for youth aged 18 and under. It includes lunch for both days. Under 16's must be accompanied by one adult ticket or be part of a school group. <a href="https://ti.to/Mozilla/mozfest-2017/with/o-pwuh3rljs" target="_blank">Buy a Youth Ticket</a>.</p>
           </div>
         </div>
         <div>
