@@ -96,7 +96,7 @@ var Home = React.createClass({
             <h1>Welcome to MozFest</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
             <p className="mb-0">October 27-29, 2017 Ravensbourne College, London</p>
-            <Link to="/proposals" className="btn p-3 m-3">Propose a Session</Link>
+            <a href="https://ti.to/Mozilla/mozfest-2017" className="btn p-3 m-3">Buy a Ticket</a>
           </div>
         </Jumbotron>
         <div className="white-background">
@@ -127,11 +127,11 @@ var Home = React.createClass({
           <div className="row mt-5">
             <div className="col-12 col-md-6 text-left">
               <div className="news-widget mb-3">
-                <img src="assets/images/BrianBehlendorf.jpeg" alt="Brian Behlendorf speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
+                <img src="assets/images/MaggieVail.jpg" alt="Brian Behlendorf speaking on stage at MozFest" className="mb-2" style={{ "maxWidth": "100%" }} />
                 <div className="source text-muted">Mozilla Festival</div>
-                <a href="https://medium.com/mozilla-festival/bringing-back-the-decentralized-web-5598408037c7" className="title">Bringing Back the Decentralized Web</a>
-                <div className="publish-date text-muted">Feb 23, 2017</div>
-                <p className="mt-2">Brian Behlendorf is Executive Director at the Hyperledger Project. He spoke at MozFest 2016 about blockchain.</p>
+                <a href="https://medium.com/mozilla-festival/indie-music-and-the-web-fbd0dfa1fef" className="title">Indie Music and the Web</a>
+                <div className="publish-date text-muted">Feb 10, 2017</div>
+                <p className="mt-2">Maggie Vail is Executive Director at CASH Music. She spoke at MozFest 2016 about empowering musicians on the web.</p>
               </div>
             </div>
             <div className="col-12 col-md-6">
