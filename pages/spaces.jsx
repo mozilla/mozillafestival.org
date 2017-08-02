@@ -16,11 +16,11 @@ var SpacesInfo = [
       <p>Join us at Mozfest as we look into the future. Dystopian, utopian or somewhere in between &mdash; let’s explore the Internet of 2027.</p>
     </div>),
     contacts: [
-      { name: "D. Vigneshwer 'Viki'" },
-      { name: "Ian Forrester" },
+      { name: "Mark Boas" },
       { name: "Tim Cowlishaw" },
-      { name: "Jon Tutcher" },
-      { name: "Mark Boas" }
+      { name: "Vigneshwer Dhinakaran" },
+      { name: "Ian Forrester" },
+      { name: "Jon Tutcher" }
     ]
   },
   {
@@ -33,8 +33,9 @@ var SpacesInfo = [
     contacts: [
       { name: "Kenyatta Forbes" },
       { name: "Hannah Kane" },
+      { name: "Joe Nash" },
+      { name: "Leah Ruffin" },
       { name: "Michael Saunby" },
-      { name: "Heather Bailey" },
       { name: "Martha Segwick" }
     ]
   },
@@ -46,9 +47,9 @@ var SpacesInfo = [
       <p>Open Innovation is a space for challenging and learning about open source, open projects and growth on the web. We’ll investigate the challenges to open production (misinformation, draconian copyright) and the values of open creativity (working open techniques, tools and tactical transparency). The space is programmed as a highly-interactive platform for producing and protecting the principles of the open web. Join us in evolving our epically-open online world.</p>
     </div>),
     contacts: [
-      { name: "Aurelia Moser" },
       { name: "Christos Bacharakis" },
       { name: "Raegan MacDonald" },
+      { name: "Aurelia Moser" },
       { name: "Phillip Smith" }
     ]
   },
@@ -62,12 +63,11 @@ var SpacesInfo = [
       <p>At Mozfest, we’ll build, teach and play with these new approaches to Privacy & Security. Let’s put safety first.</p>
     </div>),
     contacts: [
-      { name: "Stéphanie Ouillon" },
       { name: "Brett Gaylor" },
-      { name: "Mavis Ou" },
-      { name: "David Ross" },
       { name: "Jonathan Kingston" },
-      { name: "Jen Caltrider" }
+      { name: "Mavis Ou" },
+      { name: "Stéphanie Ouillon" },
+      { name: "David Ross" }
     ]
   },
   {
@@ -79,11 +79,11 @@ var SpacesInfo = [
       <p>Through hands-on workshops, participants will explore, make and play with the tools and technologies that form the fabric of the web. And through discussion and talks, we’ll invite our guests to reflect on, and improve, their relationship with the web. Our space will instill the skills and confidence in both young and old, students and teachers, to make the web a more vibrant, diverse ecosystem.</p>
     </div>),
     contacts: [
-      { name: "Luke Pacholski" },
-      { name: "Fredrick Sigalla" },
-      { name: "Phillipa Bailey" },
-      { name: "Julie Neville" },
       { name: "Mariana Delgado" },
+      { name: "Julie Neville" },
+      { name: "Luke Pacholski" },
+      { name: "Jonathan Prozzi" },
+      { name: "Fredrick Sigalla" },
       { name: "Edoardo Viola" }
     ]
   },
@@ -101,19 +101,64 @@ var SpacesInfo = [
       <p>The Youth Zone is like a poem &mdash; creative, unexpected, powerful. Join this space for youth leaders and their mentors who are creating art, technology and positive social change. From a Raspberry Pi-coded singing potato to our teen artists-in-residence to our fireside chat on Internet health, come explore our collective tomorrow.</p>
     </div>),
     contacts: [
+      { name: "Connor Ballard-Pateman" },
       { name: "Dorine Flies" },
-      { name: "Shwetal Shah" },
-      { name: "Emrys Green" },
       { name: "Andrew Mulholland" },
-      { name: "Connor Ballard-Pateman" }
+      { name: "Shwetal Shah" }
+    ]
+  }
+];
+
+var ExpereincesInfo = [
+  {
+    name: "Artist Open Studio",
+    description:
+    (<div>
+      <p></p>
+    </div>),
+    contacts: [
+      { name: "Luca M Damiani" },
+      { name: "Irini Papadimitriou" },
+      { name: "Angela Plohman" },
+    ]
+  },
+  {
+    name: "Wayfinding and Recognition",
+    description:
+    (<div>
+      <p>Recognise your participation at Mozfest and understand how your contribution makes a difference to the future of the open web. You’ll have the chance to use an augmented reality app to explore and expose different pathways throughout the festival, unlock hidden experiences and swag! We want to recognise your participation at Mozfest, your contribution to the future of the open web and provide you with a record of your experience and the skills you’ve learned along the way that you can share online. After the festival we’ll also direct you to organisations where you can continue your adventure.</p>
+    </div>),
+    contacts: [
+      { name: "Tim Riches" }
+    ]
+  },
+  {
+    name: "Dialogue and Debates",
+    description:
+    (<div>
+      <p> On MozFest's Dialogues & Debates stage, luminaries at the intersection of technology and society discuss bright spots and threats to Internet health. Each speaker delivers a captivating 20-minute, TED-style talk. Our 2017 speakers are activists, journalists, ethical hackers and comedians hailing from eight countries on four continents.</p>
+    </div>),
+    contacts: [
+      { name: "Kevin Zawacki" }
+    ]
+  },
+  {
+    name: "Theme Wrangling",
+    description:
+    (<div>
+      <p>MozFest 2017 will feature a set of thematic sessions distributed across each of the Spaces. These sessions will explore Policy & Advocacy, Journalism, and Youth Leadership.</p>
+    </div>),
+    contacts: [
+      { name: "Emrys Green" },
+      { name: "Erika Owens" },
+      { name: "Melissa Romaine" },
     ]
   }
 ];
 
 var SessionsPage = React.createClass({
-  spaces: SpacesInfo,
-  render: function() {
-    this.spaces = this.spaces.map(function(space,i) {
+  renderInfoSection(info) {
+    return info.map(function(space,i) {
       var whiteBg = (i%2==0) ? "white-background" : "";
       return (
         <div className={whiteBg} key={space.name}>
@@ -123,30 +168,33 @@ var SessionsPage = React.createClass({
         </div>
       );
     });
-
+  },
+  render: function() {
     return (
       <div className="spaces-page">
         <Header/>
         <Jumbotron image="/assets/images/hero/sessions.jpg"
                   image2x="/assets/images/hero/sessions.jpg">
-          <h1>Spaces</h1>
+          <h1>Spaces & Experiences</h1>
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <h1>Spaces</h1>
             <p>Spaces are physical and thematic learning hubs based around a broad topic, like web literacy or digital inclusion. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
-            <p>
-              <Link to="/proposals">Submit a session</Link>
-            </p>
             <div className="horizontal-rule"></div>
           </div>
         </div>
+        { this.renderInfoSection(SpacesInfo) }
+
         <div className="white-background">
-          <div className="content centered wide no-vertical-margin">
-            <h1>MozFest 2017 Spaces</h1>
+          <div className="content centered wide">
+            <h1 className="mt-5">Experiences</h1>
+            <p>Experiences are artworks, exhibits, activities and interactions that bridge Spaces by weaving together many of the themes present at the festival.</p>
+            <div className="horizontal-rule"></div>
           </div>
         </div>
-        {this.spaces}
+        { this.renderInfoSection(ExpereincesInfo) }
+
         <Footer/>
       </div>
     );

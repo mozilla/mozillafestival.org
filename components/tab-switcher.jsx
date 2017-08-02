@@ -2,6 +2,7 @@
 
 var React = require(`react`);
 var Link = require(`react-router`).Link;
+var classNames = require(`classnames`);
 
 // Children nodes and buttons can be hidden if empty based on hidden param passed to them.
 // TODO: find a way to allow another tab to be active by default, especially if it's the only tab with content/not hidden
@@ -42,10 +43,15 @@ var TabSwitcher = React.createClass({
   render: function() {
     let buttons = this.props.children.map((element, index) => {
       if(this.props.children[index].props.hidden) { return; }
+
+      let classnames = classNames(`btn p-2`, {
+        "active": index === this.state.activeTab
+      });
+
       return (
         <Link
           to={`${this.props.baseURL}${this.props.children[index].props.slug}`}
-          className={`btn ${index === this.state.activeTab ? `active` : ``}`}
+          className={classnames}
           onClick={this.tabClick.bind(null, index)}
           key={index}
           hidden={this.props.children[index].props.hidden}>
