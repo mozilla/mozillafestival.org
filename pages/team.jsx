@@ -25,6 +25,11 @@ var productionMembers = [
     bio: <p>Erika Drushka is the Program Designer for MozFest 2017. With a background in documentary film making, advocacy and fundraising, Erika's focus at Mozilla is building network strength in the open internet movement through convenings. This will be Erika's fifth MozFest.</p>
   },
   {
+    name: `Chris Lawrence`,
+    pic: `/assets/images/team/production/Chris.jpg`,
+    bio: <p>As Vice President, Mozilla Leadership Network, Chris oversees the development and expansion of a global network of leaders for Internet health. These efforts have reached hundreds of thousands of people in over 90 cities across the globe. Chris has never missed a Mozilla Festival!</p>
+  },
+  {
     name: `Allen “Gunner” Gunn`,
     title: `Co-designer and Emcee`,
     pic: `/assets/images/team/production/AllenGunn.jpg`,
