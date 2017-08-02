@@ -6,6 +6,7 @@ var ImageTag = require('./imagetag.jsx');
 
 var BioTooltip = React.createClass({
   render: function() {
+    console.log(this.props.bio);
     return(
       <div className="bio-section">
         <div className="tooltip-arrow"></div>
@@ -21,9 +22,7 @@ var BioTooltip = React.createClass({
 var SpacePathwayProfile = React.createClass({
   getDefaultProps: function() {
     return {
-      linkText: "Propose a session in this space.",
-      linkTo: "/proposals",
-      showWranglerLink: false
+      showWranglerLink: true
     }
   },
   render: function() {
@@ -40,14 +39,14 @@ var SpacePathwayProfile = React.createClass({
           </div>
           { this.props.type ? <div className="type">{this.props.type}</div> : null }
           <div className="description">{this.props.description}</div>
-          <p><Link to={this.props.linkTo}>{this.props.linkText}</Link></p>
         </div>
         <div className="contacts">
-          { this.props.contacts ? <h2>{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>
+          { this.props.contacts ? <h2 className="mt-4 mt-sm-0">{(this.props.contacts.length > 1) ? this.props.contactTitle + "s" : this.props.contactTitle}</h2>
                                 : null}
           <ul>
           {
             this.props.contacts ? this.props.contacts.map(function(contact) {
+              console.log(`contact`, contact);
               return (
                 <li key={contact.name}>
                   { showWranglerLink ? <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
