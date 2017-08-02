@@ -32,7 +32,8 @@ var ProposalEnglish = () => <Proposals lang="english"
 var routes = (
   <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
-    <Route name="proposals" path="/proposals">
+    <Route name="proposals" path="/proposals" component={require(`./pages/cfp-closed.jsx`)} />
+    <Route name="late-proposals" path="/late-proposals">
       <IndexRoute component={ProposalEnglish} />
       { LOCALIZED_PROPOSAL_ROUTES }
     </Route>

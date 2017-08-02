@@ -20,9 +20,6 @@ var Header = React.createClass({
               <Link to="/tickets" activeClassName="active">Tickets</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="/proposals" activeClassName="active">Propose</Link>
-            </div>
-            <div className="nav-link-container">
               <Link to="/about" activeClassName="active">About</Link>
             </div>
             <div className="nav-link-container">
