@@ -46,7 +46,6 @@ var SpacePathwayProfile = React.createClass({
           <ul>
           {
             this.props.contacts ? this.props.contacts.map(function(contact) {
-              console.log(`contact`, contact);
               return (
                 <li key={contact.name}>
                   { showWranglerLink ? <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
