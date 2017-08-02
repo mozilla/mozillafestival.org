@@ -6,6 +6,7 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var MemberProfile = require('../components/member-profile.jsx');
 var PRODUCTION_MEMBERS = require('../team-bio/production-members');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
+var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 
 var Partners = React.createClass({
   partnersInfo: [
@@ -71,10 +72,11 @@ var TeamPage = React.createClass({
             return ( <MemberProfile {...member} key={member.name} /> );
           });
   },
-  renderIndividualSpaceSection(spaceName,members) {
+  renderIndividualSpaceSection(spaceName, type = `space`) {
+    let members = type === `space` ? SPACE_WRANGLERS[spaceName] : EXPERIENCES_WRANGLERS[spaceName];
     return <div>
             <h3 className="text-center">{ spaceName }</h3>
-            { this.renderMembers(SPACE_WRANGLERS[spaceName]) }
+            { this.renderMembers(members) }
             <div className="horizontal-rule mb-5"></div>
           </div>;
   },
@@ -103,6 +105,10 @@ var TeamPage = React.createClass({
               { this.renderIndividualSpaceSection(`Privacy and Security`) }
               { this.renderIndividualSpaceSection(`Web Literacy`) }
               { this.renderIndividualSpaceSection(`Youth Zone`) }
+              { this.renderIndividualSpaceSection(`Artist Open Studio`, `experiences`) }
+              { this.renderIndividualSpaceSection(`Dialogues and Debates`, `experiences`) }
+              { this.renderIndividualSpaceSection(`Theme`, `experiences`) }
+              { this.renderIndividualSpaceSection(`Wayfinding and Recognition`, `experiences`) }
             </div>
 
             <div name="Sponsors" slug="sponsors" className="sponsors">

@@ -156,7 +156,6 @@ let PRIVACY_AND_SECURITY_WRANGLERS = [
   }
 ];
 
-
 let WEB_LITERACY_WRANGLERS = [
   {
     name: `Mariana Delgado`
