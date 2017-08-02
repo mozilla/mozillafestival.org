@@ -22,7 +22,7 @@ var BioTooltip = React.createClass({
 var SpacePathwayProfile = React.createClass({
   getDefaultProps: function() {
     return {
-      showWranglerLink: false
+      showWranglerLink: true
     }
   },
   render: function() {
