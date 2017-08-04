@@ -67,6 +67,12 @@
       font-size: 1.5rem;
       margin-top: 2rem;
     }
+    .demonstrate {
+      ul {
+        margin-top: .5rem;
+        font-weight: 300;
+      }
+    }
   }
 
   @keyframes loading {
@@ -108,6 +114,17 @@
       &.word-length-restriction.max-50-words.required {
         &::after {
           content: "(max 50 words) (required)";
+        }
+      }
+
+       &.word-length-restriction.max-120-words {
+        &::after {
+          content: "(max 120 words)";
+        }
+      }
+      &.word-length-restriction.max-120-words.required {
+        &::after {
+          content: "(max 120 words) (required)";
         }
       }
     }

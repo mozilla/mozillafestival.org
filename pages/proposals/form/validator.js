@@ -15,7 +15,7 @@ const Validator = {
       validate: function(value) {
         if (!value) return false;
 
-        let wordLength = value.split(` `).length;
+        let wordLength = value.trim().split(` `).length;
         this.error = `${wordLength}/${maxWordsLength}`;
 
         return wordLength > maxWordsLength;
@@ -26,7 +26,8 @@ const Validator = {
     return {
       error,
       validate: function(value) {
-        return !value || !validator.isEmail(value);
+        if (!value) return true;
+        return !validator.isEmail(value); // validator library only validates string ('null' will throw error)
       }
     };
   }

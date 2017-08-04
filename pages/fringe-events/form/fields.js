@@ -3,6 +3,10 @@ import moment from 'moment';
 import DatePicker from 'react-datepicker';
 import TimePicker from 'rc-time-picker';
 import validator from './validator';
+import Select from 'react-select';
+import TimezoneList from 'timezones.json';
+
+console.log(TimezoneList);
 
 // *** IMPORTANT ***
 //
@@ -63,6 +67,24 @@ let Time = React.createClass({
   }
 });
 
+// let Timezone = React.createClass({
+//   getInitialState: function () {
+//    return {
+//      selected: ''
+//     };
+//   },
+//   handleSelectChange: function(time) {
+//     let selected = time.format(TIME_FORMAT);
+//     // console.log(time && time.format(TIME_FORMAT));
+//     this.setState({ selected }, () => {
+//       this.props.onChange(null,selected);
+//     });
+//   },
+//   render: function() {
+//     return null;
+//   }
+// });
+
 var createPartOneFields = function() {
   return {
     'eventname': {
@@ -86,6 +108,12 @@ var createPartOneFields = function() {
       labelClassname: `required`,
       fieldClassname: `form-control`
     },
+    // 'timezone': {
+    //   type: Timezone,
+    //   label: `Timezone`,
+    //   labelClassname: `required`,
+    //   fieldClassname: `form-control`
+    // },
     'location': {
       type: `text`,
       label: `Location`,
@@ -95,14 +123,35 @@ var createPartOneFields = function() {
         validator.emptyValueValidator()
       ]
     },
+    'email': {
+      type: `text`,
+      label: `Contact email`,
+      placeholder: `hello@example.com`,
+      labelClassname: `required`,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emailValidator(),
+        validator.maxWordsValidator(2)
+      ]
+    },
     'description': {
       type: `textarea`,
-      label: `Description`,
+      label: `Description of your Event`,
       labelClassname: `required word-length-restriction max-50-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(),
         validator.maxWordsValidator(50)
+      ]
+    },
+    'demonstrate': {
+      type: `textarea`,
+      label: `How your event demonstrate one or more of the following characteristics`,
+      labelClassname: `required word-length-restriction max-120-words`,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emptyValueValidator(),
+        validator.maxWordsValidator(120)
       ]
     },
     'link': {
@@ -124,8 +173,7 @@ var createPartTwoFields = function() {
       labelClassname: `required`,
       fieldClassname: `form-control mr-2 d-inline-block`,
       validator: [
-        validator.emptyValueValidator(),
-        validator.urlValidator()
+        validator.privacyPolicyAgreementValidator()
       ]
     }
   };

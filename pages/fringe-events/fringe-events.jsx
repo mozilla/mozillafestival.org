@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom')
 var ReactRouter = require('react-router')
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
@@ -53,6 +54,30 @@ var FringeEventForm = React.createClass({
       formValues: {}
     }
   },
+  componentDidMount: function() {
+    this.alterDemonstrateFieldLabel();
+  },
+  alertFieldLabel(fieldName, newLabelInnerHTML) {
+    // Modifying DOM directly is definitely not encouraged.
+    // Howerver, since react-formerbuilder only allow string as 'label' ...
+    // ... We are doing the following as a quick hack
+    let field = ReactDOM.findDOMNode(this.refs.formPartOne).querySelector(`fieldset.${fieldName}`);
+    let label = field.querySelector(`label`);
+    label.innerHTML = newLabelInnerHTML;
+  },
+  alterDemonstrateFieldLabel: function() {
+    let newLabel = `How your event demonstrate one or more of the following characteristics` +
+                    `<ul>` +
+                      `<li>Event is co-designed with partners/allies and community</li>` + 
+                      `<li>Includes creative, hands-on activities</li>` + 
+                      `<li>Facilitation promotes collaboration, innovation and respect</li>` + 
+                      `<li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>` + 
+                      `<li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>` + 
+                      `<li>Promotes protects or advances the health of the Internet</li>` + 
+                      `<li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>` +
+                    `</ul>`;
+    this.alertFieldLabel(`demonstrate`, newLabel);
+  },
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
@@ -81,7 +106,7 @@ var FringeEventForm = React.createClass({
         } else {
           this.setState({showFormInvalidNotice: true});
         }
-      });      
+      });
     });
   },
   submitFringeEvent(fringeEvent) {
@@ -206,11 +231,20 @@ var FringePage = React.createClass({
         <div className="white-background">
           <div className="content centered wide">
             <h1>If MozFest wasn’t enough for you&hellip;</h1>
-            <p>MozFest is about working in the open and sharing ideas with the greater community. There are several innovative events taking place around the world with this same philosophy, and we would love to align them with MozFest.</p>
-            <p>How do you know if your event is a Fringe Event? It can be held anywhere in the world, but must include collaborative workshops or discussions focused on building tools and resources to keep the Web free and innovative.</p>
+            <p>MozFest is about working in the open and sharing ideas with a global network of people dedicating to protecting the health of the Internet.</p>
+            <p>There are innovative events taking place around the world with this same philosophy, and we would love to exchange ideas and celebrate together. If your event demonstrates some of the following characteristics, we’d love to promote it as a MozFest Fringe event, and share some of our resources with you:</p>
+            <ul className="text-left">
+              <li>Event is co-designed with partners.</li>
+              <li>Includes creative, hands-on activities.Facilitation promotes collaboration, innovation and respect.</li>
+              <li>Facilitation promotes collaboration, innovation and respect.</li>
+              <li>Designed in the open (e.g. you publish process blogs or have an open curation process).</li>
+              <li>Presents leadership opportunities for all (attendees, mentors, event staff).</li>
+              <li>Promotes protects or advances the health of the Internet.</li>
+              <li>Includes a code of conduct, ensuring all are welcome to share and be heard.</li>
+            </ul>
             <div className="cta">
               <p>Add your event to the MozFest Fringe calendar.</p>
-              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add Fringe Event</span></a>
+              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add event</span></a>
             </div>
           </div>
         </div>
