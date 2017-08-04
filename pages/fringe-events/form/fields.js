@@ -148,7 +148,7 @@ var createPartOneFields = function() {
       type: `textarea`,
       label: `How your event demonstrate one or more of the following characteristics`,
       labelClassname: `required word-length-restriction max-120-words`,
-      fieldClassname: `form-control`,
+      fieldClassname: `form-control tall`,
       validator: [
         validator.emptyValueValidator(),
         validator.maxWordsValidator(120)
