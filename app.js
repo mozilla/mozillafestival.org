@@ -117,9 +117,15 @@ function getFringeEvents(response) {
         console.log("[Error] ", sheetErr);
         response.status(500).json(sheetErr);
       } else {
-        response.send(rows.filter(function(row) {
-          return row.approved;
-        }));
+        let approvedRows = rows.filter(function(row) {
+          let approved = row.approved.toLowerCase().trim();
+          return approved === `y` || approved === `yes`;
+        }).map((row) => {
+          // don't expose contact email
+          delete row[`contactemail`];
+          return row;
+        });
+        response.send(approvedRows);
       }
     });
   });

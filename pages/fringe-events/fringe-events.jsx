@@ -1,11 +1,12 @@
 var React = require('react');
-var ReactDOM = require('react-dom')
-var ReactRouter = require('react-router')
+var ReactDOM = require('react-dom');
+var ReactRouter = require('react-router');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
 var Header = require('../../components/header.jsx');
 var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
+var FringeEventCard = require('../../components/fringe-event-card.jsx');
 
 var fields = require('./form/fields');
 
@@ -14,38 +15,6 @@ require('whatwg-fetch');
 const DATE_FORMAT = `MMM DD, YYYY`;
 const TIME_FORMAT = `h:mma`;
 const DATE_TIME_FORMAT = `${DATE_FORMAT} ${TIME_FORMAT}`;
-
-var Event = React.createClass({
-  renderDescription() {
-    return this.props.description.split(`\n`).map((paragraph) => {
-      if (!paragraph) return null;
-
-      return <p key={paragraph}>{paragraph}</p>;
-    });
-  },
-  render: function() {
-    var link = this.props.link;
-    return (
-      <li className="col-12 col-sm-6 mb-4">
-        <div className="inner-wrapper p-3">
-          <header className="font-weight-bold mb-3">{this.props.eventname}</header>
-          <div className="details">
-            <div className="date-and-time">
-              { moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT)} {moment(this.props.time, TIME_FORMAT).format(TIME_FORMAT) }
-            </div>
-            <div className="location">
-              {this.props.location}
-            </div>
-            { link && <div className="url"><a href={link}>{link}</a></div> }
-            <div className="description">
-              { this.renderDescription() }
-            </div>
-          </div>
-        </div>
-      </li>
-    );
-  }
-});
 
 var FringeEventForm = React.createClass({
   getInitialState: function() {
@@ -202,7 +171,7 @@ var FringePage = React.createClass({
     event.preventDefault();
     this.refs.fringeForm.scrollIntoView(true);
   },
-  render: function() {
+  renderFringeEvents() {
     var events = false;
     var sortByTime = function(a,b) {
       var timeA = moment(`${a.date} ${a.time}`, DATE_TIME_FORMAT);
@@ -213,14 +182,16 @@ var FringePage = React.createClass({
     }
     if ( this.state.eventsLoaded ) {
       events = this.state.events.sort(sortByTime).map(function(event,i) {
-                return <Event {...event} key={event.eventname} />;
+                return <FringeEventCard {...event} key={event.eventname} />;
               });
       events = <ul className="row">{events}</ul>;
     } else {
       events = this.state.unableToLoadEvents ? <p>Unable to load Fringe Events.</p>
                                              : <p className="loading-message">Loading Fringe Events</p>;
     }
-
+    return events;
+  },
+  render: function() {
     return (
       <div className="fringe-events-page">
         <Header/>
@@ -250,7 +221,7 @@ var FringePage = React.createClass({
         </div>
         <div className="events white-background">
           <div className="content wide">
-            {events}
+            { this.renderFringeEvents() }
           </div>
         </div>
         <div className="white-background" id="fringe-form-section" ref="fringeForm">

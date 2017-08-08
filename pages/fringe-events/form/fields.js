@@ -17,10 +17,14 @@ const TIME_FORMAT = "h:mma";
 
 let EventDate = React.createClass({
   getInitialState: function () {
-   return {
-     startDate: moment(),
-     selected: ''
+  let startDate = moment();
+  return {
+     startDate: startDate,
+     selected: startDate
     };
+  },
+  componentDidMount: function() {
+    this.handleSelectChange(this.state.selected);
   },
   handleSelectChange: function(date) {
     let selected = date.format(DATE_FORMAT);
@@ -41,13 +45,17 @@ let EventDate = React.createClass({
 
 let Time = React.createClass({
   getInitialState: function () {
-   return {
-     selected: ''
+    let defaultValue = moment().hour(0).minute(0);
+    return {
+     defaultValue: defaultValue,
+     selected: defaultValue
     };
+  },
+  componentDidMount: function() {
+    this.handleSelectChange(this.state.selected);
   },
   handleSelectChange: function(time) {
     let selected = time.format(TIME_FORMAT);
-    // console.log(time && time.format(TIME_FORMAT));
     this.setState({ selected }, () => {
       this.props.onChange(null,selected);
     });
@@ -55,7 +63,7 @@ let Time = React.createClass({
   render: function() {
     return <TimePicker
               showSecond={false}
-              defaultValue={moment().hour(0).minute(0)}
+              defaultValue={this.state.defaultValue}
               className="time-selector"
               onChange={(value) => this.handleSelectChange(value)}
               format={TIME_FORMAT}
@@ -96,7 +104,7 @@ var createPartOneFields = function() {
         validator.emptyValueValidator()
       ]
     },
-    'email': {
+    'contactemail': {
       type: `text`,
       label: `Contact email`,
       placeholder: `hello@example.com`,
