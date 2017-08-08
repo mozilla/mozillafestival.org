@@ -42,7 +42,7 @@ app.configure(function() {
 
 var _ = require(`underscore`);
 var fs = require(`fs`);
-var pathToTemplate = path.normalize(__dirname + `./proposal-ticket-template.md`);
+var pathToTemplate = path.normalize(__dirname + `/proposal-ticket-template.md`);
 var template = _.template(fs.readFileSync(pathToTemplate,`utf-8`));
 console.log(template);
 
