@@ -39,13 +39,6 @@ app.configure(function() {
   });
 });
 
-
-var _ = require(`underscore`);
-var fs = require(`fs`);
-var pathToTemplate = path.normalize(__dirname + `/proposal-ticket-template.md`);
-var template = _.template(fs.readFileSync(pathToTemplate,`utf-8`));
-console.log(template);
-
 app.post(`/add-proposal`, limiter, function(req, res) {
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
