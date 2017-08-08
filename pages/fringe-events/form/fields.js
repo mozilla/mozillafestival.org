@@ -64,24 +64,6 @@ let Time = React.createClass({
   }
 });
 
-// let Timezone = React.createClass({
-//   getInitialState: function () {
-//    return {
-//      selected: ''
-//     };
-//   },
-//   handleSelectChange: function(time) {
-//     let selected = time.format(TIME_FORMAT);
-//     // console.log(time && time.format(TIME_FORMAT));
-//     this.setState({ selected }, () => {
-//       this.props.onChange(null,selected);
-//     });
-//   },
-//   render: function() {
-//     return null;
-//   }
-// });
-
 var createPartOneFields = function() {
   return {
     'eventname': {
@@ -105,12 +87,6 @@ var createPartOneFields = function() {
       labelClassname: `required`,
       fieldClassname: `form-control`
     },
-    // 'timezone': {
-    //   type: Timezone,
-    //   label: `Timezone`,
-    //   labelClassname: `required`,
-    //   fieldClassname: `form-control`
-    // },
     'location': {
       type: `text`,
       label: `Location`,
