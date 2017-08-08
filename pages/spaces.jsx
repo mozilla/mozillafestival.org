@@ -114,7 +114,17 @@ var ExpereincesInfo = [
     name: "Artist Open Studio",
     description:
     (<div>
-      <p></p>
+      <p>Upholding a healthy internet requires diverse voices and approaches&mdash;like art and design.
+      </p>
+      <p>Art and design play key roles in engaging new audiences around issues like privacy and inclusion, and in shaping critical thinking around a healthy web. To highlight these artistic perspectives, MozFest&mdash;in collaboration with Digital Learning at V&A and Tate&mdash;has invited artists to address each of the five thematic issue areas of the festival through an installation and on-site lab:</p>
+      <ul>
+        <li>An Xiao Mina (Web Literacy)</li>
+        <li>Paolo Cirio (Privacy and Security)</li>
+        <li>Archana Prasad (Decentralization)</li>
+        <li>Gretta Louw (Open Innovation)</li>
+        <li>Brooklyn Pakathi (Digital Inclusion)</li>
+      </ul>
+      <p>Participants will engage with the artists in an open lab setting. Artists will share their practices, and also develop collaborative work with the public.</p>
     </div>),
     contacts: [
       { name: "Luca M Damiani" },
