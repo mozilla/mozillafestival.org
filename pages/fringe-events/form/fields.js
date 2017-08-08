@@ -4,9 +4,6 @@ import DatePicker from 'react-datepicker';
 import TimePicker from 'rc-time-picker';
 import validator from './validator';
 import Select from 'react-select';
-import TimezoneList from 'timezones.json';
-
-console.log(TimezoneList);
 
 // *** IMPORTANT ***
 //

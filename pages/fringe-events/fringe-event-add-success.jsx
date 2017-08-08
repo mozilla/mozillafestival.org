@@ -17,7 +17,7 @@ var Success = React.createClass({
         <div className="centered content wide">
           <h1>Submitted!</h1>
           <p>Thank you for your submission.</p>
-          <p>Your event will show up on the page after it has been reviewed by MozFest program team.</p>
+          <p>Your event will show up on the MozFest Fringe Page after it has been reviewed by our team.</p>
           <div><Link to="/fringe" className="btn btn-primary-outline">See other fringe events</Link></div>
         </div>
         <Footer/>

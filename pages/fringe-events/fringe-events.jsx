@@ -66,14 +66,14 @@ var FringeEventForm = React.createClass({
     label.innerHTML = newLabelInnerHTML;
   },
   alterDemonstrateFieldLabel: function() {
-    let newLabel = `How your event demonstrate one or more of the following characteristics` +
+    let newLabel = `How does your event demonstrate one or more of the following characteristics?` +
                     `<ul>` +
                       `<li>Event is co-designed with partners/allies and community</li>` + 
                       `<li>Includes creative, hands-on activities</li>` + 
                       `<li>Facilitation promotes collaboration, innovation and respect</li>` + 
                       `<li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>` + 
                       `<li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>` + 
-                      `<li>Promotes protects or advances the health of the Internet</li>` + 
+                      `<li>Protects or advances the health of the Internet</li>` + 
                       `<li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>` +
                     `</ul>`;
     this.alertFieldLabel(`demonstrate`, newLabel);
@@ -235,11 +235,11 @@ var FringePage = React.createClass({
             <p>There are innovative events taking place around the world with this same philosophy, and we would love to exchange ideas and celebrate together. If your event demonstrates some of the following characteristics, we’d love to promote it as a MozFest Fringe event, and share some of our resources with you:</p>
             <ul className="text-left">
               <li>Event is co-designed with partners.</li>
-              <li>Includes creative, hands-on activities.Facilitation promotes collaboration, innovation and respect.</li>
+              <li>Includes creative, hands-on activities.</li>
               <li>Facilitation promotes collaboration, innovation and respect.</li>
               <li>Designed in the open (e.g. you publish process blogs or have an open curation process).</li>
               <li>Presents leadership opportunities for all (attendees, mentors, event staff).</li>
-              <li>Promotes protects or advances the health of the Internet.</li>
+              <li>Protects or advances the health of the Internet.</li>
               <li>Includes a code of conduct, ensuring all are welcome to share and be heard.</li>
             </ul>
             <div className="cta">
