@@ -301,3 +301,49 @@ a.btn:hover {
     text-align: center;
   }
 }
+
+
+/* *** 
+*
+* form styling
+*
+* ***/
+
+.error-styling {
+  .px-1;
+  color: darken(@pink, 15%);
+  background: lighten(@pink, 40%);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+form {
+  .inline.error {
+    .mt-1;
+    .error-styling;
+    display: inline-block;
+  }
+
+  fieldset {
+    .mb-4;
+  }
+
+  label {
+    &.required,
+    &.word-length-restriction {
+      &::after {
+        display: inline-block;
+        font-style: italic;
+        font-size: 75%;
+        font-weight: 300;
+        margin-left: 0.5rem;
+        color: @grey;
+      }
+    }
+    &.required {
+      &::after {
+        content: "(required)";
+      }
+    }
+  }
+}

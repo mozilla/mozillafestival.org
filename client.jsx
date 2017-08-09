@@ -49,8 +49,8 @@ var routes = (
     </Route>
     <Route name="submission-process" path="/submission-process" component={require(`./pages/submission-process.jsx`)} />
     <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
-    <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events.jsx`)} />
-    <Route name="fringe-event-add-success" path="/fringe-event-add-success" component={require(`./pages/fringe-event-add-success.jsx`)} />
+    <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
+    <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
     <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
   </Router>
 );
