@@ -36,7 +36,7 @@ var SpacesInfo = [
       { name: "Joe Nash" },
       { name: "Leah Ruffin" },
       { name: "Michael Saunby" },
-      { name: "Martha Segwick" }
+      { name: "Martha Sedgwick" }
     ]
   },
   {
