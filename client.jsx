@@ -29,8 +29,26 @@ const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
 var ProposalEnglish = () => <Proposals lang="english"
                                        stringSource={EnglishStrings} />;
 
+function scroll() {
+  // if hash is presented in the url, scroll to the anchored element
+  // otherwise scorll to top
+  const hash = window.location.hash;
+  if (hash !== ``) {
+    // Push onto callback queue so it runs after the DOM is updated,
+    // this is required when navigating from a different page so that
+    // the element is rendered on the page before trying to getElementById.
+    // (ref: https://github.com/rafrex/react-router-hash-link/tree/react-router-v2/3)
+    setTimeout(() => {
+      const element = document.getElementById(hash.replace(`#`, ``));
+      if (element) element.scrollIntoView(true);
+     }, 0);
+  } else {
+    window.scrollTo(0, 0);
+  }
+}
+
 var routes = (
-  <Router history={browserHistory} onUpdate={() => {window.scrollTo(0, 0)}}>
+  <Router history={browserHistory} onUpdate={() => scroll()}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
     <Route name="proposals" path="/proposals" component={require(`./pages/cfp-closed.jsx`)} />
     <Route name="late-proposals" path="/late-proposals">
