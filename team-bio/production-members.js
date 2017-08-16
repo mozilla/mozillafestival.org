@@ -64,7 +64,7 @@ module.exports = [
   },
   {
     name: `Tom Farrow`,
-    title: `Volunteer Coordinators`,
+    title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/TomFarrow.jpg`,
     bio: [
       `Tom co-ordinates process, governance and logistics for a number of community teams across Mozilla. With experience in technology and process management, Tom is joining this year's volunteer co-ordinator team. He aims to empower volunteers to feel effective and welcomed over the weekend by bringing in a process and people mindset.`
@@ -72,7 +72,7 @@ module.exports = [
   },
   {
     name: `Ziggy Maes`,
-    title: `Volunteer Coordinators`,
+    title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/ZiggyMaes.jpg`,
     bio: [
       `Ziggy is one of the volunteer coordinators for MozFest 2017 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at Fosdem as well. You’ll most definitely see him running through the venue during the event!`
@@ -80,7 +80,7 @@ module.exports = [
   },
   {
     name: `Robert Sayles`,
-    title: `Volunteer Coordinators`,
+    title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/RobertSayles.jpg`,
     bio: [
       `Robby is a Mozilla Rep Mentor based out of Dallas, Texas. He loves volunteering and a big web and aviation feel.`
