@@ -75,7 +75,7 @@ module.exports = [
     title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/ZiggyMaes.jpg`,
     bio: [
-      `Ziggy is one of the volunteer coordinators for MozFest 2017 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at Fosdem as well. You’ll most definitely see him running through the venue during the event!`
+      `Ziggy is one of the volunteer coordinators for MozFest 2017 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at FOSDEM as well. You’ll most definitely see him running through the venue during the event!`
     ],
   },
   {
