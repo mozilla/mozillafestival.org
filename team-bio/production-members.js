@@ -53,5 +53,37 @@ module.exports = [
     bio: [
       `Marc is the Senior Production Coordinator for MozFest 2017, his sixth year with the festival. Since last year he’s worked on various large scale experimental events as well as Glastonbury and the BBC Music Awards. Drawing on this experience, he brings his logistical and production mind-set to help make sure the cogs keep turning across the weekend.`
     ],
+  },
+  {
+    name: `Esme Simcox`,
+    title: `Production Assistant`,
+    pic: `/assets/images/team/production/EsmeSimcox.jpg`,
+    bio: [
+      `Esme is the Production Assistant for MozFest 2017. She is still in university studying Digital Television Production at Ravensbourne and has recently produced their Graduate Show. This will be her first MozFest.`
+    ],
+  },
+  {
+    name: `Tom Farrow`,
+    title: `Volunteer Coordinators`,
+    pic: `/assets/images/team/production/TomFarrow.jpg`,
+    bio: [
+      `Tom co-ordinates process, governance and logistics for a number of community teams across Mozilla. With experience in technology and process management, Tom is joining this year's volunteer co-ordinator team. He aims to empower volunteers to feel effective and welcomed over the weekend by bringing in a process and people mindset.`
+    ],
+  },
+  {
+    name: `Ziggy Maes`,
+    title: `Volunteer Coordinators`,
+    pic: `/assets/images/team/production/ZiggyMaes.jpg`,
+    bio: [
+      `Ziggy is one of the volunteer coordinators for MozFest 2017 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at Fosdem as well. You’ll most definitely see him running through the venue during the event!`
+    ],
+  },
+  {
+    name: `Robert Sayles`,
+    title: `Volunteer Coordinators`,
+    pic: `/assets/images/team/production/RobertSayles.jpg`,
+    bio: [
+      `Robby is a Mozilla Rep Mentor based out of Dallas, Texas. He loves volunteering and a big web and aviation feel.`
+    ],
   }
 ];
