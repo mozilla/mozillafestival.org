@@ -62,7 +62,6 @@ app.post(`/add-proposal`, limiter, function(req, res) {
       proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
         // if (updateErr) res.status(500).json(updateErr);
 
-
         res.send(`Success!`);
       });
     });
