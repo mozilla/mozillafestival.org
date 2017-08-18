@@ -70,6 +70,7 @@ var routes = (
     <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
     <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
     <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
+    <Route name="speakers" path="/speakers" component={require(`./pages/speakers.jsx`)} />
   </Router>
 );
 
