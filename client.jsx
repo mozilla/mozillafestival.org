@@ -48,7 +48,6 @@ function scroll() {
 }
 
 var redirectToProposals = function(nextState, replace, callback) {
-  console.log(nextState);
   if (nextState.location.pathname !== `/proposals`) {
     replace(`/proposals`);
   }
