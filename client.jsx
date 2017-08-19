@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, IndexRoute, Redirect, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import ReactDOM from 'react-dom';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
@@ -47,11 +47,22 @@ function scroll() {
   }
 }
 
+var redirectToProposals = function(nextState, replace, callback) {
+  console.log(nextState);
+  if (nextState.location.pathname !== `/proposals`) {
+    replace(`/proposals`);
+  }
+  callback();
+};
+
 var routes = (
   <Router history={browserHistory} onUpdate={() => scroll()}>
     <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
-    <Route name="proposals" path="/proposals" component={require(`./pages/cfp-closed.jsx`)} />
-    <Route name="late-proposals" path="/late-proposals">
+    <Route name="proposals" path="/proposals" onEnter={redirectToProposals}>
+      <IndexRoute component={require(`./pages/cfp-closed.jsx`)} />
+      { LOCALIZED_PROPOSAL_ROUTES }
+    </Route>
+    <Route name="late-proposals" path="/late-proposals" onEnter={redirectToProposals}>
       <IndexRoute component={ProposalEnglish} />
       { LOCALIZED_PROPOSAL_ROUTES }
     </Route>
