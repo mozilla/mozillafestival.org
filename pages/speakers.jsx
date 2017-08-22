@@ -3,12 +3,12 @@ var TabSwitcher = require('../components/tab-switcher.jsx');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var MemberProfile = require('../components/member-profile.jsx');
-var SPEAKERS_2016 = require('../team-bio/speakers/2016');
+var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
+var SPEAKERS_2016 = require('../talks/2016');
 
 var TeamPage = React.createClass({
-  renderMembers: function(members) {
-    return members.map( member => <MemberProfile {...member} key={member.name} /> );
+  renderTalk: function(talks) {
+    return talks.map( talk => <SpeakerSeriesTalk {...talk} key={talk.name} /> );
   },
   render: function() {
     return (
@@ -16,20 +16,20 @@ var TeamPage = React.createClass({
         <Header/>
         <Jumbotron image="/assets/images/hero/team.jpg"
                   image2x="/assets/images/hero/team.jpg">
-          <h1>Team</h1>
+          <h1>Dialogues and Debates Speakers</h1>
         </Jumbotron>
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
-            <div name="2017" slug="2017">
-              <h1>2017</h1>
-              <div className="horizontal-rule"></div>
-              { this.renderMembers(SPEAKERS_2016) }
-            </div>
-
+            
             <div name="2016" slug="2016">
               <h1>2016</h1>
               <div className="horizontal-rule"></div>
-              { this.renderMembers(SPEAKERS_2016) }
+              { this.renderTalk(SPEAKERS_2016) }
+            </div>
+            
+            <div name="2017" slug="2017" hidden>
+              <h1>2017</h1>
+              <div className="horizontal-rule"></div>
             </div>
 
           </TabSwitcher>
