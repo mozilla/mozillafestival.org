@@ -7,8 +7,8 @@ module.exports = [
       {
         name: `Zeynep Tufekci`,
         twitter: `@zeynep`,
-        title: `Professor, University of North Carolina. Contributor, New York Times`,
-        pic: `/assets/images/speakers/Tufekci.jpg`
+        pic: `/assets/images/speakers/Tufekci.jpg`,
+        description: `Zeynep Tufekci is a professor and author specializing in the intersection of technology and society. She spoke at MozFest 2016 about social media platforms, inclusion and exclusion online.`,
       }
     ]
   },
@@ -19,8 +19,8 @@ module.exports = [
       {
         name: `Brian Behlendorf`,
         twitter: `@brianbehlendorf`,
-        title: `Executive Director, Hyperledger Project`,
-        pic: `/assets/images/speakers/Behlendorf.jpg`
+        pic: `/assets/images/speakers/Behlendorf.jpg`,
+        description: `Brian Behlendorf is Executive Director at the Hyperledger Project. He spoke at MozFest 2016 about blockchain.`
       }
     ]
   },
@@ -32,8 +32,8 @@ module.exports = [
       {
         name: `Maggie Vail`,
         twitter: `@magicbeans`,
-        title: `Executive Director, CASH Music`,
-        pic: `/assets/images/speakers/Vail.jpg`
+        pic: `/assets/images/speakers/Vail.jpg`,
+        description: `Maggie Vail is Executive Director at CASH Music. She spoke at MozFest 2016 about empowering musicians on the web.`
       }
     ]
   },
@@ -44,13 +44,12 @@ module.exports = [
       {
         name: `Mitchell Baker`,
         twitter: `@MitchellBaker`,
-        title: `Executive Chairwoman, Mozilla`,
-        pic: `/assets/images/speakers/Baker.jpg`
+        pic: `/assets/images/speakers/Baker.jpg`,
+        description: `Mitchell Baker is Executive Chairwoman of Mozilla, and Mark Surman is Executive Director of the Mozilla Foundation. They spoke at MozFest 2016 about seismic shifts online, and Mozilla’s work.`
       },
       {
         name: `Mark Surman`,
         twitter: `@msurman`,
-        title: `Executive Director, Mozilla Foundation`,
         pic: `/assets/images/speakers/Surman.jpg`
       }
     ]
@@ -62,8 +61,8 @@ module.exports = [
       {
         name: `Sahar Aziz`,
         twitter: `@saharazizlaw`,
-        title: `Professor of Law, Texas A&M University`,
-        pic: `/assets/images/speakers/Aziz.jpg`
+        pic: `/assets/images/speakers/Aziz.jpg`,
+        description: `Sahar Aziz is a Professor of Law at Texas A&M University. She spoke at MozFest 2016 about governments and grassroots movements alike leveraging technology.`
       }
     ]
   },
@@ -74,8 +73,8 @@ module.exports = [
       {
         name: `Katherine Maher`,
         twitter: `@krmaher`,
-        title: `Wikimedia Foundation`,
-        pic: `/assets/images/speakers/Maher.jpg`
+        pic: `/assets/images/speakers/Maher.jpg`,
+        description: `Katherine Maher is Executive Director of the Wikimedia Foundation. She spoke at MozFest 2016 about building for inclusivity online.`
       }
     ]
   },
@@ -86,8 +85,8 @@ module.exports = [
       {
         name: `Chris Soghoian`,
         twitter: `@csoghoian`,
-        title: `Principal Technologist & Senior Policy Analyst, ACLU`,
-        pic: `/assets/images/speakers/Soghoian.jpg`
+        pic: `/assets/images/speakers/Soghoian.jpg`,
+        description: `Chris Soghoian is Principal Technologist at the ACLU. He spoke at MozFest 2016 about government surveillance.`
       }
     ]
   },
@@ -99,8 +98,8 @@ module.exports = [
       {
         name: `Ashe Dryden`,
         twitter: `@ashedryden`,
-        title: `White House Fellow. Programmer. Diversity & Inclusion Consultant`,
-        pic: `/assets/images/speakers/Dryden.jpg`
+        pic: `/assets/images/speakers/Dryden.jpg`,
+        description: `Ashe Dryden is a programmer, diversity advocate and author. She spoke at MozFest 2016 about the ethics of unpaid labor and open source software.`
       }
     ]
   },
@@ -110,20 +109,20 @@ module.exports = [
     speakers: [
       {
         name: `Volker Birk`,
-        title: `CTO, pretty Easy privacy. President, p≡p Foundation Council`,
-        pic: `/assets/images/speakers/Birk.jpg`
+        pic: `/assets/images/speakers/Birk.jpg`,
+        description: `Volker Birk is the CTO of Pretty Easy Privacy. He spoke at MozFest 2016 about making online privacy simple. `
       }
     ]
   },
   {
-    name: `Half the Population is Not Connected `,
+    name: `Half the Population is Not Connected`,
     videoLink: `https://www.youtube.com/watch?v=4krgs4gHSbI&index=3&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60`,
     speakers: [
       {
         name: `Katharina Borchert`,
         twitter: `@lyssaslounge`,
-        title: `Chief Innovation Officer, Mozilla`,
-        pic: `/assets/images/speakers/Borchert.jpg`
+        pic: `/assets/images/speakers/Borchert.jpg`,
+        description: `Katharina Borchert is Chief Innovation Officer at Mozilla. She spoke at MozFest 2016 about equal access to the Internet.`
       }
     ]
   },
@@ -134,8 +133,8 @@ module.exports = [
     speakers: [
       {
         name: `Simone Browne`,
-        title: `Professor, University of Texas at Austin`,
-        pic: `/assets/images/speakers/Browne.jpg`
+        pic: `/assets/images/speakers/Browne.jpg`,
+        description: `Simone Browne is Associate Professor in the Department of African and African Diaspora Studies at the University of Texas at Austin. She spoke at MozFest 2016 about surveillance and race online. `
       }
     ]
   },
@@ -147,6 +146,7 @@ module.exports = [
         name: `Eliot Higgins`,
         twitter: `@EliotHiggins`,
         pic: `/assets/images/speakers/Higgins.jpg`,
+        description: `Eliot Higgins is the founder of Bellingcat, a resource by and for citizen journalists. He spoke at MozFest 2016 about the open source information revolution and Flight MH17.`
       }
     ]
   }

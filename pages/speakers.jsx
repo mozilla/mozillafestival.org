@@ -16,7 +16,7 @@ var TeamPage = React.createClass({
         <Header/>
         <Jumbotron image="/assets/images/hero/team.jpg"
                   image2x="/assets/images/hero/team.jpg">
-          <h1>Dialogues and Debates Speakers</h1>
+          <h1>Speakers</h1>
         </Jumbotron>
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
@@ -27,9 +27,10 @@ var TeamPage = React.createClass({
               { this.renderTalk(SPEAKERS_2016) }
             </div>
             
-            <div name="2017" slug="2017" hidden>
+            <div name="2017" slug="2017">
               <h1>2017</h1>
               <div className="horizontal-rule"></div>
+              { this.renderTalk(SPEAKERS_2016) }
             </div>
 
           </TabSwitcher>

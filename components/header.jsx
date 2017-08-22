@@ -3,7 +3,24 @@ var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
 
+const NAV_LINKS = [
+  { path: `/tickets`, label: `Tickets` },
+  { path: `/about`, label: `About` },
+  { path: `/spaces`, label: `Spaces` },
+  { path: `/speakers`, label: `Speakers` },
+  { path: `/expect`, label: `What to expect` },
+  { path: `/projects`, label: `Projects` },
+  { path: `/team/sponsors`, label: `Sponsors` }
+];
+
 var Header = React.createClass({
+  renderNavLinks: function() {
+    return NAV_LINKS.map(link => {
+      return <div className="nav-link-container d-inline-block" key={link.label}>
+              <Link to={link.path} activeClassName="active">{link.label}</Link>
+            </div>;
+    });
+  },
   render: function() {
     var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
     return (
@@ -16,24 +33,7 @@ var Header = React.createClass({
             </Link>
           </div>
           <div className="nav-items">
-            <div className="nav-link-container">
-              <Link to="/tickets" activeClassName="active">Tickets</Link>
-            </div>
-            <div className="nav-link-container">
-              <Link to="/about" activeClassName="active">About</Link>
-            </div>
-            <div className="nav-link-container">
-              <Link to="/spaces" activeClassName="active">Spaces</Link>
-            </div>
-            <div className="nav-link-container">
-              <Link to="/expect" activeClassName="active">What to expect</Link>
-            </div>
-            <div className="nav-link-container">
-              <Link to="/projects" activeClassName="active">Projects</Link>
-            </div>
-            <div className="nav-link-container">
-              <Link to="/team/sponsors" activeClassName="active">Sponsors</Link>
-            </div>
+            { this.renderNavLinks() }
           </div>
         </div>
       </div>

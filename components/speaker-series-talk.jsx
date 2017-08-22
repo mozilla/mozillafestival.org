@@ -10,22 +10,22 @@ var Speaker = React.createClass({
 
     return <p className="twitter my-0"><small><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter}</a></small></p>;
   },
-  renderTitle: function() {
-    if (!this.props.title) return null;
+  renderDescription: function() {
+    if (!this.props.description) return null;
 
-    return <p className="title my-0"><small>{this.props.title}</small></p>;
+    return <p className="description my-0">{this.props.description}</p>;
   },
   render: function() {
     return (
       <div className="row my-3">
-        <div className="col-6 col-sm-2 mb-5 mb-sm-0">
+        <div className="col-6 col-sm-2 mb-5 mb-sm-0 mx-auto">
           <img className="img-fluid rounded-circle" src={ this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
         <div className="col-sm-10 d-flex flex-column justify-content-center">
           <p className="m-0 text-center text-sm-left"><strong>{this.props.name}</strong></p>
           <div className="subhead text-center text-sm-left">
             { this.renderTwitter() }
-            { this.renderTitle() }
+            { this.renderDescription() }
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ var SpeakerSeriesTalk = React.createClass({
     let id = slugify(this.props.name);
 
     return (
-      <div className="row my-5 justify-content-center speaker-series-talk" id={id}>
+      <div className="row my-5 pb-5 justify-content-center speaker-series-talk" id={id}>
         <div className="col-12 text-center text-sm-left">
           <h3 className="name mb-0">{this.props.name}</h3>
           { this.renderTalkLinks() }
