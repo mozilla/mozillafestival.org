@@ -18,7 +18,7 @@ var TabSwitcher = React.createClass({
         iconDefault: React.PropTypes.string,
         iconActive: React.PropTypes.string
       }).isRequired
-    })) || React.PropTypes.object.isRequired
+    }))
   },
   getInitialState: function () {
     return {
