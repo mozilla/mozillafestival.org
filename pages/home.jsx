@@ -8,80 +8,6 @@ var ImageTag = require('../components/imagetag.jsx');
 var SpeakersPromo = require('../components/speakers-promo.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
-
-var speakersInfo = [
-  {
-    name: `Zeynep Tufekci`,
-    twitter: `@zeynep`,
-    pic: `/assets/images/speakers/Tufekci.jpg`,
-    link: `https://www.youtube.com/watch?v=pO-brBVRyN8&index=12&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60`
-  },
-  {
-    name: `Brian Behlendorf`,
-    twitter: `@brianbehlendorf`,
-    pic: `/assets/images/speakers/Behlendorf.jpg`,
-    link: `https://www.youtube.com/watch?v=PvPGTu_GjVI&index=11&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60`
-  },
-  {
-    name: `Maggie Vail`,
-    twitter: `@magicbeans`,
-    pic: `/assets/images/speakers/Vail.jpg`,
-    link: `https://www.youtube.com/watch?v=RyAdgOoJm_E&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=10`
-  },
-  {
-    name: `Mark Surman`,
-    twitter: `@msurman`,
-    pic: `/assets/images/speakers/Surman.jpg`,
-    link: `https://www.youtube.com/watch?v=AHb2Ki1XK88&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=9`
-  },
-  {
-    name: `Sahar Aziz`,
-    twitter: `@saharazizlaw`,
-    pic: `/assets/images/speakers/Aziz.jpg`,
-    link: `https://www.youtube.com/watch?v=p4cftN0jtYg&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=8`
-  },
-  {
-    name: `Katherine Maher`,
-    twitter: `@krmaher`,
-    pic: `/assets/images/speakers/Maher.jpg`,
-    link: `https://www.youtube.com/watch?v=n3whd0Wr-Bg&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=7`
-  },
-  {
-    name: `Chris Soghoian`,
-    twitter: `@csoghoian`,
-    pic: `/assets/images/speakers/Soghoian.jpg`,
-    link: `https://www.youtube.com/watch?v=zTZbrkV3bs8&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=6&t=16s`
-  },
-  {
-    name: `Ashe Dryden`,
-    twitter: `@ashedryden`,
-    pic: `/assets/images/speakers/Dryden.jpg`,
-    link: `https://www.youtube.com/watch?v=3k8WVijL124&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=5`
-  },
-  {
-    name: `Volker Birk`,
-    pic: `/assets/images/speakers/Birk.jpg`,
-    link: `https://www.youtube.com/watch?v=yd3cJjDW2dY&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=4`
-  },
-  {
-    name: `Katharina Borchert`,
-    twitter: `@lyssaslounge`,
-    pic: `/assets/images/speakers/Borchert.jpg`,
-    link: `https://www.youtube.com/watch?v=4krgs4gHSbI&index=3&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60`
-  },
-  {
-    name: `Simone Browne`,
-    pic: `/assets/images/speakers/Browne.jpg`,
-    link: `https://www.youtube.com/watch?v=lBwz-Jag1ZE&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=1`
-  },
-  {
-    name: `Eliot Higgins`,
-    twitter: `@EliotHiggins`,
-    pic: `/assets/images/speakers/Higgins.jpg`,
-    link: `https://www.youtube.com/watch?v=iFx6eJF94Ew&list=PLYiaJo7rYNXLQSEAa2RdyyiS28Ke2Rl60&index=2`
-  }
-];
-
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
   render: function () {
@@ -113,13 +39,6 @@ var Home = React.createClass({
                 </div>
               </div>
             </div>
-            <div className="horizontal-rule"></div>
-          </div>
-        </div>
-        <div className="white-background">
-          <div className="centered content wide">
-            <h1>Watch now: 2016 Dialogues and Debates</h1>
-            <SpeakersPromo speakersInfo={speakersInfo} />
           </div>
         </div>
         <div className="news content wide">
