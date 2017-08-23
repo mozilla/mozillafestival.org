@@ -75,7 +75,6 @@ var routes = (
     <Route name="team" path="/team" component={require(`./pages/team.jsx`)} >
       <Route path=":tab" component={require(`./pages/team.jsx`)} />
     </Route>
-    <Route name="submission-process" path="/submission-process" component={require(`./pages/submission-process.jsx`)} />
     <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
     <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
     <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
