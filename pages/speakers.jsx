@@ -5,10 +5,11 @@ var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
 var SPEAKERS_2016 = require('../talks/2016');
+var SPEAKERS_2017 = require('../talks/2017');
 
 var TeamPage = React.createClass({
   renderTalk: function(talks) {
-    return talks.map( talk => <SpeakerSeriesTalk {...talk} key={talk.name} /> );
+    return talks.map( talk => <SpeakerSeriesTalk {...talk} key={talk.name || talk.speakers[0].name} /> );
   },
   render: function() {
     return (
@@ -30,7 +31,7 @@ var TeamPage = React.createClass({
             <div name="2017" slug="2017">
               <h1>2017</h1>
               <div className="horizontal-rule"></div>
-              { this.renderTalk(SPEAKERS_2016) }
+              { this.renderTalk(SPEAKERS_2017) }
             </div>
 
           </TabSwitcher>

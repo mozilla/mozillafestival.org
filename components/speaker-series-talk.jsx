@@ -11,9 +11,19 @@ var Speaker = React.createClass({
     return <p className="twitter my-0"><small><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter}</a></small></p>;
   },
   renderDescription: function() {
-    if (!this.props.description) return null;
+    if (!this.props.description || this.props.description.length === 0) return null;
 
-    return <p className="description my-0">{this.props.description}</p>;
+    let description;
+
+    // Usually we would avoid using "dangerouslySetInnerHTML" but since the description came from
+    // a static file we control, it is okay to do this here
+    if ( typeof(this.props.description) === `string` ) {
+      description = <p dangerouslySetInnerHTML={{__html: this.props.description}}></p>;
+    } else if (Array.isArray(this.props.description)) {
+      description = this.props.description.map((p, i) => <p dangerouslySetInnerHTML={{__html: this.props.description}} key={i}></p>);
+    }
+
+    return <div className="description">{description}</div>;
   },
   render: function() {
     return (
@@ -36,19 +46,23 @@ var Speaker = React.createClass({
 
 var SpeakerSeriesTalk = React.createClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
-    videoLink: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string,
+    videoLink: React.PropTypes.string,
     transcriptLink: React.PropTypes.string,
-    thumbnail: React.PropTypes.string.isRequired,
     speakers: React.PropTypes.arrayOf(React.PropTypes.shape({
       title: React.PropTypes.string,
       twitter: React.PropTypes.string,
       pic: React.PropTypes.string,
     })).isRequired
   },
+  renderName: function() {
+    if (!this.props.name) return null;
+
+    return <h3 className="name mb-0">{this.props.name}</h3>;
+  },
   renderTalkLinks: function() {
     return <div>
-            <a className="talk-link video" href={this.props.videoLink}>Video</a>
+            { this.props.videoLink && <a className="talk-link video" href={this.props.videoLink}>Video</a> }
             { this.props.transcriptLink && <a className="talk-link transcript ml-4" href={this.props.transcriptLink}>Transcript</a> }
           </div>;
   },
@@ -56,12 +70,13 @@ var SpeakerSeriesTalk = React.createClass({
     return this.props.speakers.map(speaker => <Speaker {...speaker} key={speaker.name} />);
   },
   render: function() {
-    let id = slugify(this.props.name);
+    let identifier = this.props.name ? this.props.name : `${this.props.speakers[0].name}-talk`;
+    let id = slugify(identifier);
 
     return (
-      <div className="row my-5 pb-5 justify-content-center speaker-series-talk" id={id}>
+      <div className="row my-5 pb-4 justify-content-center speaker-series-talk" id={id}>
         <div className="col-12 text-center text-sm-left">
-          <h3 className="name mb-0">{this.props.name}</h3>
+          { this.renderName() }
           { this.renderTalkLinks() }
           <div className="subhead">
             { this.renderSpeakers() }
