@@ -2,10 +2,21 @@
 @import "header";
 @import "jumbotron";
 @import "imagetag";
-@import "member-profile";
 @import "space-profile";
 @import "speaker-tiny-card";
 @import "speakers-promo";
 @import "tab-switcher";
 @import "project-card";
 @import "news-widget";
+@import "speaker-series-talk";
+
+.member-profile,
+.speaker-series-talk {
+  small {
+    font-weight: 300;
+  }
+  .name {
+    color: @blue;
+    font-size: 2rem;
+  }
+}
