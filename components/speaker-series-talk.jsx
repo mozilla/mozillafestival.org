@@ -20,7 +20,7 @@ var Speaker = React.createClass({
     if ( typeof(this.props.description) === `string` ) {
       description = <p dangerouslySetInnerHTML={{__html: this.props.description}}></p>;
     } else if (Array.isArray(this.props.description)) {
-      description = this.props.description.map((p, i) => <p dangerouslySetInnerHTML={{__html: this.props.description}} key={i}></p>);
+      description = this.props.description.map((p, i) => <p dangerouslySetInnerHTML={{__html: p}} key={i}></p>);
     }
 
     return <div className="description">{description}</div>;
