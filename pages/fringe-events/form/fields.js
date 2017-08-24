@@ -72,6 +72,21 @@ let Time = React.createClass({
   }
 });
 
+const DemonstrateLabel = () => {
+  return <div>
+            How does your event demonstrate one or more of the following characteristics?
+            <ul>
+              <li>Event is co-designed with partners/allies and community</li>
+              <li>Includes creative, hands-on activities</li>
+              <li>Facilitation promotes collaboration, innovation and respect</li>
+              <li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>
+              <li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>
+              <li>Protects or advances the health of the Internet</li>
+              <li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>
+            </ul>
+          </div>
+};
+
 var createPartOneFields = function() {
   return {
     'eventname': {
@@ -127,7 +142,7 @@ var createPartOneFields = function() {
     },
     'demonstrate': {
       type: `textarea`,
-      label: `How your event demonstrate one or more of the following characteristics`,
+      label: <DemonstrateLabel />,
       labelClassname: `required word-length-restriction max-120-words`,
       fieldClassname: `form-control tall`,
       validator: [
