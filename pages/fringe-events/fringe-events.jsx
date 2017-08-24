@@ -23,30 +23,6 @@ var FringeEventForm = React.createClass({
       formValues: {}
     }
   },
-  componentDidMount: function() {
-    this.alterDemonstrateFieldLabel();
-  },
-  alertFieldLabel(fieldName, newLabelInnerHTML) {
-    // Modifying DOM directly is definitely not encouraged.
-    // Howerver, since react-formerbuilder only allow string as 'label' ...
-    // ... We are doing the following as a quick hack
-    let field = ReactDOM.findDOMNode(this.refs.formPartOne).querySelector(`fieldset.${fieldName}`);
-    let label = field.querySelector(`label`);
-    label.innerHTML = newLabelInnerHTML;
-  },
-  alterDemonstrateFieldLabel: function() {
-    let newLabel = `How does your event demonstrate one or more of the following characteristics?` +
-                    `<ul>` +
-                      `<li>Event is co-designed with partners/allies and community</li>` + 
-                      `<li>Includes creative, hands-on activities</li>` + 
-                      `<li>Facilitation promotes collaboration, innovation and respect</li>` + 
-                      `<li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>` + 
-                      `<li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>` + 
-                      `<li>Protects or advances the health of the Internet</li>` + 
-                      `<li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>` +
-                    `</ul>`;
-    this.alertFieldLabel(`demonstrate`, newLabel);
-  },
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
