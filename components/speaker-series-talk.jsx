@@ -29,7 +29,10 @@ var Speaker = React.createClass({
     return (
       <div className="row my-3">
         <div className="col-6 col-sm-2 mb-5 mb-sm-0 mx-auto">
-          <img className="img-fluid rounded-circle" src={ this.props.pic || `/assets/images/team/placeholder.jpg` }/>
+          <img className="img-fluid rounded-circle" 
+                src={ this.props.pic || `/assets/images/team/placeholder.jpg` }
+                alt={`${this.props.name} Pic`}
+          />
         </div>
         <div className="col-sm-10 d-flex flex-column justify-content-center">
           <p className="m-0 text-center text-sm-left"><strong>{this.props.name}</strong></p>

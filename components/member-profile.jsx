@@ -35,14 +35,15 @@ var MemberProfile = React.createClass({
     return <p className="title my-0"><small>{this.props.title}</small></p>;
   },
   render: function() {
-    console.log(this.props);
-
     let id = slugify(this.props.name);
 
     return (
       <div className="row my-5 justify-content-center member-profile" id={id}>
         <div className="col-6 col-sm-3 mb-5 mb-sm-0 d-flex flex-column justify-content-center">
-          <img className="img-fluid rounded-circle" src={ this.props.pic || `/assets/images/team/placeholder.jpg` }/>
+          <img className="img-fluid rounded-circle" 
+              src={ this.props.pic || `/assets/images/team/placeholder.jpg` }
+              alt={`${this.props.name} Pic`}
+          />
         </div>
         <div className="col-sm-9">
           <h3 className="mb-0 name text-center text-sm-left"><a href={`#`+id}>{this.props.name}</a></h3>

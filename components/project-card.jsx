@@ -5,7 +5,7 @@ var ProjectCard = React.createClass({
     return (
       <div className="col-xs-12 col-md-6 card-container">
         <div className="project-card mb-3">
-          <img src={this.props.image} className="thumbnail" />
+          <img src={this.props.image} className="thumbnail" alt={`Thumbnail of ${this.props.title}`} />
           <div className="content project-card">
             <h2 className="mt-3">{this.props.title}</h2>
             <h3>{this.props.creators}</h3>
@@ -14,7 +14,9 @@ var ProjectCard = React.createClass({
             <p className="get-involved">
               {this.props.getInvolved}
             </p>
-            <div><a href={this.props.getInvolvedURL} target="_blank" className="get-involved-link">Get Involved</a></div>
+            <div>
+              {this.props.getInvolvedURL && <a href={this.props.getInvolvedURL} target="_blank" className="get-involved-link">Get Involved</a>}
+            </div>
             <div className="project-links">
               <a href={this.props.url} target="_blank" className="btn btn-primary-outline my-3">Visit</a>
             </div>

@@ -55,7 +55,7 @@ var TabSwitcher = React.createClass({
           onClick={this.tabClick.bind(null, index)}
           key={index}
           hidden={this.props.children[index].props.hidden}>
-            <img className="icon hidden-sm-up" src={index === this.state.activeTab && element.props.iconActive ? element.props.iconActive : element.props.iconDefault}/>
+            <img className="icon hidden-sm-up" src={index === this.state.activeTab && element.props.iconActive ? element.props.iconActive : element.props.iconDefault} alt="icon" />
             <span className="hidden-xs-down">{element.props.name}</span>
         </Link>
       );
