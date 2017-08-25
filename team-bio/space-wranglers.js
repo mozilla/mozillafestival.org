@@ -120,6 +120,14 @@ let OPEN_INNOVATION_WRANGLERS = [
     bio: [
       `Phillip is currently a Mozilla senior fellow for media, misinformation & trust and a John S. Knight Journalism Fellow at Stanford working on business models for investigative reporting. He’s a veteran digital product developer, having spent more than two decades working with some of the world’s top newsrooms & publishers.`
     ]
+  },
+  {
+    name: `Kirstie Whitaker`,
+    twitter: `@kirstie_j`,
+    pic: `/assets/images/team/wrangler/space/KirstieWhitaker.jpg`,
+    bio: [
+      `Kirstie is a research fellow at the Alan Turing Institute for Data Science. She studies adolescent brain development and the emergence of mental health disorders in the teenage years. She was a 2016 Mozilla Fellow for Science and is a passionate advocate for reproducible research and diversity in STEM.`
+    ]
   }
 ];
 

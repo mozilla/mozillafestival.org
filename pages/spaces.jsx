@@ -50,7 +50,8 @@ var SpacesInfo = [
       { name: "Christos Bacharakis" },
       { name: "Raegan MacDonald" },
       { name: "Aurelia Moser" },
-      { name: "Phillip Smith" }
+      { name: "Phillip Smith" },
+      { name: "Kirstie Whitaker" }
     ]
   },
   {
