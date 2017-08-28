@@ -60,7 +60,12 @@ let DIGITAL_INCLUSION_WRANGLERS = [
     ]
   },
   {
-    name: `Joe Nash`
+    name: `Joe Nash`,
+    twitter: `@jna_sh`,
+    pic: `/assets/images/team/wrangler/space/JoeNash.jpg`,
+    bio: [
+      `Joe is the student program manager at GitHub, helping the next generation of tech leaders create inclusive and diverse communities. He’s a strong believer in the educational benefits of hacker culture, and supports student hackers through both his professional work and community leadership. He’s also a level 10 Triton sorcerer.`
+    ]
   },
   {
     name: `Leah Ruffin`,
