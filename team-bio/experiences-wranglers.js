@@ -40,7 +40,7 @@ let THEME_WRANGLERS = [
   },
   {
     name: `Erika Owens`,
-    twitter: `@erikao`,
+    twitter: `@erika_owens`,
     pic: `/assets/images/team/wrangler/experience/ErikaOwens.jpg`,
     bio: [
       `Erika is a journalist and organizer based in Philadelphia. As Deputy Director with OpenNews, Erika convenes people and projects in journalism tech, and builds enduring connections by creating inclusive, caring spaces for the news nerd community. Erika also co-organizes Hacks/Hackers Philadelphia. She loves nonprofit journalism, people watching, and laughing heartily.`
