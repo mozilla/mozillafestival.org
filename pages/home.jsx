@@ -5,7 +5,6 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('../components/imagetag.jsx');
-var SpeakersPromo = require('../components/speakers-promo.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
 var Home = React.createClass({

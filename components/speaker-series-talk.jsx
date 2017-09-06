@@ -8,7 +8,7 @@ var Speaker = React.createClass({
   renderTwitter: function() {
     if (!this.props.twitter) return null;
 
-    return <p className="twitter my-0"><small><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter}</a></small></p>;
+    return <p className="twitter my-0"><small><a href={"https://twitter.com/"+this.props.twitter}>{this.props.twitter.replace(`@`, ``)}</a></small></p>;
   },
   renderDescription: function() {
     if (!this.props.description || this.props.description.length === 0) return null;
