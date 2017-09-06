@@ -3,12 +3,16 @@
 - Production: https://mozillafestival.org
 - Staging: https://mozillafestival-org-staging.herokuapp.com/
 
+---
+
 ## Setup
 
 ```bash
 $> npm install
 $> cp sample.env .env
 ```
+
+---
 
 ## To run
 
@@ -18,6 +22,8 @@ $> npm start
 
 By default this will run the website on [http://localhost:9090](http://localhost:9090)
 
+---
+
 ## Development
 
 Deployment to `staging` server is automated via [Heroku](https://heroku.com).
@@ -26,7 +32,7 @@ Deployment to `staging` server is automated via [Heroku](https://heroku.com).
 
 Production pushes are handled manually. Email [Mozilla Foundation DevOps](mailto:devops@mozillafoundation.org) or an active contributor to this repo to ask about a production push.
 
-
+---
 
 ## Environment Variables
 - `PORT` (optional)
@@ -37,7 +43,7 @@ Production pushes are handled manually. Email [Mozilla Foundation DevOps](mailto
 - `GITHUB_REPO_OWNER_2017`: The owner of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFoundation/mozfest-program-2017 set `GITHUB_REPO_OWNER_2017` to `MozillaFoundation`.
 - `GITHUB_REPO_NAME_2017`: The name of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFoundation/mozfest-program-2017 set `GITHUB_REPO_NAME_2017` to `mozfest-program-2017`.
 
-
+---
 
 ## Localized proposal forms
 
@@ -69,3 +75,4 @@ var localeMap = {
 };
 ```
 
+---
