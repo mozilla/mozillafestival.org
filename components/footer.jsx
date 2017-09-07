@@ -20,6 +20,11 @@ const FOOTER_LINKS = [
     text: `Participation Guidelines`
   },
   {
+    iconType: `info`,
+    link: `/media`,
+    text: `Media`
+  },
+  {
     iconType: `legal`,
     link: `https://www.mozilla.org/about/legal/terms/mozilla/`,
     text: `Terms`
