@@ -20,7 +20,7 @@ const FOOTER_LINKS = [
     text: `Participation Guidelines`
   },
   {
-    iconType: ``,
+    iconType: `info`,
     link: `/media`,
     text: `Media`
   },

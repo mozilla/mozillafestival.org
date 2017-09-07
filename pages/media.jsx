@@ -59,18 +59,21 @@ const PAST_COVERAGE = [
 var Media = React.createClass({
   renderPastCoverage: function() {
     let pastCoverage = PAST_COVERAGE.map(coverage => {
-      return <li key={coverage.title}>{coverage.media}: <a href={coverage.link} target="_blank">{coverage.title}</a> <small>{coverage.date}</small></li>
+      return <li key={coverage.title} className="mb-4">
+              <div className="media">{coverage.media}</div>
+              <a href={coverage.link} target="_blank">{coverage.title}</a> <small>{coverage.date}</small>
+            </li>
     });
 
-    return <ul className="text-left">{pastCoverage}</ul>
+    return <ul className="past-coverage text-left">{pastCoverage}</ul>
   },
   render: function() {
     return (
       <div className="media-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
-        <Jumbotron image="/assets/images/hero/.jpg"
-                  image2x="/assets/images/hero/.jpg">
+        <Jumbotron image="/assets/images/hero/media.jpg"
+                  image2x="/assets/images/hero/media.jpg">
           <h1>MozFest Media Center</h1>
         </Jumbotron>
         <div className="white-background">
