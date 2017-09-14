@@ -167,7 +167,7 @@ var Expect = React.createClass({
               <h1>Accessibility</h1>
               <div className="half-content text-left">
                 <p>At MozFest, accessibility is a vital part of how our network creates an inclusive community. From providing childcare to emphasizing language inclusion to ensuring people with disabilities are supported, we are increasing our efforts to ensure every MozFest participant can engage with the people, spaces and themes of the festival.</p>
-                <p>During the open call for proposals, if you would like to submit a session and have difficulty using the text-based form, please email us to discuss other options.</p>
+                <p>During the open call for proposals, if you would like to submit a session and have difficulty using the text-based form, please email us to discuss other options. Read details about accessibility support at the festival venue in <a href="https://medium.com/mozilla-festival/accessibility-at-mozfest-606c3ad20c04">this blog</a>.</p>
               </div>
               <div className="half-content text-left">
                 <p>When you register to attend MozFest, please let us know if you have an accessibility need such as visual or auditory support, wheelchair access, or the need for a quiet space. We are committed to discussing attendees’ individual needs, and providing support to the best of our abilities.</p>
