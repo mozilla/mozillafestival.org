@@ -130,9 +130,41 @@ function getFringeEvents(response) {
   });
 }
 
+function getHouseEvents(response) {
+  // fetches data stored in the Google Spreadsheet
+  var sheet = new GoogleSpreadsheet(env.get(`HOUSE_EVENT_SPREADSHEET_ID_2017`));
+
+  // line breaks are essential for the private key.
+  // if reading this private key from env var this extra replace step is a MUST
+  sheet.useServiceAccountAuth({
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+  }, function(err) {
+    if (err) {
+      console.log(`[Error] ${err}`);
+      response.status(500).json(err);
+    }
+    // GoogleSpreadsheet.getRows(worksheet_id, callback)
+    sheet.getRows(1, function(sheetErr, rows) {
+      if (sheetErr) {
+        console.log("[Error] ", sheetErr);
+        response.status(500).json(sheetErr);
+      } else {
+        let approvedRows = rows.filter(function(row) {
+          let showOnSite = row.addtowebsite.toLowerCase().trim();
+          return showOnSite === `y` || showOnSite === `yes`;
+        });
+        response.send(approvedRows);
+      }
+    });
+  });
+}
+
 app.get('*', function (request, response) {
   if (request.path === "/get-fringe-events") {
     getFringeEvents(response);
+  } else if (request.path === "/get-house-events") {
+    getHouseEvents(response);
   } else {
     response.sendfile(path.join(__dirname, '/public/index.html'));
   }
