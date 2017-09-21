@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { path: `/spaces`, label: `Spaces` },
   { path: `/speakers`, label: `Speakers` },
   { path: `/expect`, label: `What to expect` },
-  { path: `/projects`, label: `Projects` },
+  { path: `/house`, label: `House` },
   { path: `/team/sponsors`, label: `Sponsors` }
 ];
 

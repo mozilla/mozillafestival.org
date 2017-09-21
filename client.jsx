@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 
+// classes in ES6 ...
+import HousePage from './pages/house.jsx';
+
 const LANGUAGE = {
   german: {
     name: `deutsch`,
@@ -84,6 +87,7 @@ var routes = (
     <Route name="speakers" path="/speakers" component={require(`./pages/speakers.jsx`)}>
       <Route path=":tab" component={require(`./pages/speakers.jsx`)} />
     </Route>
+    <Route name="house" path="/house" component={HousePage} />
   </Router>
 );
 

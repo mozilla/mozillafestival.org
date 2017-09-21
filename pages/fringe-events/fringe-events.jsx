@@ -6,7 +6,7 @@ var Form = require('react-formbuilder').Form;
 var Header = require('../../components/header.jsx');
 var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
-var FringeEventCard = require('../../components/fringe-event-card.jsx');
+var EventCardGroup = require('../../components/event-card-group.jsx');
 
 var fields = require('./form/fields');
 
@@ -14,7 +14,18 @@ require('whatwg-fetch');
 
 const DATE_FORMAT = `MMM DD, YYYY`;
 const TIME_FORMAT = `h:mma`;
-const DATE_TIME_FORMAT = `${DATE_FORMAT} ${TIME_FORMAT}`;
+// make sure don't include space in between DATE_FORMAT and TIME_FORMAT
+// as moment might have trouble understanding it
+const DATE_TIME_FORMAT = `${DATE_FORMAT}@${TIME_FORMAT}`;
+
+let sortByTime = function(a,b) {
+  let timeA = moment(`${a.date}@${a.time}`, DATE_TIME_FORMAT);
+  let timeB = moment(`${b.date}@${b.time}`, DATE_TIME_FORMAT);
+
+  if (timeA < timeB) { return -1; }
+  if (timeA > timeB) { return 1; }
+  return 0;
+}
 
 var FringeEventForm = React.createClass({
   getInitialState: function() {
@@ -124,7 +135,7 @@ var FringePage = React.createClass({
   },
   handleEventData: function(data) {
     this.setState({
-      events: data,
+      events: data.sort(sortByTime),
       eventsLoaded: true,
       unableToLoadEvents: false
     });
@@ -149,21 +160,12 @@ var FringePage = React.createClass({
   },
   renderFringeEvents() {
     var events = false;
-    var sortByTime = function(a,b) {
-      var timeA = moment(`${a.date} ${a.time}`, DATE_TIME_FORMAT);
-      var timeB = moment(`${b.date} ${b.time}`, DATE_TIME_FORMAT);
-      if (timeA < timeB) { return -1; }
-      if (timeA > timeB) { return 1; }
-      return 0;
-    }
+
     if ( this.state.eventsLoaded ) {
-      events = this.state.events.sort(sortByTime).map(function(event,i) {
-                return <FringeEventCard {...event} key={event.eventname} />;
-              });
-      events = <ul className="row">{events}</ul>;
+      events = <EventCardGroup events={this.state.events} />;
     } else {
-      events = this.state.unableToLoadEvents ? <p>Unable to load Fringe Events.</p>
-                                             : <p className="loading-message">Loading Fringe Events</p>;
+      events = this.state.unableToLoadEvents ? <p>Unable to load events.</p>
+                                             : <p className="loading-message">Loading events</p>;
     }
     return events;
   },
