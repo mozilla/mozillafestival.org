@@ -68,6 +68,13 @@ let DIGITAL_INCLUSION_WRANGLERS = [
     ]
   },
   {
+    name: `Chrystian Rodriguez`,
+    pic: `/assets/images/team/wrangler/space/ChrystianRodriguez.jpg`,
+    bio: [
+      `Chrystian is the Network Manager for Mozilla, Hive NYC. He strengthens the network as a space for learning, innovation, and leadership by co-designing digital peer professional development opportunities to transform learning in NYC. He also teaches film at Third World Newsreel and is a collector of film soundtracks on vinyl.`
+    ]
+  },
+  {
     name: `Leah Ruffin`,
     twitter: ``,
     pic: `/assets/images/team/wrangler/space/LeahRuffin.jpg`,
@@ -103,11 +110,34 @@ let OPEN_INNOVATION_WRANGLERS = [
     ]
   },
   {
+    name: `Jenn Beard`,
+    pic: `/assets/images/team/wrangler/space/JennBeard.jpg`,
+    bio: [
+      `Jenn is a naturally curious person who collects new experiences through continuous learning and travel. Currently, she works for Mozilla on a grant-making program that supports the creation of high-speed internet technologies for education. Jenn’s favorite area of innovation at the present time is craft cocktails.`
+    ]
+  },
+  {
+    name: `Mehan Jayasuriya`,
+    twitter: `@mehan_j`,
+    pic: `/assets/images/team/wrangler/space/MehanJayasuriya.jpg`,
+    bio: [
+      `Mehan is a technologist and writer based in Portland. At Mozilla, he oversees the WINS wireless innovation challenges, which connect the unconnected in some of the most difficult scenarios. He has worked for a variety of technology companies, academic institutions and non-profits, and he writes about culture, technology and policy.`
+    ]
+  },
+  {
     name: `Raegan MacDonald`,
-    twitter: ``,
+    twitter: `@ShmaeganM`,
     pic: `/assets/images/team/wrangler/space/RaeganMacDonald.jpg`,
     bio: [
       `Raegan leads Mozilla’s public policy work in the EU, covering issues such as copyright, net neutrality, privacy, and data protection. A policy wonk with experience in campaigning and advocacy, she's worked in Brussels for several years, both as manager of Access Now Brussels and with the European Digital Rights (EDRi) network.`
+    ]
+  },
+  {
+    name: `Natalia Mileszyk`,
+    twitter: `@nmileszyk`,
+    pic: `/assets/images/team/wrangler/space/NataliaMileszyk.jpg`,
+    bio: [
+      `Natalia is a lawyer and public policy expert dealing with digital rights, copyright reform and open policies at Centrum Cyfrowe, a leading Polish think-and-do-tank exploring society’s response to the robust development of technology She’s also a member of Communia Association for Public Domain and legal expert for Creative Commons.`
     ]
   },
   {
@@ -138,7 +168,12 @@ let OPEN_INNOVATION_WRANGLERS = [
 
 let PRIVACY_AND_SECURITY_WRANGLERS = [
   {
-    name: `Brett Gaylor`
+    name: `Brett Gaylor`,
+    twitter: `@remixmanifesto`,
+    pic: `/assets/images/team/wrangler/space/BrettGaylor.jpg`,
+    bio: [
+      `Brett is a documentary filmmaker and the Commissioning Editor for Advocacy Media at the Mozilla Foundation. His privacy documentary Do Not Track is the recipient of the International Documentary Association award for best nonfiction series, the 2016 Peabody Award, and the Prix Gemaux for Best Interactive Series.`
+    ]
   },
   {
     name: `Jonathan Kingston`,
@@ -157,7 +192,11 @@ let PRIVACY_AND_SECURITY_WRANGLERS = [
     ]
   },
   {
-    name: `Stéphanie Ouillon`
+    name: `Stéphanie Ouillon`,
+    pic: `/assets/images/team/wrangler/space/StéphanieOuillon.jpg`,
+    bio: [
+      `Stéphanie is a Security Engineer at Mozilla working on Firefox. She is passionate about privacy, security and their implications for people in their online and offline lives. Among other activities, she focuses on sharing technical knowledge beyond the Free and Open Source Software communities.`
+    ]
   },
   {
     name: `David Ross`,
@@ -238,6 +277,14 @@ let YOUTH_ZONE_WRANGLERS = [
     pic: `/assets/images/team/wrangler/space/AndrewMulholland.jpg`,
     bio: [
       `A computer science student currently studying at Queens University in Belfast, Andrea is passionate about getting kids excited and involved in computer science and digital making. In his free time, he can be found working with schools and running events including the Northern Ireland Raspberry Jam.`
+    ]
+  },
+  {
+    name: `Grace Owolade-Coombes`,
+    twitter: `@`,
+    pic: `/assets/images/team/wrangler/space/GraceOwoladeCoombes.jpg`,
+    bio: [
+      `Grace is co-founder of South London Raspberry Jam and delivers autism and Tourette's Syndrome-friendly digital making workshops. She’s a certified Raspberry PI educator and specialist in specific learning difficulties. A proud parent to two young coders, Grace explores the transformative experience of learning in informal shared spaces and advocates peer learning.`
     ]
   },
   {
