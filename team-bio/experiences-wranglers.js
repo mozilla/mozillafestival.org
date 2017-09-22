@@ -16,6 +16,7 @@ let ARTIST_OPEN_STUDIO_WRANGLERS = [
   {
     name: `Angela Plohman`,
     twitter: `@angelaplohman`,
+    pic: `/assets/images/team/wrangler/experience/AngelaPlohman.jpg`,
     bio: [
       `Angela is the Executive Vice President of the Mozilla Foundation. She has spent close to two decades playing key leadership roles in the fields of art, culture and open source technology. Prior to Mozilla, she was Director of Baltan Laboratories, a laboratory for art and technology based in Eindhoven (NL).`
     ],
@@ -60,6 +61,7 @@ let WAYFINDING_AND_RECOGNITION_WRANGLERS = [
   {
     name: `Tim Riches`,
     twitter: `@triches`,
+    pic: `/assets/images/team/wrangler/experience/TimRiches.jpg`,
     bio: [
       `Tim has worked in education for the past 13 years, first with arts groups, helping develop web -based participation projects and then co-founding award-winning open learning platforms including Radiowaves & NUMU. His main focus is working with partners and developing international partnerships and projects to drive the adoption of digital credentials.`
     ],
