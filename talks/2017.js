@@ -114,22 +114,6 @@ module.exports = [
     transcriptLink: ``,
     speakers: [
       {
-        name: `Morgan Marquis-Boire`,
-        twitter: `@headhntr`,
-        pic: `/assets/images/speakers/2017/MorganMarquisBoire.jpeg`,
-        description: [
-          `Morgan Marquis-Boire is a journalist and researcher. He is a contributing writer to The Intercept and an adviser on technology and security.`,
-          `He is also a senior researcher and technical adviser at the Citizen Lab at the University of Toronto’s Munk School of Global Affairs. Additionally, he serves as a special adviser to the Electronic Frontier Foundation and as a member of the Free Press Foundation’s security advisory board. His research on surveillance, censorship, and the targeting of activists and journalists has been featured in numerous print and online publications.`
-        ]
-      }
-    ]
-  },
-  {
-    name: ``,
-    videoLink: ``,
-    transcriptLink: ``,
-    speakers: [
-      {
         name: `Emily May`,
         twitter: `@emilymaynot`,
         pic: `/assets/images/speakers/2017/EmilyMay.jpeg`,
