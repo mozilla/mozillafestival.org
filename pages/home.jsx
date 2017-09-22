@@ -34,7 +34,7 @@ var Home = React.createClass({
               </div>
               <div className="col-sm-8 mt-4 mt-sm-0">
                 <div className="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" allowFullScreen></iframe>
+                  <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" title="MozFest 2016 Video" allowFullScreen></iframe>
                 </div>
               </div>
             </div>

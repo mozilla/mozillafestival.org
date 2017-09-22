@@ -40,7 +40,7 @@ var Location = React.createClass({
       .setContent(
         '<div class="mapbox-popup">' +
           '<p>Ravensbourne</p>' +
-          '<img height="154" width="207" src="/assets/images/482_Ravensbourne_400.jpg"/>' +
+          '<img height="154" width="207" src="/assets/images/482_Ravensbourne_400.jpg" alt="Ravensbourne" />' +
           '<p>6 Penrose Way</p>' +
           '<p>Greenwich Peninsula</p>' +
           '<p>London SE10 0EW</p>' +
