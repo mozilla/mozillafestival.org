@@ -35,8 +35,6 @@ var MemberProfile = React.createClass({
     return <p className="title my-0"><small>{this.props.title}</small></p>;
   },
   render: function() {
-    console.log(this.props);
-
     let id = slugify(this.props.name);
 
     return (

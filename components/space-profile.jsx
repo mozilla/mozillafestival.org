@@ -4,21 +4,6 @@ var Link = Router.Link;
 var slugify = require('slugify');
 var ImageTag = require('./imagetag.jsx');
 
-var BioTooltip = React.createClass({
-  render: function() {
-    console.log(this.props.bio);
-    return(
-      <div className="bio-section">
-        <div className="tooltip-arrow"></div>
-        <div className="content-box">
-          { this.props.photoSrc ? <img src={this.props.photoSrc} /> : null }
-          { this.props.bio ? <div>{this.props.bio}</div> : null }
-        </div>
-      </div>
-    );
-  }
-});
-
 var SpacePathwayProfile = React.createClass({
   getDefaultProps: function() {
     return {
@@ -50,7 +35,6 @@ var SpacePathwayProfile = React.createClass({
                 <li key={contact.name}>
                   { showWranglerLink ? <Link to={"/team/wranglers#"+slugify(contact.name)}>{contact.name}</Link>
                                      : contact.name}
-                  { contact.bio ? <BioTooltip {...contact.bio} /> : null }
                 </li>
               )
             }) : null
