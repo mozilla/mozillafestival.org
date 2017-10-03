@@ -68,7 +68,6 @@ var routes = (
       <IndexRoute component={ProposalEnglish} />
       { LOCALIZED_PROPOSAL_ROUTES }
     </Route>
-    <Route name="late-late-proposals" path="/late-late-proposals" component={ProposalEnglish}  />
     <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
     <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
     <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
