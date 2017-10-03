@@ -111,6 +111,7 @@ let OPEN_INNOVATION_WRANGLERS = [
   },
   {
     name: `Jenn Beard`,
+    twitter: `@Jenntbeard`,
     pic: `/assets/images/team/wrangler/space/JennBeard.jpg`,
     bio: [
       `Jenn is a naturally curious person who collects new experiences through continuous learning and travel. Currently, she works for Mozilla on a grant-making program that supports the creation of high-speed internet technologies for education. Jenn’s favorite area of innovation at the present time is craft cocktails.`
