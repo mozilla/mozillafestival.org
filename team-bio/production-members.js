@@ -63,6 +63,14 @@ module.exports = [
     ],
   },
   {
+    name: `Dan Rad`,
+    title: `Logistics Assistant`,
+    pic: `/assets/images/team/production/DanRad.jpg`,
+    bio: [
+      `Dan Rad is a Logistics Assistant. This is his second year with MozFest. Dan graduated from Ravensbourne with a degree in Digital Television Production and has worked on a variety of short films and TV shows.`
+    ],
+  },
+  {
     name: `Tom Farrow`,
     title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/TomFarrow.jpg`,
