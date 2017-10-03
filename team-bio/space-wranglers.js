@@ -281,7 +281,7 @@ let YOUTH_ZONE_WRANGLERS = [
   },
   {
     name: `Grace Owolade-Coombes`,
-    twitter: `@`,
+    twitter: `@gowolade`,
     pic: `/assets/images/team/wrangler/space/GraceOwoladeCoombes.jpg`,
     bio: [
       `Grace is co-founder of South London Raspberry Jam and delivers autism and Tourette's Syndrome-friendly digital making workshops. She’s a certified Raspberry PI educator and specialist in specific learning difficulties. A proud parent to two young coders, Grace explores the transformative experience of learning in informal shared spaces and advocates peer learning.`
