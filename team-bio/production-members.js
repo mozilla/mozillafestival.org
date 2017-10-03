@@ -12,7 +12,7 @@ module.exports = [
     title: `Executive Festival Director`,
     pic: `/assets/images/team/production/SarahAllen.jpg`,
     bio: [
-      `Sarah Allen is MozFest's producer. When she is not focused on MozFest, she helps with other Mozilla convenings in London and beyond. Sarah draws her experience from a diverse events background having worked with creative and inspiring companies, such as Movember Europe, Secret Cinema and CSM iLUKA. MozFest 2017 will be Sarah’s fifth festival.`
+      `Sarah Allen is MozFest's Executive Director. When she is not focused on MozFest, she works with the network to deliver Mozilla aligned convenings around the globe. Sarah draws her experience from a diverse events background working in theatrical experiences, global sporting events and community festivals. MozFest 2017 will be Sarah’s fifth festival.`
     ],
   },
   {
