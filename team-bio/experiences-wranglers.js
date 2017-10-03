@@ -8,6 +8,7 @@ let ARTIST_OPEN_STUDIO_WRANGLERS = [
   },
   {
     name: `Irini Papadimitriou`,
+    twitter: `@irini_mirena`,
     pic: `/assets/images/team/wrangler/experience/IriniPapadimitriou.jpg`,
     bio: [
       `Irini is a curator and producer, working at the forefront of digital culture. As Digital Programmes Manager at the V&A Irini is responsible for the annual Digital Design Weekend. Irini is also Head of New Media Arts Development at Watermans, and co-founder of Maker Assembly, a critical gathering about maker cultures.`
@@ -26,6 +27,7 @@ let ARTIST_OPEN_STUDIO_WRANGLERS = [
 let DIALOGUES_AND_DEBATES_WRANGLERS = [
   {
     name: `Kevin Zawacki`,
+    twitter: `@kevinzawacki`,
     pic: `/assets/images/team/production/Kevin.jpg`
   }
 ];
