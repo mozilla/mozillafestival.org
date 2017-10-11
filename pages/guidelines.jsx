@@ -5,8 +5,22 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 var Link = require("react-router").Link;
 
+const TREAT_EACH_OTHER = [
+  `Be respectful and value each other’s ideas, styles and viewpoints.`,
+  `Be direct but professional; we cannot withhold hard truths.`,
+  `Be inclusive and help new perspectives be heard.`,
+  `Appreciate and accommodate our many cultural practices, attitudes and beliefs.`,
+  `Be open to learning from others.`,
+  `Lead by example and match your actions with your words.`
+];
+
 var Guidelines = React.createClass({
   pageMetaDescription: "The Mozilla Festival respects Mozilla's community participation guidelines.",
+  renderTreatOthers() {
+    var list = TREAT_EACH_OTHER.map(text => <li className="font-weight-bold text-uppercase">{text}</li>);
+
+    return <ul className="text-left">{list}</ul>;
+  },
   render: function() {
     return (
       <div className="guidelines-page">
@@ -22,24 +36,8 @@ var Guidelines = React.createClass({
             <p>The Mozilla Festival respects Mozilla's <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/">community participation guidelines</a>. These guidelines cover our behaviour as participants, facilitators, space wranglers, staff, volunteers, vendors, and anyone else involved in making MozFest possible.</p>
             <div className="horizontal-rule"></div>
             <h1>How to treat each other</h1>
-            <div className="treat-each-other-list">
-              be respectful and welcoming
-            </div>
-            <div className="treat-each-other-list">
-              try to understand different perspectives
-            </div>
-            <div className="treat-each-other-list">
-              do not threaten violence
-            </div>
-            <div className="treat-each-other-list">
-              empower others
-            </div>
-            <div className="treat-each-other-list">
-              strive for excellence
-            </div>
-            <div className="treat-each-other-list">
-              don&lsquo;t expect to agree with every decision
-            </div>
+            { this.renderTreatOthers() }
+            <p>The following will not be tolerated at MozFest: violence and threats of violence; personal attacks; derogatory language; unwelcome sexual attention or physical contact; disruptive behaviour; influencing unacceptable behaviour.</p>
           </div>
         </div>
         <div className="centered content wide">
