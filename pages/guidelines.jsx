@@ -17,7 +17,7 @@ const TREAT_EACH_OTHER = [
 var Guidelines = React.createClass({
   pageMetaDescription: "The Mozilla Festival respects Mozilla's community participation guidelines.",
   renderTreatOthers() {
-    var list = TREAT_EACH_OTHER.map(text => <li className="font-weight-bold text-uppercase">{text}</li>);
+    var list = TREAT_EACH_OTHER.map(text => <li className="font-weight-bold">{text}</li>);
 
     return <ul className="text-left">{list}</ul>;
   },

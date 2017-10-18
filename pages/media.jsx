@@ -80,7 +80,7 @@ var Media = React.createClass({
           <div className="centered content wide">
             <h1>MozFest Media Center</h1>
             <p>Welcome to the MozFest Media Center, where you can find information and resources for your coverage of the annual festival.</p>
-            <p>To join the MozFest press list; to request tickets, information and photos; or to arrange an interview with Mozilla executive director Mark Surman, contact Corey Nord at corey(at)pkpr.com. Please send the following information: first and last name, title, name of media outlet, contact phone number, and email address.</p>
+            <p>To receive press credentials to attend and cover MozFest; to request information and photos; or to arrange an interview with Mozilla executive director Mark Surman, contact Corey Nord at corey(at)pkpr.com. Please send the following information: first and last name, title, name of media outlet, contact phone number, and email address.</p>
             <p>You can also stay up-to-date on MozFest news via <a href="https://twitter.com/mozillafestival" target="_blank">Twitter</a>, <a href="https://www.flickr.com/photos/mozfest/" target="_blank">Flickr</a>, and <a href="https://medium.com/mozilla-festival" target="_blank">Medium</a>.</p>
 
             <h1>Past MozFest Coverage</h1>

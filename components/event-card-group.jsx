@@ -32,6 +32,13 @@ var EventCard = React.createClass({
       return <p key={paragraph}>{paragraph}</p>;
     });
   },
+  renderEventTime() {
+    var date = moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT);
+    var time = moment(this.props.time, TIME_FORMAT);
+    time = time.isValid() ? time.format(TIME_FORMAT) : ``;
+
+    return <div className="date-and-time">{date} {time}</div>;
+  },
   render: function() {
     var link = this.props.link;
     var registrationLink = this.props.registrationlink;
@@ -41,9 +48,7 @@ var EventCard = React.createClass({
         <div className="inner-wrapper p-3">
           <header className="font-weight-bold mb-3">{this.props.eventname}</header>
           <div className="details">
-            <div className="date-and-time">
-              { moment(this.props.date, DATE_FORMAT).format(DATE_FORMAT)} {moment(this.props.time, TIME_FORMAT).format(TIME_FORMAT) }
-            </div>
+            { this.renderEventTime() }
             { this.props.location && 
             <div className="location">{this.props.location}</div> 
             }
