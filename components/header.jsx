@@ -6,6 +6,7 @@ var ImageTag = require('./imagetag.jsx');
 const NAV_LINKS = [
   { path: `/tickets`, label: `Tickets` },
   { path: `/about`, label: `About` },
+  { externalLink: `https://guidebook.com/app/mozfest/guide/mozfest/`, label: `schedule` },
   { path: `/spaces`, label: `Spaces` },
   { path: `/speakers`, label: `Speakers` },
   { path: `/expect`, label: `What to expect` },
@@ -16,8 +17,9 @@ const NAV_LINKS = [
 var Header = React.createClass({
   renderNavLinks: function() {
     return NAV_LINKS.map(link => {
-      return <div className="nav-link-container d-inline-block" key={link.label}>
-              <Link to={link.path} activeClassName="active">{link.label}</Link>
+      return <div className="nav-link-container d-inline-block mx-2 my-2 my-sm-0" key={link.label}>
+              { link.path && <Link to={link.path} activeClassName="active">{link.label}</Link> }
+              { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
             </div>;
     });
   },
@@ -25,7 +27,7 @@ var Header = React.createClass({
     var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
     return (
       <div className="page-header">
-        <div className="header-content">
+        <div className="header-content justify-content-end">
           <div className="nav-home">
             <Link to="/">
               <ImageTag src1x={logoImage}
