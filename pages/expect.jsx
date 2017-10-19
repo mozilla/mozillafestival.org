@@ -137,8 +137,8 @@ var Expect = React.createClass({
                     <div>Science Fair evening reception</div>
                   </td>
                   <td>
-                    <div className="time">18:00</div>
-                    <div>Evening activities begin</div>
+                    <div className="time">19:30</div>
+                    <div>MozFest Party at the <a href="https://www.thersa.org/contact">RSA</a></div>
                   </td>
                   <td>
                     <div className="time">18:00</div>
