@@ -5,6 +5,8 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
+const FESTIVAL_GUIDE_LINK = `https://issuu.com/mozfest/docs/mozfest_2017_festival_guide`;
+
 var Expect = React.createClass({
   pageMetaDescription: "MozFest is an annual celebration of the world’s most valuable public resource: the open Web.",
   render: function() {
@@ -30,8 +32,8 @@ var Expect = React.createClass({
               </div>
             </div>
             <div className="full-content">
-              <p><a href="https://mzl.la/mozfest-2016">Read the 2016 Festival Guide</a></p>
-              <p><a href="https://mzl.la/mozfest-2016" className="guide-image-wrapper"><img src="/assets/images/festival-guide.jpg" alt="Festival guide" width="1612" height="1014"/></a></p>
+              <p><a href={FESTIVAL_GUIDE_LINK}>Read the 2017 Festival Guide</a></p>
+              <p><a href={FESTIVAL_GUIDE_LINK} className="guide-image-wrapper"><img src="/assets/images/festival-guide.jpg" alt="Festival guide" width="1612" height="1014"/></a></p>
             </div>
             <div>
               <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameBorder="0" allowFullScreen></iframe>
