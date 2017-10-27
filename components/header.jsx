@@ -4,10 +4,10 @@ var Link = Router.Link;
 var ImageTag = require('./imagetag.jsx');
 
 const NAV_LINKS = [
-  { path: `/tickets`, label: `Tickets` },
+  // { path: `/tickets`, label: `Tickets` },
   { path: `/about`, label: `About` },
   { externalLink: `https://guidebook.com/app/mozfest/guide/mozfest/`, label: `schedule` },
-  { path: `/spaces`, label: `Spaces` },
+  { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
   { path: `/speakers`, label: `Speakers` },
   { path: `/expect`, label: `What to expect` },
   { path: `/house`, label: `House` },
