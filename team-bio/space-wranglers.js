@@ -111,6 +111,7 @@ let OPEN_INNOVATION_WRANGLERS = [
   },
   {
     name: `Jenn Beard`,
+    twitter: `@Jenntbeard`,
     pic: `/assets/images/team/wrangler/space/JennBeard.jpg`,
     bio: [
       `Jenn is a naturally curious person who collects new experiences through continuous learning and travel. Currently, she works for Mozilla on a grant-making program that supports the creation of high-speed internet technologies for education. Jenn’s favorite area of innovation at the present time is craft cocktails.`
@@ -281,7 +282,7 @@ let YOUTH_ZONE_WRANGLERS = [
   },
   {
     name: `Grace Owolade-Coombes`,
-    twitter: `@`,
+    twitter: `@gowolade`,
     pic: `/assets/images/team/wrangler/space/GraceOwoladeCoombes.jpg`,
     bio: [
       `Grace is co-founder of South London Raspberry Jam and delivers autism and Tourette's Syndrome-friendly digital making workshops. She’s a certified Raspberry PI educator and specialist in specific learning difficulties. A proud parent to two young coders, Grace explores the transformative experience of learning in informal shared spaces and advocates peer learning.`
