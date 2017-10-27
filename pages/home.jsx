@@ -6,6 +6,9 @@ var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
+var SpeakersPromo = require('../components/speakers-promo.jsx');
+
+var speakersInfo = require('../talks/2017');
 
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
@@ -25,19 +28,9 @@ var Home = React.createClass({
           </div>
         </Jumbotron>
         <div className="white-background">
-          <div className="content wide">
-            <div className="row">
-              <div className="col-sm-4 text-left">
-                <h1>What is MozFest like?</h1>
-                <p>MozFest is for advocates of a healthy Internet. Explore the intersection of the web with civil society, journalism, public policy, and art through interactive sessions.</p>
-                <Link to="/expect" className="btn btn-primary-outline btn-block mt-3">What to Expect</Link>
-              </div>
-              <div className="col-sm-8 mt-4 mt-sm-0">
-                <div className="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://player.vimeo.com/video/205552025?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" allowFullScreen></iframe>
-                </div>
-              </div>
-            </div>
+          <div className="centered content wide">
+            <h1>Dialogues and Debates</h1>
+            <SpeakersPromo speakersInfo={speakersInfo} />
           </div>
         </div>
         <div className="news content wide">
