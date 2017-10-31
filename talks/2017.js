@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@2h18m25s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -17,7 +17,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@51m35s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -30,7 +30,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/`,
     transcriptLink: ``,
     speakers: [
       {
@@ -46,7 +46,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h12m45s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -58,7 +58,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@45m55s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -71,7 +71,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h41m36s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -84,7 +84,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h41m36s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -97,7 +97,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@30m15s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -110,7 +110,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@21m19s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -123,7 +123,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h31m16s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -139,7 +139,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@1h41m31s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -152,7 +152,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@2h03m30s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -165,7 +165,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -178,7 +178,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -191,7 +191,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@52s`,
     transcriptLink: ``,
     speakers: [
       {
@@ -204,7 +204,7 @@ module.exports = [
   },
   {
     name: ``,
-    videoLink: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h49m00s`,
     transcriptLink: ``,
     speakers: [
       {
