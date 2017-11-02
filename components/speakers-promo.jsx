@@ -9,20 +9,22 @@ var SpeakersPromo = React.createClass({
     let groups = [];
     let tempGroup = [];
 
-    this.props.speakersInfo.forEach((speaker) => {
-      let theSpeaker = ( <SpeakerTinyCard {...speaker} key={speaker.name} /> );
+    this.props.speakersInfo.forEach((talk) => {
+      talk.speakers.forEach((speaker) => {
+        let theSpeaker = ( <SpeakerTinyCard {...speaker} link={talk.videoLink} key={speaker.name} /> );
 
-      tempGroup.push({
-        key: speaker.name,
-        component: theSpeaker
-      });
-      if (tempGroup.length === 4) {
-        groups.push({
-          key: `the ${tempGroup[0].key} row`,
-          component: tempGroup
+        tempGroup.push({
+          key: speaker.name,
+          component: theSpeaker
         });
-        tempGroup = [];
-      }
+        if (tempGroup.length === 4) {
+          groups.push({
+            key: `the ${tempGroup[0].key} row`,
+            component: tempGroup
+          });
+          tempGroup = [];
+        }
+      });
     });
 
     // don't forget to include leftover items, if any
