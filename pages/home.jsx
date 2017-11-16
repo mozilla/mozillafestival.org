@@ -24,7 +24,7 @@ var Home = React.createClass({
             <h1>Welcome to MozFest</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
             <p className="mb-0">October 27-29, 2017 Ravensbourne College, London</p>
-            <a href="https://guidebook.com/app/mozfest/guide/mozfest/" className="btn p-3 m-3">View Schedule</a>
+            <a href="https://guidebook.com/guide/114124/" className="btn p-3 m-3">View Schedule</a>
           </div>
         </Jumbotron>
         <div className="white-background">
