@@ -6,7 +6,7 @@ var ImageTag = require('./imagetag.jsx');
 const NAV_LINKS = [
   // { path: `/tickets`, label: `Tickets` },
   { path: `/about`, label: `About` },
-  { externalLink: `https://guidebook.com/app/mozfest/guide/mozfest/`, label: `schedule` },
+  { externalLink: `https://guidebook.com/guide/114124/`, label: `schedule` },
   { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
   { path: `/speakers`, label: `Speakers` },
   { path: `/expect`, label: `What to expect` },
