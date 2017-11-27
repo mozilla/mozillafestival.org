@@ -22,21 +22,19 @@ var limiter = RateLimit({
   global: false
 });
 
-app.configure(function() {
-  app.use(compression());
-  app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
-  app.use(bodyParser.json());
-  app.use(function(req, res, next) {
-    // redirect path with trailing slash, e.g., /path/ to  "/path"
-    // since there's no easy way for React Router v0.13 to get both cases working
-    // once we upgrade React Router to v1+ we won't need this temp fix anymore
-    // see https://github.com/ReactTraining/react-router/issues/820 for more info
-    if ( req.path[req.path.length-1] === '/' ) {
-      res.redirect(req.path.substr(0,req.path.length-1));
-    } else {
-      next();
-    }
-  });
+app.use(compression());
+app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
+app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  // redirect path with trailing slash, e.g., /path/ to  "/path"
+  // since there's no easy way for React Router v0.13 to get both cases working
+  // once we upgrade React Router to v1+ we won't need this temp fix anymore
+  // see https://github.com/ReactTraining/react-router/issues/820 for more info
+  if ( req.path[req.path.length-1] === '/' ) {
+    res.redirect(req.path.substr(0,req.path.length-1));
+  } else {
+    next();
+  }
 });
 
 app.post(`/add-proposal`, limiter, function(req, res) {
@@ -166,7 +164,7 @@ app.get('*', function (request, response) {
   } else if (request.path === "/get-house-events") {
     getHouseEvents(response);
   } else {
-    response.sendfile(path.join(__dirname, '/public/index.html'));
+    response.sendFile(path.join(__dirname, '/public/index.html'));
   }
 });
 
