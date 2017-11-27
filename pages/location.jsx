@@ -4,7 +4,7 @@ var Footer = require('../components/footer.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var generateHelmet = require('../lib/helmet.jsx');
 
-var accessToken = 'pk.eyJ1IjoiYWxpY29kaW5nIiwiYSI6Il90WlNFdE0ifQ.QGGdXGA_2QH-6ujyZE2oSg';
+var accessToken = 'pk.eyJ1IjoibW9mby1kZXZvcHMiLCJhIjoiY2l2MmR5OWdpMDFrbzJvb2VteGZhaG9oZCJ9.GdlQ7Bq3NOjlomZsK2IX0w';
 
 var Location = React.createClass({
   pageMetaDescription: "This year, MozFest returns to Ravensbourne, a media campus in the heart of London.",
