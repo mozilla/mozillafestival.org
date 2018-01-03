@@ -1,5 +1,7 @@
 # The Mozilla Festival Website
 
+[![Travis Build Status](https://travis-ci.org/mozilla/mozillafestival.org.svg?branch=master)](https://travis-ci.org/mozilla/mozillafestival.org) [![Dependency Status](https://david-dm.org/mozilla/mozillafestival.org.svg)](https://david-dm.org/mozilla/mozillafestival.org) [![Dev Dependency Status](https://david-dm.org/mozilla/mozillafestival.org/dev-status.svg)](https://david-dm.org/mozilla/mozillafestival.org/?type=dev)
+
 - Production: https://mozillafestival.org
 - Staging: https://mozillafestival-org-staging.herokuapp.com/
 
