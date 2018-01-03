@@ -1,7 +1,6 @@
 var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
-    request = require('request'),
     bodyParser = require('body-parser'),
     compression = require('compression'),
     RateLimit = require('express-rate-limit'),
