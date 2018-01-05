@@ -1,6 +1,5 @@
 import React from 'react';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-import ReactDOM from 'react-dom';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 
@@ -97,4 +96,4 @@ var routes = (
 
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
 
-ReactDOM.render(routes, document.querySelector(`#my-app`));
+export default routes;

@@ -47,7 +47,7 @@ MozFest site currently is only available in English. However, this year (2017) w
 
 1. clone `pages/proposals/language/english.json` and rename it to `newlanguage.json` with `newlanguage` being the language the strings are in. For consistency, make sure all letters are in lowercase. (e.g., `german.json`)
 
-2. In `client.jsx`. Add the new key-value pair to the `LANGUAGE` object. For example:
+2. In `main.jsx`. Add the new key-value pair to the `LANGUAGE` object. For example:
 ```jsx
 const LANGUAGE = {
   ...
