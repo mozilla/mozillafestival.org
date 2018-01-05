@@ -1,4 +1,4 @@
 import ReactDOM from 'react-dom';
-import routes from './main.jsx';
+import Main from './main.jsx';
 
-ReactDOM.render(routes, document.querySelector(`#my-app`));
+ReactDOM.render(Main, document.querySelector(`#my-app`));
