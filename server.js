@@ -168,7 +168,6 @@ app.get(`*`, (req, res) => {
       // let's match a route and render the corresponding page component
       const appHtml = renderToString(<RouterContext {...props}/>);
 
-      console.log(`name`, props.routes[props.routes.length-1].name);
       if (props.routes[props.routes.length-1].name === "not-found" ) {
         res.status(404).send(renderPage(appHtml));
       } else {
@@ -182,9 +181,6 @@ app.get(`*`, (req, res) => {
 });
 
 function renderPage(appHtml) {
-  // this is basically the same as what we have in ./index.html,
-  // except that we are inserting appHtml as inner DOM of <div id="app"></div>
-
   if (!appHtml) {
     appHtml = `<!-- When user's browser does not allow any scripts to run, we show the following instead of a blank page. -->
                   <div class="please-allow-javascript-notice px-4 py-2 text-center" style="background: #e4f832;">
