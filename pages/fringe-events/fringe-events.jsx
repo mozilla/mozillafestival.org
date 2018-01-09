@@ -127,7 +127,7 @@ var FringePage = React.createClass({
       unableToLoadEvents: false
     }
   },
-  componentWillMount: function() {
+  componentDidMount: function() {
     this.getFringeEvents();
   },
   handleEventResponse: function(response) {

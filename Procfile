@@ -1,1 +1,1 @@
-web: node server.js
+web: node public/build/server.bundle.js

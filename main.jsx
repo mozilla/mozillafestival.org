@@ -1,5 +1,6 @@
 import React from 'react';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import NotFound from './pages/not-found.jsx';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 
@@ -58,34 +59,37 @@ var redirectToProposals = function(nextState, replace, callback) {
 
 var routes = (
   <Router history={browserHistory} onUpdate={() => scroll()}>
-    <Route name="home" path="/" component={require(`./pages/home.jsx`)} />
-    <Route name="proposals" path="/proposals" onEnter={redirectToProposals}>
-      <IndexRoute component={require(`./pages/cfp-closed.jsx`)} />
-      { LOCALIZED_PROPOSAL_ROUTES }
+    <Route path="/">
+      <IndexRoute component={require(`./pages/home.jsx`)} />
+      <Route name="proposals" path="/proposals" onEnter={redirectToProposals}>
+        <IndexRoute component={require(`./pages/cfp-closed.jsx`)} />
+        { LOCALIZED_PROPOSAL_ROUTES }
+      </Route>
+      <Route name="late-proposals" path="/late-proposals" onEnter={redirectToProposals}>
+        <IndexRoute component={ProposalEnglish} />
+        { LOCALIZED_PROPOSAL_ROUTES }
+      </Route>
+      <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
+      <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
+      <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
+      <Route name="expect" path="expect" component={require(`./pages/expect.jsx`)} />
+      <Route name="guidelines" path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
+      <Route name="volunteer" path="/volunteer" component={require(`./pages/volunteer.jsx`)} />
+      <Route name="projects" path="/projects" component={require(`./pages/projects.jsx`)} />
+      <Route name="team" path="/team" component={require(`./pages/team.jsx`)} >
+        <Route path=":tab" component={require(`./pages/team.jsx`)} />
+      </Route>
+      <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
+      <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
+      <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
+      <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
+      <Route name="media" path="/media" component={require(`./pages/media.jsx`)} />
+      <Route name="speakers" path="/speakers" component={require(`./pages/speakers.jsx`)}>
+        <Route path=":tab" component={require(`./pages/speakers.jsx`)} />
+      </Route>
+      <Route name="house" path="/house" component={HousePage} />
+      <Route name="not-found" path="*" component={NotFound}/>
     </Route>
-    <Route name="late-proposals" path="/late-proposals" onEnter={redirectToProposals}>
-      <IndexRoute component={ProposalEnglish} />
-      { LOCALIZED_PROPOSAL_ROUTES }
-    </Route>
-    <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
-    <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
-    <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
-    <Route name="expect" path="/expect" component={require(`./pages/expect.jsx`)} />
-    <Route name="guidelines" path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
-    <Route name="volunteer" path="/volunteer" component={require(`./pages/volunteer.jsx`)} />
-    <Route name="projects" path="/projects" component={require(`./pages/projects.jsx`)} />
-    <Route name="team" path="/team" component={require(`./pages/team.jsx`)} >
-      <Route path=":tab" component={require(`./pages/team.jsx`)} />
-    </Route>
-    <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
-    <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
-    <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
-    <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
-    <Route name="media" path="/media" component={require(`./pages/media.jsx`)} />
-    <Route name="speakers" path="/speakers" component={require(`./pages/speakers.jsx`)}>
-      <Route path=":tab" component={require(`./pages/speakers.jsx`)} />
-    </Route>
-    <Route name="house" path="/house" component={HousePage} />
   </Router>
 );
 
