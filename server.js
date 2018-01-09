@@ -1,11 +1,16 @@
-var express = require('express'),
-    Habitat = require('habitat'),
-    path = require('path'),
-    bodyParser = require('body-parser'),
-    compression = require('compression'),
-    RateLimit = require('express-rate-limit'),
-    GoogleSpreadsheet = require("google-spreadsheet"),
-    proposalHandler = require('./lib/proposal-handler');
+import express from "express";
+import Habitat from "habitat";
+import path from "path";
+import bodyParser from "body-parser";
+import compression from "compression";
+import RateLimit from "express-rate-limit";
+import GoogleSpreadsheet from "google-spreadsheet";
+import proposalHandler from "./lib/proposal-handler";
+
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { match, RouterContext } from 'react-router';
+import routes from './main.jsx';
 
 Habitat.load();
 
@@ -22,19 +27,8 @@ var limiter = RateLimit({
 });
 
 app.use(compression());
-app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
+app.use(express.static(path.resolve(__dirname, `public`)));
 app.use(bodyParser.json());
-app.use(function(req, res, next) {
-  // redirect path with trailing slash, e.g., /path/ to  "/path"
-  // since there's no easy way for React Router v0.13 to get both cases working
-  // once we upgrade React Router to v1+ we won't need this temp fix anymore
-  // see https://github.com/ReactTraining/react-router/issues/820 for more info
-  if ( req.path[req.path.length-1] === '/' ) {
-    res.redirect(req.path.substr(0,req.path.length-1));
-  } else {
-    next();
-  }
-});
 
 app.post(`/add-proposal`, limiter, function(req, res) {
   // line breaks are essential for the private key.
@@ -157,15 +151,111 @@ function getHouseEvents(response) {
   });
 }
 
-app.get('*', function (request, response) {
-  if (request.path === "/get-fringe-events") {
-    getFringeEvents(response);
-  } else if (request.path === "/get-house-events") {
-    getHouseEvents(response);
-  } else {
-    response.sendFile(path.join(__dirname, '/public/index.html'));
-  }
+app.get(`*`, (req, res) => {
+  var requestPath = req.path;
+
+  match({ routes: routes, location: req.url }, (err, redirect, props) => {
+    if (err) {
+      res.status(500).send(err.message);
+    } else if (redirect) {
+      res.redirect(302, redirect.pathname + redirect.search);
+    } else if ( requestPath === "/get-fringe-events") {
+      getFringeEvents(res);
+    } else if ( requestPath === "/get-house-events") {
+      getHouseEvents(res);
+    } else if (props) {
+      // we've got props!
+      // let's match a route and render the corresponding page component
+      const appHtml = renderToString(<RouterContext {...props}/>);
+
+      if (props.routes[props.routes.length-1].name === "not-found" ) {
+        res.status(404).send(renderPage(appHtml));
+      } else {
+        res.status(200).send(renderPage(appHtml));
+      }
+    } else {
+      // nothing was matched
+      res.status(404).send(`Not Found`);
+    }
+  });
 });
+
+function renderPage(appHtml) {
+  if (!appHtml) {
+    appHtml = `<!-- When user's browser does not allow any scripts to run, we show the following instead of a blank page. -->
+                  <div class="please-allow-javascript-notice px-4 py-2 text-center" style="background: #e4f832;">
+                    <p class="m-0">This website relies on JavaScript, please make sure to allow mozillafestival.org in your script blocker.</p>
+                  </div>
+                  <div class="home-page">
+                    <div class="page-header">
+                      <div class="header-content">
+                        <div class="nav-home">
+                          <img src="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg" alt="mozfest logo">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jumbotron-container pb-0" style="height: 100%;">
+                      <div class="jumbotron m-0" style="background-image: url(&quot;/assets/images/hero/home/banner-home_5.jpg&quot;); background-size: cover; padding-top: 150px; padding-bottom: 180px; height: 100%;">
+                        <div class="content-wrapper">
+                          <h1>MozFest</h1>
+                          <h2>The world's leading festival for the open Internet movement.</h2>
+                          <div class="horizontal-rule"></div>
+                          <p>October 27-29, 2017 Ravensbourne College, London</p>
+                          <a href="https://vimeo.com/205552025/37560e3619" class="btn p-3 m-3">Watch Video</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- "no JS is allowed" scenario handling ends. -->`;
+  }
+
+
+  return `<!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <meta name="description" content="Three days of building a truly global web together. Come with an idea, leave with a community.">
+              <meta property="og:type" content="website">
+              <meta property="og:url" content="https://mozillafestival.org">
+              <meta property="og:title" content="Mozilla Festival">
+              <meta property="og:description" content="Three days of building a truly global web together. Come with an idea, leave with a community.">
+              <meta property="og:image" content="https://mozillafestival.org/assets/images/site-thumbnail.jpg">
+              <title>Mozilla Festival</title>
+              <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon.png">
+              <link rel="icon" type="image/png" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152@2x.png" />
+              <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/asset/images/apple-touch-icon-76x76@2x.png" />
+              <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120@2x.png" />
+              <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152@2x.png" />
+              <link rel="stylesheet" type="text/css" href="/vendor/css/font-awesome.min.css">
+              <link rel="stylesheet" type="text/css" href="/vendor/css/mofo-bootstrap.css"/>
+              <link rel="stylesheet" type="text/css" href="/build/style.css">
+              <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
+              <link rel="stylesheet" type="text/css" href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css'>
+              <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35433268-1', 'auto');
+                ga('send', 'pageview');
+
+              </script>
+            </head>
+            <body>
+              <div id="app">
+                ${appHtml}
+              </div>
+              <div class="widgets" style="display: none;">
+                <!-- <div class="tito-volunteer-tickets">
+                  <tito-button event="Mozilla/mozfest-volunteers" releases="rixmuxc3owq">Volunteer</tito-button>
+                </div> -->
+              </div>
+              <script src="/build/bundle.js"></script>
+            </body>
+          </html>`;
+}
 
 app.listen(env.get(`PORT`), () => {
   console.log(`\n*******************************************`);

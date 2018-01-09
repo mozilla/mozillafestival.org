@@ -6,7 +6,7 @@ import Jumbotron from '../components/jumbotron.jsx';
 import EventCardGroup from '../components/event-card-group.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
-import 'whatwg-fetch'
+import 'whatwg-fetch';
 
 const DATE_FORMAT = `MMM DD, YYYY`;
 const TIME_FORMAT = `h:mma`;
@@ -35,11 +35,11 @@ class HousePage extends React.Component {
     this.pageMetaDescription = "";
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getHouseEvents();
   }
 
-  getHouseEvents(){
+  getHouseEvents() {
     fetch('/get-house-events', {
       method: 'get'
     })
