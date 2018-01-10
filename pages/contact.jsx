@@ -2,7 +2,8 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 var Contact = React.createClass({
   pageMetaDescription: "Please email festival@mozilla.org with your questions and suggestions!",

@@ -2,8 +2,9 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
 var Link = require("react-router").Link;
+
+import generateHelmet from '../lib/helmet.jsx';
 
 const PAST_COVERAGE = [
   { 

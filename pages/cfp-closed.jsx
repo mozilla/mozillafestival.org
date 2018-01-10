@@ -4,7 +4,8 @@ var classnames = require('classnames');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 var Proposal = React.createClass({
   pageMetaDescription: "Session proposals",
