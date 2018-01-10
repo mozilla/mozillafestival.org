@@ -5,10 +5,10 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 var ImageTag = require('../components/imagetag.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
 var SpeakersPromo = require('../components/speakers-promo.jsx');
-
 var speakersInfo = require('../talks/2017');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",

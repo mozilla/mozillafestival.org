@@ -3,7 +3,8 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 const FESTIVAL_GUIDE_LINK = `https://issuu.com/mozfest/docs/mozfest_2017_festival_guide`;
 

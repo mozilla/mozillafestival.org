@@ -4,6 +4,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import compression from "compression";
 import RateLimit from "express-rate-limit";
+import { Helmet as ReactHelmet } from "react-helmet";
 import GoogleSpreadsheet from "google-spreadsheet";
 import proposalHandler from "./lib/proposal-handler";
 
@@ -152,7 +153,8 @@ function getHouseEvents(response) {
 }
 
 app.get(`*`, (req, res) => {
-  var requestPath = req.path;
+  const reactHelmet = ReactHelmet.renderStatic();
+  const requestPath = req.path;
 
   match({ routes: routes, location: req.url }, (err, redirect, props) => {
     if (err) {
@@ -169,9 +171,9 @@ app.get(`*`, (req, res) => {
       const appHtml = renderToString(<RouterContext {...props}/>);
 
       if (props.routes[props.routes.length-1].name === "not-found" ) {
-        res.status(404).send(renderPage(appHtml));
+        res.status(404).send(renderPage(appHtml,reactHelmet));
       } else {
-        res.status(200).send(renderPage(appHtml));
+        res.status(200).send(renderPage(appHtml,reactHelmet));
       }
     } else {
       // nothing was matched
@@ -180,7 +182,7 @@ app.get(`*`, (req, res) => {
   });
 });
 
-function renderPage(appHtml) {
+function renderPage(appHtml, reactHelmet) {
   if (!appHtml) {
     appHtml = `<!-- When user's browser does not allow any scripts to run, we show the following instead of a blank page. -->
                   <div class="please-allow-javascript-notice px-4 py-2 text-center" style="background: #e4f832;">
@@ -209,19 +211,13 @@ function renderPage(appHtml) {
                   <!-- "no JS is allowed" scenario handling ends. -->`;
   }
 
-
   return `<!DOCTYPE html>
           <html lang="en">
             <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta name="description" content="Three days of building a truly global web together. Come with an idea, leave with a community.">
-              <meta property="og:type" content="website">
-              <meta property="og:url" content="https://mozillafestival.org">
-              <meta property="og:title" content="Mozilla Festival">
-              <meta property="og:description" content="Three days of building a truly global web together. Come with an idea, leave with a community.">
-              <meta property="og:image" content="https://mozillafestival.org/assets/images/site-thumbnail.jpg">
-              <title>Mozilla Festival</title>
+              ${reactHelmet.title.toString()}
+              ${reactHelmet.meta.toString()}
               <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon.png">
               <link rel="icon" type="image/png" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152@2x.png" />
               <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/asset/images/apple-touch-icon-76x76@2x.png" />
@@ -240,7 +236,6 @@ function renderPage(appHtml) {
 
                 ga('create', 'UA-35433268-1', 'auto');
                 ga('send', 'pageview');
-
               </script>
             </head>
             <body>

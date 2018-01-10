@@ -3,7 +3,8 @@ var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 var FullWidth = require('../components/fullwidth.jsx');
 var HalfColumn = require('../components/halfcolumn.jsx');

@@ -2,7 +2,8 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var ImageTag = require('../components/imagetag.jsx');
-var generateHelmet = require('../lib/helmet.jsx');
+
+import generateHelmet from '../lib/helmet.jsx';
 
 var accessToken = 'pk.eyJ1IjoibW9mby1kZXZvcHMiLCJhIjoiY2l2MmR5OWdpMDFrbzJvb2VteGZhaG9oZCJ9.GdlQ7Bq3NOjlomZsK2IX0w';
 
