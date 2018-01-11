@@ -1,6 +1,5 @@
 var React = require('react');
 var Jumbotron = require('../components/jumbotron.jsx');
-var Link = require("react-router").Link;
 
 import generateHelmet from '../lib/helmet.jsx';
 
