@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var classnames = require('classnames');
@@ -85,7 +83,6 @@ var About = React.createClass({
     return (
       <div className="about-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/about.jpg"
                   image2x="/assets/images/hero/about.jpg">
         </Jumbotron>
@@ -230,7 +227,6 @@ participants — and together, we wrote a book titled
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

@@ -1,9 +1,7 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var Link = require("react-router").Link;
 
+import { Link } from 'react-router-dom';
 import generateHelmet from '../lib/helmet.jsx';
 
 const PAST_COVERAGE = [
@@ -72,7 +70,6 @@ var Media = React.createClass({
     return (
       <div className="media-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/media.jpg"
                   image2x="/assets/images/hero/media.jpg">
           <h1>MozFest Media Center</h1>
@@ -88,7 +85,6 @@ var Media = React.createClass({
             { this.renderPastCoverage() }
           </div>    
         </div>
-        <Footer/>
       </div>
     );
   }

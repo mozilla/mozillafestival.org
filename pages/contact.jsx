@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
@@ -11,7 +9,6 @@ var Contact = React.createClass({
     return (
       <div className="contact-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/contact.jpg"
                   image2x="/assets/images/hero/contact.jpg">
           <h1>contact us</h1>
@@ -29,7 +26,6 @@ var Contact = React.createClass({
             </p>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

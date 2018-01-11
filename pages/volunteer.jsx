@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
@@ -11,7 +9,6 @@ var Volunteer = React.createClass({
     return (
       <div className="volunteer-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/volunteer.jpg"
                   image2x="/assets/images/hero/volunteer.jpg">
           <h1>volunteer</h1>
@@ -25,7 +22,6 @@ var Volunteer = React.createClass({
           
           <p>To apply, register for a (free) volunteer ticket <a href="https://ti.to/mozfestvolunteers/mozfest-volunteer-program-2017">here</a>. During the registration process, you'll have the opportunity to fill out a brief survey that will help us place you in a role suited to your needs and interests.</p>
         </div>
-        <Footer/>
       </div>
     );
   }

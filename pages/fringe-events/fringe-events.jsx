@@ -3,8 +3,6 @@ var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
-var Header = require('../../components/header.jsx');
-var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
 var EventCardGroup = require('../../components/event-card-group.jsx');
 
@@ -172,7 +170,6 @@ var FringePage = React.createClass({
   render: function() {
     return (
       <div className="fringe-events-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/fringe.jpg"
                   image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
@@ -209,7 +206,6 @@ var FringePage = React.createClass({
             <FringeEventForm />
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

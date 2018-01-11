@@ -1,8 +1,9 @@
 var React = require('react');
 var Router = require('react-router');
-var Link = Router.Link;
 var slugify = require('slugify');
 var ImageTag = require('./imagetag.jsx');
+
+import { Link } from 'react-router-dom';
 
 var SpacePathwayProfile = React.createClass({
   getDefaultProps: function() {

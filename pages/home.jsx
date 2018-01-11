@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
@@ -8,6 +6,7 @@ var ImageTag = require('../components/imagetag.jsx');
 var SpeakersPromo = require('../components/speakers-promo.jsx');
 var speakersInfo = require('../talks/2017');
 
+import Header from '../components/header.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 var Home = React.createClass({
@@ -17,7 +16,7 @@ var Home = React.createClass({
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header logoImage="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg"/>
+        <Header />
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
                   image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
@@ -72,7 +71,6 @@ var Home = React.createClass({
           <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Sign Up</span></a>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Link} from 'react-router';
+import { Link } from 'react-router-dom';
 import ImageTag from './imagetag.jsx';
 import { MofoFooter } from 'mofo-ui';
 
@@ -53,8 +53,12 @@ const ORGS = [
 const SAMPLE_TWEET = encodeURIComponent(` I'm attending #MozFest, the world's leading festival for the open Internet movement. Get your ticket here:`);
 const SAMPLE_TWEET_URL = `https://mozillafestival.org/tickets`;
 
-var Linker = React.createClass({
-  render: function() {
+class Linker extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     // Swap out Link or a simple anchor depending on the props we have.
     if (this.props.to) {
       return (
@@ -69,10 +73,14 @@ var Linker = React.createClass({
       </a>
     )
   }
-});
+}
 
-var FooterIcon = React.createClass({
-  render: function() {
+class FooterIcon extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
     return (
       <div className="footer-icon col">
         <Linker to={this.props.to} href={this.props.href} target={this.props.target}>
@@ -85,10 +93,14 @@ var FooterIcon = React.createClass({
       </div>
     );
   }
-});
+}
 
-var Footer = React.createClass({
-  render: function() {
+class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
     return (
       <div>
         <nav className="site-footer">
@@ -113,6 +125,6 @@ var Footer = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Footer;
+export default Footer;

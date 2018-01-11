@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
@@ -66,7 +64,6 @@ var Location = React.createClass({
     return (
       <div className="location-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <div className="map-box-container" ref="map"></div>
         <div className="white-background">
           <div className="centered content wide">
@@ -142,7 +139,6 @@ var Location = React.createClass({
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

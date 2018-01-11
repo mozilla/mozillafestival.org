@@ -10,8 +10,8 @@ import proposalHandler from "./lib/proposal-handler";
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
-import routes from './main.jsx';
+import { StaticRouter, match, RouterContext } from 'react-router';
+import Main from './main.jsx';
 
 Habitat.load();
 
@@ -156,30 +156,23 @@ app.get(`*`, (req, res) => {
   const reactHelmet = ReactHelmet.renderStatic();
   const requestPath = req.path;
 
-  match({ routes: routes, location: req.url }, (err, redirect, props) => {
-    if (err) {
-      res.status(500).send(err.message);
-    } else if (redirect) {
-      res.redirect(302, redirect.pathname + redirect.search);
-    } else if ( requestPath === "/get-fringe-events") {
-      getFringeEvents(res);
-    } else if ( requestPath === "/get-house-events") {
-      getHouseEvents(res);
-    } else if (props) {
-      // we've got props!
-      // let's match a route and render the corresponding page component
-      const appHtml = renderToString(<RouterContext {...props}/>);
+  const context = {}; // context object contains the results of the render
+  const appHtml = renderToString(
+    <StaticRouter location={req.url} context={context}>
+      <Main />
+    </StaticRouter>
+  );
 
-      if (props.routes[props.routes.length-1].name === "not-found" ) {
-        res.status(404).send(renderPage(appHtml,reactHelmet));
-      } else {
-        res.status(200).send(renderPage(appHtml,reactHelmet));
-      }
-    } else {
-      // nothing was matched
-      res.status(404).send(`Not Found`);
-    }
-  });
+  if (context.url) {
+    // Somewhere a `<Redirect>` was rendered
+    res.redirect(301, context.url);
+  } else if (requestPath === "/get-fringe-events") {
+    getFringeEvents(res);
+  } else if (requestPath === "/get-house-events") {
+    getHouseEvents(res);
+  } else {
+    res.status(context.pageNotFound ? 404 : 200).send(renderPage(appHtml, reactHelmet));
+  }
 });
 
 function renderPage(appHtml, reactHelmet) {
