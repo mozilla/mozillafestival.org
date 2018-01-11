@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
@@ -11,7 +9,6 @@ var Tickets = React.createClass({
     return (
       <div className="tickets-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/tickets.jpg"
                   image2x="/assets/images/hero/tickets.jpg">
           <h1>tickets</h1>
@@ -32,10 +29,6 @@ var Tickets = React.createClass({
             <p>Join us for two days of hacking, building, and crafting at MozFest. This ticket covers entry for Saturday 28th and Sunday 29th October for youth aged 18 and under. It includes lunch for both days. Under 16's must be accompanied by one adult ticket or be part of a school group. <a href="https://ti.to/Mozilla/mozfest-2017/with/o-pwuh3rljs" target="_blank">Buy a Youth Ticket</a>.</p>
           </div>
         </div>
-        <div>
-
-        </div>
-        <Footer/>
       </div>
     );
   }

@@ -1,6 +1,7 @@
-var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
+import React from 'react';
+import Router from 'react-router';
+import { NavLink } from 'react-router-dom';
+
 var ImageTag = require('./imagetag.jsx');
 
 const NAV_LINKS = [
@@ -14,25 +15,24 @@ const NAV_LINKS = [
   { path: `/team/sponsors`, label: `Sponsors` }
 ];
 
-var Header = React.createClass({
-  renderNavLinks: function() {
+class Header extends React.Component {
+  renderNavLinks() {
     return NAV_LINKS.map(link => {
       return <div className="nav-link-container d-inline-block mx-2 my-2 my-sm-0" key={link.label}>
-              { link.path && <Link to={link.path} activeClassName="active">{link.label}</Link> }
+              { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
               { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
             </div>;
     });
-  },
-  render: function() {
-    var logoImage = this.props.logoImage || "/assets/images/mozilla-festival_wordmark-interim_horizontal.svg";
+  }
+
+  render() {
     return (
       <div className="page-header">
         <div className="header-content justify-content-end">
           <div className="nav-home">
-            <Link to="/">
-              <ImageTag src1x={logoImage}
-                alt="mozfest logo"/>
-            </Link>
+           <NavLink to="/">
+              <ImageTag src1x="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg" alt="mozfest logo"/>
+            </NavLink>
           </div>
           <div className="nav-items">
             { this.renderNavLinks() }
@@ -41,6 +41,6 @@ var Header = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Header;
+export default Header;

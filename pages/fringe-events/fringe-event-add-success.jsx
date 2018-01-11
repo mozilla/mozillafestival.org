@@ -1,15 +1,13 @@
 var React = require('react');
-var Header = require('../../components/header.jsx');
-var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
 var Router = require('react-router');
-var Link = Router.Link;
+
+import { Link } from 'react-router-dom';
 
 var Success = React.createClass({
   render: function() {
     return (
       <div className="proposals-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/fringe.jpg"
                   image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
@@ -20,7 +18,6 @@ var Success = React.createClass({
           <p>Your event will show up on the MozFest Fringe Page after it has been reviewed by our team.</p>
           <div><Link to="/fringe" className="btn btn-primary-outline">See other fringe events</Link></div>
         </div>
-        <Footer/>
       </div>
     );
   }

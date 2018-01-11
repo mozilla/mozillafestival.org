@@ -1,7 +1,5 @@
 var React = require('react');
 var Link = require('react-router').Link;
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var SpaceProfile = require('../components/space-profile.jsx');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
@@ -135,7 +133,6 @@ var SessionsPage = React.createClass({
   render: function() {
     return (
       <div className="spaces-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/sessions.jpg"
                   image2x="/assets/images/hero/sessions.jpg">
           <h1>Spaces & Experiences</h1>
@@ -157,8 +154,6 @@ var SessionsPage = React.createClass({
           </div>
         </div>
         { this.renderInfoSection(ExpereincesInfo) }
-
-        <Footer/>
       </div>
     );
   }

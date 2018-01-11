@@ -1,7 +1,5 @@
 var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
 var SPEAKERS_2016 = require('../talks/2016');
@@ -14,13 +12,12 @@ var TeamPage = React.createClass({
   render: function() {
     return (
       <div className="team-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/team.jpg"
                   image2x="/assets/images/hero/team.jpg">
           <h1>Speakers</h1>
         </Jumbotron>
         <div className="content wide mt-0">
-          <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
+          <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             
             <div name="2017" slug="2017">
               <h1>2017</h1>
@@ -36,7 +33,6 @@ var TeamPage = React.createClass({
 
           </TabSwitcher>
         </div>
-        <Footer/>
       </div>
     );
   }

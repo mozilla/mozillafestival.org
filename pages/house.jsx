@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import Header from '../components/header.jsx';
-import Footer from '../components/footer.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import EventCardGroup from '../components/event-card-group.jsx';
 import generateHelmet from '../lib/helmet.jsx';
@@ -103,7 +102,6 @@ class HousePage extends React.Component {
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

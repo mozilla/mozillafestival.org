@@ -1,6 +1,4 @@
 var React = require(`react`);
-var Header = require(`../components/header.jsx`);
-var Footer = require(`../components/footer.jsx`);
 var ProjectCard = require(`../components/project-card.jsx`);
 var projectData = require(`../mozfest-projects.json`);
 var Jumbotron = require('../components/jumbotron.jsx');
@@ -9,7 +7,6 @@ var ProjectPage = React.createClass({
   render: function() {
     return (
       <div className="projects-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/projects.jpg"
                 image2x="/assets/images/hero/projects.jpg">
         <h1>MozFest Projects</h1>
@@ -24,7 +21,6 @@ var ProjectPage = React.createClass({
             </div>
             <p>See more projects & assets from our network on <a href="http://mzl.la/pulse">Pulse</a>.</p>
         </div>
-        <Footer/>
       </div>
     );
   }

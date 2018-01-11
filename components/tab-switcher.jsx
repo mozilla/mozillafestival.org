@@ -1,8 +1,9 @@
 // Note: source code of this component is pretty much copied directly from https://github.com/mozilla/science.mozilla.org
 
 var React = require(`react`);
-var Link = require(`react-router`).Link;
 var classNames = require(`classnames`);
+
+import { Link } from 'react-router-dom';
 
 // Children nodes and buttons can be hidden if empty based on hidden param passed to them.
 // TODO: find a way to allow another tab to be active by default, especially if it's the only tab with content/not hidden

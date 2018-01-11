@@ -1,7 +1,5 @@
 var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var MemberProfile = require('../components/member-profile.jsx');
 var PRODUCTION_MEMBERS = require('../team-bio/production-members');
@@ -84,13 +82,12 @@ var TeamPage = React.createClass({
   render: function() {
     return (
       <div className="team-page">
-        <Header/>
         <Jumbotron image="/assets/images/hero/team.jpg"
                   image2x="/assets/images/hero/team.jpg">
           <h1>Team</h1>
         </Jumbotron>
         <div className="content wide mt-0">
-          <TabSwitcher baseURL={`/team/`} initialTab={this.props.params.tab} ref="tabSwitcher" className="pull-up">
+          <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" slug="production">
               <h1>Our 2017 Production Team</h1>
               <div className="horizontal-rule"></div>
@@ -123,7 +120,6 @@ var TeamPage = React.createClass({
             </div>
           </TabSwitcher>
         </div>
-        <Footer/>
       </div>
     );
   }

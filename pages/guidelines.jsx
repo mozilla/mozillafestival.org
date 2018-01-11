@@ -1,6 +1,4 @@
 var React = require('react');
-var Header = require('../components/header.jsx');
-var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var Link = require("react-router").Link;
 
@@ -18,7 +16,7 @@ const TREAT_EACH_OTHER = [
 var Guidelines = React.createClass({
   pageMetaDescription: "The Mozilla Festival respects Mozilla's community participation guidelines.",
   renderTreatOthers() {
-    var list = TREAT_EACH_OTHER.map(text => <li className="font-weight-bold">{text}</li>);
+    var list = TREAT_EACH_OTHER.map((text, i) => <li className="font-weight-bold" key={i}>{text}</li>);
 
     return <ul className="text-left">{list}</ul>;
   },
@@ -26,7 +24,6 @@ var Guidelines = React.createClass({
     return (
       <div className="guidelines-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/guidelines.jpg"
                   image2x="/assets/images/hero/guidelines.jpg">
           <h1>participation<br/>guidelines</h1>
@@ -71,7 +68,6 @@ var Guidelines = React.createClass({
             <p>Because working open is one of our core values, MozFest program planning is done in the open on Github (check out our repo <a href="https://github.com/MozillaFoundation/mozfest-program-2017">here</a>). We hope participants will benefit from this culture of transparency and collaboration during the Festival, and will continue to work with an open ethos in their projects after Mozfest. Learn more about <a href="https://mozilla.teachable.com/p/open-leadership-101">how we work open at Mozilla</a>.</p>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

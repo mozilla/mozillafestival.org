@@ -1,11 +1,11 @@
 import React from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { Switch, Route } from 'react-router';
 import NotFound from './pages/not-found.jsx';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
-
-// classes in ES6 ...
 import HousePage from './pages/house.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/footer.jsx';
 
 const LANGUAGE = {
   german: {
@@ -57,41 +57,50 @@ var redirectToProposals = function(nextState, replace, callback) {
   callback();
 };
 
-var routes = (
-  <Router history={browserHistory} onUpdate={() => scroll()}>
-    <Route path="/">
-      <IndexRoute component={require(`./pages/home.jsx`)} />
-      <Route name="proposals" path="/proposals" onEnter={redirectToProposals}>
-        <IndexRoute component={require(`./pages/cfp-closed.jsx`)} />
-        { LOCALIZED_PROPOSAL_ROUTES }
-      </Route>
-      <Route name="late-proposals" path="/late-proposals" onEnter={redirectToProposals}>
-        <IndexRoute component={ProposalEnglish} />
-        { LOCALIZED_PROPOSAL_ROUTES }
-      </Route>
-      <Route name="location" path="/location" component={require(`./pages/location.jsx`)} />
-      <Route name="about" path="/about" component={require(`./pages/about.jsx`)} />
-      <Route name="contact" path="/contact" component={require(`./pages/contact.jsx`)} />
-      <Route name="expect" path="expect" component={require(`./pages/expect.jsx`)} />
-      <Route name="guidelines" path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
-      <Route name="volunteer" path="/volunteer" component={require(`./pages/volunteer.jsx`)} />
-      <Route name="projects" path="/projects" component={require(`./pages/projects.jsx`)} />
-      <Route name="team" path="/team" component={require(`./pages/team.jsx`)} >
-        <Route path=":tab" component={require(`./pages/team.jsx`)} />
-      </Route>
-      <Route name="spaces" path="/spaces" component={require(`./pages/spaces.jsx`)} />
-      <Route name="fringe-events" path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
-      <Route name="fringe-event-add-success" path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
-      <Route name="tickets" path="/tickets" component={require(`./pages/tickets.jsx`)} />
-      <Route name="media" path="/media" component={require(`./pages/media.jsx`)} />
-      <Route name="speakers" path="/speakers" component={require(`./pages/speakers.jsx`)}>
-        <Route path=":tab" component={require(`./pages/speakers.jsx`)} />
-      </Route>
-      <Route name="house" path="/house" component={HousePage} />
-      <Route name="not-found" path="*" component={NotFound}/>
-    </Route>
-  </Router>
+// <Router history={browserHistory} onUpdate={() => scroll()}>
+const Routes = () => (
+  <Switch>
+    <Route exact path="/" component={require(`./pages/home.jsx`)} />
+    <Route path="/location" component={require(`./pages/location.jsx`)} />
+    <Route path="/about" component={require(`./pages/about.jsx`)} />
+    <Route path="/contact" component={require(`./pages/contact.jsx`)} />
+    <Route path="/expect" component={require(`./pages/expect.jsx`)} />
+    <Route path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
+    <Route path="/volunteer" component={require(`./pages/volunteer.jsx`)} />
+    <Route path="/projects" component={require(`./pages/projects.jsx`)} />
+    <Route exact path="/team" component={require(`./pages/team.jsx`)} />
+    <Route path="/team/:tab" component={require(`./pages/team.jsx`)} />
+    <Route path="/spaces" component={require(`./pages/spaces.jsx`)} />
+    <Route exact path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
+    <Route path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
+    <Route path="/tickets" component={require(`./pages/tickets.jsx`)} />
+    <Route path="/media" component={require(`./pages/media.jsx`)} />
+    <Route exact path="/speakers" component={require(`./pages/speakers.jsx`)} />
+    <Route path="/speakers/:tab" component={require(`./pages/speakers.jsx`)} />
+    <Route path="/house" component={HousePage} />
+    <Route path="*" component={NotFound}/>
+  </Switch>
 );
+
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidUpdate() {
+    scroll();
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Routes />
+        <Footer />
+      </div>
+    );
+  }
+}
 
 /* ********************
 * temporarily hiding these routes
@@ -100,4 +109,4 @@ var routes = (
 
 // <Route name="remote" path="/remote" handler={require('./pages/remote.jsx')} />
 
-export default routes;
+export default Main;
