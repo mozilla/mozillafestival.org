@@ -1,14 +1,13 @@
 var React = require('react');
-var Link = require('react-router').Link;
 var classnames = require('classnames');
-var Header = require('../../components/header.jsx');
-var Footer = require('../../components/footer.jsx');
 var Jumbotron = require('../../components/jumbotron.jsx');
 var Router = require('react-router');
 var Form = require('react-formbuilder').Form;
 var fields = require('./form/fields');
-var generateHelmet = require('../../lib/helmet.jsx');
 var EnglishStrings = require('./language/english.json');
+
+import { Link } from 'react-router-dom';
+import generateHelmet from '../../lib/helmet.jsx';
 
 const SUBMISSION_STATUS_SUCCESS = `success`;
 const SUBMISSION_STATUS_FAIL = `fail`;
@@ -259,7 +258,6 @@ var Proposal = React.createClass({
 
     return (
       <div className={classnames(`proposals-page`, this.props.lang)}>
-        <Header/>
         <Jumbotron image="/assets/images/proposals.jpg"
                   image2x="/assets/images/proposals.jpg">
           <h1>{stringSource.page_banner_header}</h1>
@@ -271,7 +269,6 @@ var Proposal = React.createClass({
         <div className="white-background">
           {this.renderMainContent()}
         </div>
-        <Footer />
       </div>
     );
   }

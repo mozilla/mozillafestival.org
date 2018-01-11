@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router';
 import NotFound from './pages/not-found.jsx';
 import Proposals from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
@@ -23,10 +23,14 @@ const LANGUAGE = {
 };
 
 const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
-  var component = () => (<Proposals lang={lang}
-                                    stringSource={LANGUAGE[lang].stringSource} />);
   var name = LANGUAGE[lang].name;
-  return <Route key={name} name={name} path={name} component={component} />;
+
+  // The following (commented out) lines are for when CFP is still open
+  // var component = () => (<Proposals lang={lang}
+  //                                   stringSource={LANGUAGE[lang].stringSource} />);
+  // return <Route key={name} name={name} path={`/proposals/${name}`} component={component} />;
+
+  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />
 });
 
 var ProposalEnglish = () => <Proposals lang="english"
@@ -57,10 +61,11 @@ var redirectToProposals = function(nextState, replace, callback) {
   callback();
 };
 
-// <Router history={browserHistory} onUpdate={() => scroll()}>
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={require(`./pages/home.jsx`)} />
+    <Route exact path="/proposals" component={require(`./pages/cfp-closed.jsx`)} />
+    { LOCALIZED_PROPOSAL_ROUTES }
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
     <Route path="/contact" component={require(`./pages/contact.jsx`)} />
