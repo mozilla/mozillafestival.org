@@ -88,13 +88,13 @@ var TeamPage = React.createClass({
         </Jumbotron>
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
-            <div name="Production" slug="production">
+            <div name="Production" data-slug="production">
               <h1>Our 2017 Production Team</h1>
               <div className="horizontal-rule"></div>
               { this.renderMembers(PRODUCTION_MEMBERS) }
             </div>
 
-            <div name="Wranglers" slug="wranglers">
+            <div name="Wranglers" data-slug="wranglers">
               <h1>Our 2017 Space & Experience Wranglers</h1>
               <div className="horizontal-rule mb-5"></div>
               { this.renderIndividualSpaceSection(`Decentralization`) }
@@ -109,11 +109,11 @@ var TeamPage = React.createClass({
               { this.renderIndividualSpaceSection(`Wayfinding and Recognition`, `experiences`) }
             </div>
 
-            <div name="Sponsors" slug="sponsors" className="sponsors">
+            <div name="Sponsors" data-slug="sponsors" className="sponsors">
               <Sponsors />
             </div>
 
-            <div name="Partners" slug="partners">
+            <div name="Partners" data-slug="partners">
               <h1>Our 2017 Partners</h1>
               <div className="horizontal-rule mb-5"></div>
               <Partners />

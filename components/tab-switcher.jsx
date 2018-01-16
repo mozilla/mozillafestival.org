@@ -15,7 +15,7 @@ var TabSwitcher = React.createClass({
     children: React.PropTypes.arrayOf(React.PropTypes.shape({
       props: React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
-        slug: React.PropTypes.string.isRequired,
+        "data-slug": React.PropTypes.string.isRequired,
         iconDefault: React.PropTypes.string,
         iconActive: React.PropTypes.string
       }).isRequired
@@ -30,7 +30,7 @@ var TabSwitcher = React.createClass({
     let slugIndex = 0; // Default to first tab
 
     for (let i = 0; i < this.props.children.length; i++) {
-      if (this.props.children[i].props.slug === slug) {
+      if (this.props.children[i].props["data-slug"] === slug) {
         slugIndex = i;
         break;
       }
@@ -51,7 +51,7 @@ var TabSwitcher = React.createClass({
 
       return (
         <Link
-          to={`${this.props.baseURL}${this.props.children[index].props.slug}`}
+          to={`${this.props.baseURL}${this.props.children[index].props["data-slug"]}`}
           className={classnames}
           onClick={this.tabClick.bind(null, index)}
           key={index}
