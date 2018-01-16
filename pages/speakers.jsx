@@ -19,13 +19,13 @@ var TeamPage = React.createClass({
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             
-            <div name="2017" slug="2017">
+            <div name="2017" data-slug="2017">
               <h1>2017</h1>
               <div className="horizontal-rule"></div>
               { this.renderTalk(SPEAKERS_2017) }
             </div>
             
-            <div name="2016" slug="2016">
+            <div name="2016" data-slug="2016">
               <h1>2016</h1>
               <div className="horizontal-rule"></div>
               { this.renderTalk(SPEAKERS_2016) }
