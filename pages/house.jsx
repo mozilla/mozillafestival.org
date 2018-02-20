@@ -86,16 +86,15 @@ class HousePage extends React.Component {
               <h1>Sometimes, the MozFest weekend just isn’t enough.</h1>
             </div>
             <div className="text-center">
-              <p>Introducing MozFest House: our central London venue that extends MozFest into a week-long festival.</p>
-              <p>From Monday 23rd - Friday 27th October, MozFest participants are invited to dig deeper into their work, trade ideas, swap code, and build solutions.</p>
-              <p>MozFest House features films, workshops, conferences, and talks, all focusing on Internet health and showcasing the diversity of the Mozilla network.</p>
+              <p>MozFest House is a central London venue that extends MozFest into a week-long festival.</p>
+              <p>From Monday 22rd - Friday 26th October, MozFest participants are invited to dig deeper into their work, trade ideas, swap code, and build solutions.</p>
+              <p>MozFest House features films, workshops, conferences, and talks, all focusing on Internet health and showcasing the diversity of the Mozilla network. The venue also features a free co-working space.</p>
               <ul className="no-bullet text-left pl-0">
                 <li className="mb-4"><strong>Where</strong>: MozFest House is located just off Trafalgar Square at the <a href="https://www.thersa.org/contact">Royal Society of Arts</a> (RSA), 8 John Adam St, London WC2N 6EZ. RSA is a contemporary venue equipped with co-working areas, meeting rooms, and a speakers forum.</li>
-                <li className="mb-4"><strong>When</strong>: MozFest House will be open Monday 23rd - Friday 27th October between 9:00 and 23:00.</li>
+                <li className="mb-4"><strong>When</strong>: MozFest House will be open Monday 22rd - Friday 26th October between 9:00 and 23:00.</li>
                 <li className="mb-4"><strong>Who</strong>: Coders, journalists, teachers, hackers — anyone and everyone working toward a healthier Internet. All ages and skill levels are welcome. Please note you must register for MozHouse events separately from the weekend festival.</li>
               </ul>
-              <p>MozFest House features a free co-working space. To use the space, sign up <a href="https://ti.to/Mozilla/mozfest-house-co-working-space">here</a>.</p>
-              <p>*Note: With the exception of ViewSource, MozFest House events are hosted but not produced by Mozilla.</p>
+              <p>Are you interested in hosting an event as part of MozFest House? Contact us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a></p>
             </div>
             <div className="text-left white-background">
               { this.renderHouseEvents() }

@@ -45,13 +45,13 @@ var Expect = React.createClass({
               <thead>
                 <tr className="table-header">
                   <th>
-                    fri oct 27
+                    fri oct 26
                   </th>
                   <th>
-                    sat oct 28
+                    sat oct 27
                   </th>
                   <th>
-                    sun oct 29
+                    sun oct 28
                   </th>
                 </tr>
               </thead>
@@ -138,7 +138,7 @@ var Expect = React.createClass({
                   </td>
                   <td>
                     <div className="time">19:30</div>
-                    <div>MozFest Party at the <a href="https://www.thersa.org/contact">RSA</a></div>
+                    <div>MozFest Party</div>
                   </td>
                   <td>
                     <div className="time">18:00</div>

@@ -30,6 +30,19 @@ module.exports = [
   },
   {
     name: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
+    transcriptLink: ``,
+    speakers: [
+      {
+        name: `Siko Bouterse`,
+        twitter: `@sikob`,
+        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
+        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
+      }
+    ]
+  },
+  {
+    name: ``,
     videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/`,
     transcriptLink: ``,
     speakers: [
@@ -173,19 +186,6 @@ module.exports = [
         twitter: `@Anasuyashh`,
         pic: `/assets/images/speakers/2017/AnasuyaSengupta.jpeg`,
         description: `Anasuya Sengupta is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She has led initiatives in India/USA, across the global South, and internationally for over 20 years to amplify voices from the margins in virtual and physical worlds. She is the former Chief Grantmaking Officer at the Wikimedia Foundation and a 2017 Shuttleworth Fellow.`,
-      }
-    ]
-  },
-  {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
-    transcriptLink: ``,
-    speakers: [
-      {
-        name: `Siko Bouterse`,
-        twitter: `@sikob`,
-        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
-        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
       }
     ]
   },
