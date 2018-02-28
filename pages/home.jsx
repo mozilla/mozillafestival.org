@@ -22,7 +22,8 @@ var Home = React.createClass({
           <div className="content-wrapper">
             <h1>MozFest 2018</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
-            <p className="mb-0">October 26-28, 2018</p>
+            <p className="mb-0">2018 dates coming soon</p>
+            {/*<p className="mb-0">October 26-28, 2018</p>*/}
             <p className="mb-0">Ravensbourne College, London</p>
             <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn p-3 m-3">Get Updates</a>
           </div>
