@@ -20,11 +20,11 @@ var SpeakersPage = React.createClass({
         <div className="content wide mt-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             
-            {*/<div name="2018" data-slug="2018">
+            {/*<div name="2018" data-slug="2018">
               <h1>2018</h1>
               <div className="horizontal-rule"></div>
               { this.renderTalk(SPEAKERS_2018) }
-            </div>/*}
+            </div>*/}
             
             <div name="2017" data-slug="2017">
               <h1>2017</h1>
