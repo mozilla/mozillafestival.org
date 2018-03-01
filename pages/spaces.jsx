@@ -139,7 +139,7 @@ var SessionsPage = React.createClass({
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
-            <h1>Spaces</h1>
+            <h1>2017 Spaces</h1>
             <p>Spaces are physical and thematic learning hubs based around a broad topic, like web literacy or digital inclusion. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
             <div className="horizontal-rule"></div>
           </div>
@@ -148,7 +148,7 @@ var SessionsPage = React.createClass({
 
         <div className="white-background">
           <div className="content centered wide">
-            <h1 className="mt-5">Experiences</h1>
+            <h1 className="mt-5">2017 Experiences</h1>
             <p>Experiences are artworks, exhibits, activities and interactions that bridge Spaces by weaving together many of the themes present at the festival.</p>
             <div className="horizontal-rule"></div>
           </div>

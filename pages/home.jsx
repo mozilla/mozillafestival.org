@@ -20,9 +20,11 @@ var Home = React.createClass({
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
                   image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
-            <h1>Welcome to MozFest</h1>
+            <h1>MozFest 2018</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
             <p className="mb-0">2018 dates coming soon</p>
+            {/*<p className="mb-0">October 26-28, 2018</p>*/}
+            <p className="mb-0">Ravensbourne College, London</p>
             <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn p-3 m-3">Get Updates</a>
           </div>
         </Jumbotron>
@@ -66,7 +68,7 @@ var Home = React.createClass({
         </div>
         <div className="white-background">
           <div className="centered content wide">
-          <h1>Join us next year!</h1>
+          <h1>Join Us at MozFest</h1>
           <p>Sign up for MozFest updates and be first in line to get your tickets for 2018.</p>
           <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Sign Up</span></a>
           </div>

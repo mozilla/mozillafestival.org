@@ -30,6 +30,19 @@ module.exports = [
   },
   {
     name: ``,
+    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
+    transcriptLink: ``,
+    speakers: [
+      {
+        name: `Siko Bouterse`,
+        twitter: `@sikob`,
+        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
+        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
+      }
+    ]
+  },
+  {
+    name: ``,
     videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/`,
     transcriptLink: ``,
     speakers: [
@@ -108,6 +121,19 @@ module.exports = [
       }
     ]
   },
+  /*{
+    name: ``,
+    videoLink: ``,
+    transcriptLink: ``,
+    speakers: [
+      {
+        name: `Katherine Maher `,
+        twitter: `@krmaher`,
+        pic: `/assets/images/speakers/2016/Maher.jpg`,
+        description: `Katherine Maher is the executive director of the Wikimedia Foundation, the nonprofit behind Wikipedia. Maher has deep experience in the non-profit and international sectors, with a particular focus on the intersection of technology and human rights, development, transparency and community building.`,
+      }
+    ]
+  },*/
   {
     name: ``,
     videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@21m19s`,
@@ -121,6 +147,20 @@ module.exports = [
       }
     ]
   },
+  /*{
+    name: ``,
+    videoLink: ``,
+    transcriptLink: ``,
+    speakers: [
+      {
+        name: `Ryan Merkley`,
+        twitter: `@ryanmerkley`,
+        pic: ``,
+        description: `Ryan Merkley is the CEO of Creative Commons, where he is building a vibrant, usable commons powered by collaboration and gratitude.
+Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an experienced campaigner and advocate for social causes, and has advised political campaigns on the local and national levels.`,
+      }
+    ]
+  },*/
   {
     name: ``,
     videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h31m16s`,
@@ -176,19 +216,19 @@ module.exports = [
       }
     ]
   },
-  {
+  /*{
     name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
+    videoLink: ``,
     transcriptLink: ``,
     speakers: [
       {
-        name: `Siko Bouterse`,
-        twitter: `@sikob`,
-        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
-        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
+        name: `Mark Surman`,
+        twitter: `@msurman`,
+        pic: `/assets/images/speakers/2016/Surman.jpg`,
+        description: `Mark is Executive Director of the Mozilla Foundation, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with likeminded organizations and leaders, and growing the open internet movement. Mark’s goal is nothing short of making the health and accessibility of the internet a mainstream issue around the world.`,
       }
     ]
-  },
+  },*/
   {
     name: ``,
     videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@52s`,

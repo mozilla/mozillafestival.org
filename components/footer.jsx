@@ -115,9 +115,6 @@ class Footer extends React.Component {
               <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="/volunteer">
                 volunteer with us
               </FooterIcon>
-              <FooterIcon icon="/assets/images/img-fringe.svg" alt="fringe event icon" to="/fringe">
-                fringe events
-              </FooterIcon>
             </div>
           </div>
         </nav>
