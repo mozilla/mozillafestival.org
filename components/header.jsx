@@ -6,11 +6,12 @@ var ImageTag = require('./imagetag.jsx');
 
 const NAV_LINKS = [
   // { path: `/tickets`, label: `Tickets` },
+  //{ externalLink: `https://guidebook.com/guide/114124/`, label: `schedule` },
+  //{ externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
+  //{ path: `/speakers`, label: `Speakers` },
   { path: `/about`, label: `About` },
-  { externalLink: `https://guidebook.com/guide/114124/`, label: `schedule` },
-  { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
-  { path: `/speakers`, label: `Speakers` },
-  { path: `/expect`, label: `What to expect` },
+  { path: `/expect`, label: `What to Expect` },
+  { path: `/spaces`, label: `Spaces & Experiences` },
   { path: `/house`, label: `House` },
   { path: `/team/sponsors`, label: `Sponsors` }
 ];
