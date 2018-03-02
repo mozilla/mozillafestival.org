@@ -6,6 +6,30 @@ import generateHelmet from '../lib/helmet.jsx';
 
 const PAST_COVERAGE = [
   { 
+    media: `The Culture Trip`,
+    title: `Artists, Activists and Open Web Advocates Are Gathering at This London Festival for Internet Health `,
+    link: `https://theculturetrip.com/europe/united-kingdom/england/london/articles/artists-activists-and-open-web-advocates-are-gathering-at-this-london-festival-for-internet-health/`,
+    date: `October 2017`
+  },
+  { 
+    media: `Marketplace`,
+    title: `Why is the internet so sick?`,
+    link: `https://www.marketplace.org/2017/10/30/world/why-internet-so-sick`,
+    date: `October 2017`
+  },
+  { 
+    media: `Heise`,
+    title: `MozFest 2017: Festival für ein besseres Internet`,
+    link: `https://www.heise.de/ix/meldung/MozFest-2017-Festival-fuer-ein-besseres-Internet-3863398.html`,
+    date: `October 2017`
+  },
+  { 
+    media: `IFEX`,
+    title: `Anything but neutral: A digital rights Q&A`,
+    link: `https://www.ifex.org/international/2017/09/29/digital-rights-defenders/`,
+    date: `September 2017`
+  },
+  { 
     media: `El País`,
     title: `Mozilla planta cara a los ‘trolls’`,
     link: `https://elpais.com/tecnologia/2016/10/31/actualidad/1477905484_625075.html`,
@@ -40,19 +64,7 @@ const PAST_COVERAGE = [
     title: `MozFest 2014: Creative Chaos - in the Best Way Possible`,
     link: `https://www.theguardian.com/info/developer-blog/2014/oct/31/mozfest-2014-creative-chaos-in-the-best-possible-way`,
     date: `October 2014`
-  },
-  { 
-    media: `The Independent`,
-    title: `Mozilla’s Lightbeam Tool will Expose who is Looking Over Your Shoulder on the Web `,
-    link: `http://www.independent.co.uk/life-style/gadgets-and-tech/news/mozillas-lightbeam-tool-will-expose-who-is-looking-over-your-shoulder-on-the-web-8902269.html`,
-    date: `October 2013`
-  },
-  { 
-    media: `Nieman Lab`,
-    title: `Lessons from #Mozfest: How the Knight and Mozilla Foundations are thinking about open source`,
-    link: `http://www.niemanlab.org/2011/11/lessons-from-mozfest-how-the-knight-and-mozilla-foundations-are-thinking-about-open-source/`,
-    date: `November 2011`
-  },
+  }
 ];
 
 var Media = React.createClass({
