@@ -50,8 +50,8 @@ const ORGS = [
   }
 ];
 
-const SAMPLE_TWEET = encodeURIComponent(` I'm attending #MozFest, the world's leading festival for the open Internet movement. Get your ticket here:`);
-const SAMPLE_TWEET_URL = `https://mozillafestival.org/tickets`;
+const SAMPLE_TWEET = encodeURIComponent(`#MozFest 2018 will take place October 26-28 at Ravensbourne College. See you in London!`);
+const SAMPLE_TWEET_URL = `https://mozillafestival.org/`;
 
 class Linker extends React.Component {
   constructor(props) {
