@@ -68,14 +68,38 @@ var Sponsors = React.createClass({
   },
   render: function() {
     return <div>
-      <h1>Our 2017 Sponsors</h1>
+      <h1>MozFest Sponsors</h1>
       <div className="horizontal-rule mb-5"></div>
       <div>
-        <p>MozFest is the world’s leading event for and by the open Internet movement, and one of Mozilla’s largest annual networking opportunities. This three-day festival of interactive sessions, hands-on activities, and engaging talks brings together 1,800 passionate advocates of the open web from around the world for the flagship event in Mozilla’s leadership network.</p>
         <p>
-          For 2017, Mozilla is offering new sponsorship opportunities for supporters to help us deliver MozFest in London. The festival is growing at a phenomenal rate, as are the opportunities to collaborate, build, and convene with this dynamic network.
+          MozFest is the world’s leading event for and by the open Internet movement, and one of Mozilla’s largest annual networking opportunities. This weeklong festival of interactive sessions, hands-on activities, and engaging talks brings together more than 2,500 passionate advocates of the open web from around the world.
         </p>
-        <p>If you would like to sponsor MozFest 2017, please reach out to us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>. A festival team member will share with you the various options for support and next steps. We look forward to hearing from you.</p>
+        <p>
+          In 2018, Mozilla is offering opportunities for mission-aligned companies to showcase their commitment to a healthy Internet with our 2,500+ guests and the millions of engaged supporters online. By partnering with us, you can:
+        </p>
+        <ul>
+          <li>
+            Engage Mozilla audiences with your brand in an authentic way providing real insights on your products and reach new customers
+          </li>
+          <li>
+            Align your message with Mozilla to help showcase your support for protecting the Internet as a global public resource
+          </li>
+          <li>
+            Help shape smart policy that is good for innovation and good for the Internet
+          </li>
+          <li>
+            Provide your employees and clients with ways to teach, learn and get involved in key issues affecting the Internet today
+          </li>
+        </ul>
+        <p>
+          Together, we can protect the Internet as a resource that will help grow your business, spark your next great idea, and deliver you the best tools and resources to get the job done.
+        </p>
+        <p>
+          To learn more, please contact us at <a href="mailto:sponsor@mozilla.org">sponsor@mozilla.org</a>
+        </p>
+      </div>
+      <h3 className="mt-5">Our 2017 Sponsors</h3>
+      <div>
         <div className="row">
           { this.renderSponsorOfAType(`Supporting`) }
         </div>
