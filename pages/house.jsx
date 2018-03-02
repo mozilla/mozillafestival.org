@@ -96,6 +96,7 @@ class HousePage extends React.Component {
               </ul>
               <p>Are you interested in hosting an event as part of MozFest House? Contact us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a></p>
             </div>
+            <h3>MozFest House 2017</h3>
             <div className="text-left white-background">
               { this.renderHouseEvents() }
             </div>
