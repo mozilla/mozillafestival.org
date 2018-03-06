@@ -1,7 +1,7 @@
 module.exports = [
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@2h18m25s`,
+    name: `What Algorithms Taught Me About Forgiveness`,
+    videoLink: `https://www.youtube.com/watch?v=Yei7SS8nEqw&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=12`,
     transcriptLink: ``,
     speakers: [
       {
@@ -16,8 +16,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@51m35s`,
+    name: `A Pep Talk for Nerds`,
+    videoLink: `https://www.youtube.com/watch?v=MFOdGSKSWDY&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=4`,
     transcriptLink: ``,
     speakers: [
       {
@@ -29,21 +29,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
-    transcriptLink: ``,
-    speakers: [
-      {
-        name: `Siko Bouterse`,
-        twitter: `@sikob`,
-        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
-        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
-      }
-    ]
-  },
-  {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/`,
+    name: `What happened to the internet? ¯\_(ツ)_/¯`,
+    videoLink: `https://www.youtube.com/watch?v=pCngLZcoBno&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=3`,
     transcriptLink: ``,
     speakers: [
       {
@@ -58,8 +45,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h12m45s`,
+    name: `Robust, Useful, Delightful`,
+    videoLink: `https://www.youtube.com/watch?v=abfgj9TCG5I&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=15`,
     transcriptLink: ``,
     speakers: [
       {
@@ -70,8 +57,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@45m55s`,
+    name: `I’m So Sick of Talking My Face Hurts: A Rant by a Brown Feminist from the Global South`,
+    videoLink: `https://www.youtube.com/watch?v=UHu2CvjR98g&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=14`,
     transcriptLink: ``,
     speakers: [
       {
@@ -83,8 +70,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h41m36s`,
+    name: `Debunking Fake News and Fake Science`,
+    videoLink: `https://www.youtube.com/watch?v=TXL4SfXH5zM&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=1`,
     transcriptLink: ``,
     speakers: [
       {
@@ -92,14 +79,7 @@ module.exports = [
         twitter: `@EmilyGorcenski`,
         pic: `/assets/images/speakers/2017/EmilyGorcenski.jpeg`,
         description: `Emily is a data scientist and technological activist with backgrounds in computational mathematics, epidemiology, and software engineering. They are passionate about better technological citizenship and believe in ethical, inclusive technology. Their experience in the aerospace, healthcare, and financial industries has provided insight into complex intersection of disruptive innovation and regulation.`,
-      }
-    ]
-  },
-  {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@4h41m36s`,
-    transcriptLink: ``,
-    speakers: [
+      },
       {
         name: `Sarah Jeong`,
         twitter: `@sarahjeong`,
@@ -109,8 +89,8 @@ module.exports = [
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@30m15s`,
+    name: `Free Wi-Fi for Africa`,
+    videoLink: `https://www.youtube.com/watch?v=QLfx7YzTbS0&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=6`,
     transcriptLink: ``,
     speakers: [
       {
@@ -122,21 +102,34 @@ module.exports = [
     ]
   },
   /*{
-    name: ``,
-    videoLink: ``,
+    name: `The Big Open`,
+    videoLink: `https://www.youtube.com/watch?v=sryVMjmHcdg&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=11`,
     transcriptLink: ``,
     speakers: [
       {
-        name: `Katherine Maher `,
+        name: `Katherine Maher`,
         twitter: `@krmaher`,
         pic: `/assets/images/speakers/2016/Maher.jpg`,
         description: `Katherine Maher is the executive director of the Wikimedia Foundation, the nonprofit behind Wikipedia. Maher has deep experience in the non-profit and international sectors, with a particular focus on the intersection of technology and human rights, development, transparency and community building.`,
+      },
+      {
+        name: `Ryan Merkley`,
+        twitter: `@ryanmerkley`,
+        pic: ``,
+        description: `Ryan Merkley is the CEO of Creative Commons, where he is building a vibrant, usable commons powered by collaboration and gratitude.
+Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an experienced campaigner and advocate for social causes, and has advised political campaigns on the local and national levels.`,
+      },
+      {
+        name: `Mark Surman`,
+        twitter: `@msurman`,
+        pic: `/assets/images/speakers/2016/Surman.jpg`,
+        description: `Mark is Executive Director of the Mozilla Foundation, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with likeminded organizations and leaders, and growing the open internet movement. Mark’s goal is nothing short of making the health and accessibility of the internet a mainstream issue around the world.`,
       }
     ]
   },*/
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@21m19s`,
+    name: `Being Human in the Dark Days of the Internet`,
+    videoLink: `https://www.youtube.com/watch?v=zzJ0KAvpdVw&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=8`,
     transcriptLink: ``,
     speakers: [
       {
@@ -147,23 +140,9 @@ module.exports = [
       }
     ]
   },
-  /*{
-    name: ``,
-    videoLink: ``,
-    transcriptLink: ``,
-    speakers: [
-      {
-        name: `Ryan Merkley`,
-        twitter: `@ryanmerkley`,
-        pic: ``,
-        description: `Ryan Merkley is the CEO of Creative Commons, where he is building a vibrant, usable commons powered by collaboration and gratitude.
-Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an experienced campaigner and advocate for social causes, and has advised political campaigns on the local and national levels.`,
-      }
-    ]
-  },*/
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h31m16s`,
+    name: `It Takes a Hacker to Catch a Hacker`,
+    videoLink: `https://www.youtube.com/watch?v=_mMhDA4z4BA&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=10`,
     transcriptLink: ``,
     speakers: [
       {
@@ -178,12 +157,12 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@1h41m31s`,
+    name: `How to Hack an Earthquake`,
+    videoLink: `https://www.youtube.com/watch?v=atYKpi_74Ak&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=2`,
     transcriptLink: ``,
     speakers: [
       {
-        name: `Gisela Perez de Acha`,
+        name: `Gisela Pérez de Acha`,
         twitter: `@giselilla`,
         pic: `/assets/images/speakers/2017/GiselaPerezdeAcha.jpeg`,
         description: `Gisela Perez de Acha is a Mexican lawyer and journalist who specializes in free speech and gender rights within the digital world. She runs an independent cultural center and is the public policy manager for Latin America at the NGO Derechos Digitales.`,
@@ -191,8 +170,8 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@2h03m30s`,
+    name: `Closing the Digital Gender Divide`,
+    videoLink: `https://www.youtube.com/watch?v=sECDr9LJlMs&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=13`,
     transcriptLink: ``,
     speakers: [
       {
@@ -204,8 +183,8 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h14m13s`,
+    name: `How to Build an Internet With Us, Not For Us`,
+    videoLink: `https://www.youtube.com/watch?v=uK79tOINeDw&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=7`,
     transcriptLink: ``,
     speakers: [
       {
@@ -213,25 +192,18 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
         twitter: `@Anasuyashh`,
         pic: `/assets/images/speakers/2017/AnasuyaSengupta.jpeg`,
         description: `Anasuya Sengupta is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She has led initiatives in India/USA, across the global South, and internationally for over 20 years to amplify voices from the margins in virtual and physical worlds. She is the former Chief Grantmaking Officer at the Wikimedia Foundation and a 2017 Shuttleworth Fellow.`,
+      },
+      {
+        name: `Siko Bouterse`,
+        twitter: `@sikob`,
+        pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
+        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
       }
     ]
   },
-  /*{
-    name: ``,
-    videoLink: ``,
-    transcriptLink: ``,
-    speakers: [
-      {
-        name: `Mark Surman`,
-        twitter: `@msurman`,
-        pic: `/assets/images/speakers/2016/Surman.jpg`,
-        description: `Mark is Executive Director of the Mozilla Foundation, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with likeminded organizations and leaders, and growing the open internet movement. Mark’s goal is nothing short of making the health and accessibility of the internet a mainstream issue around the world.`,
-      }
-    ]
-  },*/
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-sunday-dialogues-and-debates/#@52s`,
+    name: `Stories from the Future of Democracy`,
+    videoLink: `https://www.youtube.com/watch?v=mzjHu2izFn8&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=9`,
     transcriptLink: ``,
     speakers: [
       {
@@ -243,8 +215,8 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
     ]
   },
   {
-    name: ``,
-    videoLink: `https://air.mozilla.org/mozfest-2017-saturday-dialogues-and-debates/#@1h49m00s`,
+    name: `Who Cares About the AI Takeover When the Planet is Dying?`,
+    videoLink: `https://www.youtube.com/watch?v=t4QK_A1jgBM&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=5`,
     transcriptLink: ``,
     speakers: [
       {
