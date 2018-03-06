@@ -101,7 +101,7 @@ module.exports = [
       }
     ]
   },
-  /*{
+  {
     name: `The Big Open`,
     videoLink: `https://www.youtube.com/watch?v=sryVMjmHcdg&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=11`,
     transcriptLink: ``,
@@ -115,7 +115,7 @@ module.exports = [
       {
         name: `Ryan Merkley`,
         twitter: `@ryanmerkley`,
-        pic: ``,
+        pic: `/assets/images/speakers/2017/RyanMerkley.jpeg`,
         description: `Ryan Merkley is the CEO of Creative Commons, where he is building a vibrant, usable commons powered by collaboration and gratitude.
 Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an experienced campaigner and advocate for social causes, and has advised political campaigns on the local and national levels.`,
       },
@@ -126,7 +126,7 @@ Prior to Creative Commons, Ryan was Chief Operating Officer of Mozilla. He is an
         description: `Mark is Executive Director of the Mozilla Foundation, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with likeminded organizations and leaders, and growing the open internet movement. Mark’s goal is nothing short of making the health and accessibility of the internet a mainstream issue around the world.`,
       }
     ]
-  },*/
+  },
   {
     name: `Being Human in the Dark Days of the Internet`,
     videoLink: `https://www.youtube.com/watch?v=zzJ0KAvpdVw&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=8`,
