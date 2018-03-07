@@ -1,10 +1,9 @@
-var React = require('react');
-var Jumbotron = require('../components/jumbotron.jsx');
-var Router = require('react-router');
-var Link = Router.Link;
-var ImageTag = require('../components/imagetag.jsx');
-var SpeakersPromo = require('../components/speakers-promo.jsx');
-var speakersInfo = require('../talks/2017');
+import React from 'react';
+import Jumbotron from '../components/jumbotron.jsx';
+import { Link } from 'react-router-dom';
+import ImageTag from '../components/imagetag.jsx';
+import SpeakersPromo from '../components/speakers-promo.jsx';
+import speakersInfo from '../talks/2017';
 
 import Header from '../components/header.jsx';
 import generateHelmet from '../lib/helmet.jsx';
@@ -22,12 +21,29 @@ var Home = React.createClass({
           <div className="content-wrapper">
             <h1>MozFest 2018</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
-            <p className="mb-0">2018 dates coming soon</p>
-            {/*<p className="mb-0">October 26-28, 2018</p>*/}
+            <p className="mb-0">October 26-28, 2018</p>
             <p className="mb-0">Ravensbourne College, London</p>
             <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn p-3 m-3">Get Updates</a>
           </div>
         </Jumbotron>
+        <div className="white-background">
+          <div className="content wide row">
+            <div className="col-md-4">
+              <h1>What is MozFest like?</h1>
+              <p>
+                MozFest is for advocates of a healthy Internet. Explore the intersecton of the web with civil society, journalism, public policy, and art through interactive sessions.
+              </p>
+              <Link to="/expect" className="btn btn-arrow">
+                <span>What to Expect</span>
+              </Link>
+            </div>
+            <div className="col-md-8">
+              <div className="embed-responsive embed-responsive-32by15">
+                <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" frameBorder="0" allowFullScreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="white-background">
           <div className="centered content wide">
             <h1>Dialogues and Debates</h1>
