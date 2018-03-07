@@ -31,7 +31,7 @@ var Expect = React.createClass({
             </div>
             <div className="full-content">
               <p><a href={FESTIVAL_GUIDE_LINK}>Read the 2017 Festival Guide</a></p>
-              <p><a href={FESTIVAL_GUIDE_LINK} className="guide-image-wrapper"><img src="/assets/images/festival-guide.jpg" alt="Festival guide" width="1612" height="1014"/></a></p>
+              <p><a href={FESTIVAL_GUIDE_LINK} className="guide-image-wrapper"><img src="/assets/images/festival-guide.png" alt="Festival guide" width="1612" height="1014"/></a></p>
             </div>
             <div>
               <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameBorder="0" allowFullScreen></iframe>
