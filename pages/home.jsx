@@ -27,21 +27,17 @@ var Home = React.createClass({
           </div>
         </Jumbotron>
         <div className="white-background">
-          <div className="content wide row">
-            <div className="col-md-4">
-              <h1>What is MozFest like?</h1>
-              <p>
-                MozFest is for advocates of a healthy Internet. Explore the intersecton of the web with civil society, journalism, public policy, and art through interactive sessions.
-              </p>
-              <Link to="/expect" className="btn btn-arrow">
-                <span>What to Expect</span>
-              </Link>
+          <div className="content wide centered">
+            <h1>What is MozFest like?</h1>
+            <div className="embed-responsive embed-responsive-32by15">
+              <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" frameBorder="0" allowFullScreen></iframe>
             </div>
-            <div className="col-md-8">
-              <div className="embed-responsive embed-responsive-32by15">
-                <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" className="embed-responsive-item" frameBorder="0" allowFullScreen></iframe>
-              </div>
-            </div>
+            <p>
+              MozFest is for advocates of a healthy Internet. Explore the intersecton of the web with civil society, journalism, public policy, and art through interactive sessions.
+            </p>
+            <Link to="/expect" className="btn btn-arrow">
+              <span>What to Expect</span>
+            </Link>
           </div>
         </div>
         <div className="white-background">
