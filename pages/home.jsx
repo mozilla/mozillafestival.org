@@ -3,7 +3,8 @@ import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
 import ImageTag from '../components/imagetag.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
-import speakersInfo from '../talks/2017';
+import speakersInfo from '../speakers/2017';
+import talksInfo from '../talks/2017';
 
 import Header from '../components/header.jsx';
 import generateHelmet from '../lib/helmet.jsx';
@@ -40,13 +41,13 @@ var Home = React.createClass({
             </Link>
           </div>
         </div>
-        <div className="white-background">
+        <div>
           <div className="centered content wide">
             <h1>Dialogues and Debates</h1>
-            <SpeakersPromo speakersInfo={speakersInfo} />
+            <SpeakersPromo speakersInfo={speakersInfo} talksInfo={talksInfo}/>
           </div>
         </div>
-        <div className="news content wide">
+        {/*<div className="news content wide">
           <h1 className="text-center">Latest News</h1>
           <div className="row mt-5">
             <div className="col-12 col-md-6 text-left">
@@ -77,7 +78,7 @@ var Home = React.createClass({
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
         <div className="white-background">
           <div className="centered content wide">
           <h1>Join Us at MozFest</h1>

@@ -2,9 +2,9 @@ var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
 var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
-var SPEAKERS_2016 = require('../talks/2016');
-var SPEAKERS_2017 = require('../talks/2017');
-var SPEAKERS_2018 = require('../talks/2018');
+var TALKS_2016 = require('../talks/2016');
+var TALKS_2017 = require('../talks/2017');
+var TALKS_2018 = require('../talks/2018');
 
 var SpeakersPage = React.createClass({
   renderTalk: function(talks) {
@@ -23,19 +23,19 @@ var SpeakersPage = React.createClass({
             {/*<div name="2018" data-slug="2018">
               <h1>2018</h1>
               <div className="horizontal-rule"></div>
-              { this.renderTalk(SPEAKERS_2018) }
+              { this.renderTalk(TALKS_2018) }
             </div>*/}
             
             <div name="2017" data-slug="2017">
               <h1>2017</h1>
               <div className="horizontal-rule"></div>
-              { this.renderTalk(SPEAKERS_2017) }
+              { this.renderTalk(TALKS_2017) }
             </div>
             
             <div name="2016" data-slug="2016">
               <h1>2016</h1>
               <div className="horizontal-rule"></div>
-              { this.renderTalk(SPEAKERS_2016) }
+              { this.renderTalk(TALKS_2016) }
             </div>
 
           </TabSwitcher>

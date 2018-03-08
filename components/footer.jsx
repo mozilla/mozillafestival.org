@@ -6,7 +6,7 @@ import { MofoFooter } from 'mofo-ui';
 const FOOTER_LINKS = [
   {
     iconType: `chat`,
-    link: `https://medium.com/mozilla-festival/tagged/mozfest2016`,
+    link: `https://medium.com/mozilla-festival/tagged/mozfest2017`,
     text: `Blog`
   },
   {

@@ -135,7 +135,7 @@ var About = React.createClass({
               sessions<br/>& experiences
             </CircleNumber>
           </div>
-          <p>The ninth annual MozFest will be held in London, from Friday, Oct. 26 to Sunday, Oct. 28. MozFest is an annual celebration of the open Internet movement. It's where passionate technologists, educators, and makers come together to explore the future of the open Web.</p>
+          <p>The ninth annual MozFest will be held in London, from Friday, Oct. 26 to Sunday, Oct. 28, 2018. MozFest is an annual celebration of the open Internet movement. It's where passionate technologists, educators, and makers come together to explore the future of the open Web.</p>
         </div>
         <div className="timeline-container">
           <div className="starting-line"></div>
