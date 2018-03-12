@@ -43,7 +43,7 @@ var Home = React.createClass({
         </div>
         <div>
           <div className="centered content wide">
-            <h1>Dialogues and Debates</h1>
+            <h1>2017 Dialogues and Debates</h1>
             <SpeakersPromo speakersInfo={speakersInfo} talksInfo={talksInfo}/>
           </div>
         </div>
