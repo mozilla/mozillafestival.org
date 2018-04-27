@@ -2,7 +2,6 @@ var React = require('react');
 var Header = require('../components/header.jsx');
 var Footer = require('../components/footer.jsx');
 var Jumbotron = require('../components/jumbotron.jsx');
-var ImageTag = require('../components/imagetag.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
 
@@ -22,7 +21,7 @@ var Expect = React.createClass({
         <Header/>
 
         <Jumbotron image="/assets/images/remote.jpg"
-                  image2x="/assets/images/remote.jpg">
+          image2x="/assets/images/remote.jpg">
           <h1>Remote Participation</h1>
         </Jumbotron>
 

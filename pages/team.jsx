@@ -50,17 +50,17 @@ var Partners = React.createClass({
       link: `http://www.translate.org.za/`
     },
   ],
-  renderPartnerLogos: function(partner) {
+  renderPartnerLogos: function() {
     return this.partnersInfo.map((partner) => {
       return <div className="col-12 col-sm-4 partner" key={partner.name}>
-                <a href={partner.link}>
-                  { partner.logo ? <img src={partner.logo} alt={partner.name} className="img-fluid mb-4" /> : partner.name }
-                </a>
-              </div>
+        <a href={partner.link}>
+          { partner.logo ? <img src={partner.logo} alt={partner.name} className="img-fluid mb-4" /> : partner.name }
+        </a>
+      </div>;
     });
   },
   render: function() {
-    return <div className="row">{this.renderPartnerLogos()}</div>
+    return <div className="row">{this.renderPartnerLogos()}</div>;
   }
 });
 
@@ -68,22 +68,22 @@ var Partners = React.createClass({
 var TeamPage = React.createClass({
   renderMembers: function(members) {
     return members.map( member => {
-            return ( <MemberProfile {...member} key={member.name} /> );
-          });
+      return ( <MemberProfile {...member} key={member.name} /> );
+    });
   },
   renderIndividualSpaceSection(spaceName, type = `space`) {
     let members = type === `space` ? SPACE_WRANGLERS[spaceName] : EXPERIENCES_WRANGLERS[spaceName];
     return <div>
-            <h3 className="text-center">{ spaceName }</h3>
-            { this.renderMembers(members) }
-            <div className="horizontal-rule mb-5"></div>
-          </div>;
+      <h3 className="text-center">{ spaceName }</h3>
+      { this.renderMembers(members) }
+      <div className="horizontal-rule mb-5"></div>
+    </div>;
   },
   render: function() {
     return (
       <div className="team-page">
         <Jumbotron image="/assets/images/hero/team.jpg"
-                  image2x="/assets/images/hero/team.jpg">
+          image2x="/assets/images/hero/team.jpg">
           <h1>Team</h1>
         </Jumbotron>
         <div className="content wide mt-0">

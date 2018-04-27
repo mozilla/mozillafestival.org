@@ -23,7 +23,7 @@ var EventCard = React.createClass({
       description: "",
       link: "",
       registrationlink: ""
-    }
+    };
   },
   renderDescription() {
     return this.props.description.split(`\n`).map((paragraph) => {
@@ -49,13 +49,13 @@ var EventCard = React.createClass({
           <header className="font-weight-bold mb-3">{this.props.eventname}</header>
           <div className="details">
             { this.renderEventTime() }
-            { this.props.location && 
-            <div className="location">{this.props.location}</div> 
+            { this.props.location &&
+            <div className="location">{this.props.location}</div>
             }
-            { link && 
+            { link &&
             <div className="url"><a href={link}>{link}</a></div>
             }
-            { registrationLink && 
+            { registrationLink &&
             <div className="registration-link"><a href={registrationLink}>Registration</a></div>
             }
             <div className="description">
@@ -75,14 +75,14 @@ var EventCardGroup = React.createClass({
   getDefaultProps() {
     return {
       events: []
-    }
+    };
   },
   renderEventCards() {
     if (!this.props.events) return null;
-    return this.props.events.map((event,i) => <EventCard {...event} key={event.eventname} />);
+    return this.props.events.map((event) => <EventCard {...event} key={event.eventname} />);
   },
   render: function() {
-    return <ul className="event-card-group row no-bullet pl-0 m-0">{this.renderEventCards()}</ul>
+    return <ul className="event-card-group row no-bullet pl-0 m-0">{this.renderEventCards()}</ul>;
   }
 });
 

@@ -45,7 +45,7 @@ const SPONSORS_INFO = {
 };
 
 var Sponsors = React.createClass({
-  renderSponsor: function(type = ``, sponsor, classnames = ``) {
+  renderSponsor: function(sponsor, classnames = ``) {
     classnames = classNames(classnames, `align-self-center logo d-flex align-items-center`);
     return <div className={classnames} key={sponsor.name}>
       <img src={sponsor.logo} alt={sponsor.name} />
@@ -53,8 +53,8 @@ var Sponsors = React.createClass({
   },
   renderSponsorOfAType: function(type) {
     var sponsors = SPONSORS_INFO[type];
-    sponsors = sponsors.map((sponsor, i) => {
-      return this.renderSponsor(type, sponsor, `col-12 col-sm-${12/sponsors.length}`);
+    sponsors = sponsors.map((sponsor) => {
+      return this.renderSponsor(sponsor, `col-12 col-sm-${12/sponsors.length}`);
     });
 
     return <div className={`col-${sponsors.length*4} mt-3 mb-5`}>
@@ -64,7 +64,7 @@ var Sponsors = React.createClass({
       <div className="row">
         { sponsors }
       </div>
-    </div>
+    </div>;
   },
   render: function() {
     return <div>

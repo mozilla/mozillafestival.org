@@ -8,18 +8,18 @@ var ProjectPage = React.createClass({
     return (
       <div className="projects-page">
         <Jumbotron image="/assets/images/hero/projects.jpg"
-                image2x="/assets/images/hero/projects.jpg">
-        <h1>MozFest Projects</h1>
+          image2x="/assets/images/hero/projects.jpg">
+          <h1>MozFest Projects</h1>
         </Jumbotron>
         <div className="content wide">
-            <p>MozFest attracts and generates dozens of projects that thrive long after the festival weekend. See the examples below and find a catalyst for collaboration with our vibrant network. <a href="https://mzl.la/pulse">Browse more projects on Pulse</a>.</p>
-            <div className="pb-3" name="Production" slug="production">
-              <div className="horizontal-rule"></div>
-                <div className="row">
-                  {projectData.map((project, index)=>{ return <ProjectCard key={index} {...project } />; } )}
-                </div>
+          <p>MozFest attracts and generates dozens of projects that thrive long after the festival weekend. See the examples below and find a catalyst for collaboration with our vibrant network. <a href="https://mzl.la/pulse">Browse more projects on Pulse</a>.</p>
+          <div className="pb-3" name="Production" slug="production">
+            <div className="horizontal-rule"></div>
+            <div className="row">
+              {projectData.map((project, index)=>{ return <ProjectCard key={index} {...project } />; } )}
             </div>
-            <p>See more projects & assets from our network on <a href="http://mzl.la/pulse">Pulse</a>.</p>
+          </div>
+          <p>See more projects & assets from our network on <a href="http://mzl.la/pulse">Pulse</a>.</p>
         </div>
       </div>
     );

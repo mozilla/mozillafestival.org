@@ -1,8 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router';
 import NotFound from './pages/not-found.jsx';
-import Proposals from './pages/proposals/proposals.jsx';
-import EnglishStrings from './pages/proposals/language/english.json';
 import HousePage from './pages/house.jsx';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
@@ -30,18 +28,8 @@ const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
   //                                   stringSource={LANGUAGE[lang].stringSource} />);
   // return <Route key={name} name={name} path={`/proposals/${name}`} component={component} />;
 
-  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />
+  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />;
 });
-
-var ProposalEnglish = () => <Proposals lang="english"
-                                       stringSource={EnglishStrings} />;
-
-var redirectToProposals = function(nextState, replace, callback) {
-  if (nextState.location.pathname !== `/proposals`) {
-    replace(`/proposals`);
-  }
-  callback();
-};
 
 const Routes = () => (
   <Switch>
@@ -90,12 +78,12 @@ class Main extends React.Component {
       setTimeout(() => {
         const element = document.getElementById(hash.replace(`#`, ``));
         if (element) element.scrollIntoView(true);
-       }, 0);
+      }, 0);
     } else {
       window.scrollTo(0, 0);
     }
   }
- 
+
   render() {
     return (
       <div>

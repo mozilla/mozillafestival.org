@@ -22,6 +22,8 @@
     "bootstrap:prefix": "postcss --use autoprefixer -o public/vendor/css/mofo-bootstrap.css public/vendor/css/mofo-bootstrap.css",
     "watch:js": "chokidar 'main.jsx' 'app.jsx' 'lib/**/*.js' 'lib/**/*.jsx' 'components/**/*.jsx' 'pages/**/*.jsx' 'pages/**/*.js' 'team-bio/**/*.js' 'talks/**/*.js' 'pages/**/*.json' 'webpack.config.js' -c 'npm run build:js'",
     "watch:css": "chokidar 'components/**/*.less' 'pages/**/*.less' 'less/**/*.less' -c 'npm run build:css'",
+    "test": "run-s test:**",
+    "test:js": "eslint --config .eslintrc.yaml \"*.js\" \"*.jsx\" \"lib/**/*.js\" \"lib/**/*.jsx\" \"components/**/*.jsx\" \"components/**/*.js\" \"pages/**/*.jsx\" \"pages/**/*.js\" \"team-bio/**/*.js\" \"talks/**/*.js\" webpack.config.js",
     "postinstall": "npm run build",
     "server": "node public/build/server.bundle.js"
   },

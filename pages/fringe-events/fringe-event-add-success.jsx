@@ -1,6 +1,5 @@
 var React = require('react');
 var Jumbotron = require('../../components/jumbotron.jsx');
-var Router = require('react-router');
 
 import { Link } from 'react-router-dom';
 
@@ -9,7 +8,7 @@ var Success = React.createClass({
     return (
       <div className="proposals-page">
         <Jumbotron image="/assets/images/hero/fringe.jpg"
-                  image2x="/assets/images/hero/fringe.jpg">
+          image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
         </Jumbotron>
         <div className="centered content wide">

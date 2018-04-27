@@ -17,5 +17,5 @@ export default (description) => {
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://mozillafestival.org/assets/images/site-thumbnail.jpg" />
   </Helmet>;
-}
+};
 

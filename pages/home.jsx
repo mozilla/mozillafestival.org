@@ -1,7 +1,6 @@
 import React from 'react';
 import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
-import ImageTag from '../components/imagetag.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 import speakersInfo from '../speakers/2017';
 import talksInfo from '../talks/2017';
@@ -12,13 +11,12 @@ import generateHelmet from '../lib/helmet.jsx';
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
   render: function () {
-    var self = this;
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
         <Header />
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
-                  image2x="/assets/images/hero/home/banner-home_5.jpg">
+          image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
             <h1>MozFest 2018</h1>
             <p className="mb-0">The world's leading festival for the open Internet movement.</p>
@@ -47,7 +45,7 @@ var Home = React.createClass({
             <SpeakersPromo speakersInfo={speakersInfo} talksInfo={talksInfo}/>
           </div>
         </div>
-        {/*<div className="news content wide">
+        {/* <div className="news content wide">
           <h1 className="text-center">Latest News</h1>
           <div className="row mt-5">
             <div className="col-12 col-md-6 text-left">
@@ -81,9 +79,9 @@ var Home = React.createClass({
         </div>*/}
         <div className="white-background">
           <div className="centered content wide">
-          <h1>Join Us at MozFest</h1>
-          <p>Sign up for MozFest updates and be first in line to get your tickets for 2018.</p>
-          <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Sign Up</span></a>
+            <h1>Join Us at MozFest</h1>
+            <p>Sign up for MozFest updates and be first in line to get your tickets for 2018.</p>
+            <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Sign Up</span></a>
           </div>
         </div>
       </div>

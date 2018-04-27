@@ -12,8 +12,7 @@ let DECENTRALIZATION_WRANGLERS = [
     twitter: `@mistertim`,
     pic: `/assets/images/team/wrangler/space/TimCowlishaw.jpg`,
     bio: [
-      `Tim works in R&D at the BBC, prototyping new methods for information search and discovery. He's researched, designed and built products on the web for over a decade. He also runs morenewsfromnowhere.co.uk, which showcases experimental music and sound art. He is particularly interested in creative and artistic applications of web technologies.
-`
+      `Tim works in R&D at the BBC, prototyping new methods for information search and discovery. He's researched, designed and built products on the web for over a decade. He also runs morenewsfromnowhere.co.uk, which showcases experimental music and sound art. He is particularly interested in creative and artistic applications of web technologies.`
     ]
   },
   {

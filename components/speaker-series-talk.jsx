@@ -62,9 +62,9 @@ var SpeakerSeriesTalk = React.createClass({
   },
   renderTalkLinks: function() {
     return <div>
-            { this.props.videoLink && <a className="talk-link video" href={this.props.videoLink}>Video</a> }
-            { this.props.transcriptLink && <a className="talk-link transcript ml-4" href={this.props.transcriptLink}>Transcript</a> }
-          </div>;
+      { this.props.videoLink && <a className="talk-link video" href={this.props.videoLink}>Video</a> }
+      { this.props.transcriptLink && <a className="talk-link transcript ml-4" href={this.props.transcriptLink}>Transcript</a> }
+    </div>;
   },
   renderSpeakers: function() {
     return this.props.speakers.map(speaker => <Speaker {...speaker} key={speaker.name} />);

@@ -1,5 +1,4 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
@@ -23,19 +22,19 @@ let sortByTime = function(a,b) {
   if (timeA < timeB) { return -1; }
   if (timeA > timeB) { return 1; }
   return 0;
-}
+};
 
 var FringeEventForm = React.createClass({
   getInitialState: function() {
     return {
       submitting: false,
       formValues: {}
-    }
+    };
   },
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
-    this.setState({ 
+    this.setState({
       formValues,
       // hide notice once user starts typing again
       // this is a quick fix.
@@ -92,29 +91,29 @@ var FringeEventForm = React.createClass({
     let formFields = fields.createFields();
 
     return <div>
-              <h2>Event Info</h2>
-              <Form ref="formPartOne" 
-                    fields={formFields.partOne}
-                    inlineErrors={true}
-                    onUpdate={this.handleFormUpdate} />
-              <h2>Privacy Policy</h2>
-              <p>Read more about <a href="https://www.mozilla.org/privacy/" target="_blank">Mozilla's privacy policy</a>.</p>
-              <Form ref="formPartTwo" 
-                    fields={formFields.partTwo}
-                    inlineErrors={true}
-                    onUpdate={this.handleFormUpdate} />
-              <div>
-                <button
-                  ref="submitBtn" 
-                  className="btn btn-primary-outline mr-3 my-5"
-                  type="submit"
-                  onClick={this.handleFormSubmit}
-                  disabled={this.state.submitting ? `disabled` : null}
-                >{ this.state.submitting ? 'Submitting...' : 'Submit' }</button>
-              </div>
-           </div>
+      <h2>Event Info</h2>
+      <Form ref="formPartOne"
+        fields={formFields.partOne}
+        inlineErrors={true}
+        onUpdate={this.handleFormUpdate} />
+      <h2>Privacy Policy</h2>
+      <p>Read more about <a href="https://www.mozilla.org/privacy/" target="_blank">Mozilla's privacy policy</a>.</p>
+      <Form ref="formPartTwo"
+        fields={formFields.partTwo}
+        inlineErrors={true}
+        onUpdate={this.handleFormUpdate} />
+      <div>
+        <button
+          ref="submitBtn"
+          className="btn btn-primary-outline mr-3 my-5"
+          type="submit"
+          onClick={this.handleFormSubmit}
+          disabled={this.state.submitting ? `disabled` : null}
+        >{ this.state.submitting ? 'Submitting...' : 'Submit' }</button>
+      </div>
+    </div>;
   }
-}); 
+});
 
 
 var FringePage = React.createClass({
@@ -123,7 +122,7 @@ var FringePage = React.createClass({
       events: [],
       eventsLoaded: false,
       unableToLoadEvents: false
-    }
+    };
   },
   componentDidMount: function() {
     this.getFringeEvents();
@@ -138,7 +137,7 @@ var FringePage = React.createClass({
       unableToLoadEvents: false
     });
   },
-  handleEventDataError: function(error) {
+  handleEventDataError: function() {
     this.setState({
       eventsLoaded: true,
       unableToLoadEvents: true
@@ -148,9 +147,9 @@ var FringePage = React.createClass({
     fetch('/get-fringe-events', {
       method: 'get'
     })
-    .then(this.handleEventResponse)
-    .then(this.handleEventData)
-    .catch(this.handleEventDataError);
+      .then(this.handleEventResponse)
+      .then(this.handleEventData)
+      .catch(this.handleEventDataError);
   },
   handleScrollToFringeForm(event) {
     event.preventDefault();
@@ -163,7 +162,7 @@ var FringePage = React.createClass({
       events = <EventCardGroup events={this.state.events} />;
     } else {
       events = this.state.unableToLoadEvents ? <p>Unable to load events.</p>
-                                             : <p className="loading-message">Loading events</p>;
+        : <p className="loading-message">Loading events</p>;
     }
     return events;
   },
@@ -171,7 +170,7 @@ var FringePage = React.createClass({
     return (
       <div className="fringe-events-page">
         <Jumbotron image="/assets/images/hero/fringe.jpg"
-                  image2x="/assets/images/hero/fringe.jpg">
+          image2x="/assets/images/hero/fringe.jpg">
           <h1>Fringe Events</h1>
         </Jumbotron>
         <div className="white-background">

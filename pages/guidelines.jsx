@@ -24,7 +24,7 @@ var Guidelines = React.createClass({
       <div className="guidelines-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/guidelines.jpg"
-                  image2x="/assets/images/hero/guidelines.jpg">
+          image2x="/assets/images/hero/guidelines.jpg">
           <h1>participation<br/>guidelines</h1>
         </Jumbotron>
         <div className="white-background">

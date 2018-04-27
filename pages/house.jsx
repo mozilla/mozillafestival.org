@@ -20,7 +20,7 @@ let sortByTime = function(a,b) {
   if (timeA < timeB) { return -1; }
   if (timeA > timeB) { return 1; }
   return 0;
-}
+};
 
 class HousePage extends React.Component {
   constructor(props) {
@@ -42,30 +42,30 @@ class HousePage extends React.Component {
     fetch('/get-house-events', {
       method: 'get'
     })
-    .then(response => response.json())
-    .then(events => {
-      this.setState({
-        events: events.sort(sortByTime),
-        eventsLoaded: true,
-        unableToLoadEvents: false
+      .then(response => response.json())
+      .then(events => {
+        this.setState({
+          events: events.sort(sortByTime),
+          eventsLoaded: true,
+          unableToLoadEvents: false
+        });
       })
-    })
-    .catch(error => {
-      this.setState({
-        eventsLoaded: true,
-        unableToLoadEvents: true
+      .catch(() => {
+        this.setState({
+          eventsLoaded: true,
+          unableToLoadEvents: true
+        });
       });
-    });
   }
 
   renderHouseEvents() {
     let events = false;
-    
+
     if ( this.state.eventsLoaded ) {
       events = <EventCardGroup events={this.state.events} />;
     } else {
       events = this.state.unableToLoadEvents ? <p>Unable to load events.</p>
-                                             : <p className="loading-message">Loading events</p>;
+        : <p className="loading-message">Loading events</p>;
       events = <div className="text-center">{events}</div>;
     }
     return events;
@@ -77,7 +77,7 @@ class HousePage extends React.Component {
         {generateHelmet(this.pageMetaDescription)}
         <Header/>
         <Jumbotron image="/assets/images/hero/house.jpg"
-                  image2x="/assets/images/hero/house.jpg">
+          image2x="/assets/images/hero/house.jpg">
           <h1>MozFest House</h1>
         </Jumbotron>
         <div className="white-background">

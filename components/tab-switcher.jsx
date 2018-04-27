@@ -56,15 +56,15 @@ var TabSwitcher = React.createClass({
           onClick={this.tabClick.bind(null, index)}
           key={index}
           hidden={this.props.children[index].props.hidden}>
-            <img className="icon hidden-sm-up" src={index === this.state.activeTab && element.props.iconActive ? element.props.iconActive : element.props.iconDefault}/>
-            <span className="hidden-xs-down">{element.props.name}</span>
+          <img className="icon hidden-sm-up" src={index === this.state.activeTab && element.props.iconActive ? element.props.iconActive : element.props.iconDefault}/>
+          <span className="hidden-xs-down">{element.props.name}</span>
         </Link>
       );
     });
 
     // Remove undefined values from buttons
     buttons = buttons.filter(Boolean);
-    
+
     let panels = this.props.children.map((element, index) => {
       return (
         <div

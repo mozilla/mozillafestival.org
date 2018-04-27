@@ -18,7 +18,7 @@ module.exports = [
     ]
   },
   {
-    name: `What happened to the internet? ¯\_(ツ)_/¯`,
+    name: `What happened to the internet? ¯\\_(ツ)_/¯`,
     videoLink: `https://www.youtube.com/watch?v=pCngLZcoBno&t=0s&list=PLYiaJo7rYNXInD71OAShY4xfl6fhskoUV&index=3`,
     transcriptLink: ``,
     speakers: [

@@ -16,10 +16,10 @@ const TIME_FORMAT = "h:mma";
 
 let EventDate = React.createClass({
   getInitialState: function () {
-  let startDate = moment();
-  return {
-     startDate: startDate,
-     selected: startDate
+    let startDate = moment();
+    return {
+      startDate: startDate,
+      selected: startDate
     };
   },
   componentDidMount: function() {
@@ -37,8 +37,8 @@ let EventDate = React.createClass({
   },
   render: function() {
     return <DatePicker selected={this.state.startDate}
-                       onChange={(date) => this.handleSelectChange(date)}
-                       className="form-control" />
+      onChange={(date) => this.handleSelectChange(date)}
+      className="form-control" />;
   }
 });
 
@@ -46,8 +46,8 @@ let Time = React.createClass({
   getInitialState: function () {
     let defaultValue = moment().hour(0).minute(0);
     return {
-     defaultValue: defaultValue,
-     selected: defaultValue
+      defaultValue: defaultValue,
+      selected: defaultValue
     };
   },
   componentDidMount: function() {
@@ -61,29 +61,29 @@ let Time = React.createClass({
   },
   render: function() {
     return <TimePicker
-              showSecond={false}
-              defaultValue={this.state.defaultValue}
-              className="time-selector"
-              onChange={(value) => this.handleSelectChange(value)}
-              format={TIME_FORMAT}
-              use12Hours
-          />;
+      showSecond={false}
+      defaultValue={this.state.defaultValue}
+      className="time-selector"
+      onChange={(value) => this.handleSelectChange(value)}
+      format={TIME_FORMAT}
+      use12Hours
+    />;
   }
 });
 
 const DemonstrateLabel = () => {
   return <div>
             How does your event demonstrate one or more of the following characteristics?
-            <ul>
-              <li>Event is co-designed with partners/allies and community</li>
-              <li>Includes creative, hands-on activities</li>
-              <li>Facilitation promotes collaboration, innovation and respect</li>
-              <li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>
-              <li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>
-              <li>Protects or advances the health of the Internet</li>
-              <li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>
-            </ul>
-          </div>
+    <ul>
+      <li>Event is co-designed with partners/allies and community</li>
+      <li>Includes creative, hands-on activities</li>
+      <li>Facilitation promotes collaboration, innovation and respect</li>
+      <li>Designed in the open (e.g. you publish process blogs or have an open curation process)</li>
+      <li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>
+      <li>Protects or advances the health of the Internet</li>
+      <li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>
+    </ul>
+  </div>;
 };
 
 var createPartOneFields = function() {
