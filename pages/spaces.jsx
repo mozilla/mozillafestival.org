@@ -1,5 +1,4 @@
 var React = require('react');
-var Link = require('react-router').Link;
 var Jumbotron = require('../components/jumbotron.jsx');
 var SpaceProfile = require('../components/space-profile.jsx');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
@@ -120,7 +119,7 @@ var ExpereincesInfo = [
 var SessionsPage = React.createClass({
   renderInfoSection(info) {
     return info.map((space,i) => {
-      var whiteBg = (i%2==0) ? "white-background" : "";
+      var whiteBg = (i%2===0) ? "white-background" : "";
       return (
         <div className={whiteBg} key={space.name}>
           <div className="content wide">

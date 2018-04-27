@@ -1,7 +1,6 @@
 import React from 'react';
 import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
-import ImageTag from '../components/imagetag.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 import speakersInfo from '../speakers/2017';
 import talksInfo from '../talks/2017';
@@ -12,7 +11,6 @@ import generateHelmet from '../lib/helmet.jsx';
 var Home = React.createClass({
   pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
   render: function () {
-    var self = this;
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}

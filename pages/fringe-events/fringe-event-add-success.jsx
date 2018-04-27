@@ -1,6 +1,5 @@
 var React = require('react');
 var Jumbotron = require('../../components/jumbotron.jsx');
-var Router = require('react-router');
 
 import { Link } from 'react-router-dom';
 

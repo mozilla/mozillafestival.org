@@ -79,7 +79,7 @@ var EventCardGroup = React.createClass({
   },
   renderEventCards() {
     if (!this.props.events) return null;
-    return this.props.events.map((event,i) => <EventCard {...event} key={event.eventname} />);
+    return this.props.events.map((event) => <EventCard {...event} key={event.eventname} />);
   },
   render: function() {
     return <ul className="event-card-group row no-bullet pl-0 m-0">{this.renderEventCards()}</ul>;

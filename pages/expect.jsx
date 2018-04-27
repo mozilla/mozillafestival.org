@@ -1,6 +1,5 @@
 var React = require('react');
 var Jumbotron = require('../components/jumbotron.jsx');
-var ImageTag = require('../components/imagetag.jsx');
 
 import generateHelmet from '../lib/helmet.jsx';
 

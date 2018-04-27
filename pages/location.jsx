@@ -24,6 +24,7 @@ var Location = React.createClass({
       // These will automatically attach to the window object.
       'mapbox.js'
     ], () => {
+      var L = window.L;
       var pinLocation = [51.501, 0.00575];
       var popupLocation = [51.5025, 0.00575];
       var viewLocation = [51.506, 0.00575];

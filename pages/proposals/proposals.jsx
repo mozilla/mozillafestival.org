@@ -1,12 +1,10 @@
 var React = require('react');
 var classnames = require('classnames');
 var Jumbotron = require('../../components/jumbotron.jsx');
-var Router = require('react-router');
 var Form = require('react-formbuilder').Form;
 var fields = require('./form/fields');
 var EnglishStrings = require('./language/english.json');
 
-import { Link } from 'react-router-dom';
 import generateHelmet from '../../lib/helmet.jsx';
 
 const SUBMISSION_STATUS_SUCCESS = `success`;

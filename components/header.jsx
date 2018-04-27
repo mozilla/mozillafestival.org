@@ -1,5 +1,4 @@
 import React from 'react';
-import Router from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 var ImageTag = require('./imagetag.jsx');

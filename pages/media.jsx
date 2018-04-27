@@ -1,7 +1,6 @@
 var React = require('react');
 var Jumbotron = require('../components/jumbotron.jsx');
 
-import { Link } from 'react-router-dom';
 import generateHelmet from '../lib/helmet.jsx';
 
 const PAST_COVERAGE = [

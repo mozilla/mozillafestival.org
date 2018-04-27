@@ -19,3 +19,5 @@ rules:
   camelcase: [1, properties: "always"]
   curly: [0]
   quotes: [0, "backtick"]
+  no-use-before-define: [2, { "functions": false }]
+  guard-for-in: [1]

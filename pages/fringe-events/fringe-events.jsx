@@ -1,5 +1,4 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
@@ -138,7 +137,7 @@ var FringePage = React.createClass({
       unableToLoadEvents: false
     });
   },
-  handleEventDataError: function(error) {
+  handleEventDataError: function() {
     this.setState({
       eventsLoaded: true,
       unableToLoadEvents: true

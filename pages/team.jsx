@@ -50,7 +50,7 @@ var Partners = React.createClass({
       link: `http://www.translate.org.za/`
     },
   ],
-  renderPartnerLogos: function(partner) {
+  renderPartnerLogos: function() {
     return this.partnersInfo.map((partner) => {
       return <div className="col-12 col-sm-4 partner" key={partner.name}>
         <a href={partner.link}>

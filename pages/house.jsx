@@ -50,7 +50,7 @@ class HousePage extends React.Component {
           unableToLoadEvents: false
         });
       })
-      .catch(error => {
+      .catch(() => {
         this.setState({
           eventsLoaded: true,
           unableToLoadEvents: true

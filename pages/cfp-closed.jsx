@@ -2,14 +2,11 @@ var React = require('react');
 var classnames = require('classnames');
 var Jumbotron = require('../components/jumbotron.jsx');
 
-import { Link } from 'react-router-dom';
 import generateHelmet from '../lib/helmet.jsx';
 
 var Proposal = React.createClass({
   pageMetaDescription: "Session proposals",
   render: function() {
-    let stringSource = this.props.stringSource;
-
     return (
       <div className={classnames(`proposals-page`)}>
         {generateHelmet(this.pageMetaDescription)}

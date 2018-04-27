@@ -10,7 +10,7 @@ import proposalHandler from "./lib/proposal-handler";
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter, match, RouterContext } from 'react-router';
+import { StaticRouter } from 'react-router';
 import Main from './main.jsx';
 
 Habitat.load();
@@ -52,7 +52,7 @@ app.post(`/add-proposal`, limiter, (req, res) => {
 
       var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
       proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
-        // if (updateErr) res.status(500).json(updateErr);
+        if (updateError) res.status(500).json(updateError);
 
         res.send(`Success!`);
       });
