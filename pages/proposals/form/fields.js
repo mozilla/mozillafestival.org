@@ -160,10 +160,10 @@ var createPartThreeFields = function(stringSource) {
       type: `choiceGroup`,
       label: stringSource.form_field_labels.timeneeded,
       options: [
-        TIME[`less_than_60_mins`],
+        TIME.less_than_60_mins,
         TIME[`60_mins`],
         TIME[`90_mins`],
-        TIME[`all_weekend`]
+        TIME.all_weekend
       ],
       labelClassname: `required`,
       fieldClassname: `form-control choice-group`,

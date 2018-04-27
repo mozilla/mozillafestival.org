@@ -13,7 +13,7 @@ var Expect = React.createClass({
       <div className="expect-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/expect.jpg"
-                  image2x="/assets/images/hero/expect.jpg">
+          image2x="/assets/images/hero/expect.jpg">
           <h1>what to expect</h1>
         </Jumbotron>
         <div className="white-background">

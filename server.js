@@ -31,7 +31,7 @@ app.use(compression());
 app.use(express.static(path.resolve(__dirname, `public`)));
 app.use(bodyParser.json());
 
-app.post(`/add-proposal`, limiter, function(req, res) {
+app.post(`/add-proposal`, limiter, (req, res) => {
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
   var GOOGLE_API_CRED = {
@@ -60,7 +60,7 @@ app.post(`/add-proposal`, limiter, function(req, res) {
   });
 });
 
-app.post('/add-fringe-event', limiter, function (req, res) {
+app.post('/add-fringe-event', limiter, (req, res) => {
   var SPREADSHEET_ID = env.get(`FRINGE_EVENT_SPREADSHEET_ID_2017`);
   var sheet = new GoogleSpreadsheet(SPREADSHEET_ID);
   var fringeEvent = req.body;
@@ -97,23 +97,23 @@ function getFringeEvents(response) {
   sheet.useServiceAccountAuth({
     "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
     "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
-  }, function(err) {
+  }, (err) => {
     if (err) {
       console.log(`[Error] ${err}`);
       response.status(500).json(err);
     }
     // GoogleSpreadsheet.getRows(worksheet_id, callback)
-    sheet.getRows(1, function(sheetErr, rows) {
+    sheet.getRows(1, (sheetErr, rows) => {
       if (sheetErr) {
         console.log("[Error] ", sheetErr);
         response.status(500).json(sheetErr);
       } else {
-        let approvedRows = rows.filter(function(row) {
+        let approvedRows = rows.filter((row) => {
           let approved = row.approved.toLowerCase().trim();
           return approved === `y` || approved === `yes`;
         }).map((row) => {
           // don't expose contact email
-          delete row[`contactemail`];
+          delete row.contactemail;
           return row;
         });
         response.send(approvedRows);
@@ -131,18 +131,18 @@ function getHouseEvents(response) {
   sheet.useServiceAccountAuth({
     "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
     "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
-  }, function(err) {
+  }, (err) => {
     if (err) {
       console.log(`[Error] ${err}`);
       response.status(500).json(err);
     }
     // GoogleSpreadsheet.getRows(worksheet_id, callback)
-    sheet.getRows(1, function(sheetErr, rows) {
+    sheet.getRows(1, (sheetErr, rows) => {
       if (sheetErr) {
         console.log("[Error] ", sheetErr);
         response.status(500).json(sheetErr);
       } else {
-        let approvedRows = rows.filter(function(row) {
+        let approvedRows = rows.filter((row) => {
           let showOnSite = row.addtowebsite.toLowerCase().trim();
           return showOnSite === `y` || showOnSite === `yes`;
         });

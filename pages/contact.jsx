@@ -10,7 +10,7 @@ var Contact = React.createClass({
       <div className="contact-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/contact.jpg"
-                  image2x="/assets/images/hero/contact.jpg">
+          image2x="/assets/images/hero/contact.jpg">
           <h1>contact us</h1>
         </Jumbotron>
         <div className="centered content wide">

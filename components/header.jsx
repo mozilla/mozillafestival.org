@@ -6,9 +6,9 @@ var ImageTag = require('./imagetag.jsx');
 
 const NAV_LINKS = [
   // { path: `/tickets`, label: `Tickets` },
-  //{ externalLink: `https://guidebook.com/guide/114124/`, label: `schedule` },
-  //{ externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
-  //{ path: `/speakers`, label: `Speakers` },
+  // { externalLink: `https://guidebook.com/guide/114124/`, label: `schedule` },
+  // { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
+  // { path: `/speakers`, label: `Speakers` },
   { path: `/about`, label: `About` },
   { path: `/expect`, label: `What to Expect` },
   { path: `/spaces`, label: `Spaces & Experiences` },
@@ -20,9 +20,9 @@ class Header extends React.Component {
   renderNavLinks() {
     return NAV_LINKS.map(link => {
       return <div className="nav-link-container d-inline-block mx-2 my-2 my-sm-0" key={link.label}>
-              { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
-              { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
-            </div>;
+        { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
+        { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
+      </div>;
     });
   }
 
@@ -31,7 +31,7 @@ class Header extends React.Component {
       <div className="page-header">
         <div className="header-content justify-content-end">
           <div className="nav-home">
-           <NavLink to="/">
+            <NavLink to="/">
               <ImageTag src1x="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg" alt="mozfest logo"/>
             </NavLink>
           </div>

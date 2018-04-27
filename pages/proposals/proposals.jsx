@@ -29,7 +29,7 @@ var Proposal = React.createClass({
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
-    this.setState({ 
+    this.setState({
       formValues,
       // hide notice once user starts typing again
       // this is a quick fix.
@@ -60,7 +60,7 @@ var Proposal = React.createClass({
             }
           });
         });
-      });      
+      });
     });
   },
   formatProposal(proposal) {
@@ -100,8 +100,8 @@ var Proposal = React.createClass({
       // we record "additionallanguage" only if user has specified the language
       if (otherAdditionalLang) {
         formatted.additionallanguage = otherAdditionalLang.split(`,`)
-                                        .map((lang) => lang.trim())
-                                        .filter((lang) => !!lang);
+          .map((lang) => lang.trim())
+          .filter((lang) => !!lang);
       }
     } else {
       for (let key in LANGUAGES) {
@@ -142,8 +142,8 @@ var Proposal = React.createClass({
     request.onload = (event) => {
       let resStatus = event.currentTarget.status;
 
-      this.setState({ 
-        submitting: false, 
+      this.setState({
+        submitting: false,
         submissionStatus: (resStatus >= 200 && resStatus < 400) ? SUBMISSION_STATUS_SUCCESS : SUBMISSION_STATUS_FAIL
       });
     };
@@ -162,42 +162,42 @@ var Proposal = React.createClass({
       <div className="content wide">
         <div className="form-section">
           {this.renderIntro(stringSource.form_section_intro.background)}
-          <Form ref="formPartOne" 
+          <Form ref="formPartOne"
             fields={formFields.partOne}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
           {this.renderIntro(stringSource.form_section_intro.space)}
-          <Form ref="formPartTwo" 
+          <Form ref="formPartTwo"
             fields={formFields.partTwo}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
           {this.renderIntro(stringSource.form_section_intro.describe)}
-          <Form ref="formPartThree" 
+          <Form ref="formPartThree"
             fields={formFields.partThree}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
           {this.renderIntro(stringSource.form_section_intro.travel)}
-          <Form ref="formPartFour" 
+          <Form ref="formPartFour"
             fields={formFields.partFour}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
           {this.renderIntro(stringSource.form_section_intro.material)}
-          <Form ref="formPartFive" 
+          <Form ref="formPartFive"
             fields={formFields.partFive}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div>
           <button
-            ref="submitBtn" 
+            ref="submitBtn"
             className="btn btn-primary-outline mr-3 my-5"
             type="submit"
             onClick={this.handleFormSubmit}
@@ -208,7 +208,7 @@ var Proposal = React.createClass({
 
         { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
       </div>
-    )
+    );
   },
   renderIntro(content) {
     let paragraphs = content.body.map((paragraph, i) => {
@@ -231,7 +231,7 @@ var Proposal = React.createClass({
         <h1 id="success">{messages.success}</h1>
         <p>{messages.thank_you}</p>
         <button className="btn-link submit-another"
-                onClick={(event)=>this.handleSubmitAnother(event)}>
+          onClick={(event)=>this.handleSubmitAnother(event)}>
           {messages.submit_another}
         </button>
       </div>
@@ -259,7 +259,7 @@ var Proposal = React.createClass({
     return (
       <div className={classnames(`proposals-page`, this.props.lang)}>
         <Jumbotron image="/assets/images/proposals.jpg"
-                  image2x="/assets/images/proposals.jpg">
+          image2x="/assets/images/proposals.jpg">
           <h1>{stringSource.page_banner_header}</h1>
           <div className="deadline">
             <span dangerouslySetInnerHTML={{__html: stringSource.page_banner_subheader}}></span>

@@ -65,13 +65,13 @@ class Linker extends React.Component {
         <Link to={this.props.to}>
           {this.props.children}
         </Link>
-      )
+      );
     }
     return (
       <a href={this.props.href} target={this.props.target}>
         {this.props.children}
       </a>
-    )
+    );
   }
 }
 
@@ -79,7 +79,7 @@ class FooterIcon extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
       <div className="footer-icon col">
@@ -99,7 +99,7 @@ class Footer extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
       <div>

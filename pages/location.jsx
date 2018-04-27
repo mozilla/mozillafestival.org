@@ -9,7 +9,7 @@ var Location = React.createClass({
   pageMetaDescription: "This year, MozFest returns to Ravensbourne, a media campus in the heart of London.",
   componentDidMount: function() {
     var self = this;
-    /*var head = document.getElementsByTagName('head')[0];
+    /* var head = document.getElementsByTagName('head')[0];
     [
       'https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css'
     ].filter(function(url) {
@@ -23,7 +23,7 @@ var Location = React.createClass({
     require([
       // These will automatically attach to the window object.
       'mapbox.js'
-    ], function() {
+    ], () => {
       var pinLocation = [51.501, 0.00575];
       var popupLocation = [51.5025, 0.00575];
       var viewLocation = [51.506, 0.00575];
@@ -35,9 +35,9 @@ var Location = React.createClass({
         closeOnClick: false,
         minWidth: 226
       })
-      .setLatLng(popupLocation)
-      .setContent(
-        '<div class="mapbox-popup">' +
+        .setLatLng(popupLocation)
+        .setContent(
+          '<div class="mapbox-popup">' +
           '<p>Ravensbourne</p>' +
           '<img height="154" width="207" src="/assets/images/482_Ravensbourne_400.jpg"/>' +
           '<p>6 Penrose Way</p>' +
@@ -46,15 +46,15 @@ var Location = React.createClass({
           '<a href="http://www.ravensbourne.ac.uk/">ravensbourne.ac.uk</a>' +
           '<p>+44 20 3040 3500</p>' +
         '</div>'
-      )
-      .openOn(map);
+        )
+        .openOn(map);
 
       map.setView(viewLocation, 15);
 
       var marker = L.marker(pinLocation, {
         icon: L.mapbox.marker.icon({
-            'marker-size': 'large',
-            'marker-color': '#BD4A5F'
+          'marker-size': 'large',
+          'marker-color': '#BD4A5F'
         })
       }).addTo(map);
       marker.bindPopup(popup);

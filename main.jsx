@@ -30,11 +30,11 @@ const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
   //                                   stringSource={LANGUAGE[lang].stringSource} />);
   // return <Route key={name} name={name} path={`/proposals/${name}`} component={component} />;
 
-  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />
+  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />;
 });
 
 var ProposalEnglish = () => <Proposals lang="english"
-                                       stringSource={EnglishStrings} />;
+  stringSource={EnglishStrings} />;
 
 var redirectToProposals = function(nextState, replace, callback) {
   if (nextState.location.pathname !== `/proposals`) {
@@ -90,12 +90,12 @@ class Main extends React.Component {
       setTimeout(() => {
         const element = document.getElementById(hash.replace(`#`, ``));
         if (element) element.scrollIntoView(true);
-       }, 0);
+      }, 0);
     } else {
       window.scrollTo(0, 0);
     }
   }
- 
+
   render() {
     return (
       <div>

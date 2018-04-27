@@ -10,7 +10,7 @@ var Tickets = React.createClass({
       <div className="tickets-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/tickets.jpg"
-                  image2x="/assets/images/hero/tickets.jpg">
+          image2x="/assets/images/hero/tickets.jpg">
           <h1>tickets</h1>
         </Jumbotron>
         <div className="content centered wide">

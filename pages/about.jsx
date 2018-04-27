@@ -16,7 +16,7 @@ var TimeLineItem = React.createClass({
       <div className={className}>
         <div className="timeline-time-circle">{this.props.time}</div>
         <div className="timeline-item-container w-100 d-flex justify-content-center">
-          {function() {
+          {(function() {
             if (!self.props.flip) {
               return (
                 <div className="timeline-image-container d-flex align-items-center justify-content-end">
@@ -26,30 +26,30 @@ var TimeLineItem = React.createClass({
                 </div>
               );
             }
-          }()}
+          })()}
           <div className="timeline-content-container d-flex align-items-center">
             <div>
               <div className="timeline-label">
-                {function() {
+                {(function() {
                   if (!self.props.flip) {
                     return (
                       <span className="label-line"></span>
                     );
                   }
-                }()}
+                })()}
                 <span className="label">{this.props.label}</span>
-                {function() {
+                {(function() {
                   if (self.props.flip) {
                     return (
                       <span className="label-line"></span>
                     );
                   }
-                }()}
+                })()}
               </div>
               <div className="timeline-content">{this.props.children}</div>
             </div>
           </div>
-          {function() {
+          {(function() {
             if (self.props.flip) {
               return (
                 <div className="timeline-image-container d-flex align-items-center">
@@ -59,7 +59,7 @@ var TimeLineItem = React.createClass({
                 </div>
               );
             }
-          }()}
+          })()}
         </div>
       </div>
     );
@@ -86,7 +86,7 @@ var About = React.createClass({
       <div className="about-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/about.jpg"
-                  image2x="/assets/images/hero/about.jpg">
+          image2x="/assets/images/hero/about.jpg">
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
@@ -214,7 +214,7 @@ open Web. We established a dedicated space for
 youngsters to learn and make. And we built on the
 infectious community spirit ﬁrst ignited in
 Barcelona.
-           </TimeLineItem>
+          </TimeLineItem>
           <TimeLineItem time="2010" label="the beginning" flip="true"
             className="timeline-item-2010"
             image="/assets/images/about-2.png"

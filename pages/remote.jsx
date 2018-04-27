@@ -22,7 +22,7 @@ var Expect = React.createClass({
         <Header/>
 
         <Jumbotron image="/assets/images/remote.jpg"
-                  image2x="/assets/images/remote.jpg">
+          image2x="/assets/images/remote.jpg">
           <h1>Remote Participation</h1>
         </Jumbotron>
 

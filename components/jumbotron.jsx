@@ -3,7 +3,7 @@ var React = require('react');
 var Jumbotron = React.createClass({
   calculateDensity: function () {
     var
-        ratio;
+      ratio;
 
     if (typeof window !== 'undefined' && window.devicePixelRatio > 1.5) {
       ratio = 2;

@@ -14,7 +14,7 @@ var Proposal = React.createClass({
       <div className={classnames(`proposals-page`)}>
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/proposals.jpg"
-                  image2x="/assets/images/proposals.jpg">
+          image2x="/assets/images/proposals.jpg">
           <h1>Call for Proposals</h1>
           <div className="deadline">
             <span>Deadline for submissions is August 1, 2017</span>

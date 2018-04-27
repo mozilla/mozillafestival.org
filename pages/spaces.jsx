@@ -14,7 +14,7 @@ var SpacesInfo = [
       <p>On the flip side, what is the utopian version of the Internet in 2027? What future do we want to build? Where do emerging technologies like AI, mesh networking and Blockchain fit in? How do we ensure people are the most important part of the Internet?</p>
       <p>Join us at Mozfest as we look into the future. Dystopian, utopian or somewhere in between &mdash; let’s explore the Internet of 2027.</p>
     </div>),
-    contacts: SPACE_WRANGLERS[`Decentralization`]
+    contacts: SPACE_WRANGLERS.Decentralization
   },
   {
     name: "Digital Inclusion",
@@ -113,13 +113,13 @@ var ExpereincesInfo = [
     (<div>
       <p>MozFest 2017 will feature a set of thematic sessions distributed across each of the Spaces. These sessions will explore Policy & Advocacy, Journalism, and Youth Leadership.</p>
     </div>),
-    contacts: EXPERIENCES_WRANGLERS[`Theme`]
+    contacts: EXPERIENCES_WRANGLERS.Theme
   }
 ];
 
 var SessionsPage = React.createClass({
   renderInfoSection(info) {
-    return info.map(function(space,i) {
+    return info.map((space,i) => {
       var whiteBg = (i%2==0) ? "white-background" : "";
       return (
         <div className={whiteBg} key={space.name}>
@@ -134,7 +134,7 @@ var SessionsPage = React.createClass({
     return (
       <div className="spaces-page">
         <Jumbotron image="/assets/images/hero/sessions.jpg"
-                  image2x="/assets/images/hero/sessions.jpg">
+          image2x="/assets/images/hero/sessions.jpg">
           <h1>Spaces & Experiences</h1>
         </Jumbotron>
         <div className="white-background">

@@ -64,7 +64,7 @@ var Sponsors = React.createClass({
       <div className="row">
         { sponsors }
       </div>
-    </div>
+    </div>;
   },
   render: function() {
     return <div>
