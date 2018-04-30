@@ -87,7 +87,7 @@ class HousePage extends React.Component {
             </div>
             <div className="text-center">
               <p>MozFest House is a central London venue that extends MozFest into a week-long festival.</p>
-              <p>From Monday 22rd - Friday 26th October, MozFest participants are invited to dig deeper into their work, trade ideas, swap code, and build solutions.</p>
+              <p>From Monday 22nd - Friday 26th October, MozFest participants are invited to dig deeper into their work, trade ideas, swap code, and build solutions.</p>
               <p>MozFest House features films, workshops, conferences, and talks, all focusing on Internet health and showcasing the diversity of the Mozilla network. The venue also features a free co-working space.</p>
               <ul className="no-bullet text-left pl-0">
                 <li className="mb-4"><strong>Where</strong>: MozFest House is located just off Trafalgar Square at the <a href="https://www.thersa.org/contact">Royal Society of Arts</a> (RSA), 8 John Adam St, London WC2N 6EZ. RSA is a contemporary venue equipped with co-working areas, meeting rooms, and a speakers forum.</li>
