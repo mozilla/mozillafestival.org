@@ -95,7 +95,7 @@ var Sponsors = React.createClass({
           Together, we can protect the Internet as a resource that will help grow your business, spark your next great idea, and deliver you the best tools and resources to get the job done.
         </p>
         <p>
-          To learn more, please contact us at <a href="mailto:sponsor@mozilla.org">sponsor@mozilla.org</a>
+          To learn more, please contact us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>
         </p>
       </div>
       <h3 className="mt-5">Our 2017 Sponsors</h3>
