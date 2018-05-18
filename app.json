@@ -10,19 +10,22 @@
     "AWS_SECRET_ACCESS_KEY": {
       "required": true
     },
-    "GITHUB_BOT_TOKEN_2017": {
+    "GITHUB_BOT_TOKEN_2018": {
       "required": true
     },
-    "GITHUB_REPO_NAME_2017": {
+     "GITHUB_REPO_OWNER_2018": {
       "required": true
     },
-    "GOOGLE_API_CLIENT_EMAIL_2017": {
+    "GITHUB_REPO_NAME_2018": {
       "required": true
     },
-    "GOOGLE_API_PRIVATE_KEY_2017": {
+    "GOOGLE_API_CLIENT_EMAIL_2018": {
       "required": true
     },
-    "PROPOSAL_SPREADSHEET_ID_2017": {
+    "GOOGLE_API_PRIVATE_KEY_2018": {
+      "required": true
+    },
+    "PROPOSAL_SPREADSHEET_ID_2018": {
       "required": true
     },
     "HATCHET_APP_NAME": {
