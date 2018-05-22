@@ -20,10 +20,15 @@
     }
 
     fieldset {
-      &.additionallanguage {
+      &.additionallanguage
+      &.l10nsupport,
+      &.l10nlanguage {
         .mb-0;
       }
-      &.additionallanguageother {
+
+      &.additionallanguageother,
+      &.l10nsupportother,
+      &.l10nlanguagetother {
         .ml-3;
         input {
           max-width: 300px;
@@ -35,6 +40,10 @@
     }
     .space,
     .secondaryspace,
+    .l10nwish,
+    .l10nsupport,
+    .l10nlanguage,
+    .format,
     .timeneeded,
     .additionallanguage,
     .travelstipend {
@@ -57,12 +66,12 @@
       vertical-align: middle;
 
       @media screen and (min-width: 768px) {
-        display: inline-block;
-        width: calc(~'50% - 10px');
+        // display: inline-block;
+        // width: calc(~'50% - 10px');
 
-        &:nth-child(2n) {
-          margin-left: 10px;
-        }
+        // &:nth-child(2n) {
+        //   margin-left: 10px;
+        // }
       }
     }
 
@@ -87,6 +96,10 @@
         text-decoration: underline;
       }
     }
+  }
+
+  fieldset.l10nsupportother {
+    margin-top: -1.5rem !important;
   }
 
   .server-error {

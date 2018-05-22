@@ -59,14 +59,92 @@ var createPartOneFields = function(stringSource) {
       placeholder: `@githubhandle`,
       fieldClassname: `form-control`
     },
-    'otherfacilitators': {
+    // additional facilitator #1
+    'otherfacilitator1firstname': {
       type: `text`,
-      label: stringSource.form_field_labels.otherfacilitators,
-      placeholder: `${stringSource.form_field_labels.firstname} ${stringSource.form_field_labels.surname}`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator1surname': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator1email': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
-      multiplicity: 1,
-      addLabel: stringSource.form_field_controls.add_another
-    }
+      validator: [
+        validator.emailValidator(EMAIL_INVALID_ERROR)
+      ]
+    },
+    'otherfacilitator1githubhandle': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.githubhandle}`,
+      placeholder: `@githubhandle`,
+      fieldClassname: `form-control`
+    },
+    // additional facilitator #2
+    'otherfacilitator2firstname': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator2surname': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator2email': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      placeholder: `hello@example.com`,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emailValidator(EMAIL_INVALID_ERROR)
+      ]
+    },
+    'otherfacilitator2githubhandle': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.githubhandle}`,
+      placeholder: `@githubhandle`,
+      fieldClassname: `form-control`
+    },
+    // additional facilitator #3
+    'otherfacilitator3firstname': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator3surname': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      fieldClassname: `form-control`
+    },
+    'otherfacilitator3email': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      placeholder: `hello@example.com`,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emailValidator(EMAIL_INVALID_ERROR)
+      ]
+    },
+    'otherfacilitator3githubhandle': {
+      type: `text`,
+      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.githubhandle}`,
+      placeholder: `@githubhandle`,
+      fieldClassname: `form-control`
+    },
+    // 'otherfacilitators': {
+    //   type: `text`,
+    //   label: stringSource.form_field_labels.otherfacilitators,
+    //   placeholder: `${stringSource.form_field_labels.firstname} ${stringSource.form_field_labels.surname}, email@example.com`,
+    //   fieldClassname: `form-control`,
+    //   multiplicity: 1,
+    //   addLabel: stringSource.form_field_controls.add_another
+    // }
   };
 };
 
@@ -84,8 +162,10 @@ var createPartTwoFields = function(stringSource) {
         SPACES.open_innovation,
         SPACES.privacy_and_security,
         SPACES.web_literacy,
-        SPACES.youth_zone
+        SPACES.youth_zone,
+        SPACES.queering
       ],
+      colCount: 1,
       labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       validator: [
@@ -102,6 +182,7 @@ var createPartTwoFields = function(stringSource) {
         SPACES.privacy_and_security,
         SPACES.web_literacy,
         SPACES.youth_zone,
+        SPACES.queering,
         SPACES.none
       ],
       colCount: 1,
@@ -111,13 +192,92 @@ var createPartTwoFields = function(stringSource) {
 };
 
 var createPartThreeFields = function(stringSource) {
-  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
-  const MAX_WORD_REACHED_ERROR = stringSource.form_validation_errors.max_word_reached;
-  const TIME = stringSource.form_field_options.timeneeded;
-  const LANGUAGES = stringSource.form_field_options.languages;
+  const WISH_OPTIONS = stringSource.form_field_options.l10nwish;
+  const SUPPORT_OPTIONS = stringSource.form_field_options.l10nsupport;
+  const LANG_OPTIONS = stringSource.form_field_options.l10nlanguage;
 
   return {
-    'name': {
+    'l10nwish': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.l10nwish,
+      options: [
+        WISH_OPTIONS.yes,
+        WISH_OPTIONS.no
+      ],
+      colCount: 1,
+      fieldClassname: `form-control choice-group`
+    },
+    'l10nsupport': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.l10nsupport,
+      options: [
+        SUPPORT_OPTIONS.yes,
+        SUPPORT_OPTIONS.no,
+        SUPPORT_OPTIONS.other,
+      ],
+      colCount: 1,
+      fieldClassname: `form-control choice-group`,
+      validator: [],
+      controller: {
+        name: `l10nwish`,
+        value: WISH_OPTIONS.yes
+      }
+    },
+    'l10nsupportother': {
+      type: `text`,
+      labelClassname: `required`,
+      fieldClassname: `form-control`,
+      controller: {
+        name: `l10nsupport`,
+        value: SUPPORT_OPTIONS.other,
+      }
+    },
+    'l10nlanguage': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.l10nlanguage,
+      options: [
+        LANG_OPTIONS.spanish,
+        LANG_OPTIONS.french,
+        LANG_OPTIONS.italian,
+        LANG_OPTIONS.hindi,
+        LANG_OPTIONS.bengali,
+        LANG_OPTIONS.german,
+        LANG_OPTIONS.russian,
+        LANG_OPTIONS.greek,
+        LANG_OPTIONS.portugese,
+        LANG_OPTIONS.mandarin,
+        LANG_OPTIONS.english,
+        LANG_OPTIONS.no,
+        LANG_OPTIONS.other,
+      ],
+      colCount: 1,
+      fieldClassname: `form-control choice-group`,
+      validator: [],
+      controller: {
+        name: `l10nwish`,
+        value: WISH_OPTIONS.yes
+      }
+    },
+    'l10nlanguagetother': {
+      type: `text`,
+      labelClassname: `required`,
+      fieldClassname: `form-control`,
+      controller: {
+        name: `l10nlanguage`,
+        value: SUPPORT_OPTIONS.other,
+      }
+    },
+  };
+};
+
+
+var createPartFourFields = function(stringSource) {
+  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
+  const MAX_WORD_REACHED_ERROR = stringSource.form_validation_errors.max_word_reached;
+  // const LANGUAGES = stringSource.form_field_options.languages;
+
+  return {
+    'sessionname': {
       type: `text`,
       label: stringSource.form_field_labels.name,
       labelClassname: `required`,
@@ -156,6 +316,76 @@ var createPartThreeFields = function(stringSource) {
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
       ]
     },
+    // 'timeneeded': {
+    //   type: `choiceGroup`,
+    //   label: stringSource.form_field_labels.timeneeded,
+    //   options: [
+    //     TIME.less_than_60_mins,
+    //     TIME[`60_mins`],
+    //     TIME[`90_mins`],
+    //     TIME.all_weekend
+    //   ],
+    //   labelClassname: `required`,
+    //   fieldClassname: `form-control choice-group`,
+    //   validator: [
+    //     validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+    //   ]
+    // },
+    'numsofparticipants': {
+      type: `textarea`,
+      label: stringSource.form_field_labels.numsofparticipants,
+      labelClassname: `required word-length-restriction max-120-words`,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR),
+        validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
+      ]
+    },
+    // 'additionallanguage': {
+    //   type: `choiceGroup`,
+    //   label: stringSource.form_field_labels.additionallanguage,
+    //   options: [
+    //     LANGUAGES.spanish,
+    //     LANGUAGES.german,
+    //     LANGUAGES.french,
+    //     LANGUAGES.other
+    //   ],
+    //   fieldClassname: `form-control choice-group`,
+    //   validator: []
+    // },
+    // 'additionallanguageother': {
+    //   type: `text`,
+    //   labelClassname: `required`,
+    //   fieldClassname: `form-control`,
+    //   controller: {
+    //     name: `additionallanguage`,
+    //     value: LANGUAGES.other
+    //   }
+    // }
+  };
+};
+
+var createPartFiveFields = function(stringSource) {
+  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
+  const FORMAT = stringSource.form_field_options.format;
+  const TIME = stringSource.form_field_options.timeneeded;
+
+  return {
+    'format': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.format,
+      options: [
+        FORMAT.learning_forum,
+        FORMAT.gallery,
+        FORMAT.shed
+      ],
+      labelClassname: `required`,
+      fieldClassname: `form-control choice-group`,
+      colCount: 1,
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+      ]
+    },
     'timeneeded': {
       type: `choiceGroup`,
       label: stringSource.form_field_labels.timeneeded,
@@ -167,57 +397,6 @@ var createPartThreeFields = function(stringSource) {
       ],
       labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
-      validator: [
-        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
-      ]
-    },
-    'numsofparticipants': {
-      type: `textarea`,
-      label: stringSource.form_field_labels.numsofparticipants,
-      labelClassname: `required word-length-restriction max-120-words`,
-      fieldClassname: `form-control`,
-      validator: [
-        validator.emptyValueValidator(EMPTY_VALUE_ERROR),
-        validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
-    },
-    'additionallanguage': {
-      type: `choiceGroup`,
-      label: stringSource.form_field_labels.additionallanguage,
-      options: [
-        LANGUAGES.spanish,
-        LANGUAGES.german,
-        LANGUAGES.french,
-        LANGUAGES.other
-      ],
-      fieldClassname: `form-control choice-group`,
-      validator: []
-    },
-    'additionallanguageother': {
-      type: `text`,
-      labelClassname: `required`,
-      fieldClassname: `form-control`,
-      controller: {
-        name: `additionallanguage`,
-        value: LANGUAGES.other
-      }
-    }
-  };
-};
-
-var createPartFourFields = function(stringSource) {
-  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
-
-  return {
-    'travelstipend': {
-      type: `choiceGroup`,
-      label: stringSource.form_field_labels.travelstipend,
-      options: [
-        stringSource.form_field_options.stipendnotrequired,
-        stringSource.form_field_options.stipendrequired
-      ],
-      labelClassname: `required`,
-      fieldClassname: `form-control choice-group`,
       colCount: 1,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -226,8 +405,9 @@ var createPartFourFields = function(stringSource) {
   };
 };
 
-var createPartFiveFields = function(stringSource) {
+var createPartSixFields = function(stringSource) {
   const MAX_WORD_REACHED_ERROR = stringSource.form_validation_errors.max_word_reached;
+  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
 
   return {
     'needs': {
@@ -237,6 +417,20 @@ var createPartFiveFields = function(stringSource) {
       fieldClassname: `form-control`,
       validator: [
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
+      ]
+    },
+    'travelstipend': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.travelstipend,
+      options: [
+        stringSource.form_field_options.stipendrequired,
+        stringSource.form_field_options.stipendnotrequired
+      ],
+      labelClassname: `required`,
+      fieldClassname: `form-control choice-group`,
+      colCount: 1,
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
       ]
     }
   };
@@ -249,7 +443,8 @@ module.exports = {
       partTwo: createPartTwoFields(stringSource),
       partThree: createPartThreeFields(stringSource),
       partFour: createPartFourFields(stringSource),
-      partFive: createPartFiveFields(stringSource)
+      partFive: createPartFiveFields(stringSource),
+      partSix: createPartSixFields(stringSource)
     };
   }
 };

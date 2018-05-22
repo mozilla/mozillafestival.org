@@ -25,6 +25,13 @@ var Proposal = React.createClass({
     this.setState(this.getInitialState());
   },
   handleFormUpdate(evt, name, field, value) {
+    console.log(`handleFormUpdate`, name, field, value);
+    // handleFormUpdate
+    // otherfacilitator1githubhandle
+    // Object { type: "text", label: "Additional facilitator 1's GitHub handle", placeholder: "@githubhandle", fieldClassname: "form-control", name: "otherfacilitator1githubhandle" }
+    // valueee
+
+
     let formValues = this.state.formValues;
     formValues[name] = value;
     this.setState({
@@ -36,6 +43,8 @@ var Proposal = React.createClass({
   },
   handleFormSubmit(event) {
     event.preventDefault();
+
+    console.log(this.state.formValues);
 
     this.refs.formPartOne.validates(partOneIsValid => {
       this.refs.formPartTwo.validates(partTwoIsValid => {
@@ -67,6 +76,7 @@ var Proposal = React.createClass({
     const SPACES = FIELD_OPTIONS.spaces;
     const TIME = FIELD_OPTIONS.timeneeded;
     const LANGUAGES = FIELD_OPTIONS.languages;
+    const FORMAT = FIELD_OPTIONS.format;
 
     let formatted = Object.assign({}, proposal);
 
@@ -117,6 +127,14 @@ var Proposal = React.createClass({
     // Capitalize the first letter
     formatted.proposallanguage = proposalLang.charAt(0).toUpperCase() + proposalLang.slice(1);
 
+    let format = proposal.format;
+    for (let key in FORMAT) {
+      if (FORMAT[key] === format) {
+        // Learning Forum, Gallery, Shed
+        formatted.format = DEFAULT_OPTIONS.format[key].split(`:`)[0];
+      }
+    }
+
     // Do the same for "timeneeded" - translate the values to English
     for (let key in TIME) {
       if (TIME[key] === formatted.timeneeded) {
@@ -158,8 +176,9 @@ var Proposal = React.createClass({
 
     return (
       <div className="content wide">
+        {this.renderIntro(stringSource.form_section_intro.background)}
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.background)}
+          {this.renderIntro(stringSource.form_section_intro.facilitator_info)}
           <Form ref="formPartOne"
             fields={formFields.partOne}
             inlineErrors={true}
@@ -173,23 +192,30 @@ var Proposal = React.createClass({
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.describe)}
+          {this.renderIntro(stringSource.form_section_intro.l10n)}
           <Form ref="formPartThree"
             fields={formFields.partThree}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.travel)}
+          {this.renderIntro(stringSource.form_section_intro.describe)}
           <Form ref="formPartFour"
             fields={formFields.partFour}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.material)}
+          {this.renderIntro(stringSource.form_section_intro.format)}
           <Form ref="formPartFive"
             fields={formFields.partFive}
+            inlineErrors={true}
+            onUpdate={this.handleFormUpdate} />
+        </div>
+        <div className="form-section">
+          {this.renderIntro(stringSource.form_section_intro.addtional_support)}
+          <Form ref="formPartSix"
+            fields={formFields.partSix}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
@@ -209,15 +235,20 @@ var Proposal = React.createClass({
     );
   },
   renderIntro(content) {
-    let paragraphs = content.body.map((paragraph, i) => {
+    let sections = content.body.map((section, i) => {
       // using dangerouslySetInnerHTML is okay here since we are pulling strings from a static json file, not user content or anything change dynamically over time without our attention
-      return <p dangerouslySetInnerHTML={{__html: paragraph}} key={i}></p>;
+
+      if (section.charAt(0) === `<` && section.charAt(section.length-1) === `>`) {
+        return <div dangerouslySetInnerHTML={{__html: section}} key={i}></div>;
+      }
+
+      return <p dangerouslySetInnerHTML={{__html: section}} key={i}></p>;
     });
 
     return (
       <div>
         <h1>{content.header}</h1>
-        { paragraphs }
+        { sections }
       </div>
     );
   },
