@@ -40,7 +40,7 @@
     "format": {
       "header": "Session formats",
       "body": [
-        "We have created 3 session formats so that",
+        "<div>We have created 3 session formats so that</div>",
         "<ol><li>we can understand what type of session you will deliver</li><li>understand how you see the participants interacting with your sessio</li></ol>"
       ]
     },
@@ -83,7 +83,7 @@
       "privacy_and_security": "Privacy and Security",
       "web_literacy": "Web Literacy",
       "youth_zone": "Youth Zone",
-      "queering": "Queering",
+      "queering": "Queering MozFest",
       "none": "None"
     },
     "l10nwish": {

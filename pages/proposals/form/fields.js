@@ -19,7 +19,8 @@ var createPartOneFields = function(stringSource) {
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
-      ]
+      ],
+      guideText: `Your information`,
     },
     'surname': {
       type: `text`,
@@ -65,17 +66,18 @@ var createPartOneFields = function(stringSource) {
     // additional facilitator #1
     'otherfacilitator1firstname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
-      fieldClassname: `form-control`
+      label: `${stringSource.form_field_labels.firstname}`,
+      fieldClassname: `form-control`,
+      guideText: `${stringSource.form_field_labels.additionalfacilitator} #1's information`,
     },
     'otherfacilitator1surname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator1email': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
@@ -84,24 +86,25 @@ var createPartOneFields = function(stringSource) {
     },
     'otherfacilitator1githubhandle': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 1's ${stringSource.form_field_labels.githubhandle}`,
+      label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
       fieldClassname: `form-control`
     },
     // additional facilitator #2
     'otherfacilitator2firstname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
-      fieldClassname: `form-control`
+      label: `${stringSource.form_field_labels.firstname}`,
+      fieldClassname: `form-control`,
+      guideText: `${stringSource.form_field_labels.additionalfacilitator} #2's information`,
     },
     'otherfacilitator2surname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator2email': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
@@ -110,24 +113,25 @@ var createPartOneFields = function(stringSource) {
     },
     'otherfacilitator2githubhandle': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 2's ${stringSource.form_field_labels.githubhandle}`,
+      label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
       fieldClassname: `form-control`
     },
     // additional facilitator #3
     'otherfacilitator3firstname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.firstname.toLowerCase()}`,
-      fieldClassname: `form-control`
+      label: `${stringSource.form_field_labels.firstname}`,
+      fieldClassname: `form-control`,
+      guideText: `${stringSource.form_field_labels.additionalfacilitator} #3's information`,
     },
     'otherfacilitator3surname': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.surname.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator3email': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.email.toLowerCase()}`,
+      label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
@@ -136,7 +140,7 @@ var createPartOneFields = function(stringSource) {
     },
     'otherfacilitator3githubhandle': {
       type: `text`,
-      label: `${stringSource.form_field_labels.additionalfacilitator} 3's ${stringSource.form_field_labels.githubhandle}`,
+      label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
       fieldClassname: `form-control`
     },
