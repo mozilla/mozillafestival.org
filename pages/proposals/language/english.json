@@ -27,8 +27,9 @@
       ]
     },
     "l10n": {
-      "header": "MozFest will be hosted with English as the principle language and the majority of participants will speak English as first or second language.",
+      "header": "Localisation support",
       "body": [
+        "MozFest will be hosted with English as the principle language and the majority of participants will speak English as first or second language.",
         "However if you wish to lead your session in another language or support your session in multiple languages, please let us know. We know from previous years we have a substancial numbers of Spanish, German and French speakers in attendance."
       ]
     },
@@ -40,8 +41,9 @@
     "format": {
       "header": "Session formats",
       "body": [
-        "<div>We have created 3 session formats so that</div>",
-        "<ol><li>we can understand what type of session you will deliver</li><li>understand how you see the participants interacting with your sessio</li></ol>"
+        "We have created 3 session formats so that we can understand what type of session you will deliver and understand how you see the participants interacting with your session.",
+        "The 3 session formats are:",
+        "<ul><li class='mb-0'><strong>Learning Forum</strong>: Sessions under this format develop and implement ideas for improvement, exchange or review</li><li class='mb-0'><strong>Gallery</strong>: This format hosts interactive exhibits, installations, games, stalls- designed for 1:1 self driven experiences or small group activities. Often these experiences or activities are not scheduled time blocks but take place over the day or weekend allowing access and interaction at any time</li><li class='mb-0'><strong>Shed</strong>: Sessions under this format require hands-on making, hacking and prototyping. These sessions will ask participants to create and build code, objects or crafts</li></ul>"
       ]
     },
     "addtional_support": {
@@ -71,7 +73,7 @@
     "numsofparticipants": "How will you deal with varying numbers of participants in your session? What if 30 participants attend? What if there are 3?",
     "format": "Choose from the formats below that most suits your session delivery",
     "travelstipend_hint": "MozFest has a limited number of travel stipends to help those who otherwise would not be able to attend. In the past, our stipends have been able to support a diverse group of people that are from global networks, who are students or youth. Or those who do not have the financial capacity to attend the event, through personal funds or work.",
-    "travelstipend": "Do you quantify yourself as such?",
+    "travelstipend": "Do you qualify yourself as such?",
     "needs_hint": "Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector, and office supplies (paper, pens, post-it notes). Please note we may not be able to support all of your needs but will work with you to provide the best solution possible.",
     "needs": "If your session requires additional materials or electronic equipment, please outline your needs."
   },
@@ -112,9 +114,9 @@
       "other": "Other"
     },
     "format": {
-      "learning_forum": "Learning Forum: Sessions under this format develop and implement ideas for improvement, exchange or review",
-      "gallery": "Gallery: This format hosts interactive exhibits, installations, games, stalls- designed for 1:1 self driven experiences or small group activities. Often these experiences or activities are not scheduled time blocks but take place over the day or weekend allowing access and interaction at any time",
-      "shed": "Shed: Sessions under this format require hands-on making, hacking and prototyping. These sessions will ask participants to create and build code, objects or crafts."
+      "learning_forum": "Learning Forum",
+      "gallery": "Gallery",
+      "shed": "Shed"
     },
     "timeneeded": {
       "less_than_60_mins": "less than 60 mins",

@@ -84,7 +84,6 @@ var Proposal = React.createClass({
     const TIME = FIELD_OPTIONS.timeneeded;
     const L10NLANGUAGE = FIELD_OPTIONS.l10nlanguage;
     const L10NSUPPORT = FIELD_OPTIONS.l10nsupport;
-    const FORMAT = FIELD_OPTIONS.format;
 
     let formatted = Object.assign({}, proposal);
 
@@ -156,14 +155,6 @@ var Proposal = React.createClass({
     let proposalLang = this.props.lang;
     // Capitalize the first letter
     formatted.proposallanguage = proposalLang.charAt(0).toUpperCase() + proposalLang.slice(1);
-
-    let format = proposal.format;
-    for (let key in FORMAT) {
-      if (FORMAT[key] === format) {
-        // Learning Forum, Gallery, Shed
-        formatted.format = DEFAULT_OPTIONS.format[key].split(`:`)[0];
-      }
-    }
 
     // Do the same for "timeneeded" - translate the values to English
     for (let key in TIME) {
