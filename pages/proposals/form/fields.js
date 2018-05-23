@@ -15,7 +15,6 @@ var createPartOneFields = function(stringSource) {
     'firstname': {
       type: `text`,
       label: stringSource.form_field_labels.firstname,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -25,7 +24,6 @@ var createPartOneFields = function(stringSource) {
     'surname': {
       type: `text`,
       label: stringSource.form_field_labels.surname,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -35,7 +33,6 @@ var createPartOneFields = function(stringSource) {
       type: `text`,
       label: stringSource.form_field_labels.email,
       placeholder: `hello@example.com`,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
@@ -45,19 +42,20 @@ var createPartOneFields = function(stringSource) {
     'organisation': {
       type: `text`,
       label: stringSource.form_field_labels.organisation,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
       ]
     },
     'twitterhandle': {
+      optional: true,
       type: `text`,
       label: stringSource.form_field_labels.twitterhandle,
       placeholder: `@twitterhandle`,
       fieldClassname: `form-control`
     },
     'githubhandle': {
+      optional: true,
       type: `text`,
       label: stringSource.form_field_labels.githubhandle,
       placeholder: `@githubhandle`,
@@ -65,17 +63,20 @@ var createPartOneFields = function(stringSource) {
     },
     // additional facilitator #1
     'otherfacilitator1firstname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.firstname}`,
       fieldClassname: `form-control`,
       guideText: `${stringSource.form_field_labels.additionalfacilitator} #1's information`,
     },
     'otherfacilitator1surname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator1email': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
@@ -85,6 +86,7 @@ var createPartOneFields = function(stringSource) {
       ]
     },
     'otherfacilitator1githubhandle': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
@@ -92,17 +94,20 @@ var createPartOneFields = function(stringSource) {
     },
     // additional facilitator #2
     'otherfacilitator2firstname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.firstname}`,
       fieldClassname: `form-control`,
       guideText: `${stringSource.form_field_labels.additionalfacilitator} #2's information`,
     },
     'otherfacilitator2surname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator2email': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
@@ -112,6 +117,7 @@ var createPartOneFields = function(stringSource) {
       ]
     },
     'otherfacilitator2githubhandle': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
@@ -119,17 +125,20 @@ var createPartOneFields = function(stringSource) {
     },
     // additional facilitator #3
     'otherfacilitator3firstname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.firstname}`,
       fieldClassname: `form-control`,
       guideText: `${stringSource.form_field_labels.additionalfacilitator} #3's information`,
     },
     'otherfacilitator3surname': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.surname}`,
       fieldClassname: `form-control`
     },
     'otherfacilitator3email': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.email}`,
       placeholder: `hello@example.com`,
@@ -139,6 +148,7 @@ var createPartOneFields = function(stringSource) {
       ]
     },
     'otherfacilitator3githubhandle': {
+      optional: true,
       type: `text`,
       label: `${stringSource.form_field_labels.githubhandle}`,
       placeholder: `@githubhandle`,
@@ -173,13 +183,13 @@ var createPartTwoFields = function(stringSource) {
         SPACES.queering
       ],
       colCount: 1,
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
       ]
     },
     'secondaryspace': {
+      optional: true,
       type: `choiceGroup`,
       label: stringSource.form_field_labels.secondaryspace,
       options: [
@@ -213,7 +223,6 @@ var createPartThreeFields = function(stringSource) {
         WISH_OPTIONS.no
       ],
       colCount: 1,
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -238,7 +247,6 @@ var createPartThreeFields = function(stringSource) {
         LANG_OPTIONS.other,
       ],
       colCount: 1,
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -250,7 +258,6 @@ var createPartThreeFields = function(stringSource) {
     },
     'l10nlanguageother': {
       type: `text`,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       controller: {
         name: `l10nlanguage`,
@@ -266,7 +273,6 @@ var createPartThreeFields = function(stringSource) {
         SUPPORT_OPTIONS.other,
       ],
       colCount: 1,
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -278,7 +284,6 @@ var createPartThreeFields = function(stringSource) {
     },
     'l10nsupportother': {
       type: `text`,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       controller: {
         name: `l10nsupport`,
@@ -319,7 +324,6 @@ var createPartFourFields = function(stringSource) {
     'sessionname': {
       type: `text`,
       label: stringSource.form_field_labels.name,
-      labelClassname: `required`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
@@ -328,7 +332,7 @@ var createPartFourFields = function(stringSource) {
     'description': {
       type: `textarea`,
       label: stringSource.form_field_labels.description,
-      labelClassname: `required word-length-restriction max-120-words`,
+      labelClassname: `word-length-restriction max-120-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
@@ -343,7 +347,7 @@ var createPartFourFields = function(stringSource) {
     'outcome': {
       type: `textarea`,
       label: stringSource.form_field_labels.outcome,
-      labelClassname: `required word-length-restriction max-120-words`,
+      labelClassname: `word-length-restriction max-120-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
@@ -358,7 +362,7 @@ var createPartFourFields = function(stringSource) {
     'afterfestival': {
       type: `textarea`,
       label: stringSource.form_field_labels.afterfestival,
-      labelClassname: `required word-length-restriction max-120-words`,
+      labelClassname: `word-length-restriction max-120-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
@@ -373,7 +377,7 @@ var createPartFourFields = function(stringSource) {
     'numsofparticipants': {
       type: `textarea`,
       label: stringSource.form_field_labels.numsofparticipants,
-      labelClassname: `required word-length-restriction max-120-words`,
+      labelClassname: `word-length-restriction max-120-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
@@ -402,7 +406,6 @@ var createPartFiveFields = function(stringSource) {
         FORMAT.gallery,
         FORMAT.shed
       ],
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       colCount: 1,
       validator: [
@@ -418,7 +421,6 @@ var createPartFiveFields = function(stringSource) {
         TIME[`90_mins`],
         TIME.all_weekend
       ],
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       colCount: 1,
       validator: [
@@ -434,6 +436,7 @@ var createPartSixFields = function(stringSource) {
 
   return {
     'needs': {
+      optional: true,
       type: `textarea`,
       label: stringSource.form_field_labels.needs,
       labelClassname: `word-length-restriction max-120-words`,
@@ -456,7 +459,6 @@ var createPartSixFields = function(stringSource) {
         stringSource.form_field_options.stipendrequired,
         stringSource.form_field_options.stipendnotrequired
       ],
-      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
       colCount: 1,
       validator: [

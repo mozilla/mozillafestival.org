@@ -351,22 +351,30 @@ form {
     .mb-4;
   }
 
+  .label-hint {
+    display: inline-block;
+    font-style: italic;
+    font-size: 75%;
+    font-weight: 300;
+    margin-left: 0.5rem;
+    color: @grey;
+  }
+
   label {
     &.required,
     &.word-length-restriction {
       &::after {
-        display: inline-block;
-        font-style: italic;
-        font-size: 75%;
-        font-weight: 300;
-        margin-left: 0.5rem;
-        color: @grey;
+        .label-hint
       }
     }
     &.required {
       &::after {
         content: "(required)";
       }
+    }
+
+    .optional {
+      .label-hint;
     }
   }
 }
