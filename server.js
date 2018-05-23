@@ -43,20 +43,20 @@ app.post(`/add-proposal`, limiter, (req, res) => {
   proposalHandler.postToSpreadsheet(req.body, SPREADSHEET_ID, GOOGLE_API_CRED, (err, proposal) => {
     if (err) res.status(500).json(err);
 
-    proposalHandler.postToGithub({
-      token: env.get(`GITHUB_BOT_TOKEN_2018`),
-      owner: env.get(`GITHUB_REPO_OWNER_2018`),
-      repo: env.get(`GITHUB_REPO_NAME_2018`)
-    }, proposal, (githubErr, issueNum) => {
-      if (githubErr) res.status(500).json(githubErr);
+    // proposalHandler.postToGithub({
+    //   token: env.get(`GITHUB_BOT_TOKEN_2018`),
+    //   owner: env.get(`GITHUB_REPO_OWNER_2018`),
+    //   repo: env.get(`GITHUB_REPO_NAME_2018`)
+    // }, proposal, (githubErr, issueNum) => {
+    //   if (githubErr) res.status(500).json(githubErr);
 
-      var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
-      proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
-        if (updateError) res.status(500).json(updateError);
+    //   var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
+    //   proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
+    //     if (updateError) res.status(500).json(updateError);
 
-        res.send(`Success!`);
-      });
-    });
+    //     res.send(`Success!`);
+    //   });
+    // });
   });
 });
 

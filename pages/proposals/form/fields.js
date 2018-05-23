@@ -159,7 +159,7 @@ var createPartTwoFields = function(stringSource) {
       options: [
         SPACES.decentralization,
         SPACES.digital_inclusion,
-        SPACES.open_innovation,
+        SPACES.openness,
         SPACES.privacy_and_security,
         SPACES.web_literacy,
         SPACES.youth_zone,
@@ -178,11 +178,10 @@ var createPartTwoFields = function(stringSource) {
       options: [
         SPACES.decentralization,
         SPACES.digital_inclusion,
-        SPACES.open_innovation,
+        SPACES.openness,
         SPACES.privacy_and_security,
         SPACES.web_literacy,
         SPACES.youth_zone,
-        SPACES.queering,
         SPACES.none
       ],
       colCount: 1,
@@ -195,42 +194,18 @@ var createPartThreeFields = function(stringSource) {
   const WISH_OPTIONS = stringSource.form_field_options.l10nwish;
   const SUPPORT_OPTIONS = stringSource.form_field_options.l10nsupport;
   const LANG_OPTIONS = stringSource.form_field_options.l10nlanguage;
+  const WISH_OPTIONS_YES_MAYBE = `${WISH_OPTIONS.yes} / ${WISH_OPTIONS.maybe}`;
 
   return {
     'l10nwish': {
       type: `choiceGroup`,
       label: stringSource.form_field_labels.l10nwish,
       options: [
-        WISH_OPTIONS.yes,
+        WISH_OPTIONS_YES_MAYBE,
         WISH_OPTIONS.no
       ],
       colCount: 1,
       fieldClassname: `form-control choice-group`
-    },
-    'l10nsupport': {
-      type: `choiceGroup`,
-      label: stringSource.form_field_labels.l10nsupport,
-      options: [
-        SUPPORT_OPTIONS.yes,
-        SUPPORT_OPTIONS.no,
-        SUPPORT_OPTIONS.other,
-      ],
-      colCount: 1,
-      fieldClassname: `form-control choice-group`,
-      validator: [],
-      controller: {
-        name: `l10nwish`,
-        value: WISH_OPTIONS.yes
-      }
-    },
-    'l10nsupportother': {
-      type: `text`,
-      labelClassname: `required`,
-      fieldClassname: `form-control`,
-      controller: {
-        name: `l10nsupport`,
-        value: SUPPORT_OPTIONS.other,
-      }
     },
     'l10nlanguage': {
       type: `choiceGroup`,
@@ -255,10 +230,10 @@ var createPartThreeFields = function(stringSource) {
       validator: [],
       controller: {
         name: `l10nwish`,
-        value: WISH_OPTIONS.yes
+        value: WISH_OPTIONS_YES_MAYBE
       }
     },
-    'l10nlanguagetother': {
+    'l10nlanguageother': {
       type: `text`,
       labelClassname: `required`,
       fieldClassname: `form-control`,
@@ -267,6 +242,52 @@ var createPartThreeFields = function(stringSource) {
         value: SUPPORT_OPTIONS.other,
       }
     },
+    'l10nsupport': {
+      type: `choiceGroup`,
+      label: stringSource.form_field_labels.l10nsupport,
+      options: [
+        SUPPORT_OPTIONS.yes,
+        SUPPORT_OPTIONS.no,
+        SUPPORT_OPTIONS.other,
+      ],
+      colCount: 1,
+      fieldClassname: `form-control choice-group`,
+      validator: [],
+      controller: {
+        name: `l10nwish`,
+        value: WISH_OPTIONS_YES_MAYBE
+      }
+    },
+    'l10nsupportother': {
+      type: `text`,
+      labelClassname: `required`,
+      fieldClassname: `form-control`,
+      controller: {
+        name: `l10nsupport`,
+        value: SUPPORT_OPTIONS.other,
+      }
+    },
+    // 'additionallanguage': {
+    //   type: `choiceGroup`,
+    //   label: stringSource.form_field_labels.additionallanguage,
+    //   options: [
+    //     LANGUAGES.spanish,
+    //     LANGUAGES.german,
+    //     LANGUAGES.french,
+    //     LANGUAGES.other
+    //   ],
+    //   fieldClassname: `form-control choice-group`,
+    //   validator: []
+    // },
+    // 'additionallanguageother': {
+    //   type: `text`,
+    //   labelClassname: `required`,
+    //   fieldClassname: `form-control`,
+    //   controller: {
+    //     name: `additionallanguage`,
+    //     value: LANGUAGES.other
+    //   }
+    // }
   };
 };
 
@@ -316,21 +337,6 @@ var createPartFourFields = function(stringSource) {
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
       ]
     },
-    // 'timeneeded': {
-    //   type: `choiceGroup`,
-    //   label: stringSource.form_field_labels.timeneeded,
-    //   options: [
-    //     TIME.less_than_60_mins,
-    //     TIME[`60_mins`],
-    //     TIME[`90_mins`],
-    //     TIME.all_weekend
-    //   ],
-    //   labelClassname: `required`,
-    //   fieldClassname: `form-control choice-group`,
-    //   validator: [
-    //     validator.emptyValueValidator(EMPTY_VALUE_ERROR)
-    //   ]
-    // },
     'numsofparticipants': {
       type: `textarea`,
       label: stringSource.form_field_labels.numsofparticipants,
@@ -340,28 +346,7 @@ var createPartFourFields = function(stringSource) {
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
       ]
-    },
-    // 'additionallanguage': {
-    //   type: `choiceGroup`,
-    //   label: stringSource.form_field_labels.additionallanguage,
-    //   options: [
-    //     LANGUAGES.spanish,
-    //     LANGUAGES.german,
-    //     LANGUAGES.french,
-    //     LANGUAGES.other
-    //   ],
-    //   fieldClassname: `form-control choice-group`,
-    //   validator: []
-    // },
-    // 'additionallanguageother': {
-    //   type: `text`,
-    //   labelClassname: `required`,
-    //   fieldClassname: `form-control`,
-    //   controller: {
-    //     name: `additionallanguage`,
-    //     value: LANGUAGES.other
-    //   }
-    // }
+    }
   };
 };
 

@@ -70,7 +70,6 @@
     "timeneeded": "How much time you will need?",
     "numsofparticipants": "How will you deal with varying numbers of participants in your session? What if 30 participants attend? What if there are 3?",
     "format": "Choose from the formats below that most suits your session delivery",
-    "additionallanguage": "Would you like to deliver this session bilingually in one of the following languages?",
     "travelstipend": "MozFest has a limited number of travel stipends to help those who otherwise would not be able to attend. In the past, our stipends have been able to support a diverse group of people that are from global networks, who are students or youth. Or those who do not have the financial capacity to attend the event, through personal funds or work. Do you quantify yourself as such?",
     "needs": "Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector, and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be able to support all of your needs but will work with you to provide the best solution possible."
   },
@@ -78,7 +77,7 @@
     "spaces": {
       "decentralization": "Decentralization",
       "digital_inclusion": "Digital Inclusion",
-      "open_innovation": "Open Innovation",
+      "openness": "Openness",
       "privacy_and_security": "Privacy and Security",
       "web_literacy": "Web Literacy",
       "youth_zone": "Youth Zone",
@@ -87,7 +86,8 @@
     },
     "l10nwish": {
       "yes": "Yes",
-      "no": "No"
+      "no": "No",
+      "maybe": "Maybe"
     },
     "l10nsupport": {
       "yes": "Yes, to help translate the session on the day in English",
@@ -119,12 +119,6 @@
       "60_mins": "60 mins",
       "90_mins": "90 mins",
       "all_weekend": "All weekend, as an installation, exhibit or drop-in session"
-    },
-    "languages": {
-      "spanish": "Spanish",
-      "german": "German",
-      "french": "French",
-      "other": "Other"
     },
     "stipendnotrequired": "No",
     "stipendrequired": "Yes"

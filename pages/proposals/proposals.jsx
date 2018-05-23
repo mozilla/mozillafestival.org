@@ -25,7 +25,7 @@ var Proposal = React.createClass({
     this.setState(this.getInitialState());
   },
   handleFormUpdate(evt, name, field, value) {
-    console.log(`handleFormUpdate`, name, field, value);
+    // console.log(`handleFormUpdate`, name, field, value);
     // handleFormUpdate
     // otherfacilitator1githubhandle
     // Object { type: "text", label: "Additional facilitator 1's GitHub handle", placeholder: "@githubhandle", fieldClassname: "form-control", name: "otherfacilitator1githubhandle" }
@@ -75,7 +75,8 @@ var Proposal = React.createClass({
     const FIELD_OPTIONS = this.props.stringSource.form_field_options;
     const SPACES = FIELD_OPTIONS.spaces;
     const TIME = FIELD_OPTIONS.timeneeded;
-    const LANGUAGES = FIELD_OPTIONS.languages;
+    const L10NLANGUAGE = FIELD_OPTIONS.l10nlanguage;
+    const L10NSUPPORT = FIELD_OPTIONS.l10nsupport;
     const FORMAT = FIELD_OPTIONS.format;
 
     let formatted = Object.assign({}, proposal);
@@ -95,26 +96,48 @@ var Proposal = React.createClass({
       delete formatted.secondaryspace;
     }
 
+    // "l10nlanguage" field
     // Similarly, although Language labels are localized, when we submit the entry to
     // Google Spreadsheet and GitHub we want them to be in English.
     // This is to make the curation process simpler.
-    let additionalLang = formatted.additionallanguage;
-    let otherAdditionalLang = formatted.additionallanguageother;
+    let l10nLang = formatted.l10nlanguage;
+    let l10nLangOther = formatted.l10nlanguageother;
 
-    delete formatted.additionallanguage;
-    delete formatted.additionallanguageother;
+    delete formatted.l10nlanguage;
+    delete formatted.l10nlanguageother;
 
-    if (additionalLang === LANGUAGES.other) {
-      // we record "additionallanguage" only if user has specified the language
-      if (otherAdditionalLang) {
-        formatted.additionallanguage = otherAdditionalLang.split(`,`)
+    if (l10nLang === L10NLANGUAGE.other) {
+      // we record "l10nlanguage" only if user has specified the language
+      if (l10nLangOther) {
+        formatted.l10nlanguage = l10nLangOther.split(`,`)
           .map((lang) => lang.trim())
           .filter((lang) => !!lang);
       }
     } else {
-      for (let key in LANGUAGES) {
-        if (LANGUAGES[key] === additionalLang) {
-          formatted.additionallanguage = DEFAULT_OPTIONS.languages[key];
+      for (let key in L10NLANGUAGE) {
+        if (L10NLANGUAGE[key] === l10nLang) {
+          formatted.l10nlanguage = DEFAULT_OPTIONS.l10nlanguage[key];
+        }
+      }
+    }
+
+    // "l10nsupport" field
+    // Similarly, make sure "l10nsupport" is posted in English on Google Spreadsheet and GitHub
+    let l10nSupport = formatted.l10nsupport;
+    let l10nSupportOther = formatted.l10nsupportother;
+
+    delete formatted.l10nsupport;
+    delete formatted.l10nlanguageother;
+
+    if (l10nSupport === L10NSUPPORT.other) {
+      // we record "l10nsupport" only if user has specified the support he/she needs
+      if (l10nSupport) {
+        formatted.l10nsupport = l10nSupportOther;
+      }
+    } else {
+      for (let key in L10NSUPPORT) {
+        if (L10NSUPPORT[key] === l10nSupport) {
+          formatted.l10nsupport = DEFAULT_OPTIONS.l10nsupport[key];
         }
       }
     }
@@ -145,6 +168,8 @@ var Proposal = React.createClass({
     // let's simplify the value for "travelstipend" from a long string
     // to just "required" or blank
     formatted.travelstipend = formatted.travelstipend === FIELD_OPTIONS.stipendrequired ? `required` : ``;
+
+    console.log(`\n\n\nformatted`, formatted);
 
     return formatted;
   },
