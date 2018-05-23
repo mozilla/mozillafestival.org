@@ -70,8 +70,10 @@
     "timeneeded": "How much time you will need?",
     "numsofparticipants": "How will you deal with varying numbers of participants in your session? What if 30 participants attend? What if there are 3?",
     "format": "Choose from the formats below that most suits your session delivery",
-    "travelstipend": "MozFest has a limited number of travel stipends to help those who otherwise would not be able to attend. In the past, our stipends have been able to support a diverse group of people that are from global networks, who are students or youth. Or those who do not have the financial capacity to attend the event, through personal funds or work. Do you quantify yourself as such?",
-    "needs": "Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector, and office supplies (paper, pens, post-it notes). If your session requires additional materials or electronic equipment, please outline your needs below. Please note we may not be able to support all of your needs but will work with you to provide the best solution possible."
+    "travelstipend_hint": "MozFest has a limited number of travel stipends to help those who otherwise would not be able to attend. In the past, our stipends have been able to support a diverse group of people that are from global networks, who are students or youth. Or those who do not have the financial capacity to attend the event, through personal funds or work.",
+    "travelstipend": "Do you quantify yourself as such?",
+    "needs_hint": "Many attendees bring a personal device (smartphone, laptop or tablet) to the festival. We can provide you with a projector, and office supplies (paper, pens, post-it notes). Please note we may not be able to support all of your needs but will work with you to provide the best solution possible.",
+    "needs": "If your session requires additional materials or electronic equipment, please outline your needs."
   },
   "form_field_options": {
     "spaces": {

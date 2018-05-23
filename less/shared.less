@@ -312,7 +312,7 @@ li.no-bullet {
 }
 
 
-/* *** 
+/* ***
 *
 * form styling
 *
@@ -331,6 +331,20 @@ form {
     .mt-1;
     .error-styling;
     display: inline-block;
+  }
+
+  .over-word-limit {
+    .char-limit,
+    .word-limit {
+      color: darken(@pink, 15%);
+    }
+  }
+
+  .char-limit,
+  .word-limit {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
   }
 
   fieldset {

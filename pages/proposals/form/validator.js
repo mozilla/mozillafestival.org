@@ -15,10 +15,7 @@ const Validator = {
       validate: function(value) {
         if (!value) return false;
 
-        let wordLength = value.trim().split(` `).length;
-        this.error = `${wordLength}/${maxWordsLength}`;
-
-        return wordLength > maxWordsLength;
+        return value.trim().split(` `).length > maxWordsLength;
       }
     };
   },

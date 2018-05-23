@@ -46,25 +46,32 @@ var Proposal = React.createClass({
 
     console.log(this.state.formValues);
 
+    // super nested but ...
     this.refs.formPartOne.validates(partOneIsValid => {
       this.refs.formPartTwo.validates(partTwoIsValid => {
         this.refs.formPartThree.validates(partThreeIsValid => {
           this.refs.formPartFour.validates(partFourIsValid => {
-            if (!partOneIsValid) console.error(`Form Part One does not pass validation!`);
-            if (!partTwoIsValid) console.error(`Form Part Two does not pass validation!`);
-            if (!partThreeIsValid) console.error(`Form Part Three does not pass validation!`);
-            if (!partFourIsValid) console.error(`Form Part Four does not pass validation!`);
+            this.refs.formPartFive.validates(partFiveIsValid => {
+              this.refs.formPartSix.validates(partSixIsValid => {
+                if (!partOneIsValid) console.error(`Form Part One does not pass validation!`);
+                if (!partTwoIsValid) console.error(`Form Part Two does not pass validation!`);
+                if (!partThreeIsValid) console.error(`Form Part Three does not pass validation!`);
+                if (!partFourIsValid) console.error(`Form Part Four does not pass validation!`);
+                if (!partFiveIsValid) console.error(`Form Part Five does not pass validation!`);
+                if (!partSixIsValid) console.error(`Form Part Six does not pass validation!`);
 
-            if (partOneIsValid && partTwoIsValid && partThreeIsValid && partFourIsValid) {
-              this.setState({
-                submitting: true,
-                showFormInvalidNotice: false
-              }, () => {
-                this.submitProposal(this.state.formValues);
+                if (partOneIsValid && partTwoIsValid && partThreeIsValid && partFourIsValid && partFiveIsValid && partSixIsValid) {
+                  this.setState({
+                    submitting: true,
+                    showFormInvalidNotice: false
+                  }, () => {
+                    this.submitProposal(this.state.formValues);
+                  });
+                } else {
+                  this.setState({showFormInvalidNotice: true});
+                }
               });
-            } else {
-              this.setState({showFormInvalidNotice: true});
-            }
+            });
           });
         });
       });

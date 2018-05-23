@@ -44,8 +44,11 @@ var createPartOneFields = function(stringSource) {
     'organisation': {
       type: `text`,
       label: stringSource.form_field_labels.organisation,
+      labelClassname: `required`,
       fieldClassname: `form-control`,
-      validator: []
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR),
+      ]
     },
     'twitterhandle': {
       type: `text`,
@@ -191,6 +194,7 @@ var createPartTwoFields = function(stringSource) {
 };
 
 var createPartThreeFields = function(stringSource) {
+  const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
   const WISH_OPTIONS = stringSource.form_field_options.l10nwish;
   const SUPPORT_OPTIONS = stringSource.form_field_options.l10nsupport;
   const LANG_OPTIONS = stringSource.form_field_options.l10nlanguage;
@@ -205,7 +209,11 @@ var createPartThreeFields = function(stringSource) {
         WISH_OPTIONS.no
       ],
       colCount: 1,
-      fieldClassname: `form-control choice-group`
+      labelClassname: `required`,
+      fieldClassname: `form-control choice-group`,
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+      ]
     },
     'l10nlanguage': {
       type: `choiceGroup`,
@@ -226,8 +234,11 @@ var createPartThreeFields = function(stringSource) {
         LANG_OPTIONS.other,
       ],
       colCount: 1,
+      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
-      validator: [],
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+      ],
       controller: {
         name: `l10nwish`,
         value: WISH_OPTIONS_YES_MAYBE
@@ -251,8 +262,11 @@ var createPartThreeFields = function(stringSource) {
         SUPPORT_OPTIONS.other,
       ],
       colCount: 1,
+      labelClassname: `required`,
       fieldClassname: `form-control choice-group`,
-      validator: [],
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+      ],
       controller: {
         name: `l10nwish`,
         value: WISH_OPTIONS_YES_MAYBE
@@ -315,7 +329,12 @@ var createPartFourFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'outcome': {
       type: `textarea`,
@@ -325,7 +344,12 @@ var createPartFourFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'afterfestival': {
       type: `textarea`,
@@ -335,7 +359,12 @@ var createPartFourFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'numsofparticipants': {
       type: `textarea`,
@@ -345,7 +374,12 @@ var createPartFourFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     }
   };
 };
@@ -400,12 +434,19 @@ var createPartSixFields = function(stringSource) {
       label: stringSource.form_field_labels.needs,
       labelClassname: `word-length-restriction max-120-words`,
       fieldClassname: `form-control`,
+      guideText: stringSource.form_field_labels.needs_hint,
       validator: [
         validator.maxWordsValidator(120, MAX_WORD_REACHED_ERROR)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'travelstipend': {
       type: `choiceGroup`,
+      guideText: stringSource.form_field_labels.travelstipend_hint,
       label: stringSource.form_field_labels.travelstipend,
       options: [
         stringSource.form_field_options.stipendrequired,
