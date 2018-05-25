@@ -31,9 +31,17 @@ var Proposal = React.createClass({
     // Object { type: "text", label: "Additional facilitator 1's GitHub handle", placeholder: "@githubhandle", fieldClassname: "form-control", name: "otherfacilitator1githubhandle" }
     // valueee
 
-
     let formValues = this.state.formValues;
     formValues[name] = value;
+
+    if (name === 'l10nwish' && value === this.props.stringSource.form_field_options.l10nwish.no) {
+      // reset l10n related fields if user no longer has wish for l10n support
+      formValues.l10nlanguage = ``;
+      formValues.l10nlanguageother = ``;
+      formValues.l10nsupport = ``;
+      formValues.l10nsupportother = ``;
+    }
+
     this.setState({
       formValues,
       // hide notice once user starts typing again
@@ -44,23 +52,59 @@ var Proposal = React.createClass({
   handleFormSubmit(event) {
     event.preventDefault();
 
+    let numErrors = 0;
     console.log(this.state.formValues);
 
-    // super nested but ...
-    this.refs.formPartOne.validates(partOneIsValid => {
-      this.refs.formPartTwo.validates(partTwoIsValid => {
-        this.refs.formPartThree.validates(partThreeIsValid => {
-          this.refs.formPartFour.validates(partFourIsValid => {
-            this.refs.formPartFive.validates(partFiveIsValid => {
-              this.refs.formPartSix.validates(partSixIsValid => {
-                if (!partOneIsValid) console.error(`Form Part One does not pass validation!`);
-                if (!partTwoIsValid) console.error(`Form Part Two does not pass validation!`);
-                if (!partThreeIsValid) console.error(`Form Part Three does not pass validation!`);
-                if (!partFourIsValid) console.error(`Form Part Four does not pass validation!`);
-                if (!partFiveIsValid) console.error(`Form Part Five does not pass validation!`);
-                if (!partSixIsValid) console.error(`Form Part Six does not pass validation!`);
+    // super nested but ... ¯\_(ツ)_/¯
+    this.refs.formPartOne.validates((p1isValid, p1errors, p1errorElems) => {
+      console.log(`[PART 1]`, p1isValid, p1errors, p1errorElems);
 
-                if (partOneIsValid && partTwoIsValid && partThreeIsValid && partFourIsValid && partFiveIsValid && partSixIsValid) {
+      if (!p1isValid) {
+        console.error(`Form Part 1 does not pass validation!`);
+        numErrors += p1errorElems.length;
+      }
+
+      this.refs.formPartTwo.validates((p2isValid, p2errors, p2errorElems) => {
+        console.log(`[PART 2]`, p2isValid, p2errors, p2errorElems);
+
+        if (!p2isValid) {
+          console.error(`Form Part 2 does not pass validation!`);
+          numErrors += p2errorElems.length;
+        }
+
+        this.refs.formPartThree.validates((p3isValid, p3errors, p3errorElems) => {
+          console.log(`[PART 3]`, p3isValid, p3errors, p3errorElems);
+
+          if (!p3isValid) {
+            console.error(`Form Part 3 does not pass validation!`);
+            numErrors += p3errorElems.length;
+          }
+
+          this.refs.formPartFour.validates((p4isValid, p4errors, p4errorElems) => {
+            console.log(`[PART 4]`, p4isValid, p4errors, p4errorElems);
+
+            if (!p4isValid) {
+              console.error(`Form Part 4 does not pass validation!`);
+              numErrors += p4errorElems.length;
+            }
+
+            this.refs.formPartFive.validates((p5isValid, p5errors, p5errorElems) => {
+              console.log(`[PART 5]`, p5isValid, p5errors, p5errorElems);
+
+              if (!p5isValid) {
+                console.error(`Form Part 5 does not pass validation!`);
+                numErrors += p5errorElems.length;
+              }
+
+              this.refs.formPartSix.validates((p6isValid, p6errors, p6errorElems) => {
+                console.log(`[PART 6]`, p6isValid, p6errors, p6errorElems);
+
+                if (!p6isValid) {
+                  console.error(`Form Part 6 does not pass validation!`);
+                  numErrors += p6errorElems.length;
+                }
+
+                if (p1isValid && p2isValid && p3isValid && p4isValid && p5isValid && p6isValid) {
                   this.setState({
                     submitting: true,
                     showFormInvalidNotice: false
@@ -68,7 +112,10 @@ var Proposal = React.createClass({
                     this.submitProposal(this.state.formValues);
                   });
                 } else {
-                  this.setState({showFormInvalidNotice: true});
+                  this.setState({
+                    showFormInvalidNotice: true,
+                    numErrors: numErrors
+                  });
                 }
               });
             });
@@ -242,18 +289,17 @@ var Proposal = React.createClass({
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
-        <div>
+        <div className="my-5">
           <button
             ref="submitBtn"
-            className="btn btn-primary-outline mr-3 my-5"
+            className="btn btn-arrow mr-3 my-3 w-100"
             type="submit"
             onClick={this.handleFormSubmit}
             disabled={this.state.submitting ? `disabled` : null}
-          >{ this.state.submitting ? stringSource.form_field_controls.submitting : stringSource.form_field_controls.submit }</button>
-          { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">{stringSource.form_validation_errors.errors_above}</div> }
+          ><span>{ this.state.submitting ? stringSource.form_field_controls.submitting : stringSource.form_field_controls.submit }</span></button>
+          { this.state.showFormInvalidNotice && <div className="text-center"><div className="d-inline-block form-invalid-error my-3">{`Something isn't right. Please fix the ${this.state.numErrors} error${this.state.numErrors > 1 ? `s` : ``} indicated above.`}</div></div> }
+          { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
         </div>
-
-        { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
       </div>
     );
   },
@@ -293,7 +339,7 @@ var Proposal = React.createClass({
     let stringSource = this.props.stringSource;
 
     return (
-      <div className="text-center server-error mb-5 px-5 py-4">
+      <div className="text-center server-error my-3 px-5 py-4">
         <p className="m-0" dangerouslySetInnerHTML={{__html: stringSource.form_system_messages.server_error}}></p>
       </div>
     );
