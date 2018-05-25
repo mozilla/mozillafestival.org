@@ -5,8 +5,12 @@
     }
   }
 
-  button[type="submit"] {
-    cursor: pointer;
+  button.btn-arrow[type="submit"][disabled] {
+    cursor: default;
+
+    &:active {
+      top: 0;
+    }
   }
 
   form {
