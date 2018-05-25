@@ -22,15 +22,10 @@ var Proposal = React.createClass({
   },
   handleSubmitAnother(event) {
     event.preventDefault();
+
     this.setState(this.getInitialState());
   },
   handleFormUpdate(evt, name, field, value) {
-    // console.log(`handleFormUpdate`, name, field, value);
-    // handleFormUpdate
-    // otherfacilitator1githubhandle
-    // Object { type: "text", label: "Additional facilitator 1's GitHub handle", placeholder: "@githubhandle", fieldClassname: "form-control", name: "otherfacilitator1githubhandle" }
-    // valueee
-
     let formValues = this.state.formValues;
     formValues[name] = value;
 
@@ -220,8 +215,8 @@ var Proposal = React.createClass({
   },
   submitProposal(proposal) {
     let formattedProposal = this.formatProposal(proposal);
-
     let request = new XMLHttpRequest();
+
     request.open(`POST`, `/add-proposal`, true);
     request.setRequestHeader("Content-type", "application/json");
 

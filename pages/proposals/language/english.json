@@ -7,7 +7,7 @@
       "header": "Welcome to the MozFest 2018 Call for Proposals",
       "body": [
         "MozFest sessions cover a wide range of topics, but share two important qualities: they are <em>interactive</em> and <em>inclusive</em>. Interactive as you want to be engaging and activating your participants from the beginning, and getting them making and doing, rather than listening and watching. Inclusive by welcoming all ages, all experience levels and disciplines to participate.",
-        "Anyone may submit a proposal for MozFest 2018. Once you have submitted your session, it will enter an open curation process on <a href=\"https://github.com/MozillaFoundation/mozfest-program-2018\" target=\"_blank\">GitHub</a>. All information you submit here, apart from email and Twitter handle will be seen publicly. We do encourage collaboration on Github, but it is not mandatory.",
+        "Anyone may submit a proposal for MozFest 2018. Once you have submitted your session, it will enter an open curation process on <a href=\"https://github.com/MozillaFoundation/mozfest-program-2018\" target=\"_blank\">GitHub</a>. All information you submit here, apart from email and Twitter handle will be seen publicly. We do encourage collaboration on GitHub, but it is not mandatory.",
         "Sessions may have anywhere from 3 to 25 participants, with a vast range of abilities and ages. Everyone at the festival is welcome to attend any and all of the sessions during the event",
         "Before you submit, please make use of the following tools",
         "<ul><li>(links to be added later )</li><li>know the spaces you will submit under</li><li><a href=\"https://medium.com/mozilla-festival/what-makes-a-great-mozilla-festival-session-529dff105185\" target=\"_blank\">https://medium.com/mozilla-festival/what-makes-a-great-mozilla-festival-session-529dff105185</a></li><li>(insert Amira webinar)</li></ul>",
@@ -27,10 +27,10 @@
       ]
     },
     "l10n": {
-      "header": "Localisation support",
+      "header": "Language of your session",
       "body": [
-        "MozFest will be hosted with English as the principle language and the majority of participants will speak English as first or second language.",
-        "However if you wish to lead your session in another language or support your session in multiple languages, please let us know. We know from previous years we have a substancial numbers of Spanish, German and French speakers in attendance."
+        "English is the main language spoken at MozFest. The majority of participants will speak English as their first or second language.",
+        "If you wish to lead your session in another language or support your session in multiple languages, please let us know. From previous Mozfests, we know we have a substancial number of Spanish, German and French speakers in attendance."
       ]
     },
     "describe": {
@@ -109,8 +109,6 @@
       "greek": "Greek",
       "portugese": "Portugese",
       "mandarin": "Mandarin",
-      "english": "English",
-      "no": "No, I have changed my mind",
       "other": "Other"
     },
     "format": {

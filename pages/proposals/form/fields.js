@@ -10,6 +10,7 @@ import validator from './validator';
 var createPartOneFields = function(stringSource) {
   const EMPTY_VALUE_ERROR = stringSource.form_validation_errors.empty_value;
   const EMAIL_INVALID_ERROR = stringSource.form_validation_errors.email_invalid;
+  const ALLOW_EMPTY_EMAIL = true;
 
   return {
     'firstname': {
@@ -82,7 +83,7 @@ var createPartOneFields = function(stringSource) {
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
-        validator.emailValidator(EMAIL_INVALID_ERROR)
+        validator.emailValidator(EMAIL_INVALID_ERROR, ALLOW_EMPTY_EMAIL)
       ]
     },
     'otherfacilitator1githubhandle': {
@@ -113,7 +114,7 @@ var createPartOneFields = function(stringSource) {
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
-        validator.emailValidator(EMAIL_INVALID_ERROR)
+        validator.emailValidator(EMAIL_INVALID_ERROR, ALLOW_EMPTY_EMAIL)
       ]
     },
     'otherfacilitator2githubhandle': {
@@ -144,7 +145,7 @@ var createPartOneFields = function(stringSource) {
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
-        validator.emailValidator(EMAIL_INVALID_ERROR)
+        validator.emailValidator(EMAIL_INVALID_ERROR, ALLOW_EMPTY_EMAIL)
       ]
     },
     'otherfacilitator3githubhandle': {
@@ -242,8 +243,6 @@ var createPartThreeFields = function(stringSource) {
         LANG_OPTIONS.greek,
         LANG_OPTIONS.portugese,
         LANG_OPTIONS.mandarin,
-        LANG_OPTIONS.english,
-        LANG_OPTIONS.no,
         LANG_OPTIONS.other,
       ],
       colCount: 1,
