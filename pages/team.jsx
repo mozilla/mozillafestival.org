@@ -7,6 +7,8 @@ var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 var Sponsors = require('../components/sponsors.jsx');
 
+import generateHelmet from '../lib/helmet.jsx';
+
 var Partners = React.createClass({
   partnersInfo: [
     {
@@ -66,6 +68,7 @@ var Partners = React.createClass({
 
 
 var TeamPage = React.createClass({
+  pageMetaDescription: "",
   renderMembers: function(members) {
     return members.map( member => {
       return ( <MemberProfile {...member} key={member.name} /> );
@@ -82,11 +85,12 @@ var TeamPage = React.createClass({
   render: function() {
     return (
       <div className="team-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/team.jpg"
           image2x="/assets/images/hero/team.jpg">
           <h1>Team</h1>
         </Jumbotron>
-        <div className="content wide mt-0">
+        <div className="content wide my-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" data-slug="production">
               <h1>Our 2017 Production Team</h1>
