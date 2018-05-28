@@ -48,11 +48,10 @@ var Proposal = React.createClass({
     event.preventDefault();
 
     let numErrors = 0;
-    console.log(this.state.formValues);
 
     // super nested but ... ¯\_(ツ)_/¯
     this.refs.formPartOne.validates((p1isValid, p1errors, p1errorElems) => {
-      console.log(`[PART 1]`, p1isValid, p1errors, p1errorElems);
+      // console.log(`[PART 1]`, p1isValid, p1errors, p1errorElems);
 
       if (!p1isValid) {
         console.error(`Form Part 1 does not pass validation!`);
@@ -60,7 +59,7 @@ var Proposal = React.createClass({
       }
 
       this.refs.formPartTwo.validates((p2isValid, p2errors, p2errorElems) => {
-        console.log(`[PART 2]`, p2isValid, p2errors, p2errorElems);
+        // console.log(`[PART 2]`, p2isValid, p2errors, p2errorElems);
 
         if (!p2isValid) {
           console.error(`Form Part 2 does not pass validation!`);
@@ -68,7 +67,7 @@ var Proposal = React.createClass({
         }
 
         this.refs.formPartThree.validates((p3isValid, p3errors, p3errorElems) => {
-          console.log(`[PART 3]`, p3isValid, p3errors, p3errorElems);
+          // console.log(`[PART 3]`, p3isValid, p3errors, p3errorElems);
 
           if (!p3isValid) {
             console.error(`Form Part 3 does not pass validation!`);
@@ -76,7 +75,7 @@ var Proposal = React.createClass({
           }
 
           this.refs.formPartFour.validates((p4isValid, p4errors, p4errorElems) => {
-            console.log(`[PART 4]`, p4isValid, p4errors, p4errorElems);
+            // console.log(`[PART 4]`, p4isValid, p4errors, p4errorElems);
 
             if (!p4isValid) {
               console.error(`Form Part 4 does not pass validation!`);
@@ -84,7 +83,7 @@ var Proposal = React.createClass({
             }
 
             this.refs.formPartFive.validates((p5isValid, p5errors, p5errorElems) => {
-              console.log(`[PART 5]`, p5isValid, p5errors, p5errorElems);
+              // console.log(`[PART 5]`, p5isValid, p5errors, p5errorElems);
 
               if (!p5isValid) {
                 console.error(`Form Part 5 does not pass validation!`);
@@ -92,7 +91,7 @@ var Proposal = React.createClass({
               }
 
               this.refs.formPartSix.validates((p6isValid, p6errors, p6errorElems) => {
-                console.log(`[PART 6]`, p6isValid, p6errors, p6errorElems);
+                // console.log(`[PART 6]`, p6isValid, p6errors, p6errorElems);
 
                 if (!p6isValid) {
                   console.error(`Form Part 6 does not pass validation!`);
@@ -208,8 +207,6 @@ var Proposal = React.createClass({
     // let's simplify the value for "travelstipend" from a long string
     // to just "required" or blank
     formatted.travelstipend = formatted.travelstipend === FIELD_OPTIONS.stipendrequired ? `required` : ``;
-
-    console.log(`\n\n\nformatted`, formatted);
 
     return formatted;
   },
