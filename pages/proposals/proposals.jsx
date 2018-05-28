@@ -22,11 +22,21 @@ var Proposal = React.createClass({
   },
   handleSubmitAnother(event) {
     event.preventDefault();
+
     this.setState(this.getInitialState());
   },
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
+
+    if (name === 'l10nwish' && value === this.props.stringSource.form_field_options.l10nwish.no) {
+      // reset l10n related fields if user no longer has wish for l10n support
+      formValues.l10nlanguage = ``;
+      formValues.l10nlanguageother = ``;
+      formValues.l10nsupport = ``;
+      formValues.l10nsupportother = ``;
+    }
+
     this.setState({
       formValues,
       // hide notice once user starts typing again
@@ -37,25 +47,72 @@ var Proposal = React.createClass({
   handleFormSubmit(event) {
     event.preventDefault();
 
-    this.refs.formPartOne.validates(partOneIsValid => {
-      this.refs.formPartTwo.validates(partTwoIsValid => {
-        this.refs.formPartThree.validates(partThreeIsValid => {
-          this.refs.formPartFour.validates(partFourIsValid => {
-            if (!partOneIsValid) console.error(`Form Part One does not pass validation!`);
-            if (!partTwoIsValid) console.error(`Form Part Two does not pass validation!`);
-            if (!partThreeIsValid) console.error(`Form Part Three does not pass validation!`);
-            if (!partFourIsValid) console.error(`Form Part Four does not pass validation!`);
+    let numErrors = 0;
 
-            if (partOneIsValid && partTwoIsValid && partThreeIsValid && partFourIsValid) {
-              this.setState({
-                submitting: true,
-                showFormInvalidNotice: false
-              }, () => {
-                this.submitProposal(this.state.formValues);
-              });
-            } else {
-              this.setState({showFormInvalidNotice: true});
+    // super nested but ... ¯\_(ツ)_/¯
+    this.refs.formPartOne.validates((p1isValid, p1errors, p1errorElems) => {
+      // console.log(`[PART 1]`, p1isValid, p1errors, p1errorElems);
+
+      if (!p1isValid) {
+        console.error(`Form Part 1 does not pass validation!`);
+        numErrors += p1errorElems.length;
+      }
+
+      this.refs.formPartTwo.validates((p2isValid, p2errors, p2errorElems) => {
+        // console.log(`[PART 2]`, p2isValid, p2errors, p2errorElems);
+
+        if (!p2isValid) {
+          console.error(`Form Part 2 does not pass validation!`);
+          numErrors += p2errorElems.length;
+        }
+
+        this.refs.formPartThree.validates((p3isValid, p3errors, p3errorElems) => {
+          // console.log(`[PART 3]`, p3isValid, p3errors, p3errorElems);
+
+          if (!p3isValid) {
+            console.error(`Form Part 3 does not pass validation!`);
+            numErrors += p3errorElems.length;
+          }
+
+          this.refs.formPartFour.validates((p4isValid, p4errors, p4errorElems) => {
+            // console.log(`[PART 4]`, p4isValid, p4errors, p4errorElems);
+
+            if (!p4isValid) {
+              console.error(`Form Part 4 does not pass validation!`);
+              numErrors += p4errorElems.length;
             }
+
+            this.refs.formPartFive.validates((p5isValid, p5errors, p5errorElems) => {
+              // console.log(`[PART 5]`, p5isValid, p5errors, p5errorElems);
+
+              if (!p5isValid) {
+                console.error(`Form Part 5 does not pass validation!`);
+                numErrors += p5errorElems.length;
+              }
+
+              this.refs.formPartSix.validates((p6isValid, p6errors, p6errorElems) => {
+                // console.log(`[PART 6]`, p6isValid, p6errors, p6errorElems);
+
+                if (!p6isValid) {
+                  console.error(`Form Part 6 does not pass validation!`);
+                  numErrors += p6errorElems.length;
+                }
+
+                if (p1isValid && p2isValid && p3isValid && p4isValid && p5isValid && p6isValid) {
+                  this.setState({
+                    submitting: true,
+                    showFormInvalidNotice: false
+                  }, () => {
+                    this.submitProposal(this.state.formValues);
+                  });
+                } else {
+                  this.setState({
+                    showFormInvalidNotice: true,
+                    numErrors: numErrors
+                  });
+                }
+              });
+            });
           });
         });
       });
@@ -66,7 +123,8 @@ var Proposal = React.createClass({
     const FIELD_OPTIONS = this.props.stringSource.form_field_options;
     const SPACES = FIELD_OPTIONS.spaces;
     const TIME = FIELD_OPTIONS.timeneeded;
-    const LANGUAGES = FIELD_OPTIONS.languages;
+    const L10NLANGUAGE = FIELD_OPTIONS.l10nlanguage;
+    const L10NSUPPORT = FIELD_OPTIONS.l10nsupport;
 
     let formatted = Object.assign({}, proposal);
 
@@ -85,26 +143,48 @@ var Proposal = React.createClass({
       delete formatted.secondaryspace;
     }
 
+    // "l10nlanguage" field
     // Similarly, although Language labels are localized, when we submit the entry to
     // Google Spreadsheet and GitHub we want them to be in English.
     // This is to make the curation process simpler.
-    let additionalLang = formatted.additionallanguage;
-    let otherAdditionalLang = formatted.additionallanguageother;
+    let l10nLang = formatted.l10nlanguage;
+    let l10nLangOther = formatted.l10nlanguageother;
 
-    delete formatted.additionallanguage;
-    delete formatted.additionallanguageother;
+    delete formatted.l10nlanguage;
+    delete formatted.l10nlanguageother;
 
-    if (additionalLang === LANGUAGES.other) {
-      // we record "additionallanguage" only if user has specified the language
-      if (otherAdditionalLang) {
-        formatted.additionallanguage = otherAdditionalLang.split(`,`)
+    if (l10nLang === L10NLANGUAGE.other) {
+      // we record "l10nlanguage" only if user has specified the language
+      if (l10nLangOther) {
+        formatted.l10nlanguage = l10nLangOther.split(`,`)
           .map((lang) => lang.trim())
           .filter((lang) => !!lang);
       }
     } else {
-      for (let key in LANGUAGES) {
-        if (LANGUAGES[key] === additionalLang) {
-          formatted.additionallanguage = DEFAULT_OPTIONS.languages[key];
+      for (let key in L10NLANGUAGE) {
+        if (L10NLANGUAGE[key] === l10nLang) {
+          formatted.l10nlanguage = DEFAULT_OPTIONS.l10nlanguage[key];
+        }
+      }
+    }
+
+    // "l10nsupport" field
+    // Similarly, make sure "l10nsupport" is posted in English on Google Spreadsheet and GitHub
+    let l10nSupport = formatted.l10nsupport;
+    let l10nSupportOther = formatted.l10nsupportother;
+
+    delete formatted.l10nsupport;
+    delete formatted.l10nlanguageother;
+
+    if (l10nSupport === L10NSUPPORT.other) {
+      // we record "l10nsupport" only if user has specified the support he/she needs
+      if (l10nSupport) {
+        formatted.l10nsupport = l10nSupportOther;
+      }
+    } else {
+      for (let key in L10NSUPPORT) {
+        if (L10NSUPPORT[key] === l10nSupport) {
+          formatted.l10nsupport = DEFAULT_OPTIONS.l10nsupport[key];
         }
       }
     }
@@ -132,8 +212,8 @@ var Proposal = React.createClass({
   },
   submitProposal(proposal) {
     let formattedProposal = this.formatProposal(proposal);
-
     let request = new XMLHttpRequest();
+
     request.open(`POST`, `/add-proposal`, true);
     request.setRequestHeader("Content-type", "application/json");
 
@@ -158,8 +238,9 @@ var Proposal = React.createClass({
 
     return (
       <div className="content wide">
+        {this.renderIntro(stringSource.form_section_intro.background)}
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.background)}
+          {this.renderIntro(stringSource.form_section_intro.facilitator_info)}
           <Form ref="formPartOne"
             fields={formFields.partOne}
             inlineErrors={true}
@@ -173,51 +254,62 @@ var Proposal = React.createClass({
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.describe)}
+          {this.renderIntro(stringSource.form_section_intro.l10n)}
           <Form ref="formPartThree"
             fields={formFields.partThree}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.travel)}
+          {this.renderIntro(stringSource.form_section_intro.describe)}
           <Form ref="formPartFour"
             fields={formFields.partFour}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
         <div className="form-section">
-          {this.renderIntro(stringSource.form_section_intro.material)}
+          {this.renderIntro(stringSource.form_section_intro.format)}
           <Form ref="formPartFive"
             fields={formFields.partFive}
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
-        <div>
+        <div className="form-section">
+          {this.renderIntro(stringSource.form_section_intro.addtional_support)}
+          <Form ref="formPartSix"
+            fields={formFields.partSix}
+            inlineErrors={true}
+            onUpdate={this.handleFormUpdate} />
+        </div>
+        <div className="my-5">
           <button
             ref="submitBtn"
-            className="btn btn-primary-outline mr-3 my-5"
+            className="btn btn-arrow mr-3 my-3 w-100"
             type="submit"
             onClick={this.handleFormSubmit}
             disabled={this.state.submitting ? `disabled` : null}
-          >{ this.state.submitting ? stringSource.form_field_controls.submitting : stringSource.form_field_controls.submit }</button>
-          { this.state.showFormInvalidNotice && <div className="d-inline-block form-invalid-error">{stringSource.form_validation_errors.errors_above}</div> }
+          ><span>{ this.state.submitting ? stringSource.form_field_controls.submitting : stringSource.form_field_controls.submit }</span></button>
+          { this.state.showFormInvalidNotice && <div className="text-center"><div className="d-inline-block form-invalid-error my-3">{`Something isn't right. Please fix the ${this.state.numErrors} error${this.state.numErrors > 1 ? `s` : ``} indicated above.`}</div></div> }
+          { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
         </div>
-
-        { !this.state.submitting && this.state.submissionStatus === SUBMISSION_STATUS_FAIL && this.renderSubmissionFail() }
       </div>
     );
   },
   renderIntro(content) {
-    let paragraphs = content.body.map((paragraph, i) => {
+    let sections = content.body.map((section, i) => {
       // using dangerouslySetInnerHTML is okay here since we are pulling strings from a static json file, not user content or anything change dynamically over time without our attention
-      return <p dangerouslySetInnerHTML={{__html: paragraph}} key={i}></p>;
+
+      if (section.charAt(0) === `<` && section.charAt(section.length-1) === `>`) {
+        return <div dangerouslySetInnerHTML={{__html: section}} key={i}></div>;
+      }
+
+      return <p dangerouslySetInnerHTML={{__html: section}} key={i}></p>;
     });
 
     return (
       <div>
         <h1>{content.header}</h1>
-        { paragraphs }
+        { sections }
       </div>
     );
   },
@@ -239,7 +331,7 @@ var Proposal = React.createClass({
     let stringSource = this.props.stringSource;
 
     return (
-      <div className="text-center server-error mb-5 px-5 py-4">
+      <div className="text-center server-error my-3 px-5 py-4">
         <p className="m-0" dangerouslySetInnerHTML={{__html: stringSource.form_system_messages.server_error}}></p>
       </div>
     );

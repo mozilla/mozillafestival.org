@@ -48,14 +48,16 @@ app.post(`/add-proposal`, limiter, (req, res) => {
       owner: env.get(`GITHUB_REPO_OWNER_2018`),
       repo: env.get(`GITHUB_REPO_NAME_2018`)
     }, proposal, (githubErr, issueNum) => {
-      if (githubErr) res.status(500).json(githubErr);
+      if (githubErr) {
+        res.status(500).json(githubErr);
+      } else {
+        var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
+        proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
+          if (updateError) res.status(500).json(updateError);
 
-      var rowData = { uuid: proposal.uuid, githubissuenumber: issueNum};
-      proposalHandler.updateSpreadsheetRow(rowData, SPREADSHEET_ID, GOOGLE_API_CRED, (updateError) => {
-        if (updateError) res.status(500).json(updateError);
-
-        res.send(`Success!`);
-      });
+          res.send(`Success!`);
+        });
+      }
     });
   });
 });

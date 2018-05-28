@@ -1,7 +1,24 @@
 .proposals-page {
+  .deadline span {
+    .d-inline-block;
+    .px-2;
+
+    background: @yellow;
+    font-weight: 600;
+    color: black;
+  }
+
   .form-section {
     h1 {
       .mt-5;
+    }
+  }
+
+  button.btn-arrow[type="submit"][disabled] {
+    cursor: default;
+
+    &:active {
+      top: 0;
     }
   }
 
@@ -16,14 +33,17 @@
     }
 
     textarea {
-      height: 12rem;
+      height: 6rem;
     }
 
     fieldset {
-      &.additionallanguage {
+      &.l10nlanguage
+      &.l10nsupport {
         .mb-0;
       }
-      &.additionallanguageother {
+
+      &.l10nsupportother,
+      &.l10nlanguageother {
         .ml-3;
         input {
           max-width: 300px;
@@ -35,8 +55,12 @@
     }
     .space,
     .secondaryspace,
+    .l10nwish,
+    .l10nsupport,
+    .l10nlanguage,
+    .format,
     .timeneeded,
-    .additionallanguage,
+    .l10nlanguage,
     .travelstipend {
       label {
         .ml-0;
@@ -51,18 +75,26 @@
     }
   }
 
+  fieldset.firstname,
+  fieldset[class^="otherfacilitator"] {
+    .guide-text {
+      font-weight: 600;
+      color: @blue;
+    }
+  }
+
   fieldset.otherfacilitators {
     .row {
       margin: 0 0 0.5rem;
       vertical-align: middle;
 
       @media screen and (min-width: 768px) {
-        display: inline-block;
-        width: calc(~'50% - 10px');
+        // display: inline-block;
+        // width: calc(~'50% - 10px');
 
-        &:nth-child(2n) {
-          margin-left: 10px;
-        }
+        // &:nth-child(2n) {
+        //   margin-left: 10px;
+        // }
       }
     }
 
@@ -89,8 +121,13 @@
     }
   }
 
+  fieldset.l10nlanguageother,
+  fieldset.l10nsupportother {
+    margin-top: -1.5rem !important;
+  }
+
   .server-error {
-    background: lighten(@blue, 40%);
+    color: darken(@pink, 15%);
   }
 
   .submit-another {

@@ -9,6 +9,7 @@ const NAV_LINKS = [
   // { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
   // { path: `/speakers`, label: `Speakers` },
   { path: `/about`, label: `About` },
+  { path: `/proposals`, label: `Proposals` },
   { path: `/expect`, label: `What to Expect` },
   { path: `/spaces`, label: `Spaces & Experiences` },
   { path: `/house`, label: `House` },

@@ -15,18 +15,17 @@ const Validator = {
       validate: function(value) {
         if (!value) return false;
 
-        let wordLength = value.trim().split(` `).length;
-        this.error = `${wordLength}/${maxWordsLength}`;
-
-        return wordLength > maxWordsLength;
+        return value.trim().split(` `).length > maxWordsLength;
       }
     };
   },
-  emailValidator(error = `Not an valid email.`) {
+  emailValidator(error = `Not an valid email.`, allowedEmpty) {
     return {
       error,
       validate: function(value) {
+        if (allowedEmpty && !value) return false;
         if (!value) return true;
+
         return !validator.isEmail(value); // validator library only validates string ('null' will throw error)
       }
     };
