@@ -12,27 +12,27 @@
     },
     "GITHUB_BOT_TOKEN_2018": {
       "required": true,
-      "value": ""
+      "value": "GitHub bot token 2018"
     },
     "GITHUB_REPO_OWNER_2018": {
       "required": true,
-      "value": ""
+      "value": "GitHub repo owner 2018"
     },
     "GITHUB_REPO_NAME_2018": {
       "required": true,
-      "value": ""
+      "value": "GitHub repo name 2018"
     },
     "GOOGLE_API_CLIENT_EMAIL_2018": {
       "required": true,
-      "value": ""
+      "value": "Google API client email 2018"
     },
     "GOOGLE_API_PRIVATE_KEY_2018": {
       "required": true,
-      "value": ""
+      "value": "Google API private key 2018"
     },
     "PROPOSAL_SPREADSHEET_ID_2018": {
       "required": true,
-      "value": ""
+      "value": "Proposal spreadsheet id 2018"
     },
     "HATCHET_APP_NAME": {
       "required": true
