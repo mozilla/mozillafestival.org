@@ -24,6 +24,9 @@ let DIGITAL_INCLUSION_WRANGLERS = [
     name: `Carolina Tejada`
   },
   {
+    name: `Jon Tutcher`
+  },
+  {
     name: `Edoardo Viola`
   }
 ];
@@ -55,6 +58,9 @@ let OPENNESS_WRANGLERS = [
 let PRIVACY_AND_SECURITY_WRANGLERS = [
   {
     name: `Jenn Beard`
+  },
+  {
+    name: `Teon Brooks`
   },
   {
     name: `Mehan Jayasuriya`
