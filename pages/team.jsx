@@ -11,7 +11,7 @@ import generateHelmet from '../lib/helmet.jsx';
 
 const WRANGLER_SHOW_NAME_ONLY = false;
 
-
+/*
 var Partners = React.createClass({
   partnersInfo: [
     {
@@ -68,6 +68,7 @@ var Partners = React.createClass({
     return <div className="row">{this.renderPartnerLogos()}</div>;
   }
 });
+*/
 
 
 var TeamPage = React.createClass({
