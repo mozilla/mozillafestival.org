@@ -187,7 +187,7 @@ function renderPage(appHtml, reactHelmet) {
                     <div class="page-header">
                       <div class="header-content">
                         <div class="nav-home">
-                          <img src="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg" alt="mozfest logo">
+                          <img src="/assets/images/Mozilla-Festival-2018.svg" alt="mozfest logo">
                         </div>
                       </div>
                     </div>
