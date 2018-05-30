@@ -31,7 +31,7 @@ var Proposal = React.createClass({
 
     if (name === 'l10nwish' && value === this.props.stringSource.form_field_options.l10nwish.no) {
       // reset l10n related fields if user no longer has wish for l10n support
-      formValues.l10nlanguage = ``;
+      formValues.l10nlanguage = [];
       formValues.l10nlanguageother = ``;
       formValues.l10nsupport = ``;
       formValues.l10nsupportother = ``;
@@ -147,25 +147,27 @@ var Proposal = React.createClass({
     // Similarly, although Language labels are localized, when we submit the entry to
     // Google Spreadsheet and GitHub we want them to be in English.
     // This is to make the curation process simpler.
-    let l10nLang = formatted.l10nlanguage;
-    let l10nLangOther = formatted.l10nlanguageother;
+    if (formatted.l10nlanguage && formatted.l10nlanguage.length > 0) {
+      let newLangArray = [];
 
-    delete formatted.l10nlanguage;
-    delete formatted.l10nlanguageother;
+      formatted.l10nlanguage.forEach(l10nLang => {
+        if (l10nLang === L10NLANGUAGE.other) {
+          // we record "l10nlanguage" only if user has specified the language
+          if (formatted.l10nlanguageother) {
+            newLangArray.push(formatted.l10nlanguageother);
 
-    if (l10nLang === L10NLANGUAGE.other) {
-      // we record "l10nlanguage" only if user has specified the language
-      if (l10nLangOther) {
-        formatted.l10nlanguage = l10nLangOther.split(`,`)
-          .map((lang) => lang.trim())
-          .filter((lang) => !!lang);
-      }
-    } else {
-      for (let key in L10NLANGUAGE) {
-        if (L10NLANGUAGE[key] === l10nLang) {
-          formatted.l10nlanguage = DEFAULT_OPTIONS.l10nlanguage[key];
+            delete formatted.l10nlanguageother;
+          }
+        } else {
+          for (let key in L10NLANGUAGE) {
+            if (L10NLANGUAGE[key] === l10nLang) {
+              newLangArray.push(DEFAULT_OPTIONS.l10nlanguage[key]);
+            }
+          }
         }
-      }
+      });
+
+      formatted.l10nlanguage = newLangArray;
     }
 
     // "l10nsupport" field
