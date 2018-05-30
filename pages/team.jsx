@@ -117,11 +117,15 @@ var TeamPage = React.createClass({
               <Sponsors />
             </div>
 
+            {
+            /*
             <div name="Partners" data-slug="partners">
-              <h1>Our 2017 Partners</h1>
+              <h1>2017 Partners</h1>
               <div className="horizontal-rule mb-5"></div>
               <Partners />
             </div>
+            */
+            }
           </TabSwitcher>
         </div>
       </div>
