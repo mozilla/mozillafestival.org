@@ -19,7 +19,7 @@ const NAV_LINKS = [
 class Header extends React.Component {
   renderNavLinks() {
     return NAV_LINKS.map(link => {
-      return <div className="nav-link-container d-inline-block mx-2 my-2 my-sm-0" key={link.label}>
+      return <div className="nav-link-container d-inline-block mx-2 mb-2 my-sm-0" key={link.label}>
         { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
         { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
       </div>;
@@ -30,9 +30,9 @@ class Header extends React.Component {
     return (
       <div className="page-header">
         <div className="header-content justify-content-end">
-          <div className="nav-home">
-            <NavLink to="/">
-              <ImageTag src1x="/assets/images/mozilla-festival_wordmark-interim_horizontal.svg" alt="mozfest logo"/>
+          <div className="nav-home my-4">
+            <NavLink to="/" className="d-block">
+              <ImageTag src1x="/assets/images/Mozilla-Festival-2018.svg" alt="mozfest logo"/>
             </NavLink>
           </div>
           <div className="nav-items">
