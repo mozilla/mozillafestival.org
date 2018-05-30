@@ -42,8 +42,8 @@ var SpacesInfo = [
     name: "Privacy and Security",
     description:
     (<div>
-      <p>Do you want to feel more safe online? You’re not alone: privacy and security have never been more top-of-mind for everyday internet users. Due to recent scandals involving the collection, use, and theft of sensitive information, individuals around the world now understand that the data trail they leave online could be anything but private.</p>
-      <p>As a result, the conversation around privacy and security has shifted. Now that internet users understand the risks, how can we empower them to take control of their own data? What tools are available to citizens wanting to protect their own security, and how can we make them approachable, engaging, and fun? What mechanisms can we use to demand that companies and governments respect our privacy? How might we work together to envision a future where having a private life and an online life are not mutually exclusive?</p>
+      <p>Do you want to feel more safe online? You’re not alone: privacy and security have never been more top-of-mind for everyday Internet users. Due to recent scandals involving the collection, use, and theft of sensitive information, individuals around the world now understand that the data trail they leave online could be anything but private.</p>
+      <p>As a result, the conversation around privacy and security has shifted. Now that Internet users understand the risks, how can we empower them to take control of their own data? What tools are available to citizens wanting to protect their own security, and how can we make them approachable, engaging, and fun? What mechanisms can we use to demand that companies and governments respect our privacy? How might we work together to envision a future where having a private life and an online life are not mutually exclusive?</p>
       <p>Participants in this year’s Privacy & Security space will leave feeling informed, empowered, and ready to lead themselves and others to secure their personal data.</p>
     </div>),
     contacts: SPACE_WRANGLERS[`Privacy and Security`],
@@ -52,9 +52,9 @@ var SpacesInfo = [
     name: "Web Literacy",
     description:
     (<div>
-      <p>Do you remember what a computer looked like in the 1950s? Can you recall what a floppy disk looked like? From those first machines to today’s super-fast computers, we've come a long way. The same is true for the internet. The internet is no longer a luxury — it's a necessity, like clean water or shelter. Today, with the entire world coming online, it's more important than ever for users to understand the power and limitations of the web.</p>
-      <p>In the Web Literacy space, we'll help you understand and harness the power of today’s internet. Whether you're a new user just starting to use the web or are a power user who's always online, you'll learn something new in this space. We'll help you understand the importance of controlling your data, and how it relates to your online experience.</p>
-      <p>When you come to the Web Literacy space, bring your web experiences along with you — good or bad. This year’s Web Literacy space is a place for sharing, discussing, and learning the superpowers of the internet.</p>
+      <p>Do you remember what a computer looked like in the 1950s? Can you recall what a floppy disk looked like? From those first machines to today’s super-fast computers, we've come a long way. The same is true for the Internet. The Internet is no longer a luxury — it's a necessity, like clean water or shelter. Today, with the entire world coming online, it's more important than ever for users to understand the power and limitations of the web.</p>
+      <p>In the Web Literacy space, we'll help you understand and harness the power of today’s Internet. Whether you're a new user just starting to use the web or are a power user who's always online, you'll learn something new in this space. We'll help you understand the importance of controlling your data, and how it relates to your online experience.</p>
+      <p>When you come to the Web Literacy space, bring your web experiences along with you — good or bad. This year’s Web Literacy space is a place for sharing, discussing, and learning the superpowers of the Internet.</p>
     </div>),
     contacts: SPACE_WRANGLERS[`Web Literacy`]
   },
@@ -62,9 +62,9 @@ var SpacesInfo = [
     name: "Youth Zone",
     description:
     (<div>
-      <p>The future of the internet is in our hands.</p>
-      <p>Young people and those who support them are excited to build a healthier internet that empowers us to solve problems and achieve our dreams. We see a future that defies expectations and promises more inclusion, agency, and shared ownership online. By learning and playing with all kinds of potential solutions in this space, we young people and our allies will share what we think of the internet and work to make it better.</p>
-      <p>Join us for a weekend of hands-on experiences that immerse participants in young people's ideas about what the internet can be. Participants will bring home new creations, new understandings of internet health, and ways to stay connected via youth-led conversations and projects.</p>
+      <p>The future of the Internet is in our hands.</p>
+      <p>Young people and those who support them are excited to build a healthier Internet that empowers us to solve problems and achieve our dreams. We see a future that defies expectations and promises more inclusion, agency, and shared ownership online. By learning and playing with all kinds of potential solutions in this space, we young people and our allies will share what we think of the Internet and work to make it better.</p>
+      <p>Join us for a weekend of hands-on experiences that immerse participants in young people's ideas about what the Internet can be. Participants will bring home new creations, new understandings of Internet health, and ways to stay connected via youth-led conversations and projects.</p>
     </div>),
     contacts: SPACE_WRANGLERS[`Youth Zone`]
   }
@@ -76,7 +76,7 @@ var ExpereincesInfo = [
     description:
     (<div>
       <p>Oh deer! This year, we are opening a queer territory at MozFest.</p>
-      <p>Across the main six spaces, we are exploring how internet issues intersect with our gender and our sexuality. Drawing on a queer perspective, we will reflect on the relationships between technology and the processes of normalization and marginalization.</p>
+      <p>Across the main six spaces, we are exploring how Internet issues intersect with our gender and our sexuality. Drawing on a queer perspective, we will reflect on the relationships between technology and the processes of normalization and marginalization.</p>
       <p>Queering MozFest is staging interventions that invite queer-identified and -allied attendees to craft safe spaces for other queer attendees to convene, reflect, and relax. Fostering thought-provoking experiences throughout the festival, this queer experiment aims at stimulating our imagination while resisting normalization.</p>
     </div>),
     contacts: EXPERIENCES_WRANGLERS[`Queering MozFest`]
