@@ -96,7 +96,7 @@ var TeamPage = React.createClass({
         <div className="content wide my-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" data-slug="production">
-              <h1>Our 2017 Production Team</h1>
+              <h1>Our 2018 Production Team</h1>
               <div className="horizontal-rule"></div>
               { this.renderMembers(PRODUCTION_MEMBERS) }
             </div>
