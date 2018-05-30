@@ -20,7 +20,10 @@
 <% if (typeof(l10nlanguage) !== "undefined" || typeof(l10nsupport) !== "undefined") { %>
 ---
 
-<% if (typeof(l10nlanguage) !== "undefined") { %>**[ Language ]** <%= l10nlanguage %><% } %>
+<% if (typeof(l10nlanguage) !== "undefined") { %>
+**[ Language ]**
+<%= l10nlanguage %>
+<% } %>
 <% if (typeof(l10nsupport) !== "undefined") { %>**[ Localisation Support Requested ]** <%= l10nsupport %><% } %>
 
 ---

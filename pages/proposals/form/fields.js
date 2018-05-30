@@ -230,7 +230,7 @@ var createPartThreeFields = function(stringSource) {
       ]
     },
     'l10nlanguage': {
-      type: `choiceGroup`,
+      type: `checkboxGroup`,
       label: stringSource.form_field_labels.l10nlanguage,
       options: [
         LANG_OPTIONS.spanish,
