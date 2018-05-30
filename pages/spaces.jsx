@@ -76,8 +76,8 @@ var ExpereincesInfo = [
     description:
     (<div>
       <p>Oh deer! This year, we are opening a queer territory at MozFest.</p>
-      <p>Across the main six spaces, we are exploring how Internet issues intersect with our gender and our sexuality. Drawing on a queer perspective, we will reflect on the relationships between technology and the processes of normalization and marginalization.</p>
-      <p>Queering MozFest is staging interventions that invite queer-identified and -allied attendees to craft safe spaces for other queer attendees to convene, reflect, and relax. Fostering thought-provoking experiences throughout the festival, this queer experiment aims at stimulating our imagination while resisting normalization.</p>
+      <p>Across the main six spaces, we are exploring how Internet issues intersect with our gender and our sexuality. Drawing on a queer perspective, we will reflect on the relationships between technology and the processes of normalisation and marginalisation.</p>
+      <p>Queering MozFest is staging interventions that invite queer-identified and -allied attendees to craft safe spaces for other queer attendees to convene, reflect, and relax. Fostering thought-provoking experiences throughout the festival, this queer experiment aims at stimulating our imagination while resisting normalisation.</p>
     </div>),
     contacts: EXPERIENCES_WRANGLERS[`Queering MozFest`]
   }
