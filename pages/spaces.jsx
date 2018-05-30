@@ -6,7 +6,7 @@ var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 var SpacesInfo = [
   {
-    name: "Decentralization",
+    name: "Decentralisation",
     description:
     (<div>
       <p>Can the world be decentralised?</p>
