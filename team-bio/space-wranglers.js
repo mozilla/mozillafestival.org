@@ -18,9 +18,6 @@ let DIGITAL_INCLUSION_WRANGLERS = [
     name: `Daniel R. Lucio`
   },
   {
-    name: `Zannah Marsh`
-  },
-  {
     name: `Carolina Tejada`
   },
   {
@@ -118,6 +115,9 @@ let YOUTH_ZONE_WRANGLERS = [
   },
   {
     name: `Chad Sansing`
+  },
+  {
+    name: `Victor Sansing`
   },
   {
     name: `Joseph Thomas`

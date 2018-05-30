@@ -12,7 +12,7 @@
         "Before you submit, please make use of the following tools",
         "<ul><li>(links to be added later )</li><li>know the spaces you will submit under</li><li><a href=\"https://medium.com/mozilla-festival/what-makes-a-great-mozilla-festival-session-529dff105185\" target=\"_blank\">https://medium.com/mozilla-festival/what-makes-a-great-mozilla-festival-session-529dff105185</a></li><li>(insert Amira webinar)</li></ul>",
         "Proposals are due August 1st. Once our dedicated team of Space Wranglers have had a chance to review each proposal we will contact individuals later in August.",
-        "Should you would like to submit your session in another language we have outlined ways for you to do so within this form. If you have difficulty submitting via a texted based form please reach out to us on the email below to discuss other accessibility options.",
+        "Should you like to submit your session in another language we have outlined ways for you to do so within this form. If you have difficulty submitting via a texted based form please reach out to us on the email below to discuss other accessibility options.",
         "If you have any questions, please email <a href=\"mailto:festival@mozilla.org\">festival@mozilla.org</a>."
       ]
     },
@@ -30,7 +30,7 @@
       "header": "Language of your session",
       "body": [
         "English is the main language spoken at MozFest. The majority of participants will speak English as their first or second language.",
-        "If you wish to lead your session in another language or support your session in multiple languages, please let us know. From previous Mozfests, we know we have a substancial number of Spanish, German and French speakers in attendance."
+        "If you wish to lead your session in another language or support your session in multiple languages, please let us know. From previous Mozfests, we know we have a substantial number of Spanish, German and French speakers in attendance."
       ]
     },
     "describe": {
@@ -95,7 +95,7 @@
     },
     "l10nsupport": {
       "yes": "Yes, to help translate the session on the day in English",
-      "no": "No, I can host the sessions myself",
+      "no": "No, I can host the session myself",
       "other": "Other"
     },
     "l10nlanguage": {

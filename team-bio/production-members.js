@@ -12,23 +12,8 @@ module.exports = [
     title: `Executive Festival Director`,
     pic: `/assets/images/team/production/SarahAllen.jpg`,
     bio: [
-      `Sarah Allen is MozFest's Executive Director. When she is not focused on MozFest, she works with the network to deliver Mozilla aligned convenings around the globe. Sarah draws her experience from a diverse events background working in theatrical experiences, global sporting events and community festivals. MozFest 2017 will be Sarah’s fifth festival.`
+      `Sarah Allen is MozFest's Executive Director. She is passionate about designing collaborative learning experiences that use art, culture and convenings to explore Internet health. Sarah draws her experience from a diverse events background in theatre, global sporting events and local community festivals. 2018 will be Sarah's 6th MozFest.`
     ],
-  },
-  {
-    name: `Erika Drushka`,
-    title: `Program Designer`,
-    pic: `/assets/images/team/production/Erika.jpg`,
-    bio: [
-      `Erika Drushka is the Program Designer for MozFest 2017. With a background in documentary film making, advocacy and fundraising, Erika's focus at Mozilla is building network strength in the open internet movement through convenings. This will be Erika's fifth MozFest.`
-    ],
-  },
-  {
-    name: `Chris Lawrence`,
-    pic: `/assets/images/team/production/Chris.jpg`,
-    bio: [
-      `As Vice President, Mozilla Leadership Network, Chris oversees the development and expansion of a global network of leaders for Internet health. These efforts have reached hundreds of thousands of people in over 90 cities across the globe. Chris has never missed a Mozilla Festival!`
-    ]
   },
   {
     name: `Allen “Gunner” Gunn`,
@@ -44,30 +29,6 @@ module.exports = [
     pic: `/assets/images/team/production/Kevin.jpg`,
     bio: [
       `Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and is the mastermind behind the Dialogues and Debates speakers series. 2017 will be Kevin's fourth MozFest.`
-    ],
-  },
-  {
-    name: `Marc Walsh`,
-    title: `Senior Production Coordinator`,
-    pic: `/assets/images/team/production/Marc.jpg`,
-    bio: [
-      `Marc is the Senior Production Coordinator for MozFest 2017, his sixth year with the festival. Since last year he’s worked on various large scale experimental events as well as Glastonbury and the BBC Music Awards. Drawing on this experience, he brings his logistical and production mind-set to help make sure the cogs keep turning across the weekend.`
-    ],
-  },
-  {
-    name: `Esme Simcox`,
-    title: `Production Assistant`,
-    pic: `/assets/images/team/production/EsmeSimcox.jpg`,
-    bio: [
-      `Esme is the Production Assistant for MozFest 2017. She is still in university studying Digital Television Production at Ravensbourne and has recently produced their Graduate Show. This will be her first MozFest.`
-    ],
-  },
-  {
-    name: `Dan Rad`,
-    title: `Logistics Assistant`,
-    pic: `/assets/images/team/production/DanRad.jpg`,
-    bio: [
-      `Dan Rad is a Logistics Assistant. This is his second year with MozFest. Dan graduated from Ravensbourne with a degree in Digital Television Production and has worked on a variety of short films and TV shows.`
     ],
   },
   {

@@ -11,7 +11,7 @@ import generateHelmet from '../lib/helmet.jsx';
 
 const WRANGLER_SHOW_NAME_ONLY = false;
 
-
+/*
 var Partners = React.createClass({
   partnersInfo: [
     {
@@ -68,6 +68,7 @@ var Partners = React.createClass({
     return <div className="row">{this.renderPartnerLogos()}</div>;
   }
 });
+*/
 
 
 var TeamPage = React.createClass({
@@ -96,7 +97,7 @@ var TeamPage = React.createClass({
         <div className="content wide my-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" data-slug="production">
-              <h1>Our 2017 Production Team</h1>
+              <h1>Our 2018 Production Team</h1>
               <div className="horizontal-rule"></div>
               { this.renderMembers(PRODUCTION_MEMBERS) }
             </div>
@@ -117,11 +118,15 @@ var TeamPage = React.createClass({
               <Sponsors />
             </div>
 
+            {
+            /*
             <div name="Partners" data-slug="partners">
-              <h1>Our 2017 Partners</h1>
+              <h1>2017 Partners</h1>
               <div className="horizontal-rule mb-5"></div>
               <Partners />
             </div>
+            */
+            }
           </TabSwitcher>
         </div>
       </div>
