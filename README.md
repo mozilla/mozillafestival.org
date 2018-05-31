@@ -36,8 +36,8 @@ Production pushes are handled manually. Email [Mozilla Foundation DevOps](mailto
 - `GOOGLE_API_CLIENT_EMAIL_2018`: Your [Google Service Account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) client email created for MozFest.
 - `GOOGLE_API_PRIVATE_KEY_2018`: The key associated with the client email.
 - `GITHUB_BOT_TOKEN_2018`: [GitHub personal token](https://github.com/settings/tokens) you created for MozFest.
-- `GITHUB_REPO_OWNER_2018`: The owner of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFoundation/mozfest-program-2017 set `GITHUB_REPO_OWNER_2017` to `MozillaFoundation`.
-- `GITHUB_REPO_NAME_2018`: The name of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFoundation/mozfest-program-2017 set `GITHUB_REPO_NAME_2017` to `mozfest-program-2017`.
+- `GITHUB_REPO_OWNER_2018`: The owner of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFestival/mozfest-program-2018 set this var to `MozillaFestival`.
+- `GITHUB_REPO_NAME_2018`: The name of the repo that you are posting the proposals to. e.g., if the repo is at https://github.com/MozillaFestival/mozfest-program-2018 set this var to `mozfest-program-2018`.
 
 
 
