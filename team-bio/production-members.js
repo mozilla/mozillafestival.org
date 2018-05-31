@@ -28,7 +28,15 @@ module.exports = [
     title: `Comms Manager & Speaker Series Designer`,
     pic: `/assets/images/team/production/Kevin.jpg`,
     bio: [
-      `Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and is the mastermind behind the Dialogues and Debates speakers series. 2017 will be Kevin's fourth MozFest.`
+      `Kevin Zawacki is Communications Manager for the Mozilla Foundation, and has a background in journalism and public relations. Kevin brings his magic to copy writing, media relations and is the mastermind behind the Dialogues and Debates speakers series. 2018 will be Kevin's fifth MozFest.`
+    ],
+  },
+  {
+    name: `Mavis Ou`,
+    title: `Festival Lead Engineer`,
+    pic: `/assets/images/team/production/Mavis.jpg`,
+    bio: [
+      `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experiences in the software world better. 2018 will be Mavis' 6th MozFest.`
     ],
   },
   {
