@@ -1,0 +1,24 @@
+.notification-bar {
+  font-family: 'Zilla Slab';
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+  background: linear-gradient(to right, @blue, @pink);
+
+  .emphasized {
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .emphasized + .emphasized {
+    @media screen and (min-width: 768px) {
+      &:before {
+        display: inline-block;
+        content: '|';
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

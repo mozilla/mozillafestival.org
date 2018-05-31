@@ -7,6 +7,11 @@ var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 var Sponsors = require('../components/sponsors.jsx');
 
+import generateHelmet from '../lib/helmet.jsx';
+
+const WRANGLER_SHOW_NAME_ONLY = false;
+
+/*
 var Partners = React.createClass({
   partnersInfo: [
     {
@@ -63,61 +68,65 @@ var Partners = React.createClass({
     return <div className="row">{this.renderPartnerLogos()}</div>;
   }
 });
+*/
 
 
 var TeamPage = React.createClass({
-  renderMembers: function(members) {
+  pageMetaDescription: "",
+  renderMembers: function(members, showNameOnly) {
     return members.map( member => {
-      return ( <MemberProfile {...member} key={member.name} /> );
+      return ( <MemberProfile {...member} key={member.name} showNameOnly={showNameOnly} /> );
     });
   },
   renderIndividualSpaceSection(spaceName, type = `space`) {
     let members = type === `space` ? SPACE_WRANGLERS[spaceName] : EXPERIENCES_WRANGLERS[spaceName];
     return <div>
       <h3 className="text-center">{ spaceName }</h3>
-      { this.renderMembers(members) }
+      { this.renderMembers(members, WRANGLER_SHOW_NAME_ONLY) }
       <div className="horizontal-rule mb-5"></div>
     </div>;
   },
   render: function() {
     return (
       <div className="team-page">
+        {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/team.jpg"
           image2x="/assets/images/hero/team.jpg">
           <h1>Team</h1>
         </Jumbotron>
-        <div className="content wide mt-0">
+        <div className="content wide my-0">
           <TabSwitcher baseURL={`/team/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
             <div name="Production" data-slug="production">
-              <h1>Our 2017 Production Team</h1>
+              <h1>Our 2018 Production Team</h1>
               <div className="horizontal-rule"></div>
               { this.renderMembers(PRODUCTION_MEMBERS) }
             </div>
 
             <div name="Wranglers" data-slug="wranglers">
-              <h1>Our 2017 Space & Experience Wranglers</h1>
+              <h1>Our 2018 Space & Experience Wranglers</h1>
               <div className="horizontal-rule mb-5"></div>
               { this.renderIndividualSpaceSection(`Decentralization`) }
               { this.renderIndividualSpaceSection(`Digital Inclusion`) }
-              { this.renderIndividualSpaceSection(`Open Innovation`) }
+              { this.renderIndividualSpaceSection(`Openness`) }
               { this.renderIndividualSpaceSection(`Privacy and Security`) }
               { this.renderIndividualSpaceSection(`Web Literacy`) }
               { this.renderIndividualSpaceSection(`Youth Zone`) }
-              { this.renderIndividualSpaceSection(`Artist Open Studio`, `experiences`) }
-              { this.renderIndividualSpaceSection(`Dialogues and Debates`, `experiences`) }
-              { this.renderIndividualSpaceSection(`Theme`, `experiences`) }
-              { this.renderIndividualSpaceSection(`Wayfinding and Recognition`, `experiences`) }
+              { this.renderIndividualSpaceSection(`Queering MozFest`, `experiences`) }
             </div>
 
             <div name="Sponsors" data-slug="sponsors" className="sponsors">
               <Sponsors />
             </div>
 
+            {
+            /*
             <div name="Partners" data-slug="partners">
-              <h1>Our 2017 Partners</h1>
+              <h1>2017 Partners</h1>
               <div className="horizontal-rule mb-5"></div>
               <Partners />
             </div>
+            */
+            }
           </TabSwitcher>
         </div>
       </div>

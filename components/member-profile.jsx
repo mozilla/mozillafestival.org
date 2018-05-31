@@ -34,11 +34,9 @@ var MemberProfile = React.createClass({
 
     return <p className="title my-0"><small>{this.props.title}</small></p>;
   },
-  render: function() {
-    let id = slugify(this.props.name);
-
+  renderFullProfile(id) {
     return (
-      <div className="row my-5 justify-content-center member-profile" id={id}>
+      <div className="row justify-content-center my-5">
         <div className="col-6 col-sm-3 mb-5 mb-sm-0 d-flex flex-column justify-content-center">
           <img className="img-fluid rounded-circle" src={ this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
@@ -50,6 +48,17 @@ var MemberProfile = React.createClass({
           </div>
           { this.renderBio() }
         </div>
+      </div>
+    );
+  },
+  render: function() {
+    let id = slugify(this.props.name);
+
+    return (
+      <div className="member-profile" id={id}>
+        {
+          this.props.showNameOnly ? <p>{this.props.name}</p> : this.renderFullProfile(id)
+        }
       </div>
     );
   }

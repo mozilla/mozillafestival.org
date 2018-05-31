@@ -1,41 +1,19 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router';
+import { Switch, Route } from 'react-router';
+import ProposalsPage from './pages/proposals/proposals.jsx';
+import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import HousePage from './pages/house.jsx';
+import NotificationBar from './components/notification-bar.jsx';
 import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
 
-const LANGUAGE = {
-  german: {
-    name: `deutsch`,
-    stringSource: require('./pages/proposals/language/german.json')
-  },
-  spanish: {
-    name: `espanol`,
-    stringSource: require('./pages/proposals/language/spanish.json')
-  },
-  french: {
-    name: `francais`,
-    stringSource: require('./pages/proposals/language/french.json')
-  }
-};
-
-const LOCALIZED_PROPOSAL_ROUTES = Object.keys(LANGUAGE).map(lang => {
-  var name = LANGUAGE[lang].name;
-
-  // The following (commented out) lines are for when CFP is still open
-  // var component = () => (<Proposals lang={lang}
-  //                                   stringSource={LANGUAGE[lang].stringSource} />);
-  // return <Route key={name} name={name} path={`/proposals/${name}`} component={component} />;
-
-  return <Route key={name} name={name} path={`/proposals/${name}`} render={() => <Redirect to="/proposals"/>} />;
-});
+let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishStrings} />;
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={require(`./pages/home.jsx`)} />
-    <Route exact path="/proposals" component={require(`./pages/cfp-closed.jsx`)} />
-    { LOCALIZED_PROPOSAL_ROUTES }
+    <Route exact path="/proposals" component={ProposalEnglish} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
     <Route path="/contact" component={require(`./pages/contact.jsx`)} />
@@ -87,6 +65,19 @@ class Main extends React.Component {
   render() {
     return (
       <div>
+        <NotificationBar>
+          <div className="d-inline-block mr-sm-2">
+            <div className="d-inline-block emphasized">
+              October 26-28, 2018 in London, England
+            </div>
+            <div className="d-inline-block emphasized">
+              Submit your session now for MozFest 2018!
+            </div>
+          </div>
+          <div className="d-inline-block">
+            Submission deadline is August 1.
+          </div>
+        </NotificationBar>
         <Header />
         <Routes />
         <Footer />

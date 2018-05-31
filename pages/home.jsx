@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 import speakersInfo from '../speakers/2017';
 import talksInfo from '../talks/2017';
-
-import Header from '../components/header.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 var Home = React.createClass({
@@ -14,15 +12,13 @@ var Home = React.createClass({
     return (
       <div className="home-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Header />
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
           image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
-            <h1>MozFest 2018</h1>
-            <p className="mb-0">The world's leading festival for the open Internet movement.</p>
+            <h1>Where Web Meets World</h1>
             <p className="mb-0">October 26-28, 2018</p>
-            <p className="mb-0">Ravensbourne College, London</p>
-            <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn p-3 m-3">Get Updates</a>
+            <p className="mb-0">Ravensbourne College in London, England</p>
+            <Link to="/proposals" className="btn p-3 my-5 mb-sm-0">Submit Your Session Now</Link>
           </div>
         </Jumbotron>
         <div className="white-background">

@@ -40,7 +40,7 @@ const Validator = {
       }
     };
   },
-  emailValidator(error = `Not an valid email.`) {
+  emailValidator(error = `Not a valid email.`) {
     return {
       error,
       validate: function(value) {

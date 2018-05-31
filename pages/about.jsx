@@ -90,24 +90,23 @@ var About = React.createClass({
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
-            <div className="confined-width-header text-center">
-              <h1>A Note from Mark Surman, Mozilla&#8217;s Executive Director</h1>
+            <div className="text-center">
+              <h1>A note from Mark Surman, Mozilla’s Executive Director, about MozFest and Internet Health</h1>
             </div>
             <div className="letter">
               <div className="half-content">
-                <p>October 2017 marks our eighth MozFest. It’s also our most ambitious one yet &mdash; more than ever, the movement for a healthy Internet needs a place to convene, organize and act.</p>
-                <p>At its start, MozFest &mdash; then called Drumbeat and nestled in Barcelona’s Museum of Contemporary Art &mdash; featured a small band of hackers and makers.</p>
-                <p>Since that 2010 gathering, MozFest has grown significantly. In size, yes &mdash; but more importantly, in scope. In 2011, the festival turned its attention to digital media, welcoming journalists and newsroom coders into the fold. In 2013, we focused on web literacy, inviting educators from around the world to craft tools and curricula for teaching the web. And in 2016, we talked about digital inclusion: who isn’t unlocking opportunity online, why that is, and what we can do to fix it.</p>
-                <p>This is an evolution that mirrors the growth of the Internet health movement. Today, the concept of Internet health reaches far beyond the realm of open source code: it’s linked to civil liberties and public policy, free expression and inclusion. Discussions about the state of the web include engineers, but now also teachers, lawmakers, community organizers and artists.</p>
+                <p>Earlier this year, Mozilla released its first full-length <a href="https://internethealthreport.org/2018/">Internet Health Report</a> &mdash; a deep look at how the internet and human life intersect, in ways both good and bad.</p>
+                <p>Writing the report was a chance to reflect on how remarkably the internet has changed. Today we have artificially-intelligent voice assistants and VR web browsing &mdash; innovations we couldn’t fathom in the days of 56k modems and static web pages.</p>
+                <p>There have also been harmful developments. Like <a href="https://internethealthreport.org/2018/spotlight-understanding-fake-news/">sophisticated misinformation campaigns</a>. <a href="https://internethealthreport.org/2018/spotlight-securing-the-internet-of-things/">The erosion of privacy and user control</a>. And <a href="https://internethealthreport.org/2018/too-big-tech/">a handful of technology giants controlling what was once a more open, decentralized space</a>.</p>
+                <p>This October, the people and ideas in the Internet Health Report will leap off the screen to discuss, debate and address these issues in person. Our ninth-annual Mozilla Festival is returning to London. And it feels more vital and necessary than ever.</p>
+                <p>Like the web, the Mozilla Festival has evolved over the years. It started as a small gathering in Spain &mdash; a few hundred fiery thinkers in a Barcelona museum. Our goal was to connect people building a healthy internet.</p>
               </div>
               <div className="half-content">
-                <p>This is a positive and heartening development. It’s also a necessary one. The Internet is layered into our lives like we never could have imagined. Access is no longer a luxury &mdash; it’s a fundamental part of 21st century life. A virus is no longer a nuisance consigned to a single terminal &mdash; it’s an existential threat that can disrupt hospitals, governments and entire cities.</p>
-                <p>The movement for a healthy Internet is primed to address these problems. But we need a hub to trade ideas, find inspiration, swap code and build solutions.</p>
-                <p>MozFest is that hub.</p>
-                <p>Our sessions, speakers and workshops are built to foster collaboration across disciplines, borders and continents. We’re ready to face the biggest issues of the day &mdash; from fake news and online harassment to global cyberattacks &mdash; together, with an eye toward practical, open source solutions. </p>
-                <p>The challenges we’re facing are sizable. But we’re prepared to roll up our sleeves and address them head on in London &mdash; then return to our communities, classrooms and computers, better equipped to defend the Internet as a global public resource.</p>
+                <p>As the internet became more entwined with everyday life, the festival’s goal remained the same &mdash; but the scope grew. We moved to a bigger space: the Ravensbourne campus in London. Participation swelled: In 2017, we hosted 2,500 activists, coders, journalists and educators from every continent except Antarctica. And the festival now unfolds across seven days and two venues.</p>
+                <p>In October, we’ll have that same fiery spirit from 2010. We’ll also have the people and resources to make a big impact. A seven-day festival with hundreds of experts means we can build tools that better protect user data. We can advance thinking on topics like <a href="https://internethealthreport.org/2018/intelligent-machines-arent-always-right/">ethical AI</a> and <a href="https://internethealthreport.org/2018/germanys-hate-speech-law-makes-global-waves/">common-sense tech policy</a>. We can forge new partnerships, we can train tomorrow’s leaders and we can fuel the movement for a healthier internet.</p>
+                <p><a href="https://foundation.mozilla.org/">MozFest is just the start</a>. Every year, we leave London inspired and committed. The ideas we bat around grow into influential and global campaigns. The code we craft becomes polished open-source products. All the while, we move toward a more open, inclusive and healthy internet.</p>
                 <p>
-                  See you there,<br/>
+                  Hope to see you there.<br/>
                   <span className="signature-bold">—Mark Surman</span>
                 </p>
                 <div className="signature-container">
