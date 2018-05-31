@@ -133,7 +133,7 @@
    "form_validation_errors": {
     "empty_value": "This field cannot be left blank.",
     "max_word_reached": "You have typed more words than allowed.",
-    "email_invalid": "Not an valid email.",
+    "email_invalid": "Not a valid email.",
     "errors_above": "Something isn't right. Please fix the errors indicated above."
   },
   "form_system_messages": {

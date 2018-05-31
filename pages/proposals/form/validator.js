@@ -19,7 +19,7 @@ const Validator = {
       }
     };
   },
-  emailValidator(error = `Not an valid email.`, allowedEmpty) {
+  emailValidator(error = `Not a valid email.`, allowedEmpty) {
     return {
       error,
       validate: function(value) {

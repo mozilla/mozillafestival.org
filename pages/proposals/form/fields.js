@@ -36,7 +36,6 @@ var createPartOneFields = function(stringSource) {
       placeholder: `hello@example.com`,
       fieldClassname: `form-control`,
       validator: [
-        validator.emptyValueValidator(EMPTY_VALUE_ERROR),
         validator.emailValidator(EMAIL_INVALID_ERROR)
       ]
     },
