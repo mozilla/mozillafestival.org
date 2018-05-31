@@ -36,7 +36,7 @@ module.exports = [
     title: `Festival Lead Engineer`,
     pic: `/assets/images/team/production/Mavis.jpg`,
     bio: [
-      `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experiences in the software world better. 2018 will be Mavis' 6th MozFest.`
+      `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experience in the software world better. 2018 will be Mavis' 6th MozFest.`
     ],
   },
   {

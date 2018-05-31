@@ -218,10 +218,11 @@ function renderPage(appHtml, reactHelmet) {
               <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/asset/images/apple-touch-icon-76x76@2x.png" />
               <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120@2x.png" />
               <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152@2x.png" />
+              <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+              <link href="https://fonts.googleapis.com/css?family=Zilla+Slab|Zilla+Slab+Highlight" rel="stylesheet">
               <link rel="stylesheet" type="text/css" href="/vendor/css/font-awesome.min.css">
               <link rel="stylesheet" type="text/css" href="/vendor/css/mofo-bootstrap.css"/>
               <link rel="stylesheet" type="text/css" href="/build/style.css">
-              <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
               <link rel="stylesheet" type="text/css" href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css'>
               <script>
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
