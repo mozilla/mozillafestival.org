@@ -32,11 +32,19 @@ module.exports = [
     ],
   },
   {
+    name: `Sabrina Ng`,
+    title: `Creative Design Lead`,
+    pic: `/assets/images/team/production/Sabrina.jpg`,
+    bio: [
+      `Sabrina is a user experience and interface designer for Mozilla Foundation. She enjoys designing experiences that help build and connect communities, and this can been seen in her design direction across the website and print assests for the festival. 2018 will be her sixth festival.`
+    ],
+  },
+  {
     name: `Mavis Ou`,
     title: `Festival Lead Engineer`,
     pic: `/assets/images/team/production/Mavis.jpg`,
     bio: [
-      `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experience in the software world better. 2018 will be Mavis' 6th MozFest.`
+      `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experience at MozFest, and in the software world better. 2018 will be Mavis' sixth MozFest.`
     ],
   },
   {
@@ -52,7 +60,7 @@ module.exports = [
     title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/ZiggyMaes.jpg`,
     bio: [
-      `Ziggy is one of the volunteer coordinators for MozFest 2017 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at FOSDEM as well. You’ll most definitely see him running through the venue during the event!`
+      `Ziggy is one of the volunteer coordinators for MozFest 2018 and has been involved with the Festival since 2011. As a Mozilla Rep, he focuses on developing the Belgian Mozilla community back home and organizes Mozilla’s yearly presence at FOSDEM as well. You’ll most definitely see him running through the venue during the event!`
     ],
   },
   {
