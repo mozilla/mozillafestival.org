@@ -240,7 +240,7 @@ var createPartThreeFields = function(stringSource) {
         LANG_OPTIONS.german,
         LANG_OPTIONS.russian,
         LANG_OPTIONS.greek,
-        LANG_OPTIONS.portugese,
+        LANG_OPTIONS.portuguese,
         LANG_OPTIONS.mandarin,
         LANG_OPTIONS.other,
       ],
