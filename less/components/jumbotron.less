@@ -1,36 +1,33 @@
 .jumbotron {
-  padding-top: 200px;
-  padding-bottom: 40px;
-  height: 100%;
-  @media screen and (min-width: 880px) {
-    padding: inherit;
-  }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
   background-position: 5% bottom, 95% top, center center;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto 40%, auto 40%, cover;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
   line-height: 1.3;
   letter-spacing: 1px;
   border-radius: 0;
 
   @media screen and (min-width: 768px) {
-    height: 500px;
+    min-height: 500px;
   }
+
+  .jumbotron-content {
+    flex-grow: 1;
+    padding: 25px 0;
+  }
+
   h1 {
     font-size: 30px;
     letter-spacing: 7px;
     font-weight: 600;
     text-transform: uppercase;
     text-shadow: none;
-    margin-top: 120px;
 
     @media screen and (min-width: 768px) {
       font-size: 45px;
-      margin-top: 0;
     }
   }
   h2 {

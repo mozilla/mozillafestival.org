@@ -5,7 +5,6 @@ import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import HousePage from './pages/house.jsx';
 import NotificationBar from './components/notification-bar.jsx';
-import Header from './components/header.jsx';
 import Footer from './components/footer.jsx';
 
 let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishStrings} />;
@@ -78,7 +77,6 @@ class Main extends React.Component {
             Submission deadline is August 1.
           </div>
         </NotificationBar>
-        <Header />
         <Routes />
         <Footer />
       </div>

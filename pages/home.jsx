@@ -18,7 +18,7 @@ var Home = React.createClass({
             <h1>Where Web Meets World</h1>
             <p className="mb-0">October 26-28, 2018</p>
             <p className="mb-0">Ravensbourne College in London, England</p>
-            <Link to="/proposals" className="btn p-3 my-5 mb-sm-0">Submit Your Session Now</Link>
+            <Link to="/proposals" className="btn p-3 mt-5">Submit Your Session Now</Link>
           </div>
         </Jumbotron>
         <div className="white-background">
