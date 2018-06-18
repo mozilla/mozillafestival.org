@@ -16,10 +16,12 @@ const NAV_LINKS = [
   { path: `/team/sponsors`, label: `Sponsors` }
 ];
 
+const LAYOUT_BREAK_POINT = NAV_LINKS.length >= 6 ? `lg` : `md`;
+
 class NavBar extends React.Component {
   renderNavLinks() {
     return NAV_LINKS.map(link => {
-      return <div className="nav-link-container d-inline-block mx-2 mb-2 my-sm-0" key={link.label}>
+      return <div className={`nav-link-container d-inline-block mx-2 mb-2 my-${LAYOUT_BREAK_POINT}-0`} key={link.label}>
         { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
         { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
       </div>;
@@ -31,13 +33,13 @@ class NavBar extends React.Component {
       <div className="nav-bar container">
         <div className="row">
           <div className="col-12">
-            <div className="d-flex flex-column flex-sm-row justify-content-between">
+            <div className={`d-flex flex-column flex-${LAYOUT_BREAK_POINT}-row justify-content-between`}>
               <div className="logo">
-                <NavLink to="/" className="d-block text-center text-sm-left">
+                <NavLink to="/" className={`d-block text-center text-${LAYOUT_BREAK_POINT}-left`}>
                   <ImageTag src1x="/assets/images/Mozilla-Festival-2018.svg" alt="mozfest logo"/>
                 </NavLink>
               </div>
-              <div className="nav-items d-flex align-items-center justify-content-center flex-wrap mt-4 mt-sm-0">
+              <div className={`nav-items d-flex align-items-center justify-content-center flex-wrap mt-4 mt-${LAYOUT_BREAK_POINT}-0`}>
                 { this.renderNavLinks() }
               </div>
             </div>
