@@ -1,5 +1,7 @@
 var React = require('react');
 
+import NavBar from '../components/nav-bar.jsx';
+
 var Jumbotron = React.createClass({
   calculateDensity: function () {
     var
@@ -50,10 +52,11 @@ var Jumbotron = React.createClass({
 
     return (
       <div className="jumbotron-container">
-        <div className="jumbotron m-0" style={{
-          backgroundImage: backgroundImages
-        }}>
-          {this.props.children}
+        <div className="jumbotron d-flex flex-column" style={{ backgroundImage: backgroundImages }}>
+          <NavBar />
+          <div className="jumbotron-content d-flex flex-column justify-content-center text-center">
+            {this.props.children}
+          </div>
         </div>
       </div>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import Header from '../components/header.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import EventCardGroup from '../components/event-card-group.jsx';
 import generateHelmet from '../lib/helmet.jsx';
@@ -75,7 +74,6 @@ class HousePage extends React.Component {
     return (
       <div className={this.pageClassName}>
         {generateHelmet(this.pageMetaDescription)}
-        <Header/>
         <Jumbotron image="/assets/images/hero/house.jpg"
           image2x="/assets/images/hero/house.jpg">
           <h1>MozFest House</h1>
