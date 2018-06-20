@@ -18,7 +18,7 @@ var SpeakerTinyCard = React.createClass({
           <small>{this.props.shortIntro}</small>
         </p>
         <p className="mb-0">
-          <a href={this.props.link}>{this.props.talkName}</a>
+          <a href={this.props.link} target="_blank">{this.props.talkName}</a>
         </p>
       </div>
     );
