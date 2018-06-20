@@ -2,7 +2,6 @@ import React from 'react';
 import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
 import SpeakersPromo from '../components/speakers-promo.jsx';
-import speakersInfo from '../speakers/2017';
 import talksInfo from '../talks/2017';
 import generateHelmet from '../lib/helmet.jsx';
 
@@ -37,8 +36,9 @@ var Home = React.createClass({
         </div>
         <div>
           <div className="centered content wide">
-            <h1>2017 Dialogues and Debates</h1>
-            <SpeakersPromo speakersInfo={speakersInfo} talksInfo={talksInfo}/>
+            <h1>Dialogues and Debates</h1>
+            <p>Each year, MozFest features talks from luminaries at the intersection of technology and society. We host hackers, journalists, activists, and others on our stage. Here are just a few:</p>
+            <SpeakersPromo talksInfo={talksInfo}/>
           </div>
         </div>
         {/* <div className="news content wide">

@@ -17,7 +17,7 @@ var SpeakersPage = React.createClass({
           image2x="/assets/images/hero/team.jpg">
           <h1>Speakers</h1>
         </Jumbotron>
-        <div className="content wide mt-0">
+        <div className="content wide my-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
 
             {/* <div name="2018" data-slug="2018">
