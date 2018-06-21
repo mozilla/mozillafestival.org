@@ -34,12 +34,8 @@ var Home = React.createClass({
             </Link>
           </div>
         </div>
-        <div>
-          <div className="centered content wide">
-            <h1>Dialogues and Debates</h1>
-            <p>Each year, MozFest features talks from luminaries at the intersection of technology and society. We host hackers, journalists, activists, and others on our stage. Here are just a few:</p>
-            <SpeakersPromo talksInfo={talksInfo}/>
-          </div>
+        <div className="centered content wide">
+          <SpeakersPromo talksInfo={talksInfo}/>
         </div>
         {/* <div className="news content wide">
           <h1 className="text-center">Latest News</h1>
