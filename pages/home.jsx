@@ -2,7 +2,6 @@ import React from 'react';
 import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
 import SpeakersPromo from '../components/speakers-promo.jsx';
-import speakersInfo from '../speakers/2017';
 import talksInfo from '../talks/2017';
 import generateHelmet from '../lib/helmet.jsx';
 
@@ -35,11 +34,8 @@ var Home = React.createClass({
             </Link>
           </div>
         </div>
-        <div>
-          <div className="centered content wide">
-            <h1>2017 Dialogues and Debates</h1>
-            <SpeakersPromo speakersInfo={speakersInfo} talksInfo={talksInfo}/>
-          </div>
+        <div className="centered content wide">
+          <SpeakersPromo talksInfo={talksInfo}/>
         </div>
         {/* <div className="news content wide">
           <h1 className="text-center">Latest News</h1>

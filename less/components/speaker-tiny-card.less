@@ -1,19 +1,26 @@
 .speaker-tiny-card {
-  margin-bottom: 2.5rem;
-  img {
-    max-width: 250px;
+  .name {
+    font-weight: 500;
   }
-  p {
-    margin: 0;
-    &.name {
-      margin-top: .5rem;
+
+  .subhead {
+    font-style: italic;
+
+    small {
+      font-weight: 300;
     }
   }
-}
 
-@media screen and (min-width: 768px) {
-  .speaker-tiny-card {
-    margin-bottom: 0;
+  .name,
+  .subhead {
+    line-height: 1.1;
+  }
+
+  img {
+    max-width: 150px;
+  }
+
+  @media screen and (min-width: 768px) {
     img {
       max-width: 140px;
     }
