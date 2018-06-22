@@ -23,6 +23,40 @@
   }
 
   form {
+
+    // react-select overrides
+    .Select {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.25rem;
+
+      .Select-control {
+        border: none;
+      }
+
+      .Select-value,
+      .Select-placeholder,
+      &.has-value.Select--single > .Select-control .Select-value .Select-value-label {
+        .form-control;
+
+        border: none;
+      }
+
+      &.has-value.Select--single > .Select-control .Select-value .Select-value-label {
+        padding: 0;
+        font-weight: 400;
+      }
+
+      .Select-menu-outer {
+        font-size: 1rem;
+      }
+
+      .Select-placeholder {
+        color: #adadad;
+        font-weight: 400;
+        font-family: "Open Sans";
+      }
+    }
+
     .choice-group {
       // we don't have individual options in a .choice-group to have a "required" note next to them
       label {
@@ -80,6 +114,12 @@
     .guide-text {
       font-weight: 600;
       color: @blue;
+    }
+  }
+
+  fieldset.residence {
+    .guide-text {
+      margin-top: 0;
     }
   }
 

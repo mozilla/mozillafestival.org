@@ -56,6 +56,8 @@
     "surname": "Surname",
     "email": "Email address",
     "organisation": "Organisation or affiliation",
+    "residence": "What country do you currently reside in?",
+    "residence_hint": "We ask this question in order to get a better understanding of who is participating in MozFest. You can respond as a resident or as a citizen of a country. It will not be linked to your submission on GitHub for privacy reasons and will only be shared with Mozilla staff and Mozfest wranglers.",
     "twitterhandle": "Twitter handle",
     "githubhandle": "GitHub handle",
     "additionalfacilitator": "Additional facilitator",
