@@ -1,4 +1,5 @@
 import validator from './validator';
+import CountrySelect from './country-select.jsx';
 
 // *** IMPORTANT ***
 //
@@ -46,6 +47,15 @@ var createPartOneFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR),
       ]
+    },
+    'residence': {
+      type: CountrySelect,
+      label: stringSource.form_field_labels.residence,
+      fieldClassname: `form-control`,
+      validator: [
+        validator.emptyValueValidator(EMPTY_VALUE_ERROR)
+      ],
+      guideText: stringSource.form_field_labels.residence_hint
     },
     'twitterhandle': {
       optional: true,
