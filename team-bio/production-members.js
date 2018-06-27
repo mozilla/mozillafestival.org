@@ -4,7 +4,7 @@ module.exports = [
     title: `Festival Director`,
     pic: `/assets/images/team/production/MarkSurman.jpg`,
     bio: [
-      `Mark is Executive Director of the Mozilla Foundation, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with like-minded organizations and leaders, and growing the open internet movement.`
+      `Mark is Executive Director of Mozilla, a global community that does everything from making Firefox to taking stands on issues like privacy and net neutrality. Mark’s main job is to build the movement side of Mozilla, rallying the citizens of the web, building alliances with like-minded organizations and leaders, and growing the open internet movement.`
     ],
   },
   {
@@ -65,10 +65,10 @@ module.exports = [
   },
   {
     name: `Robert Sayles`,
-    title: `Volunteer Coordinator`,
+    title: `Senior Volunteer Coordinator`,
     pic: `/assets/images/team/production/RobertSayles.jpg`,
     bio: [
-      `Robby is a Mozilla Rep Mentor based out of Dallas, Texas. He loves volunteering and a big web and aviation feel.`
+      `Robby is a Mozilla Rep Mentor based out of Dallas, Texas. He loves volunteering, the open web, and aviation. He is a longtime contributor to Mozilla and MozFest.`
     ],
   }
 ];
