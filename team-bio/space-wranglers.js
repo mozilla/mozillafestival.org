@@ -202,7 +202,7 @@ let WEB_LITERACY_WRANGLERS = [
   },
   {
     name: `Ryan Warsaw`,
-    twitter: `@ryanwse`,
+    twitter: ``,
     bio: [
       `Ryan is a software engineer at Enki and core contributor at Mozilla. He is oriented around the learning space, and in his free time contributes to Mozilla's previous and current learning products such as Webmaker, Thimble, and the Digital Skills Observatory initative.`
     ]
