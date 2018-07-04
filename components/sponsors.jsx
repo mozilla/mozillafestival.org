@@ -77,20 +77,25 @@ var Sponsors = React.createClass({
         <p>
           In 2018, Mozilla is offering opportunities for mission-aligned companies to showcase their commitment to a healthy Internet with our 2,500+ guests and the millions of engaged supporters online. By partnering with us, you can:
         </p>
-        <ul>
-          <li>
-            Engage Mozilla audiences with your brand in an authentic way providing real insights on your products and reach new customers
-          </li>
-          <li>
-            Align your message with Mozilla to help showcase your support for protecting the Internet as a global public resource
-          </li>
-          <li>
-            Help shape smart policy that is good for innovation and good for the Internet
-          </li>
-          <li>
-            Provide your employees and clients with ways to teach, learn and get involved in key issues affecting the Internet today
-          </li>
-        </ul>
+        <div className="d-flex">
+          <ul className="d-inline-block w-50 mr-sm-3">
+            <li>
+              Engage Mozilla audiences with your brand in an authentic way providing real insights on your products and reach new customers
+            </li>
+            <li>
+              Align your message with Mozilla to help showcase your support for protecting the Internet as a global public resource
+            </li>
+            <li>
+              Help shape smart policy that is good for innovation and good for the Internet
+            </li>
+            <li>
+              Provide your employees and clients with ways to teach, learn and get involved in key issues affecting the Internet today
+            </li>
+          </ul>
+          <div className="d-inline-block w-50">
+            <img src="/assets/images/20171027-mozfest-52.jpg" className="img-fluid" />
+          </div>
+        </div>
         <p>
           Together, we can protect the Internet as a resource that will help grow your business, spark your next great idea, and deliver you the best tools and resources to get the job done.
         </p>
