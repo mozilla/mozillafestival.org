@@ -50,6 +50,16 @@ const PARTNERS_LIST = [
     name: `UAL`,
     logo: `/assets/images/team/partner/partner_ual copy_grayscale.png`,
     link: ``
+  },
+  {
+    name: `Ravensbourne`,
+    logo: `/assets/images/team/partner/Ravensbourne.jpg`,
+    link: `https://www.ravensbourne.ac.uk`
+  },
+  {
+    name: `BBC`,
+    logo: `/assets/images/team/partner/BBC.jpg`,
+    link: `https://www.bbc.co.uk/rd`
   }
 ];
 
