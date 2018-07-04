@@ -53,12 +53,12 @@ const PARTNERS_LIST = [
   },
   {
     name: `Ravensbourne`,
-    logo: `/assets/images/team/partner/Ravensbourne.jpg`,
+    logo: `/assets/images/team/partner/partner_ravensbourne.jpg`,
     link: `https://www.ravensbourne.ac.uk`
   },
   {
     name: `BBC`,
-    logo: `/assets/images/team/partner/BBC.jpg`,
+    logo: `/assets/images/team/partner/parnter_BBC-R&D.png`,
     link: `https://www.bbc.co.uk/rd`
   }
 ];
