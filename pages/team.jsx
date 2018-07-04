@@ -7,69 +7,10 @@ var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 var Sponsors = require('../components/sponsors.jsx');
 
+import Partners from '../components/partners.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 const WRANGLER_SHOW_NAME_ONLY = false;
-
-/*
-var Partners = React.createClass({
-  partnersInfo: [
-    {
-      name: `Youth Led EU`,
-      logo: `/assets/images/team/partner/YouthLedEU.jpg`,
-      link: `https://www.facebook.com/YouthLedEU/`
-    },
-    {
-      name: `The Tate`,
-      logo: `/assets/images/team/partner/Tate.jpg`,
-      link: `http://www.tate.org.uk/`
-    },
-    {
-      name: `The V&A`,
-      logo: `/assets/images/team/partner/VA.jpg`,
-      link: `https://www.vam.ac.uk/`
-    },
-    {
-      name: `Arts Award`,
-      logo: `/assets/images/team/partner/ArtsAward.jpg`,
-      link: `http://www.artsaward.org.uk/`
-    },
-    {
-      name: `BBC`,
-      logo: `/assets/images/team/partner/BBC.jpg`,
-      link: `http://www.bbc.co.uk/rd`
-    },
-    {
-      name: `Ravensbourne`,
-      logo: `/assets/images/team/partner/Ravensbourne.jpg`,
-      link: `http://www.ravensbourne.ac.uk/`
-    },
-    {
-      name: `Digital Me`,
-      logo: `/assets/images/team/partner/DigitalMe.jpg`,
-      link: `http://www.digitalme.co.uk/`
-    },
-    {
-      name: `Translate`,
-      logo: `/assets/images/team/partner/Translate.jpg`,
-      link: `http://www.translate.org.za/`
-    },
-  ],
-  renderPartnerLogos: function() {
-    return this.partnersInfo.map((partner) => {
-      return <div className="col-12 col-sm-4 partner" key={partner.name}>
-        <a href={partner.link}>
-          { partner.logo ? <img src={partner.logo} alt={partner.name} className="img-fluid mb-4" /> : partner.name }
-        </a>
-      </div>;
-    });
-  },
-  render: function() {
-    return <div className="row">{this.renderPartnerLogos()}</div>;
-  }
-});
-*/
-
 
 var TeamPage = React.createClass({
   pageMetaDescription: "",
@@ -118,15 +59,11 @@ var TeamPage = React.createClass({
               <Sponsors />
             </div>
 
-            {
-            /*
-            <div name="Partners" data-slug="partners">
-              <h1>2017 Partners</h1>
-              <div className="horizontal-rule mb-5"></div>
+            <div name="Partners" data-slug="partners" className="partners">
+              <h1>2018 Partners</h1>
+              <p>MozFest would like to thank the following partners for their support in creating the festival program.</p>
               <Partners />
             </div>
-            */
-            }
           </TabSwitcher>
         </div>
       </div>
