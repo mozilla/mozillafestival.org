@@ -38,7 +38,7 @@
     "express": "^4.16.3",
     "express-rate-limit": "^2.11.0",
     "font-awesome": "^4.7.0",
-    "google-spreadsheet": "^2.0.3",
+    "google-spreadsheet": "^2.0.5",
     "habitat": "0.4.1",
     "hatchet": "0.3.2",
     "less": "^3.0.2",
@@ -59,6 +59,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-select": "^1.2.1",
+    "request": "^2.87.0",
     "shx": "^0.2.2",
     "slugify": "^1.2.9",
     "underscore": "^1.9.0",
@@ -79,7 +80,7 @@
     ]
   },
   "devDependencies": {
-    "chokidar": "^2.0.3",
+    "chokidar": "^2.0.4",
     "chokidar-cli": "^1.2.0",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
