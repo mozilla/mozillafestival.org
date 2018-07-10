@@ -34,7 +34,7 @@ class HousePage extends React.Component {
   }
 
   componentDidMount() {
-    // this.getHouseEvents();
+    this.getHouseEvents();
   }
 
   getHouseEvents() {
@@ -67,7 +67,15 @@ class HousePage extends React.Component {
         : <p className="loading-message">Loading events</p>;
       events = <div>{events}</div>;
     }
-    return events;
+
+    if (!events) return null;
+
+    return <div>
+      <h3>MozFest House 2018</h3>
+      <div className="text-left white-background">
+        { events }
+      </div>
+    </div>;
   }
 
   render() {
@@ -94,12 +102,7 @@ class HousePage extends React.Component {
               </ul>
               <p>Are you interested in hosting an event as part of MozFest House? Contact us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a></p>
             </div>
-            {/*
-            <h3>MozFest House 2017</h3>
-            <div className="text-left white-background">
-              { this.renderHouseEvents() }
-            </div>
-            */}
+            { this.renderHouseEvents() }
           </div>
         </div>
       </div>

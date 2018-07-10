@@ -126,13 +126,13 @@ function getFringeEvents(response) {
 
 function getHouseEvents(response) {
   // fetches data stored in the Google Spreadsheet
-  var sheet = new GoogleSpreadsheet(env.get(`HOUSE_EVENT_SPREADSHEET_ID_2017`));
+  var sheet = new GoogleSpreadsheet(env.get(`HOUSE_EVENT_SPREADSHEET_ID_2018`));
 
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
   sheet.useServiceAccountAuth({
-    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
-    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2018`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2018`).replace(/\\n/g, `\n`)
   }, (err) => {
     if (err) {
       console.log(`[Error] ${err}`);
@@ -144,7 +144,7 @@ function getHouseEvents(response) {
         console.log("[Error] ", sheetErr);
         response.status(500).json(sheetErr);
       } else {
-        let approvedRows = rows.filter((row) => {
+        let approvedRows = rows.filter(row => {
           let showOnSite = row.addtowebsite.toLowerCase().trim();
           return showOnSite === `y` || showOnSite === `yes`;
         });
