@@ -7,7 +7,7 @@ import generateHelmet from '../lib/helmet.jsx';
 
 import 'whatwg-fetch';
 
-const SHOW_HOUSE_EVENT = true;
+const SHOW_HOUSE_EVENT = false;
 
 const DATE_FORMAT = `MMM DD, YYYY`;
 const TIME_FORMAT = `h:mma`;
