@@ -7,6 +7,8 @@ var EventCardGroup = require('../../components/event-card-group.jsx');
 
 var fields = require('./form/fields');
 
+import LoadingNotice from '../../components/loading-notice.jsx';
+
 require('whatwg-fetch');
 
 const DATE_FORMAT = `MMM DD, YYYY`;
@@ -161,8 +163,8 @@ var FringePage = React.createClass({
     if ( this.state.eventsLoaded ) {
       events = <EventCardGroup events={this.state.events} />;
     } else {
-      events = this.state.unableToLoadEvents ? <p>Unable to load events.</p>
-        : <p className="loading-message">Loading events</p>;
+      events = this.state.unableToLoadEvents ? <p className="text-center">Unable to load events.</p>
+        : <LoadingNotice />;
     }
     return events;
   },
