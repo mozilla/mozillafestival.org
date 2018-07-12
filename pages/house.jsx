@@ -2,9 +2,12 @@ import React from 'react';
 import moment from 'moment';
 import Jumbotron from '../components/jumbotron.jsx';
 import EventCardGroup from '../components/event-card-group.jsx';
+import LoadingNotice from '../components/loading-notice.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 import 'whatwg-fetch';
+
+const SHOW_HOUSE_EVENT = true;
 
 const DATE_FORMAT = `MMM DD, YYYY`;
 const TIME_FORMAT = `h:mma`;
@@ -25,16 +28,17 @@ class HousePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: [],
-      eventsLoaded: false,
-      unableToLoadEvents: false
+      events: null,
+      eventsLoaded: false
     };
     this.pageClassName = `house-page`;
     this.pageMetaDescription = "";
   }
 
   componentDidMount() {
-    this.getHouseEvents();
+    if (SHOW_HOUSE_EVENT) {
+      this.getHouseEvents();
+    }
   }
 
   getHouseEvents() {
@@ -45,30 +49,27 @@ class HousePage extends React.Component {
       .then(events => {
         this.setState({
           events: events.sort(sortByTime),
-          eventsLoaded: true,
-          unableToLoadEvents: false
+          eventsLoaded: true
         });
       })
       .catch(() => {
         this.setState({
-          eventsLoaded: true,
-          unableToLoadEvents: true
+          eventsLoaded: true
         });
       });
   }
 
   renderHouseEvents() {
-    let events = false;
+    let events = <LoadingNotice />;
 
     if ( this.state.eventsLoaded ) {
-      events = <EventCardGroup events={this.state.events} />;
-    } else {
-      events = this.state.unableToLoadEvents ? <p>Unable to load events.</p>
-        : <p className="loading-message">Loading events</p>;
-      events = <div>{events}</div>;
-    }
+      if (this.state.events) {
+        events = this.state.events.length === 0 ? <p className="text-center">Please stay tuned for more to come!</p> : <EventCardGroup events={this.state.events} />;
+      } else {
+        events = <p className="text-center">Unable to load events.</p>;
+      }
 
-    if (!events) return null;
+    }
 
     return <div>
       <h3>MozFest House 2018</h3>
@@ -102,7 +103,7 @@ class HousePage extends React.Component {
               </ul>
               <p>Are you interested in hosting an event as part of MozFest House? Contact us at <a href="mailto:festival@mozilla.org">festival@mozilla.org</a></p>
             </div>
-            { this.renderHouseEvents() }
+            { SHOW_HOUSE_EVENT && this.renderHouseEvents() }
           </div>
         </div>
       </div>
