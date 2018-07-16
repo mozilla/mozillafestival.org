@@ -10,7 +10,6 @@
   }
   .inner-wrapper {
     background: @light-grey;
-    height: 100%;
   }
 
   .date-and-time,
@@ -23,7 +22,7 @@
       text-align: center;
       width: 20px;
       height: auto;
-      margin-right: 5px; 
+      margin-right: 5px;
     }
   }
 
@@ -48,6 +47,15 @@
   .registration-link {
     &:before {
       content: "\f145";
+    }
+  }
+
+  .description {
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 }
