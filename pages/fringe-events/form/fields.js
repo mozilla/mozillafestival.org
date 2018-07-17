@@ -130,14 +130,19 @@ var createPartOneFields = function() {
       ]
     },
     'description': {
-      type: `textarea`,
+      type: `text`,
       label: `Description of your Event`,
       labelClassname: `required word-length-restriction max-50-words`,
       fieldClassname: `form-control`,
       validator: [
         validator.emptyValueValidator(),
         validator.maxWordsValidator(50)
-      ]
+      ],
+      wordLimit: 50,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'demonstrate': {
       type: `textarea`,
@@ -147,7 +152,12 @@ var createPartOneFields = function() {
       validator: [
         validator.emptyValueValidator(),
         validator.maxWordsValidator(120)
-      ]
+      ],
+      wordLimit: 120,
+      wordLimitText: function(charCount, charLimit) {
+        // show a twitter-style "characters remainig" count
+        return charLimit - charCount;
+      }
     },
     'link': {
       type: `text`,

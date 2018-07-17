@@ -1,5 +1,4 @@
 var React = require('react');
-var ReactRouter = require('react-router');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
 var Jumbotron = require('../../components/jumbotron.jsx');
@@ -26,13 +25,16 @@ let sortByTime = function(a,b) {
   return 0;
 };
 
-var FringeEventForm = React.createClass({
-  getInitialState: function() {
-    return {
+class FringeEventForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       submitting: false,
       formValues: {}
     };
-  },
+  }
+
   handleFormUpdate(evt, name, field, value) {
     let formValues = this.state.formValues;
     formValues[name] = value;
@@ -42,8 +44,9 @@ var FringeEventForm = React.createClass({
       // this is a quick fix.
       showFormInvalidNotice: false
     });
-  },
-  handleFormSubmit: function(event) {
+  }
+
+  handleFormSubmit(event) {
     event.preventDefault();
 
     this.refs.formPartOne.validates(partOneIsValid => {
@@ -63,7 +66,8 @@ var FringeEventForm = React.createClass({
         }
       });
     });
-  },
+  }
+
   submitFringeEvent(fringeEvent) {
     fringeEvent.timestamp = moment().format('MMM DD, YYYY hh:mm a');
 
@@ -76,7 +80,7 @@ var FringeEventForm = React.createClass({
 
       this.setState({ submitting: false }, () => {
         if (resStatus >= 200 && resStatus < 400) {
-          ReactRouter.browserHistory.push({
+          this.props.history.push({
             pathname: `/fringe/success`
           });
         }
@@ -88,8 +92,9 @@ var FringeEventForm = React.createClass({
     };
 
     request.send(JSON.stringify(fringeEvent));
-  },
-  render: function() {
+  }
+
+  render() {
     let formFields = fields.createFields();
 
     return <div>
@@ -97,66 +102,67 @@ var FringeEventForm = React.createClass({
       <Form ref="formPartOne"
         fields={formFields.partOne}
         inlineErrors={true}
-        onUpdate={this.handleFormUpdate} />
+        onUpdate={(event, name, field, value) => this.handleFormUpdate(event, name, field, value)}
+      />
       <h2>Privacy Policy</h2>
       <p>Read more about <a href="https://www.mozilla.org/privacy/" target="_blank">Mozilla's privacy policy</a>.</p>
       <Form ref="formPartTwo"
         fields={formFields.partTwo}
         inlineErrors={true}
-        onUpdate={this.handleFormUpdate} />
+        onUpdate={(event, name, field, value) => this.handleFormUpdate(event, name, field, value)}
+      />
       <div>
         <button
           ref="submitBtn"
           className="btn btn-primary-outline mr-3 my-5"
           type="submit"
-          onClick={this.handleFormSubmit}
+          onClick={(event) => this.handleFormSubmit(event)}
           disabled={this.state.submitting ? `disabled` : null}
         >{ this.state.submitting ? 'Submitting...' : 'Submit' }</button>
       </div>
     </div>;
   }
-});
+}
 
+class FringePage extends React.Component {
+  constructor(props) {
+    super(props);
 
-var FringePage = React.createClass({
-  getInitialState: function() {
-    return {
+    this.state = {
       events: [],
       eventsLoaded: false,
       unableToLoadEvents: false
     };
-  },
-  componentDidMount: function() {
+  }
+
+  componentDidMount() {
     this.getFringeEvents();
-  },
-  handleEventResponse: function(response) {
-    return response.json();
-  },
-  handleEventData: function(data) {
-    this.setState({
-      events: data.sort(sortByTime),
-      eventsLoaded: true,
-      unableToLoadEvents: false
-    });
-  },
-  handleEventDataError: function() {
-    this.setState({
-      eventsLoaded: true,
-      unableToLoadEvents: true
-    });
-  },
-  getFringeEvents: function() {
+  }
+
+  getFringeEvents() {
     fetch('/get-fringe-events', {
       method: 'get'
-    })
-      .then(this.handleEventResponse)
-      .then(this.handleEventData)
-      .catch(this.handleEventDataError);
-  },
+    }).then(response => response.json())
+      .then(events => {
+        this.setState({
+          events: events.sort(sortByTime),
+          eventsLoaded: true,
+          unableToLoadEvents: false
+        });
+      })
+      .catch(() => {
+        this.setState({
+          eventsLoaded: true,
+          unableToLoadEvents: true
+        });
+      });
+  }
+
   handleScrollToFringeForm(event) {
     event.preventDefault();
     this.refs.fringeForm.scrollIntoView(true);
-  },
+  }
+
   renderFringeEvents() {
     var events = false;
 
@@ -167,8 +173,9 @@ var FringePage = React.createClass({
         : <LoadingNotice />;
     }
     return events;
-  },
-  render: function() {
+  }
+
+  render() {
     return (
       <div className="fringe-events-page">
         <Jumbotron image="/assets/images/hero/fringe.jpg"
@@ -204,12 +211,12 @@ var FringePage = React.createClass({
           <div className="content wide">
             <div className="horizontal-rule"></div>
             <h1 className="text-center">Submit Your Fringe Event</h1>
-            <FringeEventForm />
+            <FringeEventForm {...this.props} />
           </div>
         </div>
       </div>
     );
   }
-});
+}
 
-module.exports = FringePage;
+export default FringePage;

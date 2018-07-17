@@ -64,7 +64,7 @@ class HousePage extends React.Component {
 
     if ( this.state.eventsLoaded ) {
       if (this.state.events) {
-        events = this.state.events.length === 0 ? <p className="text-center">Please stay tuned for more to come!</p> : <EventCardGroup events={this.state.events} />;
+        events = this.state.events.length === 0 ? <p className="text-center">Please stay tuned for more to come!</p> : <EventCardGroup events={this.state.events} type="house" />;
       } else {
         events = <p className="text-center">Unable to load events.</p>;
       }

@@ -63,15 +63,15 @@ app.post(`/add-proposal`, limiter, (req, res) => {
 });
 
 app.post('/add-fringe-event', limiter, (req, res) => {
-  var SPREADSHEET_ID = env.get(`FRINGE_EVENT_SPREADSHEET_ID_2017`);
+  var SPREADSHEET_ID = env.get(`FRINGE_EVENT_SPREADSHEET_ID_2018`);
   var sheet = new GoogleSpreadsheet(SPREADSHEET_ID);
   var fringeEvent = req.body;
 
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
   sheet.useServiceAccountAuth({
-    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
-    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2018`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2018`).replace(/\\n/g, `\n`)
   }, (err) => {
     if (err) {
       console.log(`[Error] ${err}`);
@@ -92,13 +92,13 @@ app.post('/add-fringe-event', limiter, (req, res) => {
 
 function getFringeEvents(response) {
   // fetches data stored in the Fringe Events Google Spreadsheet
-  var sheet = new GoogleSpreadsheet(env.get(`FRINGE_EVENT_SPREADSHEET_ID_2017`));
+  var sheet = new GoogleSpreadsheet(env.get(`FRINGE_EVENT_SPREADSHEET_ID_2018`));
 
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
   sheet.useServiceAccountAuth({
-    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2017`),
-    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2017`).replace(/\\n/g, `\n`)
+    "client_email": env.get(`GOOGLE_API_CLIENT_EMAIL_2018`),
+    "private_key": env.get(`GOOGLE_API_PRIVATE_KEY_2018`).replace(/\\n/g, `\n`)
   }, (err) => {
     if (err) {
       console.log(`[Error] ${err}`);
@@ -110,14 +110,15 @@ function getFringeEvents(response) {
         console.log("[Error] ", sheetErr);
         response.status(500).json(sheetErr);
       } else {
-        let approvedRows = rows.filter((row) => {
+        let approvedRows = rows.filter(row => {
           let approved = row.approved.toLowerCase().trim();
           return approved === `y` || approved === `yes`;
-        }).map((row) => {
+        }).map(row => {
           // don't expose contact email
           delete row.contactemail;
           return row;
         });
+
         response.send(approvedRows);
       }
     });
