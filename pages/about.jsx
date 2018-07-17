@@ -90,7 +90,7 @@ var About = React.createClass({
               <p>This year, ideas from Mozilla’s first full-length <a href="https://internethealthreport.org/2018/">Internet Health Report</a> — a deep look at how the Internet and human life intersect — are at the heart of the festival. At MozFest 2018, we’ll strategize our next moves in global campaigns for net neutrality, data privacy, and online freedom. We’ll advance thinking on topics like <a href="https://internethealthreport.org/2018/intelligent-machines-arent-always-right/">ethical AI</a> and <a href="https://internethealthreport.org/2018/germanys-hate-speech-law-makes-global-waves/">common-sense tech policy</a>. We’ll collaborate on code, on art and practical ideas, creating seeds for the next great open-source products.
               </p>
               <p>
-                Join us, and fuel the movement for a healthier internet!
+                Join us, and fuel the movement for a healthier Internet!
               </p>
               <div className="signature-container d-flex align-items-start justify-content-end">
                 <ImageTag src1x="/assets/images/signature.svg"
