@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router';
 import ProposalsPage from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
+import FringePage from './pages/fringe-events/fringe-events.jsx';
 import HousePage from './pages/house.jsx';
 import NotificationBar from './components/notification-bar.jsx';
 import Footer from './components/footer.jsx';
@@ -23,7 +24,7 @@ const Routes = () => (
     <Route exact path="/team" component={require(`./pages/team.jsx`)} />
     <Route path="/team/:tab" component={require(`./pages/team.jsx`)} />
     <Route path="/spaces" component={require(`./pages/spaces.jsx`)} />
-    <Route exact path="/fringe" component={require(`./pages/fringe-events/fringe-events.jsx`)} />
+    <Route exact path="/fringe" component={FringePage} />
     <Route path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
     <Route path="/tickets" component={require(`./pages/tickets.jsx`)} />
     <Route path="/media" component={require(`./pages/media.jsx`)} />

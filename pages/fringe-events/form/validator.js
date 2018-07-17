@@ -17,7 +17,7 @@ const Validator = {
         if (!value) return false;
 
         let wordLength = value.trim().split(` `).length;
-        this.error = `${wordLength}/${maxWordsLength}`;
+        // this.error = `${wordLength}/${maxWordsLength}`;
 
         return wordLength > maxWordsLength;
       }
