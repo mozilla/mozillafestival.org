@@ -22,7 +22,7 @@ const FOOTER_LINKS = [
   {
     iconType: `info`,
     link: `/media`,
-    text: `Media`
+    text: `Media Center`
   },
   {
     iconType: `legal`,

@@ -5,6 +5,24 @@ import generateHelmet from '../lib/helmet.jsx';
 
 const PAST_COVERAGE = [
   {
+    media: `Wired UK`,
+    title: `One unhappy year in Trump's America`,
+    link: `http://www.wired.co.uk/article/upvote-17-one-unhappy-year-in-trumps-america`,
+    date: `November 2017`
+  },
+  {
+    media: `Campaign`,
+    title: `Mozilla encourages people to 'reduce digital footprint' with pop-up`,
+    link: `https://www.campaignlive.co.uk/article/mozilla-encourages-people-reduce-digital-footprint-pop-up/1448234`,
+    date: `October 2017`
+  },
+  {
+    media: `Alphr`,
+    title: `The Glass Room: Uncover the secrets of your online life in Mozilla’s new exhibition`,
+    link: `http://www.alphr.com/art/1007513/the-glass-room-uncover-the-secrets-of-your-online-life-in-mozilla-s-new-exhibition`,
+    date: `October 2017`
+  },
+  {
     media: `The Culture Trip`,
     title: `Artists, Activists and Open Web Advocates Are Gathering at This London Festival for Internet Health `,
     link: `https://theculturetrip.com/europe/united-kingdom/england/london/articles/artists-activists-and-open-web-advocates-are-gathering-at-this-london-festival-for-internet-health/`,
@@ -75,7 +93,7 @@ var Media = React.createClass({
       </li>;
     });
 
-    return <ul className="past-coverage text-left">{pastCoverage}</ul>;
+    return <ul className="past-coverage text-left mt-3 pl-0">{pastCoverage}</ul>;
   },
   render: function() {
     return (
@@ -88,10 +106,21 @@ var Media = React.createClass({
         <div className="white-background">
           <div className="centered content wide">
             <h1>MozFest Media Center</h1>
-            <p>Welcome to the MozFest Media Center, where you can find information and resources for your coverage of the annual festival.</p>
-            <p>To receive press credentials to attend and cover MozFest; to request information and photos; or to arrange an interview with Mozilla executive director Mark Surman, contact Corey Nord at corey(at)pkpr.com. Please send the following information: first and last name, title, name of media outlet, contact phone number, and email address.</p>
-            <p>You can also stay up-to-date on MozFest news via <a href="https://twitter.com/mozillafestival" target="_blank">Twitter</a>, <a href="https://www.flickr.com/photos/mozfest/" target="_blank">Flickr</a>, and <a href="https://medium.com/mozilla-festival" target="_blank">Medium</a>.</p>
-
+            <div className="text-left">
+              <p>Welcome to the MozFest Media Center, where you can find information and resources for your coverage of the annual festival.</p>
+              <p>To receive press credentials to attend and cover MozFest; to request information and photos; or to arrange an interview with Mozilla executive director Mark Surman, contact Corey Nord at corey(at)pkpr.com. Please send the following information:</p>
+              <ul>
+                <li>first and last name</li>
+                <li>title</li>
+                <li>name of media outlet</li>
+                <li>contact phone number</li>
+                <li>email address</li>
+                <li>any specific coverage requests (camera crew, photographer, interviews, etc.)</li>
+              </ul>
+              <p>You can also stay up-to-date on MozFest news via <a href="https://twitter.com/mozillafestival" target="_blank">Twitter</a>, <a href="https://www.flickr.com/photos/mozfest/" target="_blank">Flickr</a>, and <a href="https://medium.com/mozilla-festival" target="_blank">Medium</a>.</p>
+            </div>
+          </div>
+          <div className="centered content wide mt-5">
             <h1>Past MozFest Coverage</h1>
             { this.renderPastCoverage() }
           </div>
