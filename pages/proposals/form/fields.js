@@ -472,6 +472,15 @@ var createPartSixFields = function(stringSource) {
       validator: [
         validator.emptyValueValidator(EMPTY_VALUE_ERROR)
       ]
+    },
+
+    'privacypolicy': {
+      type: `checkbox`,
+      label: stringSource.form_field_labels.privacypolicy,
+      fieldClassname: `form-control mr-2 d-inline-block`,
+      validator: [
+        validator.checkboxValidator()
+      ]
     }
   };
 };
