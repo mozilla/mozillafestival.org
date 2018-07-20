@@ -33,9 +33,22 @@
   }
 }
 
+.space-intro-block-wrapper {
+  margin: 70px 0 20px 0;
+}
+
 .space-intro-block {
+  @icon-size: 120px;
+
+  position: relative;
   background: #ccc;
-  padding: 30px 20px;
+  padding: (@icon-size/2 + 20px) 20px 20px 20px;
+
+  img {
+    max-width: 50%;
+    position: relative;
+    top: -80px;
+  }
 
   h3 {
     font-weight: 500;
@@ -44,5 +57,65 @@
 
   p {
     min-height: 200px;
+  }
+
+  &:before {
+    content: "";
+    width: @icon-size;
+    height: @icon-size;
+    position: absolute;
+    top: -@icon-size/2;
+    left: @icon-size/2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.decentralisation {
+    background-color: fade(@decentralisation-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Decentralization-Orange.svg');
+    }
+  }
+
+  &.digital-inclusion {
+    background-color: fade(@digital-inclusion-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Digital-Inclusion-Pink.svg');
+    }
+  }
+
+  &.openness {
+    background-color: fade(@openness-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Open-Innovation-Cyan.svg');
+    }
+  }
+
+  &.privacy-security {
+    background-color: fade(@privacy-security-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Privacy-and-Security-Purple.svg');
+    }
+  }
+
+  &.web-literacy {
+    background-color: fade(@web-literacy-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Web-Literacy-Green.svg');
+    }
+  }
+
+  &.youth-zone {
+    background-color: fade(@youth-zone-color, 10);
+
+    &:before {
+      background-image: url('/assets/images/about/Mozilla-Festival_Space-Icons_Youth-Zone-Yellow.svg');
+    }
   }
 }

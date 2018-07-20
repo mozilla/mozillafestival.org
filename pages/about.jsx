@@ -1,4 +1,5 @@
 var React = require('react');
+var classNames = require(`classnames`);
 var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
@@ -17,8 +18,8 @@ const CircleNumber = (props) => {
 
 const SpaceIntroBlock = (props) => {
   return (
-    <div className="col-12 col-md-4 my-4">
-      <div className="space-intro-block text-center h-100">
+    <div className="space-intro-block-wrapper col-12 col-md-4">
+      <div className={classNames(props.className, `space-intro-block text-center h-100`)}>
         <h3>{props.name}</h3>
         <p className="my-0">{props.intro}</p>
       </div>
@@ -31,7 +32,7 @@ const TeamBlock = (props) => {
     <Link className="text-center my-4" to={props.linkTo}>
       <p>{props.name}</p>
       <ImageTag className="rounded-circle"
-        src1x={props.img}
+        src1x={props.imgSrc}
         height="200"
         width="200"
         alt={props.name}
@@ -114,28 +115,34 @@ var About = React.createClass({
               <div className="row">
                 <SpaceIntroBlock name="Decentralisation"
                   intro="A space for unpacking concepts like mesh networking and blockchain — and conversely, internet shutdowns and monopolies"
+                  className="decentralisation"
                 />
                 <SpaceIntroBlock name="Digital Inclusion"
                   intro="A space exploring equity, access and participation for everyone, all across the web"
+                  className="digital-inclusion"
                 />
                 <SpaceIntroBlock name="Openness"
                   intro="A space for learning about open production, open projects, open code and all other things open"
+                  className="openness"
                 />
                 <SpaceIntroBlock name="Privacy & Security"
                   intro="A space exploring encryption, VPNs, mass surveillance and safety online"
+                  className="privacy-security"
                 />
                 <SpaceIntroBlock name="Web Literacy"
                   intro="A space devoted to the skills required to read, write and participate on the web"
+                  className="web-literacy"
                 />
                 <SpaceIntroBlock name="Youth Zone"
                   intro="A space for youth leaders and their mentors who are creating art, technology and positive social change"
+                  className="youth-zone"
                 />
               </div>
             </div>
           </div>
         </div>
         <div className="white-background">
-          <div className="content centered wide">
+          <div className="content centered wide mb-5">
             <div className="text-center">
               <h1>Meet the MozFest Team!</h1>
               <p>
@@ -146,19 +153,19 @@ var About = React.createClass({
               <div className="row">
                 <div className="col-md-4">
                   <TeamBlock name="Production Team"
-                    img=""
+                    imgSrc="assets/images/about/mozilla-festival_about-page_production-team@2x.jpg"
                     linkTo="/team/production"
                   />
                 </div>
                 <div className="col-md-4">
                   <TeamBlock name="Space Wranglers"
-                    img=""
+                    imgSrc="assets/images/about/mozilla-festival_about-page_space-wranglers@2x.jpg"
                     linkTo="/team/wranglers"
                   />
                 </div>
                 <div className="col-md-4">
                   <TeamBlock name="Sponsors"
-                    img=""
+                    imgSrc="assets/images/about/mozilla-festival_about-page_sponsors@2x.jpg"
                     linkTo="/team/sponsors"
                   />
                 </div>
