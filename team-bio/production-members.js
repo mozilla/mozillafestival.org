@@ -32,6 +32,22 @@ module.exports = [
     ],
   },
   {
+    name: `Consuela McKenzie`,
+    title: `Production Manager`,
+    pic: `/assets/images/team/production/Consuela.jpg`,
+    bio: [
+      `Consuela is MozFest's production manager. She has headed hundreds of media productions and events, and is an advocate for events as a tool to bring people together to share in purposeful experiences. Consuela continues to create a festival where freedom of expression, innovation, and creativity can thrive.`
+    ],
+  },
+  {
+    name: `Marc Walsh`,
+    title: `Senior Production Coordinator`,
+    pic: `/assets/images/team/production/Marc.jpg`,
+    bio: [
+      `Marc is the senior production coordinator for MozFest 2018, with this being his seventh year working on the festival. Since last year, Mark has worked on large scale events around the world with organisations such as FIFA, BBC and BMW. Drawing on this experience, he brings his logistical and production mind-set to help make sure the cogs keep turning across the festival.`
+    ],
+  },
+  {
     name: `Sabrina Ng`,
     title: `Creative Design Lead`,
     pic: `/assets/images/team/production/Sabrina.jpg`,
@@ -52,7 +68,7 @@ module.exports = [
     title: `Volunteer Coordinator`,
     pic: `/assets/images/team/production/TomFarrow.jpg`,
     bio: [
-      `Tom co-ordinates process, governance and logistics for a number of community teams across Mozilla. With experience in technology and process management, Tom is joining this year's volunteer co-ordinator team. He aims to empower volunteers to feel effective and welcomed over the weekend by bringing in a process and people mindset.`
+      `Tom is a second-year volunteer coordinator for MozFest, with experience across a large portion of the festival programming. Tom primarily handles planning and local communications for the volunteer program.`
     ],
   },
   {
