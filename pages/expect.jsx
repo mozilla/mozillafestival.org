@@ -162,7 +162,7 @@ class Expect extends React.Component {
             </div>
             <div className="full-content mt-5">
               <h1>What is MozFest like?</h1>
-              <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="400" frameBorder="0" allowFullScreen></iframe>
+              <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" frameBorder="0" allowFullScreen className="mozfest-vimeo"></iframe>
               <p>MozFest has something for everyone. You’ll find a diverse set of sessions and spaces where you will meet, make, and learn with others. Jump into an interactive session for some hands-on building. Join a small group discussion and debate the most pressing issues facing the Internet today. Or simply wander the festival and take in all the ongoing displays to explore at your own speed.
               </p>
             </div>

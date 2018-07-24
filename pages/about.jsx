@@ -18,7 +18,7 @@ const CircleNumber = (props) => {
 
 const SpaceIntroBlock = (props) => {
   return (
-    <div className="space-intro-block-wrapper col-12 col-md-4">
+    <div className="space-intro-block-wrapper col-12 col-sm-6 col-md-4">
       <div className={classNames(props.className, `space-intro-block text-center h-100`)}>
         <h3>{props.name}</h3>
         <p className="my-0">{props.intro}</p>
@@ -143,13 +143,13 @@ var About = React.createClass({
         </div>
         <div className="white-background">
           <div className="content centered wide mb-5">
-            <div className="text-center">
+            <div>
               <h1>Meet the MozFest Team!</h1>
               <p>
                 Over 50 people collaborate to bring you MozFest each year — we have a core production team, a global group of community memebers who curate sessions and wrangle our Spaces, and of course, our generous sponsors.
               </p>
             </div>
-            <div className="container-fluid">
+            <div className="container-fluid mb-5">
               <div className="row">
                 <div className="col-md-4">
                   <TeamBlock name="Production Team"
