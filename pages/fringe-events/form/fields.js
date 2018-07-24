@@ -175,7 +175,7 @@ var createPartTwoFields = function() {
   return {
     'privacypolicy': {
       type: `checkbox`,
-      label: <span>I understand and agree that the data collected will be used by Mozilla in accordance with our <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>, and the fringe event name, date & time, description, location and ticket link will be shared publicly on the Mozilla Festival website.</span>,
+      label: <span>I understand and agree that the data collected will be used by Mozilla in accordance with our <a href="https://www.mozilla.org/privacy/" target="_blank">Privacy Policy</a>, and the fringe event name, date & time, description, location and ticket link will be shared publicly on the Mozilla Festival website.</span>,
       labelClassname: `required`,
       fieldClassname: `form-control mr-2 d-inline-block`,
       validator: [
