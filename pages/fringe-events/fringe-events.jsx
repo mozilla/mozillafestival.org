@@ -105,7 +105,6 @@ class FringeEventForm extends React.Component {
         onUpdate={(event, name, field, value) => this.handleFormUpdate(event, name, field, value)}
       />
       <h2>Privacy Policy</h2>
-      <p>Read more about <a href="https://www.mozilla.org/privacy/" target="_blank">Mozilla's privacy policy</a>.</p>
       <Form ref="formPartTwo"
         fields={formFields.partTwo}
         inlineErrors={true}

@@ -82,6 +82,7 @@ const DemonstrateLabel = () => {
       <li>Presents leadership opportunities for all (attendees, mentors, event staff)</li>
       <li>Protects or advances the health of the Internet</li>
       <li>Includes a code of conduct, ensuring all are welcome to share and be heard</li>
+      <li>How does your event align itself with this year's festival theme</li>
     </ul>
   </div>;
 };
@@ -174,7 +175,7 @@ var createPartTwoFields = function() {
   return {
     'privacypolicy': {
       type: `checkbox`,
-      label: `Yes, I’m okay with Mozilla handling this info as you explain in your privacy policy.`,
+      label: <span>I understand and agree that the data collected will be used by Mozilla in accordance with our <a href="https://www.mozilla.org/privacy/" target="_blank">Privacy Policy</a>, and the fringe event name, date & time, description, location and ticket link will be shared publicly on the Mozilla Festival website.</span>,
       labelClassname: `required`,
       fieldClassname: `form-control mr-2 d-inline-block`,
       validator: [
