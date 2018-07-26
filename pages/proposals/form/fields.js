@@ -1,3 +1,4 @@
+import React from 'react';
 import validator from './validator';
 import CountrySelect from './country-select.jsx';
 
@@ -476,11 +477,18 @@ var createPartSixFields = function(stringSource) {
 
     'privacypolicy': {
       type: `checkbox`,
-      label: stringSource.form_field_labels.privacypolicy,
+      label: <span>I’m okay with Mozilla handling this information in accordance with its <a href="https://www.mozilla.org/en-US/privacy" target="_blank">privacy policy</a> and the bullets at the top of this form as well as to be emailed reguarding the outcome of my proposal.</span>,
       fieldClassname: `form-control mr-2 d-inline-block`,
       validator: [
-        validator.checkboxValidator()
+        validator.checkboxValidator(<span>Please check this box if you would like like to proceed, if you have a question please email <a href="mailto:festival@mozilla.org">festival@mozilla.org</a>.</span>)
       ]
+    },
+
+    'receiveemailupates': {
+      optional: true,
+      type: `checkbox`,
+      label: stringSource.form_field_labels.receiveemailupates,
+      fieldClassname: `form-control mr-2 d-inline-block`
     }
   };
 };
