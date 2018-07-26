@@ -283,7 +283,7 @@ var Proposal = React.createClass({
             inlineErrors={true}
             onUpdate={this.handleFormUpdate} />
         </div>
-        <div className="my-5">
+        <div className="mt-2 mb-5">
           <button
             ref="submitBtn"
             className="btn btn-arrow mr-3 my-3 w-100"
