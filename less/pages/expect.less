@@ -1,9 +1,10 @@
 .expect-page {
   .jumbotron {
+    min-height: 300px;
     background-position: 5% bottom, 95% top, center 4%;
   }
   .jumbotron-container {
-    background: linear-gradient( to right, #C46128, #B94C5F);
+    background: linear-gradient(to right, #C46128, #B94C5F);
   }
   p img {
     max-width: 100%;
@@ -21,7 +22,7 @@ ol.circle-number-list {
     margin: 0 0 1rem @left-margin;
     counter-increment: list-counter;
     position: relative;
-    background: #ebeafa;
+    background: fade(@blue, 10);
     padding: 0.5rem 1rem;
 
     &:before {

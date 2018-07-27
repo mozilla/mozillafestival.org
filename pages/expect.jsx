@@ -141,8 +141,9 @@ class Expect extends React.Component {
   render() {
     return (
       <div className="expect-page">
-        <Jumbotron image="/assets/images/hero/expect.jpg"
-          image2x="/assets/images/hero/expect.jpg">
+        {generateHelmet(this.pageMetaDescription)}
+        <Jumbotron image="/assets/images/hero/why-come-to-mozfest.jpg"
+          image2x="/assets/images/hero/why-come-to-mozfest.jpg">
           <h1 className="highlight">Why Come to MozFest</h1>
         </Jumbotron>
         <div className="white-background">
