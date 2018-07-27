@@ -1,7 +1,7 @@
 import React from 'react';
-import { Switch, Route } from 'react-router';
 import generateHelmet from './lib/helmet.jsx';
-import ExpectPage from './pages/expect.jsx';
+import { Switch, Route, Redirect } from 'react-router';
+import WhyComeToMozfestPage from './pages/why-come-to-mozfest.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
@@ -19,7 +19,8 @@ const Routes = () => (
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
     <Route path="/contact" component={require(`./pages/contact.jsx`)} />
-    <Route path="/expect" component={ExpectPage} />
+    <Route path="/expect" component={() => <Redirect to="/why-come-to-mozfest"/>} />
+    <Route path="/why-come-to-mozfest" component={WhyComeToMozfestPage} />
     <Route path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
     <Route path="/volunteer" component={require(`./pages/volunteer.jsx`)} />
     <Route path="/projects" component={require(`./pages/projects.jsx`)} />

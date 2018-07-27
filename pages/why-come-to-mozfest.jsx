@@ -131,7 +131,7 @@ const WeekendSchedule = () => {
   return <Timetable header="MozFest Weekend @ Ravensbourne" schedule={SCHEDULE} />;
 };
 
-class Expect extends React.Component {
+class WhyComeToMozfest extends React.Component {
   constructor(props) {
     super(props);
 
@@ -140,7 +140,7 @@ class Expect extends React.Component {
 
   render() {
     return (
-      <div className="expect-page">
+      <div className="why-come-to-mozfest-page">
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/why-come-to-mozfest.jpg"
           image2x="/assets/images/hero/why-come-to-mozfest.jpg">
@@ -202,4 +202,4 @@ class Expect extends React.Component {
   }
 }
 
-export default Expect;
+export default WhyComeToMozfest;

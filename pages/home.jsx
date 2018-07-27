@@ -26,8 +26,8 @@ var Home = React.createClass({
             <p>
               MozFest is for advocates of a healthy Internet. Explore the intersecton of the web with civil society, journalism, public policy, and art through interactive sessions.
             </p>
-            <Link to="/expect" className="btn btn-arrow">
-              <span>What to Expect</span>
+            <Link to="/why-come-to-mozfest" className="btn btn-arrow">
+              <span>Why Come to Mozfest</span>
             </Link>
           </div>
         </div>
