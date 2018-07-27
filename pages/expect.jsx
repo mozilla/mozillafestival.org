@@ -1,179 +1,204 @@
 var React = require('react');
 var Jumbotron = require('../components/jumbotron.jsx');
 
-const FESTIVAL_GUIDE_LINK = `https://issuu.com/mozfest/docs/mozfest_2017_festival_guide`;
+import generateHelmet from '../lib/helmet.jsx';
+import Timetable from '../components/timetable.jsx';
 
-var Expect = React.createClass({
-  render: function() {
+const HouseSchedule = () => {
+  const SCHEDULE = [
+    {
+      date: `Mon Oct 22`,
+      timeslots: [
+        {
+          time: `10:00`,
+          description: `Programs begin`
+        }
+      ]
+    },
+    {
+      date: `Tue Oct 23`,
+      timeslots: [
+        {
+          time: `10:00`,
+          description: `Programs begin`
+        }
+      ]
+    },
+    {
+      date: `Wed Oct 24`,
+      timeslots: [
+        {
+          time: `10:00`,
+          description: `Programs begin`
+        }
+      ]
+    },
+    {
+      date: `Thu Oct 25`,
+      timeslots: [
+        {
+          time: `10:00`,
+          description: `Programs begin`
+        }
+      ]
+    },
+    {
+      date: `Fri Oct 26`,
+      timeslots: [
+        {
+          time: `10:00`,
+          description: `Programs begin`
+        }
+      ]
+    }
+  ];
+
+  return <Timetable header="MozFest House @ Royal Society of Arts" schedule={SCHEDULE} />;
+};
+
+
+const WeekendSchedule = () => {
+  const SCHEDULE = [
+    {
+      date: `Fri Oct 26`,
+      timeslots: [
+        {
+          time: `18:00 to 21:00`,
+          description: `Science Fair evening reception`
+        }
+      ]
+    },
+    {
+      date: `Sat Oct 27`,
+      timeslots: [
+        {
+          time: `8:00`,
+          description: `Doors open`
+        },
+        {
+          time: `9:00`,
+          description: `Welcoming & Opening`
+        },
+        {
+          time: `10:00`,
+          description: `Morning sessions begin`
+        },
+        {
+          time: `12:00`,
+          description: `Lunch`
+        },
+        {
+          time: `14:00`,
+          description: `Afternoon sessions begin`
+        },
+        {
+          time: `19:30`,
+          description: `MozFest Party`
+        }
+      ]
+    },
+    {
+      date: `Sun Oct 28`,
+      timeslots: [
+        {
+          time: `9:00`,
+          description: `Doors open`
+        },
+        {
+          time: `9:30`,
+          description: `MozFest Breakfast`
+        },
+        {
+          time: `11:00`,
+          description: `Morning sessions begin`
+        },
+        {
+          time: `13:00`,
+          description: `Lunch`
+        },
+        {
+          time: `14:00`,
+          description: `Afternoon sessions begin`
+        },
+        {
+          time: `18:00`,
+          description: `Closing Celebration`
+        }
+      ]
+    }
+  ];
+
+  return <Timetable header="MozFest Weekend @ Ravensbourne" schedule={SCHEDULE} />;
+};
+
+class Expect extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.pageMetaDescription = "MozFest is an annual celebration of the world’s most valuable public resource: the open Web.";
+  }
+
+  render() {
     return (
       <div className="expect-page">
         <Jumbotron image="/assets/images/hero/expect.jpg"
           image2x="/assets/images/hero/expect.jpg">
-          <h1>what to expect</h1>
+          <h1 className="highlight">Why Come to MozFest</h1>
         </Jumbotron>
         <div className="white-background">
           <div className="content centered wide">
             <div>
+              <h1>Top 7 Reasons to Come to MozFest 2018</h1>
+              <ol className="circle-number-list text-left">
+                <li>Discover the cool things everyone else will be talking about in six months</li>
+                <li>Get your hands dirty! Hack with techies, create with artists, scheme with activists</li>
+                <li>See former YouTube AI technologist Guillaume Chaslot, former FBI agent and author of “Messing with the Enemy” Clint Watts, executive director of Internet Without Borders Julie Owono and many others speak at our Dialogues & Debates</li>
+                <li>Meet the people using the web to change the world, one brilliant idea at a time, like fighting poverty in Bangladesh or hacking to save the Brazilian rainforest</li>
+                <li>Experience digital art in the wild</li>
+                <li>Grab some of that MozFest magic for your own project — answer our call for proposals to lead a session and set other great minds loose on your idea. You can also collaborate with others at MozFest House, our pre-week programming</li>
+                <li>Snag the bargain of the year — £45 for 3 festival days, 2 lunches, snacks, beer, an amazing party, and endless coffee</li>
+              </ol>
+            </div>
+            <div className="full-content mt-5">
               <h1>What is MozFest like?</h1>
-              <div className="half-content text-left">
-                <p>MozFest is a diverse, highly interactive event with something for everyone. The festival kicks off Friday evening with a science fair, where attendees can stroll around and check out presentations on inspiring ideas and projects, many of which were developed at previous MozFests. Saturday and Sunday are filled with participant-led sessions that generally run between 30 to 90 minutes. You’ll find interactive spaces where participants can learn something new or engage in some hands-on making or experimentation; small group breakout discussions where bright minds debate the most pressing issues facing the Internet today; and ongoing, informative displays where attendees can explore ideas at their own speed.</p>
-              </div>
-              <div className="half-content text-left">
-                <p>Sessions are organized into spaces &mdash; physical and thematic learning hubs based around a topic of broad relevance to a healthy Internet, like open innovation, or decentralization. The festival features interactive experiences that weave between spaces, connecting thematic threads and allowing participants to explore topics in a self-directed way.</p>
-
-                <p>The weekend wraps on Sunday evening with a celebratory party, and a chance to connect with new friends and take the work forward beyond the festival.</p>
-              </div>
-            </div>
-            <div className="full-content">
-              <p><a href={FESTIVAL_GUIDE_LINK}>Read the 2017 Festival Guide</a></p>
-              <p><a href={FESTIVAL_GUIDE_LINK} className="guide-image-wrapper"><img src="/assets/images/festival-guide.png" alt="Festival guide" width="1612" height="1014"/></a></p>
-            </div>
-            <div>
-              <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="456" frameBorder="0" allowFullScreen></iframe>
+              <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" height="400" frameBorder="0" allowFullScreen></iframe>
+              <p>MozFest has something for everyone. You’ll find a diverse set of sessions and spaces where you will meet, make, and learn with others. Jump into an interactive session for some hands-on building. Join a small group discussion and debate the most pressing issues facing the Internet today. Or simply wander the festival and take in all the ongoing displays to explore at your own speed.
+              </p>
             </div>
           </div>
         </div>
         <div className="content centered wide">
           <div className="outline">
-            <h1>Weekend Outline</h1>
-            <table className="schedule-table">
-              <thead>
-                <tr className="table-header">
-                  <th>
-                    fri oct 26
-                  </th>
-                  <th>
-                    sat oct 27
-                  </th>
-                  <th>
-                    sun oct 28
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">8:00</div>
-                      <div>Doors open</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">9:00</div>
-                      <div>Doors open</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">9:00</div>
-                      <div>Welcome & Opening</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">9:30</div>
-                      <div>MozFest Breakfast</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">10:00</div>
-                      <div>Morning sessions begin</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">11:00</div>
-                      <div>Morning sessions begin</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">12:00</div>
-                      <div>Lunch</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">13:00</div>
-                      <div>Lunch</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><div className="td-container">&nbsp;<br/>&nbsp;</div></td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">14:00</div>
-                      <div>Afternoon sessions begin</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="td-container">
-                      <div className="time">14:00</div>
-                      <div>Afternoon sessions begin</div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div className="time">18:00 to 21:00</div>
-                    <div>Science Fair evening reception</div>
-                  </td>
-                  <td>
-                    <div className="time">19:30</div>
-                    <div>MozFest Party</div>
-                  </td>
-                  <td>
-                    <div className="time">18:00</div>
-                    <div>Closing Celebration</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <h1>Weekend at a Glance</h1>
+            <div className="mb-5">
+              <HouseSchedule />
+            </div>
+            <div>
+              <WeekendSchedule />
+            </div>
           </div>
         </div>
         <div className="white-background">
-          <div className="content centered wide">
-            <div>
-              <h1>Participating at MozFest</h1>
-              <div className="half-content text-left">
-                <p>MozFest is an annual festival where hundreds of passionate people gather to wield the Web for good. We create, teach and learn as a community in order to make the Internet, and by extension the world, a better place. Guiding the festival is Mozilla’s core learning vision: learning should be hands-on, immersive, and done collectively.</p>
-
-                <p>MozFest is populated with people that are open, friendly and eager to help. Participants of all ages and skill levels are welcome. We believe that everyone has something to contribute. Youth especially are encouraged to come and lead sessions &mdash; we’re dedicated to mentoring and celebrating tomorrow’s leaders. For our youngest participants, on-site day care and activities are provided.</p>
-              </div>
-              <div className="half-content text-left">
-                <p>We try to accommodate all interaction styles at MozFest. While many sessions are hands-on and fully interactive, we also have plenty of listening-based activities for those who participate best in that manner, as well as individual maker stations where attendees can focus &mdash; individually or in a group &mdash; on a single activity.</p>
-                <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" target="_blank">Participation Guidelines</a> outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival, so we can all enjoy a safe, respectful and rewarding weekend.</p>
-              </div>
+          <div className="content wide">
+            <h1 className="text-center">Participate at MozFest</h1>
+            <div className="two-column">
+              <p>MozFest brings together people who are open, friendly and eager to help. Participants of all ages and skill levels are welcome. We believe everyone has something to contribute. Youth especially are encouraged to come and lead sessions — we’re dedicated to mentoring and celebrating tomorrow’s leaders. For our youngest participants, on-site day care and activities are provided.</p>
+              <p>We try to accommodate all interaction styles at MozFest. While many sessions are hands-on and fully interactive, we also have plenty of listening-based activities for those who participate best in that manner. We also feature individual maker stations where attendees can focus — individually or in a group — on a single activity.</p>
+              <p>MozFest is proud to host attendees from all over the world. Because each of us arrives with different backgrounds, experiences and expectations, MozFest has <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" target="_blank">Participation Guidelines</a> outlining how we interact. Theses are ground rules guiding how participants, facilitators, space wranglers, staff, volunteers and vendors engage with one another during the festival. Our goal is to make sure everyone can enjoy a safe, respectful and rewarding weekend.</p>
             </div>
-            <div>
-              <h1>Accessibility</h1>
-              <div className="half-content text-left">
-                <p>At MozFest, accessibility is a vital part of how our network creates an inclusive community. From providing childcare to emphasizing language inclusion to ensuring people with disabilities are supported, we are increasing our efforts to ensure every MozFest participant can engage with the people, spaces and themes of the festival.</p>
-                <p>During the open call for proposals, if you would like to submit a session and have difficulty using the text-based form, please email us to discuss other options.</p>
-              </div>
-              <div className="half-content text-left">
-                <p>When you register to attend MozFest, please let us know if you have an accessibility need such as visual or auditory support, wheelchair access, or the need for a quiet space. We are committed to discussing attendees’ individual needs, and providing support to the best of our abilities.</p>
-                <p>Making MozFest more accessible is an ongoing process. We welcome your suggestions and ideas and would like to learn from your experiences. Please <a href="mailto:festival@mozilla.org">contact us</a> for more information, or to ask for support.</p>
-              </div>
+          </div>
+          <div className="content wide">
+            <h1 className="text-center">Accessibility</h1>
+            <div className="two-column">
+              <p>At MozFest, accessibility is a vital part building our inclusive community. From providing childcare to emphasizing language inclusion to ensuring people with disabilities are supported, we work hard to make sure every MozFest participant can engage with the people, spaces and themes of the festival.</p>
+              <p>When you register to attend MozFest, please let us know if you have an accessibility need such as visual or auditory support, wheelchair access, or the need for a quiet space. We are committed to discussing attendees’ individual needs, and providing support to the best of our abilities.</p>
+              <p>Making MozFest more accessible is an ongoing process. We welcome your suggestions and ideas and would like to learn from your experiences. Please <a href="mailto:festival@mozilla.org">contact us</a> for more information, or to ask for support.</p>
             </div>
           </div>
         </div>
       </div>
     );
   }
-});
+}
 
-module.exports = Expect;
+export default Expect;

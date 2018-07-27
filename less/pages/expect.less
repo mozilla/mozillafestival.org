@@ -9,102 +9,34 @@
     max-width: 100%;
     height: auto;
   }
-  .guide-image-wrapper {
+}
+
+ol.circle-number-list {
+  @left-margin: 0.5rem;
+
+  counter-reset: list-counter;
+  list-style: none;
+
+  li {
+    margin: 0 0 1rem @left-margin;
+    counter-increment: list-counter;
     position: relative;
-    display: block;
-  }
-  .guide-image-wrapper:after {
-    content: 'View the Guide';
-    position: absolute;
-    background: rgba(0,0,255,.5);
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: opacity .25s ease;
-    color: white;
-    text-align: center;
-    padding-top: 30%;
-    font-size: 1.5em;
-  }
-  .guide-image-wrapper:hover::after {
-    opacity: 1;
-  }
-  .signature-container {
-    text-align: right;
-    margin-top: -70px;
-    .surman-photo-crop {
-      margin-top: 45px;
-      margin-left: 20px;
-      height: 128px;
-      width: 128px;
-      img {
-        -webkit-transform: scale(0.6) translate(-49%, -34%);
-        -ms-transform: scale(0.6) translate(-49%, -34%);
-        transform: scale(0.6) translate(-49%, -34%);
-      }
-      @media screen and (min-width: 768px) {
-        margin-top: 0;
-        margin-left: 0;
-        height: 160px;
-        width: 160px;
-        img {
-          -webkit-transform: scale(0.75) translate(-33%, -17%);
-          -ms-transform: scale(0.75) translate(-33%, -17%);
-          transform: scale(0.75) translate(-33%, -17%);
-        }
-      }
+    background: #ebeafa;
+    padding: 0.5rem 1rem;
+
+    &:before {
+      content: counter(list-counter);
+      color: @blue;
+      position: absolute;
+      --size: 32px;
+      left: calc(-1 * var(--size) - 10px - @left-margin);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: calc(50% - var(--size)/2);
       border-radius: 50%;
-      overflow: hidden;
-      display: inline-block;
-    }
-  }
-  .signature-bold {
-    font-weight: 600;
-    font-style: italic;
-  }
-  .schedule-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 4px 0;
-    tr {
-      text-align: left;
-      th,
-      td {
-        padding: .5rem;
-      }
-      th {
-        text-align: center;
-        background: @blue;
-        text-transform: uppercase;
-        text-align: center;
-        color: #FFFFFF;
-        font-weight: 700;
-        letter-spacing: 2px;
-        width: 33.333%;
-      }
-      td {
-        border-bottom: 1px solid #DADADA;
-        background: @light-grey;
-        &:nth-child(odd) {
-          background: #EAEAEA;
-        }
-        .time {
-          font-weight: 700;
-        }
-      }
-    }
-    @media screen and (min-width: 768px) {
-      tr {
-        th,
-        td {
-          padding: 1rem;
-        }
-        th {
-          font-size: 20px;
-        }
-      }
+      border: 1px solid @blue;
+      text-align: center;
     }
   }
 }

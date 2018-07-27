@@ -80,7 +80,7 @@ var About = React.createClass({
             <div className="text-center">
               <h1>A note from Mark Surman</h1>
             </div>
-            <div className="letter mt-4">
+            <div className="letter two-column mt-4">
               <p>MozFest began as a small gathering in 2010 — a few hundred fiery thinkers dreaming and planning in Barcelona, Spain. Our goal was to connect people building a healthy Internet.
               </p>
               <p>A healthy Internet is one that’s accessible to all; decentralized; bursting with vibrant, creative communities, trustworthy content, and groundbreaking ideas. It’s an Internet where users control their data, and privacy and intellectual freedom thrive. An Internet not of passive consumers, but of active creators, building and shaping online tools and spaces.
