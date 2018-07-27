@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
+import generateHelmet from './lib/helmet.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
@@ -65,6 +66,7 @@ class Main extends React.Component {
   render() {
     return (
       <div>
+        { generateHelmet() }
         <NotificationBar>
           <div className="d-inline-block mr-sm-2">
             <div className="d-inline-block emphasized">

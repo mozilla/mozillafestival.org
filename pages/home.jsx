@@ -3,14 +3,11 @@ import Jumbotron from '../components/jumbotron.jsx';
 import { Link } from 'react-router-dom';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 import talksInfo from '../talks/2017';
-import generateHelmet from '../lib/helmet.jsx';
 
 var Home = React.createClass({
-  pageMetaDescription: "Three days of building a truly global web together. Come with an idea, leave with a community.",
   render: function () {
     return (
       <div className="home-page">
-        {generateHelmet(this.pageMetaDescription)}
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
           image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">

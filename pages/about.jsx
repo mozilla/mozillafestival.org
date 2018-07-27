@@ -3,8 +3,6 @@ var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 var classnames = require('classnames');
 
-import generateHelmet from '../lib/helmet.jsx';
-
 var TimeLineItem = React.createClass({
   render: function() {
     var className = classnames(this.props.className, "timeline-item", {
@@ -80,11 +78,9 @@ var CircleNumber = React.createClass({
 });
 
 var About = React.createClass({
-  pageMetaDescription: "Mozilla's annual, hands-on festival (affectionately known as MozFest) is dedicated to forging the future of the open Web.",
   render: function() {
     return (
       <div className="about-page">
-        {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/about.jpg"
           image2x="/assets/images/hero/about.jpg">
         </Jumbotron>

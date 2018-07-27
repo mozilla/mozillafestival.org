@@ -1,16 +1,12 @@
 var React = require('react');
 var Jumbotron = require('../components/jumbotron.jsx');
 
-import generateHelmet from '../lib/helmet.jsx';
-
 const FESTIVAL_GUIDE_LINK = `https://issuu.com/mozfest/docs/mozfest_2017_festival_guide`;
 
 var Expect = React.createClass({
-  pageMetaDescription: "MozFest is an annual celebration of the world’s most valuable public resource: the open Web.",
   render: function() {
     return (
       <div className="expect-page">
-        {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/expect.jpg"
           image2x="/assets/images/hero/expect.jpg">
           <h1>what to expect</h1>
