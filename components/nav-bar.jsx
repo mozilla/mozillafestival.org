@@ -10,7 +10,7 @@ const NAV_LINKS = [
   // { path: `/speakers`, label: `Speakers` },
   { path: `/about`, label: `About` },
   { path: `/proposals`, label: `Proposals` },
-  { path: `/expect`, label: `What to Expect` },
+  { path: `/why-come-to-mozfest`, label: `Why Come to MozFest` },
   { path: `/spaces`, label: `Spaces & Experiences` },
   { path: `/house`, label: `House` },
   { path: `/team/sponsors`, label: `Sponsors` }

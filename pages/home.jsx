@@ -11,7 +11,7 @@ var Home = React.createClass({
         <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
           image2x="/assets/images/hero/home/banner-home_5.jpg">
           <div className="content-wrapper">
-            <h1>Where Web Meets World</h1>
+            <h1 className="highlight">Where Web Meets World</h1>
             <p className="mb-0">October 26-28, 2018</p>
             <p className="mb-0">Ravensbourne College in London, England</p>
             <Link to="/proposals" className="btn p-3 mt-5">Submit Your Session Now</Link>
@@ -26,8 +26,8 @@ var Home = React.createClass({
             <p>
               MozFest is for advocates of a healthy Internet. Explore the intersecton of the web with civil society, journalism, public policy, and art through interactive sessions.
             </p>
-            <Link to="/expect" className="btn btn-arrow">
-              <span>What to Expect</span>
+            <Link to="/why-come-to-mozfest" className="btn btn-arrow">
+              <span>Why Come to Mozfest</span>
             </Link>
           </div>
         </div>

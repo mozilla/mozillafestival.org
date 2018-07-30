@@ -122,7 +122,6 @@ li.no-bullet {
     color: @blue;
     font-weight: 300;
     font-size: 38px;
-    margin: 8px 0;
   }
   h2 {
     font-size: 18px;
@@ -378,3 +377,29 @@ form {
     }
   }
 }
+
+.jumbotron {
+  h1.highlight {
+    font-family: 'Zilla Slab Highlight';
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: normal;
+    margin-top: 0;
+  }
+}
+
+.content-wrapper {
+  max-width: @max-container-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.two-column {
+  @media screen and (min-width: 768px) {
+    column-count: 2;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+  }

@@ -1,0 +1,66 @@
+.timetable {
+  font-size: 1rem;
+  font-weight: 600;
+
+  .cell {
+    padding: 0.5rem 1rem;
+  }
+
+  .timetable-header {
+    background: @blue;
+    color: white;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .day {
+    flex: 1;
+    margin-bottom: 0.5rem;
+
+    &:nth-child(odd) {
+      background: #EAEAEA;;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 0 2px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .header {
+      text-transform: uppercase;
+      background: fade(@blue, 60);
+      color: white;
+    }
+
+    .description {
+      font-weight: 300;
+    }
+  }
+
+  ol.timeslots {
+    list-style: none;
+    padding-left: 0;
+
+    time {
+      display: block;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

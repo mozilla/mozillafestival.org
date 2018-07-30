@@ -1,0 +1,55 @@
+.why-come-to-mozfest-page {
+  .jumbotron {
+    min-height: 300px;
+    background-position: 5% bottom, 95% top, center 4%;
+  }
+  .jumbotron-container {
+    background: linear-gradient(to right, #C46128, #B94C5F);
+  }
+  p img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mozfest-vimeo {
+    height: 150px;
+
+    @media screen and (min-width: 576px) {
+      height: 200px;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 400px;
+    }
+  }
+}
+
+ol.circle-number-list {
+  @left-margin: 0.5rem;
+
+  counter-reset: list-counter;
+  list-style: none;
+
+  li {
+    margin: 0 0 1rem @left-margin;
+    counter-increment: list-counter;
+    position: relative;
+    background: fade(@blue, 10);
+    padding: 0.5rem 1rem;
+
+    &:before {
+      content: counter(list-counter);
+      color: @blue;
+      position: absolute;
+      --size: 32px;
+      left: calc(-1 * var(--size) - 10px - @left-margin);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: calc(50% - var(--size)/2);
+      border-radius: 50%;
+      border: 1px solid @blue;
+      text-align: center;
+    }
+  }
+}
