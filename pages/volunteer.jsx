@@ -14,13 +14,14 @@ var Volunteer = React.createClass({
           <h1>volunteer</h1>
         </Jumbotron>
         <div className="content centered wide">
-          <p>Volunteers are integral to what we do at Mozilla, and MozFest is no different. The annual festival could not take place without the time, dedication and love of our local volunteers.</p>
+          <p>Volunteers are integral to what we do at Mozilla, and MozFest is no different. The annual festival could not take place without the time, dedication and love of our volunteers.</p>
 
-          <p>Drawn from the local community, volunteers at MozFest do so much, from running the welcome desk and arranging swag bags to assisting press and helping with programming. We try to place people in roles they’re most interested in, and rotation of roles is encouraged. We provide training before the event, and we host several volunteer socials. Read more on our <a href="https://wiki.mozilla.org/Mozfest/2017/Volunteers">volunteer wiki</a>.</p>
+          <p>Volunteer roles are diverse, from registering participants and running welcome desks on each floor to arranging swag bags and helping with speakers. We do our very best to place people in roles they're most interested in and rotate volunteers over the weekend in various roles.</p>
 
-          <p>Volunteers are asked to share four hours of their time. As a thank you, we’ll cover the festival’s ticket cost. Volunteers also receive meals and a MozFest t-shirt. Unfortunately, we cannot cover travel to and from the event or provide accommodation.</p>
+          <p>We host monthly meetups in the Mozilla London office, so volunteers can learn more about the festival, receive training and get to know each other.</p>
 
-          <p>Applications for volunteer positions will open in the summer. In the meantime there are plenty of other ways to stay connected. Follow <a href="https://twitter.com/MozLDN">@mozldn</a> for free events in London and check out <a href="https://www.mozillapulse.org/featured">Mozilla Pulse</a> to find projects looking for collaborators.</p>
+          <p>Volunteers are asked to share four hours of their time and as a thank you, we’ll cover the festival’s ticket cost. Volunteers also receive meals while on-site and a MozFest t-shirt. Unfortunately, we cannot cover travel to and from the event or provide accommodation. Read more on our <a href="https://wiki.mozilla.org/Mozfest/2018/Volunteers">volunteer wiki</a>.</p>
+          <p>You can apply to be a Mozilla Festival Volunteer <a href="https://ti.to/mozfestvolunteers/mozfest-volunteer-program-2018" target="_blank">here</a>.</p>
         </div>
       </div>
     );
