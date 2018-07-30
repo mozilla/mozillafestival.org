@@ -11,7 +11,7 @@ var Volunteer = React.createClass({
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/volunteer.jpg"
           image2x="/assets/images/hero/volunteer.jpg">
-          <h1>volunteer</h1>
+          <h1 className="highlight">Volunteer</h1>
         </Jumbotron>
         <div className="content centered wide">
           <p>Volunteers are integral to what we do at Mozilla, and MozFest is no different. The annual festival could not take place without the time, dedication and love of our volunteers.</p>
