@@ -16,6 +16,7 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" component={require(`./pages/home.jsx`)} />
     <Route exact path="/proposals" component={ProposalEnglish} />
+    <Route exact path="/late-proposals" component={ProposalEnglish} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
     <Route path="/contact" component={require(`./pages/contact.jsx`)} />
