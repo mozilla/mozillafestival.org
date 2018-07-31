@@ -11,7 +11,7 @@ var Home = React.createClass({
           image=""
           image2x=""
           videoJumbotron={true}>
-          <h1>Where Web Meets World</h1>
+          <h1 className="highlight">Where Web Meets World</h1>
           <p className="mb-0">A seven day celebration for, by, and about people who love the internet, showcasing world-changing ideas and technology through workshops, talks, and interactive sessions.</p>
         </Jumbotron>
         <div className="white-background shift-up">
