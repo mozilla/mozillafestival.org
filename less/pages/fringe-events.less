@@ -75,6 +75,17 @@
     }
   }
 
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container,
+  .rc-time-picker,
+  .rc-time-picker-input {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+    }
+  }
+
   .react-datepicker__input-container {
     input {
       color: inherit;
@@ -86,16 +97,17 @@
     display: block;
     input {
       .form-control;
-      width: auto;
       font-size: inherit;
       color: inherit;
       height: auto;
+
+      @media screen and (min-width: 768px) {
+        width: auto;
+      }
     }
   }
 
   fieldset.privacypolicy {
-    margin-top: 5rem;
-
     input {
       width: auto;
     }

@@ -104,7 +104,7 @@ class FringeEventForm extends React.Component {
         inlineErrors={true}
         onUpdate={(event, name, field, value) => this.handleFormUpdate(event, name, field, value)}
       />
-      <h2>Privacy Policy</h2>
+      <h2 className="mt-5">Privacy Policy</h2>
       <Form ref="formPartTwo"
         fields={formFields.partTwo}
         inlineErrors={true}
@@ -199,20 +199,15 @@ class FringePage extends React.Component {
             </ul>
             <div className="cta">
               <p>Add your event to the MozFest Fringe calendar.</p>
-              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add event</span></a>
+              <a className="btn btn-primary-outline mb-5" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add event</span></a>
             </div>
-          </div>
-        </div>
-        <div className="events white-background">
-          <div className="content wide">
+
             { this.renderFringeEvents() }
-          </div>
-        </div>
-        <div className="white-background" id="fringe-form-section" ref="fringeForm">
-          <div className="content wide">
-            <div className="horizontal-rule"></div>
-            <h1 className="text-center">Submit Your Fringe Event</h1>
-            <FringeEventForm {...this.props} />
+            <div id="fringe-form-section" ref="fringeForm">
+              <hr />
+              <h1 className="text-center">Submit Your Fringe Event</h1>
+              <FringeEventForm {...this.props} />
+            </div>
           </div>
         </div>
       </div>
