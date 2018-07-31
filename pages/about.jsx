@@ -2,6 +2,7 @@ var React = require('react');
 var ImageTag = require('../components/imagetag.jsx');
 
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import Jumbotron from '../components/jumbotron.jsx';
 
 const CircleNumber = (props) => {
