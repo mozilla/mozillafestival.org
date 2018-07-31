@@ -182,8 +182,8 @@ class FringePage extends React.Component {
           <h1 className="highlight">Fringe Events</h1>
         </Jumbotron>
         <div className="white-background">
-          <div className="content centered wide">
-            <h1>If MozFest wasn’t enough for you&hellip;</h1>
+          <div className="content wide">
+            <h1 className="text-center">If MozFest wasn’t enough for you&hellip;</h1>
             <p>MozFest is about working in the open and sharing ideas with a global network of people dedicating to protecting the health of the Internet.</p>
             <p>This year, the festival will explore questions and concerns we all have about our privacy and experience on the Internet. How is your personal data being used by companies you interact with on the web? What potential risks and harms does that create for your digital life and your offline life? We want to celebrate other events that are focusing on this theme.</p>
             <p>There are innovative events taking place around the world with this same open spirit as MozFest, and we would love to exchange ideas and celebrate together. If your event demonstrates some of the following characteristics, we’d love to promote it as a MozFest Fringe event, and share some of our resources with you:</p>
