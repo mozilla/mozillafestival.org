@@ -1,9 +1,8 @@
 var React = require('react');
-var classNames = require(`classnames`);
-var Jumbotron = require('../components/jumbotron.jsx');
 var ImageTag = require('../components/imagetag.jsx');
 
 import { Link } from 'react-router-dom';
+import Jumbotron from '../components/jumbotron.jsx';
 
 const CircleNumber = (props) => {
   return (

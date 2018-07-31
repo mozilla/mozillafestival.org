@@ -1,6 +1,5 @@
-var React = require('react');
-var Jumbotron = require('../components/jumbotron.jsx');
-
+import React from 'react';
+import Jumbotron from '../components/jumbotron.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 const TREAT_EACH_OTHER = [

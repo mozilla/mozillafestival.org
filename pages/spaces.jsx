@@ -1,6 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-var React = require('react');
-var Jumbotron = require('../components/jumbotron.jsx');
+import Jumbotron from '../components/jumbotron.jsx';
+
 var SpaceProfile = require('../components/space-profile.jsx');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
@@ -88,7 +89,11 @@ var SessionsPage = React.createClass({
     return info.map((space,i) => {
       var classname = (i%2===0) ? "white-background" : "";
       return (
-        <SpaceProfile {...space} contactTitle="wrangler" className={classname} key={space.name} />
+        <SpaceProfile {...space}
+          contactTitle="wrangler"
+          className={classname}
+          key={space.name}
+        />
       );
     });
   },

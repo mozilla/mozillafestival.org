@@ -1,7 +1,8 @@
 var React = require(`react`);
 var ProjectCard = require(`../components/project-card.jsx`);
 var projectData = require(`../mozfest-projects.json`);
-var Jumbotron = require('../components/jumbotron.jsx');
+
+import Jumbotron from '../components/jumbotron.jsx';
 
 var ProjectPage = React.createClass({
   render: function() {

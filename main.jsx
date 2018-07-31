@@ -7,7 +7,6 @@ import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
 import HousePage from './pages/house.jsx';
-import NotificationBar from './components/notification-bar.jsx';
 import Footer from './components/footer.jsx';
 
 let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishStrings} />;
@@ -70,16 +69,6 @@ class Main extends React.Component {
     return (
       <div>
         { generateHelmet() }
-        <NotificationBar>
-          <div className="d-inline-block mr-sm-2">
-            <div className="d-inline-block emphasized">
-              Submit your session now for MozFest 2018!
-            </div>
-          </div>
-          <div className="d-inline-block">
-            Submission deadline is August 1.
-          </div>
-        </NotificationBar>
         <Routes />
         <Footer />
       </div>
