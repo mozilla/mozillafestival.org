@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 
 var ImageTag = require('./imagetag.jsx');
 
@@ -22,14 +23,10 @@ const LAYOUT_BREAK_POINT = NAV_LINKS.length >= 6 ? `lg` : `md`;
 class NavBar extends React.Component {
   renderNavLinks() {
     return NAV_LINKS.map(link => {
-      let item = link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink>;
+      let item = link.path && <NavLink to={link.path} activeClassName="active" className={classNames({"btn btn-yellow": link.btn})}>{link.label}</NavLink>;
 
       if (link.externalLink) {
         item = <a href={link.externalLink}>{link.label}</a>;
-      }
-
-      if (link.btn) {
-        item = <NavLink to="/tickers" activeClassName="active" className="btn btn-yellow">GET TICKETS</NavLink>;
       }
 
       return <div className={`nav-link-container d-inline-block mx-2 mb-2 my-${LAYOUT_BREAK_POINT}-0`} key={link.label}>

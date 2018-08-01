@@ -15,13 +15,15 @@
       text-transform: uppercase;
       text-decoration: none;
       z-index: 1;
-      padding-left: .25em;
-      padding-right: .25em;
-      letter-spacing: 0;
+      padding-left: 3px;
+      padding-right: 3px;
+      letter-spacing: 1px;
       -webkit-font-smoothing: antialiased;
-      &.active {
+
+      &.active:not(.btn-yellow) {
         background-color: black;
       }
+
       &:not(.btn-yellow):after {
         position: absolute;
         content: '';
@@ -45,7 +47,7 @@
 
     a.btn.btn-yellow {
       color: black;
-      padding: 0.5rem 1rem;
+      padding: 0.3rem 1.2rem;
     }
   }
 }
