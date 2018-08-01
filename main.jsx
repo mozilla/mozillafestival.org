@@ -5,6 +5,7 @@ import WhyComeToMozfestPage from './pages/why-come-to-mozfest.jsx';
 import HomePage from './pages/home.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
 import CFPClose from './pages/cfp-closed.jsx';
+import TicketsPage from './pages/tickets.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
@@ -31,7 +32,7 @@ const Routes = () => (
     <Route path="/spaces" component={require(`./pages/spaces.jsx`)} />
     <Route exact path="/fringe" component={FringePage} />
     <Route path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
-    <Route path="/tickets" component={require(`./pages/tickets.jsx`)} />
+    <Route path="/tickets" component={TicketsPage} />
     <Route path="/media" component={require(`./pages/media.jsx`)} />
     <Route exact path="/speakers" component={require(`./pages/speakers.jsx`)} />
     <Route path="/speakers/:tab" component={require(`./pages/speakers.jsx`)} />

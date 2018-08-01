@@ -237,11 +237,6 @@ function renderPage(appHtml, reactHelmet) {
             </head>
             <body>
               <div id="app">${appHtml}</div>
-              <div class="widgets" style="display: none;">
-                <!-- <div class="tito-volunteer-tickets">
-                  <tito-button event="Mozilla/mozfest-volunteers" releases="rixmuxc3owq">Volunteer</tito-button>
-                </div> -->
-              </div>
               <script src="/build/bundle.js"></script>
             </body>
           </html>`;
