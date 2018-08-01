@@ -10,7 +10,6 @@ const NAV_LINKS = [
   // { externalLink: `https://www.mozillapulse.org/tags/mozfest`, label: `Projects` },
   // { path: `/speakers`, label: `Speakers` },
   { path: `/about`, label: `About` },
-  { path: `/proposals`, label: `Proposals` },
   { path: `/why-come-to-mozfest`, label: `Why Come to MozFest` },
   { path: `/spaces`, label: `Spaces` },
   { path: `/house`, label: `House` },
