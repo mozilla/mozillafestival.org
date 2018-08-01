@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Jumbotron from '../components/jumbotron.jsx';
 
 var SpaceProfile = require('../components/space-profile.jsx');
