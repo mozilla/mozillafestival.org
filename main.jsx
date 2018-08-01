@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router';
 import WhyComeToMozfestPage from './pages/why-come-to-mozfest.jsx';
 import HomePage from './pages/home.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
+import CFPClose from './pages/cfp-closed.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
@@ -15,7 +16,7 @@ let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishS
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={HomePage} />
-    <Route exact path="/proposals" component={ProposalEnglish} />
+    <Route exact path="/proposals" component={CFPClose} />
     <Route exact path="/late-proposals" component={ProposalEnglish} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />

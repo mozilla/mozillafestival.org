@@ -14,12 +14,12 @@ var Proposal = React.createClass({
           image2x="/assets/images/proposals.jpg">
           <h1>Call for Proposals</h1>
           <div className="deadline">
-            <span>Deadline for submissions is August 1, 2017</span>
+            <span>Deadline for submissions is August 1, 2018</span>
           </div>
         </Jumbotron>
         <div className="content wide">
-          <h1 className="text-center">The MozFest 2017 Call for Proposals has ended.</h1>
-          <p>Curation takes place <a href="https://github.com/MozillaFoundation/mozfest-program-2017">here on Github</a> during the month of August. If you submitted a session, expect to hear from us in September. Thank you to everyone who proposed a session!</p>
+          <h1 className="text-center">The MozFest 2018 Call for Proposals has ended.</h1>
+          <p>Curation takes place <a href="https://github.com/MozillaFestival/mozfest-program-2018">here on Github</a> during the month of August. If you submitted a session, expect to hear from us in September. Thank you to everyone who proposed a session!</p>
         </div>
       </div>
     );
