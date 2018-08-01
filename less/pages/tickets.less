@@ -1,8 +1,57 @@
 .tickets-page {
-  .jumbotron-container {
-    background: linear-gradient( to right, #4A825D, #406882);
+  .jumbotron {
+    @media screen and (min-width: 768px) {
+      min-height: 300px;
+    }
   }
-  .ticket-desc {
-    text-align: left;
+}
+
+.ticket-card {
+  font-size: 1rem;
+  height: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  .header-section {
+    @media screen and (min-width: 768px) {
+      min-height: 130px;
+    }
+  }
+
+
+  h3 {
+    font-size: inherit;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .price {
+    color: @pink;
+    font-size: 3rem;
+  }
+
+  .description {
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    ul {
+      list-style-position: inside;
+    }
+  }
+
+  .note {
+    line-height: 1;
+    font-weight: 300;
+
+    small {
+      font-weight: inherit;
+    }
+  }
+
+  tito-button button {
+    .btn;
+    .btn.btn-primary-outline;
+    .w-100;
+    .my-4;
   }
 }
