@@ -88,7 +88,7 @@ let TicketCardGroup = (props) => {
   return <div className="container mb-5 pt-3">
     <h1>{props.title}</h1>
     <div className="row">
-      { props.tickets.map(ticket => <div className="col-sm-4 mt-4 mt-sm-0" key={props.type}><TicketCard {...ticket} /></div>) }
+      { props.tickets.map(ticket => <div className="col-sm-4 mt-4 mt-sm-0" key={ticket.type}><TicketCard {...ticket} /></div>) }
     </div>
   </div>;
 };
@@ -125,6 +125,14 @@ let TicketCard = (props) => {
 class Tickets extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    const script = document.createElement(`script`);
+    script.src = `https://js.tito.io/v1`;
+    script.async = true;
+
+    document.body.appendChild(script);
   }
 
   render() {
