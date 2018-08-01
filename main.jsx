@@ -2,6 +2,7 @@ import React from 'react';
 import generateHelmet from './lib/helmet.jsx';
 import { Switch, Route, Redirect } from 'react-router';
 import WhyComeToMozfestPage from './pages/why-come-to-mozfest.jsx';
+import HomePage from './pages/home.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
@@ -13,7 +14,7 @@ let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishS
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={require(`./pages/home.jsx`)} />
+    <Route exact path="/" component={HomePage} />
     <Route exact path="/proposals" component={ProposalEnglish} />
     <Route exact path="/late-proposals" component={ProposalEnglish} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />

@@ -1,16 +1,48 @@
 import React from 'react';
+import classNames from 'classnames';
 import Jumbotron from '../components/jumbotron.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 import talksInfo from '../talks/2017';
 
-var Home = React.createClass({
-  render: function () {
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      videoTakeover: false
+    };
+  }
+
+  handlePlayVideoClick() {
+    this.setState({
+      videoTakeover: !this.state.videoTakeover
+    }, () => {
+      document.body.classList.toggle(`no-scroll`, this.state.videoTakeover);
+    });
+  }
+
+  renderVideoTakeover() {
+    if (!this.state.videoTakeover) return null;
+
+    return <div className="video-screen-takeover">
+      <div className="d-flex flex-column justify-content-center align-items-center h-100">
+        <div>
+          <button className="close mb-4" onClick={() => this.handlePlayVideoClick()}></button>
+        </div>
+        <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" frameBorder="0" allowFullScreen className="mozfest-vimeo"></iframe>
+      </div>
+    </div>;
+  }
+
+  render() {
     return (
-      <div className="home-page">
+      <div className={classNames({"has-video-takeover": this.state.videoTakeover}, `home-page`)}>
         <Jumbotron className="home-jumbotron"
           image=""
           image2x=""
-          videoJumbotron={true}>
+          videoJumbotron={true}
+          toggleVideoTakeover={() => this.handlePlayVideoClick()}
+        >
           <h1 className="highlight">Where Web Meets World</h1>
           <p className="mb-0">A seven day celebration for, by, and about people who love the internet, showcasing world-changing ideas and technology through workshops, talks, and interactive sessions.</p>
         </Jumbotron>
@@ -26,13 +58,14 @@ var Home = React.createClass({
         <div className="light-grey-bg">
           <div className="centered content wide pt-4">
             <h1>Join Us at MozFest</h1>
-            <p>Be first in line to get your tickets for 2018. Sign up for MozFest updates.</p>
-            <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Sign Up</span></a>
+            <p>Get your ticket for MozFest weekend.</p>
+            <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Buy Tickets</span></a>
           </div>
         </div>
+        { this.renderVideoTakeover() }
       </div>
     );
   }
-});
+}
 
-module.exports = Home;
+export default Home;
