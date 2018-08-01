@@ -104,7 +104,7 @@ class FringeEventForm extends React.Component {
         inlineErrors={true}
         onUpdate={(event, name, field, value) => this.handleFormUpdate(event, name, field, value)}
       />
-      <h2>Privacy Policy</h2>
+      <h2 className="mt-5">Privacy Policy</h2>
       <Form ref="formPartTwo"
         fields={formFields.partTwo}
         inlineErrors={true}
@@ -179,14 +179,16 @@ class FringePage extends React.Component {
       <div className="fringe-events-page">
         <Jumbotron image="/assets/images/hero/fringe.jpg"
           image2x="/assets/images/hero/fringe.jpg">
-          <h1>Fringe Events</h1>
+          <h1 className="highlight">Fringe Events</h1>
         </Jumbotron>
         <div className="white-background">
-          <div className="content centered wide">
-            <h1>If MozFest wasn’t enough for you&hellip;</h1>
+          <div className="content wide">
+            <h1 className="text-center">If MozFest wasn’t enough for you&hellip;</h1>
             <p>MozFest is about working in the open and sharing ideas with a global network of people dedicating to protecting the health of the Internet.</p>
-            <p>There are innovative events taking place around the world with this same philosophy, and we would love to exchange ideas and celebrate together. If your event demonstrates some of the following characteristics, we’d love to promote it as a MozFest Fringe event, and share some of our resources with you:</p>
-            <ul className="text-left">
+            <p>This year, the festival will explore questions and concerns we all have about our privacy and experience on the Internet. How is your personal data being used by companies you interact with on the web? What potential risks and harms does that create for your digital life and your offline life? We want to celebrate other events that are focusing on this theme.</p>
+            <p>There are innovative events taking place around the world with this same open spirit as MozFest, and we would love to exchange ideas and celebrate together. If your event demonstrates some of the following characteristics, we’d love to promote it as a MozFest Fringe event, and share some of our resources with you:</p>
+            <ul>
+              <li>The event follows the theme of this year’s festival.</li>
               <li>Event is co-designed with partners.</li>
               <li>Includes creative, hands-on activities.</li>
               <li>Facilitation promotes collaboration, innovation and respect.</li>
@@ -197,20 +199,15 @@ class FringePage extends React.Component {
             </ul>
             <div className="cta">
               <p>Add your event to the MozFest Fringe calendar.</p>
-              <a className="btn btn-primary-outline" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add event</span></a>
+              <a className="btn btn-primary-outline mb-5" href="/fringe/#fringe-form-section" onClick={(event) => this.handleScrollToFringeForm(event)}><span>Add event</span></a>
             </div>
-          </div>
-        </div>
-        <div className="events white-background">
-          <div className="content wide">
+
             { this.renderFringeEvents() }
-          </div>
-        </div>
-        <div className="white-background" id="fringe-form-section" ref="fringeForm">
-          <div className="content wide">
-            <div className="horizontal-rule"></div>
-            <h1 className="text-center">Submit Your Fringe Event</h1>
-            <FringeEventForm {...this.props} />
+            <div id="fringe-form-section" ref="fringeForm">
+              <hr />
+              <h1 className="text-center">Submit Your Fringe Event</h1>
+              <FringeEventForm {...this.props} />
+            </div>
           </div>
         </div>
       </div>
