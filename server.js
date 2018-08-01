@@ -194,7 +194,7 @@ function renderPage(appHtml, reactHelmet) {
                     </div>
                     <div class="jumbotron-container pb-0" style="height: 100%;">
                       <div class="jumbotron m-0" style="background-image: url(&quot;/assets/images/hero/home/banner-home_5.jpg&quot;); background-size: cover; padding-top: 150px; padding-bottom: 180px; height: 100%;">
-                        <div class="content-wrapper">
+                        <div class="jumbotron-content">
                           <h1>MozFest</h1>
                           <h2>The world's leading festival for the open Internet movement.</h2>
                           <div class="horizontal-rule"></div>

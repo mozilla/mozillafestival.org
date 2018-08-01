@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 
 var ImageTag = require('./imagetag.jsx');
 
@@ -11,9 +12,10 @@ const NAV_LINKS = [
   { path: `/about`, label: `About` },
   { path: `/proposals`, label: `Proposals` },
   { path: `/why-come-to-mozfest`, label: `Why Come to MozFest` },
-  { path: `/spaces`, label: `Spaces & Experiences` },
+  { path: `/spaces`, label: `Spaces` },
   { path: `/house`, label: `House` },
-  { path: `/team/sponsors`, label: `Sponsors` }
+  { path: `/team/sponsors`, label: `Sponsors` },
+  { path: `/tickets`, label: `Get Tickets`, btn: true }
 ];
 
 const LAYOUT_BREAK_POINT = NAV_LINKS.length >= 6 ? `lg` : `md`;
@@ -21,9 +23,14 @@ const LAYOUT_BREAK_POINT = NAV_LINKS.length >= 6 ? `lg` : `md`;
 class NavBar extends React.Component {
   renderNavLinks() {
     return NAV_LINKS.map(link => {
+      let item = link.path && <NavLink to={link.path} activeClassName="active" className={classNames({"btn btn-yellow": link.btn})}>{link.label}</NavLink>;
+
+      if (link.externalLink) {
+        item = <a href={link.externalLink}>{link.label}</a>;
+      }
+
       return <div className={`nav-link-container d-inline-block mx-2 mb-2 my-${LAYOUT_BREAK_POINT}-0`} key={link.label}>
-        { link.path && <NavLink to={link.path} activeClassName="active">{link.label}</NavLink> }
-        { link.externalLink && <a href={link.externalLink}>{link.label}</a> }
+        {item}
       </div>;
     });
   }

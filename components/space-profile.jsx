@@ -15,7 +15,7 @@ var SpacePathwayProfile = React.createClass({
     var showWranglerLink = this.props.showWranglerLink;
 
     return (
-      <div id={id} className={`${this.props.className} d-flex`} key={this.props.key}>
+      <div id={id} className={`${this.props.className} d-flex`}>
         <div className="space-profile content wide">
           <div className="detail">
             <div className="header">

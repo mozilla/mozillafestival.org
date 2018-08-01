@@ -4,6 +4,10 @@ body {
   color: @grey;
   font-size: 1.2rem;
   font-weight: 300;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 .centered {
   text-align: center;
@@ -33,6 +37,18 @@ a.btn:hover {
 
 .btn-link { // extend a mofo-bootstrap class
   cursor: pointer;
+}
+
+.btn.btn-yellow {
+  background: #ffed00;
+  color: black;
+  transition: all 0.25s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #e7c121;
+  }
 }
 
 .confined-width-header {

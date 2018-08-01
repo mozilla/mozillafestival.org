@@ -13,8 +13,6 @@ class NotFound extends React.Component {
     return <div>
       <Jumbotron className="home-jumbotron" image="/assets/images/hero/home/banner-home_5.jpg"
         image2x="/assets/images/hero/home/banner-home_5.jpg">
-        <div className="content-wrapper">
-        </div>
       </Jumbotron>
       <div className="white-background">
         <div className="centered content wide">

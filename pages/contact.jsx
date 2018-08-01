@@ -1,6 +1,6 @@
 var React = require('react');
-var Jumbotron = require('../components/jumbotron.jsx');
 
+import Jumbotron from '../components/jumbotron.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
 var Contact = React.createClass({

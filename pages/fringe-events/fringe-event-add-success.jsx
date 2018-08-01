@@ -1,7 +1,6 @@
-var React = require('react');
-var Jumbotron = require('../../components/jumbotron.jsx');
-
+import React from 'react';
 import { Link } from 'react-router-dom';
+import Jumbotron from '../../components/jumbotron.jsx';
 
 var Success = React.createClass({
   render: function() {
