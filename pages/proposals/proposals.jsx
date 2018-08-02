@@ -1,11 +1,11 @@
 var React = require('react');
 var classnames = require('classnames');
-var Jumbotron = require('../../components/jumbotron.jsx');
 var Form = require('react-formbuilder').Form;
 var fields = require('./form/fields');
 var EnglishStrings = require('./language/english.json');
 
 import generateHelmet from '../../lib/helmet.jsx';
+import Jumbotron from '../../components/jumbotron.jsx';
 
 const SUBMISSION_STATUS_SUCCESS = `success`;
 const SUBMISSION_STATUS_FAIL = `fail`;

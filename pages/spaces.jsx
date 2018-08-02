@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-var React = require('react');
-var Jumbotron = require('../components/jumbotron.jsx');
+import React from 'react';
+import Jumbotron from '../components/jumbotron.jsx';
+
 var SpaceProfile = require('../components/space-profile.jsx');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
@@ -88,7 +88,11 @@ var SessionsPage = React.createClass({
     return info.map((space,i) => {
       var classname = (i%2===0) ? "white-background" : "";
       return (
-        <SpaceProfile {...space} contactTitle="wrangler" className={classname} key={space.name} />
+        <SpaceProfile {...space}
+          contactTitle="wrangler"
+          className={classname}
+          key={space.name}
+        />
       );
     });
   },
@@ -103,7 +107,6 @@ var SessionsPage = React.createClass({
           <div className="content centered wide">
             <h1>2018 Spaces</h1>
             <p>Spaces are physical and thematic learning hubs based around a broad topic, like web literacy or digital inclusion. A Space is made up of sessions, which are hands-on, educational gatherings based around a specific topic, like “Using Crafts to Teach Localization Processes.” Sessions generally run 30-90 minutes.</p>
-            <div><Link to="/proposals" className="btn btn-arrow"><span>Propose a Session</span></Link></div>
             <div className="horizontal-rule"></div>
           </div>
         </div>

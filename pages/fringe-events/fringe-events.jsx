@@ -1,11 +1,11 @@
 var React = require('react');
 var moment = require('moment');
 var Form = require('react-formbuilder').Form;
-var Jumbotron = require('../../components/jumbotron.jsx');
 var EventCardGroup = require('../../components/event-card-group.jsx');
 
 var fields = require('./form/fields');
 
+import Jumbotron from '../../components/jumbotron.jsx';
 import LoadingNotice from '../../components/loading-notice.jsx';
 
 require('whatwg-fetch');

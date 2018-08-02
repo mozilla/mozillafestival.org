@@ -1,12 +1,12 @@
 var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
-var Jumbotron = require('../components/jumbotron.jsx');
 var MemberProfile = require('../components/member-profile.jsx');
 var PRODUCTION_MEMBERS = require('../team-bio/production-members');
 var SPACE_WRANGLERS = require('../team-bio/space-wranglers');
 var EXPERIENCES_WRANGLERS = require('../team-bio/experiences-wranglers');
 var Sponsors = require('../components/sponsors.jsx');
 
+import Jumbotron from '../components/jumbotron.jsx';
 import Partners from '../components/partners.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 

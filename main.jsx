@@ -2,20 +2,22 @@ import React from 'react';
 import generateHelmet from './lib/helmet.jsx';
 import { Switch, Route, Redirect } from 'react-router';
 import WhyComeToMozfestPage from './pages/why-come-to-mozfest.jsx';
+import HomePage from './pages/home.jsx';
 import ProposalsPage from './pages/proposals/proposals.jsx';
+import CFPClose from './pages/cfp-closed.jsx';
+import TicketsPage from './pages/tickets.jsx';
 import EnglishStrings from './pages/proposals/language/english.json';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
 import HousePage from './pages/house.jsx';
-import NotificationBar from './components/notification-bar.jsx';
 import Footer from './components/footer.jsx';
 
 let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishStrings} />;
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={require(`./pages/home.jsx`)} />
-    <Route exact path="/proposals" component={ProposalEnglish} />
+    <Route exact path="/" component={HomePage} />
+    <Route exact path="/proposals" component={CFPClose} />
     <Route exact path="/late-proposals" component={ProposalEnglish} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
@@ -30,7 +32,7 @@ const Routes = () => (
     <Route path="/spaces" component={require(`./pages/spaces.jsx`)} />
     <Route exact path="/fringe" component={FringePage} />
     <Route path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
-    <Route path="/tickets" component={require(`./pages/tickets.jsx`)} />
+    <Route path="/tickets" component={TicketsPage} />
     <Route path="/media" component={require(`./pages/media.jsx`)} />
     <Route exact path="/speakers" component={require(`./pages/speakers.jsx`)} />
     <Route path="/speakers/:tab" component={require(`./pages/speakers.jsx`)} />
@@ -70,16 +72,6 @@ class Main extends React.Component {
     return (
       <div>
         { generateHelmet() }
-        <NotificationBar>
-          <div className="d-inline-block mr-sm-2">
-            <div className="d-inline-block emphasized">
-              Submit your session now for MozFest 2018!
-            </div>
-          </div>
-          <div className="d-inline-block">
-            Submission deadline is August 1.
-          </div>
-        </NotificationBar>
         <Routes />
         <Footer />
       </div>

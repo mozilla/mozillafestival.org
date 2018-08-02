@@ -1,10 +1,11 @@
 var React = require('react');
 var TabSwitcher = require('../components/tab-switcher.jsx');
-var Jumbotron = require('../components/jumbotron.jsx');
 var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
 var TALKS_2016 = require('../talks/2016');
 var TALKS_2017 = require('../talks/2017');
 // var TALKS_2018 = require('../talks/2018');
+
+import Jumbotron from '../components/jumbotron.jsx';
 
 var SpeakersPage = React.createClass({
   renderTalk: function(talks) {
