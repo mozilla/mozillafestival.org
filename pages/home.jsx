@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import Jumbotron from '../components/jumbotron.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
@@ -59,7 +60,7 @@ class Home extends React.Component {
           <div className="centered content wide pt-4">
             <h1>Join Us at MozFest</h1>
             <p>Get your ticket for MozFest weekend.</p>
-            <a href="https://ti.to/mozilla/mozilla-festival-2018" className="btn btn-arrow"><span>Buy Tickets</span></a>
+            <Link to="/tickets" className="btn btn-arrow"><span>Buy Tickets</span></Link>
           </div>
         </div>
         { this.renderVideoTakeover() }
