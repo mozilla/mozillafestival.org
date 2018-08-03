@@ -6,7 +6,7 @@ import compression from "compression";
 import RateLimit from "express-rate-limit";
 import { Helmet as ReactHelmet } from "react-helmet";
 import GoogleSpreadsheet from "google-spreadsheet";
-import proposalHandler from "./lib/proposal-handler";
+// import proposalHandler from "./lib/proposal-handler";
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -31,6 +31,8 @@ app.use(compression());
 app.use(express.static(path.resolve(__dirname, `public`)));
 app.use(bodyParser.json());
 
+
+/*
 app.post(`/add-proposal`, limiter, (req, res) => {
   // line breaks are essential for the private key.
   // if reading this private key from env var this extra replace step is a MUST
@@ -61,6 +63,7 @@ app.post(`/add-proposal`, limiter, (req, res) => {
     });
   });
 });
+*/
 
 app.post('/add-fringe-event', limiter, (req, res) => {
   var SPREADSHEET_ID = env.get(`FRINGE_EVENT_SPREADSHEET_ID_2018`);
