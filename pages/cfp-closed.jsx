@@ -19,7 +19,7 @@ var Proposal = React.createClass({
         </Jumbotron>
         <div className="content wide">
           <h1 className="text-center">The MozFest 2018 Call for Proposals has ended.</h1>
-          <p>Curation takes place <a href="https://github.com/MozillaFestival/mozfest-program-2018">here on Github</a> during the month of August. If you submitted a session, expect to hear from us in September. Thank you to everyone who proposed a session!</p>
+          <p>Curation takes place <a href="https://github.com/MozillaFestival/mozfest-program-2018">here on GitHub</a> during the month of August. If you submitted a session, expect to hear from us in September. Thank you to everyone who proposed a session!</p>
         </div>
       </div>
     );
