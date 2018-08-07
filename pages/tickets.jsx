@@ -2,6 +2,57 @@ import React from 'react';
 import Jumbotron from '../components/jumbotron.jsx';
 import generateHelmet from '../lib/helmet.jsx';
 
+const TICKETS_JSON_LD = {
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "Mozilla Festival 2018 Weekend",
+  "startDate": "2018-10-26",
+  "location": {
+    "@type": "Place",
+    "name": "Ravensbourne",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 Penrose Way",
+      "addressLocality": "London",
+      "postalCode": "SE100EW",
+      "addressCountry": "GB"
+    }
+  },
+  "image": [
+    "https://mozillafestival.org/assets/images/site-thumbnail.jpg"
+  ],
+  "description": "Mozilla Festival (MozFest) brings the world together to leave the internet better than we found it.",
+  "endDate": "2018-10-28",
+  "offers" : [ {
+    "@type" : "Offer",
+    "name" : "MozFest Weekend",
+    "price" : "45",
+    "priceCurrency" : "GBP",
+    "availability" : "InStock",
+    "url" : "https://mozillafestival.org/tickets",
+    "validFrom" : "2018-07-01",
+    "validThrough" : "2018-10-28T20:00"
+  },{
+    "@type" : "Offer",
+    "name" : "MozFest Weekend (Youth)",
+    "price" : "3",
+    "priceCurrency" : "GBP",
+    "availability" : "InStock",
+    "url" : "https://mozillafestival.org/tickets",
+    "validFrom" : "2018-07-01",
+    "validThrough" : "2018-10-28T20:00"
+  },{
+    "@type" : "Offer",
+    "name" : "MozFest Weekend (Benefactor)",
+    "price" : "155",
+    "priceCurrency" : "GBP",
+    "availability" : "InStock",
+    "url" : "https://mozillafestival.org/tickets",
+    "validFrom" : "2018-07-01",
+    "validThrough" : "2018-10-28T20:00"
+  } ]
+};
+
 const WEEKEND_TICKETS = [
   {
     type: `Weekend Ticket`,
@@ -121,16 +172,19 @@ let TicketCard = (props) => {
   </div>;
 };
 
-
 class Tickets extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    const script = document.createElement(`script`);
-    script.src = `https://js.tito.io/v1`;
-    script.async = true;
+    this.injectScript(`https://js.tito.io/v1`, true);
+  }
+
+  injectScript(src, async) {
+    let script = document.createElement(`script`);
+    script.src = src;
+    script.async = async;
 
     document.body.appendChild(script);
   }
@@ -138,7 +192,7 @@ class Tickets extends React.Component {
   render() {
     return (
       <div className="tickets-page">
-        {generateHelmet(this.pageMetaDescription)}
+        {generateHelmet(this.pageMetaDescription, TICKETS_JSON_LD)}
         <Jumbotron image="/assets/images/hero/tickets.jpg"
           image2x="/assets/images/hero/tickets.jpg">
           <h1 className="highlight">Tickets</h1>
