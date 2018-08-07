@@ -172,13 +172,6 @@ let TicketCard = (props) => {
   </div>;
 };
 
-const JsonLd = ({ data }) => {
-  return <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-  />;
-};
-
 class Tickets extends React.Component {
   constructor(props) {
     super(props);
