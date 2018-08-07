@@ -24,6 +24,46 @@ let sortByTime = function(a,b) {
   return 0;
 };
 
+const TICKETS_JSON_LD = {
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "MozFest House 2018",
+  "startDate": "2018-10-22",
+  "location": {
+    "@type": "Place",
+    "name": "The RSA",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8 John Adam St",
+      "addressLocality": "London",
+      "postalCode": "WC2N 6EZ",
+      "addressCountry": "GB"
+    }
+  },
+  "image": ["https://mozillafestival.org/assets/images/site-thumbnail.jpg"],
+  "description": "MozFest House features films, workshops, conferences, and talks, all focusing on Internet health and showcasing the diversity of the Mozilla network. The venue also features a free co-working space.",
+  "endDate": "2018-10-26",
+  "offers" : [ {
+    "@type" : "Offer",
+    "name" : "Individual Tickets",
+    "price" : "0",
+    "priceCurrency" : "GBP",
+    "availability" : "InStock",
+    "url" : "https://mozillafestival.org/house",
+    "validFrom" : "2018-07-01",
+    "validThrough" : "2018-10-28T20:00"
+  },{
+    "@type" : "Offer",
+    "name" : "MozFest All Access Pass",
+    "price" : "175",
+    "priceCurrency" : "GBP",
+    "availability" : "InStock",
+    "url" : "https://mozillafestival.org/tickets",
+    "validFrom" : "2018-07-01",
+    "validThrough" : "2018-10-21T23:59"
+  } ]
+};
+
 class HousePage extends React.Component {
   constructor(props) {
     super(props);
@@ -82,7 +122,7 @@ class HousePage extends React.Component {
   render() {
     return (
       <div className={this.pageClassName}>
-        {generateHelmet(this.pageMetaDescription)}
+        {generateHelmet(this.pageMetaDescription, TICKETS_JSON_LD)}
         <Jumbotron image="/assets/images/hero/house.jpg"
           image2x="/assets/images/hero/house.jpg">
           <h1>MozFest House</h1>
