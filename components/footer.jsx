@@ -109,7 +109,7 @@ class Footer extends React.Component {
               <FooterIcon icon="/assets/images/img-envelope.svg" alt="contact icon" to="/contact">
                 get in touch
               </FooterIcon>
-              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href={`https://twitter.com/intent/tweet?text=${SAMPLE_TWEET}&url=${SAMPLE_TWEET_URL}`}>
+              <FooterIcon icon="/assets/images/img-twitter.svg" alt="tweet icon" href={`https://twitter.com/intent/tweet?text=${SAMPLE_TWEET}&url=${SAMPLE_TWEET_URL}`} target="_blank">
                 tweet #mozfest
               </FooterIcon>
               <FooterIcon icon="/assets/images/img-hand.svg" alt="volunteer icon" to="/volunteer">
