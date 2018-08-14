@@ -1,4 +1,4 @@
-let QUEERING_MOZFEST = [
+const QUEERING_MOZFEST = [
   {
     name: `Aurelia Moser`,
     twitter: `@auremoser`,
@@ -18,5 +18,6 @@ let QUEERING_MOZFEST = [
 ];
 
 module.exports = {
+  "Art + Data": [],
   "Queering MozFest": QUEERING_MOZFEST
 };
