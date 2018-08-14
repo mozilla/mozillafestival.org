@@ -72,6 +72,14 @@ var SpacesInfo = [
 
 var ExpereincesInfo = [
   {
+    name: "Art + Data",
+    description:
+    (<div>
+      <p>The Art+Data experience — part of the Mozilla Artists Open Web project — engages artists, designers, technologists, and researchers in an artistic exploration of a healthy web. With an online gallery (https://foundation.mozilla.org/opportunity/artists-open-web) and an exhibition during MozFest, Art+Data will also feature artists in residencies (on site and online) and creative, interactive sessions. Thirty-six art projects will be showcased, and all (including digital and analogue processes) will focus on data knowledge and usage. They also link to the five festival issues of privacy & security, digital inclusion, web-literacy, open innovation, and decentralisation.</p>
+    </div>),
+    contacts: EXPERIENCES_WRANGLERS[`Art + Data`]
+  },
+  {
     name: "Queering MozFest",
     description:
     (<div>

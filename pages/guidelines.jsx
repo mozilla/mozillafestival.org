@@ -24,7 +24,7 @@ var Guidelines = React.createClass({
         {generateHelmet(this.pageMetaDescription)}
         <Jumbotron image="/assets/images/hero/guidelines.jpg"
           image2x="/assets/images/hero/guidelines.jpg">
-          <h1>participation<br/>guidelines</h1>
+          <h1 className="highlight">Participation Guidelines</h1>
         </Jumbotron>
         <div className="white-background">
           <div className="centered content wide">
@@ -57,8 +57,7 @@ var Guidelines = React.createClass({
             <div className="half-content">
               <p>MozFest organisers reserve the right to refuse admission to anyone violating these policies, and/or take further action including expulsion from the event.</p>
               <p>
-                <div className="boldish">Email: <a href="mailto:festival@mozilla.org">festival@mozilla.org</a></div>
-                (Recipients of this email are Sarah Allen and Allen Gunn)
+                During the festival week, we will have many alternative ways to raise issues, online and in person. If you have issues, please direct them to <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> (Recipients of this email are Sarah Allen and Allen Gunn)
               </p>
             </div>
           </div>

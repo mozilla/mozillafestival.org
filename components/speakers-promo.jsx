@@ -78,7 +78,7 @@ var SpeakersPromo = React.createClass({
       <div className="speakers-promo">
         <div className="row mb-5">
           <div className="col">
-            <h1>Dialogues & Debates</h1>
+            <h1>Past 'Dialogues & Debates' Speakers</h1>
             <p>Each year, MozFest features talks from luminaries at the intersection of technology and society. We host hackers, journalists, activists, and others on our stage. Here are just a few:</p>
           </div>
         </div>

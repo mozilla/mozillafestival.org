@@ -112,7 +112,7 @@ const WeekendSchedule = () => {
           description: `Morning sessions begin`
         },
         {
-          time: `13:00`,
+          time: `12:30`,
           description: `Lunch`
         },
         {
@@ -120,7 +120,7 @@ const WeekendSchedule = () => {
           description: `Afternoon sessions begin`
         },
         {
-          time: `18:00`,
+          time: `17:30`,
           description: `Closing Celebration`
         }
       ]

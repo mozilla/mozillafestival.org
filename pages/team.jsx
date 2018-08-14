@@ -52,6 +52,7 @@ var TeamPage = React.createClass({
               { this.renderIndividualSpaceSection(`Privacy and Security`) }
               { this.renderIndividualSpaceSection(`Web Literacy`) }
               { this.renderIndividualSpaceSection(`Youth Zone`) }
+              { this.renderIndividualSpaceSection(`Art + Data`, `experiences`) }
               { this.renderIndividualSpaceSection(`Queering MozFest`, `experiences`) }
             </div>
 
