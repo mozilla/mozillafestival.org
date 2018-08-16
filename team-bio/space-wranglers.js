@@ -201,7 +201,7 @@ let WEB_LITERACY_WRANGLERS = [
     twitter: `@IamProvisional`,
     pic: `/assets/images/team/wrangler/space/web-literacy_winnie-rabera-makokha_500x500.jpg`,
     bio: [
-      `Winnie’s background spans the fields of environmental and occupational health, safety, research, and use of technology for advocacy. She was a researcher in the Digital Skills Observatory, a Mozilla project in Kenya. She is currently a safety supervisor at Mpesa Foundation Academy, Kenya. She brings conversations about feminism to the web.`
+      `Winnie’s background spans the fields of environmental and occupational health, safety, research, and use of technology for advocacy. She was a researcher in the Digital Skills Observatory, a Mozilla project in Kenya. She brings conversations about feminism to the web.`
     ]
   },
   {
