@@ -235,7 +235,7 @@ function renderPage(appHtml, reactHelmet) {
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', 'UA-35433268-1', 'auto');
+                ga('create', 'UA-87658599-15', 'auto');
                 ga('send', 'pageview');
               </script>
             </head>
