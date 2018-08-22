@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { path: `/why-come-to-mozfest`, label: `Why Come to MozFest` },
   { path: `/spaces`, label: `Spaces` },
   { path: `/house`, label: `House` },
+  { path: `/fringe`, label: `Fringe` },
   { path: `/team/sponsors`, label: `Sponsors` },
   { path: `/tickets`, label: `Get Tickets`, btn: true }
 ];
