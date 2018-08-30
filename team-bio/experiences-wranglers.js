@@ -26,11 +26,11 @@ const ART_AND_DATA = [
 
 const QUEERING_MOZFEST = [
   {
-    name: `Aurelia Moser`,
-    twitter: `@auremoser`,
-    pic: `/assets/images/team/wrangler/experience/queering-mozfest_aurelia-moser_500x500.jpg`,
+    name: `Sarah Aoun`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/experience/`,
     bio: [
-      `Aure is a curious coder at Mozilla, working on internet health-focused fellowships. She also co-leads the NYC chapter of Girl Develop It, teaches web-programming at Parsons-J+D, SVA-DSI, and NYU-ITP, plus she gives talks and writes books on geospatial tech.`
+      `Sarah Aoun is a data activist, operational security trainer, and 2017-2018 Ford-Mozilla Open Web Fellow working on data privacy and security. Her work lies at the intersection of tech, human rights, and transformative justice. She collaborates with activists, journalists, and grassroots social movements on digital security, ethical data and privacy, and data-driven storytelling.`
     ]
   },
   {
@@ -40,7 +40,15 @@ const QUEERING_MOZFEST = [
     bio: [
       `Stéphanie is a security engineer at Mozilla working on Firefox. She loves exploring how tech and politics intersect.`
     ]
-  }
+  },
+  {
+    name: `Marnie Pasciuto Wood`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/experience/`,
+    bio: [
+      `Marnie is an Engineering Program Manager for the Test Pilot, Shield, and Iodide teams of Firefox. When she's not shipping browser experiments, you can find Marnie playing futsal as a goal keeper, coaching two soccer teams, or coaching a boys lacrosse team. She drinks way too much espresso.`
+    ]
+  },
 ];
 
 module.exports = {
