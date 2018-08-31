@@ -310,7 +310,7 @@ let YOUTH_ZONE_WRANGLERS = [
   {
     name: `Joseph Thomas`,
     twitter: ``,
-    pic: `/assets/images/team/wrangler/space/`,
+    pic: `/assets/images/team/wrangler/space/web-literacy_joseph-thomas_500x500.jpg`,
     bio: [
       `Joseph studies computer science at university, and at heart wishes the world was a bit more whimsical. What better area is there for this then technology, which brings virtual worlds, crazy inventions, and items that can only be described as “magic” to life?`
     ]

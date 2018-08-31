@@ -28,7 +28,7 @@ const QUEERING_MOZFEST = [
   {
     name: `Sarah Aoun`,
     twitter: ``,
-    pic: `/assets/images/team/wrangler/experience/`,
+    pic: `/assets/images/team/wrangler/experience/queering-mozfest_sarah-aoun_500x500.jpg`,
     bio: [
       `Sarah Aoun is a data activist, operational security trainer, and 2017-2018 Ford-Mozilla Open Web Fellow working on data privacy and security. Her work lies at the intersection of tech, human rights, and transformative justice. She collaborates with activists, journalists, and grassroots social movements on digital security, ethical data and privacy, and data-driven storytelling.`
     ]
@@ -44,7 +44,7 @@ const QUEERING_MOZFEST = [
   {
     name: `Marnie Pasciuto Wood`,
     twitter: ``,
-    pic: `/assets/images/team/wrangler/experience/`,
+    pic: `/assets/images/team/wrangler/experience/queering-mozfest_marnie-pasciuto-wood_500x500.jpg`,
     bio: [
       `Marnie is an Engineering Program Manager for the Test Pilot, Shield, and Iodide teams of Firefox. When she's not shipping browser experiments, you can find Marnie playing futsal as a goal keeper, coaching two soccer teams, or coaching a boys lacrosse team. She drinks way too much espresso.`
     ]
