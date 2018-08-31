@@ -16,8 +16,9 @@ let DECENTRALIZATION_WRANGLERS = [
   {
     name: `Natasha Pillai`,
     twitter: ``,
+    pic: `/assets/images/team/wrangler/space/decentralization_natasha-pillai_500x500.jpg`,
     bio: [
-      ``
+      `Natasha is an enterprise risk advisor for a government agency in New Zealand. She has a background in electronics engineering, cyber security, privacy and technology risk management. Natasha’s interests include data protection, privacy, emerging technology, innovations and especially women in technology.`
     ]
   },
   {
@@ -31,6 +32,7 @@ let DECENTRALIZATION_WRANGLERS = [
   {
     name: `Tendai Tirivanhu`,
     twitter: ``,
+    pic: `/assets/images/team/wrangler/space/decentralization_tendai-tirivanhu_500x500.jpg`,
     bio: [
       `Tendai is a young professional whose interests lie in financial literacy and technology education among women. She is passionate about bringing diversity to finance and technology spaces and cultural preservation.`
     ]
@@ -56,9 +58,10 @@ let DIGITAL_INCLUSION_WRANGLERS = [
   },
   {
     name: `Jon Tutcher`,
-    twitter: ``,
+    twitter: `@jontutcher`,
+    pic: `/assets/images/team/wrangler/space/digital-inclusion_jon-tutcher_500x500.jpg`,
     bio: [
-      ``
+      `Jon is a technologist and data engineer from Manchester, UK. He works at the BBC, where he's trying to figure out how to build responsible AI and knowledge sharing systems.`
     ]
   },
   {
@@ -158,6 +161,7 @@ let PRIVACY_AND_SECURITY_WRANGLERS = [
   {
     name: `Mandy Rawlings`,
     twitter: ``,
+    pic: `/assets/images/team/wrangler/space/privacy-security_mandy-rawlings_500x500.jpg`,
     bio: [
       `Mandy is the HR operations coordinator at Mozilla. She is a Toronto-based people person who is passionate about helping others succeed. Mandy believes that a healthy internet, and the safe and ethical use of data and insights, can make the world a better place to live.`
     ]
@@ -184,6 +188,7 @@ let WEB_LITERACY_WRANGLERS = [
   {
     name: `Juma Baldeh`,
     twitter: `@TechAngelGirl`,
+    pic: `/assets/images/team/wrangler/space/web-literacy_juma-baldeh_500x500.jpg`,
     bio: [
       `Juma preceded the Mozilla club HackathonGirls, which teaches web literacy to young girls. She is the country manager for Kubo, an open school platform in Gambia, and is also a Firefox champion. Juma envisions a future where there is a strong, equitable role on the web for the next generation of women.`
     ]
@@ -242,9 +247,9 @@ let YOUTH_ZONE_WRANGLERS = [
   {
     name: `Tina Gotschi`,
     pic: `/assets/images/team/wrangler/space/youth-zone_tina-götschi_500x500.jpg`,
-    twitter: ``,
+    twitter: `@CompSci_Ada`,
     bio: [
-      ``
+      `Tina is a computer science and technology educator at Ada, the National College for Digital Skills. She is passionate about creativity and technology and how people can collaborate to build a successful future for us all.`
     ]
   },
   {
@@ -305,8 +310,9 @@ let YOUTH_ZONE_WRANGLERS = [
   {
     name: `Joseph Thomas`,
     twitter: ``,
+    pic: `/assets/images/team/wrangler/space/web-literacy_joseph-thomas_500x500.jpg`,
     bio: [
-      ``
+      `Joseph studies computer science at university, and at heart wishes the world was a bit more whimsical. What better area is there for this then technology, which brings virtual worlds, crazy inventions, and items that can only be described as “magic” to life?`
     ]
   }
 ];

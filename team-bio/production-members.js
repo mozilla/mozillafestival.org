@@ -32,6 +32,14 @@ module.exports = [
     ],
   },
   {
+    name: `Zannah Marsh`,
+    title: `Content Strategist`,
+    pic: `/assets/images/team/production/ZannahMarsh.jpg`,
+    bio: [
+      `Zannah has created interactive museum exhibits, organized global hackathons, developed collaborative workshops, and written and published her own mini-comics. She brings this mix of skills and experience to MozFest, where she provides support to session facilitators and space wranglers, and experiments with new ways to tell the story of the Festival.`
+    ],
+  },
+  {
     name: `Consuela McKenzie`,
     title: `Production Manager`,
     pic: `/assets/images/team/production/Consuela.jpg`,
