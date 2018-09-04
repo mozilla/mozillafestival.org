@@ -83,7 +83,8 @@ var ExpereincesInfo = [
     name: "Gaming MozFest",
     description:
     (<div>
-      <p>Every day, many of us are pressured into offering up pieces of personal data in order to participate on the internet. To sign up for a social network we need to provide our full name. To download a gaming app we need to provide access to our phone’s contact list. What kinds of trade-offs do we make when we hand over that data? What are we really getting in exchange? How can consent exist in this system? Tracked is a large-scale game designed for MozFest 2018 centered on the festival theme of “Your Data and You.” The game will engage players in various activities throughout the festival space, demonstrating the various trade-offs we each make when it comes to our data. As participants are encouraged to quantify, document, and report on various pieces of information throughout the game, the hope is that they will also reflect on the choices we are constantly making about our data.</p>
+      <p>Every day, many of us are pressured into offering up pieces of personal data in order to participate on the internet. To sign up for a social network we need to provide our full name. To download a gaming app we need to provide access to our phone’s contact list. What kinds of trade-offs do we make when we hand over that data? What are we really getting in exchange? How can consent exist in this system?</p>
+      <p>Tracked is a large-scale game designed for MozFest 2018 centered on the festival theme of “Your Data and You.” The game will engage players in various activities throughout the festival space, demonstrating the various trade-offs we each make when it comes to our data. As participants are encouraged to quantify, document, and report on various pieces of information throughout the game, the hope is that they will also reflect on the choices we are constantly making about our data.</p>
     </div>),
     contacts: []
   },
