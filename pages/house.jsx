@@ -137,7 +137,7 @@ class HousePage extends React.Component {
               <p>From Monday 22nd - Friday 26th October, MozFest participants are invited to dig deeper into their work, trade ideas, swap code, and build solutions.</p>
               <p>MozFest House features films, workshops, conferences, and talks, all focusing on Internet health and showcasing the diversity of the Mozilla network. The venue also features a free co-working space.</p>
               <ul className="no-bullet text-left pl-0">
-                <li className="mb-4"><strong>Where</strong>: MozFest House is located just off Trafalgar Square at the <a href="https://www.thersa.org/contact">Royal Society of Arts</a> (RSA), 8 John Adam St, London WC2N 6EZ. RSA is a contemporary venue equipped with co-working areas, meeting rooms, and a speakers forum.</li>
+                <li className="mb-4"><strong>Where</strong>: MozFest House is located just off Trafalgar Square at the <a href="https://www.google.com/maps/place/RSA+House/@51.5093702,-0.1248943,17z/data=!3m1!4b1!4m5!3m4!1s0x487604c9572d71f1:0xc61aaa0727953544!8m2!3d51.5093669!4d-0.1227056" target="_blank">Royal Society of Arts</a> (RSA), 8 John Adam St, London WC2N 6EZ. RSA is a contemporary venue equipped with co-working areas, meeting rooms, and a speakers forum.</li>
                 <li className="mb-4"><strong>When</strong>: MozFest House will be open Monday 22nd - Friday 26th October between 9:00 and 23:00.</li>
                 <li className="mb-4"><strong>Who</strong>: Coders, journalists, teachers, hackers — anyone and everyone working toward a healthier Internet. All ages and skill levels are welcome. Please note you must register for MozHouse events separately from the weekend festival.</li>
               </ul>
