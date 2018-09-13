@@ -1,4 +1,4 @@
-let DECENTRALIZATION_WRANGLERS = [
+let DECENTRALISATION_WRANGLERS = [
   {
     name: `Mark Boas`,
     twitter: `@maboa`,
@@ -9,6 +9,7 @@ let DECENTRALIZATION_WRANGLERS = [
   {
     name: `Kade Morton`,
     twitter: `@cypath`,
+    pic: `/assets/images/team/wrangler/space/decentralization_kade_morton_500x500.jpg`,
     bio: [
       `An information security practitioner, Kade is the founder of Aletheia, a community that’s building a decentralised, open-access publishing platform for scientific research and cultural preservation. He also runs Panopticon Project, an open database of open-source intelligence covering the capabilities of Advanced Persistent Threats, nation states, and corporations.`
     ]
@@ -173,14 +174,6 @@ let PRIVACY_AND_SECURITY_WRANGLERS = [
     bio: [
       `David is a highly-active member of Mozilla's UK volunteer community and a Mozilla Rep. Ocassionally found off-line hosting workshops, London MozCoffee, and a variety of other frequent events, and found online deeply embedded in decentralization, exploring ethical alternatives, metamodernism, activism, LGBTQIA rights, and building Fit Open — a people-powered outdoor fitness and endurance sports social enterprise. `
     ]
-  },
-  {
-    name: `Vojtech Sedlak`,
-    twitter: `@vojtechsedlak`,
-    pic: `/assets/images/team/wrangler/space/privacy-security_vojtech-sedlak_500x500.jpg`,
-    bio: [
-      `Vojtech is a digital analyst. Originally from the Czech Republic, Vojtech works at the intersection of programming, analytics, and storytelling. He enjoys searching for innovative ways of analyzing data and communicating insights and is a passionate advocate of the open data and open analytics movements.`
-    ]
   }
 ];
 
@@ -318,7 +311,7 @@ let YOUTH_ZONE_WRANGLERS = [
 ];
 
 module.exports = {
-  "Decentralization": DECENTRALIZATION_WRANGLERS,
+  "Decentralisation": DECENTRALISATION_WRANGLERS,
   "Digital Inclusion": DIGITAL_INCLUSION_WRANGLERS,
   "Openness": OPENNESS_WRANGLERS,
   "Privacy and Security": PRIVACY_AND_SECURITY_WRANGLERS,

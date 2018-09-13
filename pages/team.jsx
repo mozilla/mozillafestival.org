@@ -47,12 +47,13 @@ var TeamPage = React.createClass({
               <h1>Our 2018 Space & Experience Wranglers</h1>
               <div className="horizontal-rule mb-5"></div>
               { this.renderIndividualSpaceSection(`Digital Inclusion`) }
-              { this.renderIndividualSpaceSection(`Decentralization`) }
+              { this.renderIndividualSpaceSection(`Decentralisation`) }
               { this.renderIndividualSpaceSection(`Openness`) }
               { this.renderIndividualSpaceSection(`Privacy and Security`) }
               { this.renderIndividualSpaceSection(`Web Literacy`) }
               { this.renderIndividualSpaceSection(`Youth Zone`) }
               { this.renderIndividualSpaceSection(`Art + Data`, `experiences`) }
+              { this.renderIndividualSpaceSection(`Gaming MozFest`, `experiences`) }
               { this.renderIndividualSpaceSection(`Queering MozFest`, `experiences`) }
             </div>
 

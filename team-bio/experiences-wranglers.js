@@ -23,6 +23,33 @@ const ART_AND_DATA = [
   }
 ];
 
+const GAMING_MOZFEST = [
+  {
+    name: `Hang Do Thi Duc`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/experience/gaming-mozfest_hang-do-thi-duc_500x500.jpg`,
+    bio: [
+      `Hang is a design technologist whose work explores the social web and the effect of data-driven technologies on privacy, identity, and society. She is the creator of the browser extension Data Selfie and the privacy research and data storytelling project about Venmo’s public feed Public By Default.`
+    ]
+  },
+  {
+    name: `Rebecca Ricks`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/experience/gaming-mozfest_rebecca-ricks_500x500.jpg`,
+    bio: [
+      `Becca Ricks is a researcher and creative technologist thinking about online privacy and computational systems within a human rights framework. Her work investigates how social platforms collect, monetize, and disclose data about people using automated or opaque processes. Most recently, Becca was a Mozilla Fellow researching encryption and privacy at Human Rights Watch.`
+    ]
+  },
+  {
+    name: `Ashlyn Sparrow`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/experience/gaming-mozfest_ashlyn-sparrow_500x500.jpg`,
+    bio: [
+      `Ashlyn Sparrow is the learning technology director and lead game designer at the University of Chicago’s Game Changer Chicago Design Lab. She is also creative director at Resilient Games Studio. Ashlyn has worked on serious board, card, and digital games, and also public health apps.`
+    ]
+  }
+];
+
 
 const QUEERING_MOZFEST = [
   {
@@ -53,5 +80,6 @@ const QUEERING_MOZFEST = [
 
 module.exports = {
   "Art + Data": ART_AND_DATA,
+  "Gaming MozFest": GAMING_MOZFEST,
   "Queering MozFest": QUEERING_MOZFEST
 };
