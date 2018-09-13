@@ -10,6 +10,7 @@ import TicketsPage from './pages/tickets.jsx';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
 import HousePage from './pages/house.jsx';
+import ContactPage from './pages/contact.jsx';
 import Footer from './components/footer.jsx';
 
 // let ProposalEnglish = () => <ProposalsPage lang="english" stringSource={EnglishStrings} />;
@@ -21,7 +22,7 @@ const Routes = () => (
     <Route exact path="/late-proposals" component={CFPClose} />
     <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
-    <Route path="/contact" component={require(`./pages/contact.jsx`)} />
+    <Route path="/contact" component={ContactPage} />
     <Route path="/expect" component={() => <Redirect to="/why-come-to-mozfest"/>} />
     <Route path="/why-come-to-mozfest" component={WhyComeToMozfestPage} />
     <Route path="/guidelines" component={require(`./pages/guidelines.jsx`)} />
