@@ -150,7 +150,8 @@ function getHouseEvents(response) {
       } else {
         let approvedRows = rows.filter(row => {
           let showOnSite = row.addtowebsite.toLowerCase().trim();
-          return showOnSite === `y` || showOnSite === `yes`;
+          let type = row.eventtype.toLowerCase().trim();
+          return (showOnSite === `y` || showOnSite === `yes`) && type === `public`;
         });
         response.send(approvedRows);
       }
