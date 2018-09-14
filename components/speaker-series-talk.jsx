@@ -60,11 +60,17 @@ var SpeakerSeriesTalk = React.createClass({
 
     return <h3 className="name mb-0">{this.props.name}</h3>;
   },
+  renderTalkTime: function() {
+    return this.props.talkTime && <div><em>{this.props.talkTime}</em></div>;
+  },
   renderTalkLinks: function() {
     return <div>
       { this.props.videoLink && <a className="talk-link video" href={this.props.videoLink}>Video</a> }
       { this.props.transcriptLink && <a className="talk-link transcript ml-4" href={this.props.transcriptLink}>Transcript</a> }
     </div>;
+  },
+  renderDescription: function() {
+    return this.props.description && <div>{this.props.description}</div>;
   },
   renderSpeakers: function() {
     return this.props.speakers.map(speaker => <Speaker {...speaker} key={speaker.name} />);
@@ -77,7 +83,9 @@ var SpeakerSeriesTalk = React.createClass({
       <div className="row my-5 pb-4 justify-content-center speaker-series-talk" id={id}>
         <div className="col-12 text-center text-sm-left">
           { this.renderName() }
+          { this.renderTalkTime() }
           { this.renderTalkLinks() }
+          { this.renderDescription() }
           <div className="subhead">
             { this.renderSpeakers() }
           </div>
