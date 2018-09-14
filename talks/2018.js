@@ -237,7 +237,6 @@ module.exports = [
     talkTime: `Sunday, Oct. 28, 15:15–15:55`,
     videoLink: ``,
     transcriptLink: ``,
-    description: <p></p>,
     speakers: [
       {
         name: `Mitchell Baker`,

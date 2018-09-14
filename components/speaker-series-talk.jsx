@@ -27,7 +27,7 @@ var Speaker = React.createClass({
   },
   render: function() {
     return (
-      <div className="row my-3">
+      <div className="row my-4">
         <div className="col-6 col-sm-2 mb-5 mb-sm-0 mx-auto">
           <img className="img-fluid rounded-circle" src={ this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
@@ -70,7 +70,7 @@ var SpeakerSeriesTalk = React.createClass({
     </div>;
   },
   renderDescription: function() {
-    return this.props.description && <div>{this.props.description}</div>;
+    return this.props.description && <div className="mb-5">{this.props.description}</div>;
   },
   renderSpeakers: function() {
     return this.props.speakers.map(speaker => <Speaker {...speaker} key={speaker.name} />);
@@ -86,7 +86,7 @@ var SpeakerSeriesTalk = React.createClass({
           { this.renderTalkTime() }
           { this.renderTalkLinks() }
           { this.renderDescription() }
-          <div className="subhead">
+          <div className="speakers">
             { this.renderSpeakers() }
           </div>
         </div>
