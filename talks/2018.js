@@ -29,7 +29,7 @@ module.exports = [
         twitter: `@zararah`,
         pic: `/assets/images/speakers/2018/Zara_Rahman.jpg`,
         description: [
-          `Zara Rahman, researcher at the Engine Room working at the intersection of technology and social justice`
+          `Zara Rahman, researcher at the Engine Room working at the intersection of technology and social justice.`
         ],
       },
       {
@@ -37,7 +37,7 @@ module.exports = [
         twitter: `@maljayaram`,
         pic: `/assets/images/speakers/2018/Malavika_Jayaram.jpg`,
         description: [
-          `Malavika Jayaram, executive director of Digital Asia Hub and faculty associate at Harvard’s Berkman Klein Center for Internet & Society`
+          `Malavika Jayaram, executive director of Digital Asia Hub and faculty associate at Harvard’s Berkman Klein Center for Internet & Society.`
         ],
       }
     ]
@@ -143,7 +143,7 @@ module.exports = [
         twitter: `@selectedwisdom`,
         pic: `/assets/images/speakers/2018/Clinton_Watts.jpg`,
         description: [
-          `Clinton Watts is a fellow at Foreign Policy Research Institute and the Center for Cyber and Homeland Security; a former FBI special agent; and author of “Messing with the Enemy”.`
+          `Clinton Watts is a fellow at Foreign Policy Research Institute and the Center for Cyber and Homeland Security; a former FBI special agent; and author of “Messing with the Enemy.”`
         ]
       }
     ]
@@ -210,7 +210,7 @@ module.exports = [
         twitter: `@MChrisRiley`,
         pic: `/assets/images/speakers/2018/Chri_ Riley.jpg`,
         description: [
-          `Chris Riley is director of public policy at Mozilla`
+          `Chris Riley is director of public policy at Mozilla.`
         ],
       }
     ]
