@@ -42,6 +42,7 @@ class Contact extends React.Component {
                   </p>
                 </div>
               </div>
+              {/*
               <div className="row">
                 <div className="col-12">
                   <hr className="mt-4 mb-5" />
@@ -50,6 +51,7 @@ class Contact extends React.Component {
                   <p>In event of an emergency always dial 999.</p>
                 </div>
               </div>
+              */}
               <div className="row">
                 <div className="col-12">
                   <hr className="mt-4 mb-5" />
