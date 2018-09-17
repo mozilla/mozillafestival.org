@@ -13,7 +13,8 @@ class Contact extends React.Component {
     return (
       <div className="contact-page">
         {generateHelmet(this.pageMetaDescription)}
-        <Jumbotron>
+        <Jumbotron image="/assets/images/hero/contact.jpg"
+          image2x="/assets/images/hero/contact.jpg">
           <h1 className="highlight">Get In Touch</h1>
         </Jumbotron>
         <div className="white-background">
@@ -26,7 +27,7 @@ class Contact extends React.Component {
                 <div className="col-6">
                   <h2>MozFest Weekend</h2>
                   <p>
-                    <a href="" target="_blank" className="d-block">Ravensbourne</a>
+                    <a href="https://www.google.com/maps/place/Ravensbourne+University+London/@51.5016761,0.0035609,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8a81c7b6dfe23:0xc31e4c0ca6a4ace2!8m2!3d51.5016728!4d0.0057496" target="_blank" className="d-block">Ravensbourne</a>
                     Greenwich Peninsula,<br/>
                     6 Penrose Way,<br/>
                     London SE10 0EW
@@ -35,7 +36,7 @@ class Contact extends React.Component {
                 <div className="col-6">
                   <h2>MozFest House</h2>
                   <p>
-                    <a href="" target="_blank" className="d-block">Royal Society of Arts (RSA)</a>
+                    <a href="https://www.google.com/maps/place/RSA+House/@51.5093702,-0.1248943,17z/data=!3m1!4b1!4m5!3m4!1s0x487604c9572d71f1:0xc61aaa0727953544!8m2!3d51.5093669!4d-0.1227056" target="_blank" className="d-block">Royal Society of Arts (RSA)</a>
                     8 John Adam St,<br/>
                     London WC2N 6EZ
                   </p>
