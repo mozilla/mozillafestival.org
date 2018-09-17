@@ -3,7 +3,7 @@ var TabSwitcher = require('../components/tab-switcher.jsx');
 var SpeakerSeriesTalk = require('../components/speaker-series-talk.jsx');
 var TALKS_2016 = require('../talks/2016');
 var TALKS_2017 = require('../talks/2017');
-// var TALKS_2018 = require('../talks/2018');
+var TALKS_2018 = require('../talks/2018');
 
 import Jumbotron from '../components/jumbotron.jsx';
 
@@ -21,11 +21,11 @@ var SpeakersPage = React.createClass({
         <div className="content wide my-0">
           <TabSwitcher baseURL={`/speakers/`} initialTab={this.props.match.params.tab} ref="tabSwitcher" className="pull-up">
 
-            {/* <div name="2018" data-slug="2018">
+            <div name="2018" data-slug="2018">
               <h1>2018</h1>
               <div className="horizontal-rule"></div>
               { this.renderTalk(TALKS_2018) }
-            </div>*/}
+            </div>
 
             <div name="2017" data-slug="2017">
               <h1>2017</h1>
