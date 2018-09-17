@@ -12,7 +12,7 @@ module.exports = [
         twitter: `@ambaonadventure`,
         pic: `/assets/images/speakers/2018/Amba _Kak.jpg`,
         description: [
-          `Amba Kak is a policy advisor with Mozilla focusing on privacy, net neutrality and free speech in India. Prior, Amba was a Mozilla Fellow and legal consultant at the National Institute of Public Finance & Policy. <a href="https://www.google.com/search?q=%22amba+kak%22&client=firefox-b-1-ab&source=lnms&tbm=nws&sa=X&ved=0ahUKEwirl6u_04PcAhVDpFkKHXbCA88Q_AUICygC&biw=1297&bih=581" target="_blank">Read Amba’s recent op-eds and interviews in the Times of India, the Business Standard, and other publications</a>.`
+          `Amba Kak is a policy advisor with Mozilla focusing on privacy, net neutrality and free speech in India.`
         ],
       }
     ]
@@ -53,7 +53,7 @@ module.exports = [
         twitter: `@noUpside`,
         pic: `/assets/images/speakers/2018/Renee_DiResta.jpg`,
         description: [
-          `Renee DiResta is a Mozilla Fellow in Media, Misinformation and Trust. In her work at Mozilla and as the director of research at New Knowledge, Renee investigates the spread of disinformation and manipulated narratives across social networks. She also volunteers as a policy lead at Data for Democracy and is a founding advisor to the Center for Humane Technology. <a href="https://www.wired.com/author/renee-diresta/" target="_blank">Read Renee’s recent op-eds in WIRED</a>.`
+          `Renee DiResta is a Mozilla Fellow in Media, Misinformation and Trust. She investigates the spread of disinformation and manipulated narratives across social networks.`
         ],
       }
     ]
@@ -69,7 +69,7 @@ module.exports = [
         twitter: `@JulieOwono`,
         pic: `/assets/images/speakers/2018/Julie_Owono.jpg`,
         description: [
-          `Julie Owono is the executive director of Internet Sans Frontières, an organization protecting human rights online. Julie also writes columns for Al Jazeera English and Quartz.`
+          `Julie Owono is the executive director of Internet Sans Frontières, an organization protecting human rights online.`
         ],
       }
     ]
@@ -86,7 +86,7 @@ module.exports = [
         twitter: `@ealshafei`,
         pic: `/assets/images/speakers/2018/Esra'a_Al_Shafei.png`,
         description: [
-          `Esra’a Al-Shafei, Bahraini human rights activist and founder of <a href="https://majal.org/" target="_blank">Majal.org</a>`
+          `Esra’a Al-Shafei is a Bahraini human rights activist and founder of <a href="https://majal.org/" target="_blank">Majal.org</a>.`
         ],
       },
       {
@@ -94,7 +94,7 @@ module.exports = [
         twitter: `@RamyRaoof`,
         pic: `/assets/images/speakers/2018/Ramy_Raoof.jpg`,
         description: [
-          `Ramy Raoof, senior research technologist at the Egyptian Initiative for Personal Rights, and a board member at Tor`
+          `Ramy Raoof is senior research technologist at the Egyptian Initiative for Personal Rights, and a board member at Tor.`
         ],
       },
       {
@@ -102,7 +102,7 @@ module.exports = [
         twitter: `@maasalan`,
         pic: `/assets/images/speakers/2018/Mahsa_Alimardani.jpg`,
         description: [
-          `Mahsa Alimardani, Iran programme officer at ARTICLE19`
+          `Mahsa Alimardani is Iran programme officer at ARTICLE19, a nonprofit defending freedom of expression.`
         ],
       }
     ]
@@ -119,7 +119,7 @@ module.exports = [
         twitter: `@camillefrancois`,
         pic: `/assets/images/speakers/2018/Camille_Francois.jpg`,
         description: [
-          `Camille Francois, research director at Graphika and affiliate at Harvard’s Berkman Klein Center for Internet & Society`
+          `Camille Francois is research director at Graphika and affiliate at Harvard’s Berkman Klein Center for Internet & Society.`
         ],
       },
       {
@@ -127,7 +127,7 @@ module.exports = [
         twitter: `@gchaslot`,
         pic: `/assets/images/speakers/2018/Guillaume_Chaslot.png`,
         description: [
-          `Guillaume Chaslot, founder of AlgoTransparency and former software engineer at Google/YouTube`
+          `Guillaume Chaslot is founder of AlgoTransparency and former software engineer at Google/YouTube.`
         ],
       },
       {
@@ -135,7 +135,7 @@ module.exports = [
         twitter: `@alondra`,
         pic: `/assets/images/speakers/2018/Alondra_Nelson.jpg`,
         description: [
-          `Alondra Nelson, president of the Social Science Research Council`
+          `Alondra Nelson is president of the Social Science Research Council.`
         ],
       },
       {
@@ -143,8 +143,8 @@ module.exports = [
         twitter: `@selectedwisdom`,
         pic: `/assets/images/speakers/2018/Clinton_Watts.jpg`,
         description: [
-          `Clinton Watts, fellow at Foreign Policy Research Institute and the Center for Cyber and Homeland Security, former FBI special agent, and author of “Messing with the Enemy”`
-        ],
+          `Clinton Watts is a fellow at Foreign Policy Research Institute and the Center for Cyber and Homeland Security; a former FBI special agent; and author of “Messing with the Enemy”.`
+        ]
       }
     ]
   },
@@ -160,7 +160,7 @@ module.exports = [
         twitter: `@royamahboob`,
         pic: `/assets/images/speakers/2018/Roya_Mahboob.png`,
         description: [
-          `Roya Mahboob, co-founder and CEO of the Digital Citizen Fund`
+          `Roya Mahboob is co-founder and CEO of the Digital Citizen Fund, which empowers and educates women and children.`
         ],
       },
       {
@@ -168,7 +168,7 @@ module.exports = [
         twitter: `@nathrich`,
         pic: `/assets/images/speakers/2018/Nathalie_Richards.jpg`,
         description: [
-          `Nathalie Richards, co-founder of EduKit`
+          `Nathalie Richards is co-founder of EduKit, a free online resource for teachers.`
         ],
       }
     ]
@@ -184,7 +184,7 @@ module.exports = [
         twitter: `@interwebznani`,
         pic: `/assets/images/speakers/2018/Nani_Jansen.jpg`,
         description: [
-          `Nani Jansen Reventlow is the director of the Digital Freedom Fund, which supports the advancement of digital rights in Europe through strategic litigation. She is a recognised international lawyer responsible for groundbreaking freedom of expression cases around the world, a lawyer at Doughty Street Chambers, and Lecturer in Law at Columbia Law School.`
+          `Nani Jansen Reventlow is the director of the Digital Freedom Fund, which supports the advancement of digital rights in Europe through strategic litigation.`
         ],
       }
     ]
@@ -202,7 +202,7 @@ module.exports = [
         twitter: `@maryantfp`,
         pic: `/assets/images/speakers/2018/Maryant_Fernandez.jpg`,
         description: [
-          `Maryant Fernandez, senior policy advisor, EDRi`
+          `Maryant Fernandez is senior policy advisor at EDRi, which defends rights and freedoms online.`
         ],
       },
       {
@@ -210,7 +210,7 @@ module.exports = [
         twitter: `@MChrisRiley`,
         pic: `/assets/images/speakers/2018/Chri_ Riley.jpg`,
         description: [
-          `Chris Riley, director of public policy at Mozilla`
+          `Chris Riley is director of public policy at Mozilla`
         ],
       }
     ]
@@ -227,7 +227,7 @@ module.exports = [
         twitter: `@soudehrad`,
         pic: `/assets/images/speakers/2018/Soudeh_Rad.jpg`,
         description: [
-          `Soudeh Rad is president of Feminist Spectrum, a Paris-based nonprofit working on gender equality and education. Soudeh is also an International Lesbian, Gay, Bisexual, Trans and Intersex Association (ILGA) Europe board member.`
+          `Soudeh Rad is president of Feminist Spectrum, a Paris-based nonprofit working on gender equality and education.`
         ],
       }
     ]
@@ -243,7 +243,7 @@ module.exports = [
         twitter: `@MitchellBaker`,
         pic: `/assets/images/speakers/2018/Mitchell_Baker.jpg`,
         description: [
-          `Mitchell Baker co-founded the Mozilla Project to support the open, innovative web and ensure it continues offering opportunities for everyone. As Chairwoman of Mozilla, Mitchell Baker is responsible for organizing and motivating a massive, worldwide collective of employees and volunteers around the world who are building the internet as a global public resource, open and accessible to all. Mitchell has written the key documents that set out Mozilla’s enduring mission and commitments: the Mozilla Public License in 1998, the Mozilla Manifesto in 2007 and the Mozilla Manifesto Addendum (also known as the Pledge for a Healthy Internet) in 2018.`
+          `Mitchell Baker co-founded the Mozilla Project to support the open, innovative web and ensure it continues offering opportunities for everyone.`
         ],
       }
     ]
