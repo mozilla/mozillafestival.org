@@ -1,8 +1,6 @@
 var React = require('react');
 var SpeakerTinyCard = require('../components/speaker-tiny-card.jsx');
 
-import { Link } from 'react-router-dom';
-
 const FEATURED_SPEAKERS = [
   {
     name: `Amba Kak`,
@@ -172,15 +170,6 @@ var SpeakersPromo = React.createClass({
             })
           }
         </div>
-        { /*
-        <div className="row">
-          <div className="col text-center">
-            <Link to="/speakers" className="btn btn-arrow">
-              <span>Watch All Previous Dialogues & Debates</span>
-            </Link>
-          </div>
-        </div>
-        */ }
       </div>
     );
   }
