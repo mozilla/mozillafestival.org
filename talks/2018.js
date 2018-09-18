@@ -10,7 +10,7 @@ module.exports = [
       {
         name: `Amba Kak`,
         twitter: `@ambaonadventure`,
-        pic: `/assets/images/speakers/2018/Amba _Kak.jpg`,
+        pic: `/assets/images/speakers/2018/Amba_Kak.jpg`,
         description: [
           `Amba Kak is a policy advisor with Mozilla focusing on privacy, net neutrality and free speech in India.`
         ],
@@ -158,7 +158,7 @@ module.exports = [
       {
         name: `Roya Mahboob`,
         twitter: `@royamahboob`,
-        pic: `/assets/images/speakers/2018/Roya_Mahboob.png`,
+        pic: `/assets/images/speakers/2018/Roya_Mahboob.jpg`,
         description: [
           `Roya Mahboob is co-founder and CEO of the Digital Citizen Fund, which empowers and educates women and children.`
         ],
@@ -208,7 +208,7 @@ module.exports = [
       {
         name: `Chris Riley`,
         twitter: `@MChrisRiley`,
-        pic: `/assets/images/speakers/2018/Chri_ Riley.jpg`,
+        pic: `/assets/images/speakers/2018/Chris_Riley.jpg`,
         description: [
           `Chris Riley is director of public policy at Mozilla.`
         ],
