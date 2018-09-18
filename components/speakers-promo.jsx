@@ -145,6 +145,14 @@ const FEATURED_SPEAKERS = [
     talkName: `Talk: Privacy, Identity, and Gender Online`,
     link: ``,
     pic: `/assets/images/speakers/2018/Soudeh_Rad.jpg`
+  },
+  {
+    name: `Mitchell Baker`,
+    shortIntro: ``,
+    twitter: `@MitchellBaker`,
+    talkName: `Talk`,
+    link: ``,
+    pic: `/assets/images/speakers/2018/Mitchell_Baker.jpg`
   }
 ];
 
