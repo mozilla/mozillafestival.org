@@ -147,7 +147,7 @@ module.exports = [
         twitter: `@emilymaynot`,
         pic: `/assets/images/speakers/2017/EmilyMay.jpeg`,
         talkInfoIndex: 8,
-        description: `Emily is the co-founder and executive director of <a href="http://ihollaback.org/" target="_blank">Hollaback!</a>, an <a href="https://www.ashoka.org/fellow/emily-may" target="_blank">Ashoka Fellow</a>, and a <a href="https://www.prime-movers.net/our-fellows/emily-may/" target="_blank">Prime Movers Fellow</a>. In 2005, at the age of 24, she co-founded Hollaback! in New York City, and in 2010 she became its first full-time executive director. Under her leadership, the organization has scaled to over 50 cities in 25 countries, and launched <a href="https://iheartmob.org/" target="_blank">HeartMob</a>, Hollaback!’s platform designed to support people being harassed online.`,
+        description: `Emily is the co-founder and executive director of <a href="https://ihollaback.org/" target="_blank">Hollaback!</a>, an <a href="https://www.ashoka.org/fellow/emily-may" target="_blank">Ashoka Fellow</a>, and a <a href="https://www.prime-movers.net/our-fellows/emily-may/" target="_blank">Prime Movers Fellow</a>. In 2005, at the age of 24, she co-founded Hollaback! in New York City, and in 2010 she became its first full-time executive director. Under her leadership, the organization has scaled to over 50 cities in 25 countries, and launched <a href="https://iheartmob.org/" target="_blank">HeartMob</a>, Hollaback!’s platform designed to support people being harassed online.`,
       }
     ]
   },
@@ -192,7 +192,7 @@ module.exports = [
         twitter: `@NiNanjira`,
         pic: `/assets/images/speakers/2017/NanjiraSambuli.jpeg`,
         talkInfoIndex: 11,
-        description: `Nanjira is the Digital Equality Advocacy Manager at the Web Foundation, where she leads advocacy efforts to promote digital equality in access to and use of the web, with a particular focus on the Foundation’s <a href="http://webfoundation.org/our-work/projects/womens-rights-online/" target="_blank">Women’s Rights Online</a> work.`,
+        description: `Nanjira is the Digital Equality Advocacy Manager at the Web Foundation, where she leads advocacy efforts to promote digital equality in access to and use of the web, with a particular focus on the Foundation’s <a href="https://webfoundation.org/our-work/projects/womens-rights-online/" target="_blank">Women’s Rights Online</a> work.`,
       }
     ]
   },
@@ -206,14 +206,14 @@ module.exports = [
         twitter: `@Anasuyashh`,
         pic: `/assets/images/speakers/2017/AnasuyaSengupta.jpeg`,
         talkInfoIndex: 12,
-        description: `Anasuya Sengupta is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She has led initiatives in India/USA, across the global South, and internationally for over 20 years to amplify voices from the margins in virtual and physical worlds. She is the former Chief Grantmaking Officer at the Wikimedia Foundation and a 2017 Shuttleworth Fellow.`,
+        description: `Anasuya Sengupta is co-founder of <a href="https://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She has led initiatives in India/USA, across the global South, and internationally for over 20 years to amplify voices from the margins in virtual and physical worlds. She is the former Chief Grantmaking Officer at the Wikimedia Foundation and a 2017 Shuttleworth Fellow.`,
       },
       {
         name: `Siko Bouterse`,
         twitter: `@sikob`,
         pic: `/assets/images/speakers/2017/SikoBouterse.jpeg`,
         talkInfoIndex: 12,
-        description: `Siko Bouterse is co-founder of <a href="http://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
+        description: `Siko Bouterse is co-founder of <a href="https://whoseknowledge.org/" target="_blank">Whose Knowledge</a>? She is former Director of Community Resources at the Wikimedia Foundation, where she led teams and experiments like the Wikipedia Teahouse and Inspire. For over 10 years, she’s been community organizing, localizing and imagining a more plural, emancipatory and open web.`,
       }
     ]
   },
