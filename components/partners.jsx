@@ -14,7 +14,7 @@ const PARTNERS_LIST = [
   {
     name: `Code Is Science`,
     logo: `/assets/images/team/partner/partner_code-is-science_grayscale.png`,
-    link: `http://www.codeisscience.com/`
+    link: `https://www.codeisscience.com/`
   },
   {
     name: `Universidade Federal de Alagoas`,
@@ -44,7 +44,7 @@ const PARTNERS_LIST = [
   {
     name: `Pichoun`,
     logo: `/assets/images/team/partner/partner_pichoun_grayscale.png`,
-    link: `http://www.pichoun.fr`
+    link: `https://www.pichoun.fr`
   },
   {
     name: `UAL`,
