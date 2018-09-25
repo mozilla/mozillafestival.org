@@ -50,7 +50,7 @@ var EventCard = React.createClass({
       <li className="event-card col-12 mb-4">
         <div className="row inner-wrapper p-3">
           <div className="col-12 col-sm-4">
-            <header className="font-weight-bold mb-3">{this.props.eventname}</header>
+            <div className="font-weight-bold mb-3">{this.props.eventname}</div>
             <div className="details">
               { this.renderEventTime() }
               { this.props.location &&
