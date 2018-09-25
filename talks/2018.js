@@ -119,7 +119,7 @@ module.exports = [
         twitter: `@camillefrancois`,
         pic: `/assets/images/speakers/2018/Camille_Francois.jpg`,
         description: [
-          `Camille Francois is research director at Graphika and affiliate at Harvard’s Berkman Klein Center for Internet & Society.`
+          `Camille Francois is a Mozilla Fellow, research director at Graphika and affiliate at Harvard’s Berkman Klein Center for Internet & Society.`
         ],
       },
       {
