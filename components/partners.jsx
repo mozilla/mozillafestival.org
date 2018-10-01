@@ -14,7 +14,7 @@ const PARTNERS_LIST = [
   {
     name: `Code Is Science`,
     logo: `/assets/images/team/partner/partner_code-is-science_grayscale.png`,
-    link: `https://www.codeisscience.com/`
+    link: `http://www.codeisscience.com/`
   },
   {
     name: `Universidade Federal de Alagoas`,
