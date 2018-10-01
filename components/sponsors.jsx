@@ -2,15 +2,15 @@ var React = require('react');
 var classNames = require(`classnames`);
 
 const SPONSORS_INFO = {
-  "Closing Party Partner": [
+  "Closing Party": [
     {
       name: `Sticker Mule`,
       logo: `/assets/images/team/sponsor/2018/StickerMule.svg`,
       logoClass: `sticker-mule`,
-      link: `https://www.stickermule.com/uses/hexagon-stickers?utm_source=MozFest-2018&utm_campaign=MozFest-2018-sponsorship&utm_medium=referral`
+      link: `https://mule.to/mozfest-2018`
     }
   ],
-  "Presenting Festival Partner": [
+  "Presenting Festival": [
     {
       name: `Private Internet Access`,
       logo: `/assets/images/team/sponsor/2018/PrivateInternetAccess.png`,
@@ -18,7 +18,7 @@ const SPONSORS_INFO = {
       link: `https://www.privateinternetaccess.com/`
     }
   ],
-  "Science Fair Partner": [
+  "Science Fair": [
     {
       name: `Internet Society`,
       logo: `/assets/images/team/sponsor/2018/InternetSociety.png`,
@@ -26,7 +26,7 @@ const SPONSORS_INFO = {
       link: `https://www.internetsociety.org/`
     }
   ],
-  "Youth Zone Partner": [
+  "Youth Zone": [
     {
       name: `Samsung`,
       logo: `/assets/images/team/sponsor/2018/Samsung.jpg`,
@@ -98,16 +98,16 @@ var Sponsors = React.createClass({
       <h3 className="mt-5">Our 2018 Sponsors</h3>
       <div>
         <div className="row">
-          { this.renderSponsorOfAType(`Presenting Festival Partner`) }
+          { this.renderSponsorOfAType(`Presenting Festival`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Closing Party Partner`) }
+          { this.renderSponsorOfAType(`Closing Party`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Science Fair Partner`) }
+          { this.renderSponsorOfAType(`Science Fair`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Youth Zone Partner`) }
+          { this.renderSponsorOfAType(`Youth Zone`) }
         </div>
       </div>
     </div>;
