@@ -98,10 +98,10 @@ var Sponsors = React.createClass({
       <h3 className="mt-5">Our 2018 Sponsors</h3>
       <div>
         <div className="row">
-          { this.renderSponsorOfAType(`Closing Party Partner`) }
+          { this.renderSponsorOfAType(`Presenting Festival Partner`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Presenting Festival Partner`) }
+          { this.renderSponsorOfAType(`Closing Party Partner`) }
         </div>
         <div className="row">
           { this.renderSponsorOfAType(`Science Fair Partner`) }
