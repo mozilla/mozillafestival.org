@@ -2,44 +2,36 @@ var React = require('react');
 var classNames = require(`classnames`);
 
 const SPONSORS_INFO = {
-  "Supporting": [
-    {
-      name: `Flattr`,
-      logo: `/assets/images/team/sponsor/Flattr.png`
-    }
-  ],
-  "Festival Lunch": [
-    {
-      name: `eLife`,
-      logo: `/assets/images/team/sponsor/eLife.png`
-    }
-  ],
-  "Science Fair": [
-    {
-      name: `Fetch`,
-      logo: `/assets/images/team/sponsor/Fetch.png`
-    }
-  ],
-  "Saturday Night": [
-    {
-      name: `WeTransfer`,
-      logo: `/assets/images/team/sponsor/WeTransfer.png`
-    }
-  ],
-  "MozFest Scholarship": [
-    {
-      name: `GitHub`,
-      logo: `/assets/images/team/sponsor/GitHub.png`
-    }
-  ],
-  "In-Kind": [
+  "Closing Party Partner": [
     {
       name: `Sticker Mule`,
-      logo: `/assets/images/team/sponsor/StickerMule.png`
-    },
+      logo: `/assets/images/team/sponsor/2018/StickerMule.svg`,
+      logoClass: `sticker-mule`,
+      link: `https://www.stickermule.com/uses/hexagon-stickers?utm_source=MozFest-2018&utm_campaign=MozFest-2018-sponsorship&utm_medium=referral`
+    }
+  ],
+  "Presenting Festival Partner": [
     {
-      name: `Micro:Bit Foundation`,
-      logo: `/assets/images/team/sponsor/MicroBitFoundation.png`
+      name: `Private Internet Access`,
+      logo: `/assets/images/team/sponsor/2018/PrivateInternetAccess.png`,
+      logoClass: `private-internet-access`,
+      link: `https://www.privateinternetaccess.com/`
+    }
+  ],
+  "Science Fair Partner": [
+    {
+      name: `Internet Society`,
+      logo: `/assets/images/team/sponsor/2018/InternetSociety.png`,
+      logoClass: `internet-society`,
+      link: `https://www.internetsociety.org/`
+    }
+  ],
+  "Youth Zone Partner": [
+    {
+      name: `Samsung`,
+      logo: `/assets/images/team/sponsor/2018/Samsung.jpg`,
+      logoClass: `samsung`,
+      link: `https://www.samsung.com/uk/apps/samsung-internet/`
     }
   ]
 };
@@ -47,17 +39,17 @@ const SPONSORS_INFO = {
 var Sponsors = React.createClass({
   renderSponsor: function(sponsor, classnames = ``) {
     classnames = classNames(classnames, `align-self-center logo d-flex align-items-center`);
-    return <div className={classnames} key={sponsor.name}>
-      <img src={sponsor.logo} alt={sponsor.name} />
-    </div>;
+
+    return <a className={classnames} key={sponsor.name} href={sponsor.link} target="_blank">
+      <img src={sponsor.logo} alt={sponsor.name} className={sponsor.logoClass ? sponsor.logoClass : ``} />
+    </a>;
   },
   renderSponsorOfAType: function(type) {
-    var sponsors = SPONSORS_INFO[type];
-    sponsors = sponsors.map((sponsor) => {
-      return this.renderSponsor(sponsor, `col-12 col-sm-${12/sponsors.length}`);
+    var sponsors = SPONSORS_INFO[type].map((sponsor) => {
+      return this.renderSponsor(sponsor, `col-12`);
     });
 
-    return <div className={`col-${sponsors.length*4} mt-3 mb-5`}>
+    return <div className="col-12 mt-3 mb-5">
       <div className="row mb-2">
         <div className="col-12"><h2 className="mb-2">{`${type} Partner${sponsors.length > 1 ? `s` : ``}`}</h2></div>
       </div>
@@ -77,8 +69,8 @@ var Sponsors = React.createClass({
         <p>
           In 2018, Mozilla is offering opportunities for mission-aligned companies to showcase their commitment to a healthy Internet with our 2,500+ guests and the millions of engaged supporters online. By partnering with us, you can:
         </p>
-        <div className="d-flex">
-          <ul className="d-inline-block w-50 mr-sm-3">
+        <div className="d-flex flex-column flex-md-row">
+          <ul className="d-inline-block w-md-50 mr-sm-3">
             <li>
               Engage Mozilla audiences with your brand in an authentic way providing real insights on your products and reach new customers
             </li>
@@ -92,7 +84,7 @@ var Sponsors = React.createClass({
               Provide your employees and clients with ways to teach, learn and get involved in key issues affecting the Internet today
             </li>
           </ul>
-          <div className="d-inline-block w-50">
+          <div className="d-inline-block w-md-50">
             <img src="/assets/images/20171027-mozfest-52.jpg" className="img-fluid" />
           </div>
         </div>
@@ -103,21 +95,19 @@ var Sponsors = React.createClass({
           To learn more, please contact us at <a href="mailto:sponsor@mozilla.org">sponsor@mozilla.org</a>
         </p>
       </div>
-      <h3 className="mt-5">Our 2017 Sponsors</h3>
+      <h3 className="mt-5">Our 2018 Sponsors</h3>
       <div>
         <div className="row">
-          { this.renderSponsorOfAType(`Supporting`) }
+          { this.renderSponsorOfAType(`Closing Party Partner`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Festival Lunch`) }
-          { this.renderSponsorOfAType(`Science Fair`) }
-          { this.renderSponsorOfAType(`Saturday Night`) }
+          { this.renderSponsorOfAType(`Presenting Festival Partner`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`MozFest Scholarship`) }
+          { this.renderSponsorOfAType(`Science Fair Partner`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`In-Kind`) }
+          { this.renderSponsorOfAType(`Youth Zone Partner`) }
         </div>
       </div>
     </div>;
