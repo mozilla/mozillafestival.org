@@ -44,7 +44,7 @@ const PARTNERS_LIST = [
   {
     name: `Pichoun`,
     logo: `/assets/images/team/partner/partner_pichoun_grayscale.png`,
-    link: `http://www.pichoun.fr`
+    link: `https://www.pichoun.fr`
   },
   {
     name: `UAL`,

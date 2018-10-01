@@ -44,7 +44,7 @@ var Location = React.createClass({
           '<p>6 Penrose Way</p>' +
           '<p>Greenwich Peninsula</p>' +
           '<p>London SE10 0EW</p>' +
-          '<a href="http://www.ravensbourne.ac.uk/">ravensbourne.ac.uk</a>' +
+          '<a href="https://www.ravensbourne.ac.uk/">ravensbourne.ac.uk</a>' +
           '<p>+44 20 3040 3500</p>' +
         '</div>'
         )
@@ -69,7 +69,7 @@ var Location = React.createClass({
         <div className="white-background">
           <div className="centered content wide">
             <h1>Main Festival Venue</h1>
-            <p>Mozfest 2016 will be held once again in <a href="http://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
+            <p>Mozfest 2016 will be held once again in <a href="https://www.ravensbourne.ac.uk/">Ravensbourne</a>, a media campus in the heart of London. Located right next to the O2 arena and North Greenwich tube station, Ravensbourne's nine floors of open work spaces, breakout rooms and cozy corners are ideal for collaboration and creative working.</p>
             <div className="horizontal-rule"></div>
             <h1>How to get there</h1>
             <div className="illustration flip-it">
@@ -102,11 +102,11 @@ var Location = React.createClass({
             </div>
             <div className="illustration-text small">
               <h2>Bus</h2>
-              <p>Eight TfL bus routes operate to and from North Greenwich including three 24 hour bus services. Key destinations include Stratford, Charlton, Greenwich, Lewisham, Woolwich, Eltham, North Kent and Central London. Please visit <a href="http://www.tfl.gov.uk/">www.tfl.gov.uk</a> for timetable information.</p>
+              <p>Eight TfL bus routes operate to and from North Greenwich including three 24 hour bus services. Key destinations include Stratford, Charlton, Greenwich, Lewisham, Woolwich, Eltham, North Kent and Central London. Please visit <a href="https://www.tfl.gov.uk/">www.tfl.gov.uk</a> for timetable information.</p>
               <h2>Docklands Light Railway (DLR)</h2>
               <p>Just one stop via the Jubilee line from Canary Wharf or Canning Town.</p>
               <h2>Thames Clipper</h2>
-              <p>We are a two minute walk from the North Greenwich Pier stop on the Thames Clipper route. Please visit the <a href="http://www.thamesclippers.com/">Thames Clipper website</a> for routes, fares and journey times.</p>
+              <p>We are a two minute walk from the North Greenwich Pier stop on the Thames Clipper route. Please visit the <a href="https://www.thamesclippers.com/">Thames Clipper website</a> for routes, fares and journey times.</p>
             </div>
           </div>
         </div>

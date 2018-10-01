@@ -6,7 +6,7 @@ const PAST_COVERAGE = [
   {
     media: `Wired UK`,
     title: `One unhappy year in Trump's America`,
-    link: `http://www.wired.co.uk/article/upvote-17-one-unhappy-year-in-trumps-america`,
+    link: `https://www.wired.co.uk/article/upvote-17-one-unhappy-year-in-trumps-america`,
     date: `November 2017`
   },
   {
@@ -54,7 +54,7 @@ const PAST_COVERAGE = [
   {
     media: `t3n`,
     title: `Wie steht es um die Gesundheit des Internets? Auf Spurensuche beim Mozilla-Festival`,
-    link: `http://t3n.de/news/mozilla-festival-internet-gesundheit-761360/3/`,
+    link: `https://web.archive.org/web/20170112212535/http://t3n.de/news/mozilla-festival-internet-gesundheit-761360/3/`,
     date: `November 2016`
   },
   {
@@ -72,7 +72,7 @@ const PAST_COVERAGE = [
   {
     media: `The Independent`,
     title: `Baroness Kidron interview: ‘Children’s online safety is too vital to leave to Government’`,
-    link: `http://www.independent.co.uk/news/people/profiles/baroness-kidron-interview-children-s-online-safety-is-too-vital-to-leave-to-government-9819862.html`,
+    link: `https://www.independent.co.uk/news/people/profiles/baroness-kidron-interview-children-s-online-safety-is-too-vital-to-leave-to-government-9819862.html`,
     date: `October 2014`
   },
   {

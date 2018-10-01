@@ -20,7 +20,7 @@ var ProjectPage = React.createClass({
               {projectData.map((project, index)=>{ return <ProjectCard key={index} {...project } />; } )}
             </div>
           </div>
-          <p>See more projects & assets from our network on <a href="http://mzl.la/pulse">Pulse</a>.</p>
+          <p>See more projects & assets from our network on <a href="https://mzl.la/pulse">Pulse</a>.</p>
         </div>
       </div>
     );
@@ -28,4 +28,3 @@ var ProjectPage = React.createClass({
 });
 
 module.exports = ProjectPage;
-
