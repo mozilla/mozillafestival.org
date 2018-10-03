@@ -20,7 +20,6 @@ const Routes = () => (
     <Route exact path="/" component={HomePage} />
     <Route exact path="/proposals" component={CFPClose} />
     <Route exact path="/late-proposals" component={CFPClose} />
-    <Route path="/location" component={require(`./pages/location.jsx`)} />
     <Route path="/about" component={require(`./pages/about.jsx`)} />
     <Route path="/contact" component={ContactPage} />
     <Route path="/expect" component={() => <Redirect to="/why-come-to-mozfest"/>} />
