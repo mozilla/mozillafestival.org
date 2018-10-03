@@ -38,7 +38,7 @@ var SpeakerTinyCard = React.createClass({
     return (
       <div className="speaker-tiny-card mb-5">
         <div className="mb-2">
-          <img className="rounded-circle" src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
+          <img className="rounded-circle" alt={this.props.name} src={this.props.pic || `/assets/images/team/placeholder.jpg` }/>
         </div>
         <p className="my-0 name">{this.props.name}</p>
         { this.renderShortIntro() }
