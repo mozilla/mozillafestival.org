@@ -51,14 +51,6 @@ const FEATURED_SPEAKERS = [
     pic: `/assets/images/speakers/2018/Esra'a_Al_Shafei.png`
   },
   {
-    name: `Ramy Raoof`,
-    shortIntro: ``,
-    twitter: `@RamyRaoof`,
-    talkName: `Panel: Data in Oppressive Regimes`,
-    link: ``,
-    pic: `/assets/images/speakers/2018/Ramy_Raoof.jpg`
-  },
-  {
     name: `Mahsa Alimardani`,
     shortIntro: ``,
     twitter: `@maasalan`,

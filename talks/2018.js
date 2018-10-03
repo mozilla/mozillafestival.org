@@ -90,14 +90,6 @@ module.exports = [
         ],
       },
       {
-        name: `Ramy Raoof`,
-        twitter: `@RamyRaoof`,
-        pic: `/assets/images/speakers/2018/Ramy_Raoof.jpg`,
-        description: [
-          `Ramy Raoof is senior research technologist at the Egyptian Initiative for Personal Rights, and a board member at Tor.`
-        ],
-      },
-      {
         name: `Mahsa Alimardani`,
         twitter: `@maasalan`,
         pic: `/assets/images/speakers/2018/Mahsa_Alimardani.jpg`,
