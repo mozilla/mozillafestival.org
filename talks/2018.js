@@ -183,7 +183,7 @@ module.exports = [
   },
   {
     name: `Who Controls the Internet? (Panel)`,
-    talkTime: ``,
+    talkTime: `Sunday, Oct. 28, 12:45–13:45`,
     videoLink: ``,
     transcriptLink: ``,
     description:
@@ -209,7 +209,7 @@ module.exports = [
   },
   {
     name: `Soudeh Rad on privacy, identity and gender online (Talk)`,
-    talkTime: `Sunday, Oct. 28, 15:15–15:55`,
+    talkTime: `Sunday, Oct. 28, 15:15–16:15`,
     videoLink: ``,
     transcriptLink: ``,
     description: <p></p>,
@@ -226,7 +226,7 @@ module.exports = [
   },
   {
     name: `Mitchell Baker (Talk)`,
-    talkTime: `Sunday, Oct. 28, 15:15–15:55`,
+    talkTime: `Sunday, Oct. 28, 15:15–16:15`,
     videoLink: ``,
     transcriptLink: ``,
     speakers: [
