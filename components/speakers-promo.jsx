@@ -35,6 +35,14 @@ const FEATURED_SPEAKERS = [
     pic: `/assets/images/speakers/2018/Renee_DiResta.jpg`
   },
   {
+    name: `Tim Berners-Lee`,
+    shortIntro: ``,
+    twitter: `@timberners_lee`,
+    talkName: `Talk`,
+    link: ``,
+    pic: `/assets/images/speakers/2018/Tim_Berners-Lee.jpg`
+  },
+  {
     name: `Julie Owono`,
     shortIntro: ``,
     twitter: `@JulieOwono`,
@@ -149,9 +157,6 @@ const FEATURED_SPEAKERS = [
 ];
 
 var SpeakersPromo = React.createClass({
-  propTypes: {
-    talksInfo: React.PropTypes.array.isRequired
-  },
   render: function() {
     return (
       <div className="speakers-promo">
