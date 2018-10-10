@@ -42,16 +42,13 @@ class Contact extends React.Component {
                   </p>
                 </div>
               </div>
-              {/*
               <div className="row">
                 <div className="col-12">
                   <hr className="mt-4 mb-5" />
                   <h1>Raising Issues at the Festival</h1>
-                  <p>If you experience any violation of the community participation guidelines while at Mozilla Festival please email us at [email] or contact us at [code].</p>
-                  <p>In event of an emergency always dial 999.</p>
+                  <p>If you experience any violation of the community participation guidelines while at Mozilla Festival please email us at <a href="mailto:festivalsafety@mozilla.com">festivalsafety@mozilla.com</a>.</p>
                 </div>
               </div>
-              */}
               <div className="row">
                 <div className="col-12">
                   <hr className="mt-4 mb-5" />

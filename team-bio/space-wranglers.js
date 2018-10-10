@@ -42,11 +42,19 @@ let DECENTRALISATION_WRANGLERS = [
 
 let DIGITAL_INCLUSION_WRANGLERS = [
   {
+    name: `Kristine Grivcova`,
+    twitter: ``,
+    pic: `/assets/images/team/wrangler/space/digital-inclusion_kristine-grivcova_500x500.jpg`,
+    bio: [
+      `Kristine Grivcova is a research engineer from London. She works at the BBC R&D, where she thinks about the future of technology and media. More specifically, Kristine explores machine learning and how it can be used in radio applications in a unique and transparent way.`
+    ]
+  },
+  {
     name: `Daniel Lucio`,
     twitter: `@danielrynelucio`,
     pic: `/assets/images/team/wrangler/space/digital-inclusion_daniel-lucio_500x500.jpg`,
     bio: [
-      `Daniel is a community impact manager with Google Fiber based in Austin, Texas. From fighting border walls to registering voters, his work has focused on empowering underserved communities in the U.S. He is currently working on creating digital equity through digital inclusion and civic technology projects in Texas. `
+      `Daniel is a community impact manager with Google Fiber based in Austin, Texas. From fighting border walls to registering voters, his work has focused on empowering underserved communities in the U.S. He is currently working on creating digital equity through digital inclusion and civic technology projects in Texas.`
     ]
   },
   {
