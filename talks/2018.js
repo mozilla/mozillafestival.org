@@ -44,7 +44,7 @@ module.exports = [
   },
   {
     name: `Renee DiResta on flaws in the data-driven digital economy (Talk)`,
-    talkTime: `Saturday, Oct. 27, 12:45–13:05`,
+    talkTime: `Saturday, Oct. 27, 12:45–13:45`,
     videoLink: ``,
     transcriptLink: ``,
     speakers: [
@@ -55,6 +55,22 @@ module.exports = [
         description: [
           `Renee DiResta is a Mozilla Fellow in Media, Misinformation and Trust. She investigates the spread of disinformation and manipulated narratives across social networks.`
         ],
+      }
+    ]
+  },
+  {
+    name: `Tim Berners-Lee on his latest work (Talk)`,
+    talkTime: `Saturday, Oct. 27, 12:45–13:45`,
+    videoLink: ``,
+    transcriptLink: ``,
+    speakers: [
+      {
+        name: `Tim Berners-Lee`,
+        twitter: `@timberners_lee`,
+        pic: `/assets/images/speakers/2018/Tim_Berners-Lee.jpg`,
+        description: [
+          `Sir Tim Berners-Lee invented the web in 1989. He is the founder and director of the World Wide Web Foundation and a professor at Massachusetts Institute of Technology and at Oxford University. He is co-founder and CTO of the newly launched company inrupt, that’s helping to fuel the success of Solid, the technically potent open-source platform built to decentralize the web.`
+        ]
       }
     ]
   },
@@ -183,7 +199,7 @@ module.exports = [
   },
   {
     name: `Who Controls the Internet? (Panel)`,
-    talkTime: ``,
+    talkTime: `Sunday, Oct. 28, 12:45–13:45`,
     videoLink: ``,
     transcriptLink: ``,
     description:
@@ -209,7 +225,7 @@ module.exports = [
   },
   {
     name: `Soudeh Rad on privacy, identity and gender online (Talk)`,
-    talkTime: `Sunday, Oct. 28, 15:15–15:55`,
+    talkTime: `Sunday, Oct. 28, 15:15–16:15`,
     videoLink: ``,
     transcriptLink: ``,
     description: <p></p>,
@@ -226,7 +242,7 @@ module.exports = [
   },
   {
     name: `Mitchell Baker (Talk)`,
-    talkTime: `Sunday, Oct. 28, 15:15–15:55`,
+    talkTime: `Sunday, Oct. 28, 15:15–16:15`,
     videoLink: ``,
     transcriptLink: ``,
     speakers: [
