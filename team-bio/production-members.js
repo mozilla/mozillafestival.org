@@ -32,6 +32,14 @@ module.exports = [
     ],
   },
   {
+    name: `Kristina Gorr`,
+    title: `Communications Lead`,
+    pic: `/assets/images/team/production/KristinaGorr.jpg`,
+    bio: [
+      `Kristina is Mozilla’s Open Leadership Community Coordinator. Communication is the name of her game and writing is her passion. She enjoys helping connect people, passions, and events using engaging language. This year marks Kristina’s third year supporting MozFest’s communication efforts.`
+    ]
+  },
+  {
     name: `Zannah Marsh`,
     title: `Content Strategist`,
     pic: `/assets/images/team/production/ZannahMarsh.jpg`,
@@ -56,6 +64,14 @@ module.exports = [
     ],
   },
   {
+    name: `Stephanie Rowe`,
+    title: `Production Coordinator`,
+    pic: `/assets/images/team/production/StephanieRowe.jpg`,
+    bio: [
+      `Stephanie is MozFest’s Production Coordinator. She has contributed to several large-scale international events over the years, from data analysis to ideation and planning. Stephanie brings both an analytical mind and deep creativity to her work, and is dedicated to creating a seamless and engaging MozFest experience.`
+    ]
+  },
+  {
     name: `Sabrina Ng`,
     title: `Creative Design Lead`,
     pic: `/assets/images/team/production/Sabrina.jpg`,
@@ -70,6 +86,14 @@ module.exports = [
     bio: [
       `Mavis Ou is Front-end Engineer for the Mozilla Foundation. She enjoys implementing user-facing features, and is always keen to make user experience at MozFest, and in the software world better. 2018 will be Mavis' sixth MozFest.`
     ],
+  },
+  {
+    name: `Amanda Lee Gaffar`,
+    title: `Executive Assistant`,
+    pic: `/assets/images/team/production/AmandaLeeGaffar.jpg`,
+    bio: [
+      `Amanda joined Mozilla in 2017, bringing her Executive Assistant expertise of over 20 years to the Foundation. During MozFest season, Amanda wears her travel hero hat and manages logistics for everyone traveling to London. If you see Amanda at MozFest be sure to give her a high five!`
+    ]
   },
   {
     name: `Tom Farrow`,
