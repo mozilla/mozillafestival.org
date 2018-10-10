@@ -55,7 +55,7 @@ class Home extends React.Component {
             <div>
               <img src="/assets/images/mozilla-festival_website-theme-update.svg" width="250" className="my-4" />
               <h1>Your Data and You</h1>
-              <p>This year at Mozilla Festival, dive into our theme “Your Data and You,” through interactive sessions, art, games, dialogues, debates, and the latest tech. We’ll explore the risks and benefits, the implications for the health of the Internet, and how we can take control of our data, our online lives, and our collective future.</p>
+              <p>This year at Mozilla Festival, dive into our theme “Your Data and You,” through interactive sessions, art, games, dialogues, debates, and the latest tech. We’ll explore the risks and benefits, the implications for the health of the internet, and how we can take control of our data, our online lives, and our collective future.</p>
             </div>
             <hr className="mt-5 mb-4" />
             <SpeakersPromo />
