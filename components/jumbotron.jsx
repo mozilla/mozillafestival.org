@@ -68,7 +68,7 @@ class Jumbotron extends React.Component {
     </div>;
 
     return (
-      <div className={classNames({"has-video-bg": this.props.videoJumbotron},`jumbotron-container`)}>
+      <div className={classNames({"has-video-bg": this.props.videoJumbotron},`jumbotron-container`, this.props.className)}>
         { this.props.videoJumbotron && this.renderVideoJumbotron() }
         <div className="jumbotron d-flex flex-column" style={{ backgroundImage: backgroundImages }}>
           <NavBar />
