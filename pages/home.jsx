@@ -39,19 +39,16 @@ class Home extends React.Component {
     return (
       <div className={classNames({"has-video-takeover": this.state.videoTakeover}, `home-page`)}>
         <NotificationBar to="/schedule">
-          <span className="emphasized">The MozFest 2018 schedule is now live!</span> <span className="light">View it here.</span>
+          <div><span className="emphasized">The MozFest 2018 schedule is now live!</span> <span className="light">View it here.</span></div>
         </NotificationBar>
         <Jumbotron className="home-jumbotron"
           image=""
           image2x=""
-          videoJumbotron={false}
+          videoJumbotron={true}
           toggleVideoTakeover={() => this.handlePlayVideoClick()}
         >
           <h1 className="highlight">Where Web Meets World</h1>
           <p className="mb-0">A seven day celebration for, by, and about people who love the internet, showcasing world-changing ideas and technology through workshops, talks, and interactive sessions.</p>
-          <div>
-            <Link to="/schedule" className="btn btn-arrow my-5"><span>View the schedule</span></Link>
-          </div>
         </Jumbotron>
         <div className="white-background shift-up">
           <div className="content wide centered shift-up pt-4">
