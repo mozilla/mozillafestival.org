@@ -115,14 +115,6 @@ const FEATURED_SPEAKERS = [
     pic: `/assets/images/speakers/2018/Nathalie_Richards.jpg`
   },
   {
-    name: `Nani Jansen Reventlow`,
-    shortIntro: ``,
-    twitter: `@interwebznani`,
-    talkName: `Talk: Data and Platforms in Europe`,
-    link: ``,
-    pic: `/assets/images/speakers/2018/Nani_Jansen.jpg`
-  },
-  {
     name: `Maryant Fernandez`,
     shortIntro: ``,
     twitter: `@maryantfp`,

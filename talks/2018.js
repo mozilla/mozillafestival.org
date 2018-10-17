@@ -182,22 +182,6 @@ module.exports = [
     ]
   },
   {
-    name: `Nani Jansen Reventlow on data and platforms in Europe (Talk)`,
-    talkTime: `Sunday, Oct. 28, 12:45–13:45`,
-    videoLink: ``,
-    transcriptLink: ``,
-    speakers: [
-      {
-        name: `Nani Jansen Reventlow`,
-        twitter: `@interwebznani`,
-        pic: `/assets/images/speakers/2018/Nani_Jansen.jpg`,
-        description: [
-          `Nani Jansen Reventlow is the director of the Digital Freedom Fund, which supports the advancement of digital rights in Europe through strategic litigation.`
-        ],
-      }
-    ]
-  },
-  {
     name: `Who Controls the Internet? (Panel)`,
     talkTime: `Sunday, Oct. 28, 12:45–13:45`,
     videoLink: ``,
