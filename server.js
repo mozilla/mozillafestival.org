@@ -28,7 +28,10 @@ var limiter = RateLimit({
 });
 
 app.use(compression());
-app.use(express.static(path.resolve(__dirname, `public`)));
+app.use(express.static(path.resolve(__dirname, `public`), {
+  maxAge: '1m', // expire cache in 1 month
+  immutable: true
+}));
 app.use(bodyParser.json());
 
 
