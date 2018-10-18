@@ -10,6 +10,7 @@ import TicketsPage from './pages/tickets.jsx';
 import NotFound from './pages/not-found.jsx';
 import FringePage from './pages/fringe-events/fringe-events.jsx';
 import HousePage from './pages/house.jsx';
+import SchedulePage from './pages/schedule.jsx';
 import ContactPage from './pages/contact.jsx';
 import Footer from './components/footer.jsx';
 
@@ -33,6 +34,7 @@ const Routes = () => (
     <Route exact path="/fringe" component={FringePage} />
     <Route path="/fringe/success" component={require(`./pages/fringe-events/fringe-event-add-success.jsx`)} />
     <Route path="/tickets" component={TicketsPage} />
+    <Route path="/schedule" component={SchedulePage} />
     <Route path="/media" component={require(`./pages/media.jsx`)} />
     <Route exact path="/speakers" component={require(`./pages/speakers.jsx`)} />
     <Route path="/speakers/:tab" component={require(`./pages/speakers.jsx`)} />

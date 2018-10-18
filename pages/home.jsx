@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import NotificationBar from '../components/notification-bar.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 
@@ -37,6 +38,9 @@ class Home extends React.Component {
   render() {
     return (
       <div className={classNames({"has-video-takeover": this.state.videoTakeover}, `home-page`)}>
+        <NotificationBar to="/schedule">
+          <div><span className="emphasized">The MozFest 2018 schedule is now live!</span> <span className="light">View it here.</span></div>
+        </NotificationBar>
         <Jumbotron className="home-jumbotron"
           image=""
           image2x=""

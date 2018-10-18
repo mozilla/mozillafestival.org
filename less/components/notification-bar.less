@@ -7,9 +7,19 @@
   color: white;
   background: linear-gradient(to right, @blue, @pink);
 
+  &.hyperlinked {
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   .emphasized {
     font-weight: 600;
     font-style: normal;
+    letter-spacing: 0.5px;
   }
 
   .emphasized + .emphasized {
@@ -21,5 +31,11 @@
         padding-right: 0.5rem;
       }
     }
+  }
+
+  .light {
+    font-style: italic;
+    font-weight: 300;
+    color: white;
   }
 }
