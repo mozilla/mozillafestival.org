@@ -5,8 +5,6 @@ import generateHelmet from '../lib/helmet.jsx';
 class SchedulePage extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.pageMetaDescription = `Please email festival@mozilla.org with your questions and suggestions!`;
   }
 
   render() {
@@ -34,10 +32,10 @@ class SchedulePage extends React.Component {
                 <div className="col-12 mb-5">
                   <h6>Get the Guidebook App</h6>
                   <a className="mx-1" href="https://itunes.apple.com/us/app/id428713847">
-                    <img src="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge.png" srcset="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge.png 1x, https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge@2x.png 2x" alt="Download on the app store" height="40" />
+                    <img src="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge.png" srcSet="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge.png 1x, https://s3.amazonaws.com/coverpage.guidebook.com/production/img_app_store_badge@2x.png 2x" alt="Download on the app store" height="40" />
                   </a>
                   <a className="mx-1" href="https://play.google.com/store/apps/details?id=com.guidebook.android">
-                    <img class="sc-eTuwsz ycaOz" src="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge.png" srcset="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge.png 1x, https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge@2x.png 2x" alt="Download on the play store" height="40" />
+                    <img src="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge.png" srcSet="https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge.png 1x, https://s3.amazonaws.com/coverpage.guidebook.com/production/img_google_play_badge@2x.png 2x" alt="Download on the play store" height="40" />
                   </a>
                 </div>
               </div>
@@ -48,7 +46,7 @@ class SchedulePage extends React.Component {
                   <p>This year we have over 300 sessions taking place over MozFest weekend, not to mention the 18 events you can attend at MozFest House.</p>
                   <p> We are using Guidebook as our scheduling tool to share the sessions and bios of facilitators, and to help you decide how to spend your time over the weekend at Ravensbourne.</p>
 
-                  <p>You can access Guidebook by downloading the app to your phone, or by visiting the schedule on your browser. If you don't wish to use Guidebook, please note we will be displaying the schedule at info booths on each floor over the festival weekend.</p>
+                  <p>Download the Guidebook app on your phone to view the schedule. Once you download it, search for <strong>Mozilla Festival 2018</strong> in the app and add it to get the schedule. You can also view the <a href="https://guidebook.com/guide/147793/schedule/" target="_blank">schedule online</a>. If you don't wish to use Guidebook, please note that we will be displaying the schedule at info booths on each floor over the festival weekend.</p>
                 </div>
               </div>
             </div>
