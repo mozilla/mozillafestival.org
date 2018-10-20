@@ -57,12 +57,23 @@ class Jumbotron extends React.Component {
       return `url(` + imageUrl + `)`;
     }).join(`,`);
 
+    let buttonClasses = classNames(`btn`, {
+      "btn-link": !this.props.buttonAsCta,
+      "btn-video-play": !this.props.buttonAsCta,
+      "btn-cta-video-play": this.props.buttonAsCta
+    });
     let content = <div className="jumbotron-content d-flex flex-column justify-content-center text-center">
       { this.props.children }
       { this.props.videoJumbotron && <div>
-        <button className="btn btn-link btn-video-play"
+        <button className={buttonClasses}
           onClick={() => this.props.toggleVideoTakeover()}
         >
+          { this.props.buttonAsCta &&
+            <div>
+              Watch the Dialogues and Debates&nbsp;<strong>LIVE</strong><i className="ml-2 fa fa-play-circle-o" aria-hidden="true"></i>
+
+            </div>
+          }
         </button>
       </div>}
     </div>;

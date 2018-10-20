@@ -30,7 +30,9 @@ class Home extends React.Component {
         <div>
           <button className="close mb-4" onClick={() => this.handlePlayVideoClick()}></button>
         </div>
-        <iframe src="https://player.vimeo.com/video/258268373?color=ffffff&title=0&byline=0&portrait=0" width="100%" frameBorder="0" allowFullScreen className="mozfest-vimeo"></iframe>
+        <div className="embed-responsive embed-responsive-16by9 w-75">
+          <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/live_stream?channel=UCajipi80aORRDz6gZ8ZyCWw&autoplay=1" frameBorder="0" allowFullScreen></iframe>
+        </div>
       </div>
     </div>;
   }
@@ -45,6 +47,7 @@ class Home extends React.Component {
           image=""
           image2x=""
           videoJumbotron={true}
+          buttonAsCta={true}
           toggleVideoTakeover={() => this.handlePlayVideoClick()}
         >
           <h1 className="highlight">Where Web Meets World</h1>
