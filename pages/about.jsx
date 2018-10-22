@@ -51,6 +51,9 @@ var About = React.createClass({
             <h1 className="highlight">About MozFest</h1>
             <p>Calling all hackers, performers, students, activists, scientists, designers and beyond<strong>. If you love the Internet, MozFest is for you!</strong></p>
             <p className="mb-0">On October 22-28, join us in London to share the newest tech, wildest ideas, most amazing stories, and your brilliant plans to <strong>make the Internet even more awesome</strong>.</p>
+            <div className="mt-4">
+              <a href="https://issuu.com/mozfest/docs/mozillafestivalguide" className="btn btn-arrow"><span>View the 2018 Festival Guide</span></a>
+            </div>
           </div>
         </Jumbotron>
         <div className="content centered wide">
