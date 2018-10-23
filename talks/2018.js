@@ -110,7 +110,7 @@ module.exports = [
         twitter: `@maasalan`,
         pic: `/assets/images/speakers/2018/Mahsa_Alimardani.jpg`,
         description: [
-          `Mahsa Alimardani is Iran programme officer at ARTICLE19, a nonprofit defending freedom of expression.`
+          `Mahsa Alimardani is an internet researcher working with ARTICLE19, and reading for a DPhil at the University of Oxford’s Internet Institute.`
         ],
       }
     ]
