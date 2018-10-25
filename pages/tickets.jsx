@@ -67,7 +67,8 @@ const WEEKEND_TICKETS = [
       `Lunch and unlimited hot drinks`
     ],
     titoReleaseCode: `gpbruuajfs0`,
-    note: `The cost of this ticket is subsidised by Mozilla`
+    note: `The cost of this ticket is subsidised by Mozilla`,
+    soldOut: true
   },
   {
     type: `Weekend (Youth) Ticket`,
@@ -87,7 +88,8 @@ const WEEKEND_TICKETS = [
     price: `£155`,
     description: `The Benefactor ticket offers the same access as our weekend ticket, and your purchase helps keep our regular MozFest admission costs super low — allowing participants from all backgrounds and life experiences to join MozFest, and the movement for a healthier Internet.`,
     titoReleaseCode: `vzgukz-4i7e`,
-    note: `The cost of this ticket covers our stipend program`
+    note: `The cost of this ticket covers our stipend program`,
+    soldOut: true
   }
 ];
 
@@ -103,7 +105,8 @@ const DAY_TICKETS = [
       `Networking and drinks`
     ],
     titoReleaseCode: `5kme8qcju8i`,
-    note: `This ticket is valid for entry on Friday evening only`
+    note: `This ticket is valid for entry on Friday evening only`,
+    soldOut: true
   },
   {
     type: `Saturday Ticket`,
@@ -117,7 +120,8 @@ const DAY_TICKETS = [
       `Saturday night party at MozFest House at the RSA, until late`
     ],
     titoReleaseCode: `xmlxqcmftlg`,
-    note: `This ticket is for Saturday events only and is non-transferable`
+    note: `This ticket is for Saturday events only and is non-transferable`,
+    soldOut: true
   },
   {
     type: `Sunday Ticket`,
@@ -159,12 +163,13 @@ let TicketCard = (props) => {
       </ul>
     </div>
     <div className={paddingClass}>
-      <tito-button
-        event="mozilla/mozilla-festival-2018"
-        releases={props.titoReleaseCode}
-      >
-        Buy Tickets
-      </tito-button>
+      { props.soldOut ? <div className="sold-out">Sold Out</div> : <tito-button
+          event="mozilla/mozilla-festival-2018"
+          releases={props.titoReleaseCode}
+        >
+          Buy Tickets
+        </tito-button>
+      }
       <div className="note">
         <small><em>{props.note}</em></small>
       </div>
