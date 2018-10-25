@@ -18,6 +18,14 @@ const SPONSORS_INFO = {
       link: `https://www.privateinternetaccess.com/`
     }
   ],
+  "Media": [
+    {
+      name: `Shareable`,
+      logo: `/assets/images/team/sponsor/2018/Shareable.png`,
+      logoClass: `shareable`,
+      link: `https://www.shareable.net/`
+    }
+  ],
   "Science Fair": [
     {
       name: `Internet Society`,
@@ -101,10 +109,13 @@ var Sponsors = React.createClass({
           { this.renderSponsorOfAType(`Presenting Festival`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Closing Party`) }
+          { this.renderSponsorOfAType(`Science Fair`) }
         </div>
         <div className="row">
-          { this.renderSponsorOfAType(`Science Fair`) }
+          { this.renderSponsorOfAType(`Media`) }
+        </div>
+        <div className="row">
+          { this.renderSponsorOfAType(`Closing Party`) }
         </div>
         <div className="row">
           { this.renderSponsorOfAType(`Youth Zone`) }
