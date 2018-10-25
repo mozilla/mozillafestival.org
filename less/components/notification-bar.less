@@ -8,9 +8,13 @@
   background: linear-gradient(to right, @blue, @pink);
 
   &.hyperlinked {
+
     a {
       color: white;
-      &:hover {
+
+      &:hover,
+      &:focus,
+      &:active {
         text-decoration: none;
       }
     }

@@ -4,6 +4,7 @@ var ImageTag = require('../components/imagetag.jsx');
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import Jumbotron from '../components/jumbotron.jsx';
+import NotificationBar from '../components/notification-bar.jsx';
 
 const CircleNumber = (props) => {
   return (
@@ -45,6 +46,9 @@ var About = React.createClass({
   render: function() {
     return (
       <div className="about-page">
+        <NotificationBar to="/schedule">
+          <div><span className="emphasized">The MozFest 2018 schedule is now live!</span> <span className="light">View it here.</span></div>
+        </NotificationBar>
         <Jumbotron image="/assets/images/hero/about.jpg"
           image2x="/assets/images/hero/about.jpg">
           <div className="content-wrapper">
