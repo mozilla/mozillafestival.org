@@ -164,11 +164,9 @@ let TicketCard = (props) => {
     </div>
     <div className={paddingClass}>
       { props.soldOut ? <div className="sold-out">Sold Out</div> : <tito-button
-          event="mozilla/mozilla-festival-2018"
-          releases={props.titoReleaseCode}
-        >
-          Buy Tickets
-        </tito-button>
+        event="mozilla/mozilla-festival-2018"
+        releases={props.titoReleaseCode}
+      >Buy Tickets</tito-button>
       }
       <div className="note">
         <small><em>{props.note}</em></small>
