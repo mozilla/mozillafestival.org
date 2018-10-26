@@ -97,6 +97,27 @@
       background-image: url('/assets/images/video-play-button-hover.svg');
     }
   }
+
+  .btn-cta-video-play {
+    @text-font-size: 12px;
+     font-size: @text-font-size;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+     @media screen and (min-width: 768px) {
+      font-size: @text-font-size * 1.5;
+    }
+     i.fa {
+      @icon-font-size: 16px;
+       font-size: @icon-font-size;
+      position: relative;
+      top: 1px;
+       @media screen and (min-width: 768px) {
+        font-size: @icon-font-size * 1.5;
+        top: 3px;
+      }
+    }
+  }
 }
 
 .bg-video-wrapper {
