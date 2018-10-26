@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import NavBar from '../components/nav-bar.jsx';
 import PropTypes from 'prop-types';
+import DialogTimer from '../components/dialog-timer.jsx';
 
 class Jumbotron extends React.Component {
   constructor(props) {
@@ -59,12 +60,11 @@ class Jumbotron extends React.Component {
 
     let content = <div className="jumbotron-content d-flex flex-column justify-content-center text-center">
       { this.props.children }
-      { this.props.videoJumbotron && <div>
-        <button className="btn btn-link btn-video-play"
-          onClick={() => this.props.toggleVideoTakeover()}
-        >
-        </button>
-      </div>}
+      { this.props.videoJumbotron &&
+          <DialogTimer
+            buttonAsCta={this.props.buttonAsCta}
+            toggleVideoTakeover={this.props.toggleVideoTakeover}
+          />}
     </div>;
 
     return (
