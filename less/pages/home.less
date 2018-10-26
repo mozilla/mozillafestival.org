@@ -111,3 +111,84 @@
     height: 400px;
   }
 }
+
+.buyers-guide-ad {
+  @padding: 20px;
+
+  font-family: "Zilla Slab";
+  color: black;
+
+  .cta-section {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.28;
+    padding: 50px @padding;
+    background-size: cover;
+    background-image: url(/assets/images/buyers-guide-ad/bg-mobile.jpg);
+
+    @media screen and (min-width: 768px) {
+      background-image: url(/assets/images/buyers-guide-ad/bg.jpg);
+      width: 70%;
+      padding: @padding;
+    }
+  }
+
+  .side {
+    padding: @padding;
+    background: #e8e8e8;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+  }
+
+  .mozilla-wordmark {
+    font-family: 'Zilla Slab Highlight';
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  a.btn {
+    font-family: 'Nunito Sans', sans-serif;
+    background: #ff4f5e;
+    font-size: 14px;
+    border-radius: 14px;
+    color: white;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #f00;
+      color: white;
+    }
+
+  }
+
+  .pni {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .pni-sub {
+    font-size: 12px;
+  }
+
+  .note {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 11px;
+    color: #666;
+    position: absolute;
+    top: -11px;
+    right: @padding;
+    font-weight: 400;
+    background: #f9fec7;
+    padding: 3px 4px;
+    text-align: center;
+  }
+}

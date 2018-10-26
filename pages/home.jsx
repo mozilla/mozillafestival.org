@@ -5,6 +5,8 @@ import NotificationBar from '../components/notification-bar.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 
+const PRIVACY_NOT_INCLUDE_URL=`https://privacynotincluded.org`;
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -60,6 +62,22 @@ class Home extends React.Component {
               <img src="/assets/images/mozilla-festival_website-theme-update.svg" width="250" className="my-4" />
               <h1>Your Data and You</h1>
               <p>This year at Mozilla Festival, dive into our theme “Your Data and You,” through interactive sessions, art, games, dialogues, debates, and the latest tech. We’ll explore the risks and benefits, the implications for the health of the Internet, and how we can take control of our data, our online lives, and our collective future.</p>
+              <p className="mt-4">We've even created a guide to help you take control of your data and buy safe, secure gifts this holiday season. Check out the *Privacy Not Included Buyer's Guide <a href={PRIVACY_NOT_INCLUDE_URL} target="_blank">online</a>, or come visit us during the festival weekend at Ravensbourne University on Level 0 to learn more.</p>
+              <div className="buyers-guide-ad d-flex flex-column flex-md-row mx-md-5 mt-4">
+                <div className="cta-section">
+                  <div className="d-flex flex-column flex-md-row h-100 align-items-center justify-content-between">
+                    <div>How creepy is your wish list?</div>
+                    <a href={PRIVACY_NOT_INCLUDE_URL} className="btn mt-3 mt-md-0 ml-md-2" target="_blank">See the guide</a>
+                  </div>
+                </div>
+                <div className="side text-right">
+                  <div className="pni">*privacy not included</div>
+                  <div className="pni-sub">a buyer's guide by <span className="mozilla-wordmark">Mozilla</span></div>
+                  <div className="note d-none d-md-block">
+                    Not your typical advertisement
+                  </div>
+                </div>
+              </div>
             </div>
             <hr className="mt-5 mb-4" />
             <SpeakersPromo />
