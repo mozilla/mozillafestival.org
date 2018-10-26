@@ -31,13 +31,11 @@ class DialogTimer extends React.Component {
           { this.props.buttonAsCta &&
             <div>
               Watch the Dialogues and Debates&nbsp;<strong>LIVE</strong><i className="ml-2 fa fa-play-circle-o" aria-hidden="true"></i>
-             </div>
+            </div>
           }
         </button>
       </div>
     );
-
-    return dialogsButton;
   }
 }
 
