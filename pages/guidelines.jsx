@@ -51,13 +51,13 @@ var Guidelines = React.createClass({
           <div className="centered content wide">
             <h1>Raising Issues at MozFest</h1>
             <div className="half-content">
-              <p>If you believe you‘re experiencing practices at MozFest which don‘t meet the above policies, or if you feel you are being harassed in any way, please immediately contact the Festival Producer, Sarah Allen.</p>
-              <p>At the festival venue, contact the info desk and they will immediately find the Festival Producer for you.</p>
+              <p>If you believe you‘re experiencing practices at MozFest which don‘t meet the above policies, or if you feel you are being harassed in any way, please immediately contact the Festival Executive Director, Sarah Allen.</p>
+              <p>During the festival week, we will have many alternative ways to raise issues online and in person.</p>
             </div>
             <div className="half-content">
-              <p>MozFest organisers reserve the right to refuse admission to anyone violating these policies, and/or take further action including expulsion from the event.</p>
+              <p>Call us at <a href="tel:+44 0 22 8553030">+44 (0) 22 8553030</a> or email us at <a href="mailto:festivalsafety@mozilla.com">festivalsafety@mozilla.com</a>. These channels reach Sarah Allen, Allen Gunn, and Marc Walsh.</p>
               <p>
-                During the festival week, we will have many alternative ways to raise issues, online and in person. If you have issues, please direct them to <a href="mailto:festival@mozilla.org">festival@mozilla.org</a> (Recipients of this email are Sarah Allen and Allen Gunn)
+                You can also tweet with <a href="https://twitter.com/hashtag/mozhelp" target="_blank">#mozhelp</a> on Twitter or visit the #MozHelp desk on level 4 over MozFest weekend at Ravensbourne University, or the registration desk at MozFest House in the RSA.
               </p>
             </div>
           </div>
