@@ -225,6 +225,7 @@ function renderPage(appHtml, reactHelmet) {
               <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152@2x.png" />
               <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
               <link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:400,700|Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+              <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
               <link rel="stylesheet" type="text/css" href="/vendor/css/font-awesome.min.css">
               <link rel="stylesheet" type="text/css" href="/vendor/css/mofo-bootstrap.css"/>
               <link rel="stylesheet" type="text/css" href="/build/style.css">
