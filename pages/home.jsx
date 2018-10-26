@@ -60,12 +60,12 @@ class Home extends React.Component {
               <img src="/assets/images/mozilla-festival_website-theme-update.svg" width="250" className="my-4" />
               <h1>Your Data and You</h1>
               <p>This year at Mozilla Festival, dive into our theme “Your Data and You,” through interactive sessions, art, games, dialogues, debates, and the latest tech. We’ll explore the risks and benefits, the implications for the health of the Internet, and how we can take control of our data, our online lives, and our collective future.</p>
-              <p className="mt-4">Speaking of your data, we're here to help you shop safe for connected gifts this holiday season. Check out our *Privacy Not Included buyer's guide.</p>
-              <div className="buyers-guide-ad d-flex flex-column flex-md-row mx-md-5 mt-5">
+              <p className="mt-4">We've even created a guide to help you take control of your data and buy safe, secure gifts this holiday season. Check out the *Privacy Not Included Buyer's Guide [online](link to buyers guide), or come visit us during the festival weekend at Ravensbourne University on Level 0 to learn more.</p>
+              <div className="buyers-guide-ad d-flex flex-column flex-md-row mx-md-5 mt-4">
                 <div className="cta-section">
                   <div className="d-flex flex-column flex-md-row h-100 align-items-center justify-content-between">
                     <div>How creepy is your wish list?</div>
-                    <a href="http://privacynotincluded.org/" className="btn mt-3 mt-md-0 ml-md-2">See the guide</a>
+                    <a href="http://privacynotincluded.org/" className="btn mt-3 mt-md-0 ml-md-2" target="_blank">See the guide</a>
                   </div>
                 </div>
                 <div className="side text-right">
