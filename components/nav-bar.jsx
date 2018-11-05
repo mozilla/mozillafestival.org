@@ -14,8 +14,7 @@ const NAV_LINKS = [
   { path: `/spaces`, label: `Spaces` },
   { path: `/house`, label: `House` },
   { path: `/fringe`, label: `Fringe` },
-  { path: `/team/sponsors`, label: `Sponsors` },
-  { path: `/tickets`, label: `Get Tickets`, btn: true }
+  { path: `/team/sponsors`, label: `Sponsors` }
 ];
 
 const LAYOUT_BREAK_POINT = NAV_LINKS.length >= 6 ? `lg` : `md`;
