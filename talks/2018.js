@@ -4,7 +4,7 @@ module.exports = [
   {
     name: `Amba Kak on data and digital rights in Asia (Talk)`,
     talkTime: `Saturday, Oct. 27, 11:15–12:15`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/jrZD6eK-fRw`,
     transcriptLink: ``,
     speakers: [
       {
@@ -20,7 +20,7 @@ module.exports = [
   {
     name: `The Data Balancing Act (Panel)`,
     talkTime: `Saturday, Oct. 27, 11:15–12:15`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/FsIXHQifkXw`,
     transcriptLink: ``,
     description: <p>As billions more people and tens of billion more devices come online, boundless amounts of data are created. How do we use it for good (development, smarter cities) and not bad (surveillance, insecurity)? Featuring:</p>,
     speakers: [
@@ -45,7 +45,7 @@ module.exports = [
   {
     name: `Renee DiResta on flaws in the data-driven digital economy (Talk)`,
     talkTime: `Saturday, Oct. 27, 12:45–13:45`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/baPF-sOXP24`,
     transcriptLink: ``,
     speakers: [
       {
@@ -61,7 +61,7 @@ module.exports = [
   {
     name: `Tim Berners-Lee on his latest work (Talk)`,
     talkTime: `Saturday, Oct. 27, 12:45–13:45`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/elfSzMATcB4`,
     transcriptLink: ``,
     speakers: [
       {
@@ -77,7 +77,7 @@ module.exports = [
   {
     name: `Julie Owono on the state of privacy in Sub-Saharan Africa (Talk)`,
     talkTime: `Saturday, Oct. 27, 15:15–16:15`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/sOieG7xvBNA`,
     transcriptLink: ``,
     speakers: [
       {
@@ -118,7 +118,7 @@ module.exports = [
   {
     name: `AI’s Collateral Damage (Panel)`,
     talkTime: `Sunday, Oct. 28, 11:00–12:10`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/503Yup0wpIk`,
     transcriptLink: ``,
     description: <p>Silicon Valley, Washington, DC, Beijing and other power centers are in an AI arms race. What does this mean for human rights and the centralization of power? Featuring:</p>,
     speakers: [
@@ -159,7 +159,7 @@ module.exports = [
   {
     name: `Inclusion and Literacy As Remedies (Panel)`,
     talkTime: `Sunday, Oct. 28, 11:00–12:10`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/EwT9Mpzft4I`,
     transcriptLink: ``,
     description: <p>Tech has an inclusion problem, and too few new users fully understand the web. Separately, harassment and misinformation reign online. Or are they separate? Can addressing the former fix the latter? Featuring:</p>,
     speakers: [
@@ -184,7 +184,7 @@ module.exports = [
   {
     name: `Who Controls the Internet? (Panel)`,
     talkTime: `Sunday, Oct. 28, 12:45–13:45`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/R8crgz1Wb1I`,
     transcriptLink: ``,
     description:
       <p>The internet was intended for many, but today it’s controlled by few. A discussion about centralization and possible solutions, from antitrust to a new economic model. Featuring:</p>,
@@ -210,7 +210,7 @@ module.exports = [
   {
     name: `Soudeh Rad on privacy, identity and gender online (Talk)`,
     talkTime: `Sunday, Oct. 28, 15:15–16:15`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/cyEwbmYn7fA`,
     transcriptLink: ``,
     description: <p></p>,
     speakers: [
@@ -227,7 +227,7 @@ module.exports = [
   {
     name: `Mitchell Baker (Talk)`,
     talkTime: `Sunday, Oct. 28, 15:15–16:15`,
-    videoLink: ``,
+    videoLink: `https://youtu.be/gmcU-uMWNj0`,
     transcriptLink: ``,
     speakers: [
       {
