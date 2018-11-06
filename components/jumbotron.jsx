@@ -60,7 +60,7 @@ class Jumbotron extends React.Component {
 
     let content = <div className="jumbotron-content d-flex flex-column justify-content-center text-center">
       { this.props.children }
-      { this.props.videoJumbotron &&
+      { this.props.videoJumbotron && this.props.showPlaybtn &&
           <DialogTimer
             buttonAsCta={this.props.buttonAsCta}
             toggleVideoTakeover={this.props.toggleVideoTakeover}
