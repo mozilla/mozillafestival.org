@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import NotificationBar from '../components/notification-bar.jsx';
 import Jumbotron from '../components/jumbotron.jsx';
 import SpeakersPromo from '../components/speakers-promo.jsx';
 
@@ -42,18 +40,16 @@ class Home extends React.Component {
   render() {
     return (
       <div className={classNames({"has-video-takeover": this.state.videoTakeover}, `home-page`)}>
-        <NotificationBar to="/schedule">
-          <div><span className="emphasized">The MozFest 2018 schedule is now live!</span> <span className="light">View it here.</span></div>
-        </NotificationBar>
         <Jumbotron className="home-jumbotron"
           image=""
           image2x=""
           videoJumbotron={true}
-          buttonAsCta={true}
-          toggleVideoTakeover={() => this.handlePlayVideoClick()}
         >
           <h1 className="highlight">Where Web Meets World</h1>
           <p className="mb-0">A seven day celebration for, by, and about people who love the internet, showcasing world-changing ideas and technology through workshops, talks, and interactive sessions.</p>
+          <div className="mt-4">
+            <a href="https://www.youtube.com/playlist?list=PLnRGhgZaGeBu6RousMarM2sS6r8ajFUeV" target="_blank" className="btn btn-arrow"><span>Watch the 2018 Dialogues and Debates</span></a>
+          </div>
         </Jumbotron>
         <div className="white-background shift-up">
           <div className="content wide centered shift-up pt-4">
@@ -84,13 +80,6 @@ class Home extends React.Component {
             </div>
             <hr className="mt-5 mb-4" />
             <SpeakersPromo />
-          </div>
-        </div>
-        <div className="light-grey-bg">
-          <div className="centered content wide pt-4">
-            <h1>Join Us at MozFest</h1>
-            <p>Get your ticket for MozFest weekend.</p>
-            <Link to="/tickets" className="btn btn-arrow"><span>Buy Tickets</span></Link>
           </div>
         </div>
         { this.renderVideoTakeover() }

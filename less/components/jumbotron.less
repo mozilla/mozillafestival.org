@@ -35,6 +35,10 @@
     padding: 25px 0;
     max-width: @max-container-width;
     margin: 0 auto;
+
+    .btn.btn-arrow {
+      color: white;
+    }
   }
 
   h1 {
@@ -100,19 +104,22 @@
 
   .btn-cta-video-play {
     @text-font-size: 12px;
-     font-size: @text-font-size;
+    font-size: @text-font-size;
     color: white;
     margin-top: 4rem;
     margin-bottom: 4rem;
-     @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 768px) {
       font-size: @text-font-size * 1.5;
     }
-     i.fa {
+
+    i.fa {
       @icon-font-size: 16px;
-       font-size: @icon-font-size;
+      font-size: @icon-font-size;
       position: relative;
       top: 1px;
-       @media screen and (min-width: 768px) {
+
+      @media screen and (min-width: 768px) {
         font-size: @icon-font-size * 1.5;
         top: 3px;
       }
