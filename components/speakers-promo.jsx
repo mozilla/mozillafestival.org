@@ -99,18 +99,10 @@ const FEATURED_SPEAKERS = [
     pic: `/assets/images/speakers/2018/Clinton_Watts.jpg`
   },
   {
-    name: `Roya Mahboob`,
-    shortIntro: ``,
-    twitter: `@royamahboob`,
-    talkName: `Panel: Inclusion and Literacy As Remedies`,
-    link: ``,
-    pic: `/assets/images/speakers/2018/Roya_Mahboob.jpg`
-  },
-  {
     name: `Nathalie Richards`,
     shortIntro: ``,
     twitter: `@nathrich`,
-    talkName: `Panel: Inclusion and Literacy As Remedies`,
+    talkName: `Talk: Tech and Inclusion`,
     link: ``,
     pic: `/assets/images/speakers/2018/Nathalie_Richards.jpg`
   },
