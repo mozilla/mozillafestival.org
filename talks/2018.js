@@ -157,20 +157,12 @@ module.exports = [
     ]
   },
   {
-    name: `Inclusion and Literacy As Remedies (Panel)`,
+    name: `Nathalie Richards on Tech and Inclusion (Talk)`,
     talkTime: `Sunday, Oct. 28, 11:00–12:10`,
     videoLink: `https://youtu.be/EwT9Mpzft4I`,
     transcriptLink: ``,
     description: <p>Tech has an inclusion problem, and too few new users fully understand the web. Separately, harassment and misinformation reign online. Or are they separate? Can addressing the former fix the latter? Featuring:</p>,
     speakers: [
-      {
-        name: `Roya Mahboob`,
-        twitter: `@royamahboob`,
-        pic: `/assets/images/speakers/2018/Roya_Mahboob.jpg`,
-        description: [
-          `Roya Mahboob is co-founder and CEO of the Digital Citizen Fund, which empowers and educates women and children.`
-        ],
-      },
       {
         name: `Nathalie Richards`,
         twitter: `@nathrich`,
