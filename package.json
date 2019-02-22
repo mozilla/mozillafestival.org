@@ -10,6 +10,7 @@
     "bootstrap": "shx rm -rf public/build && shx mkdir public/build && shx rm -rf public/vendor && shx mkdir public/vendor && shx mkdir public/vendor/css",
     "start": "npm run build && run-p server watch:**",
     "build": "run-s bootstrap build:js build:css copy:styling-dependency",
+    "heroku-postbuild": "echo Skip builds on Heroku",
     "build:js": "run-s build-client:js build-server:js",
     "build-client:js": "webpack --config webpack.config.js --profile --display-error-details --colors",
     "build-server:js": "webpack --config webpack.server.config.js --display-error-details --colors",
@@ -86,5 +87,6 @@
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "mofo-style": "^2.4.0"
-  }
+  },
+  "heroku-run-build-script": true
 }
